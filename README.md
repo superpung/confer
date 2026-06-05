@@ -54,12 +54,20 @@ see AGENTS.md "How to add a scraper adapter".
 
 ## Website
 
-The unified data lives in `web/public/data/`. The Astro site that renders it (with a
-venue sidebar) lands in Phase 2; until then the current site under `docs/` is live:
+An [Astro](https://astro.build) static site in `web/` renders the unified data, with a
+sidebar to switch venues and client-side search / track filter / sort / favorites.
 
 ```bash
-python3 -m http.server 8000 --directory docs   # http://localhost:8000/
+cd web
+npm install
+npm run dev        # local dev server
+npm run build      # static build → web/dist/
 ```
 
-Favorites are stored client-side in `localStorage`, so the site needs no backend, and it
-deploys to GitHub Pages as static files.
+The site reads `web/public/data/` (produced by `confcrawl build`) and pre-renders one
+page per venue. Favorites are stored client-side in `localStorage`, so it needs no
+backend and deploys to GitHub Pages as static files. For GitHub Project Pages (served at
+`/<repo>/`), build with `BASE_PATH=/dac26 npm run build`.
+
+> The old hand-built site under `docs/` is superseded by `web/` and will be removed once
+> Pages deploys the Astro build.

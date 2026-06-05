@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { loadVenues } from '../lib/data';
+import { withBase } from '../lib/url';
+
+const venues = loadVenues();
+const first = venues[0];
+if (first) {
+  return Astro.redirect(withBase(`/${first.id}`));
+}
+---
+
+<Base title="confcrawl" venues={venues}>
+  <div class="page-shell">
+    <section class="page-intro">
+      <h1>No venues yet</h1>
+      <p class="intro-copy">
+        Add an entry to <code>config/venues.yaml</code> and run
+        <code>confcrawl build</code> to generate the data this site reads.
+      </p>
+    </section>
+  </div>
+</Base>

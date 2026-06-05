@@ -1,0 +1,58 @@
+---
+import { groupBySeries, type VenueSummary } from '../lib/data';
+import { withBase } from '../lib/url';
+
+interface Props {
+  venues: VenueSummary[];
+  activeId?: string;
+}
+
+const { venues, activeId } = Astro.props;
+const groups = groupBySeries(venues);
+---
+
+<aside class="sidebar">
+  <a class="brand" href={withBase('/')}>confcrawl</a>
+
+  {venues.length > 1 && (
+    <input class="venue-search" type="search" placeholder="Filter venues…" data-venue-search />
+  )}
+
+  <nav class="venue-nav" aria-label="Venues">
+    {groups.length === 0 && <p class="venue-empty">No venues yet.</p>}
+    {groups.map((group) => (
+      <div class="venue-group">
+        <p class="venue-group-title">{group.series}</p>
+        {group.items.map((venue) => (
+          <a
+            class="venue-link"
+            href={withBase(`/${venue.id}`)}
+            data-venue-name={`${venue.name} ${venue.series}`.toLowerCase()}
+            aria-current={venue.id === activeId ? 'page' : undefined}
+          >
+            <span class="venue-name">{venue.name}</span>
+            <span class="venue-count">{venue.count}</span>
+          </a>
+        ))}
+      </div>
+    ))}
+  </nav>
+</aside>
+
+<script>
+  const search = document.querySelector<HTMLInputElement>('[data-venue-search]');
+  if (search) {
+    const links = Array.from(document.querySelectorAll<HTMLElement>('.venue-link'));
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      for (const link of links) {
+        const name = link.dataset.venueName ?? '';
+        link.hidden = q.length > 0 && !name.includes(q);
+      }
+      document.querySelectorAll<HTMLElement>('.venue-group').forEach((group) => {
+        const anyVisible = group.querySelector('.venue-link:not([hidden])');
+        group.hidden = !anyVisible;
+      });
+    });
+  }
+</script>

@@ -52,21 +52,22 @@ scraper/               [target] Python project (moved + renamed from src/dac26)
       linklings.py     [target] current DAC logic, refactored to the interface
       ...              [target] openreview.py, dblp.py, ieee.py, acm_dl.py
   tests/fixtures/      [target] small sample of cached pages for offline parse tests
-web/                   [target] Astro site (GitHub Pages)
-  package.json  astro.config.mjs
+web/                   [now] Astro static site (GitHub Pages)
+  package.json  astro.config.mjs  tsconfig.json
   src/pages/
-    index.astro        [target] landing / first venue
-    [venue].astro      [target] SSG one static page per venue
-  src/components/      [target] Sidebar, PaperList, PaperCard (.astro)
-  src/islands/         [target] client search/filter/sort/favorites (framework island)
+    index.astro        [now] redirects to the first venue
+    [venue].astro      [now] SSG one static page per venue + client filter/sort/favorites
+  src/layouts/Base.astro   [now] html shell + sidebar
+  src/components/      [now] Sidebar.astro, PaperCard.astro
+  src/lib/             [now] data.ts (read public/data at build), url.ts (base helper)
+  src/styles/global.css    [now] ported Claude-style CSS + sidebar layout
   public/data/
-    venues.json        [target] sidebar manifest (written by scraper export)
-    <venue_id>.json    [target] unified papers per venue (written by scraper export)
-data/cache/            [now] cached raw HTML, gitignored. Per-venue subdirs [target].
+    venues.json        [now] sidebar manifest (written by scraper export)
+    <venue_id>.json    [now] unified papers per venue (written by scraper export)
+data/cache/            [now] cached raw HTML, gitignored. Per-venue subdirs.
 
-# [now] the scraper/ tree above is real (Phase 1 landed). Still present until Phase 2:
-data/dac2026_*.{json,csv}   legacy DAC exports, superseded by web/public/data/dac2026.json
-docs/                  current hand-built static site (index/favorites/assets/data)
+# [now] still present: superseded but not yet removed —
+docs/                  old hand-built site; remove once Pages deploys the Astro build
 ```
 
 ## Unified `Paper` schema
@@ -140,13 +141,11 @@ uv run confcrawl build            # all enabled venues → web/public/data/
 uv run confcrawl build --venue dac2026
 uv run confcrawl list
 
-# [target] Astro site (run inside web/)
+# [now] Astro site (run inside web/)
 npm install
 npm run dev                       # local dev server
-npm run build                     # static build → web/dist/ → GitHub Pages
-
-# [now] preview the current hand-built site
-python3 -m http.server 8000 --directory docs   # then open http://localhost:8000/
+npm run build                     # static build → web/dist/
+BASE_PATH=/dac26 npm run build    # build for GitHub Project Pages (/<repo>/ prefix)
 ```
 
 ## Conventions & guardrails
@@ -177,12 +176,14 @@ python3 -m http.server 8000 --directory docs   # then open http://localhost:8000
    util/paths/pipeline/export/cli` + `scrapers/{base,linklings}`; reads
    `config/venues.yaml` via PyYAML; `confcrawl build --venue dac2026` reproduces today's
    543 papers byte-for-byte; offline pytest from `tests/fixtures/`.
-2. **Export + Astro site** — `export.py` writes `web/public/data/{venues.json,<venue>
-   .json}`; scaffold the Astro app (`index.astro`, `[venue].astro`, Sidebar/PaperList
-   components, a search/filter island); port the Claude-style CSS; deploy via Pages.
+2. **Export + Astro site** — *(done)* `export.py` writes `web/public/data/{venues.json,
+   <venue>.json}`; Astro app scaffolded: `index.astro` (redirect), `[venue].astro` (SSG
+   per venue), `Sidebar`/`PaperCard`, ported Claude-style CSS, sidebar venue switching,
+   client-side search/track/sort + per-venue favorites (`venueId:paperId`). Client
+   interactivity is plain inlined `<script>` (no framework island needed). **Open:** wire
+   GitHub Pages deployment (Action vs build into `docs/`) and retire the old `docs/` site.
 3. **Second adapter** — OpenReview (clean JSON API), to validate generality.
-4. **UX polish** — series grouping in the sidebar, per-venue favorites
-   (`venueId:paperId`), deep links, docs.
+4. **UX polish** — a dedicated favorites view, deep links within a venue, mobile drawer.
 
 ## Tech notes
 
