@@ -1,23 +1,148 @@
 ---
-import Base from '../layouts/Base.astro';
-import { loadVenues } from '../lib/data';
-import { withBase } from '../lib/url';
+import Layout from '../layouts/Layout.astro';
+import { loadVenues, groupByCategory, totalPaperCount } from '../lib/data';
+import '../styles/global.css';
 
 const venues = loadVenues();
-const first = venues[0];
-if (first) {
-  return Astro.redirect(withBase(`/${first.id}`));
-}
+const groups = groupByCategory(venues);
+const totalPapers = totalPaperCount(venues);
 ---
 
-<Base title="confcrawl" venues={venues}>
-  <div class="page-shell">
-    <section class="page-intro">
-      <h1>No venues yet</h1>
-      <p class="intro-copy">
-        Add an entry to <code>config/venues.yaml</code> and run
-        <code>confcrawl build</code> to generate the data this site reads.
+<Layout title="confcrawl — paper browser">
+  <div class="app" id="app">
+    <!-- Embedded manifest for the client app. -->
+    <script type="application/json" id="venues-data" set:html={JSON.stringify(venues)} />
+
+    <aside class="sidebar" id="sidebar" aria-label="Venue selector">
+      <div class="sidebar-head">
+        <a class="brand" href="/">confcrawl</a>
+        <button class="icon-btn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme">
+          <span data-theme-icon>🌙</span>
+        </button>
+      </div>
+
+      <p class="sidebar-stats" id="sidebarStats">
+        {venues.length} venues · {totalPapers.toLocaleString()} papers
       </p>
-    </section>
+
+      <div class="venue-tools">
+        <input class="venue-search" type="search" placeholder="Filter venues…" data-venue-search aria-label="Filter venues" />
+        <div class="venue-tool-buttons">
+          <button class="text-btn" data-select-all type="button">All</button>
+          <button class="text-btn" data-select-none type="button">None</button>
+        </div>
+      </div>
+
+      <nav class="venue-nav" aria-label="Venues">
+        {groups.length === 0 && <p class="venue-empty">No venues yet.</p>}
+        {groups.map((group) => (
+          <section class="venue-cat" data-cat={group.category}>
+            <button class="venue-cat-head" type="button" data-cat-toggle aria-expanded="true">
+              <span class="cat-caret">▾</span>
+              <span class="cat-name">{group.category}</span>
+              <span class="cat-count">{group.count.toLocaleString()}</span>
+            </button>
+            <div class="venue-cat-body">
+              {[
+                { label: 'Conferences', items: group.conferences },
+                { label: 'Journals', items: group.journals },
+              ].filter((s) => s.items.length > 0).map((sub) => (
+                <div class="venue-sub">
+                  {group.conferences.length > 0 && group.journals.length > 0 && (
+                    <p class="venue-sub-label">{sub.label}</p>
+                  )}
+                  {sub.items.map((venue) => (
+                    <label
+                      class="venue-row"
+                      data-venue-row
+                      data-venue-name={`${venue.name} ${venue.series}`.toLowerCase()}
+                    >
+                      <input class="venue-check" type="checkbox" value={venue.id} data-venue-check />
+                      <span class="venue-row-name">{venue.name}</span>
+                      <span class={`venue-kind kind-${venue.kind}`}>{venue.kind === 'journal' ? 'J' : 'C'}</span>
+                      <span class="venue-row-count">{venue.count.toLocaleString()}</span>
+                    </label>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </nav>
+    </aside>
+
+    <div class="sidebar-scrim" id="sidebarScrim" hidden></div>
+
+    <main class="content" id="content">
+      <header class="topbar">
+        <button class="icon-btn sidebar-toggle" data-sidebar-toggle aria-label="Show venues">☰</button>
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input id="searchInput" class="global-search" type="search"
+            placeholder="Search title, authors, abstract…" aria-label="Search papers" />
+          <kbd class="search-kbd">⌘K</kbd>
+          <button class="search-clear" data-search-clear aria-label="Clear search" hidden>×</button>
+        </div>
+        <select id="sortSelect" class="topbar-select" aria-label="Sort">
+          <option value="venue">Sort: Venue</option>
+          <option value="id">Sort: Paper ID</option>
+          <option value="title">Sort: Title</option>
+          <option value="authors">Sort: Authors</option>
+        </select>
+        <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts">⌘</button>
+      </header>
+
+      <div class="controls">
+        <button class="chip-btn" data-facets-toggle type="button" aria-expanded="false">
+          <span>Filters</span><span class="chip-btn-count" id="facetActiveCount" hidden>0</span>
+        </button>
+        <label class="fav-toggle">
+          <input type="checkbox" id="favOnly" />
+          <span>★ Only favorites</span>
+        </label>
+        <button class="chip-btn" data-open-saved type="button">☆ Saved</button>
+        <div class="result-summary" id="resultSummary">Select a venue to begin.</div>
+      </div>
+
+      <div class="active-filters" id="activeFilters"></div>
+      <section class="facets" id="facets" hidden aria-label="Filters"></section>
+
+      <div class="export-bar" id="exportBar" hidden>
+        <span id="selCount">0 selected</span>
+        <div class="export-actions">
+          <button class="text-btn" data-export="bibtex" type="button">Copy BibTeX</button>
+          <button class="text-btn" data-export="csv" type="button">Download CSV</button>
+          <button class="text-btn" data-export="clear" type="button">Clear</button>
+        </div>
+      </div>
+
+      <section class="paper-list" id="paperList" aria-live="polite"></section>
+      <div class="list-more" id="listMore" hidden></div>
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>↑</button>
+    <div class="toast" id="toast" role="status" hidden></div>
+
+    <div class="modal" id="helpModal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+        <div class="modal-head"><h2>Keyboard shortcuts</h2><button class="icon-btn" data-modal-close aria-label="Close">×</button></div>
+        <dl class="shortcuts">
+          <div><dt><kbd>⌘</kbd><kbd>K</kbd></dt><dd>Focus search</dd></div>
+          <div><dt><kbd>Esc</kbd></dt><dd>Clear search / close</dd></div>
+          <div><dt><kbd>⌘</kbd><kbd>/</kbd></dt><dd>Toggle this panel</dd></div>
+          <div><dt><kbd>f</kbd></dt><dd>Toggle filters</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="modal" id="savedModal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Saved searches">
+        <div class="modal-head"><h2>Saved searches</h2><button class="icon-btn" data-modal-close aria-label="Close">×</button></div>
+        <div class="modal-actions"><button class="text-btn" data-save-current type="button">＋ Save current view</button></div>
+        <div id="savedList" class="saved-list"></div>
+      </div>
+    </div>
   </div>
-</Base>
+
+  <script src="../scripts/app.ts"></script>
+</Layout>

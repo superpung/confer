@@ -11,3 +11,9 @@ wheels/
 
 # Scraped raw HTML cache (regenerable; kept locally as the parser test corpus)
 data/cache/
+
+# OS / editor cruft
+.DS_Store
+
+# Local Claude Code settings (per-machine permissions, not shared)
+.claude/settings.local.json

@@ -7,8 +7,9 @@
 # Fields:
 #   id        unique slug; names the output web/public/data/<id>.json and cache dir
 #   name      display name shown in the sidebar
-#   series    grouping key for the sidebar (e.g. all DAC years group together)
-#   kind      conference | journal
+#   series    venue family (e.g. all DAC years share series: DAC)
+#   category  research area; the sidebar groups venues by this
+#   kind      conference | journal  (the sidebar splits these)
 #   year      integer (optional for journals)
 #   scraper   which adapter handles it; must be registered in scrapers/base.py
 #   enabled   skip when false
@@ -18,6 +19,7 @@ venues:
   - id: dac2026
     name: DAC 2026
     series: DAC
+    category: EDA & Design Automation
     kind: conference
     year: 2026
     scraper: linklings
@@ -32,6 +34,7 @@ venues:
   - id: neurips2025
     name: NeurIPS 2025
     series: NeurIPS
+    category: Machine Learning
     kind: conference
     year: 2025
     scraper: openreview

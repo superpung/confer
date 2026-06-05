@@ -88,4 +88,13 @@ def _merge_manifest(out_dir: Path, summaries: list[dict[str, Any]]) -> list[dict
         except (ValueError, OSError):
             existing = []
     merged = existing + summaries
-    return sorted(merged, key=lambda v: (str(v.get("series", "")), -(v.get("year") or 0), v.get("id", "")))
+    return sorted(
+        merged,
+        key=lambda v: (
+            str(v.get("category", "")),
+            v.get("kind", ""),
+            str(v.get("series", "")),
+            -(v.get("year") or 0),
+            v.get("id", ""),
+        ),
+    )

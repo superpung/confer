@@ -16,6 +16,7 @@ class VenueConfig:
     id: str
     name: str
     series: str = ""
+    category: str = "Other"
     kind: str = "conference"
     year: int | None = None
     scraper: str = ""
@@ -28,13 +29,14 @@ class VenueConfig:
             "id": self.id,
             "name": self.name,
             "series": self.series or self.name,
+            "category": self.category or "Other",
             "year": self.year,
             "kind": self.kind,
             "count": count,
         }
 
 
-_KNOWN_KEYS = {"id", "name", "series", "kind", "year", "scraper", "enabled", "source"}
+_KNOWN_KEYS = {"id", "name", "series", "category", "kind", "year", "scraper", "enabled", "source"}
 
 
 def _coerce(entry: dict[str, Any]) -> VenueConfig:

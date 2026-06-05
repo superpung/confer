@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-06-05T13:32:52+00:00",
+  "generatedAt": "2026-06-05T14:13:58+00:00",
   "venues": [
     {
+      "category": "EDA & Design Automation",
       "count": 543,
       "id": "dac2026",
       "kind": "conference",

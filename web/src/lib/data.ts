@@ -7,29 +7,17 @@ export interface VenueSummary {
   id: string;
   name: string;
   series: string;
+  category: string;
   year: number | null;
   kind: string;
   count: number;
 }
 
-export interface Paper {
-  id: string;
-  title: string;
-  abstract: string;
-  authors: string[];
-  authorInstitutions: string;
-  tracks: string[];
-  eventType: string;
-  sessionTitles: string[];
-  sessions: string[];
-  dates: string[];
-  locations: string[];
-  urls: string[];
-}
-
-export interface VenueGroup {
-  series: string;
-  items: VenueSummary[];
+export interface CategoryGroup {
+  category: string;
+  conferences: VenueSummary[];
+  journals: VenueSummary[];
+  count: number;
 }
 
 export function loadVenues(): VenueSummary[] {
@@ -39,29 +27,27 @@ export function loadVenues(): VenueSummary[] {
   return (raw.venues ?? []) as VenueSummary[];
 }
 
-export function loadPapers(venueId: string): Paper[] {
-  const file = path.join(DATA_DIR, `${venueId}.json`);
-  if (!fs.existsSync(file)) return [];
-  return JSON.parse(fs.readFileSync(file, 'utf-8')) as Paper[];
-}
-
-export function groupBySeries(venues: VenueSummary[]): VenueGroup[] {
-  const groups = new Map<string, VenueSummary[]>();
+/** Group venues by research category, splitting conferences and journals. */
+export function groupByCategory(venues: VenueSummary[]): CategoryGroup[] {
+  const byCat = new Map<string, VenueSummary[]>();
   for (const venue of venues) {
-    const key = venue.series || venue.name;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key)!.push(venue);
+    const key = venue.category || 'Other';
+    if (!byCat.has(key)) byCat.set(key, []);
+    byCat.get(key)!.push(venue);
   }
-  return [...groups.entries()]
-    .map(([series, items]) => ({
-      series,
-      items: items.sort((a, b) => (b.year ?? 0) - (a.year ?? 0)),
+  const sortVenues = (a: VenueSummary, b: VenueSummary) =>
+    (b.year ?? 0) - (a.year ?? 0) || a.name.localeCompare(b.name);
+
+  return [...byCat.entries()]
+    .map(([category, items]) => ({
+      category,
+      conferences: items.filter((v) => v.kind !== 'journal').sort(sortVenues),
+      journals: items.filter((v) => v.kind === 'journal').sort(sortVenues),
+      count: items.reduce((sum, v) => sum + v.count, 0),
     }))
-    .sort((a, b) => a.series.localeCompare(b.series));
+    .sort((a, b) => a.category.localeCompare(b.category));
 }
 
-export function venueTracks(papers: Paper[]): string[] {
-  return [...new Set(papers.flatMap((p) => p.tracks))]
-    .filter(Boolean)
-    .sort((a, b) => a.localeCompare(b));
+export function totalPaperCount(venues: VenueSummary[]): number {
+  return venues.reduce((sum, v) => sum + v.count, 0);
 }
