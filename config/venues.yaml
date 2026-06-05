@@ -1,0 +1,40 @@
+# Venue registry — the list of conferences / journals to scrape and publish.
+#
+# NOTE: not yet consumed by code. This is the Phase 0 seed/target for the
+# generalized pipeline described in AGENTS.md. Each entry selects a scraper
+# adapter (`scraper:`) and passes it adapter-specific options under `source:`.
+#
+# Fields:
+#   id        unique slug; names the output web/public/data/<id>.json and cache dir
+#   name      display name shown in the sidebar
+#   series    grouping key for the sidebar (e.g. all DAC years group together)
+#   kind      conference | journal
+#   year      integer (optional for journals)
+#   scraper   which adapter handles it; must be registered in scrapers/base.py
+#   enabled   skip when false
+#   source    adapter-specific options
+
+venues:
+  - id: dac2026
+    name: DAC 2026
+    series: DAC
+    kind: conference
+    year: 2026
+    scraper: linklings
+    enabled: true
+    source:
+      base_url: https://63dac.conference-program.com/
+      prefixes: [RESEARCH]      # presentation-id prefixes to include
+      all_presentations: false  # true = every presentation type, not just papers
+
+  # Example of a second venue on a different platform (disabled until the
+  # adapter exists — see Phase 3 in AGENTS.md).
+  - id: neurips2025
+    name: NeurIPS 2025
+    series: NeurIPS
+    kind: conference
+    year: 2025
+    scraper: openreview
+    enabled: false
+    source:
+      venue_id: NeurIPS.cc/2025/Conference

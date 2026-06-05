@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Scraped raw HTML cache (regenerable; kept locally as the parser test corpus)
+data/cache/
