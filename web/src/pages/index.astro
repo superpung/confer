@@ -16,9 +16,12 @@ const totalPapers = totalPaperCount(venues);
     <aside class="sidebar" id="sidebar" aria-label="Venue selector">
       <div class="sidebar-head">
         <a class="brand" href="/">confcrawl</a>
-        <button class="icon-btn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme">
-          <span data-theme-icon>🌙</span>
-        </button>
+        <div class="sidebar-head-actions">
+          <button class="icon-btn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme">
+            <span data-theme-icon>🌙</span>
+          </button>
+          <button class="icon-btn sidebar-collapse-btn" data-sidebar-collapse title="Collapse sidebar" aria-label="Collapse sidebar">«</button>
+        </div>
       </div>
 
       <p class="sidebar-stats" id="sidebarStats">

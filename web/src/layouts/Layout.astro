@@ -20,7 +20,7 @@ const { title, description = 'Browse accepted papers across conferences and jour
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
     />
-    <!-- Set theme before paint to avoid a flash. -->
+    <!-- Set theme + sidebar state before paint to avoid a flash. -->
     <script is:inline>
       (() => {
         try {
@@ -28,6 +28,9 @@ const { title, description = 'Browse accepted papers across conferences and jour
           const dark = saved ? saved === 'dark'
             : window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+          if (localStorage.getItem('confcrawl.sidebarCollapsed') === '1') {
+            document.documentElement.classList.add('is-sidebar-collapsed');
+          }
         } catch {
           document.documentElement.dataset.theme = 'light';
         }

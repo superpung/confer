@@ -7,6 +7,7 @@ const K_SELECTED = 'confcrawl.selected';
 const K_FAVS = 'confcrawl.favorites';
 const K_THEME = 'confcrawl.theme';
 const K_SAVED = 'confcrawl.savedSearches';
+const K_SIDEBAR = 'confcrawl.sidebarCollapsed';
 const PAGE = 200;
 
 // --- helpers -----------------------------------------------------------
@@ -60,6 +61,7 @@ const state = {
   tracks: new Set<string>(),
   events: new Set<string>(),
   venuesFacet: new Set<string>(),
+  facetCollapsed: new Set<string>(),
   sort: 'venue',
   favOnly: false,
   favs: new Set<string>(readJson<string[]>(K_FAVS, [])),
@@ -211,10 +213,16 @@ function renderFacets(base: { p: Paper; v: string }[]) {
   const group = (title: string, counts: Map<string, number>, active: Set<string>, kind: string, label: (id: string) => string) => {
     const opts = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
     if (!opts.length) return '';
+    const collapsed = state.facetCollapsed.has(title);
     const rows = opts.map(([val, n]) =>
       `<label class="facet-option"><input type="checkbox" data-facet="${kind}" value="${esc(val)}" ${active.has(val) ? 'checked' : ''}>
         <span class="facet-label">${esc(label(val))}</span><span class="facet-count">${n}</span></label>`).join('');
-    return `<div class="facet-group"><p class="facet-title">${title}</p><div class="facet-options">${rows}</div></div>`;
+    return `<div class="facet-group" data-facet-group="${esc(title)}">
+      <button class="facet-title" type="button" data-facet-group-toggle aria-expanded="${!collapsed}">
+        <span class="facet-caret">▾</span><span class="facet-title-text">${title}</span><span class="facet-group-count">${opts.length}</span>
+      </button>
+      <div class="facet-options"${collapsed ? ' hidden' : ''}>${rows}</div>
+    </div>`;
   };
   const venueGroup = state.selected.size > 1
     ? group('Venue', venueCount, state.venuesFacet, 'venue', (id) => venueById.get(id)?.name ?? id) : '';
@@ -360,6 +368,12 @@ function loadSaved(i: number) {
   ensureLoaded([...state.selected]).then(render);
 }
 
+// --- sidebar (desktop collapse) ---------------------------------------
+function setSidebarCollapsed(on: boolean) {
+  document.documentElement.classList.toggle('is-sidebar-collapsed', on);
+  try { localStorage.setItem(K_SIDEBAR, on ? '1' : '0'); } catch { /* ignore */ }
+}
+
 // --- modals ------------------------------------------------------------
 function closeModals() { document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; }); }
 
@@ -435,6 +449,16 @@ function wire() {
     if (cb.checked) set.add(cb.value); else set.delete(cb.value);
     state.shown = PAGE; writeUrl(); render();
   });
+  // collapse individual facet groups (no full re-render needed)
+  els.facets.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-facet-group-toggle]');
+    if (!btn) return;
+    const title = btn.closest<HTMLElement>('[data-facet-group]')?.dataset.facetGroup ?? '';
+    const open = btn.getAttribute('aria-expanded') !== 'false';
+    if (open) state.facetCollapsed.add(title); else state.facetCollapsed.delete(title);
+    btn.setAttribute('aria-expanded', String(!open));
+    (btn.nextElementSibling as HTMLElement).hidden = open;
+  });
   els.active.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-remove-filter]');
     if (!btn) return;
@@ -501,8 +525,12 @@ function wire() {
     if (del) { state.saved.splice(Number(del.dataset.savedDel), 1); writeJson(K_SAVED, state.saved); renderSaved(); }
   });
 
-  // mobile sidebar
-  $('[data-sidebar-toggle]').addEventListener('click', () => $('#app').classList.add('sidebar-open'));
+  // sidebar: mobile drawer toggle + desktop collapse
+  $('[data-sidebar-toggle]').addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 860px)').matches) $('#app').classList.add('sidebar-open');
+    else setSidebarCollapsed(false);
+  });
+  $('[data-sidebar-collapse]').addEventListener('click', () => setSidebarCollapsed(true));
   $('#sidebarScrim').addEventListener('click', () => $('#app').classList.remove('sidebar-open'));
 
   // back to top
