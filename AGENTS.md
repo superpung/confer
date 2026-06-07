@@ -6,61 +6,63 @@ here; this is the canonical file.
 ## What this project is
 
 A pipeline that scrapes academic **conference / journal** programs and publishes a
-static, searchable website (GitHub Pages) for browsing papers. It started as a
-single-purpose scraper for **DAC 2026** and is being generalized so that any number
-of venues can be configured, scraped through pluggable adapters, normalized to one
-schema, and shown in a single site with a venue **sidebar**.
+static, searchable website (Netlify) for browsing papers. Venues are configured in
+`config/venues.yaml`, scraped through pluggable adapters, normalized to one schema, and
+shown in a single site with a category **sidebar**. DAC 2026 is the first venue;
+more are added by config + adapter, never by changing the site.
 
-**Stack (decided):** a **monorepo** — a **Python** scraper (`scraper/`, package
-`confcrawl`) that emits unified JSON, consumed by an **Astro** static site (`web/`)
-that pre-renders one page per venue and uses client-side islands for search/filter.
-Both build to static assets deployed on GitHub Pages. The repo's local directory name
-stays `dac26` (do not rename the working path).
+**Stack:** a **monorepo** — a **Python** scraper (`scraper/`, package `confcrawl`) that
+emits unified JSON, consumed by an **Astro** static site (`web/`) that renders a single
+page driven by a client-side script (`scripts/app.ts`) reading the embedded manifest.
+The site builds to static assets deployed on Netlify.
 
-> Status legend used below: **[now]** = exists today · **[target]** = the architecture
-> we are migrating toward. Keep this file honest — when you land a phase, move items
-> from **[target]** to **[now]**.
+> Status legend used below: **[now]** = exists today · **[target]** = planned, not yet
+> built. Keep this file honest — when you land something, move it from **[target]** to
+> **[now]**.
 
 ## Architecture
 
 Three decoupled layers joined by one **unified `Paper` schema**:
 
 ```
-config/venues.yaml ─▶ scraper (Python) ─▶ unified JSON per venue ─▶ Astro site ─▶ Pages
+config/venues.yaml ─▶ scraper (Python) ─▶ unified JSON per venue ─▶ Astro site ─▶ Netlify
 ```
 
 - **Config** names which scraper adapter a venue uses and passes it source options.
 - **Adapters** know one platform each and all emit the *same* `Paper` shape.
 - **Site** consumes only the unified data — it never knows which platform data came from.
 
-### Layout (target = Astro monorepo)
+### Layout
 
 ```
 config/
-  venues.yaml          [now] registry of venues to publish (seed; not yet consumed)
-scraper/               [target] Python project (moved + renamed from src/dac26)
-  pyproject.toml
+  venues.yaml          [now] registry of venues to publish; read by config.py
+scraper/               [now] Python project, package `confcrawl`
+  pyproject.toml       [now] console script: `confcrawl`
   src/confcrawl/
-    cli.py             [target] `build [--venue ID] [--refresh]`, `list`
-    config.py          [target] load + validate ../config/venues.yaml
-    models.py          [target] unified Paper dataclass + schema
-    fetcher.py         [target] HTTP + disk cache (extracted from scrape.py)
-    pipeline.py        [target] per-venue orchestration
-    export.py          [target] write web/public/data/<venue>.json + venues.json
+    cli.py             [now] `build [--venue ID] [--refresh] [--limit N]`, `list`
+    config.py          [now] load + validate ../config/venues.yaml (PyYAML)
+    models.py          [now] unified Paper dataclass + schema
+    fetcher.py         [now] HTTP + disk cache
+    paths.py           [now] cache / output path helpers
+    pipeline.py        [now] per-venue orchestration
+    export.py          [now] write web/public/data/<venue>.json + venues.json
+    util.py            [now] shared helpers
     scrapers/
-      base.py          [target] Scraper ABC + SCRAPERS registry
-      linklings.py     [target] current DAC logic, refactored to the interface
+      base.py          [now] Scraper ABC + SCRAPERS registry
+      linklings.py     [now] DAC (Linklings program) adapter
       ...              [target] openreview.py, dblp.py, ieee.py, acm_dl.py
-  tests/fixtures/      [target] small sample of cached pages for offline parse tests
-web/                   [now] Astro static site (GitHub Pages)
+  tests/fixtures/      [now] small sample of cached pages for offline parse tests
+web/                   [now] Astro static site (Netlify)
   package.json  astro.config.mjs  tsconfig.json
-  src/pages/
-    index.astro        [now] redirects to the first venue
-    [venue].astro      [now] SSG one static page per venue + client filter/sort/favorites
-  src/layouts/Base.astro   [now] html shell + sidebar
-  src/components/      [now] Sidebar.astro, PaperCard.astro
-  src/lib/             [now] data.ts (read public/data at build), url.ts (base helper)
-  src/styles/global.css    [now] ported Claude-style CSS + sidebar layout
+  src/pages/index.astro    [now] the whole single-page app shell (sidebar + content)
+  src/layouts/Layout.astro [now] html shell; sets theme/sidebar state before paint
+  src/lib/data.ts          [now] read public/data at build (venues, generatedAt)
+  src/scripts/
+    app.ts             [now] client island: search / filter / sort / favorites / export
+    export.ts          [now] BibTeX + CSV serialization
+    types.ts           [now] Paper / Venue / SavedSearch types
+  src/styles/global.css    [now] Claude-style CSS + sidebar/card layout
   public/data/
     venues.json        [now] sidebar manifest (written by scraper export)
     <venue_id>.json    [now] unified papers per venue (written by scraper export)
@@ -71,7 +73,7 @@ netlify.toml           [now] Netlify build config (base=web, publish=dist)
 
 ## Unified `Paper` schema
 
-The site already consumes this shape (see `docs/data/papers.json`). Generalize, do
+The site consumes this shape (see `web/public/data/dac2026.json`). Generalize, do
 not reinvent it. Every adapter must produce records with these keys:
 
 ```jsonc
@@ -129,18 +131,15 @@ file in `scrapers/` + one registry entry.** Do not branch on platform anywhere e
 ## Commands
 
 ```bash
-# [now] current DAC scraper (until Phase 1 lands)
-uv run dac26                      # full crawl → data/dac2026_*.{json,csv}
-uv run dac26 --limit 5            # debug: only a few detail pages
-uv run dac26 --all-presentations  # every presentation type, not just RESEARCH
-uv run dac26 --refresh            # ignore cache, refetch
+# Scraper (run inside scraper/)
+uv run confcrawl list                       # show configured venues
+uv run confcrawl build                       # all enabled venues → web/public/data/
+uv run confcrawl build --venue dac2026       # a single venue
+uv run confcrawl build --refresh             # ignore cache, refetch over the network
+uv run confcrawl build --venue dac2026 --limit 5   # debug: only a few detail pages
+uv run --extra dev pytest                    # offline parser tests (tests/fixtures/)
 
-# [target] generalized scraper (run inside scraper/)
-uv run confcrawl build            # all enabled venues → web/public/data/
-uv run confcrawl build --venue dac2026
-uv run confcrawl list
-
-# [now] Astro site (run inside web/)
+# Astro site (run inside web/)
 npm install
 npm run dev                       # local dev server
 npm run build                     # static build → web/dist/ (what Netlify publishes)
@@ -165,32 +164,39 @@ npm run build                     # static build → web/dist/ (what Netlify pub
   `venueId:paperId` so they do not collide across venues.
 - **No backend:** the site is fully static. All filtering/search is client-side.
 
-## Migration phases
+## Status
 
-0. **Scaffolding** — AGENTS.md, CLAUDE.md, seed `config/venues.yaml`, untrack cache.
-   *(done)*
-1. **Scraper monorepo + rename** — *(done)* moved `src/dac26` → `scraper/src/confcrawl`;
-   renamed package + console script (`confcrawl`); split into `fetcher/models/config/
-   util/paths/pipeline/export/cli` + `scrapers/{base,linklings}`; reads
-   `config/venues.yaml` via PyYAML; `confcrawl build --venue dac2026` reproduces today's
-   543 papers byte-for-byte; offline pytest from `tests/fixtures/`.
-2. **Export + Astro site** — *(done)* `export.py` writes `web/public/data/{venues.json,
-   <venue>.json}`; Astro app scaffolded: `index.astro` (redirect), `[venue].astro` (SSG
-   per venue), `Sidebar`/`PaperCard`, ported Claude-style CSS, sidebar venue switching,
-   client-side search/track/sort + per-venue favorites (`venueId:paperId`). Client
-   interactivity is plain inlined `<script>` (no framework island needed). Deploys on
-   **Netlify** (`netlify.toml`, builds `web/`, publishes `dist/`); the old `docs/` site
-   has been removed. Build artifacts are not committed.
-3. **Second adapter** — OpenReview (clean JSON API), to validate generality.
-4. **UX polish** — a dedicated favorites view, deep links within a venue, mobile drawer.
+**Done:**
+
+0. **Scaffolding** — AGENTS.md, CLAUDE.md, seed `config/venues.yaml`, untracked cache.
+1. **Scraper monorepo** — `src/dac26` → `scraper/src/confcrawl`; renamed package + console
+   script (`confcrawl`); split into `fetcher/models/config/util/paths/pipeline/export/cli`
+   + `scrapers/{base,linklings}`; reads `config/venues.yaml` via PyYAML; `confcrawl build
+   --venue dac2026` reproduces 543 papers byte-for-byte; offline pytest from `tests/fixtures/`.
+2. **Export + Astro site** — `export.py` writes `web/public/data/{venues.json,<venue>.json}`;
+   the Astro app reads it at build, ported Claude-style CSS. Deploys on **Netlify**
+   (`netlify.toml`, builds `web/`, publishes `dist/`); the old `docs/` site was removed and
+   build artifacts are not committed.
+3. **Single-page site** — one `index.astro` shell driven by a client island
+   (`scripts/app.ts`) reading the embedded manifest; category sidebar toggles venues;
+   client-side search / track + event filters / sort / per-venue favorites
+   (`venueId:paperId`) / BibTeX + CSV export / saved searches.
+4. **UX polish** — collapsible sidebar & filter groups (animated), responsive mobile layout
+   + drawer, sidebar footer (last update, repo + commit links).
+
+**Planned:**
+
+- **More adapters** — OpenReview first (clean JSON API; `neurips2025` is seeded in
+  `config/venues.yaml` with `enabled: false` until the adapter exists), then dblp / ieee /
+  acm_dl. Adding a platform stays "one file in `scrapers/` + one registry entry".
+- **Journals** — the schema and sidebar already split conference / journal; wire up a
+  journal venue end to end.
 
 ## Tech notes
 
 - **Scraper:** Python `>=3.10`, `uv`. Deps: `beautifulsoup4`, `requests`, and
   `PyYAML` (config is YAML, decided).
-- **Site:** Astro (Node ≥ 18). Static output (`astro build`) for GitHub Pages; one
-  pre-rendered page per venue, interactivity via a client island.
+- **Site:** Astro (Node ≥ 18). Static output (`astro build`) deployed on Netlify; a single
+  pre-rendered page with interactivity in a client island (`scripts/app.ts`).
 - **Tests:** `pytest` in `scraper/`, driven by cached HTML in `tests/fixtures/` so they
   run offline.
-- The repo's local path stays `dac26`; only package/file *names* change, not the
-  working directory.

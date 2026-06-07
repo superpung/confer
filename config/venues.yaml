@@ -1,8 +1,7 @@
 # Venue registry — the list of conferences / journals to scrape and publish.
 #
-# NOTE: not yet consumed by code. This is the Phase 0 seed/target for the
-# generalized pipeline described in AGENTS.md. Each entry selects a scraper
-# adapter (`scraper:`) and passes it adapter-specific options under `source:`.
+# Read by `confcrawl.config` and driven by `confcrawl build`. Each entry selects a
+# scraper adapter (`scraper:`) and passes it adapter-specific options under `source:`.
 #
 # Fields:
 #   id        unique slug; names the output web/public/data/<id>.json and cache dir
@@ -30,7 +29,7 @@ venues:
       all_presentations: false  # true = every presentation type, not just papers
 
   # Example of a second venue on a different platform (disabled until the
-  # adapter exists — see Phase 3 in AGENTS.md).
+  # openreview adapter exists — see "Planned" in AGENTS.md).
   - id: neurips2025
     name: NeurIPS 2025
     series: NeurIPS

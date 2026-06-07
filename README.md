@@ -3,19 +3,20 @@
 Scrape academic **conference / journal** programs into one unified schema and publish a
 static, searchable website for browsing papers.
 
-The project started as a single-purpose DAC 2026 scraper and is being generalized into a
-config-driven, multi-venue pipeline. See **[AGENTS.md](AGENTS.md)** for the full
-architecture, the unified `Paper` schema, the scraper-adapter contract, and conventions.
+It is a config-driven, multi-venue pipeline: venues are declared in `config/venues.yaml`,
+scraped through pluggable adapters, normalized to one `Paper` schema, and shown in a single
+site. See **[AGENTS.md](AGENTS.md)** for the full architecture, the unified `Paper` schema,
+the scraper-adapter contract, and conventions.
 
 ## Layout (monorepo)
 
 ```
 config/venues.yaml   Registry of venues to scrape and publish.
 scraper/             Python package `confcrawl`: fetch → parse → unified JSON.
-web/                 Static site (Astro — Phase 2) consuming the JSON.
+web/                 Static site (Astro) consuming the JSON.
   public/data/       venues.json (sidebar manifest) + <venue>.json (papers).
+  dist/              Astro build output, gitignored (Netlify publishes it).
 data/cache/          Cached raw HTML, gitignored (regenerable; the parser test corpus).
-docs/                Current hand-built site (being replaced by web/).
 ```
 
 ## Scrape
@@ -54,8 +55,9 @@ see AGENTS.md "How to add a scraper adapter".
 
 ## Website
 
-An [Astro](https://astro.build) static site in `web/` renders the unified data, with a
-sidebar to switch venues and client-side search / track filter / sort / favorites.
+An [Astro](https://astro.build) static site in `web/` renders the unified data as a
+single page with a category sidebar to toggle venues and client-side search / track filter
+/ sort / favorites.
 
 ```bash
 cd web
@@ -64,9 +66,9 @@ npm run dev        # local dev server
 npm run build      # static build → web/dist/
 ```
 
-The site reads `web/public/data/` (produced by `confcrawl build`) and pre-renders one
-page per venue. Favorites are stored client-side in `localStorage`, so it needs no
-backend.
+The site reads `web/public/data/` (produced by `confcrawl build`) at build time and ships
+a single pre-rendered page; all filtering happens client-side. Favorites are stored in
+`localStorage`, so it needs no backend.
 
 ## Deploy (Netlify)
 
