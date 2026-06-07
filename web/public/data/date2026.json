@@ -22,7 +22,7 @@
     "sessions": [
       "BPA01"
     ],
-    "title": "3D INTEGRATION OF HYBRID IGZO/SI AND IGZO EDRAMS FOR HIGH-DENSITY/HIGH-PERFORMANCE ON-CHIP MEMORY",
+    "title": "3D Integration of Hybrid IGZO/Si and IGZO eDRAMs for High-Density/High-Performance on-Chip Memory",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -60,7 +60,7 @@
     "sessions": [
       "BPA01"
     ],
-    "title": "AN OPERATOR-CIRCUIT CO-DESIGN DIGITAL SOT-MRAM COMPUTING-IN-MEMORY ACCELERATOR WITH DOUBLE BIT DENSITY AND FULL-UTILIZED BANDWIDTH/THROUGHPUT",
+    "title": "An Operator-Circuit Co-Design Digital SOT-MRAM Computing-In-Memory Accelerator with Double Bit Density and Full-Utilized Bandwidth/Throughput",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -92,7 +92,7 @@
     "sessions": [
       "BPA01"
     ],
-    "title": "FSDB: A FOLDED-STORE DYNAMIC-BROADEN HYBRID COMPUTE-IN-ROM/SRAM ARCHITECTURE FOR DEPLOYING LARGE-SCALE DNNS ON-CHIP",
+    "title": "Fsdb: A Folded-Store Dynamic-Broaden Hybrid Compute-In-Rom/SRAM Architecture for Deploying Large-Scale DNNs on-Chip",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -126,7 +126,7 @@
     "sessions": [
       "BPA02"
     ],
-    "title": "SCALER: A STREAM-AWARE ACCELERATOR WITH HIERARCHICAL MEMORY FOR SPARSE LU FACTORIZATION ON HBM FPGAS",
+    "title": "Scaler: A Stream-Aware Accelerator with Hierarchical Memory for Sparse Lu Factorization on HBM FPGAs",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -161,7 +161,7 @@
     "sessions": [
       "BPA02"
     ],
-    "title": "TORRENT: A DISTRIBUTED DMA FOR EFFICIENT AND FLEXIBLE POINT-TO-MULTIPOINT DATA MOVEMENT",
+    "title": "Torrent: A Distributed DMA for Efficient and Flexible Point-To-Multipoint Data Movement",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -193,7 +193,7 @@
     "sessions": [
       "BPA02"
     ],
-    "title": "KIRBYMM: OUTER-PRODUCT BASED MATRIX MULTIPLICATION ON ARMV9 PROCESSOR",
+    "title": "Kirbymm: Outer-Product Based Matrix Multiplication on Armv9 Processor",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -226,7 +226,7 @@
     "sessions": [
       "BPA03"
     ],
-    "title": "SECIC3: CUSTOMIZING IC3 FOR HARDWARE SECURITY VERIFICATION",
+    "title": "Secic3: Customizing IC3 for Hardware Security Verification",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -263,7 +263,7 @@
     "sessions": [
       "BPA03"
     ],
-    "title": "INSPIRE: IN-SENSOR COMPRESSED WEIGHT RETRIEVAL FOR ENHANCING VIT EFFICIENCY AT EDGE",
+    "title": "Inspire: In-Sensor Compressed Weight Retrieval for Enhancing Vit Efficiency at Edge",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -295,7 +295,7 @@
     "sessions": [
       "BPA03"
     ],
-    "title": "LORA-EDGE: TENSOR-TRAIN–ASSISTED LORA FOR PRACTICAL CNN FINE-TUNING ON EDGE DEVICES",
+    "title": "Lora-Edge: Tensor-Train–Assisted Lora for Practical Cnn Fine-Tuning on Edge Devices",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -332,7 +332,7 @@
     "sessions": [
       "BPA04"
     ],
-    "title": "LITHOGRAPHY HOTSPOT DETECTION FOR COMPLEX NON-MANHATTAN LAYOUTS VIA GRAPH NEURAL NETWORK",
+    "title": "Lithography Hotspot Detection for Complex Non-Manhattan Layouts via Graph Neural Network",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -363,7 +363,7 @@
     "sessions": [
       "BPA04"
     ],
-    "title": "RIFT: A SCALABLE METHODOLOGY FOR LLM ACCELERATOR FAULT ASSESSMENT USING REINFORCEMENT LEARNING",
+    "title": "Rift: A Scalable Methodology for LLM Accelerator Fault Assessment Using Reinforcement Learning",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -400,7 +400,7 @@
     "sessions": [
       "BPA04"
     ],
-    "title": "SMART-PCLIB: A LLM-BASED MULTI-AGENT FRAMEWORK FOR AUTOMATED PCB COMPONENT LIBRARY GENERATION",
+    "title": "Smart-Pclib: A LLM-Based Multi-Agent Framework for Automated Pcb Component Library Generation",
     "tracks": [
       "Best Paper Award Candidate"
     ],
@@ -434,7 +434,7 @@
     "sessions": [
       "FS01"
     ],
-    "title": "THE MUNICH QUANTUM SOFTWARE COMPANY: DEVELOPING PRODUCTION-READY QUANTUM COMPUTING SOFTWARE",
+    "title": "The Munich Quantum Software Company: Developing Production-Ready Quantum Computing Software",
     "tracks": [
       "Focus Session"
     ],
@@ -463,7 +463,7 @@
     "sessions": [
       "FS02"
     ],
-    "title": "HARDWARE/SOFTWARE CO-DESIGN TO ACCELERATE GENERATIVE AI WORKLOADS ON HETEROGENEOUS ARCHITECTURES",
+    "title": "Hardware/Software Co-Design to Accelerate Generative AI Workloads on Heterogeneous Architectures",
     "tracks": [
       "Focus Session"
     ],
@@ -494,7 +494,7 @@
     "sessions": [
       "FS02"
     ],
-    "title": "FOCUS SESSION: ACCELERATING DIFFUSION MODELS FOR GENERATIVE AI APPLICATIONS WITH SILICON PHOTONICS",
+    "title": "Focus Session: Accelerating Diffusion Models for Generative AI Applications with Silicon Photonics",
     "tracks": [
       "Focus Session"
     ],
@@ -528,7 +528,7 @@
     "sessions": [
       "FS02"
     ],
-    "title": "FOCUS SESSION: HARDWARE AND SOFTWARE TECHNIQUES FOR ACCELERATING MULTIMODAL FOUNDATION MODELS",
+    "title": "Focus Session: Hardware and Software Techniques for Accelerating Multimodal Foundation Models",
     "tracks": [
       "Focus Session"
     ],
@@ -560,7 +560,7 @@
     "sessions": [
       "FS05"
     ],
-    "title": "FOCUS SESSION: EXPLORING SEMANTIC LEAKAGE IN EDGE FPGA IMPLEMENTATIONS OF NEURAL NETWORKS",
+    "title": "Focus Session: Exploring Semantic Leakage in Edge FPGA Implementations of Neural Networks",
     "tracks": [
       "Focus Session"
     ],
@@ -591,7 +591,7 @@
     "sessions": [
       "FS07"
     ],
-    "title": "FOCUS SESSION: STEPPING STONES TOWARDS DOMAIN ACCELERATION USING AI-DRIVEN HIGH-LEVEL SYNTHESIS DESIGN",
+    "title": "Focus Session: Stepping Stones Towards Domain Acceleration Using AI-Driven High-Level Synthesis Design",
     "tracks": [
       "Focus Session"
     ],
@@ -627,7 +627,7 @@
     "sessions": [
       "FS07"
     ],
-    "title": "FOCUS SESSION: DO AGENTIC LLMS CHANGE THE PARADIGM OF HARDWARE TEST GENERATION?",
+    "title": "Focus Session: Do Agentic LLMs Change the Paradigm of Hardware Test Generation?",
     "tracks": [
       "Focus Session"
     ],
@@ -659,7 +659,7 @@
     "sessions": [
       "FS07"
     ],
-    "title": "FOCUS SESSION: LARGE LANGUAGE MODELS IN PHYSICAL DESIGN: FROM DATA GENERATION TO INTELLIGENT AGENTS",
+    "title": "Focus Session: Large Language Models in Physical Design: From Data Generation to Intelligent Agents",
     "tracks": [
       "Focus Session"
     ],
@@ -693,7 +693,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: PRACTICAL POWER SIDE-CHANNEL ATTACK ON ANALOG COMPUTE-IN-MEMORY MACRO",
+    "title": "Late Breaking Results: Practical Power Side-Channel Attack on Analog Compute-In-Memory Macro",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -723,7 +723,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: BOOSTING EFFICIENT DUAL-ISSUE EXECUTION ON LIGHTWEIGHT RISC-V CORES",
+    "title": "Late Breaking Results: Boosting Efficient Dual-Issue Execution on Lightweight RISC-V Cores",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -762,7 +762,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: A POWER-EFFICIENT RISC-V BASEBAND SYSTEM-ON-CHIP FOR MULTI-STANDARD INTEGRATED SENSING AND COMMUNICATIONS",
+    "title": "Late Breaking Results: A Power-Efficient RISC-V Baseband System-On-Chip for Multi-Standard Integrated Sensing and Communications",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -793,7 +793,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: FLOAT FIGHT - VERIFYING FLOATING-POINT BEHAVIOR IN RISC-V SIMULATORS",
+    "title": "Late Breaking Results: Float Fight - Verifying Floating-Point Behavior in RISC-V Simulators",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -825,7 +825,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: EFFICIENT FORMAL VERIFICATION OF HIGHLY OPTIMIZED MAC UNITS",
+    "title": "Late Breaking Results: Efficient Formal Verification of Highly Optimized Mac Units",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -856,7 +856,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: POLYRAD - POLYNOMIAL FORMAL VERIFICATION OF RESTORING ARRAY DIVIDERS",
+    "title": "Late Breaking Results: Polyrad - Polynomial Formal Verification of Restoring Array Dividers",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -894,7 +894,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: CHESSY: COUPLED HYBRID EMULATION WITH SYSTEMC-FPGA SYNCHRONIZATION",
+    "title": "Late Breaking Results: Chessy: Coupled Hybrid Emulation with Systemc-FPGA Synchronization",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -929,7 +929,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: THERMALLY ASSISTED ROWPRESS-ROWHAMMER SYNERGY FOR CROSS-ROW BIT FLIPS",
+    "title": "Late Breaking Results: Thermally Assisted Rowpress-Rowhammer Synergy for Cross-Row Bit Flips",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -960,7 +960,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: NEVER-STOPPING INFERENCE: SELF-HEALING AI ACCELERATORS ON SRAM-FPGAS",
+    "title": "Late Breaking Results: Never-Stopping Inference: Self-Healing AI Accelerators on SRAM-FPGAs",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -993,7 +993,7 @@
     "sessions": [
       "LBR01"
     ],
-    "title": "LATE BREAKING RESULTS: RL-BASED MACRO PLACEMENT WITH CELL CLUSTERING AND RUDY MODELING FOR ROUTABILITY OPTIMIZATION",
+    "title": "Late Breaking Results: Rl-Based Macro Placement with Cell Clustering and Rudy Modeling for Routability Optimization",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1026,7 +1026,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: INPUT LOSS CURVATURE AS A PREDICTOR OF SAMPLE VULNERABILITY TO HARDWARE-NOISE",
+    "title": "Late Breaking Results: Input Loss Curvature as a Predictor of Sample Vulnerability to Hardware-Noise",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1055,7 +1055,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: ALGORITHM–HARDWARE CO-DESIGN OF A SPARSITY-AWARE DENSE–SPARSE SCHEME FOR DNN ACCELERATORS",
+    "title": "Late Breaking Results: Algorithm–Hardware Co-Design of a Sparsity-Aware Dense–Sparse Scheme for DNN Accelerators",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1088,7 +1088,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: CONVERSION OF NEURAL NETWORKS INTO LOGIC FLOWS FOR EDGE COMPUTING",
+    "title": "Late Breaking Results: Conversion of Neural Networks into Logic Flows for Edge Computing",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1120,7 +1120,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: POSEIDON: POSE ESTIMATION IN DYNAMIC ON-DEVICE NETWORKS VIA HYPERDIMENSIONAL COMPUTING",
+    "title": "Late Breaking Results: Poseidon: Pose Estimation in Dynamic on-Device Networks via Hyperdimensional Computing",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1154,7 +1154,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: UNCOVERING THE LIMITS OF ECCS IN VISION TRANSFORMERS AND A ZERO-COST RELIABILITY ENHANCEMENT",
+    "title": "Late Breaking Results: Uncovering the Limits of Eccs in Vision Transformers and a Zero-Cost Reliability Enhancement",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1184,7 +1184,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: QUAMBA-SE: SOFT-EDGE QUANTIZER FOR ACTIVATIONS IN STATE SPACE MODELS",
+    "title": "Late Breaking Results: Quamba-Se: Soft-Edge Quantizer for Activations in State Space Models",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1217,7 +1217,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: DAIQUIRI: DYNAMIC QUANTIZATION WITH LAYER-WISE SENSITIVITY RANKING FOR HARDWARE-EFFICIENT LLMS",
+    "title": "Late Breaking Results: Daiquiri: Dynamic Quantization with Layer-Wise Sensitivity Ranking for Hardware-Efficient LLMs",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1251,7 +1251,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: ADC-FIST: ADC-FREE IN/NEAR-SENSOR STOCHASTIC OBJECT TRACKING",
+    "title": "Late Breaking Results: Adc-Fist: Adc-Free in/Near-Sensor Stochastic Object Tracking",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1285,7 +1285,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: SP-HD: STOCHASTIC PROJECTION-BASED HYPERDIMENSIONAL ARCHITECTURE FOR NEAR-SENSOR IMAGE CLASSIFICATION",
+    "title": "Late Breaking Results: Sp-Hd: Stochastic Projection-Based Hyperdimensional Architecture for Near-Sensor Image Classification",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1317,7 +1317,7 @@
     "sessions": [
       "LBR02"
     ],
-    "title": "LATE BREAKING RESULTS: ADAPTIVE ENSEMBLES OF DYNAMIC DNNS FOR COLLABORATIVE EDGE INFERENCE",
+    "title": "Late Breaking Results: Adaptive Ensembles of Dynamic DNNs for Collaborative Edge Inference",
     "tracks": [
       "Late Breaking Results"
     ],
@@ -1358,7 +1358,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: COLLABORATIVE INNOVATION IN 3D VLSI RELIABILITY (COIN-3D)",
+    "title": "Multi-Partner Project: Collaborative Innovation in 3D VLSI Reliability (Coin-3D)",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1399,7 +1399,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: MULTI-GPU PERFORMANCE PORTABILITY ANALYSIS FOR CFD SIMULATIONS AT SCALE",
+    "title": "Multi-Partner Project: Multi-GPU Performance Portability Analysis for Cfd Simulations at Scale",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1445,7 +1445,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: CECAS ACCELERATOR DESIGN FOR EFFICIENT SUPERCOMPUTING IN AUTOMOTIVE SYSTEMS",
+    "title": "Multi-Partner Project: Cecas Accelerator Design for Efficient Supercomputing in Automotive Systems",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1486,7 +1486,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: ECODESIGN TO REDUCE ELECTRONIC WASTE",
+    "title": "Multi-Partner Project: Ecodesign to Reduce Electronic Waste",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1524,7 +1524,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: SCHEDULING-DEPLOYMENT WORKFLOW FOR AUTONOMOUS ROBORACER DRIVING STACKS IN THE HAL4SDV PROJECT",
+    "title": "Multi-Partner Project: Scheduling-Deployment Workflow for Autonomous Roboracer Driving Stacks in the Hal4sdv Project",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1568,7 +1568,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: ADVANCING EUROPEAN SEMICONDUCTOR AND CHIPLET INNOVATION THROUGH THE BAVARIAN CHIP DESIGN CENTER",
+    "title": "Multi-Partner Project: Advancing European Semiconductor and Chiplet Innovation Through the Bavarian Chip Design Center",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1628,7 +1628,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI PARTNER PROJECT: STRATUM, CO CREATION PROTOCOL AND ADVANCED SMART GUI FOR A 3D NEUROSURGERY SUPPORTING TOOL",
+    "title": "Multi Partner Project: Stratum, Co Creation Protocol and Advanced Smart Gui for a 3D Neurosurgery Supporting Tool",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1663,7 +1663,7 @@
     "sessions": [
       "MPP01"
     ],
-    "title": "MULTI-PARTNER PROJECT: UP2DATE4SDV -- ENABLING SAFE AND SECURE MODULAR UPDATES, UPGRADES AND DYNAMIC TASK-REALLOCATION AND -EXECUTION FOR SOFTWARE DEFINED VEHICLES",
+    "title": "Multi-Partner Project: Up2date4sdv -- Enabling Safe and Secure Modular Updates, Upgrades and Dynamic Task-Reallocation and -Execution for Software Defined Vehicles",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1707,7 +1707,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "OPTIMIZE EDGE AI PROCESSING THROUGH INNOVATIVE COMPILATION TECHNIQUES",
+    "title": "Optimize Edge AI Processing Through Innovative Compilation Techniques",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1748,7 +1748,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: QUANTUM-SECURE IOT-BASED DIGITAL MANUFACTURING PILOT IN QUBIP PROJECT",
+    "title": "Multi-Partner Project: Quantum-Secure IoT-Based Digital Manufacturing Pilot in Qubip Project",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1823,7 +1823,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: DAIEDGE - A NETWORK OF EXCELLENCE FOR DISTRIBUTED, TRUSTWORTHY, EFFICIENT AND SCALABLE AI AT THE EDGE",
+    "title": "Multi-Partner Project: Daiedge - A Network of Excellence for Distributed, Trustworthy, Efficient and Scalable AI at the Edge",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1880,7 +1880,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: A HOLISTIC AND OPEN-SOURCE APPROACH TO EFFICIENT, SECURE AND RELIABLE AI HARDWARE DEPLOYMENT IN DI-EDAI",
+    "title": "Multi-Partner Project: A Holistic and Open-Source Approach to Efficient, Secure and Reliable AI Hardware Deployment in Di-Edai",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1928,7 +1928,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: ENHANCING RESILIENCE, EFFICIENCY, AND TRUSTWORTHINESS OF EDGE AI IN SAFETY-CRITICAL SYSTEMS (GUARDAI)",
+    "title": "Multi-Partner Project: Enhancing Resilience, Efficiency, and Trustworthiness of Edge AI in Safety-Critical Systems (Guardai)",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -1993,7 +1993,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: SCALABLE, FERROELECTRIC-BASED ACCELERATORS FOR ENERGY EFFICIENT EDGE AI (FERRO4EDGEAI)",
+    "title": "Multi-Partner Project: Scalable, Ferroelectric-Based Accelerators for Energy Efficient Edge AI (Ferro4edgeai)",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -2037,7 +2037,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: OUTCOMES OF THE ICSC FLAGSHIP 2 PROJECT ON ARCHITECTURES AND DESIGN METHODOLOGIES TO ACCELERATE AI WORKLOADS",
+    "title": "Multi-Partner Project: Outcomes of the Icsc Flagship 2 Project on Architectures and Design Methodologies to Accelerate AI Workloads",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -2080,7 +2080,7 @@
     "sessions": [
       "MPP02"
     ],
-    "title": "MULTI-PARTNER PROJECT: EFFICIENT DEEP LEARNING PLATFORMS FOR NEXT-GENERATION EMBEDDED EDGE-AI SYSTEMS",
+    "title": "Multi-Partner Project: Efficient Deep Learning Platforms for Next-Generation Embedded Edge-AI Systems",
     "tracks": [
       "Multi-Partner Project"
     ],
@@ -2110,7 +2110,7 @@
     "sessions": [
       "SD01"
     ],
-    "title": "SPECIAL DAY - A DESIGN BLUEPRINT FOR SCALABLE MULTI-AGENT ARCHITECTURES IN COMPLEX EDA WORKFLOWS",
+    "title": "Special Day - A Design Blueprint for Scalable Multi-Agent Architectures in Complex EDA Workflows",
     "tracks": [
       "Special Day"
     ],
@@ -2147,7 +2147,7 @@
     "sessions": [
       "SD01"
     ],
-    "title": "SPECIAL DAY – GUIDE: GENAI UNITS IN DIGITAL DESIGN EDUCATION",
+    "title": "Special Day – Guide: Genai Units in Digital Design Education",
     "tracks": [
       "Special Day"
     ],
@@ -2181,7 +2181,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "AERO: ADAPTIVE AND EFFICIENT RUNTIME-AWARE OTA UPDATES FOR ENERGY-HARVESTING IOT",
+    "title": "Aero: Adaptive and Efficient Runtime-Aware Ota Updates for Energy-Harvesting IoT",
     "tracks": [
       "Technical Session"
     ],
@@ -2213,7 +2213,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "BESPOKE CO-PROCESSOR FOR ENERGY-EFFICIENT HEALTH MONITORING ON RISC-V-BASED FLEXIBLE WEARABLES",
+    "title": "Bespoke Co-Processor for Energy-Efficient Health Monitoring on RISC-V-Based Flexible Wearables",
     "tracks": [
       "Technical Session"
     ],
@@ -2245,7 +2245,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "ALIFE-BCI: AN ADAPTIVE LOW-POWER INTEGRATED FEATURE EXTRACTOR FOR BRAIN-COMPUTER INTERFACES",
+    "title": "Alife-Bci: An Adaptive Low-Power Integrated Feature Extractor for Brain-Computer Interfaces",
     "tracks": [
       "Technical Session"
     ],
@@ -2278,7 +2278,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "EFFICIENT LLM DECODING ON RYZEN AI NPUS",
+    "title": "Efficient LLM Decoding on Ryzen AI NPUs",
     "tracks": [
       "Technical Session"
     ],
@@ -2310,7 +2310,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "EGO: EFFICIENT COMPRESSION OF UNSTRUCTURED SPARSE DNNS FOR COMPUTE-IN-MEMORY BASED ON GRAPH MINIMUM-COST MATCHING OPTIMIZATION",
+    "title": "Ego: Efficient Compression of Unstructured Sparse DNNs for Compute-In-Memory Based on Graph Minimum-Cost Matching Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -2344,7 +2344,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "GRIN: HYPERGNN TRAINING FRAMEWORK FOR EFFICIENT EDGE INFERENCE VIA HYPERGRAPH RESTRUCTURING",
+    "title": "Grin: Hypergnn Training Framework for Efficient Edge Inference via Hypergraph Restructuring",
     "tracks": [
       "Technical Session"
     ],
@@ -2380,7 +2380,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "A SCHEDULING FRAMEWORK FOR EFFICIENT MOE INFERENCE ON EDGE GPU-NDP SYSTEMS",
+    "title": "A Scheduling Framework for Efficient Moe Inference on Edge GPU-Ndp Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -2411,7 +2411,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "COLORED HUGE PAGES: A HARDWARE-SOFTWARE APPROACH FOR ENHANCED ISOLATION AND PERFORMANCE",
+    "title": "Colored Huge Pages: A Hardware-Software Approach for Enhanced Isolation and Performance",
     "tracks": [
       "Technical Session"
     ],
@@ -2444,7 +2444,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "UNARY POSITIONAL SYSTEM: FLEXIBLE BALANCE OF HARDWARE AREA AND PERFORMANCE",
+    "title": "Unary Positional System: Flexible Balance of Hardware Area and Performance",
     "tracks": [
       "Technical Session"
     ],
@@ -2477,7 +2477,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "AN OPEN SOURCE DESIGN EXPLORATION TOOL FOR BATTERY AND COOLANT CONFIGURATION",
+    "title": "An Open Source Design Exploration Tool for Battery and Coolant Configuration",
     "tracks": [
       "Technical Session"
     ],
@@ -2512,7 +2512,7 @@
     "sessions": [
       "TS01"
     ],
-    "title": "EXPLORING HETEROGENEITY-AWARE OPTIMIZATIONS FOR RESOURCE EFFICIENT EDGE RECOMMENDATION",
+    "title": "Exploring Heterogeneity-Aware Optimizations for Resource Efficient Edge Recommendation",
     "tracks": [
       "Technical Session"
     ],
@@ -2545,7 +2545,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "GLITCH PROPAGATION THROUGH FLIP-FLOPS ENDANGERS MASKING SCHEMES: WHY TIME SEPARATION IS REQUIRED",
+    "title": "Glitch Propagation Through Flip-Flops Endangers Masking Schemes: Why Time Separation Is Required",
     "tracks": [
       "Technical Session"
     ],
@@ -2580,7 +2580,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "FORTISKY: ENHANCING ADVERSARIAL AND BIT-ERROR ROBUSTNESS FOR EFFICIENT AND SECURE AUTONOMOUS SYSTEMS",
+    "title": "Fortisky: Enhancing Adversarial and Bit-Error Robustness for Efficient and Secure Autonomous Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -2614,7 +2614,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "DISTILLING GRAPH REASONING INTO LIGHTWEIGHT CNNS FOR NEAR-SENSOR POINT CLOUD CORRUPTION DETECTION",
+    "title": "Distilling Graph Reasoning into Lightweight Cnns for Near-Sensor Point Cloud Corruption Detection",
     "tracks": [
       "Technical Session"
     ],
@@ -2650,7 +2650,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "FHEX: TRANSFORMING GENERIC COMPUTE CHIPS INTO SECURE FHE ENGINES VIA A HARDWARE-SOFTWARE CO-DESIGN FRAMEWORK",
+    "title": "Fhex: Transforming Generic Compute Chips into Secure Fhe Engines via a Hardware-Software Co-Design Framework",
     "tracks": [
       "Technical Session"
     ],
@@ -2686,7 +2686,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "TOWARDS TRUSTWORTHY LLM-BASED ASSERTION GENERATION: A DATA AUGMENTATION FRAMEWORK WITH FORMAL CHECK APPROACH",
+    "title": "Towards Trustworthy LLM-Based Assertion Generation: A Data Augmentation Framework with Formal Check Approach",
     "tracks": [
       "Technical Session"
     ],
@@ -2717,7 +2717,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "AUTOMATED SELF-EXPLANATION OF EXPECTED VERSUS PERCEIVED BEHAVIOR FOR INTERACTING DIGITAL SYSTEMS",
+    "title": "Automated Self-Explanation of Expected Versus Perceived Behavior for Interacting Digital Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -2748,7 +2748,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "EXPLORING A RESOURCE-EFFICIENT NTT FPGA ACCELERATOR FOR FULLY HOMOMORPHIC ENCRYPTION",
+    "title": "Exploring a Resource-Efficient Ntt FPGA Accelerator for Fully Homomorphic Encryption",
     "tracks": [
       "Technical Session"
     ],
@@ -2782,7 +2782,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "ML-DSA-OSH: AN EFFICIENT, OPEN-SOURCE HARDWARE IMPLEMENTATION OF ML-DSA",
+    "title": "Ml-Dsa-Osh: An Efficient, Open-Source Hardware Implementation of Ml-Dsa",
     "tracks": [
       "Technical Session"
     ],
@@ -2811,7 +2811,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "POSTPONING THE GLITCHES IS NOT ENOUGH - A CRITICAL ANALYSIS OF THE DATE 20 24 E-ISW MASKING SCHEME",
+    "title": "Postponing the Glitches Is Not Enough - A Critical Analysis of the DATE 20 24 E-ISW Masking Scheme",
     "tracks": [
       "Technical Session"
     ],
@@ -2845,7 +2845,7 @@
     "sessions": [
       "TS02"
     ],
-    "title": "FROM TRIGGER TO IMPACT: KNOWLEDGE-GRAPH REASONING AND RISK-AWARE CLASSIFICATION FOR HARDWARE TROJAN DETECTION",
+    "title": "From Trigger to Impact: Knowledge-Graph Reasoning and Risk-Aware Classification for Hardware Trojan Detection",
     "tracks": [
       "Technical Session"
     ],
@@ -2883,7 +2883,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "EUNOMIA: PREEMPTION-BASED AND QOS-AWARE CORE ALLOCATION IN OVERSUBSCRIBED CLOUD",
+    "title": "Eunomia: Preemption-Based and QoS-Aware Core Allocation in Oversubscribed Cloud",
     "tracks": [
       "Technical Session"
     ],
@@ -2914,7 +2914,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "BREAKING STANDARD CELL MARGIN CONSTRAINTS FOR AREA-EFFICIENT VLSI DESIGN",
+    "title": "Breaking Standard Cell Margin Constraints for Area-Efficient VLSI Design",
     "tracks": [
       "Technical Session"
     ],
@@ -2944,7 +2944,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "ACCELERATING DETAILED ROUTING CONVERGENCE THROUGH OFFLINE REINFORCEMENT LEARNING",
+    "title": "Accelerating Detailed Routing Convergence Through Offline Reinforcement Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -2978,7 +2978,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "SOFT-CONSTRAINED TRIPLE PATTERNING LAYOUT DECOMPOSITION",
+    "title": "Soft-Constrained Triple Patterning Layout Decomposition",
     "tracks": [
       "Technical Session"
     ],
@@ -3010,7 +3010,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "COMMUNICATION-AWARE HYBRID PARALLELISM MAPPING FOR LOW-COST MCM-BASED DNN ACCELERATORS",
+    "title": "Communication-Aware Hybrid Parallelism Mapping for Low-Cost Mcm-Based DNN Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -3041,7 +3041,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "A REUSABLE METHODOLOGY FOR HIGH-PERFORMANCE INTERCONNECTS USING A STANDARD-CELL BASED ASYNCHRONOUS NOC ROUTER",
+    "title": "A Reusable Methodology for High-Performance Interconnects Using a Standard-Cell Based Asynchronous NoC Router",
     "tracks": [
       "Technical Session"
     ],
@@ -3072,7 +3072,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "MONET: A MIXTURE-OF-EXPERTS ACCELERATOR WITH A MULTICAST-OPTIMIZED TWO-TIER NETWORK-ON-CHIP",
+    "title": "Monet: A Mixture-Of-Experts Accelerator with a Multicast-Optimized Two-Tier Network-On-Chip",
     "tracks": [
       "Technical Session"
     ],
@@ -3103,7 +3103,7 @@
     "sessions": [
       "TS03"
     ],
-    "title": "EFFICIENT THROUGHPUT ANALYSIS OF SYNCHRONOUS DATAFLOW GRAPHS VIA PARAMETRIC SHORTEST PATH",
+    "title": "Efficient Throughput Analysis of Synchronous Dataflow Graphs via Parametric Shortest Path",
     "tracks": [
       "Technical Session"
     ],
@@ -3133,7 +3133,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "UNIFIED CLASS AND DOMAIN INCREMENTAL LEARNING WITH MIXTURE OF EXPERTS FOR INDOOR LOCALIZATION",
+    "title": "Unified Class and Domain Incremental Learning with Mixture of Experts for Indoor Localization",
     "tracks": [
       "Technical Session"
     ],
@@ -3166,7 +3166,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "COMPRESSION SPACE SEARCH: RL-BASED COMBINATIONAL COMPRESSION FOR NEURAL NETWORKS",
+    "title": "Compression Space Search: Rl-Based Combinational Compression for Neural Networks",
     "tracks": [
       "Technical Session"
     ],
@@ -3200,7 +3200,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "TRAINDEEPLOY: HARDWARE-ACCELERATED PARAMETER-EFFICIENT FINE-TUNING OF SMALL TRANSFORMER MODELS AT THE EXTREME EDGE",
+    "title": "Traindeeploy: Hardware-Accelerated Parameter-Efficient Fine-Tuning of Small Transformer Models at the Extreme Edge",
     "tracks": [
       "Technical Session"
     ],
@@ -3231,7 +3231,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "QSLM: A PERFORMANCE- AND MEMORY-AWARE QUANTIZATION FRAMEWORK WITH TIERED SEARCH STRATEGY FOR SPIKE-DRIVEN LANGUAGE MODELS",
+    "title": "Qslm: A Performance- And Memory-Aware Quantization Framework with Tiered Search Strategy for Spike-Driven Language Models",
     "tracks": [
       "Technical Session"
     ],
@@ -3264,7 +3264,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "FICABU: A FISHER‑BASED, CONTEXT‑ADAPTIVE MACHINE UNLEARNING PROCESSOR FOR EDGE AI",
+    "title": "Ficabu: A Fisher‑Based, Context‑Adaptive Machine Unlearning Processor for Edge AI",
     "tracks": [
       "Technical Session"
     ],
@@ -3296,7 +3296,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "HILAL: HESSIAN-INFORMED LAYER ALLOCATION FOR HETEROGENEOUS ANALOG–DIGITAL INFERENCE",
+    "title": "Hilal: Hessian-Informed Layer Allocation for Heterogeneous Analog–Digital Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -3330,7 +3330,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "PATCHBLOCK: A LIGHTWEIGHT DEFENSE AGAINST ADVERSARIAL PATCHES FOR EMBEDDED EDGEAI DEVICES",
+    "title": "Patchblock: A Lightweight Defense Against Adversarial Patches for Embedded Edgeai Devices",
     "tracks": [
       "Technical Session"
     ],
@@ -3362,7 +3362,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "EFFICIENT CNN INFERENCE ON ULTRA-LOW-POWER MCUS VIA SATURATION-AWARE CONVOLUTION",
+    "title": "Efficient Cnn Inference on Ultra-Low-Power Mcus via Saturation-Aware Convolution",
     "tracks": [
       "Technical Session"
     ],
@@ -3396,7 +3396,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "LUPIN: SPATIAL RESOURCE STEALING WITH OUTLIER-FIRST ENCODING FOR MIXED-PRECISION LLM ACCELERATION",
+    "title": "Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -3426,7 +3426,7 @@
     "sessions": [
       "TS04"
     ],
-    "title": "MAPLE: MODALITY-AWARE PROJECTION-FREE LIDAR-CAMERA FUSION FOR 3D VEHICULAR OBJECT DETECTION",
+    "title": "Maple: Modality-Aware Projection-Free Lidar-Camera Fusion for 3D Vehicular Object Detection",
     "tracks": [
       "Technical Session"
     ],
@@ -3457,7 +3457,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "ARTEMIS: CO-SIMULATION OF POWER MICROGRIDS AND ENERGY-AWARE CLOUD DATA CENTERS",
+    "title": "Artemis: Co-Simulation of Power Microgrids and Energy-Aware Cloud Data Centers",
     "tracks": [
       "Technical Session"
     ],
@@ -3491,7 +3491,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "COFFEE: A CARBON-MODELING AND OPTIMIZATION FRAMEWORK FOR HZO-BASED FEFET ENVMS",
+    "title": "Coffee: A Carbon-Modeling and Optimization Framework for Hzo-Based Fefet Envms",
     "tracks": [
       "Technical Session"
     ],
@@ -3521,7 +3521,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "RESHAPING BAYESIAN OPTIMIZATION OF DESIGN SPACE OPTIMIZATION TOWARDS ACCURATE AND IRREDUNDANT EVALUATION IN EDA TOOL PARAMETER EXPLORATION",
+    "title": "Reshaping Bayesian Optimization of Design Space Optimization Towards Accurate and Irredundant Evaluation in EDA Tool Parameter Exploration",
     "tracks": [
       "Technical Session"
     ],
@@ -3557,7 +3557,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "EDA FLOW MATTERS: STAGE-AWARE PARAMETER OPTIMIZATION OF TOOL CHAIN",
+    "title": "EDA Flow Matters: Stage-Aware Parameter Optimization of Tool Chain",
     "tracks": [
       "Technical Session"
     ],
@@ -3590,7 +3590,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "FAQNAS: FLOPS AWARE HYBRID QUANTUM NEURAL ARCHITECTURE SEARCH USING GENETIC ALGORITHM",
+    "title": "Faqnas: Flops Aware Hybrid Quantum Neural Architecture Search Using Genetic Algorithm",
     "tracks": [
       "Technical Session"
     ],
@@ -3622,7 +3622,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "UNIFIED PAULI-ROTATION SYNTHESIS FOR RELIEVING CX-COUNT OVERHEAD IN TABLEAU-BASED QUANTUM CIRCUIT OPTIMIZATION FLOW",
+    "title": "Unified Pauli-Rotation Synthesis for Relieving Cx-Count Overhead in Tableau-Based Quantum Circuit Optimization Flow",
     "tracks": [
       "Technical Session"
     ],
@@ -3654,7 +3654,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "CHIPLIGHT: CROSS-LAYER OPTIMIZATION OF CHIPLET DESIGN WITH OPTICAL INTERCONNECTS FOR LLM TRAINING",
+    "title": "Chiplight: Cross-Layer Optimization of Chiplet Design with Optical Interconnects for LLM Training",
     "tracks": [
       "Technical Session"
     ],
@@ -3684,7 +3684,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "CYBER-PHYSICAL SYSTEM DESIGN SPACE EXPLORATION FOR AFFORDABLE PRECISION AGRICULTURE",
+    "title": "Cyber-Physical System Design Space Exploration for Affordable Precision Agriculture",
     "tracks": [
       "Technical Session"
     ],
@@ -3716,7 +3716,7 @@
     "sessions": [
       "TS05"
     ],
-    "title": "DESIGN AND OPTIMIZATION OF SOLAR-POWERED EMBEDDED SYSTEMS WITH UPPAAL STRATEGO",
+    "title": "Design and Optimization of Solar-Powered Embedded Systems with Uppaal Stratego",
     "tracks": [
       "Technical Session"
     ],
@@ -3753,7 +3753,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "EMAPER: CROSS-LEVEL ELECTROMIGRATION AWARE PLACEMENT AND ROUTING EDA WORKFLOW FOR INTERCONNECTS HOTSPOT PREDICTION AND MITIGATION",
+    "title": "Emaper: Cross-Level Electromigration Aware Placement and Routing EDA Workflow for Interconnects Hotspot Prediction and Mitigation",
     "tracks": [
       "Technical Session"
     ],
@@ -3789,7 +3789,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "ETLA-3D: EQUIVALENT THIN LAYER AGGREGATION BASED THERMAL FEM FOR HYBRID BONDING F2F 3D ICS",
+    "title": "Etla-3D: Equivalent Thin Layer Aggregation Based Thermal Fem for Hybrid Bonding F2f 3D ICs",
     "tracks": [
       "Technical Session"
     ],
@@ -3820,7 +3820,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "CONSOLIDATING ML-DRIVEN EARLY IR-DROP MITIGATION FOR FAST AND RELIABLE IR-DROP CLOSURE",
+    "title": "Consolidating Ml-Driven Early Ir-Drop Mitigation for Fast and Reliable Ir-Drop Closure",
     "tracks": [
       "Technical Session"
     ],
@@ -3852,7 +3852,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "FALCON-3D: FULL-CHIP ANALYTICAL THERMAL SIMULATION WITH LATERAL CONVECTION FOR 3D-STACKED ICS",
+    "title": "Falcon-3D: Full-Chip Analytical Thermal Simulation with Lateral Convection for 3D-Stacked ICs",
     "tracks": [
       "Technical Session"
     ],
@@ -3884,7 +3884,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "3D-ICE 4.0: ACCURATE AND EFFICIENT THERMAL MODELING FOR 2.5D/3D HETEROGENEOUS CHIPLET SYSTEMS",
+    "title": "3D-Ice 4.0: Accurate and Efficient Thermal Modeling for 2.5D/3D Heterogeneous Chiplet Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -3917,7 +3917,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "SENSOR PLACEMENT AND TRANSFORMER-BASED THERMAL MAP GENERATION FOR REUSABLE INTERPOSERS",
+    "title": "Sensor Placement and Transformer-Based Thermal Map Generation for Reusable Interposers",
     "tracks": [
       "Technical Session"
     ],
@@ -3948,7 +3948,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "ENABLING CROSS-DESIGN POWER TRACE PREDICTION WITH GNNS FOR GATE-LEVEL NETLISTS",
+    "title": "Enabling Cross-Design Power Trace Prediction with Gnns for Gate-Level Netlists",
     "tracks": [
       "Technical Session"
     ],
@@ -3983,7 +3983,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "FASTRW: AN EFFICIENT RANDOM WALK METHOD FOR STEADY-STATE THERMAL ANALYSIS",
+    "title": "Fastrw: An Efficient Random Walk Method for Steady-State Thermal Analysis",
     "tracks": [
       "Technical Session"
     ],
@@ -4020,7 +4020,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "REINFORCEMENT LEARNING FOR HYBRID BONDING TERMINAL LEGALIZATION IN 3D ICS",
+    "title": "Reinforcement Learning for Hybrid Bonding Terminal Legalization in 3D ICs",
     "tracks": [
       "Technical Session"
     ],
@@ -4060,7 +4060,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "THINK WITH SELF-DECOUPLING AND SELF-VERIFICATION: AUTOMATED RTL DESIGN WITH BACKTRACK-TOT",
+    "title": "Think with Self-Decoupling and Self-Verification: Automated Rtl Design with Backtrack-Tot",
     "tracks": [
       "Technical Session"
     ],
@@ -4091,7 +4091,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "HIM: AN AUTONOMOUS HARDWARE ACCELERATOR FOR SOLVING BOOLEAN SATISFIABILITY PROBLEM WITH A HEURISTIC-IN-MACRO ENGINE",
+    "title": "Him: An Autonomous Hardware Accelerator for Solving Boolean Satisfiability Problem with a Heuristic-In-Macro Engine",
     "tracks": [
       "Technical Session"
     ],
@@ -4125,7 +4125,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "MISP-NET: SIGNIFICANTLY REDUCING TRANSIENT BACKWARD-STEPPINGS VIA NOVEL MULTI-STEP IRREGULAR SEQUENCE PREDICTION",
+    "title": "Misp-Net: Significantly Reducing Transient Backward-Steppings via Novel Multi-Step Irregular Sequence Prediction",
     "tracks": [
       "Technical Session"
     ],
@@ -4158,7 +4158,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "ACCURATE ANALYTICAL MODELING FOR NOCS WITH HYBRID ARBITRATION UNDER HIGH TRAFFIC INJECTION",
+    "title": "Accurate Analytical Modeling for NoCs with Hybrid Arbitration Under High Traffic Injection",
     "tracks": [
       "Technical Session"
     ],
@@ -4190,7 +4190,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "A PARALLEL MIXED-PRECISION GMRES-IR SOLVER FOR ILL-CONDITIONED EQUATIONS IN DEVICE SIMULATION",
+    "title": "A Parallel Mixed-Precision Gmres-Ir Solver for Ill-Conditioned Equations in Device Simulation",
     "tracks": [
       "Technical Session"
     ],
@@ -4220,7 +4220,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "PALM: PROGRAM ANALYSIS AND LLM METHODS FOR CRAFTING SYSTEMVERILOG ASSERTIONS",
+    "title": "Palm: Program Analysis and LLM Methods for Crafting Systemverilog Assertions",
     "tracks": [
       "Technical Session"
     ],
@@ -4250,7 +4250,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "CONTRACT-BASED ARCHITECTURE EXPLORATION OF CYBER-PHYSICAL SYSTEMS VIA SATISFIABILITY MODULO CONVEX PROGRAMMING",
+    "title": "Contract-Based Architecture Exploration of Cyber-Physical Systems via Satisfiability Modulo Convex Programming",
     "tracks": [
       "Technical Session"
     ],
@@ -4280,7 +4280,7 @@
     "sessions": [
       "TS07"
     ],
-    "title": "DYNAMOE: DYNAMIC RECONFIGURABLE NOC-BASED ACCELERATOR FOR MIXTURE-OF-EXPERT MODELS",
+    "title": "Dynamoe: Dynamic Reconfigurable NoC-Based Accelerator for Mixture-Of-Expert Models",
     "tracks": [
       "Technical Session"
     ],
@@ -4311,7 +4311,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "DYNAMIC RANK-AWARE AGGREGATION WITH GRAPH CONTRASTIVE LEARNING FOR FEDERATED FOUNDATION MODEL FINE-TUNING",
+    "title": "Dynamic Rank-Aware Aggregation with Graph Contrastive Learning for Federated Foundation Model Fine-Tuning",
     "tracks": [
       "Technical Session"
     ],
@@ -4342,7 +4342,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "FEDTPA: TACKLING DATA HETEROGENEITY WITH ADAPTIVE PARAMETER ALLOCATION IN FEDERATED INSTRUCTION TUNING",
+    "title": "Fedtpa: Tackling Data Heterogeneity with Adaptive Parameter Allocation in Federated Instruction Tuning",
     "tracks": [
       "Technical Session"
     ],
@@ -4373,7 +4373,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "SHAKAN: TRAINING-INFERENCE CO-DESIGN FOR OBLIQUE RANDOM FORESTS ON EMBEDDED DEVICES",
+    "title": "Shakan: Training-Inference Co-Design for Oblique Random Forests on Embedded Devices",
     "tracks": [
       "Technical Session"
     ],
@@ -4407,7 +4407,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "DYNAMIC NEURAL THRESHOLDING ON MIXED-SIGNAL NEUROMORPHIC PROCESSORS ENABLED BY INTEGRATED LEARNING AND HARDWARE DESIGN",
+    "title": "Dynamic Neural Thresholding on Mixed-Signal Neuromorphic Processors Enabled by Integrated Learning and Hardware Design",
     "tracks": [
       "Technical Session"
     ],
@@ -4440,7 +4440,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "VMXDOTP: A RISC-V VECTOR ISA EXTENSION FOR EFFICIENT MICROSCALING (MX) FORMAT ACCELERATION",
+    "title": "Vmxdotp: A RISC-V Vector Isa Extension for Efficient Microscaling (Mx) Format Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -4470,7 +4470,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "IMPROVING RELIABILITY IN QUANTIZED GRAPH NEURAL NETWORKS WITH NODE-WISE ENTROPY-DRIVEN TEMPERATURE SCALING",
+    "title": "Improving Reliability in Quantized Graph Neural Networks with Node-Wise Entropy-Driven Temperature Scaling",
     "tracks": [
       "Technical Session"
     ],
@@ -4505,7 +4505,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "A SELF-SUPERVISED NEUROMORPHIC PROCESSOR USING HIGH-DIMENSIONAL REPRESENTATIONS FOR COGNITIVE MAP NAVIGATION",
+    "title": "A Self-Supervised Neuromorphic Processor Using High-Dimensional Representations for Cognitive Map Navigation",
     "tracks": [
       "Technical Session"
     ],
@@ -4540,7 +4540,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "PARALLEL-SA: POINT CLOUD PROCESSING ACCELERATION VIA PARALLEL SET ABSTRACTION",
+    "title": "Parallel-Sa: Point Cloud Processing Acceleration via Parallel Set Abstraction",
     "tracks": [
       "Technical Session"
     ],
@@ -4577,7 +4577,7 @@
     "sessions": [
       "TS08"
     ],
-    "title": "SONIC: SMART OPTIMIZATION FOR NEURAL-INTEGRATED CMP WITH TIMING-AWARE FILLS",
+    "title": "Sonic: Smart Optimization for Neural-Integrated Cmp with Timing-Aware Fills",
     "tracks": [
       "Technical Session"
     ],
@@ -4608,7 +4608,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "MPM-LLM4DSE: REACHING THE PARETO FRONTIER IN HLS WITH MULTIMODAL LEARNING AND LLM-DRIVEN EXPLORATION",
+    "title": "Mpm-LLM4dse: Reaching the Pareto Frontier in Hls with Multimodal Learning and LLM-Driven Exploration",
     "tracks": [
       "Technical Session"
     ],
@@ -4647,7 +4647,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "DAPO: DESIGN STRUCTURE-AWARE PASS ORDERING FOR HLS VIA CONTRASTIVE AND REINFORCEMENT LEARNING",
+    "title": "Dapo: Design Structure-Aware Pass Ordering for Hls via Contrastive and Reinforcement Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -4680,7 +4680,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "AUTOSHRINK: ADAPTIVE SEARCH SPACE SHRINKAGE FOR LARGE-SCALE PARETO OPTIMIZATION OF HLS DESIGNS",
+    "title": "Autoshrink: Adaptive Search Space Shrinkage for Large-Scale Pareto Optimization of Hls Designs",
     "tracks": [
       "Technical Session"
     ],
@@ -4712,7 +4712,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "AREA EFFICIENT SPECULATIVE LOOP PIPELINING FOR HIGH-LEVEL SYNTHESIS",
+    "title": "Area Efficient Speculative Loop Pipelining for High-Level Synthesis",
     "tracks": [
       "Technical Session"
     ],
@@ -4744,7 +4744,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "ANCHOR-AND-ADAPT: HLS QOR PREDICTION USING GROUND-TRUTH SEEDING AND FEW-SHOT FINE-TUNING",
+    "title": "Anchor-And-Adapt: Hls Qor Prediction Using Ground-Truth Seeding and Few-Shot Fine-Tuning",
     "tracks": [
       "Technical Session"
     ],
@@ -4775,7 +4775,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "BENCH4HLS: END-TO-END EVALUATION OF LLMS IN HIGH-LEVEL SYNTHESIS CODE GENERATION",
+    "title": "Bench4hls: End-To-End Evaluation of LLMs in High-Level Synthesis Code Generation",
     "tracks": [
       "Technical Session"
     ],
@@ -4816,7 +4816,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "OPENACM: AN OPEN-SOURCE SRAM-BASED APPROXIMATE CIM COMPILER",
+    "title": "Openacm: An Open-Source SRAM-Based Approximate Cim Compiler",
     "tracks": [
       "Technical Session"
     ],
@@ -4852,7 +4852,7 @@
     "sessions": [
       "TS09"
     ],
-    "title": "RAPID-GRAPH: RECURSIVE APSP USING PROCESSING-IN-MEMORY FOR DYNAMIC PROGRAMMING ON GRAPHS",
+    "title": "Rapid-Graph: Recursive Apsp Using Processing-In-Memory for Dynamic Programming on Graphs",
     "tracks": [
       "Technical Session"
     ],
@@ -4886,7 +4886,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "PICOSNN: PARTIALLY INCOHERENT CONFIGURABLE OPTICAL COMPUTING ARCHITECTURE FOR SNN ACCELERATION",
+    "title": "Picosnn: Partially Incoherent Configurable Optical Computing Architecture for Snn Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -4918,7 +4918,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "LAMP: AN ADAPTIVE NEAR-MEMORY PROCESSING SYSTEM FOR HIGH-PERFORMANCE LONG-READ MAPPING",
+    "title": "Lamp: An Adaptive Near-Memory Processing System for High-Performance Long-Read Mapping",
     "tracks": [
       "Technical Session"
     ],
@@ -4951,7 +4951,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "MD-SNN: MEMBRANE POTENTIAL-AWARE DISTILLATION ON QUANTIZED SPIKING NEURAL NETWORK",
+    "title": "Md-Snn: Membrane Potential-Aware Distillation on Quantized Spiking Neural Network",
     "tracks": [
       "Technical Session"
     ],
@@ -4985,7 +4985,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "A DIGITAL NEURAL ARRAY IC FOR REAL-TIME NEURAL NETWORK REPLICATION FROM SPIKE ACTIVITIES",
+    "title": "A Digital Neural Array IC for Real-Time Neural Network Replication from Spike Activities",
     "tracks": [
       "Technical Session"
     ],
@@ -5017,7 +5017,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "GMAC: NVCIM ARCHITECTURE FOR PARALLEL POINT-BASED POINT CLOUD ACCELERATION VIA GEOMETRIC MAPPING AND ADDRESS-INDEX COMPUTATION",
+    "title": "Gmac: Nvcim Architecture for Parallel Point-Based Point Cloud Acceleration via Geometric Mapping and Address-Index Computation",
     "tracks": [
       "Technical Session"
     ],
@@ -5052,7 +5052,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "FSR-GEMM: A SCALABLE FSR-PARALLEL PHOTONIC ACCELERATOR FOR REAL-VALUED GEMM COMPUTING",
+    "title": "Fsr-GEMM: A Scalable Fsr-Parallel Photonic Accelerator for Real-Valued GEMM Computing",
     "tracks": [
       "Technical Session"
     ],
@@ -5084,7 +5084,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "RETRO: MITIGATING POWER SIDE-CHANNEL ATTACKS WITH RECONFIGURABLE RFET-BASED RING OSCILLATORS",
+    "title": "Retro: Mitigating Power Side-Channel Attacks with Reconfigurable Rfet-Based Ring Oscillators",
     "tracks": [
       "Technical Session"
     ],
@@ -5114,7 +5114,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "C-STEP: COMPUTE-EFFICIENT SPIKING TRANSFORMERS WITH TEMPORAL EXIT AND EARLY-GUIDED PRUNING",
+    "title": "C-Step: Compute-Efficient Spiking Transformers with Temporal Exit and Early-Guided Pruning",
     "tracks": [
       "Technical Session"
     ],
@@ -5149,7 +5149,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "AGENTIC AI FOR DIGITAL WELLNESS: CHALLENGES AND ARCHITECTURAL PERSPECTIVES FOR SMART HOME CARE",
+    "title": "Agentic AI for Digital Wellness: Challenges and Architectural Perspectives for Smart Home Care",
     "tracks": [
       "Technical Session"
     ],
@@ -5183,7 +5183,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "LAMOS: ENABLING EFFICIENT UNDERLINE{LA}RGE NUMBER UNDERLINE{MO}DULAR MULTIPLICATION THROUGH UNDERLINE{S}RAM-BASED CIM ACCELERATION",
+    "title": "Lamos: Enabling Efficient Underline{La}Rge Number Underline{Mo}Dular Multiplication Through Underline{S}RAM-Based Cim Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -5213,7 +5213,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "MARS: A GENERAL GPU OPTIMIZATION FRAMEWORK FOR MERKLE-TREE–ENABLED CRYPTOGRAPHY",
+    "title": "Mars: A General GPU Optimization Framework for Merkle-Tree–Enabled Cryptography",
     "tracks": [
       "Technical Session"
     ],
@@ -5246,7 +5246,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "ATTACKING AND SECURING HYBRID HOMOMORPHIC ENCRYPTION AGAINST POWER ANALYSIS",
+    "title": "Attacking and Securing Hybrid Homomorphic Encryption Against Power Analysis",
     "tracks": [
       "Technical Session"
     ],
@@ -5277,7 +5277,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "FROM ENTROPY TO LEAKAGE: A UNIFIED METHODOLOGY FOR SECURITY EVALUATION OF CACHES",
+    "title": "From Entropy to Leakage: A Unified Methodology for Security Evaluation of Caches",
     "tracks": [
       "Technical Session"
     ],
@@ -5311,7 +5311,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "FHEINS: FULLY HOMOMORPHIC ENCRYPTION ACCELERATION FOR LARGE DATA APPLICATIONS WITH IN-STORAGE PROCESSING",
+    "title": "Fheins: Fully Homomorphic Encryption Acceleration for Large Data Applications with in-Storage Processing",
     "tracks": [
       "Technical Session"
     ],
@@ -5344,7 +5344,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "MAKE IT DARKER: A GRAY CODE POPCOUNTER TO PROTECT BNN CIM AGAINST POWER ATTACKS",
+    "title": "Make It Darker: A Gray Code Popcounter to Protect Bnn Cim Against Power Attacks",
     "tracks": [
       "Technical Session"
     ],
@@ -5378,7 +5378,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "EFFICIENT FEDERATED LEARNING WITH LOW-RANK UPDATES UNDER HOMOMORPHIC ENCRYPTION",
+    "title": "Efficient Federated Learning with Low-Rank Updates Under Homomorphic Encryption",
     "tracks": [
       "Technical Session"
     ],
@@ -5408,7 +5408,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "SCYTALE: A COMPILER FRAMEWORK FOR ACCELERATING TFHE WITH CIRCUIT BOOTSTRAPPING",
+    "title": "Scytale: A Compiler Framework for Accelerating Tfhe with Circuit Bootstrapping",
     "tracks": [
       "Technical Session"
     ],
@@ -5443,7 +5443,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "SPOILER-GUARD: GATING LATENCY EFFECTS OF MEMORY ACCESSES THROUGH RANDOMIZED DEPENDENCY PREDICTION",
+    "title": "Spoiler-Guard: Gating Latency Effects of Memory Accesses Through Randomized Dependency Prediction",
     "tracks": [
       "Technical Session"
     ],
@@ -5475,7 +5475,7 @@
     "sessions": [
       "TS11"
     ],
-    "title": "CIRCE: CROSS INTEGRATED RISC-V CRYPTOGRAPHIC EXTENSION",
+    "title": "Circe: Cross Integrated RISC-V Cryptographic Extension",
     "tracks": [
       "Technical Session"
     ],
@@ -5506,7 +5506,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "QUANTUM CIRCUIT COMPILATION FOR SUPERCONDUCTING BUS-RESONATOR ARCHITECTURES",
+    "title": "Quantum Circuit Compilation for Superconducting Bus-Resonator Architectures",
     "tracks": [
       "Technical Session"
     ],
@@ -5537,7 +5537,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "ALTERNATING ZX CIRCUIT EXTRACTION FOR HARDWARE-ADAPTIVE COMPILATION",
+    "title": "Alternating Zx Circuit Extraction for Hardware-Adaptive Compilation",
     "tracks": [
       "Technical Session"
     ],
@@ -5572,7 +5572,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "SURGEQ: A HYBRID FRAMEWORK FOR ULTRA-FAST QUANTUM PROCESSOR DESIGN AND CROSSTALK-AWARE CIRCUIT EXECUTION",
+    "title": "Surgeq: A Hybrid Framework for Ultra-Fast Quantum Processor Design and Crosstalk-Aware Circuit Execution",
     "tracks": [
       "Technical Session"
     ],
@@ -5607,7 +5607,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "CODE DIVISION MULTIPLEXING BASED READOUT SCHEME FOR SPIN QUBITS",
+    "title": "Code Division Multiplexing Based Readout Scheme for Spin Qubits",
     "tracks": [
       "Technical Session"
     ],
@@ -5640,7 +5640,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "QUANTUM CIRCUIT SYNTHESIS BASED ON LIMTDD",
+    "title": "Quantum Circuit Synthesis Based on Limtdd",
     "tracks": [
       "Technical Session"
     ],
@@ -5671,7 +5671,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "QUANTUM HARDWARE-EFFICIENT SELECTION OF AUXILIARY VARIABLES FOR QUBO FORMULATIONS",
+    "title": "Quantum Hardware-Efficient Selection of Auxiliary Variables for Qubo Formulations",
     "tracks": [
       "Technical Session"
     ],
@@ -5706,7 +5706,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "OPTIMAL COMPILATION OF SYNDROME EXTRACTION CIRCUITS FOR GENERAL QUANTUM LDPC CODES",
+    "title": "Optimal Compilation of Syndrome Extraction Circuits for General Quantum Ldpc Codes",
     "tracks": [
       "Technical Session"
     ],
@@ -5737,7 +5737,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "ULTRA-LOW LOGICAL DEPTH FAULT-TOLERANT QUANTUM CIRCUIT SYNTHESIS VIA LATTICE SURGERY",
+    "title": "Ultra-Low Logical Depth Fault-Tolerant Quantum Circuit Synthesis via Lattice Surgery",
     "tracks": [
       "Technical Session"
     ],
@@ -5770,7 +5770,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "EFFICIENT IMAGE RECONSTRUCTION ARCHITECTURE FOR NEUTRAL ATOM QUANTUM COMPUTING",
+    "title": "Efficient Image Reconstruction Architecture for Neutral Atom Quantum Computing",
     "tracks": [
       "Technical Session"
     ],
@@ -5804,7 +5804,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "A MATHEMATICAL EXPLORATION TO EQUIVALENCE CHECKING OF QUANTUM CIRCUITS",
+    "title": "A Mathematical Exploration to Equivalence Checking of Quantum Circuits",
     "tracks": [
       "Technical Session"
     ],
@@ -5836,7 +5836,7 @@
     "sessions": [
       "TS12"
     ],
-    "title": "FROM FOREST TO TREE: PRIORITIZING THE MAXIMUM ADDITIONAL DELAY IN AQFP CIRCUIT DESIGN",
+    "title": "From Forest to Tree: Prioritizing the Maximum Additional Delay in Aqfp Circuit Design",
     "tracks": [
       "Technical Session"
     ],
@@ -5870,7 +5870,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "GOHAN: A GOLDEN-COPY-AIDED PLATFORM ENABLING ONLINE HYBRID-INTERACTIVE RELIABILITY ANALYSIS",
+    "title": "Gohan: A Golden-Copy-Aided Platform Enabling Online Hybrid-Interactive Reliability Analysis",
     "tracks": [
       "Technical Session"
     ],
@@ -5905,7 +5905,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "SNIFFER: RL-BASED VENDOR-AGNOSTIC TEST CASE GENERATION FOR TRIGGERING LONG-LATENCY BEHAVIORS",
+    "title": "Sniffer: Rl-Based Vendor-Agnostic Test Case Generation for Triggering Long-Latency Behaviors",
     "tracks": [
       "Technical Session"
     ],
@@ -5939,7 +5939,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "EXPLAINABLE GNN-DRIVEN TEST POINT INSERTION ON UNCONTROLLABLE I/OS",
+    "title": "Explainable Gnn-Driven Test Point Insertion on Uncontrollable I/Os",
     "tracks": [
       "Technical Session"
     ],
@@ -5971,7 +5971,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "DESIGN FOR TESTABILITY USING MIXED-POLARITY FLIP-FLOPS AND LATCHES",
+    "title": "Design for Testability Using Mixed-Polarity Flip-Flops and Latches",
     "tracks": [
       "Technical Session"
     ],
@@ -6002,7 +6002,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "ADAPTIVE TESTING OF COMPUTE-IN-MEMORY GANS USING BACKPROPAGATION-GUIDED TEST COMPACTION",
+    "title": "Adaptive Testing of Compute-In-Memory Gans Using Backpropagation-Guided Test Compaction",
     "tracks": [
       "Technical Session"
     ],
@@ -6034,7 +6034,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "A REINFORCEMENT LEARNING FRAMEWORK FOR GOOD DIE IN BAD NEIGHBORHOOD ANALYSIS",
+    "title": "A Reinforcement Learning Framework for Good Die in Bad Neighborhood Analysis",
     "tracks": [
       "Technical Session"
     ],
@@ -6065,7 +6065,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "CONCURRENT FAULT DETECTION FOR BINARY NEURAL NETWORK ACCELERATORS VIA ON-CHIP VOLTAGE MONITORING",
+    "title": "Concurrent Fault Detection for Binary Neural Network Accelerators via on-Chip Voltage Monitoring",
     "tracks": [
       "Technical Session"
     ],
@@ -6101,7 +6101,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "NOISE-AWARE ADAPTIVE SAMPLING FOR ROBUST DIFFUSION MODELS ON ANALOG COMPUTE-IN-MEMORY",
+    "title": "Noise-Aware Adaptive Sampling for Robust Diffusion Models on Analog Compute-In-Memory",
     "tracks": [
       "Technical Session"
     ],
@@ -6136,7 +6136,7 @@
     "sessions": [
       "TS13"
     ],
-    "title": "DIAGNOSTIC TEST GENERATION FOR FAULT LOCALIZATION IN PRINTED NEUROMORPHIC CIRCUITS",
+    "title": "Diagnostic Test Generation for Fault Localization in Printed Neuromorphic Circuits",
     "tracks": [
       "Technical Session"
     ],
@@ -6166,7 +6166,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "GPU-ACCELERATED EFFICIENT TRANSDUCTION FOR LOGIC OPTIMIZATION",
+    "title": "GPU-Accelerated Efficient Transduction for Logic Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -6198,7 +6198,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "DYNAOPT: A HETEROGENEOUS LOGIC OPTIMIZATION FRAMEWORK WITH DYNAMIC SEQUENCE GENERATION",
+    "title": "Dynaopt: A Heterogeneous Logic Optimization Framework with Dynamic Sequence Generation",
     "tracks": [
       "Technical Session"
     ],
@@ -6229,7 +6229,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "EXACT SYNTHESIS WITH OPTIMAL SWITCHING ACTIVITY",
+    "title": "Exact Synthesis with Optimal Switching Activity",
     "tracks": [
       "Technical Session"
     ],
@@ -6261,7 +6261,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "HOPART: HOP-CONSTRAINED PARTITIONING WITH ROUTING SUPPORT FOR MULTI-FPGA SYSTEMS",
+    "title": "Hopart: Hop-Constrained Partitioning with Routing Support for Multi-FPGA Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -6293,7 +6293,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "QUADOL: A QUALITY-DRIVEN APPROXIMATE LOGIC SYNTHESIS METHOD LEVERAGING DUAL-OUTPUT LUTS FOR MODERN FPGAS",
+    "title": "Quadol: A Quality-Driven Approximate Logic Synthesis Method Leveraging Dual-Output LUTs for Modern FPGAs",
     "tracks": [
       "Technical Session"
     ],
@@ -6326,7 +6326,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "METASYN: A META-REINFORCEMENT LEARNING FRAMEWORK WITH MULTIMODAL CIRCUIT REPRESENTATION FOR ADAPTIVE LOGIC SYNTHESIS",
+    "title": "Metasyn: A Meta-Reinforcement Learning Framework with Multimodal Circuit Representation for Adaptive Logic Synthesis",
     "tracks": [
       "Technical Session"
     ],
@@ -6362,7 +6362,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "ELOGIC: AN E-GRAPH-BASED LOGIC REWRITING FRAMEWORK FOR MAJORITY-INVERTER GRAPHS",
+    "title": "Elogic: An E-Graph-Based Logic Rewriting Framework for Majority-Inverter Graphs",
     "tracks": [
       "Technical Session"
     ],
@@ -6392,7 +6392,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "ADVANCING LUT-BASED THRESHOLD LOGIC SYNTHESIS WITH ENHANCED AREA ESTIMATION",
+    "title": "Advancing LUT-Based Threshold Logic Synthesis with Enhanced Area Estimation",
     "tracks": [
       "Technical Session"
     ],
@@ -6422,7 +6422,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "UNICIRCUIT: MULTIMODAL CIRCUIT REPRESENTATION LEARNING WITH ANCHOR-FREE ALIGNMENT",
+    "title": "Unicircuit: Multimodal Circuit Representation Learning with Anchor-Free Alignment",
     "tracks": [
       "Technical Session"
     ],
@@ -6452,7 +6452,7 @@
     "sessions": [
       "TS14"
     ],
-    "title": "EFFICIENT ARITHMETIC ON FPGA",
+    "title": "Efficient Arithmetic on FPGA",
     "tracks": [
       "Technical Session"
     ],
@@ -6488,7 +6488,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "A2RT: EFFICIENT RAY TRACING ACCELERATOR WITH APPROXIMATE-ACCURATE COMPUTING AND QUANTIZATION",
+    "title": "A2rt: Efficient Ray Tracing Accelerator with Approximate-Accurate Computing and Quantization",
     "tracks": [
       "Technical Session"
     ],
@@ -6519,7 +6519,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "KAN-SAS: EFFICIENT ACCELERATION OF KOLMOGOROV-ARNOLD NETWORKS ON SYSTOLIC ARRAYS",
+    "title": "Kan-Sas: Efficient Acceleration of Kolmogorov-Arnold Networks on Systolic Arrays",
     "tracks": [
       "Technical Session"
     ],
@@ -6552,7 +6552,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "SCROOGE: ACCELERATING ATTENTION INFERENCE IN LLMS VIA EARLY TERMINATION MECHANISM",
+    "title": "Scrooge: Accelerating Attention Inference in LLMs via Early Termination Mechanism",
     "tracks": [
       "Technical Session"
     ],
@@ -6586,7 +6586,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "FLICKER: A FINE-GRAINED CONTRIBUTION-AWARE ACCELERATOR FOR REAL-TIME 3D GAUSSIAN SPLATTING",
+    "title": "Flicker: A Fine-Grained Contribution-Aware Accelerator for Real-Time 3D Gaussian Splatting",
     "tracks": [
       "Technical Session"
     ],
@@ -6622,7 +6622,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "RAPID: ACCELERATING POINT CLOUD DIFFUSION MODELS VIA SPACE-AWARE MIX-PRECISION QUANTIZATION",
+    "title": "Rapid: Accelerating Point Cloud Diffusion Models via Space-Aware Mix-Precision Quantization",
     "tracks": [
       "Technical Session"
     ],
@@ -6657,7 +6657,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "AO-BFP: AN ADAPTIVE MIXED-PRECISION AND OUTLIER-AWARE BLOCK FLOATING-POINT ACCELERATOR FOR LARGE LANGUAGE MODEL INFERENCE",
+    "title": "Ao-Bfp: An Adaptive Mixed-Precision and Outlier-Aware Block Floating-Point Accelerator for Large Language Model Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -6689,7 +6689,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "BREAKING THE BRAM WALL: SCALABLE VINA FPGA ACCELERATION VIA DISTRIBUTED GRID STORAGE AND CROSS-BOARD LONG-RING PIPELINES",
+    "title": "Breaking the Bram Wall: Scalable Vina FPGA Acceleration via Distributed Grid Storage and Cross-Board Long-Ring Pipelines",
     "tracks": [
       "Technical Session"
     ],
@@ -6722,7 +6722,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "AURORA - AUTOMATED 8T SRAM WIRED-OR LOGIC ARRAY FOR BOOLEAN-BASED MACHINE LEARNING",
+    "title": "Aurora - Automated 8t SRAM Wired-Or Logic Array for Boolean-Based Machine Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -6758,7 +6758,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "DYGEN: A CONSTANT-TIME KERNEL GENERATOR FOR DYNAMIC-SHAPE NEURAL NETWORKS",
+    "title": "Dygen: A Constant-Time Kernel Generator for Dynamic-Shape Neural Networks",
     "tracks": [
       "Technical Session"
     ],
@@ -6789,7 +6789,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "MICROSCALING-STOCHASTIC COMPUTING BASED SYSTOLIC ARRAYS FOR ENERGY EFFICIENT DEEP NEURAL NETWORK INFERENCE",
+    "title": "Microscaling-Stochastic Computing Based Systolic Arrays for Energy Efficient Deep Neural Network Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -6821,7 +6821,7 @@
     "sessions": [
       "TS15"
     ],
-    "title": "COMIX-D: A LOW-COST, RNG-FREE DECORRELATOR VIA CORRELATION MIXING FOR STOCHASTIC COMPUTING",
+    "title": "Comix-D: A Low-Cost, Rng-Free Decorrelator via Correlation Mixing for Stochastic Computing",
     "tracks": [
       "Technical Session"
     ],
@@ -6854,7 +6854,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "NON-VOLATILE SPINTRONIC FLIP-FLOPS WITH CHECKPOINT PRESERVATION SUPPORTED IN RISC-V PLATFORM",
+    "title": "Non-Volatile Spintronic Flip-Flops with Checkpoint Preservation Supported in RISC-V Platform",
     "tracks": [
       "Technical Session"
     ],
@@ -6889,7 +6889,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "A LOW-POWER BAYESIAN HEAD USING SOT-MRAM ARRAYS FOR UNCERTAINTY-AWARE BINARY NEURAL NETWORKS",
+    "title": "A Low-Power Bayesian Head Using SOT-MRAM Arrays for Uncertainty-Aware Binary Neural Networks",
     "tracks": [
       "Technical Session"
     ],
@@ -6926,7 +6926,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "A LOW POWER AND HIGH RELIABILITY NONVOLATILE SRAM USING IN-PLANE VGSOT-MRAM WITH PRE-CHARGE RESTORE SCHEME",
+    "title": "A Low Power and High Reliability Nonvolatile SRAM Using in-Plane Vgsot-MRAM with Pre-Charge Restore Scheme",
     "tracks": [
       "Technical Session"
     ],
@@ -6959,7 +6959,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "EQUIVALENT-0NS-REPLACEMENT SELF-AWARE-ACCESS LLC ON DUAL-PORT SOT-MRAM BY SENSE-WHILE-REPLACE",
+    "title": "Equivalent-0ns-Replacement Self-Aware-Access Llc on Dual-Port SOT-MRAM by Sense-While-Replace",
     "tracks": [
       "Technical Session"
     ],
@@ -6992,7 +6992,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "SOFT-ERROR RESILIENT MRAM-OTP BCAM FOR DDR4 STT-MRAM REDUNDANCY MANAGEMENT",
+    "title": "Soft-Error Resilient MRAM-Otp Bcam for Ddr4 Stt-MRAM Redundancy Management",
     "tracks": [
       "Technical Session"
     ],
@@ -7024,7 +7024,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "MIRAGE: MRAM-BASED NEAR ADC-LESS COMPUTE-IN-MEMORY MACRO FOR DEEP LEARNING ACCELERATION",
+    "title": "Mirage: MRAM-Based Near Adc-Less Compute-In-Memory Macro for Deep Learning Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -7062,7 +7062,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "AN EFFECTIVE SNN MACRO WITH REAL-TIME STDP AND DYNAMIC LIF MODEL BASED ON THERMALLY INTERPLAYED SPIN-ORBIT TORQUE MTJ",
+    "title": "An Effective Snn Macro with Real-Time Stdp and Dynamic Lif Model Based on Thermally Interplayed Spin-Orbit Torque Mtj",
     "tracks": [
       "Technical Session"
     ],
@@ -7092,7 +7092,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "ANTIFERROMAGNETIC TUNNEL JUNCTIONS (AFMTJS) FOR IN-MEMORY COMPUTING: MODELING AND CASE STUDY",
+    "title": "Antiferromagnetic Tunnel Junctions (Afmtjs) for in-Memory Computing: Modeling and Case Study",
     "tracks": [
       "Technical Session"
     ],
@@ -7125,7 +7125,7 @@
     "sessions": [
       "TS16"
     ],
-    "title": "HIGH-PERFORMANCE AND HIGH-DENSITY NAND-LIKE SOT-MRAM FOR FINFET TECHNOLOGY NODES",
+    "title": "High-Performance and High-Density Nand-Like SOT-MRAM for Finfet Technology Nodes",
     "tracks": [
       "Technical Session"
     ],
@@ -7156,7 +7156,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "WHEN FAULTS DON'T VANISH: PERSISTENT FAULT INJECTION AND KEY RECOVERY ON MRAM-BACKED AES",
+    "title": "When Faults Don't Vanish: Persistent Fault Injection and Key Recovery on MRAM-Backed Aes",
     "tracks": [
       "Technical Session"
     ],
@@ -7191,7 +7191,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "CAMI: A CONTEXT-AWARE ISOLATION ARCHITECTURE FOR GPU MEMORIES",
+    "title": "Cami: A Context-Aware Isolation Architecture for GPU Memories",
     "tracks": [
       "Technical Session"
     ],
@@ -7222,7 +7222,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "PROCAMO: A FAST POST-MANUFACTURING PROGRAMMABLE CAMOUFLAGED LOGIC FAMILY",
+    "title": "Procamo: A Fast Post-Manufacturing Programmable Camouflaged Logic Family",
     "tracks": [
       "Technical Session"
     ],
@@ -7253,7 +7253,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "NUREDACT: NON-UNIFORM EFPGA ARCHITECTURE FOR LOW-OVERHEAD AND SECURE IP REDACTION",
+    "title": "Nuredact: Non-Uniform Efpga Architecture for Low-Overhead and Secure Ip Redaction",
     "tracks": [
       "Technical Session"
     ],
@@ -7284,7 +7284,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "AUTOMATED HARDWARE TROJAN INSERTION IN INDUSTRIAL-SCALE DESIGNS",
+    "title": "Automated Hardware Trojan Insertion in Industrial-Scale Designs",
     "tracks": [
       "Technical Session"
     ],
@@ -7314,7 +7314,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "ON ORACLE-GUIDED RANDOM CIRCUIT LEARNING VIA STOCHASTIC BOOLEAN SATISFIABILITY",
+    "title": "On Oracle-Guided Random Circuit Learning via Stochastic Boolean Satisfiability",
     "tracks": [
       "Technical Session"
     ],
@@ -7346,7 +7346,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "COVERT: TROJAN DETECTION IN COTS HARDWARE VIA STATISTICAL ACTIVATION OF MICROARCHITECTURAL EVENTS",
+    "title": "Covert: Trojan Detection in Cots Hardware via Statistical Activation of Microarchitectural Events",
     "tracks": [
       "Technical Session"
     ],
@@ -7377,7 +7377,7 @@
     "sessions": [
       "TS17"
     ],
-    "title": "CIRCUIT-AWARE ANALYSIS OF ARITHMETIC ERROR DETECTION CODES",
+    "title": "Circuit-Aware Analysis of Arithmetic Error Detection Codes",
     "tracks": [
       "Technical Session"
     ],
@@ -7408,7 +7408,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "PROVABLY OPTIMAL PLANAR PARETO NEAREST NEIGHBOR SEARCH WITH DOUBLE MONOTONE CHAINS",
+    "title": "Provably Optimal Planar Pareto Nearest Neighbor Search with Double Monotone Chains",
     "tracks": [
       "Technical Session"
     ],
@@ -7439,7 +7439,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "NEAR-OPTIMAL TDM RATIO ASSIGNMENT FOR DIE-LEVEL ROUTING IN MULTI-FPGA SYSTEMS",
+    "title": "Near-Optimal Tdm Ratio Assignment for Die-Level Routing in Multi-FPGA Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -7470,7 +7470,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "DRVISION: A DRV-AWARE ROUTABILITY OPTIMIZATION FRAMEWORK WITH MULTI-MODAL PREDICTION AND VISION-BASED ROUTING GUIDANCE",
+    "title": "Drvision: A Drv-Aware Routability Optimization Framework with Multi-Modal Prediction and Vision-Based Routing Guidance",
     "tracks": [
       "Technical Session"
     ],
@@ -7500,7 +7500,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "TANGRAM: A NOVEL ON-TRACK BUS ROUTING VIA PLACEMENT AND COMPRESSION OF POLYGONS",
+    "title": "Tangram: A Novel on-Track Bus Routing via Placement and Compression of Polygons",
     "tracks": [
       "Technical Session"
     ],
@@ -7534,7 +7534,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "DSR: A SYSTEMATIC APPROACH FOR EFFICIENT DOUBLE-SIDED SIGNAL ROUTING",
+    "title": "Dsr: A Systematic Approach for Efficient Double-Sided Signal Routing",
     "tracks": [
       "Technical Session"
     ],
@@ -7568,7 +7568,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "SUBMODULAR MAXIMIZATION-INSPIRED ADAPTIVE ROUTING BEND SPACE PLANNING",
+    "title": "Submodular Maximization-Inspired Adaptive Routing Bend Space Planning",
     "tracks": [
       "Technical Session"
     ],
@@ -7600,7 +7600,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "AN ADAPTIVE COST-BASED VIA AND CONGESTION CO-OPTIMIZATION FRAMEWORK FOR VLSI GLOBAL ROUTING",
+    "title": "An Adaptive Cost-Based via and Congestion Co-Optimization Framework for VLSI Global Routing",
     "tracks": [
       "Technical Session"
     ],
@@ -7632,7 +7632,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "OPTIMIZING MULTIBIT FLIP-FLOP BANKING VIA AGILE IN-PLACEMENT PPA CO-OPTIMIZATION",
+    "title": "Optimizing Multibit Flip-Flop Banking via Agile in-Placement Ppa Co-Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -7662,7 +7662,7 @@
     "sessions": [
       "TS18"
     ],
-    "title": "BADGE: BOUNDARY-AWARE DIRICHLET GRAPH EMBEDDING FOR INITIALIZATION IN DREAMPLACE",
+    "title": "Badge: Boundary-Aware Dirichlet Graph Embedding for Initialization in Dreamplace",
     "tracks": [
       "Technical Session"
     ],
@@ -7694,7 +7694,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "MX-SAFE: VERSATILE INFERENCE- AND TRAINING-PROOF MICROSCALING FORMAT WITH ON-THE-FLY EXPONENT AND MANTISSA BIT ALLOCATION",
+    "title": "Mx-Safe: Versatile Inference- And Training-Proof Microscaling Format with on-The-Fly Exponent and Mantissa Bit Allocation",
     "tracks": [
       "Technical Session"
     ],
@@ -7726,7 +7726,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "PATBINN: A 65NM PROCESSING-IN-CAM BASED BNN IMPLEMENTATION FOR PATHOGEN GENOME CLASSIFICATION",
+    "title": "Patbinn: A 65nm Processing-In-Cam Based Bnn Implementation for Pathogen Genome Classification",
     "tracks": [
       "Technical Session"
     ],
@@ -7756,7 +7756,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "HI-APP: HARDWARE-FRIENDLY FULLY-INTEGER APPROXIMATION OF NONLINEAR FUNCTIONS IN QUANTIZED CLIP-VITS",
+    "title": "Hi-App: Hardware-Friendly Fully-Integer Approximation of Nonlinear Functions in Quantized Clip-Vits",
     "tracks": [
       "Technical Session"
     ],
@@ -7787,7 +7787,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "BOLD-Q: BLOCKWISE OUTLIER-AWARE LOGARITHMIC DUAL-BIAS QUANTIZATION FOR HARDWARE-EFFICIENT LLM INFERENCE",
+    "title": "Bold-Q: Blockwise Outlier-Aware Logarithmic Dual-Bias Quantization for Hardware-Efficient LLM Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -7825,7 +7825,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "T-SAR: A FULL-STACK CO-DESIGN FOR CPU-ONLY TERNARY LLM INFERENCE VIA IN-PLACE SIMD ALU REORGANIZATION",
+    "title": "T-Sar: A Full-Stack Co-Design for CPU-Only Ternary LLM Inference via in-Place Simd Alu Reorganization",
     "tracks": [
       "Technical Session"
     ],
@@ -7858,7 +7858,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "ITERQUANT: ITERATIVE QUANTIZATION FRAMEWORK FOR MIXED-PRECISION LLM COMPRESSION",
+    "title": "Iterquant: Iterative Quantization Framework for Mixed-Precision LLM Compression",
     "tracks": [
       "Technical Session"
     ],
@@ -7893,7 +7893,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "GCPT: GRADIENT-AWARE CLUSTERING METHOD FOR EFFICIENT POST-TRAINING QUANTIZATION IN LARGE NEURAL NETWORKS",
+    "title": "Gcpt: Gradient-Aware Clustering Method for Efficient Post-Training Quantization in Large Neural Networks",
     "tracks": [
       "Technical Session"
     ],
@@ -7924,7 +7924,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "FAST AND ENERGY-EFFICIENT SUPPORT FOR LOW-PRECISION LLMS ON PIM",
+    "title": "Fast and Energy-Efficient Support for Low-Precision LLMs on Pim",
     "tracks": [
       "Technical Session"
     ],
@@ -7957,7 +7957,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "HAP: ACCELERATING DNNS WITH RESOLUTION-PRESERVED QUANTIZATION BY HARNESSING ADAPTIVE-PRECISION",
+    "title": "Hap: Accelerating DNNs with Resolution-Preserved Quantization by Harnessing Adaptive-Precision",
     "tracks": [
       "Technical Session"
     ],
@@ -7988,7 +7988,7 @@
     "sessions": [
       "TS19"
     ],
-    "title": "ARCHE-Q: A DSP-FREE DATAFLOW ACCELERATOR FOR QUANTIZED NEURAL NETWORKS IN SENSOR-AIDED MILLIMETER-WAVE EDGE CONNECTIVITY",
+    "title": "Arche-Q: A Dsp-Free Dataflow Accelerator for Quantized Neural Networks in Sensor-Aided Millimeter-Wave Edge Connectivity",
     "tracks": [
       "Technical Session"
     ],
@@ -8021,7 +8021,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "FAULT-TOLERANCE MAPPING OF SPIKING NEURAL NETWORKS TO RRAM-BASED NEUROMORPHIC HARDWARE",
+    "title": "Fault-Tolerance Mapping of Spiking Neural Networks to Rram-Based Neuromorphic Hardware",
     "tracks": [
       "Technical Session"
     ],
@@ -8058,7 +8058,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "MESHHD: NEAR-LINEAR ENCODING FOR HYPERDIMENSIONAL COMPUTING VIA MULTI-SCALE BASES AND KRONECKER FACTORIZATION",
+    "title": "Meshhd: Near-Linear Encoding for Hyperdimensional Computing via Multi-Scale Bases and Kronecker Factorization",
     "tracks": [
       "Technical Session"
     ],
@@ -8094,7 +8094,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "LEARNING TO SENSE WITHOUT ADCS: EXPLOITING PHASIC RESPONSES FROM DIFFUSIVE MEMRISTORS",
+    "title": "Learning to Sense Without Adcs: Exploiting Phasic Responses from Diffusive Memristors",
     "tracks": [
       "Technical Session"
     ],
@@ -8124,7 +8124,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "TSIM4ICS: TRACE-DRIVEN SYSTEMC-TLM SIMULATION FRAMEWORK FOR I/O DIE-BASED MULTI-CHIPLET SYSTEMS",
+    "title": "Tsim4ics: Trace-Driven Systemc-Tlm Simulation Framework for I/O Die-Based Multi-Chiplet Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -8159,7 +8159,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "FLASHGEMM: MESH-AWARE EFFICIENT GEMM FOR 3D-STACKED LLM ACCELERATORS",
+    "title": "Flashgemm: Mesh-Aware Efficient GEMM for 3D-Stacked LLM Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -8195,7 +8195,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "X-SIM: AN ACCURATE AND SCALABLE SIMULATOR FOR MEMRISTIVE COMPUTING-IN-MEMORY ACCELERATORS",
+    "title": "X-Sim: An Accurate and Scalable Simulator for Memristive Computing-In-Memory Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -8227,7 +8227,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "GRAPH-SRAM: EFFICIENT GRAPH LEARNING-BASED SRAM SIMULATION VIA WAVEFORM PROPAGATION",
+    "title": "Graph-SRAM: Efficient Graph Learning-Based SRAM Simulation via Waveform Propagation",
     "tracks": [
       "Technical Session"
     ],
@@ -8259,7 +8259,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "ENABLING ULTRA-RELIABLE MEMORIES: A PRACTICAL FRAMEWORK FOR ZERO MIS-CORRECTION SEC-DED-DAEC CODES FOR SAFETY-CRITICAL SYSTEMS",
+    "title": "Enabling Ultra-Reliable Memories: A Practical Framework for Zero Mis-Correction Sec-Ded-Daec Codes for Safety-Critical Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -8295,7 +8295,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "MGPA: A MEMRISTOR-BASED GENOME PROCESSING ACCELERATOR FOR SINGLE-CELL RNA SEQUENCING",
+    "title": "Mgpa: A Memristor-Based Genome Processing Accelerator for Single-Cell Rna Sequencing",
     "tracks": [
       "Technical Session"
     ],
@@ -8329,7 +8329,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "SYNTHESIZING MIXED-MODE OPERATIONS FOR MEMRISTORS USING MAJORITY DECOMPOSITION",
+    "title": "Synthesizing Mixed-Mode Operations for Memristors Using Majority Decomposition",
     "tracks": [
       "Technical Session"
     ],
@@ -8361,7 +8361,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "MINFILL: REINFORCEMENT LEARNING AND GNN GUIDED REORDERING FOR FILL-IN REDUCTION IN RF CIRCUIT MATRICES",
+    "title": "Minfill: Reinforcement Learning and Gnn Guided Reordering for Fill-In Reduction in RF Circuit Matrices",
     "tracks": [
       "Technical Session"
     ],
@@ -8394,7 +8394,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "IP-MATCHER: AN EFFICIENT ONE-TO-MANY MATCHING FRAMEWORK FOR ANALOG CIRCUIT DESIGN AND REUSING",
+    "title": "Ip-Matcher: An Efficient One-To-Many Matching Framework for Analog Circuit Design and Reusing",
     "tracks": [
       "Technical Session"
     ],
@@ -8428,7 +8428,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "RASNIL: PVT-ROBUST MANY-OBJECTIVE ANALOG SIZING VIA NESTED HYBRID FIDELITY FRAMEWORK WITH INCREMENTAL LEARNING",
+    "title": "Rasnil: Pvt-Robust Many-Objective Analog Sizing via Nested Hybrid Fidelity Framework with Incremental Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -8459,7 +8459,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "SUBSTRATE: A STATICALLY TYPED FRAMEWORK FOR DESIGNING HIGHLY CONFIGURABLE ANALOG AND MIXED-SIGNAL CIRCUIT GENERATORS",
+    "title": "Substrate: A Statically Typed Framework for Designing Highly Configurable Analog and Mixed-Signal Circuit Generators",
     "tracks": [
       "Technical Session"
     ],
@@ -8495,7 +8495,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "ACEMARL: ADAPTIVE CLUSTERING ENHANCED MULTI-AGENT REINFORCEMENT LEARNING FOR ANALOG CIRCUIT SIZING",
+    "title": "Acemarl: Adaptive Clustering Enhanced Multi-Agent Reinforcement Learning for Analog Circuit Sizing",
     "tracks": [
       "Technical Session"
     ],
@@ -8527,7 +8527,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "SIMULATOR-DRIVEN DEEP REINFORCEMENT LEARNING FOR ANALOG CIRCUIT DESIGN",
+    "title": "Simulator-Driven Deep Reinforcement Learning for Analog Circuit Design",
     "tracks": [
       "Technical Session"
     ],
@@ -8557,7 +8557,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "AUTOPMS: A FRAMEWORK FOR AUTOMATED POWER MANAGEMENT SYSTEM DESIGN VIA HIERARCHICAL MODELING AND EMBEDDED DESIGN KNOWLEDGE",
+    "title": "Autopms: A Framework for Automated Power Management System Design via Hierarchical Modeling and Embedded Design Knowledge",
     "tracks": [
       "Technical Session"
     ],
@@ -8591,7 +8591,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "CADRO: CAUSAL-GUIDED DIMENSIONALITY REDUCTION FOR SCALABLE MULTI-OBJECTIVE PARETO OPTIMIZATION",
+    "title": "Cadro: Causal-Guided Dimensionality Reduction for Scalable Multi-Objective Pareto Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -8625,7 +8625,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "DIFFRESIST: PHYSICS-CONSTRAINED DIFFUSION FOR PHOTORESIST MODELING",
+    "title": "Diffresist: Physics-Constrained Diffusion for Photoresist Modeling",
     "tracks": [
       "Technical Session"
     ],
@@ -8661,7 +8661,7 @@
     "sessions": [
       "TS21"
     ],
-    "title": "GRAIN: A DESIGN-INTENT-DRIVEN ANALOG LAYOUT MIGRATION FRAMEWORK",
+    "title": "Grain: A Design-Intent-Driven Analog Layout Migration Framework",
     "tracks": [
       "Technical Session"
     ],
@@ -8701,7 +8701,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "LATIAS: A GENERAL ARCHITECTURE-OPERATOR MODEL FOR SPATIAL ACCELERATORS WITH COMPLEX TOPOLOGY AND MEMORY HIERARCHY",
+    "title": "Latias: A General Architecture-Operator Model for Spatial Accelerators with Complex Topology and Memory Hierarchy",
     "tracks": [
       "Technical Session"
     ],
@@ -8739,7 +8739,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "CHIP-MAP: A COLLABORATIVE OPTIMIZATION FRAMEWORK FOR MACRO PLACEMENT USING LARGE LANGUAGE MODELS",
+    "title": "Chip-Map: A Collaborative Optimization Framework for Macro Placement Using Large Language Models",
     "tracks": [
       "Technical Session"
     ],
@@ -8773,7 +8773,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "LITHOMAMBA: HIGH-FIDELITY LITHOGRAPHY SIMULATION WITH STATE SPACE MODELS",
+    "title": "Lithomamba: High-Fidelity Lithography Simulation with State Space Models",
     "tracks": [
       "Technical Session"
     ],
@@ -8807,7 +8807,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "EXPLAINABLE HARDWARE TROJAN DETECTION AT RTL USING ATTENTION MECHANISM",
+    "title": "Explainable Hardware Trojan Detection at Rtl Using Attention Mechanism",
     "tracks": [
       "Technical Session"
     ],
@@ -8846,7 +8846,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "MAEDA: AN LLM-POWERED MULTI-AGENT EVALUATION FRAMEWORK FOR EDA TOOL DOCUMENTATION QA",
+    "title": "Maeda: An LLM-Powered Multi-Agent Evaluation Framework for EDA Tool Documentation Qa",
     "tracks": [
       "Technical Session"
     ],
@@ -8885,7 +8885,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "STEP-LLM: GENERATING CAD STEP MODELS FROM NATURAL LANGUAGE WITH LARGE LANGUAGE MODELS",
+    "title": "Step-LLM: Generating Cad Step Models from Natural Language with Large Language Models",
     "tracks": [
       "Technical Session"
     ],
@@ -8922,7 +8922,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "CHATTEST: COVERAGE-ENHANCED TESTBENCH GENERATION FOR AGILE HARDWARE VERIFICATION WITH LLMS",
+    "title": "Chattest: Coverage-Enhanced Testbench Generation for Agile Hardware Verification with LLMs",
     "tracks": [
       "Technical Session"
     ],
@@ -8952,7 +8952,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "GANGR: GAN-ASSISTED SCALABLE AND EFFICIENT GLOBAL ROUTING PARALLELIZATION",
+    "title": "Gangr: Gan-Assisted Scalable and Efficient Global Routing Parallelization",
     "tracks": [
       "Technical Session"
     ],
@@ -8987,7 +8987,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "ESTCODER: A RTL CODE GENERATOR BASED ON STATIC FUNCTIONAL ESTIMATION",
+    "title": "Estcoder: A Rtl Code Generator Based on Static Functional Estimation",
     "tracks": [
       "Technical Session"
     ],
@@ -9022,7 +9022,7 @@
     "sessions": [
       "TS22"
     ],
-    "title": "FAST: A SCALABLE FRAMEWORK FOR ACCELERATING FLEXIBLE STRUCTURED SPARSE TRAINING",
+    "title": "Fast: A Scalable Framework for Accelerating Flexible Structured Sparse Training",
     "tracks": [
       "Technical Session"
     ],
@@ -9054,7 +9054,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "DARE: AN IRREGULARITY-TOLERANT MATRIX PROCESSING UNIT WITH A DENSIFYING ISA AND FILTERED RUNAHEAD EXECUTION",
+    "title": "Dare: An Irregularity-Tolerant Matrix Processing Unit with a Densifying Isa and Filtered Runahead Execution",
     "tracks": [
       "Technical Session"
     ],
@@ -9086,7 +9086,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "XTREE ON EQUIMESH: TOPOLOGY AND ALGORITHM CO-DESIGN FOR COLLECTIVE COMMUNICATION",
+    "title": "Xtree on Equimesh: Topology and Algorithm Co-Design for Collective Communication",
     "tracks": [
       "Technical Session"
     ],
@@ -9121,7 +9121,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "BEAIVI: A 22-NM 1-GHZ+ EXPOSED DATAPATH RISC-V DSP FOR LOW-POWER APPLICATIONS",
+    "title": "Beaivi: A 22-Nm 1-Ghz+ Exposed Datapath RISC-V Dsp for Low-Power Applications",
     "tracks": [
       "Technical Session"
     ],
@@ -9157,7 +9157,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "T-MSA: TRANSFORMER-DRIVEN MULTI-STRATEGY ADAPTIVE MICROARCHITECTURE DESIGN SPACE EXPLORATION",
+    "title": "T-Msa: Transformer-Driven Multi-Strategy Adaptive Microarchitecture Design Space Exploration",
     "tracks": [
       "Technical Session"
     ],
@@ -9191,7 +9191,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "RISC-V ISA EXTENSIONS FOR VECTORIZED UNSTRUCTURED SPARSE SPMM IN LLM INFERENCE",
+    "title": "RISC-V Isa Extensions for Vectorized Unstructured Sparse Spmm in LLM Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -9226,7 +9226,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "FROM BUFFERS TO REGISTERS: UNLOCKING FINE-GRAINED FLASHATTENTION WITH HYBRID-BONDED 3D NPU CO-DESIGN",
+    "title": "From Buffers to Registers: Unlocking Fine-Grained Flashattention with Hybrid-Bonded 3D NPU Co-Design",
     "tracks": [
       "Technical Session"
     ],
@@ -9262,7 +9262,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "INCREASING THE EFFICIENCY OF ASSOCIATIVE PROCESSOR ARCHITECTURES VIA CMOS-COMPATIBLE HYBRIDIZATION",
+    "title": "Increasing the Efficiency of Associative Processor Architectures via Cmos-Compatible Hybridization",
     "tracks": [
       "Technical Session"
     ],
@@ -9296,7 +9296,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "PQCUARK: A SCALAR RISC-V ISA EXTENSION FOR ML-KEM AND ML-DSA",
+    "title": "Pqcuark: A Scalar RISC-V Isa Extension for Ml-Kem and Ml-Dsa",
     "tracks": [
       "Technical Session"
     ],
@@ -9327,7 +9327,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "NITRO: 3D NAND FLASH-BASED IN-STORAGE LLM COMPUTING WITH ENHANCED ACTIVATION DATAFLOW",
+    "title": "Nitro: 3D Nand Flash-Based in-Storage LLM Computing with Enhanced Activation Dataflow",
     "tracks": [
       "Technical Session"
     ],
@@ -9361,7 +9361,7 @@
     "sessions": [
       "TS23"
     ],
-    "title": "SMIX: SCHEDULABLE INSTRUCTION SET ARCHITECTURE EXTENSION INTERFACE FOR MULTI-OPERAND OPERATORS",
+    "title": "Smix: Schedulable Instruction Set Architecture Extension Interface for Multi-Operand Operators",
     "tracks": [
       "Technical Session"
     ],
@@ -9392,7 +9392,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "RLCONCOLIC: ENHANCING CONCOLIC TESTING VIA MULTI-STEP REINFORCEMENT LEARNING",
+    "title": "Rlconcolic: Enhancing Concolic Testing via Multi-Step Reinforcement Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -9423,7 +9423,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "FINE-GRAINED CODE ANALYSIS FOR PROCESSOR FUZZING",
+    "title": "Fine-Grained Code Analysis for Processor Fuzzing",
     "tracks": [
       "Technical Session"
     ],
@@ -9457,7 +9457,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "VALIDATING FORMAL HARDWARE SPECIFICATIONS THROUGH GENERATED BEHAVIORAL MODELS",
+    "title": "Validating Formal Hardware Specifications Through Generated Behavioral Models",
     "tracks": [
       "Technical Session"
     ],
@@ -9492,7 +9492,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "FORWORD: ACCELERATING FORMAL DATAPATH VERIFICATION VIA WORD-LEVEL SWEEPING",
+    "title": "Forword: Accelerating Formal Datapath Verification via Word-Level Sweeping",
     "tracks": [
       "Technical Session"
     ],
@@ -9522,7 +9522,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "VLIM: VERIFIED LOOP INTERCHANGE FOR OPTIMISED MATRIX MULTIPLICATION",
+    "title": "Vlim: Verified Loop Interchange for Optimised Matrix Multiplication",
     "tracks": [
       "Technical Session"
     ],
@@ -9555,7 +9555,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "POLYNOMIAL VERIFICATION OF 2-AFFINE SPACES",
+    "title": "Polynomial Verification of 2-Affine Spaces",
     "tracks": [
       "Technical Session"
     ],
@@ -9585,7 +9585,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "HYPERPLANE INPUT SPACE CUTS FOR NEURAL NETWORK VERIFICATION",
+    "title": "Hyperplane Input Space Cuts for Neural Network Verification",
     "tracks": [
       "Technical Session"
     ],
@@ -9617,7 +9617,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "PROVABLE GUARANTEES IN APPROXIMATE SYNTHESIS",
+    "title": "Provable Guarantees in Approximate Synthesis",
     "tracks": [
       "Technical Session"
     ],
@@ -9652,7 +9652,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "ZERO-SHOT DIAGNOSIS OF COMPOUND FAULTS BASED ON CIRCUIT OPERATIONAL MECHANISM",
+    "title": "Zero-Shot Diagnosis of Compound Faults Based on Circuit Operational Mechanism",
     "tracks": [
       "Technical Session"
     ],
@@ -9686,7 +9686,7 @@
     "sessions": [
       "TS24"
     ],
-    "title": "A FORMALLY VERIFIED SECURE CACHING MECHANISM ON TRUSTZONE-ENABLED MICROCONTROLLERS",
+    "title": "A Formally Verified Secure Caching Mechanism on Trustzone-Enabled Microcontrollers",
     "tracks": [
       "Technical Session"
     ],
@@ -9725,7 +9725,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "ANCHORTP: RESILIENT LLM INFERENCE WITH STATE-PRESERVING ELASTIC TENSOR PARALLELISM",
+    "title": "Anchortp: Resilient LLM Inference with State-Preserving Elastic Tensor Parallelism",
     "tracks": [
       "Technical Session"
     ],
@@ -9757,7 +9757,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "DECOHD: DECOMPOSED HYPERDIMENSIONAL CLASSIFICATION UNDER EXTREME MEMORY BUDGETS",
+    "title": "Decohd: Decomposed Hyperdimensional Classification Under Extreme Memory Budgets",
     "tracks": [
       "Technical Session"
     ],
@@ -9788,7 +9788,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "FATRQ: TIERED RESIDUAL QUANTIZATION FOR LLM VECTOR SEARCH IN FAR-MEMORY-AWARE ANNS SYSTEMS",
+    "title": "Fatrq: Tiered Residual Quantization for LLM Vector Search in Far-Memory-Aware Anns Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -9821,7 +9821,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "ENTROPY SAMPLING-BASED NEURAL ARCHITECTURE SEARCH FOR RESOURCE-CONSTRAINED MICROCONTROLLER TARGETS",
+    "title": "Entropy Sampling-Based Neural Architecture Search for Resource-Constrained Microcontroller Targets",
     "tracks": [
       "Technical Session"
     ],
@@ -9854,7 +9854,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "TOWARD PARALLEL SERVING FOR VISION-LANGUAGE MODELS VIA MODAL DECOUPLING AND SCHEDULING",
+    "title": "Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling",
     "tracks": [
       "Technical Session"
     ],
@@ -9886,7 +9886,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "DOLPHIUM: CO-OPTIMIZING QUANTIZATION DATAFLOW AND PARADIGMS ON POLY-HIERARCHICAL NPUS",
+    "title": "Dolphium: Co-Optimizing Quantization Dataflow and Paradigms on Poly-Hierarchical NPUs",
     "tracks": [
       "Technical Session"
     ],
@@ -9919,7 +9919,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "TENSOR-COMPRESSED AND FULLY-QUANTIZED TRAINING OF NEURAL PDE SOLVERS",
+    "title": "Tensor-Compressed and Fully-Quantized Training of Neural Pde Solvers",
     "tracks": [
       "Technical Session"
     ],
@@ -9954,7 +9954,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "DYNAMO: RUNTIME SWITCHABLE QUANTIZATION FOR MOE WITH CROSS-DATASET ADAPTATION",
+    "title": "Dynamo: Runtime Switchable Quantization for Moe with Cross-Dataset Adaptation",
     "tracks": [
       "Technical Session"
     ],
@@ -9986,7 +9986,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "FROM CLOUD-HEAVY TO EDGE-READY: SELF-SUPERVISED TRANSFER-EFFICIENT EMOTION RECOGNITION",
+    "title": "From Cloud-Heavy to Edge-Ready: Self-Supervised Transfer-Efficient Emotion Recognition",
     "tracks": [
       "Technical Session"
     ],
@@ -10018,7 +10018,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "HIGH-EFFICIENCY NEURAL BEAMFORMING FOR REAL-TIME SPEECH ENHANCEMENT ON SMART LOW-POWER HEARABLE DEVICES",
+    "title": "High-Efficiency Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices",
     "tracks": [
       "Technical Session"
     ],
@@ -10055,7 +10055,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "PCB-MIGRATOR: AUTOMATED PCB PNR MIGRATION",
+    "title": "Pcb-Migrator: Automated Pcb Pnr Migration",
     "tracks": [
       "Technical Session"
     ],
@@ -10091,7 +10091,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "DYNAMIC ALGORITHM CONFIGURATION FOR GLOBAL PLACEMENT",
+    "title": "Dynamic Algorithm Configuration for Global Placement",
     "tracks": [
       "Technical Session"
     ],
@@ -10127,7 +10127,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "TIMING-DRIVEN DETAILED PLACEMENT WITH COLLABORATIVE TOPOLOGY RECONSTRUCTION",
+    "title": "Timing-Driven Detailed Placement with Collaborative Topology Reconstruction",
     "tracks": [
       "Technical Session"
     ],
@@ -10159,7 +10159,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "HGNN-PART: A HIGH-QUALITY HYPERGRAPH PARTITIONER BASED ON HYPERGRAPH GENERATIVE MODEL",
+    "title": "Hgnn-Part: A High-Quality Hypergraph Partitioner Based on Hypergraph Generative Model",
     "tracks": [
       "Technical Session"
     ],
@@ -10196,7 +10196,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "HPPLACER: A HIGH-PRECISION SLACK-AWARE GLOBAL PLACEMENT ENGINE",
+    "title": "Hpplacer: A High-Precision Slack-Aware Global Placement Engine",
     "tracks": [
       "Technical Session"
     ],
@@ -10233,7 +10233,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "TIMING-DRIVEN DETAILED PLACEMENT VIA TIMINGMASK-GUIDED PATH-LEVEL OPTIMIZATION",
+    "title": "Timing-Driven Detailed Placement via Timingmask-Guided Path-Level Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -10266,7 +10266,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "3D CHIPLET PARTITIONING AND FLOORPLANNING INTERACTION WITH VERTICAL BONDING CONSIDERATION",
+    "title": "3D Chiplet Partitioning and Floorplanning Interaction with Vertical Bonding Consideration",
     "tracks": [
       "Technical Session"
     ],
@@ -10302,7 +10302,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "PPA-DRIVEN PLACEMENT VIA ADAPTIVE CLUSTER CONSTRAINTS OPTIMIZATION",
+    "title": "Ppa-Driven Placement via Adaptive Cluster Constraints Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -10333,7 +10333,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "TOWARDS LEARNING-BASED GATE-LEVEL GLITCH ANALYSIS",
+    "title": "Towards Learning-Based Gate-Level Glitch Analysis",
     "tracks": [
       "Technical Session"
     ],
@@ -10364,7 +10364,7 @@
     "sessions": [
       "TS26"
     ],
-    "title": "DRAFTING AND MULTI-INPUT SWITCHING IN DIGITAL DYNAMIC TIMING SIMULATION FOR MULTI-INPUT GATES",
+    "title": "Drafting and Multi-Input Switching in Digital Dynamic Timing Simulation for Multi-Input Gates",
     "tracks": [
       "Technical Session"
     ],
@@ -10399,7 +10399,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "NODE2NODE: NODE ADAPTATION WITH TRANSFORMER FOR CROSS-NODE HOTSPOT DETECTION",
+    "title": "Node2node: Node Adaptation with Transformer for Cross-Node Hotspot Detection",
     "tracks": [
       "Technical Session"
     ],
@@ -10429,7 +10429,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "POPULATION CODING TO IMPROVE FAULT TOLERANCE OF NEUROMORPHIC NETWORKS IN REGRESSION TASKS",
+    "title": "Population Coding to Improve Fault Tolerance of Neuromorphic Networks in Regression Tasks",
     "tracks": [
       "Technical Session"
     ],
@@ -10461,7 +10461,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "SCALABLE SECOND-ORDER OPTIMIZER FOR FULL-CHIP INVERSE LITHOGRAPHY TECHNIQUES",
+    "title": "Scalable Second-Order Optimizer for Full-Chip Inverse Lithography Techniques",
     "tracks": [
       "Technical Session"
     ],
@@ -10496,7 +10496,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "RAMEN: RADIATION-AWARE MODELING FRAMEWORK FOR PDK-ENABLED DESIGN AND LIBRARY CHARACTERIZATION",
+    "title": "Ramen: Radiation-Aware Modeling Framework for Pdk-Enabled Design and Library Characterization",
     "tracks": [
       "Technical Session"
     ],
@@ -10529,7 +10529,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "NO PIXEL, MORE EFFICIENT: MULTIMODAL FRAMEWORK FOR SUB-NM MASK PROCESS CORRECTION",
+    "title": "No Pixel, More Efficient: Multimodal Framework for Sub-Nm Mask Process Correction",
     "tracks": [
       "Technical Session"
     ],
@@ -10563,7 +10563,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "TRACE: A TRANSFERABLE FRAMEWORK FOR AGING-AWARE CELL DELAY ESTIMATION",
+    "title": "Trace: A Transferable Framework for Aging-Aware Cell Delay Estimation",
     "tracks": [
       "Technical Session"
     ],
@@ -10599,7 +10599,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "AN IR DROP-ROBUST MAPPING METHOD FOR RELIABLE MEMRISTIVE ACCELERATORS",
+    "title": "An Ir Drop-Robust Mapping Method for Reliable Memristive Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -10630,7 +10630,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "INTERPRETABLE GRAPH NEURAL NETWORKS FOR FAULT DETECTION IN CIRCUIT NETLISTS",
+    "title": "Interpretable Graph Neural Networks for Fault Detection in Circuit Netlists",
     "tracks": [
       "Technical Session"
     ],
@@ -10665,7 +10665,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "ANALYSIS AND MITIGATION OF IR DROP IN MEMRISTOR-BASED AI HARDWARE ACCELERATORS",
+    "title": "Analysis and Mitigation of Ir Drop in Memristor-Based AI Hardware Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -10697,7 +10697,7 @@
     "sessions": [
       "TS27"
     ],
-    "title": "AN EFFICIENT WEIGHT CORRECTION METHOD TO RECOVER NON-IDEAL ERRORS IN PRUNED IRC DESIGNS",
+    "title": "An Efficient Weight Correction Method to Recover Non-Ideal Errors in Pruned Irc Designs",
     "tracks": [
       "Technical Session"
     ],
@@ -10730,7 +10730,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "A GRAPH-THEORETIC FRAMEWORK FOR RANDOMNESS OPTIMIZATION IN FIRST-ORDER MASKED CIRCUITS",
+    "title": "A Graph-Theoretic Framework for Randomness Optimization in First-Order Masked Circuits",
     "tracks": [
       "Technical Session"
     ],
@@ -10763,7 +10763,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "EXTENDING AND ACCELERATING INNER PRODUCT MASKING WITH FAULT DETECTION VIA INSTRUCTION SET EXTENSION",
+    "title": "Extending and Accelerating Inner Product Masking with Fault Detection via Instruction Set Extension",
     "tracks": [
       "Technical Session"
     ],
@@ -10796,7 +10796,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "REJECTION MATTERS: EFFICIENT NON-PROFILING SIDE-CHANNEL ATTACK ON ML-DSA VIA EXPLOITING PUBLIC TEMPLATES",
+    "title": "Rejection Matters: Efficient Non-Profiling Side-Channel Attack on Ml-Dsa via Exploiting Public Templates",
     "tracks": [
       "Technical Session"
     ],
@@ -10827,7 +10827,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "BLACK-BOX ROBUSTNESS PROBING OF GRAPH NEURAL NETWORKS FOR VLSI CIRCUIT NETLISTS",
+    "title": "Black-Box Robustness Probing of Graph Neural Networks for VLSI Circuit Netlists",
     "tracks": [
       "Technical Session"
     ],
@@ -10859,7 +10859,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "COMPACT YET FAST: AN EFFICIENT D-ORDER MASKED IMPLEMENTATION OF ASCON",
+    "title": "Compact Yet Fast: An Efficient D-Order Masked Implementation of Ascon",
     "tracks": [
       "Technical Session"
     ],
@@ -10895,7 +10895,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "HEED: A HIGHLY EFFICIENT ELECTROMAGNETIC FAULT DETECTION SCHEME",
+    "title": "Heed: A Highly Efficient Electromagnetic Fault Detection Scheme",
     "tracks": [
       "Technical Session"
     ],
@@ -10927,7 +10927,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "GPU ACCELERATION OF THE SUM-CHECK PROTOCOL OVER TOWERS OF BINARY FIELDS FOR VERIFIABLE COMPUTING",
+    "title": "GPU Acceleration of the Sum-Check Protocol Over Towers of Binary Fields for Verifiable Computing",
     "tracks": [
       "Technical Session"
     ],
@@ -10960,7 +10960,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "FORMAL METHODS-ASSISTED CHOSEN CIPHERTEXT ATTACKS ON PQC CRYSTALS-KYBER USING ELECTROMAGNETIC EMANATIONS",
+    "title": "Formal Methods-Assisted Chosen Ciphertext Attacks on Pqc Crystals-Kyber Using Electromagnetic Emanations",
     "tracks": [
       "Technical Session"
     ],
@@ -10992,7 +10992,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "SYNTHESIZABLE PUF DESIGN WITH LIBRARY CHARACTERIZATION FOR SECURE STORAGE IN EDGE DEVICES",
+    "title": "Synthesizable Puf Design with Library Characterization for Secure Storage in Edge Devices",
     "tracks": [
       "Technical Session"
     ],
@@ -11022,7 +11022,7 @@
     "sessions": [
       "TS28"
     ],
-    "title": "OPTIMIZATION OF AND-GATE-SPARSE CIRCUIT SYNTHESIS FOR MULTI-PARTY COMPUTATION SYSTEMS WITH LOCAL COMMUNICATIONS",
+    "title": "Optimization of and-Gate-Sparse Circuit Synthesis for Multi-Party Computation Systems with Local Communications",
     "tracks": [
       "Technical Session"
     ],
@@ -11059,7 +11059,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "LIVEVERILOGEVAL: CONTAMINATION FREE AND AUTOMATICALLY SCALABLE BENCHMARK FOR VERILLOG CODE GENERATION",
+    "title": "Liveverilogeval: Contamination Free and Automatically Scalable Benchmark for Verillog Code Generation",
     "tracks": [
       "Technical Session"
     ],
@@ -11091,7 +11091,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "ACES: A CHIPLET ARCHITECTURE WITH RESOURCE PARTITION AND DYNAMIC SCHEDULING FOR AGENTIC LLMS",
+    "title": "Aces: A Chiplet Architecture with Resource Partition and Dynamic Scheduling for Agentic LLMs",
     "tracks": [
       "Technical Session"
     ],
@@ -11123,7 +11123,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "WHEN FORGETTING BUILDS RELIABILITY: LLM UNLEARNING FOR RELIABLE HARDWARE CODE GENERATION",
+    "title": "When Forgetting Builds Reliability: LLM Unlearning for Reliable Hardware Code Generation",
     "tracks": [
       "Technical Session"
     ],
@@ -11159,7 +11159,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "LONGRTL: GRAPH-SIMILARITY-GUIDED LLM-DRIVEN LONG CONTEXT RTL OPTIMIZATION",
+    "title": "Longrtl: Graph-Similarity-Guided LLM-Driven Long Context Rtl Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -11191,7 +11191,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "MELTRTL: MULTI-EXPERT LLMS WITH INFERENCE-TIME INTERVENTION FOR RTL CODE GENERATION",
+    "title": "Meltrtl: Multi-Expert LLMs with Inference-Time Intervention for Rtl Code Generation",
     "tracks": [
       "Technical Session"
     ],
@@ -11221,7 +11221,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "MEMORYISLANDS: A FEDERATED APPROACH FOR EFFICIENT MEMORY MAPPINGS",
+    "title": "Memoryislands: A Federated Approach for Efficient Memory Mappings",
     "tracks": [
       "Technical Session"
     ],
@@ -11253,7 +11253,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "DPUCONFIG: OPTIMIZING ML INFERENCE IN FPGAS USING REINFORCEMENT LEARNING",
+    "title": "Dpuconfig: Optimizing Ml Inference in FPGAs Using Reinforcement Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -11288,7 +11288,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "A COLLABORATIVE FRAMEWORK FOR MULTI-LEVEL MULTI-OBJECTIVE DESIGN SPACE EXPLORATION",
+    "title": "A Collaborative Framework for Multi-Level Multi-Objective Design Space Exploration",
     "tracks": [
       "Technical Session"
     ],
@@ -11323,7 +11323,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "HAWX: A HARDWARE-AWARE FRAMEWORK FOR FAST AND SCALABLE APPROXIMATION OF DNNS",
+    "title": "Hawx: A Hardware-Aware Framework for Fast and Scalable Approximation of DNNs",
     "tracks": [
       "Technical Session"
     ],
@@ -11356,7 +11356,7 @@
     "sessions": [
       "TS29"
     ],
-    "title": "SINA: A CIRCUIT SCHEMATIC IMAGE-TO-NETLIST GENERATOR USING ARTIFICIAL INTELLIGENCE",
+    "title": "Sina: A Circuit Schematic Image-To-Netlist Generator Using Artificial Intelligence",
     "tracks": [
       "Technical Session"
     ],
@@ -11388,7 +11388,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "STREAMNTT: A HIGH-THROUGHPUT, HLS-BASED STREAMING NTT ACCELERATOR FOR HBM-EQUIPPED FPGAS",
+    "title": "Streamntt: A High-Throughput, Hls-Based Streaming Ntt Accelerator for HBM-Equipped FPGAs",
     "tracks": [
       "Technical Session"
     ],
@@ -11426,7 +11426,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "ROUTERACC: FPGA ACCELERATION FOR VLSI DETAILED ROUTER VIA HIERARCHICAL STORAGE MAPPING",
+    "title": "Routeracc: FPGA Acceleration for VLSI Detailed Router via Hierarchical Storage Mapping",
     "tracks": [
       "Technical Session"
     ],
@@ -11460,7 +11460,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "COMPACTED-LUT: FINE-GRAINED CUSTOMIZABLE LUT ARCHITECTURE VIA SRAM-MUX CO-OPTIMIZATION",
+    "title": "Compacted-LUT: Fine-Grained Customizable LUT Architecture via SRAM-Mux Co-Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -11494,7 +11494,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "FLAME: A FRAMEWORK EXPLORING EXECUTION STRATEGIES FOR MULTI-CYCLE OPERATIONS IN CGRA",
+    "title": "Flame: A Framework Exploring Execution Strategies for Multi-Cycle Operations in CGRA",
     "tracks": [
       "Technical Session"
     ],
@@ -11523,7 +11523,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "NX-CGRA: A PROGRAMMABLE HARDWARE ACCELERATOR FOR CORE TRANSFORMER ALGORITHMS ON EDGE DEVICES",
+    "title": "Nx-CGRA: A Programmable Hardware Accelerator for Core Transformer Algorithms on Edge Devices",
     "tracks": [
       "Technical Session"
     ],
@@ -11557,7 +11557,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "MIQARA: MIXED-CRITICALITY QUEUE-BASED ARCHITECTURE FOR RECONFIGURABLE ACCELERATOR PLATFORMS",
+    "title": "Miqara: Mixed-Criticality Queue-Based Architecture for Reconfigurable Accelerator Platforms",
     "tracks": [
       "Technical Session"
     ],
@@ -11590,7 +11590,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "MC-CGRA: A MEMORY-COMPUTATION COORDINATED CGRA FRAMEWORK FOR STREAM PROCESSING",
+    "title": "Mc-CGRA: A Memory-Computation Coordinated CGRA Framework for Stream Processing",
     "tracks": [
       "Technical Session"
     ],
@@ -11620,7 +11620,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "CUT-MC: OPTIMIZING THE RELATIONSHIP BETWEEN CONTEXT COUNT, UNROLLING AND THROUGHPUT IN MULTI-CONTEXT CGRAS",
+    "title": "Cut-Mc: Optimizing the Relationship Between Context Count, Unrolling and Throughput in Multi-Context Cgras",
     "tracks": [
       "Technical Session"
     ],
@@ -11656,7 +11656,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "RIFT: A SINGLE-BITSTREAM, RUNTIME-ADAPTIVE FPGA-BASED ACCELERATOR FOR MULTIMODAL AI",
+    "title": "Rift: A Single-Bitstream, Runtime-Adaptive FPGA-Based Accelerator for Multimodal AI",
     "tracks": [
       "Technical Session"
     ],
@@ -11693,7 +11693,7 @@
     "sessions": [
       "TS30"
     ],
-    "title": "A CLUSTER-BASED DISTRIBUTED MEMORY ARCHITECTURE FOR CGRAS",
+    "title": "A Cluster-Based Distributed Memory Architecture for Cgras",
     "tracks": [
       "Technical Session"
     ],
@@ -11727,7 +11727,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "MIXED-PRECISION TRAINING AND COMPILATION FOR RRAM-BASED COMPUTING-IN-MEMORY ACCELERATORS",
+    "title": "Mixed-Precision Training and Compilation for Rram-Based Computing-In-Memory Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -11758,7 +11758,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "HOW TO MANAGE THE MAPPING TABLE OF LARGE-CAPACITY SOLID-STATE DRIVES",
+    "title": "How to Manage the Mapping Table of Large-Capacity Solid-State Drives",
     "tracks": [
       "Technical Session"
     ],
@@ -11789,7 +11789,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "FEDCM: FINE-GRAINED KERNEL SCHEDULING AND MANAGEMENT TO IMPROVE GPU SHARING",
+    "title": "Fedcm: Fine-Grained Kernel Scheduling and Management to Improve GPU Sharing",
     "tracks": [
       "Technical Session"
     ],
@@ -11819,7 +11819,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "RHEOSPARSE: EXPLORING FINER-GRAINED STRUCTURED SPARSITY FOR SMALL LANGUAGE MODELS",
+    "title": "Rheosparse: Exploring Finer-Grained Structured Sparsity for Small Language Models",
     "tracks": [
       "Technical Session"
     ],
@@ -11851,7 +11851,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "SOFTWARE-BASED APPROXIMATE MULTIPLICATION ON MULTIPLIERLESS CPUS USING CUSTOM INSTRUCTION",
+    "title": "Software-Based Approximate Multiplication on Multiplierless CPUs Using Custom Instruction",
     "tracks": [
       "Technical Session"
     ],
@@ -11885,7 +11885,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "SSR: SPARSE SEGMENT REDUCTION FOR TERNARY GEMM ACCELERATION",
+    "title": "Ssr: Sparse Segment Reduction for Ternary GEMM Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -11919,7 +11919,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "EEMU: A FEMU-BASED ACCURATE, PARAMETRIC ETHERNET-SSD EMULATOR",
+    "title": "Eemu: A Femu-Based Accurate, Parametric Ethernet-Ssd Emulator",
     "tracks": [
       "Technical Session"
     ],
@@ -11952,7 +11952,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "AN EFFICIENT SECURE BOOT MECHANISM LEVERAGING DICE AS A USE CASE",
+    "title": "An Efficient Secure Boot Mechanism Leveraging Dice as a Use Case",
     "tracks": [
       "Technical Session"
     ],
@@ -11988,7 +11988,7 @@
     "sessions": [
       "TS31"
     ],
-    "title": "ABUSING DDS DISCOVERY: DENIAL-OF-SERVICE ATTACKS AGAINST ROS 2",
+    "title": "Abusing Dds Discovery: Denial-Of-Service Attacks Against Ros 2",
     "tracks": [
       "Technical Session"
     ],
@@ -12021,7 +12021,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "PHYSICAL-AWARE EFPGA REDACTION FOR SECURE AND EFFICIENT HARDWARE IP PROTECTION",
+    "title": "Physical-Aware Efpga Redaction for Secure and Efficient Hardware Ip Protection",
     "tracks": [
       "Technical Session"
     ],
@@ -12055,7 +12055,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "THE PMP SNAPSHOT ENGINE: FAST AND FAULT-RESILIENT PMP RECONFIGURATION FOR RISC-V",
+    "title": "The Pmp Snapshot Engine: Fast and Fault-Resilient Pmp Reconfiguration for RISC-V",
     "tracks": [
       "Technical Session"
     ],
@@ -12089,7 +12089,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "A RELIABILITY-PHYSICS-BASED APPROACH FOR DATA TAMPERING DETECTION IN COMMERCIAL 3D-NAND FLASH MEMORY",
+    "title": "A Reliability-Physics-Based Approach for Data Tampering Detection in Commercial 3D-Nand Flash Memory",
     "tracks": [
       "Technical Session"
     ],
@@ -12125,7 +12125,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "TRUSTSEED: LIGHTWEIGHT ATTESTATION PROTOCOL FOR ENSURING LLM INTEGRITY",
+    "title": "Trustseed: Lightweight Attestation Protocol for Ensuring LLM Integrity",
     "tracks": [
       "Technical Session"
     ],
@@ -12157,7 +12157,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "FUTURE RESULT CAPTURE: TIMING ANOMALIES REVEAL DATA FROM INSTRUCTIONS IN THE SUCCESSOR",
+    "title": "Future Result Capture: Timing Anomalies Reveal Data from Instructions in the Successor",
     "tracks": [
       "Technical Session"
     ],
@@ -12188,7 +12188,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "DEEP-LENS: DEEP-LEARNING POWERED LAYOUT EXTRACTION AND NOVEL SEGMENTATION FOR IC ASSURANCE AND SECURITY",
+    "title": "Deep-Lens: Deep-Learning Powered Layout Extraction and Novel Segmentation for IC Assurance and Security",
     "tracks": [
       "Technical Session"
     ],
@@ -12224,7 +12224,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "LASSET: AN LLM-ASSISTED SECURITY ASSET IDENTIFICATION FRAMEWORK FOR SYSTEM-ON-CHIP (SOC) VERIFICATION",
+    "title": "Lasset: An LLM-Assisted Security Asset Identification Framework for System-On-Chip (SoC) Verification",
     "tracks": [
       "Technical Session"
     ],
@@ -12259,7 +12259,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "IMS: INTELLIGENT HARDWARE MONITORING SYSTEM FOR SECURE SOCS",
+    "title": "Ims: Intelligent Hardware Monitoring System for Secure SoCs",
     "tracks": [
       "Technical Session"
     ],
@@ -12291,7 +12291,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "UNLOCKING HIDDEN SECRETS: LEVERAGING SRAM AGING IMPRINTS FOR SENSITIVE DATA RECOVERY",
+    "title": "Unlocking Hidden Secrets: Leveraging SRAM Aging Imprints for Sensitive Data Recovery",
     "tracks": [
       "Technical Session"
     ],
@@ -12324,7 +12324,7 @@
     "sessions": [
       "TS32"
     ],
-    "title": "OPEN-SOURCE FRAMEWORK FOR SECURE HARDWARE DESIGN WITH SIMULATION-BASED LEAKAGE ASSESSMENT",
+    "title": "Open-Source Framework for Secure Hardware Design with Simulation-Based Leakage Assessment",
     "tracks": [
       "Technical Session"
     ],
@@ -12358,7 +12358,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "DESIGN AND OPTIMIZATION OF MIXED-KERNEL MIXED-SIGNAL SVMS FOR FLEXIBLE ELECTRONICS",
+    "title": "Design and Optimization of Mixed-Kernel Mixed-Signal Svms for Flexible Electronics",
     "tracks": [
       "Technical Session"
     ],
@@ -12390,7 +12390,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "A MULTI-SENSOR APPROACH FOR SOFT LABELING IN HUMAN ACTIVITY RECOGNITION DOMAIN",
+    "title": "A Multi-Sensor Approach for Soft Labeling in Human Activity Recognition Domain",
     "tracks": [
       "Technical Session"
     ],
@@ -12422,7 +12422,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "LITEDVS: A LOW-DATA-REDUNDANCY DYNAMIC VISION SENSOR WITH HYBRID READOUT AND IN-PIXEL DENOISING",
+    "title": "Litedvs: A Low-Data-Redundancy Dynamic Vision Sensor with Hybrid Readout and in-Pixel Denoising",
     "tracks": [
       "Technical Session"
     ],
@@ -12458,7 +12458,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "AN ENVIRONMENT-AWARE VERIFICATION FRAMEWORK FOR LLM-GENERATED ROBOT CONTROL PROGRAMS",
+    "title": "An Environment-Aware Verification Framework for LLM-Generated Robot Control Programs",
     "tracks": [
       "Technical Session"
     ],
@@ -12488,7 +12488,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "KOLMOGOROV-ARNOLD NETWORKS FOR AUTONOMOUS DRIVING: A HARDWARE-IN-THE-LOOP COMPARISON WITH CONVENTIONAL DEEP NEURAL NETWORKS",
+    "title": "Kolmogorov-Arnold Networks for Autonomous Driving: A Hardware-In-The-Loop Comparison with Conventional Deep Neural Networks",
     "tracks": [
       "Technical Session"
     ],
@@ -12520,7 +12520,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "STAR: HIGH-DOF ROBOTIC MANIPULATION FOR MEMORY-CONSTRAINED NN ACCELERATOR",
+    "title": "Star: High-Dof Robotic Manipulation for Memory-Constrained Nn Accelerator",
     "tracks": [
       "Technical Session"
     ],
@@ -12554,7 +12554,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "A REAL-TIME ROBOTIC DIFFUSION POLICY ACCELERATOR EXPLOITING SELF- AND CROSS-GUIDED MODAL SIMILARITY",
+    "title": "A Real-Time Robotic Diffusion Policy Accelerator Exploiting Self- And Cross-Guided Modal Similarity",
     "tracks": [
       "Technical Session"
     ],
@@ -12585,7 +12585,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "TEE-BASED ON-DEMAND KEY DISTRIBUTION FOR HIERARCHICAL IN-VEHICLE ZONAL ARCHITECTURE",
+    "title": "Tee-Based on-Demand Key Distribution for Hierarchical in-Vehicle Zonal Architecture",
     "tracks": [
       "Technical Session"
     ],
@@ -12620,7 +12620,7 @@
     "sessions": [
       "TS33"
     ],
-    "title": "FALCON: A FAST AND LOW-POWER CURRENT-MODE NEAR-SENSOR-COMPUTING ARCHITECTURE FOR REAL-TIME EDGE VISUAL PROCESSING",
+    "title": "Falcon: A Fast and Low-Power Current-Mode Near-Sensor-Computing Architecture for Real-Time Edge Visual Processing",
     "tracks": [
       "Technical Session"
     ],
@@ -12654,7 +12654,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "LOGHD: ROBUST COMPRESSION OF HYPERDIMENSIONAL CLASSIFIERS VIA LOGARITHMIC CLASS-AXIS REDUCTION",
+    "title": "Loghd: Robust Compression of Hyperdimensional Classifiers via Logarithmic Class-Axis Reduction",
     "tracks": [
       "Technical Session"
     ],
@@ -12688,7 +12688,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "BOOSTING THE PERFORMANCE OF TREE-BASED SPECULATIVE DECODING OF LLMS ON FPGAS",
+    "title": "Boosting the Performance of Tree-Based Speculative Decoding of LLMs on FPGAs",
     "tracks": [
       "Technical Session"
     ],
@@ -12722,7 +12722,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "EQUICORE: ACCELERATING CLEBSCH-GORDAN TENSOR PRODUCT OF EQUIVARIANT NEURAL NETWORKS ON FPGA",
+    "title": "Equicore: Accelerating Clebsch-Gordan Tensor Product of Equivariant Neural Networks on FPGA",
     "tracks": [
       "Technical Session"
     ],
@@ -12758,7 +12758,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "QUILL: AN ALGORITHM-ARCHITECTURE CO-DESIGN FOR CACHE-LOCAL DEFORMABLE ATTENTION",
+    "title": "Quill: An Algorithm-Architecture Co-Design for Cache-Local Deformable Attention",
     "tracks": [
       "Technical Session"
     ],
@@ -12796,7 +12796,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "FLARE: FINETUNING RELU WITH FIRE FOR EFFICIENT LONG-CONTEXT INFERENCE",
+    "title": "Flare: Finetuning Relu with Fire for Efficient Long-Context Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -12831,7 +12831,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "CD-PIM: A HIGH-BANDWIDTH AND COMPUTE-EFFICIENT LPDDR5-BASED PIM FOR LOW-BATCH LLM ACCELERATION ON EDGE-DEVICE",
+    "title": "Cd-Pim: A High-Bandwidth and Compute-Efficient Lpddr5-Based Pim for Low-Batch LLM Acceleration on Edge-Device",
     "tracks": [
       "Technical Session"
     ],
@@ -12861,7 +12861,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "IDENTIFYING HARDWARE OPTIMIZATIONS FOR NEURAL NETWORK INFERENCE USING VIRTUAL PROTOTYPES",
+    "title": "Identifying Hardware Optimizations for Neural Network Inference Using Virtual Prototypes",
     "tracks": [
       "Technical Session"
     ],
@@ -12893,7 +12893,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "TOWARDS BIT-SHAREABLE INFERENCE ON MICROCONTROLLERS",
+    "title": "Towards Bit-Shareable Inference on Microcontrollers",
     "tracks": [
       "Technical Session"
     ],
@@ -12926,7 +12926,7 @@
     "sessions": [
       "TS34"
     ],
-    "title": "SCALABLE SYMBOLIC REASONING WITH MATRIX-BASED BRAIN-INSPIRED REPRESENTATIONS AND VECTOR-SPACE ACCELERATION",
+    "title": "Scalable Symbolic Reasoning with Matrix-Based Brain-Inspired Representations and Vector-Space Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -12960,7 +12960,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "NEAR-MEMORY ARCHITECTURE FOR THRESHOLD-ORDINAL SURFACE-BASED CORNER DETECTION OF EVENT CAMERAS",
+    "title": "Near-Memory Architecture for Threshold-Ordinal Surface-Based Corner Detection of Event Cameras",
     "tracks": [
       "Technical Session"
     ],
@@ -12991,7 +12991,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "PRISM: A LOCALITY-AWARE NEAR-MEMORY PROCESSING FRAMEWORK FOR SCALABLE TRIANGLE COUNTING",
+    "title": "Prism: A Locality-Aware Near-Memory Processing Framework for Scalable Triangle Counting",
     "tracks": [
       "Technical Session"
     ],
@@ -13021,7 +13021,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "LEVERAGING RECURRENT PATTERNS IN GRAPH ACCELERATORS",
+    "title": "Leveraging Recurrent Patterns in Graph Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -13055,7 +13055,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "CHIME: CHIPLET-BASED HETEROGENEOUS NEAR-MEMORY ACCELERATION FOR EDGE MULTIMODAL LLM INFERENCE",
+    "title": "Chime: Chiplet-Based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -13087,7 +13087,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "DREAMRAM: A FINE-GRAINED CONFIGURABLE DESIGN SPACE MODELING TOOL FOR CUSTOM 3D DIE-STACKED DRAM",
+    "title": "Dreamram: A Fine-Grained Configurable Design Space Modeling Tool for Custom 3D Die-Stacked DRAM",
     "tracks": [
       "Technical Session"
     ],
@@ -13122,7 +13122,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "CIM-TUNER: BALANCING THE COMPUTE AND STORAGE CAPACITY OF SRAM-CIM ACCELERATOR VIA HARDWARE-MAPPING CO-EXPLORATION",
+    "title": "Cim-Tuner: Balancing the Compute and Storage Capacity of SRAM-Cim Accelerator via Hardware-Mapping Co-Exploration",
     "tracks": [
       "Technical Session"
     ],
@@ -13153,7 +13153,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "HINT: A HYBRID SRAM–MRAM COMPUTE-IN-MEMORY WITH INPUT-AWARE SKIPPING SAR-ADC FOR ENERGY EFFICIENT TERNARY LLMS",
+    "title": "Hint: A Hybrid SRAM–MRAM Compute-In-Memory with Input-Aware Skipping Sar-Adc for Energy Efficient Ternary LLMs",
     "tracks": [
       "Technical Session"
     ],
@@ -13185,7 +13185,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "REBIT: A RERAM-BASED IN-SITU TRAINING ACCELERATOR WITH ROBUSTNESS AGAINST STOCHASTICITY",
+    "title": "Rebit: A Reram-Based in-Situ Training Accelerator with Robustness Against Stochasticity",
     "tracks": [
       "Technical Session"
     ],
@@ -13218,7 +13218,7 @@
     "sessions": [
       "TS35"
     ],
-    "title": "RE-RIS: A RECONFIGURABLE 3D RRAM IN-SENSOR ARCHITECTURE FOR LOW-LATENCY MACHINE VISION",
+    "title": "Re-Ris: A Reconfigurable 3D Rram in-Sensor Architecture for Low-Latency Machine Vision",
     "tracks": [
       "Technical Session"
     ],
@@ -13253,7 +13253,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "ENHANCED CXL POOLED MEMORY SYSTEM FOR SCALABLE AI VIA EMBEDDING ACCESS PREDICTION",
+    "title": "Enhanced Cxl Pooled Memory System for Scalable AI via Embedding Access Prediction",
     "tracks": [
       "Technical Session"
     ],
@@ -13283,7 +13283,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "FARM: FAST ACCELERATION OF RANDOM FORESTS VIA IN-MEMORY TRAVERSAL",
+    "title": "Farm: Fast Acceleration of Random Forests via in-Memory Traversal",
     "tracks": [
       "Technical Session"
     ],
@@ -13324,7 +13324,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "ENDOR: EXPLOIT NEARLY-DECODE-ONLY OPPORTUNITIES OF LLM REASONING ON NEAR-MEMORY ARCHITECTURE",
+    "title": "Endor: Exploit Nearly-Decode-Only Opportunities of LLM Reasoning on Near-Memory Architecture",
     "tracks": [
       "Technical Session"
     ],
@@ -13358,7 +13358,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "KHEPRI: CRYSTALLIZING TAGE FOR MEMORY EFFICIENT PREWARM IN SERVERLESS COMPUTING",
+    "title": "Khepri: Crystallizing Tage for Memory Efficient Prewarm in Serverless Computing",
     "tracks": [
       "Technical Session"
     ],
@@ -13391,7 +13391,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "MACAM: A FLEXIBLE COMPUTING-IN-MEMORY ACCELERATOR FOR SPARSE MATRIX-DENSE VECTOR MULTIPLICATION",
+    "title": "Macam: A Flexible Computing-In-Memory Accelerator for Sparse Matrix-Dense Vector Multiplication",
     "tracks": [
       "Technical Session"
     ],
@@ -13424,7 +13424,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "ZION: A COMPREHENSIVE, ADAPTIVE, AND LIGHTWEIGHT HARDWARE PREFETCHER",
+    "title": "Zion: A Comprehensive, Adaptive, and Lightweight Hardware Prefetcher",
     "tracks": [
       "Technical Session"
     ],
@@ -13455,7 +13455,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "BOOSTING LLC BANDWIDTH UTILIZATION IN GPUS THROUGH ADAPTIVE FINE-GRAINED DATA MIGRATION",
+    "title": "Boosting Llc Bandwidth Utilization in GPUs Through Adaptive Fine-Grained Data Migration",
     "tracks": [
       "Technical Session"
     ],
@@ -13493,7 +13493,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "A HIGH-PERFORMANCE NEURAL RENDERING ACCELERATOR WITH NOVEL MULTI-LEVEL RAY SCHEDULING AND DUAL-PROCESS BACKEND",
+    "title": "A High-Performance Neural Rendering Accelerator with Novel Multi-Level Ray Scheduling and Dual-Process Backend",
     "tracks": [
       "Technical Session"
     ],
@@ -13526,7 +13526,7 @@
     "sessions": [
       "TS36"
     ],
-    "title": "DATA DISTRIBUTION-AWARE ANALOG/DIGITAL CONVERSION STRATEGY FOR ENERGY-EFFICIENT MEMRISTIVE IN-SITU ACCELERATORS",
+    "title": "Data Distribution-Aware Analog/Digital Conversion Strategy for Energy-Efficient Memristive in-Situ Accelerators",
     "tracks": [
       "Technical Session"
     ],
@@ -13563,7 +13563,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "RATUNER: RETRIEVAL-AUGMENTED VLSI FLOW DESIGN PARAMETER TUNING FRAMEWORK",
+    "title": "Ratuner: Retrieval-Augmented VLSI Flow Design Parameter Tuning Framework",
     "tracks": [
       "Technical Session"
     ],
@@ -13599,7 +13599,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "SATA: SPARSITY-AWARE SCHEDULING FOR SELECTIVE TOKEN ATTENTION",
+    "title": "Sata: Sparsity-Aware Scheduling for Selective Token Attention",
     "tracks": [
       "Technical Session"
     ],
@@ -13632,7 +13632,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "TT-EDGE: A HARDWARE–SOFTWARE CO-DESIGN FOR ENERGY-EFFICIENT TENSOR-TRAIN DECOMPOSITION ON EDGE AI",
+    "title": "Tt-Edge: A Hardware–Software Co-Design for Energy-Efficient Tensor-Train Decomposition on Edge AI",
     "tracks": [
       "Technical Session"
     ],
@@ -13699,7 +13699,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "INPUT SPARSITY AWARE IN-MEMORY COMPUTING MACRO BASED ON SOT-MRAM MULTI-LEVEL CELL FOR EFFICIENT DEEP NEURAL NETWORK ACCELERATION",
+    "title": "Input Sparsity Aware in-Memory Computing Macro Based on SOT-MRAM Multi-Level Cell for Efficient Deep Neural Network Acceleration",
     "tracks": [
       "Technical Session"
     ],
@@ -13730,7 +13730,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "DYNAMIC VOLTAGE, BODY BIAS AND FREQUENCY SCALING FOR FD-SOI-BASED LOW-POWER EDGE PROCESSORS",
+    "title": "Dynamic Voltage, Body Bias and Frequency Scaling for Fd-Soi-Based Low-Power Edge Processors",
     "tracks": [
       "Technical Session"
     ],
@@ -13763,7 +13763,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "GLEAM: A GRAPH-LEARNING ENHANCED ADAPTIVE METAHEURISTIC FOR POWER-AWARE SCHEDULING ON HETEROGENEOUS CYBER-PHYSICAL SYSTEMS",
+    "title": "Gleam: A Graph-Learning Enhanced Adaptive Metaheuristic for Power-Aware Scheduling on Heterogeneous Cyber-Physical Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -13796,7 +13796,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "SA-ANT: EFFICIENT LOW-BIT GROUP-WISE QUANTIZATION FOR LARGE LANGUAGE MODELS VIA SIGN-ASYMMETRIC ADAPTIVE NUMERIC TYPE",
+    "title": "Sa-Ant: Efficient Low-Bit Group-Wise Quantization for Large Language Models via Sign-Asymmetric Adaptive Numeric Type",
     "tracks": [
       "Technical Session"
     ],
@@ -13828,7 +13828,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "EFFICIENT DOWN-SAMPLING IN HYBRID NEURAL NETWORKS USING ADVERSARIAL AUTOENCODERS",
+    "title": "Efficient Down-Sampling in Hybrid Neural Networks Using Adversarial Autoencoders",
     "tracks": [
       "Technical Session"
     ],
@@ -13866,7 +13866,7 @@
     "sessions": [
       "TS37"
     ],
-    "title": "EVALUATION OF THERMAL AND POWER INTEGRITY AND ITS IMPACT ON PERFORMANCE FOR 3D MEMORY-ON-LOGIC CPUS WITH FSPDN AND BSPDN",
+    "title": "Evaluation of Thermal and Power Integrity and Its Impact on Performance for 3D Memory-On-Logic CPUs with Fspdn and Bspdn",
     "tracks": [
       "Technical Session"
     ],
@@ -13899,7 +13899,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "PREFACE: PROACTIVE RE-EXECUTIONS FOR FAULT-AWARE MIXED-CRITICALITY ENVIRONMENTS",
+    "title": "Preface: Proactive Re-Executions for Fault-Aware Mixed-Criticality Environments",
     "tracks": [
       "Technical Session"
     ],
@@ -13932,7 +13932,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "AUTOMATIC EXTRACTION OF TIMING MODELS FOR WCET ESTIMATION FROM A HIGH-LEVEL SYNTHESIS FLOW",
+    "title": "Automatic Extraction of Timing Models for Wcet Estimation from a High-Level Synthesis Flow",
     "tracks": [
       "Technical Session"
     ],
@@ -13961,7 +13961,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "SIMULTANEOUS MULTITHREADING AND COMMON-PERIOD SPORADIC TASKS IN HARD REAL-TIME",
+    "title": "Simultaneous Multithreading and Common-Period Sporadic Tasks in Hard Real-Time",
     "tracks": [
       "Technical Session"
     ],
@@ -13993,7 +13993,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "EFFICIENT WARPAGE SIMULATION OF COMPLEX 2.5-D/3-D IC STRUCTURES WITH NOVEL MESHING ALGORITHM AND LAYERWISE PLATE THEORY",
+    "title": "Efficient Warpage Simulation of Complex 2.5-D/3-D IC Structures with Novel Meshing Algorithm and Layerwise Plate Theory",
     "tracks": [
       "Technical Session"
     ],
@@ -14027,7 +14027,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "EXPLOITING VARIABLE-DIMENSIONAL LDPC CODING TO IMPROVE NAND FLASH MEMORY SYSTEM PERFORMANCE",
+    "title": "Exploiting Variable-Dimensional Ldpc Coding to Improve Nand Flash Memory System Performance",
     "tracks": [
       "Technical Session"
     ],
@@ -14061,7 +14061,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "TOPOLOGY-AWARE CIRCUIT BREAKING ON CRITICAL PATHS IN MICROSERVICE SYSTEMS",
+    "title": "Topology-Aware Circuit Breaking on Critical Paths in Microservice Systems",
     "tracks": [
       "Technical Session"
     ],
@@ -14096,7 +14096,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "SSALDPC: A SYNDROME-SUM BASED ADAPTIVE LDPC DECODING SCHEME FOR NAND FLASH MEMORY",
+    "title": "Ssaldpc: A Syndrome-Sum Based Adaptive Ldpc Decoding Scheme for Nand Flash Memory",
     "tracks": [
       "Technical Session"
     ],
@@ -14126,7 +14126,7 @@
     "sessions": [
       "TS38"
     ],
-    "title": "PREEMPTION THRESHOLD ASSIGNMENT TO IMPROVE SCHEDULABILITY UNDER MEMORY CONSTRAINTS",
+    "title": "Preemption Threshold Assignment to Improve Schedulability Under Memory Constraints",
     "tracks": [
       "Technical Session"
     ],
@@ -14166,7 +14166,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "APEX: INTEGER-ONLY NON-LINEAR FUNCTION APPROXIMATION FOR EFFICIENT CROSS-MODAL INFERENCE",
+    "title": "Apex: Integer-Only Non-Linear Function Approximation for Efficient Cross-Modal Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -14202,7 +14202,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "DS-CIM: DIGITAL STOCHASTIC COMPUTING-IN-MEMORY FEATURING ACCURATE OR-ACCUMULATION VIA SAMPLE REGION REMAPPING FOR EDGE AI MODELS",
+    "title": "Ds-Cim: Digital Stochastic Computing-In-Memory Featuring Accurate or-Accumulation via Sample Region Remapping for Edge AI Models",
     "tracks": [
       "Technical Session"
     ],
@@ -14233,7 +14233,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "LUT-APP: DYNAMIC-PRECISION LUT-BASED APPROXIMATION UNIFYING NON-LINEAR OPERATIONS IN TRANSFORMERS",
+    "title": "LUT-App: Dynamic-Precision LUT-Based Approximation Unifying Non-Linear Operations in Transformers",
     "tracks": [
       "Technical Session"
     ],
@@ -14267,7 +14267,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "LEARNING TO APPROXIMATE: CIRCUIT LEARNING AND DEEP REINFORCEMENT LEARNING FOR APPROXIMATE LOGIC SYNTHESIS WITH AN ERROR RATE GUARANTEE",
+    "title": "Learning to Approximate: Circuit Learning and Deep Reinforcement Learning for Approximate Logic Synthesis with an Error Rate Guarantee",
     "tracks": [
       "Technical Session"
     ],
@@ -14303,7 +14303,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "VOLTAGE AWARE APPROXIMATE CGRA SYNTHESIS FOR ENERGY EFFICIENT DNN INFERENCE",
+    "title": "Voltage Aware Approximate CGRA Synthesis for Energy Efficient DNN Inference",
     "tracks": [
       "Technical Session"
     ],
@@ -14337,7 +14337,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "BRIDGING THE POWER ESTIMATION GAP: A GNN-BASED PREDICTION MODEL FOR APPROXIMATE LOGIC SYNTHESIS",
+    "title": "Bridging the Power Estimation Gap: A Gnn-Based Prediction Model for Approximate Logic Synthesis",
     "tracks": [
       "Technical Session"
     ],
@@ -14370,7 +14370,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "ARCSYN: AGING-AWARE ACCURACY-RECONFIGURABLE LOGIC SYNTHESIS",
+    "title": "Arcsyn: Aging-Aware Accuracy-Reconfigurable Logic Synthesis",
     "tracks": [
       "Technical Session"
     ],
@@ -14403,7 +14403,7 @@
     "sessions": [
       "TS39"
     ],
-    "title": "TOWARDS INPUT-DISTRIBUTION-AWARE APPROXIMATE MULTIPLIER GENERATION FOR CNNS",
+    "title": "Towards Input-Distribution-Aware Approximate Multiplier Generation for Cnns",
     "tracks": [
       "Technical Session"
     ],
@@ -14437,7 +14437,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "CISIM: ISA-AGNOSTIC CUSTOM INSTRUCTION SIMULATION FOR GENERAL-PURPOSE PROCESSOR",
+    "title": "Cisim: Isa-Agnostic Custom Instruction Simulation for General-Purpose Processor",
     "tracks": [
       "Technical Session"
     ],
@@ -14474,7 +14474,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "MACHINE LEARNING-DRIVEN EARLY PERFORMANCE PREDICTION FRAMEWORK FOR ACCELERATED MICROARCHITECTURE SIMULATION",
+    "title": "Machine Learning-Driven Early Performance Prediction Framework for Accelerated Microarchitecture Simulation",
     "tracks": [
       "Technical Session"
     ],
@@ -14505,7 +14505,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "VERIREPAIR: TOWARD RELIABLE LLM-BASED RTL REPAIR VIA COT-SUPERVISED MULTI-OBJECTIVE FINE-TUNING AND HYBRID RETRIEVAL",
+    "title": "Verirepair: Toward Reliable LLM-Based Rtl Repair via Cot-Supervised Multi-Objective Fine-Tuning and Hybrid Retrieval",
     "tracks": [
       "Technical Session"
     ],
@@ -14540,7 +14540,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "RAMP: RTL-LEVEL EMULATION WITH THOUSAND-CORE-SCALE PARALLELISM",
+    "title": "Ramp: Rtl-Level Emulation with Thousand-Core-Scale Parallelism",
     "tracks": [
       "Technical Session"
     ],
@@ -14574,7 +14574,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "GE-LLM: GRAPH-ENHANCED LARGE LANGUAGE MODELS FOR EFFICIENT TRANSISTOR-LEVEL CIRCUIT SIMULATION",
+    "title": "Ge-LLM: Graph-Enhanced Large Language Models for Efficient Transistor-Level Circuit Simulation",
     "tracks": [
       "Technical Session"
     ],
@@ -14608,7 +14608,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "SIMFUZZ: SIMILARITY-GUIDED BLOCK-LEVEL MUTATION FOR RISC-V PROCESSOR FUZZING",
+    "title": "Simfuzz: Similarity-Guided Block-Level Mutation for RISC-V Processor Fuzzing",
     "tracks": [
       "Technical Session"
     ],
@@ -14641,7 +14641,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "ENHANCE LANGUAGE MODEL-BASED REPAIR FOR MEMORY-RELATED VULNERABILITIES VIA KNOWLEDGE- AND SEMANTIC-GUIDED ANALYSIS",
+    "title": "Enhance Language Model-Based Repair for Memory-Related Vulnerabilities via Knowledge- And Semantic-Guided Analysis",
     "tracks": [
       "Technical Session"
     ],
@@ -14673,7 +14673,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "MULTICORE DESIGN VERIFICATION DIRECTED BY REINFORCEMENT LEARNING",
+    "title": "Multicore Design Verification Directed by Reinforcement Learning",
     "tracks": [
       "Technical Session"
     ],
@@ -14707,7 +14707,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "HETERO-CHIPLETSIM: BRIDGING CHIPLET, INTERCONNECT AND PACKAGING HETEROGENEITY IN MULTI-CHIPLET SYSTEM SIMULATION",
+    "title": "Hetero-Chipletsim: Bridging Chiplet, Interconnect and Packaging Heterogeneity in Multi-Chiplet System Simulation",
     "tracks": [
       "Technical Session"
     ],
@@ -14746,7 +14746,7 @@
     "sessions": [
       "TS40"
     ],
-    "title": "COVERASSERT: ITERATIVE LLM ASSERTION GENERATION DRIVEN BY FUNCTIONAL COVERAGE VIA SYNTAX-SEMANTIC REPRESENTATIONS",
+    "title": "Coverassert: Iterative LLM Assertion Generation Driven by Functional Coverage via Syntax-Semantic Representations",
     "tracks": [
       "Technical Session"
     ],
@@ -14779,7 +14779,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "SUPERPHYS-NET: A PHYSICS-INFORMED SUPER-RESOLUTION ELECTROMAGNETIC SIMULATOR FOR NANOPHOTONIC DEVICES",
+    "title": "Superphys-Net: A Physics-Informed Super-Resolution Electromagnetic Simulator for Nanophotonic Devices",
     "tracks": [
       "Technical Session"
     ],
@@ -14811,7 +14811,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "CRITICAL-PATH-CENTRIC 3D IC PLACEMENT FOR TIMING OPTIMIZATION",
+    "title": "Critical-Path-Centric 3D IC Placement for Timing Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -14843,7 +14843,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "SFQ-BASED CJOIN GATE IMPLEMENTATION FOR ULTRA-LOW-POWER BROWNIAN LOGIC CIRCUITS",
+    "title": "Sfq-Based Cjoin Gate Implementation for Ultra-Low-Power Brownian Logic Circuits",
     "tracks": [
       "Technical Session"
     ],
@@ -14881,7 +14881,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "ARCHITECTURE, DESIGN AND TECHNOLOGY CO-OPTIMIZATION FOR 3D ICS WITH ADVANCED BSPDN CONSIDERING POWER ＆THERMAL INTEGRITY IMPACT",
+    "title": "Architecture, Design and Technology Co-Optimization for 3D ICs with Advanced Bspdn Considering Power ＆Thermal Integrity Impact",
     "tracks": [
       "Technical Session"
     ],
@@ -14915,7 +14915,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "3D IC THERMAL MANAGEMENT WITH BEOL WAFER-SCALE SPUTTERED VERTICAL H-BN",
+    "title": "3D IC Thermal Management with Beol Wafer-Scale Sputtered Vertical H-Bn",
     "tracks": [
       "Technical Session"
     ],
@@ -14949,7 +14949,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "AGENTICTCAD: A LLM-BASED MULTI-AGENT FRAMEWORK FOR AUTOMATED TCAD CODE GENERATION AND DEVICE OPTIMIZATION",
+    "title": "Agentictcad: A LLM-Based Multi-Agent Framework for Automated Tcad Code Generation and Device Optimization",
     "tracks": [
       "Technical Session"
     ],
@@ -14985,7 +14985,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "INCREMACRO-3D: INCREMENTAL MACRO PLACEMENT FOR FACE-TO-FACE STACKED MEMORY-ON-LOGIC 3D ICS",
+    "title": "Incremacro-3D: Incremental Macro Placement for Face-To-Face Stacked Memory-On-Logic 3D ICs",
     "tracks": [
       "Technical Session"
     ],
@@ -15018,7 +15018,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "SCARLET: A SCALABLE OPCM-BASED ACCELERATOR FOR TRANSFORMER INFERENCE WITH TILED CROSSBARS",
+    "title": "Scarlet: A Scalable Opcm-Based Accelerator for Transformer Inference with Tiled Crossbars",
     "tracks": [
       "Technical Session"
     ],
@@ -15050,7 +15050,7 @@
     "sessions": [
       "TS41"
     ],
-    "title": "BRAID-ZNS: LEVERAGING ZONE RANDOM WRITE AREA FOR EFFICIENT IN-STORAGE COMPRESSION ON ZNS SSDS",
+    "title": "Braid-Zns: Leveraging Zone Random Write Area for Efficient in-Storage Compression on Zns Ssds",
     "tracks": [
       "Technical Session"
     ],
@@ -15080,7 +15080,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "DESIGN OF ENERGY-EFFICIENT, HIGH-THROUGHPUT RECONFIGURABLE SYSTEMS THROUGH CROSS-LAYER APPROXIMATION AND IN-NETWORK COMPUTING",
+    "title": "Design of Energy-Efficient, High-Throughput Reconfigurable Systems Through Cross-Layer Approximation and in-Network Computing",
     "tracks": [
       "Young People Programme"
     ],
@@ -15110,7 +15110,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "EFFICIENT COMPILATION FOR COARSE-GRAINED RECONFIGURABLE ARRAYS",
+    "title": "Efficient Compilation for Coarse-Grained Reconfigurable Arrays",
     "tracks": [
       "Young People Programme"
     ],
@@ -15139,7 +15139,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "A STUDY OF PERFORMANCE OPTIMIZATION TECHNIQUES OF DIGITAL INTEGRATED CIRCUIT TEST GENERATION SYSTEM",
+    "title": "A Study of Performance Optimization Techniques of Digital Integrated Circuit Test Generation System",
     "tracks": [
       "Young People Programme"
     ],
@@ -15169,7 +15169,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "TOWARDS PERFORMANCE-DRIVEN ANALOG LAYOUT DESIGN",
+    "title": "Towards Performance-Driven Analog Layout Design",
     "tracks": [
       "Young People Programme"
     ],
@@ -15201,7 +15201,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "FROM THEORY TO SILICON: MAPPING NESTED LOOPS TO TIGHTLY COUPLED PROCESSOR ARRAYS (TCPAS)",
+    "title": "From Theory to Silicon: Mapping Nested Loops to Tightly Coupled Processor Arrays (Tcpas)",
     "tracks": [
       "Young People Programme"
     ],
@@ -15231,7 +15231,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "TOWARDS ULTRA-RELIABLE AUTOMOTIVE SYSTEMS-ON-CHIP",
+    "title": "Towards Ultra-Reliable Automotive Systems-On-Chip",
     "tracks": [
       "Young People Programme"
     ],
@@ -15263,7 +15263,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "HARDWARE ACCELERATION WITH BACKDOOR AND SIDE-CHANNEL ANALYSIS FOR LATTICE-BASED CRYPTOGRAPHY",
+    "title": "Hardware Acceleration with Backdoor and Side-Channel Analysis for Lattice-Based Cryptography",
     "tracks": [
       "Young People Programme"
     ],
@@ -15292,7 +15292,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "MULTI-OBJECTIVE FULL-PROCESS DESIGN SPACE EXPLORATION FOR CHIPLET HETEROGENEOUS INTEGRATION",
+    "title": "Multi-Objective Full-Process Design Space Exploration for Chiplet Heterogeneous Integration",
     "tracks": [
       "Young People Programme"
     ],
@@ -15322,7 +15322,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "NEAR-DATA PROCESSING OF STRUCTURED AND SEMI-STRUCTURED NOSQL DATA ON FPGA-BASED SOCS",
+    "title": "Near-Data Processing of Structured and Semi-Structured Nosql Data on FPGA-Based SoCs",
     "tracks": [
       "Young People Programme"
     ],
@@ -15352,7 +15352,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "HW-SW CO-DESIGN TECHNIQUES FOR DT-BASED ENSEMBLE MODELS ON EMBEDDED SYSTEMS",
+    "title": "Hw-Sw Co-Design Techniques for Dt-Based Ensemble Models on Embedded Systems",
     "tracks": [
       "Young People Programme"
     ],
@@ -15382,7 +15382,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "AI-DRIVEN TOPOLOGY SYNTHESIS AND SYSTEM-LEVEL OPTIMIZATION OF ANALOG/MIXED-SIGNAL CIRCUITS",
+    "title": "AI-Driven Topology Synthesis and System-Level Optimization of Analog/Mixed-Signal Circuits",
     "tracks": [
       "Young People Programme"
     ],
@@ -15411,7 +15411,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "HIGH-LEVEL SYNTHESIS OF SPECULATIVE CIRCUITS",
+    "title": "High-Level Synthesis of Speculative Circuits",
     "tracks": [
       "Young People Programme"
     ],
@@ -15442,7 +15442,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "REAL-TIME EMOTION RECOGNITION: DEEP PHYSIOLOGICAL FEATURE LEARNING AND ADAPTIVE EDGE INTELLIGENCE",
+    "title": "Real-Time Emotion Recognition: Deep Physiological Feature Learning and Adaptive Edge Intelligence",
     "tracks": [
       "Young People Programme"
     ],
@@ -15472,7 +15472,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "CO-DESIGN OF LIGHTWEIGHT INTRUSION DETECTION SYSTEMS FOR IOT DEVICES.",
+    "title": "Co-Design of Lightweight Intrusion Detection Systems for IoT Devices.",
     "tracks": [
       "Young People Programme"
     ],
@@ -15504,7 +15504,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "TOWARDS AUTONOMOUS ANALOG IC DESIGN: SAMPLE-EFFICIENT, PVT-ROBUST, AND EXPLAINABLE SIZING VIA AGENTIC AI",
+    "title": "Towards Autonomous Analog IC Design: Sample-Efficient, Pvt-Robust, and Explainable Sizing via Agentic AI",
     "tracks": [
       "Young People Programme"
     ],
@@ -15535,7 +15535,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "MULTI-OBJECTIVE QUANTITATIVE MODELING FOR DESIGN SPACE EXPLORATION ON AI PROCESSORS",
+    "title": "Multi-Objective Quantitative Modeling for Design Space Exploration on AI Processors",
     "tracks": [
       "Young People Programme"
     ],
@@ -15566,7 +15566,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "EXPLOITING NEUROMORPHIC COMPUTING FOR EFFECTIVE, EFFICIENT, AND SECURE EDGE-CLOUD COLLABORATIVE COMPUTING SYSTEM",
+    "title": "Exploiting Neuromorphic Computing for Effective, Efficient, and Secure Edge-Cloud Collaborative Computing System",
     "tracks": [
       "Young People Programme"
     ],
@@ -15595,7 +15595,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "DESIGN TOOLS FOR ADIABATIC SUPERCONDUCTING LOGIC CIRCUITS TOWARD ENERGY-EFFICIENT COMPUTING",
+    "title": "Design Tools for Adiabatic Superconducting Logic Circuits Toward Energy-Efficient Computing",
     "tracks": [
       "Young People Programme"
     ],
@@ -15624,7 +15624,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "AGENTIC ON CYBERSECURITY AND LLM-AIDED EDA: BENCHMARKS AND AUTOMATED SYSTEMS",
+    "title": "Agentic on Cybersecurity and LLM-Aided EDA: Benchmarks and Automated Systems",
     "tracks": [
       "Young People Programme"
     ],
@@ -15654,7 +15654,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "BRIDGING THE GAP BETWEEN FINE-GRAINED ARCHITECTURES AND LARGE SYSTOLIC ARRAYS",
+    "title": "Bridging the Gap Between Fine-Grained Architectures and Large Systolic Arrays",
     "tracks": [
       "Young People Programme"
     ],
@@ -15684,7 +15684,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "DESIGN TECHNOLOGY CO-OPTIMIZATION OF EMERGING STORAGE CLASS MEMORIES",
+    "title": "Design Technology Co-Optimization of Emerging Storage Class Memories",
     "tracks": [
       "Young People Programme"
     ],
@@ -15716,7 +15716,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "MODEL AND SYSTEM CO-DESIGN FOR DISTRIBUTED DNN INFERENCE ON EDGE HETEROGENEOUS DEVICES",
+    "title": "Model and System Co-Design for Distributed DNN Inference on Edge Heterogeneous Devices",
     "tracks": [
       "Young People Programme"
     ],
@@ -15746,7 +15746,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "ULTRA-LOW LATENCY AND EXTREME-THROUGHPUT NEURAL NETWORK ACCELERATORS ON FPGA",
+    "title": "Ultra-Low Latency and Extreme-Throughput Neural Network Accelerators on FPGA",
     "tracks": [
       "Young People Programme"
     ],
@@ -15778,7 +15778,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "ENABLING LARGE-SCALE RTL SIMULATION AND REALISTIC SYSTEM INTEGRATION",
+    "title": "Enabling Large-Scale Rtl Simulation and Realistic System Integration",
     "tracks": [
       "Young People Programme"
     ],
@@ -15809,7 +15809,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "ARCHITECTURAL DEFENSES AGAINST HARDWARE ATTACKS ON RLSC-V CORES",
+    "title": "Architectural Defenses Against Hardware Attacks on Rlsc-V Cores",
     "tracks": [
       "Young People Programme"
     ],
@@ -15839,7 +15839,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "DEEPLY UNDERSTANDING AND EFFICIENTLY MITIGATING DRAM READ DISTURBANCE VIA NEW TESTING INFRASTRUCTURE AND COMPREHENSIVE REAL-CHIP EXPERIMENTAL STUDIES",
+    "title": "Deeply Understanding and Efficiently Mitigating DRAM Read Disturbance via New Testing Infrastructure and Comprehensive Real-Chip Experimental Studies",
     "tracks": [
       "Young People Programme"
     ],
@@ -15869,7 +15869,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "APPLICATION-SPECIFIC HARDWARE OPTIMIZATION USING VIRTUAL PROTOTYPES",
+    "title": "Application-Specific Hardware Optimization Using Virtual Prototypes",
     "tracks": [
       "Young People Programme"
     ],
@@ -15900,7 +15900,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "A NEW ERA OF EDA: A GEN-AI-AIDED FRAMEWORK FOR HARDWARE DEVELOPMENT",
+    "title": "A New Era of EDA: A Gen-AI-Aided Framework for Hardware Development",
     "tracks": [
       "Young People Programme"
     ],
@@ -15930,7 +15930,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "SIDE-CHANNEL AWARENESS IN NEURAL NETWORK FPGA ACCELERATORS: SECURITY THREATS AND OPPORTUNITIES FOR FUNCTIONAL SAFETY",
+    "title": "Side-Channel Awareness in Neural Network FPGA Accelerators: Security Threats and Opportunities for Functional Safety",
     "tracks": [
       "Young People Programme"
     ],
@@ -15960,7 +15960,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "TOWARDS LIGHTWEIGHT AUTHENTICATION: PUF‑ENABLED MUTUAL TRUST AND KEY-EXCHANGE FOR IOT",
+    "title": "Towards Lightweight Authentication: Puf‑Enabled Mutual Trust and Key-Exchange for IoT",
     "tracks": [
       "Young People Programme"
     ],
@@ -15990,7 +15990,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "GENERATIVE AI IN THE HARDWARE DESIGN FLOW: FROM HIGH-LEVEL SYNTHESIS TO SECURITY",
+    "title": "Generative AI in the Hardware Design Flow: From High-Level Synthesis to Security",
     "tracks": [
       "Young People Programme"
     ],
@@ -16021,7 +16021,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "ENHANCING AI SYSTEMS SAFETY AND RELIABILITY",
+    "title": "Enhancing AI Systems Safety and Reliability",
     "tracks": [
       "Young People Programme"
     ],
@@ -16051,7 +16051,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "LEVERAGING MACHINE LEARNING IN PHYSICAL DESIGN IMPLEMENTATION AND VERIFICATION",
+    "title": "Leveraging Machine Learning in Physical Design Implementation and Verification",
     "tracks": [
       "Young People Programme"
     ],
@@ -16081,7 +16081,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "ON CUTWIDTH: POLYNOMIAL-TIME FORMAL VERIFICATION, DEBUGGING, AND CORRECTION FOR CIRCUITS",
+    "title": "On Cutwidth: Polynomial-Time Formal Verification, Debugging, and Correction for Circuits",
     "tracks": [
       "Young People Programme"
     ],
@@ -16114,7 +16114,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "DESIGN TECHNIQUES FOR AI-ENABLED EMBEDDED SYSTEMS",
+    "title": "Design Techniques for AI-Enabled Embedded Systems",
     "tracks": [
       "Young People Programme"
     ],
@@ -16146,7 +16146,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "AI-POWERED RESILIENT PERCEPTION FOR AUTONOMOUS SYSTEMS: LIGHTWEIGHT NEAR-SENSOR POINT CLOUD CORRUPTION DETECTION",
+    "title": "AI-Powered Resilient Perception for Autonomous Systems: Lightweight Near-Sensor Point Cloud Corruption Detection",
     "tracks": [
       "Young People Programme"
     ],
@@ -16176,7 +16176,7 @@
     "sessions": [
       "YPP04"
     ],
-    "title": "EFFICIENT SPIKING NEURAL NETWORKS FOR EDGE-BASED AUDITORY PERCEPTION",
+    "title": "Efficient Spiking Neural Networks for Edge-Based Auditory Perception",
     "tracks": [
       "Young People Programme"
     ],

@@ -26,7 +26,7 @@ def test_parse_program_extracts_downloadable_papers(tmp_path):
     assert [paper.id for paper in papers] == ["TS01.2", "TS01.3", "UF01.1"]
 
     technical = papers[0]
-    assert technical.title == "BESPOKE CO-PROCESSOR FOR ENERGY-EFFICIENT HEALTH MONITORING"
+    assert technical.title == "Bespoke Co-Processor for Energy-Efficient Health Monitoring"
     assert technical.abstract == "Flexible electronics abstract."
     assert technical.authors == ["Theofanis Vergos", "Polykarpos Vergos", "Mehdi Tahoori"]
     assert technical.author_institutions == (
@@ -50,6 +50,7 @@ def test_parse_program_extracts_downloadable_papers(tmp_path):
     assert single_author.author_institutions == "Amir Moradi (TU Darmstadt, DE)"
 
     demo = papers[2]
+    assert demo.title == "Systolic-ONN: A Live Demonstration"
     assert demo.authors == ["Jeongmin Jin", "Mundo Jeong", "Woojoo Lee"]
     assert demo.author_institutions == (
         "Jeongmin Jin (Chung-Ang University, KR); "
