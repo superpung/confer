@@ -82,6 +82,11 @@ kbd {
 }
 html.is-sidebar-collapsed { --col-left: 0; }
 html.is-rail-collapsed { --col-right: 0; }
+/* Pin each panel to its column so the content never auto-places into a
+   0-width track when the sidebar is a fixed drawer or the rail is hidden. */
+.sidebar { grid-column: 1; }
+.content { grid-column: 2; }
+.rail { grid-column: 3; }
 
 /* Sidebar -------------------------------------------------------------- */
 .sidebar {
