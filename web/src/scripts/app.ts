@@ -533,43 +533,15 @@ function setQuery(q: string) {
 function closeModals() { document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; }); }
 
 // --- theme -------------------------------------------------------------
-function setThemeColor() {
-  const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
-  if (!bg) return;
-  let m = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-  if (!m) { m = document.createElement('meta'); m.name = 'theme-color'; document.head.appendChild(m); }
-  m.content = bg;
-}
-// iOS Safari can leave parts of the page painted in the previous theme's colors
-// until a reload: the frosted top bar keeps a stale backdrop snapshot, and the
-// bottom safe-area strip (canvas, driven by color-scheme / root background)
-// keeps the old fill. Nudge the properties that drive those paints for a frame
-// — held across one paint via double rAF — to force a repaint with the new theme.
-function repaintForTheme() {
-  // Drive the background layer's color from JS so each toggle is a real
-  // value change on a normal element (no flash) — Safari repaints elements
-  // reliably even though it leaves the UA canvas stale.
-  const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
-  const layer = document.querySelector<HTMLElement>('.app-bg');
-  if (layer && bg) layer.style.backgroundColor = bg;
-  // Clear the frosted top bar's stale backdrop snapshot.
-  const bars = [...document.querySelectorAll<HTMLElement>('.topbar')];
-  bars.forEach((el) => { el.style.backdropFilter = 'none'; el.style.setProperty('-webkit-backdrop-filter', 'none'); });
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    bars.forEach((el) => { el.style.removeProperty('backdrop-filter'); el.style.removeProperty('-webkit-backdrop-filter'); });
-  }));
-}
 function reflectTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';
   document.querySelectorAll('[data-theme-icon]').forEach((el) => { el.textContent = dark ? '☀️' : '🌙'; });
-  setThemeColor();
 }
 function toggleTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';
   document.documentElement.dataset.theme = dark ? 'light' : 'dark';
   try { localStorage.setItem(K_THEME, dark ? 'light' : 'dark'); } catch { /* ignore */ }
   reflectTheme();
-  repaintForTheme();
 }
 
 // --- events ------------------------------------------------------------

@@ -48,19 +48,15 @@
 
 * { box-sizing: border-box; }
 
-/* Theme the root canvas too, so overscroll / safe-area regions match the page
-   background instead of showing the browser's (dark) default. */
+/* Theme the root element so the browser tints its own chrome / safe-area via
+   color-scheme + this background, and repaints it correctly on a theme switch
+   (the standard approach — no viewport-fit=cover, so page content never enters
+   the safe area where Safari leaves a stale band). */
 html { background: var(--bg); }
-
-/* Full-screen background as a real element. iOS Safari won't repaint the UA
-   canvas on a theme switch (stale band in the bottom safe area); an element's
-   background does repaint, and being fixed it covers the safe areas too. Body
-   stays transparent so this layer shows through. */
-.app-bg { position: fixed; inset: 0; z-index: -1; background: var(--bg); }
 
 body {
   margin: 0;
-  background: transparent;
+  background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
   font-size: 15px;
@@ -114,7 +110,7 @@ html.is-rail-collapsed { --col-right: 0; }
   gap: 14px;
   border-right: 1px solid var(--line);
   background: var(--panel-soft);
-  padding: max(18px, env(safe-area-inset-top)) 14px max(28px, env(safe-area-inset-bottom));
+  padding: 18px 14px 28px;
   transition: transform 0.26s ease;
 }
 .sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 4px; }
@@ -201,16 +197,12 @@ html.is-rail-collapsed { --col-right: 0; }
 .foot-copy { margin-left: auto; }
 
 /* Content -------------------------------------------------------------- */
-/* Reserve the bottom safe area so the last cards clear Safari's floating
-   bottom address bar / the home indicator (page runs edge-to-edge). */
-.content { min-width: 0; display: flex; flex-direction: column; padding-bottom: env(safe-area-inset-bottom); }
+.content { min-width: 0; display: flex; flex-direction: column; }
 
 .topbar {
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: 10px;
   padding: 12px 28px;
-  /* clear the status-bar / notch when the page runs edge-to-edge (viewport-fit=cover) */
-  padding-top: max(12px, env(safe-area-inset-top));
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -409,14 +401,14 @@ html.is-rail-collapsed { --col-right: 0; }
 
 /* Back to top + toast -------------------------------------------------- */
 .back-to-top {
-  position: fixed; right: 24px; bottom: calc(24px + env(safe-area-inset-bottom)); z-index: 30;
+  position: fixed; right: 24px; bottom: 24px; z-index: 30;
   width: 42px; height: 42px; border-radius: 50%;
   border: 1px solid var(--line-strong); background: var(--panel); color: var(--text);
   font-size: 18px; cursor: pointer; box-shadow: var(--shadow);
 }
 .back-to-top:hover { border-color: var(--accent); color: var(--accent); }
 .toast {
-  position: fixed; left: 50%; bottom: calc(28px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%);
   z-index: 60; padding: 10px 18px; border-radius: 999px;
   background: var(--text); color: var(--bg); font-size: 13.5px; font-weight: 500;
   box-shadow: var(--shadow);
@@ -457,7 +449,7 @@ html.is-rail-collapsed { --col-right: 0; }
   display: flex; flex-direction: column; gap: 14px;
   border-left: 1px solid var(--line);
   background: var(--panel-soft);
-  padding: max(18px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  padding: 18px 16px 28px;
   transition: transform 0.26s ease;
 }
 .rail-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 2px; }
@@ -566,7 +558,7 @@ html.is-rail-collapsed { --col-right: 0; }
   .app.sidebar-open .sidebar-scrim { display: block; position: fixed; inset: 0; z-index: 35; background: rgba(20, 19, 18, 0.4); }
   .sidebar-toggle { display: inline-grid; }
   /* Topbar wraps: row 1 = menu + sort, row 2 = full-width search. */
-  .topbar { padding: max(10px, env(safe-area-inset-top)) 18px 10px; gap: 8px; flex-wrap: wrap; }
+  .topbar { padding: 10px 18px; gap: 8px; flex-wrap: wrap; }
   .topbar [data-help] { display: none; }     /* keyboard shortcuts: desktop only */
   .topbar-select { flex: 1; min-height: 40px; }
   .search-wrap { order: 3; flex: 1 0 100%; }

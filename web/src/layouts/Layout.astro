@@ -11,7 +11,7 @@ const { title, description = 'Browse accepted papers across conferences and jour
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,10 +28,6 @@ const { title, description = 'Browse accepted papers across conferences and jour
           const dark = saved ? saved === 'dark'
             : window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-          const meta = document.createElement('meta');
-          meta.name = 'theme-color';
-          meta.content = dark ? '#1f1e1d' : '#faf9f5';
-          document.head.appendChild(meta);
           if (localStorage.getItem('confer.sidebarCollapsed') === '1') {
             document.documentElement.classList.add('is-sidebar-collapsed');
           }
@@ -45,10 +41,6 @@ const { title, description = 'Browse accepted papers across conferences and jour
     </script>
   </head>
   <body>
-    <!-- Real element painting the full-screen background (incl. safe areas), so
-         we don't rely on the UA canvas, which iOS Safari fails to repaint on a
-         theme switch (leaving a stale color band at the bottom). -->
-    <div class="app-bg" aria-hidden="true"></div>
     <slot />
   </body>
 </html>
