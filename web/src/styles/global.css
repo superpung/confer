@@ -48,6 +48,10 @@
 
 * { box-sizing: border-box; }
 
+/* Theme the root canvas too, so overscroll / safe-area regions match the page
+   background instead of showing the browser's (dark) default. */
+html { background: var(--bg); }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -76,7 +80,8 @@ kbd {
 .app {
   display: grid;
   grid-template-columns: var(--col-left) minmax(0, 1fr) var(--col-right);
-  min-height: 100vh; transition: grid-template-columns 0.26s ease;
+  min-height: 100vh; min-height: 100dvh; /* dvh: fill the visual viewport on mobile */
+  transition: grid-template-columns 0.26s ease;
   /* clip the side panels when they slide off-canvas on collapse (no h-scroll) */
   overflow-x: clip;
 }
@@ -103,7 +108,7 @@ html.is-rail-collapsed { --col-right: 0; }
   gap: 14px;
   border-right: 1px solid var(--line);
   background: var(--panel-soft);
-  padding: 18px 14px 28px;
+  padding: max(18px, env(safe-area-inset-top)) 14px max(28px, env(safe-area-inset-bottom));
   transition: transform 0.26s ease;
 }
 .sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 4px; }
@@ -196,6 +201,8 @@ html.is-rail-collapsed { --col-right: 0; }
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: 10px;
   padding: 12px 28px;
+  /* clear the status-bar / notch when the page runs edge-to-edge (viewport-fit=cover) */
+  padding-top: max(12px, env(safe-area-inset-top));
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -442,7 +449,7 @@ html.is-rail-collapsed { --col-right: 0; }
   display: flex; flex-direction: column; gap: 14px;
   border-left: 1px solid var(--line);
   background: var(--panel-soft);
-  padding: 18px 16px 28px;
+  padding: max(18px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
   transition: transform 0.26s ease;
 }
 .rail-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 2px; }
@@ -551,7 +558,7 @@ html.is-rail-collapsed { --col-right: 0; }
   .app.sidebar-open .sidebar-scrim { display: block; position: fixed; inset: 0; z-index: 35; background: rgba(20, 19, 18, 0.4); }
   .sidebar-toggle { display: inline-grid; }
   /* Topbar wraps: row 1 = menu + sort, row 2 = full-width search. */
-  .topbar { padding: 10px 18px; gap: 8px; flex-wrap: wrap; }
+  .topbar { padding: max(10px, env(safe-area-inset-top)) 18px 10px; gap: 8px; flex-wrap: wrap; }
   .topbar [data-help] { display: none; }     /* keyboard shortcuts: desktop only */
   .topbar-select { flex: 1; min-height: 40px; }
   .search-wrap { order: 3; flex: 1 0 100%; }
