@@ -8,6 +8,7 @@ const K_FAVS = 'confer.favorites';
 const K_THEME = 'confer.theme';
 const K_SAVED = 'confer.savedSearches';
 const K_SIDEBAR = 'confer.sidebarCollapsed';
+const K_RAIL = 'confer.railCollapsed';
 const PAGE = 200;
 
 // --- helpers -----------------------------------------------------------
@@ -49,6 +50,88 @@ function eventList(p: Paper): string[] {
   return p.eventType ? p.eventType.split(';').map((s) => s.trim()).filter(Boolean) : [];
 }
 
+// --- author / institution parsing -------------------------------------
+// authorInstitutions is a display string: "Name (Inst); Name (Inst); ...".
+// Institutions can themselves contain parens (e.g. "... (HKUST)"), so we take
+// the text before the first " (" as the name and the rest inside parens as inst.
+function parseAff(p: Paper): { author: string; inst: string }[] {
+  if (p._aff) return p._aff;
+  const out: { author: string; inst: string }[] = [];
+  for (const seg of (p.authorInstitutions || '').split(';')) {
+    const s = seg.trim();
+    if (!s) continue;
+    const i = s.indexOf(' (');
+    if (i >= 0 && s.endsWith(')')) out.push({ author: s.slice(0, i).trim(), inst: s.slice(i + 2, -1).trim() });
+    else out.push({ author: s, inst: '' });
+  }
+  p._aff = out;
+  return out;
+}
+/** Affiliations aligned to p.authors (by position when counts match, else by name). */
+function authorAff(p: Paper): { author: string; inst: string }[] {
+  const parsed = parseAff(p);
+  if (parsed.length === p.authors.length) return parsed;
+  const byName = new Map(parsed.map((x) => [x.author, x.inst]));
+  return p.authors.map((a) => ({ author: a, inst: byName.get(a) ?? '' }));
+}
+function instList(p: Paper): string[] {
+  if (!p._insts) p._insts = [...new Set(parseAff(p).map((x) => x.inst).filter(Boolean))];
+  return p._insts;
+}
+
+// --- field-prefixed search ("author:", "title:", "inst:", …) ----------
+type Term = { field: string; value: string };
+const FIELD_ALIASES: Record<string, string> = {
+  title: 'title', t: 'title',
+  author: 'author', authors: 'author', au: 'author', a: 'author',
+  inst: 'inst', institution: 'inst', institutions: 'inst', aff: 'inst', affiliation: 'inst', org: 'inst',
+  abstract: 'abstract', abs: 'abstract',
+  track: 'track', topic: 'track', tracks: 'track',
+  venue: 'venue', conf: 'venue', conference: 'venue',
+  event: 'event', type: 'event',
+  session: 'session',
+  id: 'id', year: 'year',
+};
+/** Tokenize into AND terms; supports field:"quoted phrase", field:bare, "quoted", bare. */
+function parseQuery(q: string): Term[] {
+  const terms: Term[] = [];
+  const re = /(\w+):"([^"]*)"|(\w+):(\S+)|"([^"]*)"|(\S+)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(q))) {
+    if (m[1] !== undefined) terms.push({ field: FIELD_ALIASES[m[1].toLowerCase()] ?? 'any', value: m[2] });
+    else if (m[3] !== undefined) terms.push({ field: FIELD_ALIASES[m[3].toLowerCase()] ?? 'any', value: m[4] });
+    else terms.push({ field: 'any', value: (m[5] ?? m[6]) as string });
+  }
+  return terms.map((t) => ({ field: t.field, value: t.value.toLowerCase() })).filter((t) => t.value !== '');
+}
+function fieldText(p: Paper, field: string): string {
+  switch (field) {
+    case 'title': return p.title.toLowerCase();
+    case 'author': return p.authors.join(' | ').toLowerCase();
+    case 'inst': return instList(p).join(' | ').toLowerCase();
+    case 'abstract': return p.abstract.toLowerCase();
+    case 'track': return p.tracks.join(' | ').toLowerCase();
+    case 'event': return p.eventType.toLowerCase();
+    case 'session': return p.sessionTitles.join(' | ').toLowerCase();
+    case 'id': return p.id.toLowerCase();
+    default: return searchBlob(p);
+  }
+}
+function matchQuery(row: { p: Paper; v: string }, terms: Term[]): boolean {
+  if (!terms.length) return true;
+  const { p, v } = row;
+  const venue = venueById.get(v);
+  for (const t of terms) {
+    let hay: string;
+    if (t.field === 'any') hay = `${searchBlob(p)} ${(venue?.name ?? '').toLowerCase()}`;
+    else if (t.field === 'venue') hay = `${venue?.name ?? ''} ${venue?.series ?? ''} ${v}`.toLowerCase();
+    else if (t.field === 'year') hay = String(venue?.year ?? '');
+    else hay = fieldText(p, t.field);
+    if (!hay.includes(t.value)) return false;
+  }
+  return true;
+}
+
 // --- state -------------------------------------------------------------
 const manifest: Venue[] = JSON.parse($('#venues-data').textContent || '[]');
 const venueById = new Map(manifest.map((v) => [v.id, v]));
@@ -58,6 +141,7 @@ const state = {
   loaded: new Map<string, Paper[]>(),
   rows: [] as { p: Paper; v: string }[],
   query: '',
+  terms: [] as Term[],
   tracks: new Set<string>(),
   events: new Set<string>(),
   venuesFacet: new Set<string>(),
@@ -140,7 +224,7 @@ function matches(row: { p: Paper; v: string }): boolean {
   if (state.venuesFacet.size && !state.venuesFacet.has(v)) return false;
   if (state.tracks.size && !p.tracks.some((t) => state.tracks.has(t))) return false;
   if (state.events.size && !eventList(p).some((e) => state.events.has(e))) return false;
-  if (state.query && !searchBlob(p).includes(state.query)) return false;
+  if (!matchQuery(row, state.terms)) return false;
   return true;
 }
 function sortRows(rows: { p: Paper; v: string }[]) {
@@ -163,6 +247,7 @@ const els = {
   facets: $<HTMLElement>('#facets'),
   facetsWrap: $<HTMLElement>('#facetsWrap'),
   facetCount: $('#facetActiveCount'),
+  railBody: $<HTMLElement>('#railBody'),
   active: $('#activeFilters'),
   exportBar: $('#exportBar'),
   selCount: $('#selCount'),
@@ -178,10 +263,28 @@ function cardHtml(p: Paper, v: string): string {
   const fav = state.favs.has(k);
   const sel = state.sel.has(k);
   const authors = p.authors.length
-    ? p.authors.map((a) => `<button class="link-author" data-author="${esc(a)}">${esc(a)}</button>`).join(', ')
+    ? authorAff(p).map(({ author, inst }) =>
+        `<span class="author${inst ? ' has-inst' : ''}">` +
+          `<button class="link-author" data-author="${esc(author)}">${esc(author)}</button>` +
+          (inst
+            ? `<span class="author-pop"><button class="author-inst" data-inst="${esc(inst)}" title="Search papers from ${esc(inst)}">${esc(inst)}</button></span>`
+            : '') +
+        `</span>`).join(', ')
     : 'Not listed';
   const tracks = p.tracks.slice(0, 5).map((t) => `<button class="chip chip-track" data-track="${esc(t)}">${esc(t)}</button>`).join('');
   const extra = p.tracks.length > 5 ? `<span class="chip">+${p.tracks.length - 5} more</span>` : '';
+  // Date / location / session are hidden by default; they live inside the
+  // disclosure so they appear together with the abstract when expanded.
+  const hasMeta = p.dates.length || p.locations.length || p.sessionTitles.length;
+  const metaHtml = hasMeta ? `<div class="compact-meta">
+      <span class="meta-item" title="${esc(joinList(p.dates))}"><strong>Date</strong>${esc(shortList(p.dates))}</span>
+      <span class="meta-item" title="${esc(joinList(p.locations))}"><strong>Location</strong>${esc(shortList(p.locations))}</span>
+      <span class="meta-item" title="${esc(joinList(p.sessionTitles))}"><strong>Session</strong>${esc(shortList(p.sessionTitles))}</span>
+    </div>` : '';
+  const discInner = (p.abstract ? `<p class="abstract-text">${esc(p.abstract)}</p>` : '') + metaHtml;
+  const disc = discInner
+    ? `<details class="paper-abstract"><summary>${p.abstract ? 'Abstract' : 'Details'}</summary>${discInner}</details>`
+    : '';
   return `<article class="paper-card${sel ? ' is-selected' : ''}" data-key="${esc(k)}">
     <span class="card-select"><input type="checkbox" data-sel ${sel ? 'checked' : ''} aria-label="Select"></span>
     <div class="card-head">
@@ -191,12 +294,7 @@ function cardHtml(p: Paper, v: string): string {
     <h2 class="paper-title">${esc(p.title)}</h2>
     <p class="paper-authors">${authors}</p>
     <button class="icon-btn favorite-button" data-fav aria-pressed="${fav}" title="${fav ? 'Remove from favorites' : 'Save to favorites'}">${fav ? '★' : '☆'}</button>
-    <div class="compact-meta">
-      <span class="meta-item" title="${esc(joinList(p.dates))}"><strong>Date:</strong>${esc(shortList(p.dates))}</span>
-      <span class="meta-item" title="${esc(joinList(p.locations))}"><strong>Location:</strong>${esc(shortList(p.locations))}</span>
-      <span class="meta-item" title="${esc(joinList(p.sessionTitles))}"><strong>Session:</strong>${esc(shortList(p.sessionTitles))}</span>
-    </div>
-    ${p.abstract ? `<details class="paper-abstract"><summary>Abstract</summary><p>${esc(p.abstract)}</p></details>` : ''}
+    ${disc}
     ${tracks || extra ? `<div class="chips">${tracks}${extra}</div>` : ''}
     ${p.urls[0] ? `<a class="icon-btn program-link" href="${esc(p.urls[0])}" target="_blank" rel="noreferrer" title="Open program page" aria-label="Open program page">↗</a>` : ''}
   </article>`;
@@ -246,7 +344,48 @@ function renderActiveFilters() {
   els.active.innerHTML = chips.join('');
 }
 
+// --- right rail: insights for the current view ------------------------
+function barChart(title: string, counts: Map<string, number>, kind: string, n: number): string {
+  const opts = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, n);
+  if (!opts.length) return '';
+  const max = opts[0][1] || 1;
+  const rows = opts.map(([val, c]) =>
+    `<button class="bar-row" data-chart="${kind}" data-val="${esc(val)}" title="${esc(val)} — ${c}">
+      <span class="bar-top"><span class="bar-label">${esc(val)}</span><span class="bar-count">${c}</span></span>
+      <span class="bar-track"><span class="bar-fill" style="width:${Math.max(4, Math.round((c / max) * 100))}%"></span></span>
+    </button>`).join('');
+  return `<section class="rail-section"><h3 class="rail-section-title">${title}</h3><div class="bar-list">${rows}</div></section>`;
+}
+
+function renderRail(filtered: { p: Paper; v: string }[]) {
+  if (!filtered.length) {
+    els.railBody.innerHTML = `<p class="rail-empty">No papers in view.</p>`;
+    return;
+  }
+  const instCount = new Map<string, number>();
+  const authorCount = new Map<string, number>();
+  const trackCount = new Map<string, number>();
+  for (const { p } of filtered) {
+    for (const inst of instList(p)) instCount.set(inst, (instCount.get(inst) ?? 0) + 1);
+    for (const a of new Set(p.authors)) authorCount.set(a, (authorCount.get(a) ?? 0) + 1);
+    for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
+  }
+  const stat = (n: number, label: string) =>
+    `<div class="rail-stat"><span class="rail-stat-n">${n.toLocaleString()}</span><span class="rail-stat-l">${label}</span></div>`;
+  const summary = `<div class="rail-stats">
+    ${stat(filtered.length, 'papers')}
+    ${stat(authorCount.size, 'authors')}
+    ${stat(instCount.size, 'institutions')}
+  </div>`;
+  els.railBody.innerHTML =
+    summary +
+    barChart('Top institutions', instCount, 'inst', 8) +
+    barChart('Top authors', authorCount, 'author', 8) +
+    barChart('Top tracks', trackCount, 'track', 6);
+}
+
 function render() {
+  state.terms = parseQuery(state.query);
   // reflect simple controls
   els.search.value = state.query;
   els.searchClear.hidden = !state.query;
@@ -257,6 +396,7 @@ function render() {
     els.list.innerHTML = `<div class="empty-state"><h2>No venues selected</h2><p>Pick one or more venues from the left to browse their papers.</p></div>`;
     els.summary.textContent = 'Select a venue to begin.';
     els.facets.innerHTML = '';
+    renderRail([]);
     renderActiveFilters();
     updateExportBar();
     els.more.hidden = true;
@@ -265,12 +405,13 @@ function render() {
 
   const queryFavBase = state.rows.filter((r) => {
     if (state.favOnly && !state.favs.has(key(r.v, r.p.id))) return false;
-    if (state.query && !searchBlob(r.p).includes(state.query)) return false;
+    if (!matchQuery(r, state.terms)) return false;
     return true;
   });
   renderFacets(queryFavBase);
 
   const filtered = sortRows(state.rows.filter(matches));
+  renderRail(filtered);
   const slice = filtered.slice(0, state.shown);
   els.list.innerHTML = slice.length
     ? slice.map((r) => cardHtml(r.p, r.v)).join('')
@@ -374,6 +515,19 @@ function setSidebarCollapsed(on: boolean) {
   document.documentElement.classList.toggle('is-sidebar-collapsed', on);
   try { localStorage.setItem(K_SIDEBAR, on ? '1' : '0'); } catch { /* ignore */ }
 }
+function setRailCollapsed(on: boolean) {
+  document.documentElement.classList.toggle('is-rail-collapsed', on);
+  try { localStorage.setItem(K_RAIL, on ? '1' : '0'); } catch { /* ignore */ }
+}
+
+// Set the search query and re-render (used by author/inst/chart clicks).
+function setQuery(q: string) {
+  state.query = q;
+  state.shown = PAGE;
+  writeUrl();
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 // --- modals ------------------------------------------------------------
 function closeModals() { document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; }); }
@@ -421,7 +575,7 @@ function wire() {
   let t = 0;
   els.search.addEventListener('input', () => {
     clearTimeout(t);
-    t = window.setTimeout(() => { state.query = els.search.value.trim().toLowerCase(); state.shown = PAGE; writeUrl(); render(); }, 130);
+    t = window.setTimeout(() => { state.query = els.search.value.trim(); state.shown = PAGE; writeUrl(); render(); }, 130);
   });
   els.searchClear.addEventListener('click', () => { state.query = ''; els.search.value = ''; writeUrl(); render(); els.search.focus(); });
   els.sort.addEventListener('change', () => { state.sort = els.sort.value; writeUrl(); render(); });
@@ -482,9 +636,10 @@ function wire() {
       const v = k.split(':')[0];
       state.venuesFacet.has(v) ? state.venuesFacet.delete(v) : state.venuesFacet.add(v);
       state.shown = PAGE; writeUrl(); render();
+    } else if (target.closest('[data-inst]')) {
+      setQuery(`inst:"${(target.closest('[data-inst]') as HTMLElement).dataset.inst!}"`);
     } else if (target.closest('[data-author]')) {
-      state.query = (target.closest('[data-author]') as HTMLElement).dataset.author!.toLowerCase();
-      state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+      setQuery(`author:"${(target.closest('[data-author]') as HTMLElement).dataset.author!}"`);
     } else if (target.closest('[data-track]')) {
       const tr = (target.closest('[data-track]') as HTMLElement).dataset.track!;
       state.tracks.has(tr) ? state.tracks.delete(tr) : state.tracks.add(tr);
@@ -533,6 +688,22 @@ function wire() {
   });
   $('[data-sidebar-collapse]').addEventListener('click', () => setSidebarCollapsed(true));
   $('#sidebarScrim').addEventListener('click', () => $('#app').classList.remove('sidebar-open'));
+
+  // right rail: collapse / reopen + chart drill-down
+  $('[data-rail-collapse]').addEventListener('click', () => setRailCollapsed(true));
+  $('[data-rail-toggle]').addEventListener('click', () => setRailCollapsed(false));
+  els.railBody.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-chart]');
+    if (!btn) return;
+    const kind = btn.dataset.chart!;
+    const val = btn.dataset.val ?? '';
+    if (kind === 'track') {
+      state.tracks.has(val) ? state.tracks.delete(val) : state.tracks.add(val);
+      state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      setQuery(`${kind}:"${val}"`); // inst:"…" or author:"…"
+    }
+  });
 
   // back to top
   const back = $('#backToTop');

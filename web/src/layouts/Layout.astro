@@ -31,6 +31,9 @@ const { title, description = 'Browse accepted papers across conferences and jour
           if (localStorage.getItem('confer.sidebarCollapsed') === '1') {
             document.documentElement.classList.add('is-sidebar-collapsed');
           }
+          if (localStorage.getItem('confer.railCollapsed') === '1') {
+            document.documentElement.classList.add('is-rail-collapsed');
+          }
         } catch {
           document.documentElement.dataset.theme = 'light';
         }

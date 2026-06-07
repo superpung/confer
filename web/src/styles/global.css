@@ -18,6 +18,10 @@
   --shadow: 0 1px 2px rgba(26, 26, 24, 0.04), 0 8px 24px rgba(26, 26, 24, 0.06);
   --radius: 12px;
   --sidebar-w: 280px;
+  --rail-w: 300px;
+  /* live column widths; collapse rules and breakpoints flip these to 0 */
+  --col-left: var(--sidebar-w);
+  --col-right: var(--rail-w);
   --serif: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -70,11 +74,14 @@ kbd {
 
 /* App layout ----------------------------------------------------------- */
 .app {
-  display: grid; grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  display: grid;
+  grid-template-columns: var(--col-left) minmax(0, 1fr) var(--col-right);
   min-height: 100vh; transition: grid-template-columns 0.26s ease;
-  /* clip the sidebar when it slides off-canvas on collapse (no h-scroll) */
+  /* clip the side panels when they slide off-canvas on collapse (no h-scroll) */
   overflow-x: clip;
 }
+html.is-sidebar-collapsed { --col-left: 0; }
+html.is-rail-collapsed { --col-right: 0; }
 
 /* Sidebar -------------------------------------------------------------- */
 .sidebar {
@@ -422,10 +429,88 @@ kbd {
 .saved-item .saved-del { color: var(--faint); font-size: 16px; }
 .saved-item .saved-del:hover { color: var(--favorite); }
 
-/* Desktop sidebar collapse --------------------------------------------- */
+/* Right rail (insights) ------------------------------------------------ */
+.rail {
+  position: sticky; top: 0; align-self: start;
+  width: var(--rail-w); height: 100vh;
+  overflow-x: hidden; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 14px;
+  border-left: 1px solid var(--line);
+  background: var(--panel-soft);
+  padding: 18px 16px 28px;
+  transition: transform 0.26s ease;
+}
+.rail-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 2px; }
+.rail-title { font-family: var(--serif); font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.rail-collapse-btn { width: 30px; height: 30px; font-size: 16px; }
+.rail-note { margin: 0; color: var(--faint); font-size: 11.5px; line-height: 1.45; }
+.rail-body { display: flex; flex-direction: column; gap: 18px; }
+.rail-empty { color: var(--muted); font-size: 13px; }
+.rail-toggle { display: none; }   /* shown only when the rail is collapsed (desktop) */
+
+.rail-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.rail-stat { display: flex; flex-direction: column; gap: 2px; padding: 9px 6px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); text-align: center; }
+.rail-stat-n { font-size: 16px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+.rail-stat-l { font-size: 10.5px; color: var(--faint); }
+
+.rail-section { display: flex; flex-direction: column; gap: 9px; }
+.rail-section-title { margin: 0; color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.bar-list { display: flex; flex-direction: column; gap: 9px; }
+.bar-row {
+  display: flex; flex-direction: column; gap: 4px; width: 100%;
+  border: 0; background: none; padding: 3px 4px; border-radius: 7px;
+  cursor: pointer; text-align: left; font: inherit; transition: background 0.12s ease;
+}
+.bar-row:hover { background: var(--panel-hover); }
+.bar-top { display: flex; align-items: baseline; gap: 8px; }
+.bar-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-soft); font-size: 12.5px; }
+.bar-count { flex: 0 0 auto; color: var(--muted); font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bar-track { height: 6px; border-radius: 999px; background: var(--panel-hover); overflow: hidden; }
+.bar-fill { display: block; height: 100%; border-radius: 999px; background: var(--accent); transition: width 0.3s ease; }
+.bar-row:hover .bar-fill { background: var(--accent-dark); }
+
+/* Author → institution on hover --------------------------------------- */
+.author { position: relative; display: inline; }
+.author.has-inst > .link-author { border-bottom: 1px dotted var(--line-strong); }
+.author-pop {
+  position: absolute; left: 0; top: 100%; z-index: 8;
+  padding-top: 5px;   /* bridge so the popover stays reachable on hover */
+  display: none; width: max-content; max-width: min(300px, 80vw);
+}
+.author.has-inst:hover .author-pop, .author-pop:hover { display: block; }
+.author-inst {
+  display: inline-block; max-width: 300px;
+  border: 1px solid var(--line-strong); border-radius: 9px;
+  background: var(--panel); color: var(--text-soft); box-shadow: var(--shadow);
+  font: inherit; font-size: 12px; line-height: 1.4; text-align: left;
+  padding: 7px 11px; cursor: pointer; white-space: normal;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+.author-inst:hover { border-color: var(--accent); color: var(--accent-dark); }
+
+/* Disclosure meta: date / location / session shown when a card expands -- */
+.abstract-text + .compact-meta { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+.compact-meta .meta-item strong { display: block; margin: 0 0 1px; }
+
+/* Help modal extras ---------------------------------------------------- */
+.modal-subhead { margin: 16px 0 4px; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--faint); }
+.modal-subhead:first-of-type { margin-top: 4px; }
+.modal-hint { margin: 0 0 10px; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+.shortcuts code, .modal-hint code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px; color: var(--accent-dark);
+  background: var(--accent-soft); border-radius: 5px; padding: 1px 5px;
+}
+.shortcuts dd code { color: var(--muted); background: var(--panel-soft); }
+
+/* Keep the back-to-top button clear of the rail when it's open. */
+@media (min-width: 1081px) {
+  html:not(.is-rail-collapsed) .back-to-top { right: calc(var(--rail-w) + 24px); }
+}
+
+/* Desktop side-panel collapse ------------------------------------------ */
 @media (min-width: 861px) {
   .sidebar-head .sidebar-collapse-btn { display: inline-grid; }
-  html.is-sidebar-collapsed .app { grid-template-columns: 0 minmax(0, 1fr); }
   html.is-sidebar-collapsed .sidebar {
     transform: translateX(-100%);
     border-right-color: transparent;
@@ -433,11 +518,25 @@ kbd {
   }
   html.is-sidebar-collapsed .sidebar-toggle { display: inline-grid; }
 }
+@media (min-width: 1081px) {
+  html.is-rail-collapsed .rail {
+    transform: translateX(100%);
+    border-left-color: transparent;
+    pointer-events: none;
+  }
+  html.is-rail-collapsed .rail-toggle { display: inline-grid; }
+}
+
+/* Below 1080px the rail folds away entirely (analytics is secondary). */
+@media (max-width: 1080px) {
+  :root { --col-right: 0; }
+  .rail { display: none; }
+  .rail-toggle { display: none !important; }
+}
 
 /* Responsive ----------------------------------------------------------- */
 @media (max-width: 860px) {
-  /* minmax(0,1fr) — a bare 1fr keeps a min-content floor and overflows narrow screens. */
-  .app { grid-template-columns: minmax(0, 1fr); }
+  :root { --col-left: 0; }   /* sidebar becomes a fixed drawer; its track is 0 */
   .sidebar {
     position: fixed; top: 0; left: 0; z-index: 40;
     width: min(310px, 86vw); transform: translateX(-100%);
@@ -469,7 +568,6 @@ kbd {
   .paper-id { font-size: 11px; }
   .paper-title { font-size: 15.5px; margin: 6px 0 4px; line-height: 1.28; }
   .paper-authors { font-size: 12.5px; line-height: 1.45; }
-  .compact-meta { display: none; }           /* date / location / session */
   .chips { display: none; }                  /* track shortcuts: desktop-only */
   .paper-abstract { margin-top: 9px; font-size: 13px; }
   .paper-abstract summary { font-size: 12.5px; }
@@ -480,5 +578,5 @@ kbd {
 
 /* Respect reduced-motion: drop the collapse/expand animations. */
 @media (prefers-reduced-motion: reduce) {
-  .app, .sidebar, .venue-cat-body, .facet-collapse, .facets-wrap, .cat-caret, .facet-caret { transition: none; }
+  .app, .sidebar, .rail, .venue-cat-body, .facet-collapse, .facets-wrap, .cat-caret, .facet-caret { transition: none; }
 }

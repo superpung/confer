@@ -117,7 +117,7 @@ const year = new Date().getFullYear();
         <div class="search-wrap">
           <span class="search-icon" aria-hidden="true">🔍</span>
           <input id="searchInput" class="global-search" type="search"
-            placeholder="Search title, authors, abstract…" aria-label="Search papers" />
+            placeholder="Search… try author: title: inst:" aria-label="Search papers" />
           <kbd class="search-kbd">⌘K</kbd>
           <button class="search-clear" data-search-clear aria-label="Clear search" hidden>×</button>
         </div>
@@ -128,6 +128,7 @@ const year = new Date().getFullYear();
           <option value="authors">Sort: Authors</option>
         </select>
         <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts">⌘</button>
+        <button class="icon-btn rail-toggle" data-rail-toggle title="Show insights" aria-label="Show insights">📊</button>
       </header>
 
       <div class="controls">
@@ -162,12 +163,32 @@ const year = new Date().getFullYear();
       <div class="list-more" id="listMore" hidden></div>
     </main>
 
+    <aside class="rail" id="rail" aria-label="Insights">
+      <div class="rail-head">
+        <span class="rail-title">Insights</span>
+        <button class="icon-btn rail-collapse-btn" data-rail-collapse title="Hide insights" aria-label="Hide insights">»</button>
+      </div>
+      <p class="rail-note">Live stats for the papers in view. Click a bar to filter.</p>
+      <div class="rail-body" id="railBody"></div>
+    </aside>
+
     <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>↑</button>
     <div class="toast" id="toast" role="status" hidden></div>
 
     <div class="modal" id="helpModal" hidden>
-      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
-        <div class="modal-head"><h2>Keyboard shortcuts</h2><button class="icon-btn" data-modal-close aria-label="Close">×</button></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-label="Help">
+        <div class="modal-head"><h2>Search &amp; shortcuts</h2><button class="icon-btn" data-modal-close aria-label="Close">×</button></div>
+        <h3 class="modal-subhead">Search fields</h3>
+        <p class="modal-hint">Prefix a term to scope it; combine terms (all must match); quote phrases.</p>
+        <dl class="shortcuts">
+          <div><dt><code>author:</code></dt><dd>Match authors — <code>author:"Jane Doe"</code></dd></div>
+          <div><dt><code>title:</code></dt><dd>Match the title — <code>title:routing</code></dd></div>
+          <div><dt><code>inst:</code></dt><dd>Match institutions — <code>inst:"MIT"</code></dd></div>
+          <div><dt><code>track:</code></dt><dd>Match a track / topic</dd></div>
+          <div><dt><code>abstract:</code></dt><dd>Match abstract text</dd></div>
+          <div><dt>plain text</dt><dd>Matches anything</dd></div>
+        </dl>
+        <h3 class="modal-subhead">Keyboard</h3>
         <dl class="shortcuts">
           <div><dt><kbd>⌘</kbd><kbd>K</kbd></dt><dd>Focus search</dd></div>
           <div><dt><kbd>Esc</kbd></dt><dd>Clear search / close</dd></div>

@@ -23,6 +23,10 @@ export interface Paper {
   urls: string[];
   /** lazily-cached lowercased search blob */
   _search?: string;
+  /** lazily-cached author→institution pairs parsed from authorInstitutions */
+  _aff?: { author: string; inst: string }[];
+  /** lazily-cached unique institution list */
+  _insts?: string[];
 }
 
 export interface SavedSearch {
