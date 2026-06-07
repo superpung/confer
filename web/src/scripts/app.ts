@@ -533,15 +533,37 @@ function setQuery(q: string) {
 function closeModals() { document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; }); }
 
 // --- theme -------------------------------------------------------------
+function setThemeColor() {
+  const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  if (!bg) return;
+  let m = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+  if (!m) { m = document.createElement('meta'); m.name = 'theme-color'; document.head.appendChild(m); }
+  m.content = bg;
+}
+// iOS Safari can leave a stale backdrop-filter snapshot when the theme's colors
+// change, painting the old tint over the text under the frosted bar. Toggling
+// the filter off for a frame forces it to re-capture against the new colors.
+function repaintGlass() {
+  document.querySelectorAll<HTMLElement>('.topbar').forEach((el) => {
+    el.style.backdropFilter = 'none';
+    el.style.setProperty('-webkit-backdrop-filter', 'none');
+    requestAnimationFrame(() => {
+      el.style.removeProperty('backdrop-filter');
+      el.style.removeProperty('-webkit-backdrop-filter');
+    });
+  });
+}
 function reflectTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';
   document.querySelectorAll('[data-theme-icon]').forEach((el) => { el.textContent = dark ? '☀️' : '🌙'; });
+  setThemeColor();
 }
 function toggleTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';
   document.documentElement.dataset.theme = dark ? 'light' : 'dark';
   try { localStorage.setItem(K_THEME, dark ? 'light' : 'dark'); } catch { /* ignore */ }
   reflectTheme();
+  repaintGlass();
 }
 
 // --- events ------------------------------------------------------------

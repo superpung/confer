@@ -28,6 +28,10 @@ const { title, description = 'Browse accepted papers across conferences and jour
           const dark = saved ? saved === 'dark'
             : window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+          const meta = document.createElement('meta');
+          meta.name = 'theme-color';
+          meta.content = dark ? '#1f1e1d' : '#faf9f5';
+          document.head.appendChild(meta);
           if (localStorage.getItem('confer.sidebarCollapsed') === '1') {
             document.documentElement.classList.add('is-sidebar-collapsed');
           }
