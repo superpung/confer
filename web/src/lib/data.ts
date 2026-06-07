@@ -27,6 +27,14 @@ export function loadVenues(): VenueSummary[] {
   return (raw.venues ?? []) as VenueSummary[];
 }
 
+/** ISO timestamp of the last scrape, recorded in venues.json. */
+export function loadGeneratedAt(): string | null {
+  const file = path.join(DATA_DIR, 'venues.json');
+  if (!fs.existsSync(file)) return null;
+  const raw = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  return (raw.generatedAt as string) ?? null;
+}
+
 /** Group venues by research category, splitting conferences and journals. */
 export function groupByCategory(venues: VenueSummary[]): CategoryGroup[] {
   const byCat = new Map<string, VenueSummary[]>();

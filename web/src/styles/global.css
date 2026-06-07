@@ -72,6 +72,8 @@ kbd {
 .app {
   display: grid; grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
   min-height: 100vh; transition: grid-template-columns 0.26s ease;
+  /* clip the sidebar when it slides off-canvas on collapse (no h-scroll) */
+  overflow-x: clip;
 }
 
 /* Sidebar -------------------------------------------------------------- */
@@ -79,6 +81,8 @@ kbd {
   position: sticky;
   top: 0;
   align-self: start;
+  /* Fixed width so the content never reflows when the grid track collapses. */
+  width: var(--sidebar-w);
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -88,6 +92,7 @@ kbd {
   border-right: 1px solid var(--line);
   background: var(--panel-soft);
   padding: 18px 14px 28px;
+  transition: transform 0.26s ease;
 }
 .sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 4px; }
 .sidebar-head-actions { display: flex; align-items: center; gap: 6px; }
@@ -154,6 +159,24 @@ kbd {
 
 .sidebar-scrim { display: none; }
 
+/* Sidebar footer: provenance pinned to the bottom of the rail. */
+.sidebar-foot {
+  margin-top: auto;
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 12px 6px 0; border-top: 1px solid var(--line);
+  color: var(--faint); font-size: 11.5px; line-height: 1.4;
+}
+.foot-updated { margin: 0; }
+.foot-meta { margin: 0; display: flex; align-items: center; gap: 9px; }
+.foot-gh { display: inline-flex; color: var(--muted); }
+.foot-gh:hover { color: var(--accent); }
+.foot-hash {
+  color: var(--muted); font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.foot-hash:hover { color: var(--accent); }
+.foot-copy { margin-left: auto; }
+
 /* Content -------------------------------------------------------------- */
 .content { min-width: 0; display: flex; flex-direction: column; }
 
@@ -176,7 +199,11 @@ kbd {
 }
 .global-search::placeholder { color: var(--faint); }
 .global-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.14); }
+/* Suppress the browser's native search clear "×" — we render our own. */
+.global-search::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
 .search-kbd { position: absolute; right: 12px; }
+/* Once there's text, the clear button takes the slot; hide the ⌘K hint. */
+.global-search:not(:placeholder-shown) ~ .search-kbd { display: none; }
 .search-clear {
   position: absolute; right: 10px; width: 24px; height: 24px;
   border: none; border-radius: 6px; background: var(--panel-hover);
@@ -399,7 +426,11 @@ kbd {
 @media (min-width: 861px) {
   .sidebar-head .sidebar-collapse-btn { display: inline-grid; }
   html.is-sidebar-collapsed .app { grid-template-columns: 0 minmax(0, 1fr); }
-  html.is-sidebar-collapsed .sidebar { border-right-color: transparent; }
+  html.is-sidebar-collapsed .sidebar {
+    transform: translateX(-100%);
+    border-right-color: transparent;
+    pointer-events: none;
+  }
   html.is-sidebar-collapsed .sidebar-toggle { display: inline-grid; }
 }
 
@@ -415,14 +446,36 @@ kbd {
   .app.sidebar-open .sidebar { transform: translateX(0); }
   .app.sidebar-open .sidebar-scrim { display: block; position: fixed; inset: 0; z-index: 35; background: rgba(20, 19, 18, 0.4); }
   .sidebar-toggle { display: inline-grid; }
-  .topbar { padding: 12px 18px; }
+  /* Topbar wraps: row 1 = menu + sort, row 2 = full-width search. */
+  .topbar { padding: 10px 18px; gap: 8px; flex-wrap: wrap; }
+  .topbar [data-help] { display: none; }     /* keyboard shortcuts: desktop only */
+  .topbar-select { flex: 1; min-height: 40px; }
+  .search-wrap { order: 3; flex: 1 0 100%; }
   .controls, .active-filters, .facets, .export-bar, .paper-list, .list-more { padding-left: 18px; padding-right: 18px; }
   .facets, .export-bar { margin-left: 18px; margin-right: 18px; }
   .result-summary { width: 100%; margin-left: 0; order: 5; }
   .search-kbd { display: none; }
   /* kbd hint is hidden here, so reclaim its reserved padding and let search shrink. */
   .search-wrap { min-width: 0; }
-  .global-search { padding-right: 38px; }
+  .global-search { padding-right: 38px; min-height: 40px; font-size: 14px; }
+
+  /* Denser paper cards: trim padding, shrink type, drop secondary meta so
+     several papers are visible per screen instead of one or two. */
+  .paper-list { gap: 10px; padding-top: 14px; padding-bottom: 32px; }
+  .paper-card { padding: 13px 44px 13px 14px; }
+  .card-select { display: none; }            /* bulk-select is a desktop affordance */
+  .card-head { gap: 6px; }
+  .venue-badge { font-size: 10.5px; padding: 2px 8px; }
+  .paper-id { font-size: 11px; }
+  .paper-title { font-size: 15.5px; margin: 6px 0 4px; line-height: 1.28; }
+  .paper-authors { font-size: 12.5px; line-height: 1.45; }
+  .compact-meta { display: none; }           /* date / location / session */
+  .chips { display: none; }                  /* track shortcuts: desktop-only */
+  .paper-abstract { margin-top: 9px; font-size: 13px; }
+  .paper-abstract summary { font-size: 12.5px; }
+  .paper-abstract p { font-size: 13px; line-height: 1.55; }
+  .favorite-button { top: 10px; right: 10px; width: 30px; height: 30px; font-size: 15px; }
+  .program-link { right: 12px; bottom: 12px; }
 }
 
 /* Respect reduced-motion: drop the collapse/expand animations. */
