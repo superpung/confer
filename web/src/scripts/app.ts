@@ -546,15 +546,16 @@ function setThemeColor() {
 // keeps the old fill. Nudge the properties that drive those paints for a frame
 // — held across one paint via double rAF — to force a repaint with the new theme.
 function repaintForTheme() {
-  const root = document.documentElement;
-  const scheme = root.dataset.theme === 'dark' ? 'dark' : 'light';
-  const bg = getComputedStyle(root).getPropertyValue('--bg').trim();
-  const canvas: HTMLElement[] = [root, document.body];
+  // Drive the background layer's color from JS so each toggle is a real
+  // value change on a normal element (no flash) — Safari repaints elements
+  // reliably even though it leaves the UA canvas stale.
+  const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+  const layer = document.querySelector<HTMLElement>('.app-bg');
+  if (layer && bg) layer.style.backgroundColor = bg;
+  // Clear the frosted top bar's stale backdrop snapshot.
   const bars = [...document.querySelectorAll<HTMLElement>('.topbar')];
-  canvas.forEach((el) => { el.style.backgroundColor = bg; el.style.colorScheme = scheme; });
   bars.forEach((el) => { el.style.backdropFilter = 'none'; el.style.setProperty('-webkit-backdrop-filter', 'none'); });
   requestAnimationFrame(() => requestAnimationFrame(() => {
-    canvas.forEach((el) => { el.style.removeProperty('background-color'); el.style.removeProperty('color-scheme'); });
     bars.forEach((el) => { el.style.removeProperty('backdrop-filter'); el.style.removeProperty('-webkit-backdrop-filter'); });
   }));
 }

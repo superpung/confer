@@ -52,9 +52,15 @@
    background instead of showing the browser's (dark) default. */
 html { background: var(--bg); }
 
+/* Full-screen background as a real element. iOS Safari won't repaint the UA
+   canvas on a theme switch (stale band in the bottom safe area); an element's
+   background does repaint, and being fixed it covers the safe areas too. Body
+   stays transparent so this layer shows through. */
+.app-bg { position: fixed; inset: 0; z-index: -1; background: var(--bg); }
+
 body {
   margin: 0;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   font-family: var(--sans);
   font-size: 15px;

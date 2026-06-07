@@ -45,6 +45,10 @@ const { title, description = 'Browse accepted papers across conferences and jour
     </script>
   </head>
   <body>
+    <!-- Real element painting the full-screen background (incl. safe areas), so
+         we don't rely on the UA canvas, which iOS Safari fails to repaint on a
+         theme switch (leaving a stale color band at the bottom). -->
+    <div class="app-bg" aria-hidden="true"></div>
     <slot />
   </body>
 </html>
