@@ -92,6 +92,39 @@ function instList(p: Paper): string[] {
   return p._insts;
 }
 
+// --- author disambiguation (hybrid: id else name+institution) ----------
+const normKey = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+/** Build a per-author resolver over a set of rows: prefer an explicit author id
+ *  (ORCID/OpenAlex); otherwise reuse an id learned for the same name(+institution)
+ *  elsewhere in the set; otherwise fall back to a name|institution key. */
+function authorResolver(rows: { p: Paper; v: string }[]) {
+  const idByNameInst = new Map<string, string>();
+  const idByName = new Map<string, string>();
+  const ambiguous = new Set<string>();
+  for (const { p } of rows) {
+    if (!p.authorIds) continue;
+    const aff = authorAff(p);
+    p.authors.forEach((nm, i) => {
+      const id = p.authorIds![i];
+      if (!id) return;
+      const n = normKey(nm);
+      idByNameInst.set(`${n}|${normKey(aff[i]?.inst ?? '')}`, id);
+      if (idByName.has(n) && idByName.get(n) !== id) ambiguous.add(n);
+      else idByName.set(n, id);
+    });
+  }
+  return (p: Paper, i: number): { key: string; name: string } => {
+    const aff = authorAff(p);
+    const nm = p.authors[i];
+    const n = normKey(nm);
+    const inst = normKey(aff[i]?.inst ?? '');
+    const id = p.authorIds?.[i] || idByNameInst.get(`${n}|${inst}`)
+      || (!ambiguous.has(n) ? idByName.get(n) : undefined) || '';
+    return { key: id || (inst ? `${n}|${inst}` : n), name: nm };
+  };
+}
+
 // --- field-prefixed search ("author:", "title:", "inst:", …) ----------
 type Term = { field: string; value: string; neg: boolean };
 const FIELD_ALIASES: Record<string, string> = {
@@ -422,6 +455,8 @@ function clearFilters() {
 }
 
 // --- right rail: insights for the current view ------------------------
+// Maps a Top-authors bar key (disambiguated) back to a display name for clicks.
+let railAuthorName = new Map<string, string>();
 function barChart(
   title: string, counts: Map<string, number>, kind: string, n: number,
   opts: { order?: 'count' | 'key'; label?: (k: string) => string; action?: string } = {},
@@ -451,9 +486,19 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   const instCount = new Map<string, number>();
   const authorCount = new Map<string, number>();
   const trackCount = new Map<string, number>();
+  const resolveAuthor = authorResolver(filtered);
+  railAuthorName = new Map<string, string>();
   for (const { p } of filtered) {
     for (const inst of instList(p)) instCount.set(inst, (instCount.get(inst) ?? 0) + 1);
-    for (const a of new Set(p.authors)) authorCount.set(a, (authorCount.get(a) ?? 0) + 1);
+    const seen = new Set<string>();
+    p.authors.forEach((_, i) => {
+      const { key, name } = resolveAuthor(p, i);
+      if (seen.has(key)) return;
+      seen.add(key);
+      authorCount.set(key, (authorCount.get(key) ?? 0) + 1);
+      const cur = railAuthorName.get(key);
+      if (!cur || name.length > cur.length) railAuthorName.set(key, name);
+    });
     for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
   }
   const stat = (n: number, label: string) =>
@@ -468,12 +513,12 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   els.railBody.innerHTML =
     summary +
     barChart('Top institutions', instCount, 'inst', 8, { action: netBtn('inst', 'Institution network') }) +
-    barChart('Top authors', authorCount, 'author', 8, { action: netBtn('author', 'Co-author network') }) +
+    barChart('Top authors', authorCount, 'author', 8, { label: (k) => railAuthorName.get(k) ?? k, action: netBtn('author', 'Co-author network') }) +
     barChart('Top tracks', trackCount, 'track', 6);
 }
 
 // --- author co-authorship network (modal, canvas force layout) --------
-type NetNode = { key: string; papers: number; r: number; x: number; y: number; vx: number; vy: number };
+type NetNode = { key: string; name: string; papers: number; r: number; x: number; y: number; vx: number; vy: number };
 type NetEdge = { s: number; t: number; w: number };
 const net: {
   raf: number; nodes: NetNode[]; edges: NetEdge[]; hover: number;
@@ -482,18 +527,29 @@ const net: {
 
 function buildNetwork(mode: 'author' | 'inst'): { nodes: NetNode[]; edges: NetEdge[] } {
   const filtered = state.rows.filter(matches);
-  const itemsOf = (p: Paper) => (mode === 'inst' ? instList(p) : [...new Set(p.authors)]);
+  const resolve = mode === 'author' ? authorResolver(filtered) : null;
+  const itemsOf = (p: Paper): { key: string; name: string }[] => {
+    if (mode === 'inst') return instList(p).map((x) => ({ key: x, name: x }));
+    const seen = new Map<string, string>();
+    p.authors.forEach((_, i) => { const r = resolve!(p, i); if (!seen.has(r.key)) seen.set(r.key, r.name); });
+    return [...seen].map(([key, name]) => ({ key, name }));
+  };
   const count = new Map<string, number>();
-  for (const { p } of filtered) for (const k of itemsOf(p)) count.set(k, (count.get(k) ?? 0) + 1);
+  const nameByKey = new Map<string, string>();
+  for (const { p } of filtered) for (const it of itemsOf(p)) {
+    count.set(it.key, (count.get(it.key) ?? 0) + 1);
+    const cur = nameByKey.get(it.key);
+    if (!cur || it.name.length > cur.length) nameByKey.set(it.key, it.name);
+  }
   const top = [...count.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 60);
   const idx = new Map(top.map(([k], i) => [k, i]));
   const nodes: NetNode[] = top.map(([key, papers], i) => {
     const ang = (i / top.length) * Math.PI * 2;
-    return { key, papers, r: 4 + Math.sqrt(papers) * 2.2, x: Math.cos(ang) * 180, y: Math.sin(ang) * 180, vx: 0, vy: 0 };
+    return { key, name: nameByKey.get(key) ?? key, papers, r: 4 + Math.sqrt(papers) * 2.2, x: Math.cos(ang) * 180, y: Math.sin(ang) * 180, vx: 0, vy: 0 };
   });
   const ew = new Map<string, number>();
   for (const { p } of filtered) {
-    const ids = [...new Set(itemsOf(p))]
+    const ids = [...new Set(itemsOf(p).map((it) => it.key))]
       .map((k) => idx.get(k)).filter((i): i is number => i !== undefined).sort((x, y) => x - y);
     for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) {
       const e = `${ids[i]}-${ids[j]}`; ew.set(e, (ew.get(e) ?? 0) + 1);
@@ -555,7 +611,7 @@ function openNetwork(mode: 'author' | 'inst') {
     const labeled = new Set<number>(
       [...net.nodes.keys()].sort((a, b) => net.nodes[b].papers - net.nodes[a].papers).slice(0, 10));
     if (net.hover >= 0) labeled.add(net.hover);
-    for (const i of labeled) { const n = net.nodes[i]; ctx.fillText(n.key, n.x, n.y - n.r - 3); }
+    for (const i of labeled) { const n = net.nodes[i]; ctx.fillText(n.name, n.x, n.y - n.r - 3); }
   };
   const tick = () => {
     const ns = net.nodes;
@@ -593,7 +649,7 @@ function openNetwork(mode: 'author' | 'inst') {
   net.onClick = (ev) => {
     const rect = canvas.getBoundingClientRect();
     const i = nodeAt(ev.clientX - rect.left, ev.clientY - rect.top);
-    if (i >= 0) { const key = net.nodes[i].key; closeModals(); setQuery(`${mode}:"${key}"`); }
+    if (i >= 0) { const name = net.nodes[i].name; closeModals(); setQuery(`${mode}:"${name}"`); }
   };
   net.onResize = resize;
   canvas.addEventListener('mousemove', net.onMove);
@@ -990,8 +1046,10 @@ function wire() {
     if (kind === 'track') {
       state.tracks.has(val) ? state.tracks.delete(val) : state.tracks.add(val);
       state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (kind === 'author') {
+      setQuery(`author:"${railAuthorName.get(val) ?? val}"`); // val is a disambiguated key
     } else {
-      setQuery(`${kind}:"${val}"`); // inst:"…" or author:"…"
+      setQuery(`${kind}:"${val}"`); // inst:"…"
     }
   });
 

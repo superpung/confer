@@ -139,6 +139,7 @@ class Paper:
     abstract: str = ""
     authors: list[str] = field(default_factory=list)
     author_institutions: str = ""
+    author_ids: list[str] = field(default_factory=list)
     tracks: list[str] = field(default_factory=list)
     event_type: str = ""
     session_titles: list[str] = field(default_factory=list)
@@ -182,6 +183,8 @@ class Paper:
             "locations": list(self.locations),
             "urls": list(self.urls),
         }
+        if any(self.author_ids):
+            data["authorIds"] = list(self.author_ids)
         if self.doi:
             data["doi"] = self.doi
         if self.publication_date:

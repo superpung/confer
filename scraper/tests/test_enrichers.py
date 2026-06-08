@@ -1,4 +1,6 @@
 from confer.enrichers import (
+    align_author_ids,
+    clean_orcid,
     crossref_to_metadata,
     inverted_abstract,
     merge_metadata,
@@ -6,6 +8,29 @@ from confer.enrichers import (
     title_similarity,
 )
 from confer.models import Paper
+
+
+def test_clean_orcid_extracts_from_url():
+    assert clean_orcid("https://orcid.org/0000-0002-1825-0097") == "0000-0002-1825-0097"
+    assert clean_orcid("0000-0002-1694-233X") == "0000-0002-1694-233X"
+    assert clean_orcid("") == ""
+
+
+def test_align_author_ids_by_position_and_name():
+    # equal length -> positional
+    assert align_author_ids(["A", "B"], [{"name": "A", "id": "x"}, {"name": "B", "id": "y"}]) == ["x", "y"]
+    # unequal -> match by normalized name
+    ids = align_author_ids(["Jane Doe", "Zed"], [{"name": "jane  doe", "id": "j"}])
+    assert ids == ["j", ""]
+
+
+def test_merge_metadata_sets_author_ids():
+    paper = Paper(id="x", title="T", authors=["Jane Doe", "John Roe"])
+    merge_metadata(paper, {"authorships": [
+        {"name": "Jane Doe", "id": "0000-0002-1825-0097"},
+        {"name": "John Roe", "id": "A123"},
+    ]}, "openalex")
+    assert paper.author_ids == ["0000-0002-1825-0097", "A123"]
 
 
 def test_merge_metadata_fills_publication_fields():

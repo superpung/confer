@@ -14,6 +14,8 @@ export interface Paper {
   abstract: string;
   authors: string[];
   authorInstitutions: string;
+  /** stable per-author ids (ORCID / OpenAlex), aligned to authors; '' when unknown */
+  authorIds?: string[];
   tracks: string[];
   eventType: string;
   sessionTitles: string[];

@@ -233,6 +233,16 @@ def merge_metadata(paper: Paper, metadata: dict[str, Any], source: str) -> None:
     if paper.doi:
         paper.urls = unique_preserve_order([f"https://doi.org/{paper.doi}"] + paper.urls)
 
+    # Stable per-author ids (ORCID / OpenAlex id) for disambiguation, aligned to
+    # paper.authors. Merge per-slot so crossref + openalex can each contribute.
+    authorships = metadata.get("authorships")
+    if authorships and paper.authors:
+        if len(paper.author_ids) != len(paper.authors):
+            paper.author_ids = [""] * len(paper.authors)
+        for i, aid in enumerate(align_author_ids(paper.authors, authorships)):
+            if aid and not paper.author_ids[i]:
+                paper.author_ids[i] = aid
+
     provenance = paper.extra.setdefault("metadataSources", [])
     if source not in provenance:
         provenance.append(source)
@@ -273,7 +283,11 @@ def crossref_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
         "pdf_urls": unique_preserve_order(pdf_urls),
         "keywords": [str(value) for value in item.get("subject", [])],
     }
-    return {key: value for key, value in metadata.items() if value}
+    out = {key: value for key, value in metadata.items() if value}
+    auths = crossref_authorships(item)
+    if any(a["id"] for a in auths):
+        out["authorships"] = auths
+    return out
 
 
 def crossref_publication_date(item: dict[str, Any]) -> str:
@@ -312,7 +326,53 @@ def openalex_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
             if key in open_access and open_access[key] is not None
         },
     }
-    return {key: value for key, value in metadata.items() if value}
+    out = {key: value for key, value in metadata.items() if value}
+    auths = openalex_authorships(item)
+    if any(a["id"] for a in auths):
+        out["authorships"] = auths
+    return out
+
+
+def clean_orcid(value: str) -> str:
+    match = re.search(r"\d{4}-\d{4}-\d{4}-\d{3}[\dXx]", value or "")
+    return match.group(0).upper() if match else ""
+
+
+def crossref_authorships(item: dict[str, Any]) -> list[dict[str, str]]:
+    out: list[dict[str, str]] = []
+    for a in item.get("author", []) or []:
+        name = " ".join(part for part in [a.get("given", ""), a.get("family", "")] if part).strip()
+        out.append({"name": name, "id": clean_orcid(str(a.get("ORCID") or ""))})
+    return out
+
+
+def openalex_authorships(item: dict[str, Any]) -> list[dict[str, str]]:
+    out: list[dict[str, str]] = []
+    for a in item.get("authorships", []) or []:
+        au = a.get("author") or {}
+        orcid = clean_orcid(str(au.get("orcid") or ""))
+        oid = str(au.get("id") or "").rstrip("/").rsplit("/", 1)[-1]
+        out.append({"name": str(au.get("display_name") or ""), "id": orcid or oid})
+    return out
+
+
+def align_author_ids(authors: list[str], authorships: list[dict[str, str]]) -> list[str]:
+    """Best-effort align authorship ids to the paper's author list (by position
+    when counts match, else by normalized name)."""
+    ids = [""] * len(authors)
+    if not authors or not authorships:
+        return ids
+    if len(authors) == len(authorships):
+        for i, a in enumerate(authorships):
+            ids[i] = a.get("id", "")
+        return ids
+    norm = lambda s: re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+    by_name: dict[str, str] = {}
+    for a in authorships:
+        by_name.setdefault(norm(a.get("name", "")), a.get("id", ""))
+    for i, name in enumerate(authors):
+        ids[i] = by_name.get(norm(name), "")
+    return ids
 
 
 def inverted_abstract(index: dict[str, list[int]]) -> str:
