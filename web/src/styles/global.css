@@ -156,6 +156,7 @@ html.is-rail-collapsed { --col-right: 0; }
 
 .venue-nav { display: flex; flex-direction: column; gap: 6px; }
 .venue-cat { display: flex; flex-direction: column; }
+.venue-cat[hidden] { display: none; }   /* let the venue filter hide whole categories */
 .venue-cat-head {
   display: flex; align-items: center; gap: 7px;
   border: none; background: none; cursor: pointer;
@@ -178,6 +179,7 @@ html.is-rail-collapsed { --col-right: 0; }
   padding: 6px 8px; border-radius: 8px; cursor: pointer;
   font-size: 13.5px; transition: background 0.12s ease;
 }
+.venue-row[hidden] { display: none; }   /* let the venue filter hide non-matching rows */
 .venue-row:hover { background: var(--panel-hover); }
 .venue-row.is-active { background: var(--accent-soft); }
 .venue-check { width: auto; min-height: 0; accent-color: var(--accent); cursor: pointer; }
@@ -247,6 +249,7 @@ html.is-rail-collapsed { --col-right: 0; }
   color: var(--muted); line-height: 1; cursor: pointer; padding: 0;
 }
 .search-clear .ic { width: 15px; height: 15px; }
+.search-clear[hidden] { display: none; }   /* author display:grid would beat UA [hidden] */
 .search-clear:hover { color: var(--text); }
 .topbar-select {
   min-height: 42px; border: 1px solid var(--line-strong); border-radius: 10px;
@@ -385,22 +388,27 @@ html.is-rail-collapsed { --col-right: 0; }
 .meta-link { color: var(--accent); text-decoration: none; }
 .meta-link + .meta-link { margin-left: 8px; }
 .meta-link:hover { text-decoration: underline; }
+/* Links row holds short labels (DOI/PDF/Artifact) — let it wrap, not ellipsize. */
+.compact-meta .meta-item.meta-links { max-width: none; overflow: visible; white-space: normal; }
 
-/* Abstract disclosure — custom (not <details>) so the card height animates as it
-   expands/collapses via the grid-template-rows 0fr↔1fr trick. */
-.paper-disc { margin: 13px 0 0; color: var(--text-soft); font-size: 14px; line-height: 1.6; }
-.disc-summary {
-  display: inline-flex; align-items: center; gap: 5px; width: fit-content;
-  border: 0; background: none; padding: 0; cursor: pointer; font: inherit;
-  color: var(--accent); font-size: 13px; font-weight: 500;
+/* Title-as-toggle: clicking the title expands the disclosure (abstract + meta);
+   the whole card animates height via the grid-template-rows 0fr↔1fr trick. */
+.paper-title .title-toggle {
+  display: inline; border: 0; background: none; padding: 0; margin: 0;
+  font: inherit; color: inherit; text-align: left; white-space: normal; cursor: pointer;
 }
-.disc-summary:hover { color: var(--accent-dark); }
-.disc-caret { font-size: 9px; transition: transform 0.2s ease; }
-.disc-summary[aria-expanded="false"] .disc-caret { transform: rotate(-90deg); }
+.title-caret {
+  display: inline-block; margin-left: 8px; font-size: 0.6em; vertical-align: middle;
+  color: var(--faint); transition: transform 0.22s ease, color 0.12s ease;
+}
+.title-toggle:hover .title-caret { color: var(--accent); }
+.paper-card.is-open .title-caret { transform: rotate(180deg); }
+
+.paper-disc { margin: 0; color: var(--text-soft); font-size: 14px; line-height: 1.6; }
 .disc-collapse { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.26s ease; }
-.paper-disc.is-open .disc-collapse { grid-template-rows: 1fr; }
+.paper-card.is-open .disc-collapse { grid-template-rows: 1fr; }
 .disc-inner { min-height: 0; overflow: hidden; }
-.disc-text { margin: 10px 0 0; overflow-wrap: break-word; }
+.disc-text { margin: 13px 0 0; overflow-wrap: break-word; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .chip {
@@ -432,10 +440,12 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Back to top + toast -------------------------------------------------- */
 .back-to-top {
   position: fixed; right: 24px; bottom: 24px; z-index: 30;
+  display: grid; place-items: center;
   width: 42px; height: 42px; border-radius: 50%;
   border: 1px solid var(--line-strong); background: var(--panel); color: var(--text);
   font-size: 18px; cursor: pointer; box-shadow: var(--shadow);
 }
+.back-to-top[hidden] { display: none; }   /* keep [hidden] working over display:grid */
 .back-to-top:hover { border-color: var(--accent); color: var(--accent); }
 .toast {
   position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%);
@@ -628,8 +638,7 @@ html.is-rail-collapsed { --col-right: 0; }
   .paper-title { font-size: 15.5px; margin: 6px 0 4px; line-height: 1.28; }
   .paper-authors { font-size: 12.5px; line-height: 1.45; }
   .chips { display: none; }                  /* track shortcuts: desktop-only */
-  .paper-disc { margin-top: 9px; font-size: 13px; }
-  .disc-summary { font-size: 12.5px; }
+  .paper-disc { font-size: 13px; }
   .disc-text { font-size: 13px; line-height: 1.55; }
   .favorite-button { top: 10px; right: 10px; width: 30px; height: 30px; font-size: 15px; }
   .program-link { right: 12px; bottom: 12px; }
@@ -638,5 +647,5 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Respect reduced-motion: drop the collapse/expand animations. */
 @media (prefers-reduced-motion: reduce) {
   .app, .sidebar, .rail, .venue-cat-body, .facet-collapse, .facets-wrap, .cat-caret, .facet-caret { transition: none; }
-  .disc-collapse, .disc-caret { transition: none; }
+  .disc-collapse, .title-caret { transition: none; }
 }

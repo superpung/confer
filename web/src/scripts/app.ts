@@ -302,7 +302,7 @@ function cardHtml(p: Paper, v: string): string {
     p.pages ? `pp. ${p.pages}` : '',
   ].filter(Boolean);
   const doiHtml = p.doi
-    ? `<a class="meta-link" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noreferrer">DOI ${esc(p.doi)}</a>`
+    ? `<a class="meta-link" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noreferrer" title="${esc(p.doi)}">DOI</a>`
     : '';
   const pdfHtml = p.pdfUrls?.[0]
     ? `<a class="meta-link" href="${esc(p.pdfUrls[0])}" target="_blank" rel="noreferrer">PDF</a>`
@@ -319,16 +319,18 @@ function cardHtml(p: Paper, v: string): string {
       ${p.container ? `<span class="meta-item" title="${esc(p.container)}"><strong>Published in</strong>${esc(p.container)}</span>` : ''}
       ${publicationBits.length ? `<span class="meta-item"><strong>Publication</strong>${esc(publicationBits.join(' · '))}</span>` : ''}
       ${p.publisher ? `<span class="meta-item"><strong>Publisher</strong>${esc(p.publisher)}</span>` : ''}
-      ${doiHtml || pdfHtml || artifactHtml ? `<span class="meta-item"><strong>Links</strong>${doiHtml}${pdfHtml}${artifactHtml}</span>` : ''}
+      ${doiHtml || pdfHtml || artifactHtml ? `<span class="meta-item meta-links"><strong>Links</strong>${doiHtml}${pdfHtml}${artifactHtml}</span>` : ''}
     </div>` : '';
   const discInner = (p.abstract ? `<p class="disc-text">${esc(p.abstract)}</p>` : '') + metaHtml;
-  // Custom disclosure (not <details>) so the card height animates open/closed
-  // via the grid-template-rows 0fr↔1fr trick.
+  // The title is the toggle: clicking it expands the disclosure, and the whole
+  // card animates height via the grid-template-rows 0fr↔1fr trick. Papers with
+  // nothing to reveal render a plain (non-interactive) title.
+  const discId = `disc-${k.replace(/[^a-z0-9_-]/gi, '-')}`;
+  const titleHtml = discInner
+    ? `<h2 class="paper-title"><button class="title-toggle" type="button" data-card-toggle aria-expanded="false" aria-controls="${discId}">${esc(p.title)}<span class="title-caret" aria-hidden="true">▾</span></button></h2>`
+    : `<h2 class="paper-title">${esc(p.title)}</h2>`;
   const disc = discInner
-    ? `<div class="paper-disc">
-      <button class="disc-summary" type="button" data-disc-toggle aria-expanded="false"><span class="disc-caret">▾</span>${p.abstract ? 'Abstract' : 'Details'}</button>
-      <div class="disc-collapse"><div class="disc-inner">${discInner}</div></div>
-    </div>`
+    ? `<div class="paper-disc"><div class="disc-collapse" id="${discId}"><div class="disc-inner">${discInner}</div></div></div>`
     : '';
   return `<article class="paper-card${sel ? ' is-selected' : ''}" data-key="${esc(k)}">
     <span class="card-select"><input type="checkbox" data-sel ${sel ? 'checked' : ''} aria-label="Select"></span>
@@ -336,7 +338,7 @@ function cardHtml(p: Paper, v: string): string {
       <button class="venue-badge" data-venue-badge title="Filter to ${esc(venue.name)}">${esc(venue.name)}</button>
       <span class="paper-id">${esc(p.id)}</span>
     </div>
-    <h2 class="paper-title">${esc(p.title)}</h2>
+    ${titleHtml}
     <p class="paper-authors">${authors}</p>
     <button class="icon-btn favorite-button" data-fav aria-pressed="${fav}" title="${fav ? 'Remove from favorites' : 'Save to favorites'}">${fav ? ICONS.starFilled : ICONS.star}</button>
     ${disc}
@@ -672,11 +674,11 @@ function wire() {
     const target = e.target as HTMLElement;
     const card = target.closest<HTMLElement>('.paper-card');
     if (!card) return;
-    const discBtn = target.closest<HTMLButtonElement>('[data-disc-toggle]');
-    if (discBtn) {
-      const open = discBtn.getAttribute('aria-expanded') === 'true';
-      discBtn.setAttribute('aria-expanded', String(!open));
-      discBtn.closest('.paper-disc')?.classList.toggle('is-open', !open);
+    const toggle = target.closest<HTMLButtonElement>('[data-card-toggle]');
+    if (toggle) {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      card.classList.toggle('is-open', !open);
       return;
     }
     const k = card.dataset.key ?? '';
