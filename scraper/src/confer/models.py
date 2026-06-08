@@ -10,7 +10,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
-from .util import clean_doi, doi_from_url, strip_markup_text, unique_preserve_order
+from .util import clean_doi, doi_from_url, strip_markup, unique_preserve_order
 
 
 SMALL_TITLE_WORDS = {
@@ -160,7 +160,7 @@ class Paper:
 
     def __post_init__(self) -> None:
         self.title = normalize_title(self.title)
-        self.abstract = strip_markup_text(self.abstract)
+        self.abstract = strip_markup(self.abstract)
         self.urls = unique_preserve_order(self.urls)
         self.pdf_urls = unique_preserve_order(self.pdf_urls)
         self.artifact_urls = unique_preserve_order(self.artifact_urls)

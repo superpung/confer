@@ -11,12 +11,10 @@ from difflib import SequenceMatcher
 from typing import Any
 from urllib.parse import quote, urlencode
 
-from bs4 import BeautifulSoup
-
 from .config import VenueConfig
 from .fetcher import Fetcher
 from .models import Paper
-from .util import cache_name_for_url, clean_doi, doi_from_url, strip_markup_text, unique_preserve_order
+from .util import cache_name_for_url, clean_doi, doi_from_url, strip_markup, unique_preserve_order
 
 
 DEFAULT_MAILTO = "hi@repus.me"
@@ -221,7 +219,7 @@ ENRICHERS: dict[str, type[MetadataEnricher]] = {
 
 def merge_metadata(paper: Paper, metadata: dict[str, Any], source: str) -> None:
     paper.doi = paper.doi or clean_doi(str(metadata.get("doi", "")))
-    paper.abstract = strip_markup_text(paper.abstract) or strip_markup_text(str(metadata.get("abstract", "")))
+    paper.abstract = paper.abstract or strip_markup(str(metadata.get("abstract", "")))
     paper.publication_date = paper.publication_date or str(metadata.get("publication_date", ""))
     paper.publisher = paper.publisher or str(metadata.get("publisher", ""))
     paper.container = paper.container or str(metadata.get("container", ""))
@@ -362,16 +360,6 @@ def first(value: Any) -> Any:
     if isinstance(value, list):
         return value[0] if value else ""
     return value
-
-
-def strip_markup(value: str) -> str:
-    if not value:
-        return ""
-    soup = BeautifulSoup(value, "html.parser")
-    text = soup.get_text(" ", strip=True)
-    text = re.sub(r"<[^>]+>", "", text)
-    text = re.sub(r"</?[A-Za-z][^>\s]*", "", text)
-    return re.sub(r"\s+", " ", text).strip()
 
 
 def normalized_title(value: str) -> str:

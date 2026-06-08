@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import re
 from typing import Any
 from urllib.parse import parse_qs, urlparse
@@ -18,11 +19,17 @@ def clean_text(node: Tag | None) -> str:
     return re.sub(r"\s+", " ", node.get_text(" ", strip=True)).strip()
 
 
-def strip_markup_text(value: str) -> str:
+def strip_markup(value: str) -> str:
+    """Strip HTML/XML (incl. JATS) tags, decode entities, and collapse whitespace.
+
+    The single canonical text-cleaner — used both on the parse hot path
+    (``Paper.__post_init__``) and for enrichment abstracts from external APIs.
+    """
     if not value:
         return ""
     text = re.sub(r"<[^>]+>", "", value)
     text = re.sub(r"</?[A-Za-z][^>\s]*(?=\s|$)", "", text)
+    text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()
 
 

@@ -1,4 +1,10 @@
-from confer.enrichers import merge_metadata
+from confer.enrichers import (
+    crossref_to_metadata,
+    inverted_abstract,
+    merge_metadata,
+    openalex_to_metadata,
+    title_similarity,
+)
 from confer.models import Paper
 
 
@@ -39,3 +45,67 @@ def test_merge_metadata_fills_publication_fields():
     assert paper.pdf_urls == ["https://example.org/paper.pdf"]
     assert paper.keywords == ["Software engineering"]
     assert paper.extra == {"metadataSources": ["crossref"]}
+
+
+def test_inverted_abstract_reconstructs_word_order():
+    index = {"Static": [0], "paper": [1], "sites": [2], "rock": [3]}
+    assert inverted_abstract(index) == "Static paper sites rock"
+    assert inverted_abstract({}) == ""
+
+
+def test_title_similarity_ignores_case_and_punctuation():
+    assert title_similarity("Hello, World!", "hello world") == 1.0
+    assert title_similarity("", "anything") == 0.0
+    assert title_similarity("Graph Neural Networks", "Quantum Error Correction") < 0.5
+
+
+def test_crossref_to_metadata_maps_fields():
+    item = {
+        "DOI": "10.1145/1234567",
+        "abstract": "<jats:p>An &amp; abstract.</jats:p>",
+        "published-print": {"date-parts": [[2026, 3]]},
+        "publisher": "ACM",
+        "container-title": ["Proc. of Example"],
+        "volume": "12",
+        "issue": "3",
+        "page": "1-20",
+        "URL": "https://doi.org/10.1145/1234567",
+        "link": [
+            {"URL": "https://example.org/p.pdf", "content-type": "application/pdf"},
+            {"URL": "https://example.org/p.html", "content-type": "text/html"},
+        ],
+        "subject": ["Software Engineering"],
+    }
+    meta = crossref_to_metadata(item)
+    assert meta["doi"] == "10.1145/1234567"
+    assert meta["abstract"] == "An & abstract."
+    assert meta["publication_date"] == "2026-03-01"
+    assert meta["container"] == "Proc. of Example"
+    assert meta["pages"] == "1-20"
+    assert meta["pdf_urls"] == ["https://example.org/p.pdf"]
+    assert meta["keywords"] == ["Software Engineering"]
+
+
+def test_openalex_to_metadata_maps_fields():
+    item = {
+        "doi": "https://doi.org/10.1145/1234567",
+        "abstract_inverted_index": {"Precise": [0], "metadata": [1]},
+        "publication_date": "2026-01-02",
+        "primary_location": {
+            "landing_page_url": "https://example.org/paper",
+            "pdf_url": "https://example.org/paper.pdf",
+            "source": {"display_name": "Example Journal", "host_organization_name": "ACM"},
+        },
+        "biblio": {"first_page": "1", "last_page": "20"},
+        "open_access": {"is_oa": True, "oa_status": "gold", "oa_url": "https://example.org/oa.pdf"},
+        "keywords": [{"display_name": "Static Analysis"}],
+    }
+    meta = openalex_to_metadata(item)
+    assert meta["doi"] == "10.1145/1234567"
+    assert meta["abstract"] == "Precise metadata"
+    assert meta["container"] == "Example Journal"
+    assert meta["publisher"] == "ACM"
+    assert meta["pages"] == "1-20"
+    assert meta["pdf_urls"] == ["https://example.org/paper.pdf"]
+    assert meta["open_access"]["oa_status"] == "gold"
+    assert meta["keywords"] == ["Static Analysis"]
