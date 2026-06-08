@@ -108,6 +108,7 @@ const year = new Date().getFullYear();
           {shortHash && (
             <a class="foot-hash" href={commitUrl} target="_blank" rel="noreferrer" title="View this commit">{shortHash}</a>
           )}
+          {shortHash && generatedAt && <span class="foot-sep" aria-hidden="true">·</span>}
           {generatedAt && (
             <time class="foot-built" datetime={generatedAt} title={builtExact} data-built>Built {updatedLabel}</time>
           )}
