@@ -31,17 +31,19 @@ accounts, no backend — your favorites and saved searches live in your browser.
 
 ## Highlights
 
-- 🔎 **Field-aware search.** Plain text searches everything, or scope it with prefixes:
-  `author:"Jane Doe"`, `title:routing`, `inst:"MIT"`, `track:…`, `abstract:…`. Combine
-  terms; quote phrases.
+- 🔎 **Field-aware search.** Search everything by default, then narrow with prefixes
+  like `author:`, `title:`, or `inst:` and exclude terms with `-`.
 - 🏷 **Authors & affiliations.** Hover an author to see their institution; click it to
-  pull up every paper from that institution.
+  pull up every paper from that institution. Same-name authors are disambiguated in
+  analytics and networks.
 - 📊 **Insights panel.** Live charts of the top institutions, authors, and tracks for
   whatever is currently in view — click any bar to drill in.
+- 🕸 **Relationship networks.** Explore co-author and institution networks for the
+  current result set.
 - ⭐ **Favorites & saved searches.** Star papers across venues; save a filter set to
   return to later.
-- 📤 **Export.** Copy BibTeX or download CSV with DOI and publication metadata for
-  the current selection.
+- 📤 **Selection & export.** Select papers from the list, then copy BibTeX or download
+  CSV with DOI and publication metadata.
 - ⚡ **Fast & private.** A single pre-rendered page; all filtering happens client-side.
   Light/dark themes, keyboard shortcuts (`⌘K`, `⌘/`), and a responsive mobile layout.
 
@@ -50,7 +52,8 @@ accounts, no backend — your favorites and saved searches live in your browser.
 confer currently brings together conferences and journals across EDA, computer
 architecture, software engineering, testing, and programming languages, with more
 added purely through configuration. Browse them all from the category sidebar.
-The current data set includes multiple yearly editions for several venue series.
+The current data set includes multiple yearly editions for several venue series,
+grouped by area, series, and year.
 
 ## How it works
 
@@ -61,8 +64,9 @@ config/venues.yaml ─▶ scraper + enrichers ─▶ unified JSON per venue ─�
 - **Config** lists venues, their primary scraper, and optional metadata enrichers.
 - **Adapters** each understand one source platform and emit the *same* `Paper` shape.
 - **Enrichers** merge Crossref/OpenAlex metadata such as DOI, abstract, publication
-  date, volume/issue/pages, keywords, and open-access/PDF links.
-- **Site** consumes only the unified data — adding a venue never touches the UI.
+  date, volume/issue/pages, keywords, author metadata, and open-access/PDF links.
+- **Site** consumes only the unified data — adding a venue never touches the UI. It
+  uses the enriched metadata for search, export, disambiguation, and network views.
 
 See **[AGENTS.md](AGENTS.md)** for the architecture, the `Paper` schema, and the
 adapter contract.
