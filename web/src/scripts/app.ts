@@ -421,13 +421,20 @@ function clearFilters() {
 }
 
 // --- right rail: insights for the current view ------------------------
-function barChart(title: string, counts: Map<string, number>, kind: string, n: number): string {
-  const opts = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, n);
-  if (!opts.length) return '';
-  const max = opts[0][1] || 1;
-  const rows = opts.map(([val, c]) =>
-    `<button class="bar-row" data-chart="${kind}" data-val="${esc(val)}" title="${esc(val)} — ${c}">
-      <span class="bar-top"><span class="bar-label">${esc(val)}</span><span class="bar-count">${c}</span></span>
+function barChart(
+  title: string, counts: Map<string, number>, kind: string, n: number,
+  opts: { order?: 'count' | 'key'; label?: (k: string) => string } = {},
+): string {
+  const label = opts.label ?? ((k) => k);
+  const entries = [...counts.entries()].sort(opts.order === 'key'
+    ? (a, b) => b[0].localeCompare(a[0], undefined, { numeric: true })
+    : (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const top = entries.slice(0, n);
+  if (!top.length) return '';
+  const max = Math.max(...top.map(([, c]) => c)) || 1;
+  const rows = top.map(([val, c]) =>
+    `<button class="bar-row" data-chart="${kind}" data-val="${esc(val)}" title="${esc(label(val))} — ${c}">
+      <span class="bar-top"><span class="bar-label">${esc(label(val))}</span><span class="bar-count">${c}</span></span>
       <span class="bar-track"><span class="bar-fill" style="width:${Math.max(4, Math.round((c / max) * 100))}%"></span></span>
     </button>`).join('');
   return `<section class="rail-section"><h3 class="rail-section-title">${title}</h3><div class="bar-list">${rows}</div></section>`;
@@ -441,10 +448,15 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   const instCount = new Map<string, number>();
   const authorCount = new Map<string, number>();
   const trackCount = new Map<string, number>();
-  for (const { p } of filtered) {
+  const yearCount = new Map<string, number>();
+  const venueCount = new Map<string, number>();
+  for (const { p, v } of filtered) {
     for (const inst of instList(p)) instCount.set(inst, (instCount.get(inst) ?? 0) + 1);
     for (const a of new Set(p.authors)) authorCount.set(a, (authorCount.get(a) ?? 0) + 1);
     for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
+    const yr = venueById.get(v)?.year;
+    if (yr) yearCount.set(String(yr), (yearCount.get(String(yr)) ?? 0) + 1);
+    venueCount.set(v, (venueCount.get(v) ?? 0) + 1);
   }
   const stat = (n: number, label: string) =>
     `<div class="rail-stat"><span class="rail-stat-n">${n.toLocaleString()}</span><span class="rail-stat-l">${label}</span></div>`;
@@ -455,6 +467,8 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   </div>`;
   els.railBody.innerHTML =
     summary +
+    (yearCount.size > 1 ? barChart('By year', yearCount, 'year', 12, { order: 'key' }) : '') +
+    (venueCount.size > 1 ? barChart('By venue', venueCount, 'venue', 10, { label: (id) => venueById.get(id)?.name ?? id }) : '') +
     barChart('Top institutions', instCount, 'inst', 8) +
     barChart('Top authors', authorCount, 'author', 8) +
     barChart('Top tracks', trackCount, 'track', 6);
@@ -816,17 +830,27 @@ function wire() {
   $('[data-sidebar-collapse]').addEventListener('click', () => setSidebarCollapsed(true));
   $('#sidebarScrim').addEventListener('click', () => $('#app').classList.remove('sidebar-open'));
 
-  // right rail: collapse / reopen + chart drill-down
-  $('[data-rail-collapse]').addEventListener('click', () => setRailCollapsed(true));
-  $('[data-rail-toggle]').addEventListener('click', () => setRailCollapsed(false));
+  // right rail: collapse / reopen (desktop) or drawer (mobile) + chart drill-down
+  $('[data-rail-collapse]').addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 1080px)').matches) $('#app').classList.remove('rail-open');
+    else setRailCollapsed(true);
+  });
+  $('[data-rail-toggle]').addEventListener('click', () => {
+    if (window.matchMedia('(max-width: 1080px)').matches) $('#app').classList.toggle('rail-open');
+    else setRailCollapsed(false);
+  });
+  $('#railScrim').addEventListener('click', () => $('#app').classList.remove('rail-open'));
   els.railBody.addEventListener('click', (e) => {
     const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-chart]');
     if (!btn) return;
     const kind = btn.dataset.chart!;
     const val = btn.dataset.val ?? '';
-    if (kind === 'track') {
-      state.tracks.has(val) ? state.tracks.delete(val) : state.tracks.add(val);
+    if (kind === 'track' || kind === 'venue') {
+      const set = kind === 'track' ? state.tracks : state.venuesFacet;
+      set.has(val) ? set.delete(val) : set.add(val);
       state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (kind === 'year') {
+      setQuery(`year:${val}`);
     } else {
       setQuery(`${kind}:"${val}"`); // inst:"…" or author:"…"
     }
@@ -859,7 +883,7 @@ function wire() {
       if (document.activeElement === els.search) {
         if (state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }
         els.search.blur();
-      } else { closeModals(); $('#app').classList.remove('sidebar-open'); }
+      } else { closeModals(); $('#app').classList.remove('sidebar-open', 'rail-open'); }
       return;
     }
     // Single-key shortcuts: only when not typing and unmodified.
