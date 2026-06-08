@@ -533,6 +533,25 @@ html.is-rail-collapsed { --col-right: 0; }
 .rail-title { font-family: var(--serif); font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
 .rail-collapse-btn { width: 30px; height: 30px; font-size: 16px; }
 .rail-note { margin: 0; color: var(--faint); font-size: 11.5px; line-height: 1.45; }
+.rail-action {
+  display: inline-flex; align-items: center; gap: 6px; align-self: start;
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--panel); color: var(--muted);
+  font: inherit; font-size: 12.5px; font-weight: 500; padding: 6px 10px; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.rail-action:hover { background: var(--panel-hover); color: var(--text); border-color: var(--accent); }
+
+/* Co-author network modal */
+.modal-card--wide { width: min(920px, 94vw); }
+.net-wrap { position: relative; margin-top: 12px; }
+#networkCanvas {
+  display: block; width: 100%; height: min(68vh, 600px);
+  border: 1px solid var(--line); border-radius: 10px; background: var(--panel-soft);
+}
+#networkCanvas[hidden] { display: none; }
+.net-empty { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--muted); font-size: 13.5px; }
+.net-empty[hidden] { display: none; }
 .rail-body { display: flex; flex-direction: column; gap: 18px; }
 .rail-empty { color: var(--muted); font-size: 13px; }
 .rail-toggle { display: none; }   /* shown only when the rail is collapsed (desktop) */

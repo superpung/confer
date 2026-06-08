@@ -448,15 +448,10 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   const instCount = new Map<string, number>();
   const authorCount = new Map<string, number>();
   const trackCount = new Map<string, number>();
-  const yearCount = new Map<string, number>();
-  const venueCount = new Map<string, number>();
-  for (const { p, v } of filtered) {
+  for (const { p } of filtered) {
     for (const inst of instList(p)) instCount.set(inst, (instCount.get(inst) ?? 0) + 1);
     for (const a of new Set(p.authors)) authorCount.set(a, (authorCount.get(a) ?? 0) + 1);
     for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
-    const yr = venueById.get(v)?.year;
-    if (yr) yearCount.set(String(yr), (yearCount.get(String(yr)) ?? 0) + 1);
-    venueCount.set(v, (venueCount.get(v) ?? 0) + 1);
   }
   const stat = (n: number, label: string) =>
     `<div class="rail-stat"><span class="rail-stat-n">${n.toLocaleString()}</span><span class="rail-stat-l">${label}</span></div>`;
@@ -467,11 +462,146 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   </div>`;
   els.railBody.innerHTML =
     summary +
-    (yearCount.size > 1 ? barChart('By year', yearCount, 'year', 12, { order: 'key' }) : '') +
-    (venueCount.size > 1 ? barChart('By venue', venueCount, 'venue', 10, { label: (id) => venueById.get(id)?.name ?? id }) : '') +
     barChart('Top institutions', instCount, 'inst', 8) +
     barChart('Top authors', authorCount, 'author', 8) +
     barChart('Top tracks', trackCount, 'track', 6);
+}
+
+// --- author co-authorship network (modal, canvas force layout) --------
+type NetNode = { a: string; papers: number; r: number; x: number; y: number; vx: number; vy: number };
+type NetEdge = { s: number; t: number; w: number };
+const net: {
+  raf: number; nodes: NetNode[]; edges: NetEdge[]; hover: number;
+  onMove?: (e: MouseEvent) => void; onClick?: (e: MouseEvent) => void; onResize?: () => void;
+} = { raf: 0, nodes: [], edges: [], hover: -1 };
+
+function buildNetwork(): { nodes: NetNode[]; edges: NetEdge[] } {
+  const filtered = state.rows.filter(matches);
+  const count = new Map<string, number>();
+  for (const { p } of filtered) for (const a of new Set(p.authors)) count.set(a, (count.get(a) ?? 0) + 1);
+  const top = [...count.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 60);
+  const idx = new Map(top.map(([a], i) => [a, i]));
+  const nodes: NetNode[] = top.map(([a, papers], i) => {
+    const ang = (i / top.length) * Math.PI * 2;
+    return { a, papers, r: 4 + Math.sqrt(papers) * 2.2, x: Math.cos(ang) * 180, y: Math.sin(ang) * 180, vx: 0, vy: 0 };
+  });
+  const ew = new Map<string, number>();
+  for (const { p } of filtered) {
+    const ids = [...new Set(p.authors)]
+      .map((a) => idx.get(a)).filter((i): i is number => i !== undefined).sort((x, y) => x - y);
+    for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) {
+      const k = `${ids[i]}-${ids[j]}`; ew.set(k, (ew.get(k) ?? 0) + 1);
+    }
+  }
+  const edges: NetEdge[] = [...ew.entries()].map(([k, w]) => {
+    const [s, t] = k.split('-').map(Number); return { s, t, w };
+  });
+  return { nodes, edges };
+}
+
+function openNetwork() {
+  stopNetwork();
+  $('#networkModal').hidden = false;
+  const { nodes, edges } = buildNetwork();
+  net.nodes = nodes; net.edges = edges; net.hover = -1;
+  const canvas = $<HTMLCanvasElement>('#networkCanvas');
+  $('#networkEmpty').hidden = nodes.length >= 2;
+  canvas.hidden = nodes.length < 2;
+  if (nodes.length < 2) return;
+  const ctx = canvas.getContext('2d')!;
+  const css = getComputedStyle(document.documentElement);
+  const col = {
+    node: css.getPropertyValue('--accent').trim() || '#c96442',
+    edge: css.getPropertyValue('--line-strong').trim() || '#d9d6ca',
+    text: css.getPropertyValue('--text').trim() || '#1a1a18',
+    hi: css.getPropertyValue('--accent-dark').trim() || '#b1543a',
+  };
+  let W = 0, H = 0;
+  const resize = () => {
+    const dpr = window.devicePixelRatio || 1;
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  resize();
+  for (const n of net.nodes) { n.x += W / 2; n.y += H / 2; }
+
+  const draw = () => {
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = col.edge;
+    for (const e of net.edges) {
+      const a = net.nodes[e.s], b = net.nodes[e.t];
+      ctx.globalAlpha = Math.min(0.5, 0.1 + e.w * 0.12);
+      ctx.lineWidth = Math.min(3, e.w);
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    for (let i = 0; i < net.nodes.length; i++) {
+      const n = net.nodes[i];
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = i === net.hover ? col.hi : col.node;
+      ctx.fill();
+    }
+    ctx.fillStyle = col.text;
+    ctx.font = `11px ${css.getPropertyValue('--sans') || 'sans-serif'}`;
+    ctx.textAlign = 'center';
+    const labeled = new Set<number>(
+      [...net.nodes.keys()].sort((a, b) => net.nodes[b].papers - net.nodes[a].papers).slice(0, 10));
+    if (net.hover >= 0) labeled.add(net.hover);
+    for (const i of labeled) { const n = net.nodes[i]; ctx.fillText(n.a, n.x, n.y - n.r - 3); }
+  };
+  const tick = () => {
+    const ns = net.nodes;
+    for (let i = 0; i < ns.length; i++) for (let j = i + 1; j < ns.length; j++) {
+      const dx = ns[i].x - ns[j].x, dy = ns[i].y - ns[j].y;
+      const d2 = dx * dx + dy * dy || 0.01, d = Math.sqrt(d2), f = 1400 / d2;
+      const ux = dx / d, uy = dy / d;
+      ns[i].vx += ux * f; ns[i].vy += uy * f; ns[j].vx -= ux * f; ns[j].vy -= uy * f;
+    }
+    for (const e of net.edges) {
+      const a = ns[e.s], b = ns[e.t];
+      const dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) || 0.01, f = (d - 70) * 0.01;
+      const ux = dx / d, uy = dy / d;
+      a.vx += ux * f; a.vy += uy * f; b.vx -= ux * f; b.vy -= uy * f;
+    }
+    for (const n of ns) {
+      n.vx += (W / 2 - n.x) * 0.004; n.vy += (H / 2 - n.y) * 0.004;
+      n.vx *= 0.86; n.vy *= 0.86; n.x += n.vx; n.y += n.vy;
+    }
+    draw();
+    net.raf = requestAnimationFrame(tick);
+  };
+  const nodeAt = (mx: number, my: number) => {
+    for (let i = net.nodes.length - 1; i >= 0; i--) {
+      const n = net.nodes[i], dx = mx - n.x, dy = my - n.y;
+      if (dx * dx + dy * dy <= (n.r + 4) * (n.r + 4)) return i;
+    }
+    return -1;
+  };
+  net.onMove = (ev) => {
+    const rect = canvas.getBoundingClientRect();
+    net.hover = nodeAt(ev.clientX - rect.left, ev.clientY - rect.top);
+    canvas.style.cursor = net.hover >= 0 ? 'pointer' : 'default';
+  };
+  net.onClick = (ev) => {
+    const rect = canvas.getBoundingClientRect();
+    const i = nodeAt(ev.clientX - rect.left, ev.clientY - rect.top);
+    if (i >= 0) { const a = net.nodes[i].a; closeModals(); setQuery(`author:"${a}"`); }
+  };
+  net.onResize = resize;
+  canvas.addEventListener('mousemove', net.onMove);
+  canvas.addEventListener('click', net.onClick);
+  window.addEventListener('resize', net.onResize);
+  net.raf = requestAnimationFrame(tick);
+}
+
+function stopNetwork() {
+  if (net.raf) cancelAnimationFrame(net.raf);
+  net.raf = 0;
+  const canvas = document.querySelector<HTMLCanvasElement>('#networkCanvas');
+  if (canvas && net.onMove) canvas.removeEventListener('mousemove', net.onMove);
+  if (canvas && net.onClick) canvas.removeEventListener('click', net.onClick);
+  if (net.onResize) window.removeEventListener('resize', net.onResize);
 }
 
 function render() {
@@ -633,7 +763,10 @@ function setQuery(q: string) {
 }
 
 // --- modals ------------------------------------------------------------
-function closeModals() { document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; }); }
+function closeModals() {
+  document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; });
+  stopNetwork();
+}
 
 // --- theme -------------------------------------------------------------
 function reflectTheme() {
@@ -806,6 +939,7 @@ function wire() {
   });
 
   // saved searches
+  $('[data-open-network]').addEventListener('click', openNetwork);
   $('[data-open-saved]').addEventListener('click', () => { renderSaved(); $('#savedModal').hidden = false; });
   $('[data-save-current]').addEventListener('click', () => { saveCurrentSearch(); renderSaved(); });
 
@@ -845,12 +979,9 @@ function wire() {
     if (!btn) return;
     const kind = btn.dataset.chart!;
     const val = btn.dataset.val ?? '';
-    if (kind === 'track' || kind === 'venue') {
-      const set = kind === 'track' ? state.tracks : state.venuesFacet;
-      set.has(val) ? set.delete(val) : set.add(val);
+    if (kind === 'track') {
+      state.tracks.has(val) ? state.tracks.delete(val) : state.tracks.add(val);
       state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (kind === 'year') {
-      setQuery(`year:${val}`);
     } else {
       setQuery(`${kind}:"${val}"`); // inst:"…" or author:"…"
     }

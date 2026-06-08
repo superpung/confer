@@ -184,6 +184,10 @@ const year = new Date().getFullYear();
         <button class="icon-btn rail-collapse-btn" data-rail-collapse title="Hide insights" aria-label="Hide insights"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
       </div>
       <p class="rail-note">Live stats for the papers in view. Click a bar to filter.</p>
+      <button class="rail-action" data-open-network type="button">
+        <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><line x1="6.8" y1="6.8" x2="10.4" y2="16.2"/><line x1="17.3" y1="8.4" x2="13.3" y2="16.4"/><line x1="6.9" y1="6.2" x2="17" y2="6.8"/></svg>
+        Co-author network
+      </button>
       <div class="rail-body" id="railBody"></div>
     </aside>
     <div class="rail-scrim" id="railScrim"></div>
@@ -229,6 +233,17 @@ const year = new Date().getFullYear();
         <div class="modal-head"><h2>Saved searches</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
         <div class="modal-actions"><button class="text-btn btn-ico" data-save-current type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Save current view</button></div>
         <div id="savedList" class="saved-list"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="networkModal" hidden>
+      <div class="modal-card modal-card--wide" role="dialog" aria-modal="true" aria-label="Co-author network">
+        <div class="modal-head"><h2>Co-author network</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+        <p class="modal-hint">Top authors in the current view; a line means co-authored papers. Hover a node for the name, click to filter to that author.</p>
+        <div class="net-wrap">
+          <canvas id="networkCanvas"></canvas>
+          <p class="net-empty" id="networkEmpty" hidden>Not enough co-authorship in this view.</p>
+        </div>
       </div>
     </div>
   </div>
