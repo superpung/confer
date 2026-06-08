@@ -744,8 +744,27 @@ function wire() {
 }
 
 // --- init --------------------------------------------------------------
+// Fill the footer's "Built … ago" with a relative time computed at view time
+// (build-time would freeze it). The exact timestamp stays in the title tooltip.
+function relTime(iso: string): string {
+  const diff = Math.max(0, Date.now() - new Date(iso).getTime());
+  const units: [string, number][] = [['year', 31536000], ['month', 2592000], ['day', 86400], ['hour', 3600], ['minute', 60]];
+  const s = Math.round(diff / 1000);
+  for (const [u, sec] of units) {
+    const v = Math.floor(s / sec);
+    if (v >= 1) return `${v} ${u}${v > 1 ? 's' : ''} ago`;
+  }
+  return 'just now';
+}
+function reflectBuilt() {
+  const el = document.querySelector<HTMLElement>('[data-built]');
+  const iso = el?.getAttribute('datetime');
+  if (el && iso) el.textContent = `Built ${relTime(iso)}`;
+}
+
 function init() {
   reflectTheme();
+  reflectBuilt();
   const fromUrl = readUrl();
   if (!fromUrl) {
     const stored = readJson<string[]>(K_SELECTED, []);

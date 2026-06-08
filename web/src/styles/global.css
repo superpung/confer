@@ -199,8 +199,9 @@ html.is-rail-collapsed { --col-right: 0; }
   padding: 12px 6px 0; border-top: 1px solid var(--line);
   color: var(--faint); font-size: 11.5px; line-height: 1.4;
 }
-.foot-updated { margin: 0; }
-.foot-meta { margin: 0; display: flex; align-items: center; gap: 9px; }
+.foot-meta { margin: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+.foot-built { color: inherit; cursor: default; }
+.foot-sep { color: var(--line-strong); }
 .foot-gh { display: inline-flex; color: var(--muted); }
 .foot-gh:hover { color: var(--accent); }
 .foot-hash {
@@ -241,9 +242,11 @@ html.is-rail-collapsed { --col-right: 0; }
 .global-search:not(:placeholder-shown) ~ .search-kbd { display: none; }
 .search-clear {
   position: absolute; right: 10px; width: 24px; height: 24px;
+  display: grid; place-items: center;
   border: none; border-radius: 6px; background: var(--panel-hover);
-  color: var(--muted); font-size: 16px; line-height: 1; cursor: pointer;
+  color: var(--muted); line-height: 1; cursor: pointer; padding: 0;
 }
+.search-clear .ic { width: 15px; height: 15px; }
 .search-clear:hover { color: var(--text); }
 .topbar-select {
   min-height: 42px; border: 1px solid var(--line-strong); border-radius: 10px;
