@@ -176,7 +176,7 @@ class LinklingsScraper(Scraper):
             source_date = match.group(1)
 
         occurrences: list[LinkOccurrence] = []
-        for anchor in soup.select('a[href*="post_type=page"][href*="p=16"][href*="id="]'):
+        for anchor in soup.select('a[href*="post_type=page"][href*="id="]'):
             href = anchor.get("href", "")
             query = parse_query(href)
             presentation_id = query.get("id", "")

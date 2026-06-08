@@ -159,7 +159,7 @@ class Paper:
     extra: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
-        self.title = normalize_title(self.title)
+        self.title = normalize_title(strip_markup(self.title))
         self.abstract = strip_markup(self.abstract)
         self.urls = unique_preserve_order(self.urls)
         self.pdf_urls = unique_preserve_order(self.pdf_urls)

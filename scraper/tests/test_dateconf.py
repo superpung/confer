@@ -44,6 +44,9 @@ def test_parse_program_extracts_downloadable_papers(tmp_path):
         "https://www.date-conference.com/proceedings-archive/2026/DATA/42.pdf",
         "https://www.date-conference.com/programme",
     ]
+    assert technical.pdf_urls == [
+        "https://www.date-conference.com/proceedings-archive/2026/DATA/42.pdf",
+    ]
 
     single_author = papers[1]
     assert single_author.authors == ["Amir Moradi"]
@@ -78,4 +81,5 @@ def test_paper_schema(tmp_path):
         "dates",
         "locations",
         "urls",
+        "pdfUrls",
     }

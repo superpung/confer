@@ -1515,7 +1515,6 @@
       "dblpKey": "journals/tse/GongWLWCLZ26",
       "dblpSource": "https://dblp.org/db/journals/tse/tse52.xml",
       "metadataSources": [
-        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1539,12 +1538,12 @@
     "locations": [],
     "pages": "206-220",
     "publicationDate": "2026-01-01",
-    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "publisher": "IEEE Computer Society",
     "sessionTitles": [
       "Volume 52, Number 1, January 2026"
     ],
     "sessions": [],
-    "title": "CoSQA<sup>+</sup>: Enhancing Code Search Evaluation With a Multi-Choice Benchmark and Test-Driven Agents",
+    "title": "CoSQA+: Enhancing Code Search Evaluation With a Multi-Choice Benchmark and Test-Driven Agents",
     "tracks": [
       "Volume 52"
     ],

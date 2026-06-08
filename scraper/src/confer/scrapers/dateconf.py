@@ -175,6 +175,7 @@ class DateConfScraper(Scraper):
         abstract = self.parse_abstract(body)
         track = self.track_for_session(session.session_id)
         date = " ".join(part for part in (session.date, time or session.time) if part)
+        download_url = self._abs(download.get("href", ""))
         return Paper(
             id=label,
             title=title,
@@ -187,7 +188,8 @@ class DateConfScraper(Scraper):
             sessions=[safe_slug(session.session_id or session.title)],
             dates=[date] if date else [],
             locations=[session.location] if session.location else [],
-            urls=unique_preserve_order([self._abs(download.get("href", "")), self.program_url]),
+            urls=unique_preserve_order([download_url, self.program_url]),
+            pdf_urls=[download_url] if download_url.lower().endswith(".pdf") else [],
         )
 
     @staticmethod

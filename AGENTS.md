@@ -217,11 +217,11 @@ npm run build                     # static build → web/dist/ (what Netlify pub
 5. **Researchr venues** — `researchr` adapter parses Researchr program tables,
    detailed timelines, and accepted-paper track pages; filters venue-configured paper
    tracks/event types; fetches cached detail modals for abstracts and official detail
-   URLs; and publishes ICSE 2026, FSE 2026, ASE 2025, ISSTA 2025, and OOPSLA 2026
-   alongside DAC.
-6. **DATE 2026** — `dateconf` adapter parses the DATE official detailed programme,
+   URLs; and publishes ICSE 2025/2026, FSE 2025/2026, ASE 2025, ISSTA 2025,
+   OOPSLA 2025/2026, HPCA 2026, POPL 2025/2026, and PLDI 2025/2026.
+6. **DATE 2025/2026** — `dateconf` adapter parses the DATE official detailed programme,
    keeps downloadable paper rows, normalizes session metadata / author affiliations /
-   PDF links, and publishes DATE 2026 alongside DAC.
+   PDF links, and publishes DATE 2025 and DATE 2026 alongside DAC 2025/2026.
 7. **Computer architecture venues** — `sigarch` adapter parses SIGARCH-style static
    program pages with session metadata and author affiliations, including malformed
    nested institution strings seen in live pages; publishes ASPLOS 2026, ISCA 2026,
@@ -229,9 +229,9 @@ npm run build                     # static build → web/dist/ (what Netlify pub
 8. **Publication metadata enrichment** — `enrichers.py` merges Crossref/OpenAlex data
    after the primary scrape, filling DOI, abstracts, publication date, publisher,
    container, volume/issue/pages, keywords, PDF/open-access links, and source provenance.
-9. **DBLP journals and PL venues** — `dblp` adapter publishes TOSEM 2026 and TSE 2026
-   journal articles from DBLP TOC XML; Researchr publishes POPL 2026 and PLDI 2026;
-   all four use metadata enrichment.
+9. **DBLP journals and PL venues** — `dblp` adapter publishes TOSEM 2025/2026 and
+   TSE 2025/2026 journal articles from DBLP TOC XML; Researchr publishes POPL
+   2025/2026 and PLDI 2025/2026; all use metadata enrichment.
 
 **Planned:**
 

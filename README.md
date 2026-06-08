@@ -48,10 +48,9 @@ accounts, no backend — your favorites and saved searches live in your browser.
 ## Venues
 
 confer currently brings together conferences and journals across EDA, computer
-architecture, software engineering, testing, and programming languages — **DAC,
-DATE, ASPLOS, HPCA, ISCA, MICRO, ICSE, FSE, ASE, ISSTA, TOSEM, TSE, OOPSLA, POPL,
-PLDI** — with more added purely through configuration. Browse them all from the
-category sidebar.
+architecture, software engineering, testing, and programming languages, with more
+added purely through configuration. Browse them all from the category sidebar.
+The current data set includes multiple yearly editions for several venue series.
 
 ## How it works
 
@@ -76,7 +75,7 @@ adapter contract.
 cd scraper
 uv run confer list                      # show configured venues
 uv run confer build                     # build all enabled venues → web/public/data/
-uv run confer build --venue icse2026    # build a single venue
+uv run confer build --venue <venue_id>  # build a single venue
 uv run confer build --refresh           # ignore cache, refetch over the network
 ```
 

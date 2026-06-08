@@ -15,3 +15,12 @@ def test_paper_normalizes_all_caps_title():
 def test_paper_keeps_mixed_case_title():
     title = "MazeBreaker: Multi-Agent Reinforcement Learning for Dynamic Jailbreaking"
     assert Paper(id="x", title=title).title == title
+
+
+def test_paper_strips_markup_from_title():
+    paper = Paper(
+        id="x",
+        title="<i>TAEFuzz:</i> Automatic Fuzzing and D<sup>3</sup> Testing",
+    )
+
+    assert paper.title == "TAEFuzz: Automatic Fuzzing and D3 Testing"

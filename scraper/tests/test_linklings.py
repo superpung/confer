@@ -45,6 +45,37 @@ def test_parse_detail_extracts_core_fields(tmp_path):
     assert row["abstract"]
 
 
+def test_parse_schedule_snippet_accepts_linklings_page_variants(tmp_path):
+    scraper = make_scraper(tmp_path)
+    html = """
+    <table>
+      <tr class="agenda-item presentation-row" psid="sess42" s_utc="2025-06-25T16:00:00Z">
+        <td><span class="presentation-title">Research Session</span></td>
+        <td><div class="event-type-name">Research Manuscript</div></td>
+      </tr>
+      <tr class="agenda-item" psid="sess42" ssid="RESEARCH123">
+        <td>
+          <a href="/?post_type=page&p=15&id=RESEARCH123&sess=sess42">
+            DAC 2025 style paper
+          </a>
+        </td>
+      </tr>
+      <tr class="agenda-item" psid="sess42" ssid="RESEARCH124">
+        <td>
+          <a href="/?post_type=page&p=16&id=RESEARCH124&sess=sess42">
+            DAC 2026 style paper
+          </a>
+        </td>
+      </tr>
+    </table>
+    """
+
+    rows = scraper.parse_schedule_snippet(html, "https://example.com/wp_program_view_all_2025-06-25.txt", {})
+
+    assert [row.presentation_id for row in rows] == ["RESEARCH123", "RESEARCH124"]
+    assert {row.session_id for row in rows} == {"sess42"}
+
+
 def test_aggregate_merges_sessions(tmp_path):
     scraper = make_scraper(tmp_path)
     rows = [

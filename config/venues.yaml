@@ -44,6 +44,34 @@ venues:
       enrichers:
         - crossref
 
+  - id: dac2025
+    name: DAC 2025
+    series: DAC
+    category: EDA & Design Automation
+    kind: conference
+    year: 2025
+    scraper: linklings
+    enabled: true
+    source:
+      base_url: https://62dac.conference-program.com/
+      prefixes: [RESEARCH]
+      all_presentations: false
+      enrichers:
+        - crossref
+
+  - id: date2025
+    name: DATE 2025
+    series: DATE
+    category: EDA & Design Automation
+    kind: conference
+    year: 2025
+    scraper: dateconf
+    enabled: true
+    source:
+      program_url: https://date25.date-conference.com/programme
+      enrichers:
+        - crossref
+
   - id: asplos2026
     name: ASPLOS 2026
     series: ASPLOS
@@ -140,6 +168,39 @@ venues:
       enrichers:
         - crossref
 
+  - id: icse2025
+    name: ICSE 2025
+    series: ICSE
+    category: Software Engineering
+    kind: conference
+    year: 2025
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://conf.researchr.org/program/icse-2025/program-icse-2025/
+      context: icse-2025
+      require_authors: true
+      include_event_types:
+        - Paper
+        - Poster
+        - Research paper
+        - Talk
+      include_tracks:
+        - Demonstrations
+        - Doctoral Symposium
+        - Future of Software Engineering
+        - Industry Challenge Track
+        - Journal-first Papers
+        - New Ideas and Emerging Results (NIER)
+        - Posters
+        - Research Track
+        - SE In Practice (SEIP)
+        - SE in Society (SEIS)
+        - SRC - ACM Student Research Competition
+        - Software Engineering Education and Training (SEET)
+      enrichers:
+        - crossref
+
   - id: fse2026
     name: FSE 2026
     series: FSE
@@ -158,6 +219,32 @@ venues:
         - Ideas, Visions and Reflections
         - Industry Papers
         - Journal-First Paper
+        - Posters
+        - Research Papers
+        - Software Engineering Education
+        - Student Research Competition
+        - Tool Demonstrations
+      enrichers:
+        - crossref
+
+  - id: fse2025
+    name: FSE 2025
+    series: FSE
+    category: Software Engineering
+    kind: conference
+    year: 2025
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://conf.researchr.org/program/fse-2025/program-fse-2025/Detailed-Timeline
+      context: fse-2025
+      default_event_type: Paper
+      require_authors: true
+      include_tracks:
+        - Doctoral Symposium
+        - Ideas, Visions and Reflections
+        - Industry Papers
+        - Journal First
         - Posters
         - Research Papers
         - Software Engineering Education
@@ -239,6 +326,27 @@ venues:
         - crossref
         - openalex
 
+  - id: tosem2025
+    name: TOSEM 2025
+    series: TOSEM
+    category: Software Engineering
+    kind: journal
+    year: 2025
+    scraper: dblp
+    enabled: true
+    source:
+      toc_url: https://dblp.org/db/journals/tosem/tosem34.xml
+      default_track: Volume 34
+      default_event_type: Journal Article
+      include_types:
+        - article
+      exclude_title_patterns:
+        - ^Editorial
+        - ^A Year in TOSEM
+      enrichers:
+        - crossref
+        - openalex
+
   - id: tse2026
     name: TSE 2026
     series: TSE
@@ -260,6 +368,27 @@ venues:
         - crossref
         - openalex
 
+  - id: tse2025
+    name: TSE 2025
+    series: TSE
+    category: Software Engineering
+    kind: journal
+    year: 2025
+    scraper: dblp
+    enabled: true
+    source:
+      toc_url: https://dblp.org/db/journals/tse/tse51.xml
+      default_track: Volume 51
+      default_event_type: Journal Article
+      include_types:
+        - article
+      exclude_title_patterns:
+        - ^Editorial
+        - ^A Journal for
+      enrichers:
+        - crossref
+        - openalex
+
   - id: oopsla2026
     name: OOPSLA 2026
     series: OOPSLA
@@ -271,6 +400,24 @@ venues:
     source:
       program_url: https://conf.researchr.org/track/splash-2026/oopsla-2026
       context: splash-2026
+      default_event_type: Paper
+      require_authors: true
+      include_tracks:
+        - OOPSLA
+      enrichers:
+        - crossref
+
+  - id: oopsla2025
+    name: OOPSLA 2025
+    series: OOPSLA
+    category: Programming Languages
+    kind: conference
+    year: 2025
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://2025.splashcon.org/track/OOPSLA
+      context: icfp-splash-2025
       default_event_type: Paper
       require_authors: true
       include_tracks:
@@ -300,6 +447,28 @@ venues:
         - crossref
         - openalex
 
+  - id: popl2025
+    name: POPL 2025
+    series: POPL
+    category: Programming Languages
+    kind: conference
+    year: 2025
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://popl25.sigplan.org/track/POPL-2025-popl-research-papers
+      context: popl-2025
+      default_event_type: Paper
+      require_authors: true
+      include_event_types:
+        - Paper
+        - Talk
+      include_tracks:
+        - POPL
+      enrichers:
+        - crossref
+        - openalex
+
   - id: pldi2026
     name: PLDI 2026
     series: PLDI
@@ -311,6 +480,28 @@ venues:
     source:
       program_url: https://pldi26.sigplan.org/track/pldi-2026-papers
       context: pldi-2026
+      default_event_type: Paper
+      require_authors: true
+      include_event_types:
+        - Paper
+        - Talk
+      include_tracks:
+        - Research Papers
+      enrichers:
+        - crossref
+        - openalex
+
+  - id: pldi2025
+    name: PLDI 2025
+    series: PLDI
+    category: Programming Languages
+    kind: conference
+    year: 2025
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://pldi25.sigplan.org/track/pldi-2025-papers
+      context: pldi-2025
       default_event_type: Paper
       require_authors: true
       include_event_types:

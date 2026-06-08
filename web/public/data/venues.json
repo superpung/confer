@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T09:27:19+00:00",
+  "generatedAt": "2026-06-08T12:40:54+00:00",
   "venues": [
     {
       "category": "Computer Architecture",
@@ -48,12 +48,30 @@
     },
     {
       "category": "EDA & Design Automation",
+      "count": 419,
+      "id": "dac2025",
+      "kind": "conference",
+      "name": "DAC 2025",
+      "series": "DAC",
+      "year": 2025
+    },
+    {
+      "category": "EDA & Design Automation",
       "count": 483,
       "id": "date2026",
       "kind": "conference",
       "name": "DATE 2026",
       "series": "DATE",
       "year": 2026
+    },
+    {
+      "category": "EDA & Design Automation",
+      "count": 405,
+      "id": "date2025",
+      "kind": "conference",
+      "name": "DATE 2025",
+      "series": "DATE",
+      "year": 2025
     },
     {
       "category": "Programming Languages",
@@ -66,6 +84,15 @@
     },
     {
       "category": "Programming Languages",
+      "count": 215,
+      "id": "oopsla2025",
+      "kind": "conference",
+      "name": "OOPSLA 2025",
+      "series": "OOPSLA",
+      "year": 2025
+    },
+    {
+      "category": "Programming Languages",
       "count": 118,
       "id": "pldi2026",
       "kind": "conference",
@@ -75,12 +102,30 @@
     },
     {
       "category": "Programming Languages",
+      "count": 91,
+      "id": "pldi2025",
+      "kind": "conference",
+      "name": "PLDI 2025",
+      "series": "PLDI",
+      "year": 2025
+    },
+    {
+      "category": "Programming Languages",
       "count": 92,
       "id": "popl2026",
       "kind": "conference",
       "name": "POPL 2026",
       "series": "POPL",
       "year": 2026
+    },
+    {
+      "category": "Programming Languages",
+      "count": 84,
+      "id": "popl2025",
+      "kind": "conference",
+      "name": "POPL 2025",
+      "series": "POPL",
+      "year": 2025
     },
     {
       "category": "Software Engineering",
@@ -102,12 +147,30 @@
     },
     {
       "category": "Software Engineering",
+      "count": 329,
+      "id": "fse2025",
+      "kind": "conference",
+      "name": "FSE 2025",
+      "series": "FSE",
+      "year": 2025
+    },
+    {
+      "category": "Software Engineering",
       "count": 737,
       "id": "icse2026",
       "kind": "conference",
       "name": "ICSE 2026",
       "series": "ICSE",
       "year": 2026
+    },
+    {
+      "category": "Software Engineering",
+      "count": 511,
+      "id": "icse2025",
+      "kind": "conference",
+      "name": "ICSE 2025",
+      "series": "ICSE",
+      "year": 2025
     },
     {
       "category": "Software Engineering",
@@ -120,12 +183,30 @@
     },
     {
       "category": "Software Engineering",
+      "count": 241,
+      "id": "tosem2025",
+      "kind": "journal",
+      "name": "TOSEM 2025",
+      "series": "TOSEM",
+      "year": 2025
+    },
+    {
+      "category": "Software Engineering",
       "count": 97,
       "id": "tse2026",
       "kind": "journal",
       "name": "TSE 2026",
       "series": "TSE",
       "year": 2026
+    },
+    {
+      "category": "Software Engineering",
+      "count": 228,
+      "id": "tse2025",
+      "kind": "journal",
+      "name": "TSE 2025",
+      "series": "TSE",
+      "year": 2025
     },
     {
       "category": "Software Testing & Analysis",
