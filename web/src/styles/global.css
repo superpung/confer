@@ -19,6 +19,7 @@
   --radius: 12px;
   --sidebar-w: 280px;
   --rail-w: 300px;
+  --topbar-height: 67px;
   /* live column widths; collapse rules and breakpoints flip these to 0 */
   --col-left: var(--sidebar-w);
   --col-right: var(--rail-w);
@@ -360,7 +361,7 @@ html.is-rail-collapsed { --col-right: 0; }
 
 /* Export bar ----------------------------------------------------------- */
 .export-bar {
-  position: sticky; top: 66px; z-index: 15;
+  position: sticky; top: var(--topbar-height); z-index: 15;
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   margin: 14px 28px 0; padding: 10px 16px;
   border: 1px solid var(--accent); border-radius: var(--radius);

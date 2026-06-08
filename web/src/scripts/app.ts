@@ -310,6 +310,7 @@ function sortRows(rows: { p: Paper; v: string }[]) {
 
 // --- rendering ---------------------------------------------------------
 const els = {
+  topbar: $<HTMLElement>('.topbar'),
   list: $('#paperList'),
   more: $('#listMore'),
   summary: $('#resultSummary'),
@@ -325,6 +326,26 @@ const els = {
   sort: $<HTMLSelectElement>('#sortSelect'),
   favOnly: $<HTMLInputElement>('#favOnly'),
 };
+
+let topbarResizeObserver: ResizeObserver | undefined;
+
+function updateTopbarHeight() {
+  const height = Math.ceil(els.topbar.getBoundingClientRect().height);
+  if (height > 0) {
+    document.documentElement.style.setProperty('--topbar-height', `${height}px`);
+  }
+}
+
+function observeTopbarHeight() {
+  updateTopbarHeight();
+  if ('ResizeObserver' in window && !topbarResizeObserver) {
+    topbarResizeObserver = new ResizeObserver(updateTopbarHeight);
+    topbarResizeObserver.observe(els.topbar);
+  }
+  window.addEventListener('resize', updateTopbarHeight, { passive: true });
+  window.addEventListener('orientationchange', updateTopbarHeight);
+  document.fonts?.ready.then(updateTopbarHeight).catch(() => {});
+}
 
 function cardHtml(p: Paper, v: string): string {
   const venue = venueById.get(v)!;
@@ -1143,6 +1164,7 @@ function reflectBuilt() {
 function init() {
   reflectTheme();
   reflectBuilt();
+  observeTopbarHeight();
   const fromUrl = readUrl();
   if (!fromUrl) {
     const stored = readJson<string[]>(K_SELECTED, []);
