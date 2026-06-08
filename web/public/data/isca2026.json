@@ -1,6 +1,6 @@
 [
   {
-    "abstract": "",
+    "abstract": "FPGAs are well-suited for dataflow architectures that process data in a streaming or pipelined manner, thus satisfying the high computational and communication demands of emerging applications. However, manually implementing an efficient dataflow architecture for large-scale applications is still challenging, even for specialists who use high-level synthesis (HLS) to simplify FPGA programming. To address this, we introduce CODO, an automated compiler that generates feasible and efficient dataflow accelerators on FPGAs. CODO features a systematic method for detecting and eliminating both coarse-grained and fine-grained dataflow violations. Building on this, CODO performs both on- and off-chip data movement optimizations to maximize transfer efficiency. To guarantee a higher design quality, CODO performs automatic scheduling to generate high-performance dataflow accelerators, ensuring a balanced performance-resource trade-off. Synthesis results show that CODO delivers $1.45\\times$ to $4.52\\times$ latency speedups on typical computation kernels and $3.7\\times$ to $33.8\\times$ speedups on DNN models compared to SOTA frameworks. In on-board evaluations, CODO achieves $7.3\\times$ average speedup on CNN models and $2.07\\times$ average speedup on the GPT-2 model over SOTA frameworks. The compiler is open-sourced at https://github.com/sjtu-zhao-lab/codo-artifact.",
     "authorInstitutions": "Weichuang Zhang (School of Computer Science, Shanghai Jiao Tong University); Yiquan Wang (School of Computer Science, Shanghai Jiao Tong University); Xinzhou Zhang (School of Computer Science, Shanghai Jiao Tong University); Chi Zhang (School of Computer Science, Shanghai Jiao Tong University); Yu Feng (School of Computer Science, Shanghai Jiao Tong University); Xiaofeng Hou (School of Computer Science, Shanghai Jiao Tong University); Chao Li (School of Computer Science, Shanghai Jiao Tong University); Jieru Zhao (School of Computer Science, Shanghai Jiao Tong University); Minyi Guo (School of Computer Science, Shanghai Jiao Tong University)",
     "authors": [
       "Weichuang Zhang",
@@ -13,17 +13,42 @@
       "Jieru Zhao",
       "Minyi Guo"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Monday, June 29, 2026 10:35 – 10:55"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2604.12618"
+      },
       "sessionTrack": "Best Paper Candidate Session (Plenary)"
     },
     "id": "1A-CODO_An_Automated_Compiler_for_Comprehensive_Dataflow_Optimization",
+    "keywords": [
+      "Dataflow",
+      "Dataflow architecture",
+      "Compiler",
+      "Speedup",
+      "Scheduling (production processes)",
+      "Computation",
+      "Data-flow analysis",
+      "Field-programmable gate array"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2604.12618"
+    ],
+    "publicationDate": "2026-04-14",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 1A: Best Paper Candidate Session (Plenary)"
     ],
@@ -35,7 +60,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2604.12618",
+      "https://openalex.org/W7154656293"
     ]
   },
   {
@@ -76,7 +104,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As DRAM scales to higher density and I/O speeds, ensuring data correctness becomes increasingly difficult. Industry has responded with a three-layer stack: on-die ECC (O-ECC), link ECC (L-ECC), and system ECC (S-ECC). However, these layers have evolved independently, often duplicating redundancy, leaving coverage gaps, and occasionally interfering. We propose Cerberus, a cross-layer ECC co-design that unifies protection across device, link, and system while preserving the native role of each layer. At its core is an Encode-Once, Decode-Many (EODM) architecture: the controller performs a single encoding whose redundancy is reused by L-ECC for immediate write-path detection and retry, by O-ECC for in-device repair on reads, and by S-ECC for strong end-to-end recovery. Cerberus jointly designs complementary parity and syndrome structures, orders decoders, and allocates the correction budget to prevent miscorrection amplification and enable selective correction under tight redundancy constraints. Our evaluations show improved resilience to clustered and peripheral faults while reducing redundant overhead, underscoring the importance of coordinated cross-layer protection for next-generation memory systems, such as custom HBMs.",
     "authorInstitutions": "Junhwan Kim (Sungkyunkwan University); Seunghyun Kim (Sungkyunkwan University); Yesin Ryu (Sungkyunkwan University); Saeid Gorgin (University of Hertfordshire); Jungrae Kim (Sungkyunkwan University)",
     "authors": [
       "Junhwan Kim",
@@ -85,17 +113,42 @@
       "Saeid Gorgin",
       "Jungrae Kim"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Monday, June 29, 2026 11:15 – 11:35"
     ],
+    "doi": "10.48550/arxiv.2605.02220",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2605.02220"
+      },
       "sessionTrack": "Best Paper Candidate Session (Plenary)"
     },
     "id": "1A-Cerberus_Cross-Layer_ECC_Co-Design_for_Robust_and_Efficient_Memory_Protection",
+    "keywords": [
+      "Redundancy (engineering)",
+      "Dram",
+      "Correctness",
+      "Resilience (materials science)",
+      "Encoding (memory)",
+      "Random access memory",
+      "Fault tolerance",
+      "Data integrity"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2605.02220"
+    ],
+    "publicationDate": "2026-05-04",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 1A: Best Paper Candidate Session (Plenary)"
     ],
@@ -107,7 +160,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.48550/arxiv.2605.02220",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7160237792"
     ]
   },
   {
@@ -165,17 +220,39 @@
       "Yufei Ding",
       "Po-An Tsai"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Monday, June 29, 2026 11:35 – 11:55"
     ],
+    "doi": "10.5281/zenodo.19423540",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19423540"
+      },
       "sessionTrack": "Best Paper Candidate Session (Plenary)"
     },
     "id": "1A-Patterns_Behind_Chaos_Forecasting_Data_Movement_for_Efficient_Large-Scale_MoE_LL",
+    "keywords": [
+      "Movement (music)",
+      "Inference",
+      "Data processing",
+      "Data collection",
+      "Data modeling"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19423540"
+    ],
+    "publicationDate": "2026-04-04",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 1A: Best Paper Candidate Session (Plenary)"
     ],
@@ -187,7 +264,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19423540",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7150246153"
     ]
   },
   {
@@ -226,7 +305,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Speculative decoding has emerged as a promising lossless approach for accelerating Large Language Models (LLMs). As reasoning LLMs increasingly suffer from decode-stage overhead and approximation-based methods degrade accuracy, lossless speculative decoding has become essential for efficient inference. However, existing methods still struggle to deliver strong low-batch performance without additional training, limiting practical deployment on consumer devices. To address this challenge, we propose Cassandra, an algorithm-hardware co-designed self-speculative decoding framework optimized for low-batch scenarios. Cassandra constructs a high-performance, training-free draft model through fine-grained data selection. Using optimized pruning and mantissa truncation, it identifies the most salient values in both model weights and the Key-Value (KV) cache, enabling rapid candidate token generation before full-precision parallel verification. Unlike prior self-speculative decoding methods based on layer skipping or structured KV compression, Cassandra achieves significantly higher efficiency. To further reduce the overhead of format conversion between Cassandra representations and standard floating-point formats, we also introduce a lightweight encoder-decoder hardware module designed for seamless integration with commercial GPUs and NPUs. Experimental results show that Cassandra achieves up to 2.41x speedup over the BF16 baseline without additional training. Furthermore, on Llama 3 8B running on an NVIDIA GeForce RTX 4090, Cassandra generates 1.81x more tokens under the same memory budget compared to Eagle-3, a state-of-the-art speculative decoding method.",
     "authorInstitutions": "Soongyu Choi (KAIST); Yuntae Kim (KAIST); Muyoung Son (KAIST); Joo-Young Kim (KAIST)",
     "authors": [
       "Soongyu Choi",
@@ -234,17 +313,41 @@
       "Muyoung Son",
       "Joo-Young Kim"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Monday, June 29, 2026 12:15 – 12:35"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.26558"
+      },
       "sessionTrack": "LLM 1"
     },
     "id": "2A-Cassandra_Enabling_Reasoning_LLMs_at_Edge_via_Self-Speculative_Decoding",
+    "keywords": [
+      "Decoding methods",
+      "Speedup",
+      "Pruning",
+      "Overhead (engineering)",
+      "Lossless compression",
+      "Limiting",
+      "Security token",
+      "Enhanced Data Rates for GSM Evolution"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.26558"
+    ],
+    "publicationDate": "2026-05-26",
     "sessionTitles": [
       "Session 2A: LLM 1"
     ],
@@ -256,7 +359,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.26558",
+      "https://openalex.org/W7162700653"
     ]
   },
   {
@@ -411,7 +517,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Artifact Evaluation for CAPA: Manufacturing Carbon Estimation for Advanced-Packaged Architectures in ISCA'26.",
     "authorInstitutions": "Jingyang Liu (University of Toronto); Gwenith Bowker-Bafna (University of Toronto); Yuke Zhang (University of Toronto); Natalie Enright Jerger (University of Toronto)",
     "authors": [
       "Jingyang Liu",
@@ -419,17 +525,39 @@
       "Yuke Zhang",
       "Natalie Enright Jerger"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Monday, June 29, 2026 12:55 – 13:15"
     ],
+    "doi": "10.5281/zenodo.19406861",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19406861"
+      },
       "sessionTrack": "Sustainability"
     },
     "id": "2C-CAPA_Manufacturing_Carbon_Estimation_for_Advanced-Packaged_Architectures",
+    "keywords": [
+      "Carbon fibers",
+      "Estimation",
+      "Artifact (error)",
+      "Computer-integrated manufacturing",
+      "Manufacturing process"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19406861"
+    ],
+    "publicationDate": "2026-04-04",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 2C: Sustainability"
     ],
@@ -441,7 +569,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19406861",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7150307427"
     ]
   },
   {
@@ -996,24 +1126,45 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This is the artifact for the ISCA'26 paper Helium: Quantifying Microarchitectural Side-Channel Leakage with Probabilistic Guarantees. Find the compressed Docker image in helium-artifact.tar.gz. To load it, execute the command: docker load -i helium_artifact.tar.gz After that, see the instructions for reproducing the results in the attached README or the paper's Artifact Appendix.",
     "authorInstitutions": "Samantha Archer (Stanford University); Mohammad Rahmani Fadiheh (LUBIS EDA, RPTU Kaiserslautern); Caroline Trippel (Stanford University)",
     "authors": [
       "Samantha Archer",
       "Mohammad Rahmani Fadiheh",
       "Caroline Trippel"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Monday, June 29, 2026 14:50 – 15:10"
     ],
+    "doi": "10.5281/zenodo.19446913",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19446913"
+      },
       "sessionTrack": "Security"
     },
     "id": "3C-Helium_Quantifying_Microarchitectural_Side-Channel_Leakage_with_Probabilistic_Gu",
+    "keywords": [
+      "Probabilistic logic",
+      "Leakage (economics)",
+      "Artifact (error)",
+      "Statistical model"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19446913"
+    ],
+    "publicationDate": "2026-04-06",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 3C: Security"
     ],
@@ -1025,7 +1176,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19446913",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151501772"
     ]
   },
   {
@@ -1135,7 +1288,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This repository contains the experiments of evaluation and case studies discussed in the paper \"Towards Practical Interrupt Side Channel Attacks on macOS for Apple Silicon\" (ISCA 2026).",
     "authorInstitutions": "Xin Zhang (Peking University); Chang Liu (Tsinghua University); Jiajun Zou (Peking University); Yi Yang (Peking University); Qingni Shen (Peking University); Zhi Zhang (The University of Western Australia); Trevor E. Carlson (National University of Singapore (NUS))",
     "authors": [
       "Xin Zhang",
@@ -1146,17 +1299,38 @@
       "Zhi Zhang",
       "Trevor E. Carlson"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Monday, June 29, 2026 14:30 – 14:50"
     ],
+    "doi": "10.5281/zenodo.19450240",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19450240"
+      },
       "sessionTrack": "Security"
     },
     "id": "3C-Towards_Practical_Interrupt_Side-Channel_Attacks_on_macOS_for_Apple_Silicon",
+    "keywords": [
+      "Interrupt",
+      "Side channel attack",
+      "Channel (broadcasting)",
+      "Silicon"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19450240"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 3C: Security"
     ],
@@ -1168,7 +1342,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19450240",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151549815"
     ]
   },
   {
@@ -1504,7 +1680,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Artifact for \"SMOOTH: Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference\" This release contains the official simulation artifacts and architectural models for our paper accepted at the 53rd International Symposium on Computer Architecture (ISCA 2026). This repository provides the necessary source code, configurations, and baseline implementations to evaluate the SMOOTH memory management framework and reproduce the key experiments. Paper Information Title: SMOOTH: Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference Conference: The 53rd Annual International Symposium on Computer Architecture (ISCA 2026) What's in this Release? This artifact is built on top of LLMCompass (an extension of ScaleSim) and includes hardware synthesis scripts. The repository is structured across multiple branches to facilitate comparison against various baseline strategies: main: SMOOTH-ER (Full version with block allocation + early reclamation) smooth: SMOOTH-Base (Block allocation only) compiler-ideal: Ideal compiler-based allocation (best-fit + full preloading) gemmini: Pipelined allocation with tile overlap capuchin: Cache-like hardware-managed strategy Quick Start & Documentation For comprehensive instructions on installation, dependencies, and running the cycle-accurate simulator, please refer to the main documentation: Read the README.md in the repository for detailed steps.",
     "authorInstitutions": "Seulki Kim (DGIST); Bokyeong Kim (Samsung Research); Kyeonghyeon Ryu (DGIST); Yeji Jung (DGIST); Hwanjun Lee (DGIST); Sungju Kim (Yonsei University); Yunhyeong Jeon (DGIST); Daehoon Kim (Yonsei University)",
     "authors": [
       "Seulki Kim",
@@ -1516,17 +1692,40 @@
       "Yunhyeong Jeon",
       "Daehoon Kim"
     ],
+    "container": "Open MIND",
     "dates": [
       "Monday, June 29, 2026 17:30 – 17:50"
     ],
+    "doi": "10.5281/zenodo.19329726",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://github.com/Seu1ki/SMOOTH/tree/v1.0.0"
+      },
       "sessionTrack": "LLM 2"
     },
     "id": "4A-SMOOTH_Hardware-Assisted_Fine-Grained_On-Chip_Memory_Management_for_Efficient_On",
+    "keywords": [
+      "Artifact (error)",
+      "Memory management",
+      "Documentation",
+      "Key (lock)",
+      "Architecture",
+      "Baseline (sea)",
+      "Block (permutation group theory)"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://github.com/Seu1ki/SMOOTH/tree/v1.0.0"
+    ],
+    "publicationDate": "2026-03-30",
     "sessionTitles": [
       "Session 4A: LLM 2"
     ],
@@ -1538,7 +1737,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19329726",
+      "https://iscaconf.org/isca2026/program/",
+      "https://github.com/Seu1ki/SMOOTH/tree/v1.0.0",
+      "https://openalex.org/W7143347477"
     ]
   },
   {
@@ -1679,7 +1881,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The march toward developing relevant and robust CPU benchmarks continues with the introduction of SPEC CPU 2026, the next generation suite for measuring processor performance. This paper details the methodology behind its creation, showcasing a process centered on community collaboration and principled development. The suite is built upon a foundation of modern, open-source applications, selected and hardened through a process that emphasizes workload diversity, portability, and software longevity. A key contribution is Rolling-Round-Robin Rate, a novel and standardized approach to running heterogeneous, multiprogrammed workloads that addresses a long-standing gap in benchmarking practice. Additionally, the suite features an expanded set of multithreaded benchmarks and introduces workloads with distinct microarchitectural profiles, reflecting the demands of contemporary software. By detailing our principled approach to benchmark selection, adaptation, and validation, we demonstrate how the SPEC CPU 2026 suite sets the standard for performance evaluation in the next era of computer architecture research and development.",
     "authorInstitutions": "Mahesh Madhav (Ampere Computing); Allen Lee (IEIT); Andres Mejia (Intel); Branden Moore (AMD); Charan Soppadandi (Dell Technologies); Chris Cambly (IBM); Christoph Müllner (VRULL); Daniel Bowers (SPEC); David Reiner (AMD); Denis Bakhvalov (Rivos); Di Zhao (Ampere Computing); Duane Voth (AMD); Feng Xue (Ampere Computing); Frédérique Silber-Chaussumier (ARM); James Bucek (SPEC); James Southern (HPE); Jiangning Liu (Ampere Computing); Jim Himer (SPEC); John Henning (SPEC); Kevin Smith (Ampere Computing); Kristen Yang (AMD); Kunal Kashyap (AMD); Mason Guy (Intel); Mat Colgrove (NVIDIA); Michael Berg (SiFive); Prasad Battini (Intel); Prasad Joshi (Intel); Rohit Prasad (Intel); Shayantika Bhattacharya (AMD); Sriyash Caculo (Ampere Computing); Stefan Reimbold (IBM); Sundar Iyengar (Intel); Van Smith (AMD); Zarko Todorovski (IBM)",
     "authors": [
       "Mahesh Madhav",
@@ -1717,17 +1919,41 @@
       "Van Smith",
       "Zarko Todorovski"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Monday, June 29, 2026 16:30 – 16:50"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.01575"
+      },
       "sessionTrack": "Industry Track 1"
     },
     "id": "4B-SPEC_CPU_The_Next_Generation",
+    "keywords": [
+      "Spec#",
+      "Suite",
+      "Benchmarking",
+      "Benchmark (surveying)",
+      "Process (computing)",
+      "Workload",
+      "Set (abstract data type)",
+      "Instruction set"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.01575"
+    ],
+    "publicationDate": "2026-05-02",
     "sessionTitles": [
       "Session 4B: Industry Track 1"
     ],
@@ -1739,7 +1965,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.01575",
+      "https://openalex.org/W7160457324"
     ]
   },
   {
@@ -1938,7 +2167,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Coarse-Grained Reconfigurable Architecture (CGRA) emerges as a competitive accelerator for computation-intensive applications. However, most CGRAs primarily focus on linear operations, which makes it challenging to efficiently support nonlinear functions that are increasingly important in emerging applications. This limitation hinders the potential of CGRAs to accelerate modern computation-intensive applications, particularly those that rely on complex nonlinear functions. In this paper, we propose several key approaches to enable CGRA to support versatile nonlinear functions. First, we develop a Chebyshev-based approximation algorithm that employs a novel segmentation strategy, along with considering the properties of the target function to identify a suitable Chebyshev polynomial for each sub-interval. Second, based on the Logarithmic Number System, we design a lightweight unit to efficiently compute the polynomials and complex operations. Finally, we develop a comprehensive end-to-end framework LoRA with architectural and compiler support for implementing nonlinear functions on the CGRA. Experimental results show that LoRA can provide efficient nonlinear function implementation and achieve 23.33x and 2.18x average performance improvements compared to an STM32H750 microcontroller unit and a state-of-the-art (SOTA) CGRA. In addition, LoRA achieves a 2.13x average energy efficiency gain compared to the SOTA CGRA.",
     "authorInstitutions": "Yuan Dai (State Key Laboratory of Integrated Chips and Systems, Fudan University); Guibin Zou (State Key Laboratory of Integrated Chips and Systems, Fudan University); Yuanda Yang (State Key Laboratory of Integrated Chips and Systems, Fudan University); Huan Lin (State Key Laboratory of Integrated Chips and Systems, Fudan University); Jiahang Lou (State Key Laboratory of Integrated Chips and Systems, Fudan University); Yiwen Luo (State Key Laboratory of Integrated Chips and Systems, Fudan University); Xinyu Cai (State Key Laboratory of Integrated Chips and Systems, Fudan University); Wenbo Yin (State Key Laboratory of Integrated Chips and Systems, Fudan University); Wai-Shing Luk (State Key Laboratory of Integrated Chips and Systems, Fudan University); Lingli Wang (State Key Laboratory of Integrated Chips and Systems, Fudan University)",
     "authors": [
       "Yuan Dai",
@@ -1952,17 +2181,42 @@
       "Wai-Shing Luk",
       "Lingli Wang"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Monday, June 29, 2026 17:50 – 18:10"
     ],
+    "doi": "10.5281/zenodo.19447154",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19447154"
+      },
       "sessionTrack": "Domain Specific Accelerators 1"
     },
     "id": "4C-LoRA_Towards_Improved_Applicability_of_Reconfigurable_Architecture_for_Versatile",
+    "keywords": [
+      "Nonlinear system",
+      "Compiler",
+      "Key (lock)",
+      "Function (biology)",
+      "Chebyshev polynomials",
+      "Polynomial",
+      "Reconfigurable computing",
+      "Field-programmable gate array"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19447154"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 4C: Domain Specific Accelerators 1"
     ],
@@ -1974,7 +2228,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19447154",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151229045"
     ]
   },
   {
@@ -2106,17 +2362,38 @@
       "Prashant Nair",
       "Ang Li"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Monday, June 29, 2026 17:30 – 17:50"
     ],
+    "doi": "10.5281/zenodo.19449157",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19449157"
+      },
       "sessionTrack": "Quantum 1"
     },
     "id": "4D-Transpiler-Architecture_Co-Design_to_Curb_Clifford_Costs_in_Fault-Tolerant_Quant",
+    "keywords": [
+      "Artifact (error)",
+      "Quantum",
+      "Quantum computer",
+      "Key (lock)"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19449157"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 4D: Quantum 1"
     ],
@@ -2128,11 +2405,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19449157",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151411140"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Fault-tolerant quantum computation (FTQC) critically depends on real-time classical decoding, which is rapidly emerging as a system bottleneck. As quantum systems scale, decoding latency and throughput limitations lead to exponential syndrome backlogs and logical operation stalls. While hardware accelerators and parallel windowing offer pathways to speed up decoding, dynamically deploying a finite pool of decoders across a vast quantum error correction architecture remains an unresolved resource allocation problem. To address this, we formulate FTQC decoding as a constrained dynamic scheduling problem by utilizing a spatio-temporal framework based on slices. We propose Triage, a dual-mode architecture that mitigates operation stalls by adaptively combining a cost-efficient heuristic scheduler with a priority-aware emergency mode to rapidly resolve the causal cone of critical operations. Our evaluation shows that Triage maintains low algorithm stalls and logical error rates even under scarce classical resource constraints. Across various benchmarks, Triage achieves an average logical error rate reduction of 52.6% compared to standard temporal parallelism, enabling an efficient classical control plane for scalable FTQC architectures.",
     "authorInstitutions": "Jiahan Chen (Guangzhou); Chenghong Zhu (Guangzhou); Ge Bai (Guangzhou); Xin Wang (The Hong Kong University of Science and Technology (Guangzhou))",
     "authors": [
       "Jiahan Chen",
@@ -2140,17 +2419,41 @@
       "Ge Bai",
       "Xin Wang"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Monday, June 29, 2026 16:30 – 16:50"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.04459"
+      },
       "sessionTrack": "Quantum 1"
     },
     "id": "4D-Triage_An_Adaptive_Parallel_Window_Decoding_Scheduler_for_Real-time_Fault-Tolera",
+    "keywords": [
+      "Decoding methods",
+      "Scheduling (production processes)",
+      "Scalability",
+      "Error detection and correction",
+      "Computation",
+      "Latency (audio)",
+      "Word error rate",
+      "Quantum"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.04459"
+    ],
+    "publicationDate": "2026-05-06",
     "sessionTitles": [
       "Session 4D: Quantum 1"
     ],
@@ -2162,11 +2465,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.04459",
+      "https://openalex.org/W7160670768"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Mixture-of-Experts (MoE) has been adopted by many leading large models to reduce computational requirements. However, frequent inter-GPU communication in MoE expert parallelism (EP) becomes a performance challenge. We observe substantial redundant inter-GPU data transfers in MoE that can be potentially addressed by in-switch computing. Unfortunately, the existing solution, NVLink SHARP (NVLS), can only support static collectives with regular patterns, incapable of dynamic communication with irregular patterns in MoE. To bridge the functionality gap, we propose DySHARP, an integral dynamic in-switch computing solution to accelerate MoE, encompassing both communication primitives and communication-aware scheduling: 1) Dynamic multimem addressing co-designs ISA, architecture, and runtime, as a dynamic extension to NVLS, reducing redundant traffic. However, the resulting traffic reduction is inherently asymmetric between two directions, preventing it from directly translating into speedup. 2) Token-centric kernel fusion deeply fuses the dispatch-computation-combine pipeline, resolving this asymmetry to translate traffic reduction into actual speedup. Compared with the state-of-the-art solution, DySHARP achieves up to 1.79$\\times$ speedup.",
     "authorInstitutions": "Qijun Zhang (Hong Kong University of Science and Technology); Chen Zhang (Shanghai Jiao Tong University); Zhuoshan Zhou (Shanghai Jiao Tong University); Haibo Wang (Huawei); Zhe Zhou (Huawei); Zhipeng Tu (Huawei); Guangyu Sun (Peking University); Zhiyao Xie (Hong Kong University of Science and Technology); Yijia Diao (Shanghai Jiao Tong University); Zhigang Ji (Shanghai Jiao Tong University); Jingwen Leng (Shanghai Jiao Tong University); Guanghui He (Shanghai Jiao Tong University); Minyi Guo (Shanghai Jiao Tong University)",
     "authors": [
       "Qijun Zhang",
@@ -2183,17 +2489,39 @@
       "Guanghui He",
       "Minyi Guo"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 10:20 – 10:40"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.05607"
+      },
       "sessionTrack": "LLM 3"
     },
     "id": "5A-Accelerating_MoE_with_Dynamic_In-Switch_Computing_on_Multi-GPUs",
+    "keywords": [
+      "Reduction (mathematics)",
+      "Bridge (graph theory)",
+      "Kernel (algebra)",
+      "Dynamic data",
+      "Redundancy (engineering)",
+      "Dynamic problem"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.05607"
+    ],
+    "publicationDate": "2026-05-07",
     "sessionTitles": [
       "Session 5A: LLM 3"
     ],
@@ -2205,7 +2533,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.05607",
+      "https://openalex.org/W7160727205"
     ]
   },
   {
@@ -2316,7 +2647,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This artifact provides the BusyBarn and all scripts needed to reproduce the 12 experimental figures (Figures 8-15) in the paper. BusyBarn performs hierarchical mapping via simulated annealing (SA) and load-balanced, distance-aware, fault-tolerant routing (BALD) for wafer-scale LLM inference. The evaluation covers collective communication bandwidth (AllGather, AllToAll), intra-die mapping sensitivity (die-group shape, core shape, power/faults, multi-fault scaling), workload distribution heatmaps, end-to-end latency for six LLM architectures, SA convergence analysis, a mapping/routing ablation study, and a runtime breakdown.",
     "authorInstitutions": "Junwei Cui (The Hong Kong University of Science and Technology (Guangzhou)); Le Qin (The Hong Kong University of Science and Technology (Guangzhou)); Weilin Cai (The Hong Kong University of Science and Technology (Guangzhou)); Jiayi Huang (The Hong Kong University of Science and Technology (Guangzhou))",
     "authors": [
       "Junwei Cui",
@@ -2324,17 +2655,41 @@
       "Weilin Cai",
       "Jiayi Huang"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Tuesday, June 30, 2026 11:00 – 11:20"
     ],
+    "doi": "10.5281/zenodo.19686855",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19686855"
+      },
       "sessionTrack": "LLM 3"
     },
     "id": "5A-Mapping_and_Communication_Optimizations_with_Fault_Tolerance_for_Wafer-Scale_LLM",
+    "keywords": [
+      "Asynchronous communication",
+      "Fault tolerance",
+      "Scripting language",
+      "Inference",
+      "Workload",
+      "Latency (audio)",
+      "Simulated annealing"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19686855"
+    ],
+    "publicationDate": "2026-04-22",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 5A: LLM 3"
     ],
@@ -2346,7 +2701,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19686855",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7155041109"
     ]
   },
   {
@@ -2428,7 +2785,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As deep learning-based AI technologies gain momentum, the demand for general-purpose AI computing architectures continues to grow. While GPGPU-based architectures offer versatility for diverse AI workloads, they often fall short in efficiency and cost-effectiveness. Various Domain-Specific Architectures (DSAs) excel at particular AI tasks but struggle to extend across broader applications or adapt to the rapidly evolving AI landscape. M100 is Li Auto's response: a performant, cost-effective architecture for AI inference in Autonomous Driving (AD), Large Language Models (LLMs), and intelligent human interactions, domains crucial to today's most competitive automobile platforms. M100 employs a dataflow parallel architecture, where compiler-architecture co-design orchestrates not only computation but, more critically, data movement across time and space. Leveraging dataflow computing efficiency, our hardware-software co-design improves system performance while reducing hardware complexity and cost. M100 largely eliminates caching: tensor computations are driven by compiler- and runtime-managed data streams flowing between computing elements and on/off-chip memories, yielding greater efficiency and scalability than cache-based systems. Another key principle was selecting the right operational granularity for scheduling, issuing, and execution across compiler, firmware, and hardware. Recognizing commonalities in AI workloads, we chose the tensor as the fundamental data element. M100 demonstrates general AI computing capability across diverse inference applications, including UniAD (for AD) and LLaMA (for LLMs). Benchmarks show M100 outperforms GPGPU architectures in AD applications with higher utilization, representing a promising direction for future general AI computing.",
     "authorInstitutions": "Yan Xie (Li Auto); Changkui Mao (Li Auto); Changsong Wu (Li Auto); Chao Lu (Li Auto); Chao Suo (Li Auto); Cheng Qian (Li Auto); Chun Yang (Li Auto); Danyang Zhu (Li Auto); Hengchang Xiong (Li Auto); Hongzhan Lu (Li Auto); Hongzhen Liu (Li Auto); Jiafu Liu (Li Auto); Jie Chen (Li Auto); Jie Dai (Li Auto); Junfeng Tang (Li Auto); Kai Liu (Li Auto); Kun Li (Li Auto); Lipeng Ge (Li Auto); Meng Sun (Li Auto); Min Luo (Li Auto); Peng Chen (Li Auto); Peng Wang (Li Auto); Shaodong Yang (Li Auto); Shibin Tang (Li Auto); Shibo Chen (Li Auto); Weikang Zhang (Li Auto); Xiao Ling (Li Auto); Xiaobo Du (Li Auto); Xin Wu (Li Auto); Yang Liu (Li Auto); Yi Jiang (Li Auto); Yihua Jin (Li Auto); Yin Huang (Li Auto); Yuli Zhang (Li Auto); Zhen Yuan (Li Auto); Zhiyuan Man (Li Auto); Zhongxiao Yao (Li Auto)",
     "authors": [
       "Yan Xie",
@@ -2469,17 +2826,41 @@
       "Zhiyuan Man",
       "Zhongxiao Yao"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 11:00 – 11:20"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2604.17862"
+      },
       "sessionTrack": "Industry Track 2"
     },
     "id": "5B-M100_An_Orchestrated_Dataflow_Architecture_Powering_General_AI_Computing",
+    "keywords": [
+      "Dataflow",
+      "Inference",
+      "Scalability",
+      "Computation",
+      "Granularity",
+      "Dataflow architecture",
+      "Key (lock)",
+      "Architecture"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2604.17862"
+    ],
+    "publicationDate": "2026-04-20",
     "sessionTitles": [
       "Session 5B: Industry Track 2"
     ],
@@ -2491,7 +2872,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2604.17862",
+      "https://openalex.org/W7155247058"
     ]
   },
   {
@@ -2617,7 +3001,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The transition from standard generative AI to \\emph{reasoning-centric architectures}, exemplified by models capable of extensive Chain-of-Thought~(CoT) processing, marks a fundamental paradigm shift in system requirements. Unlike traditional workloads dominated by compute-bound prefill, reasoning workloads generate long chains of reasoning tokens that shift inference into a \\emph{Capacity-Bound regime}. This paper presents a comprehensive system characterization, evaluating models ranging from 8B to 671B parameters on GPUs clusters. By systematically exploring the interplay between Data, Tensor, and Pipeline parallelism, we identify critical bottlenecks that defy standard scaling heuristics. Our analysis reveals that data parallelism is throughput efficient for small models but hits a capacity trap on reasoning workloads as KV-cache fragmentation forces early throttling resulting in sub-optimal compute utilization. Tensor parallelism unlocks stranded memory and delivers sublinear gains near the 32B crossover. At frontier scale, dense models (e.g., Llama-405B) are interconnect and memory-bandwidth bound and favor high-degree TP, while sparse Mixture-of-Experts (MoE) models (e.g., DeepSeek-R1) are limited by routing and synchronization latency and benefit from hybrid strategies. These insights provide a rigorous decision framework for navigating the reasoning cliff, establishing new architectural imperatives for the next generation of inference infrastructure.",
     "authorInstitutions": "Moiz Arif (Micron Technology, Inc.); Avinash Maurya (Argonne National Laboratory); Sudharshan Vazhkudai (Micron Technology, Inc.); Bogdan Nicolae (Argonne National Laboratory)",
     "authors": [
       "Moiz Arif",
@@ -2625,17 +3009,42 @@
       "Sudharshan Vazhkudai",
       "Bogdan Nicolae"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Tuesday, June 30, 2026 11:40 – 12:00"
     ],
+    "doi": "10.48550/arxiv.2605.19775",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2605.19775"
+      },
       "sessionTrack": "Industry Track 2"
     },
     "id": "5B-Understanding_Inference_Scaling_for_LLMs_Bottlenecks_Trade-offs_and_Performance",
+    "keywords": [
+      "Inference",
+      "Scalability",
+      "Scaling",
+      "Parallelism (grammar)",
+      "Concurrency",
+      "Pipeline (software)",
+      "Sublinear function",
+      "Programming paradigm"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2605.19775"
+    ],
+    "publicationDate": "2026-05-19",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 5B: Industry Track 2"
     ],
@@ -2647,7 +3056,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.48550/arxiv.2605.19775",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7161776522"
     ]
   },
   {
@@ -2793,7 +3204,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Memory-safety violations in C and C++ programs continue to enable sophisticated exploitation techniques such as control-flow hijacking and data-oriented attacks. Existing hardware defenses either rely on address space layout randomization (ASLR) or attach explicit metadata to pointers to verify their integrity. External metadata schemes provide strong guarantees, but incur additional memory accesses and memory footprint overhead. In-place authentication mechanisms, such as ARM Pointer Authentication (PAC), achieve low overhead at the cost of limited entropy and susceptibility to brute-force and reuse attacks. This paper presents LIPPEN, a hardware-software co-design for full-pointer encryption that provides strong pointer integrity and confidentiality with zero metadata overhead. LIPPEN treats every pointer as an encrypted block, cryptographically binding it to its execution context and decrypting it transparently at dereference time. By re-purposing the entire 64-bit pointer field for encryption rather than preserving raw address bits, LIPPEN maximizes entropy, eliminates the brute-force weaknesses of truncated authentication codes, and maintains binary compatibility with existing PAC-enabled software. We prototype LIPPEN on FPGA using 64-bit RISC-V Rocket and BOOM cores, and evaluate it with microbenchmarks, nbench, and SPEC CPU2017. We compare against both an in-house RISC-V PAC implementation and Apple's PAC on the M1 processor. Across these workloads, LIPPEN provides comprehensive pointer protection with runtime overhead comparable to PAC-based schemes, while incurring negligible area and power overhead. These results show that LIPPEN is a practical design point for deploying strong pointer protection in real processors.",
     "authorInstitutions": "Erfan Iravani (Virginia Tech); Lalit Prasad Peri (Virginia Tech); Mohannad Ismail (Virginia Tech); Charitha Tumkur Siddalingaradhya (Virginia Tech); Changwoo Min (Igalia); Elif Bilge Kavun (TU Dresden); Wenjie Xiong (Virginia Tech)",
     "authors": [
       "Erfan Iravani",
@@ -2804,17 +3215,39 @@
       "Elif Bilge Kavun",
       "Wenjie Xiong"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 11:40 – 12:00"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.03974"
+      },
       "sessionTrack": "Crypto and Security"
     },
     "id": "5C-LIPPEN_A_Lightweight_In-Place_Pointer_Encryption_Architecture_for_Pointer_Integr",
+    "keywords": [
+      "Pointer (user interface)",
+      "Cryptography",
+      "Encryption",
+      "Metadata",
+      "Pointer analysis",
+      "sync"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.03974"
+    ],
+    "publicationDate": "2026-05-05",
     "sessionTitles": [
       "Session 5C: Crypto and Security"
     ],
@@ -2826,7 +3259,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.03974",
+      "https://openalex.org/W7160565390"
     ]
   },
   {
@@ -2862,7 +3298,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Existing Point Cloud Networks (PCNs) have proven to achieve great success in many point cloud tasks such as object part segmentation, shape classification, and so on. The most popular point-based PCNs are usually composed of two sequential steps: Data Structuring (DS) and Feature Computation (FC). In this paper, we first describe an important characteristic of the PCN-specific DS step that has not been addressed in existing PCN accelerators: the spatial locality resulting from overlapping points of the gathered point subsets. Using algorithm-hardware co-design, L-PCN (Locality-aware PCN) proposes two novel techniques to exploit this characteristic to reduce the large amount of repetitive operations in the overall PCN. The first of which is a point cloud partitioning technique, Octree-based Islandization. Using Octree-based adjacency gathering, a point cloud is partitioned into islands in L-PCN, where the point subsets inside the same island exhibit a strong spatial correlation. After partitioning, L-PCN performs the rest of PCN steps at the granularity of islands. The second method of L-PCN is scheduling the intra-island computation with a Hub-based Scheduling to exploit the intra-island data reuse by dynamically caching, updating, and reusing the repeated data. The two methods are implemented in an Islandization Unit, which can be seamlessly integrated into standard PCN workflow. Our evaluation shows that based on our methods for exploiting spatial locality, L-PCN achieves a theoretical reduction in feature fetching ranging from 55.2% to 93.8% and in feature computation ranging from 45.4% to 80.6% during the PCN process. For experimentation, prototype L-PCN accelerators are implemented on the Intel Arria 10 GX FPGA. Experimental results prove that with the Islandization Unit as a plug-in, state-of-the-art PCN accelerators can achieve an additional speedup ranging from 1.2x to 3.2x.",
     "authorInstitutions": "Yiming Gao (1. Nanjing University of Posts and Telecommunications 2. University of Florida); Jieming Yin (Nanjing University of Posts and Telecommunications); Yuxiang Wang (Nanjing University of Posts and Telecommunications); Xiangru Chen (University of Florida); Zhilei Chai (Jiangnan University); Bowen Jiang (Jiangnan University); Jiliang Zhang (Nanjing University of Posts and Telecommunications); Herman Lam (University of Florida)",
     "authors": [
       "Yiming Gao",
@@ -2874,17 +3310,42 @@
       "Jiliang Zhang",
       "Herman Lam"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Tuesday, June 30, 2026 10:20 – 10:40"
     ],
+    "doi": "10.48550/arxiv.2604.10716",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2604.10716"
+      },
       "sessionTrack": "Potpourri"
     },
     "id": "5D-L-PCN_A_Point_Cloud_Accelerator_Exploiting_Spatial_Locality_through_Octree-based",
+    "keywords": [
+      "Exploit",
+      "Ranging",
+      "Locality",
+      "Cloud computing",
+      "Computation",
+      "Granularity",
+      "Locality of reference",
+      "Point cloud"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2604.10716"
+    ],
+    "publicationDate": "2026-04-12",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 5D: Potpourri"
     ],
@@ -2896,7 +3357,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.48550/arxiv.2604.10716",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7154368111"
     ]
   },
   {
@@ -2935,7 +3398,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As DRAM scales in density and adopts 3D integration, raw fault rates increase and multi-bit errors are no longer rare. Such errors can severely impact Deep Neural Networks (DNNs): although DNNs tolerate small numerical perturbations, random bit flips can create extreme outliers that propagate and sharply degrade accuracy. Large Language Models (LLMs) are particularly vulnerable because attention, residual, and normalization layers can amplify and preserve a single corrupted activation across many layers, destabilizing inference. This paper introduces RangeGuard, a metadata-centric error-correcting framework that provides strong reliability and high efficiency based on bounded approximate correction. Instead of protecting raw bits, RangeGuard encodes compact Range Identifiers (RIDs) that capture the numerical range of each value. These compact metadata enable efficient use of limited redundancy and concentrate protection on range changes, which indicate harmful semantic deviations, while ignoring benign intra-range variations. Upon detecting a range change, RangeGuard restores the correct range and substitutes a representative value, ensuring that error magnitudes are bounded within the range. Based on RIDs, RangeGuard can tolerate 64+ flipped bits using only 16 bits of parity available in GPU memories without a noticeable accuracy loss. By introducing semantic range protection, RangeGuard enables reliable DNN execution even under frequent memory errors and tight redundancy budgets.",
     "authorInstitutions": "Hanum Ko (Sungkyunkwan University); Sangheum Yeon (Sungkyunkwan University); Jong Hwan Ko (Sungkyunkwan University); Jungrae Kim (Sungkyunkwan University)",
     "authors": [
       "Hanum Ko",
@@ -2943,17 +3406,41 @@
       "Jong Hwan Ko",
       "Jungrae Kim"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 12:00 – 12:20"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.04563"
+      },
       "sessionTrack": "Potpourri"
     },
     "id": "5D-RangeGuard_Efficient_Bounded_Approximate_Error_Correction_for_Reliable_DNNs",
+    "keywords": [
+      "Bounded function",
+      "Redundancy (engineering)",
+      "Dram",
+      "Range (aeronautics)",
+      "Parity bit",
+      "Outlier",
+      "Fault tolerance",
+      "Error detection and correction"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.04563"
+    ],
+    "publicationDate": "2026-05-06",
     "sessionTitles": [
       "Session 5D: Potpourri"
     ],
@@ -2965,7 +3452,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.04563",
+      "https://openalex.org/W7160671014"
     ]
   },
   {
@@ -2976,17 +3466,39 @@
       "Daniel Wong",
       "Hyeran Jeon"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Tuesday, June 30, 2026 11:00 – 11:20"
     ],
+    "doi": "10.5281/zenodo.19489039",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19489039"
+      },
       "sessionTrack": "Potpourri"
     },
     "id": "5D-RoCC_Harnessing_Raster_Operations_Pipeline_for_Efficient_Tensor_Collective_Commu",
+    "keywords": [
+      "Pipeline (software)",
+      "Raster graphics",
+      "Tensor (intrinsic definition)",
+      "Visualization",
+      "Key (lock)"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19489039"
+    ],
+    "publicationDate": "2026-04-09",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 5D: Potpourri"
     ],
@@ -2998,7 +3510,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19489039",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7152390551"
     ]
   },
   {
@@ -3075,7 +3589,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The rapid scaling of Large Language Models presents significant challenges for their deployment and inference, particularly on resource-constrained specialized AI hardware accelerators such as Huawei's Ascend NPUs, where weight data transfer has become a critical performance bottleneck. While lossless compression can preserve model accuracy and reduce data volume, existing lossless compression algorithms exhibit extremely low throughput when ported to the Ascend NPU architecture. In this paper, we propose ENEC, a novel lossless compression method specifically customized for AI model weights and optimized for Ascend Neural Processing Units. ENEC adopts a block-based fixed-length encoding scheme and incorporates a series of NPU-specific optimizations: bit-width quantization with hierarchical halving bit-packing, vectorized branch-free integer transformation, and dependency-decoupled intra-segment scan for efficient prefix-sum computation. Experimental results demonstrate that ENEC outperforms existing state-of-the-art NPU compressors in both compression ratio and throughput. Compared to leading GPU solutions, ENEC achieves a 3.43X higher throughput than DietGPU and a 1.12X better compression ratio than nvCOMP. By reducing weight transmission overhead, ENEC significantly improves end-to-end inference performance, achieving up to a 6.3X speedup. On Ascend NPUs, ENEC is the first open-source lossless compression algorithm for model weights that achieves performance comparable to state-of-the-art GPU compressors, offering an effective solution for deploying large-scale AI models.",
     "authorInstitutions": "Jinwu Yang (Institute of Computing Technology, Chinese Academy of Sciences); Jiaan Wu (University of Chinese Academy of Sciences); Zedong Liu (Institute of Computing Technology, Chinese Academy of Sciences); Xinyang Ma (University of Chinese Academy of Sciences); Hairui Zhao (Jilin University); Yida Gu (Institute of Computing Technology, Chinese Academy of Sciences); Yuanhong Huang (Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences); Xingchen Liu (Institute of Computing Technology, Chinese Academy of Sciences); Wenjing Huang (University of Chinese Academy of Sciences); Zheng Wei (Institute of Computing Technology, Chinese Academy of Sciences); Jing Xing (State Key Laboratory of Computer Architecture, Institute of Computing Technology, Chinese Academy of Sciences); Yili Ma (Institute of Computing Technology, Chinese Academy of Sciences); Qingyi Zhang (Huawei Cloud, Huawei Technologies Company Ltd.); Baoyi An (Network Technology Lab, Huawei Technologies CO., LTD); Zhongzhe Hu (Huawei Noah’s Ark Lab, Huawei Technologies Company Ltd.); Shaoteng Liu (Network Technology Laboratory, Huawei Technologies Company Ltd.); Xia Zhu (Huawei Technologies Co., Ltd); Jiaxun Lu (Network Routing Technology Laboratory, Huawei Technologies Company Ltd.); Guangming Tan (Chinese Academy of Sciences); Dingwen Tao (Institute of Computing Technology, Chinese Academy of Sciences)",
     "authors": [
       "Jinwu Yang",
@@ -3099,17 +3613,42 @@
       "Guangming Tan",
       "Dingwen Tao"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 14:55 – 15:15"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2604.03298"
+      },
       "sessionTrack": "LLM 4"
     },
     "id": "6A-ENEC_A_Lossless_AI_Model_Compression_Method_Enabling_Fast_Inference_on_Ascend_NP",
+    "keywords": [
+      "Lossless compression",
+      "Lossy compression",
+      "Data compression ratio",
+      "Data compression",
+      "Compression ratio",
+      "Compression (physics)",
+      "Image compression",
+      "Lossless JPEG",
+      "Quantization (signal processing)"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2604.03298"
+    ],
+    "publicationDate": "2026-03-28",
     "sessionTitles": [
       "Session 6A: LLM 4"
     ],
@@ -3121,11 +3660,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "http://arxiv.org/abs/2604.03298",
+      "https://openalex.org/W7152933824"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Large Language Models (LLMs) have achieved impressive performance across diverse domains but remain inefficient during the autoregressive decoding phase. Unlike the prefill stage, which employs compute-bound GEMM operations, decoding executes a sequence of small GEMV-like computations that are memory-bound and underutilize modern accelerators. Weight-only vector quantization (VQ) has emerged as an effective compression technique that clusters model weights into a shared codebook and replaces the original weight matrix with low-precision indices, enabling 2-bit-level weight compression. While this approach substantially reduces model size and memory bandwidth, it still suffers from two critical inefficiencies: the low utilization of GEMV computation and frequent memory conflicts during codebook lookups. This paper presents EVA, an efficient vector-quantization-based architecture that addresses both computational and memory bottlenecks in LLM decoding. EVA builds on a simple yet effective insight that combines input-codebook computation with conflict-free memory access. Instead of reconstructing quantized weights from indices, EVA directly performs dot products between input vectors and the weight codebook, transforming LLM decoding from GEMV to GEMM computation. It then performs structured lookups from an intermediate output buffer, eliminating memory bank conflicts. We further design a hardware-software co-optimized architecture specialized for LLM decoding while remaining compatible with conventional prefill execution. Evaluations show that EVA achieves up to 11.17$\\times$ speedup and 7.17$\\times$ higher energy efficiency compared with the SOTA lookup-based architecture, while preserving arithmetic precision after vector quantization. Our code is available at https://github.com/dbw6/Eva.git.",
     "authorInstitutions": "Bowen Duan (Duke University); Cong Guo (Duke University); Chiyue Wei (Duke University); Haoxuan Shan (Duke University); Yuzhe Fu (Duke University); Xinhua Chen (Duke University); Yifan Xu (Duke University); Ziyue Zhang (Duke University); Changchun Zhou (Duke University); Hai Li (Duke University); Yiran Chen (Duke University)",
     "authors": [
       "Bowen Duan",
@@ -3140,17 +3682,43 @@
       "Hai Li",
       "Yiran Chen"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Tuesday, June 30, 2026 15:35 – 15:55"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.24144"
+      },
       "sessionTrack": "LLM 4"
     },
     "id": "6A-EVA_Accelerating_LLM_Decoding_via_an_Efficient_Vector_Quantization_Architecture",
+    "keywords": [
+      "Codebook",
+      "Decoding methods",
+      "Computation",
+      "Vector quantization",
+      "Quantization (signal processing)",
+      "Speedup",
+      "Linde–Buzo–Gray algorithm",
+      "Code (set theory)",
+      "Sequence (biology)"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.24144"
+    ],
+    "publicationDate": "2026-05-22",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 6A: LLM 4"
     ],
@@ -3162,7 +3730,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.24144",
+      "https://openalex.org/W7162606334"
     ]
   },
   {
@@ -3367,7 +3938,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Recent GPU generations deliver significantly higher FLOPs using lower-precision arithmetic, such as FP8. While successfully applied to large language models (LLMs), its adoption in large recommendation models (LRMs) has been limited. This is because LRMs are numerically sensitive, dominated by small matrix multiplications (GEMMs) followed by normalization, and trained in communication-intensive environments. Applying FP8 directly to LRMs often degrades model quality and prolongs training time. These challenges are inherent to LRM workloads and cannot be resolved merely by introducing better FP8 kernels. Instead, a system-model co-design approach is needed to successfully integrate FP8. We present LoKA (Low-precision Kernel Applications), a framework that makes FP8 practical for LRMs through three principles: profile under realistic distributions to know where low precision is safe, co-design model components with hardware to expand where it is safe, and orchestrate across kernel libraries to maximize the gains. Concretely, LoKA Probe is a statistically grounded, online benchmarking method that learns activation and weight statistics, and quantifies per-layer errors. This process pinpoints safe and unsafe, fast and slow sites for FP8 adoption. LoKA Mods is a set of reusable model adaptations that improve both numerical stability and execution efficiency with FP8. LoKA Dispatch is a runtime that leverages the statistical insights from LoKA Probe to select the fastest FP8 kernel that satisfies the accuracy requirements.",
     "authorInstitutions": "Liang Luo (Meta AI); Yinbin Ma (Meta AI); Quanyu Zhu (Meta AI); Vasiliy Kuznetsov (Meta AI); Yuxin Chen (Meta AI); Jian Jiao (Meta AI); Jiecao Yu (Meta AI); Buyun Zhang (Meta AI); Tongyi Tang (Meta AI); Xiaohan Wei (Meta AI); Yanli Zhao (Meta AI); Zeliang Chen (Meta AI); Yuchen Hao (Meta AI); Venkatesh Ranganathan (Meta AI); Sandeep Parab (Meta AI); Yantao Yao (Meta AI); Maxim Naumov (Meta AI); Chunzhi Yang (Meta AI); Shen Li (Meta AI); Ellie Wen (Meta AI); Wenlin Chen (Meta AI); Chunqiang Tang (Meta AI)",
     "authors": [
       "Liang Luo",
@@ -3393,17 +3964,40 @@
       "Wenlin Chen",
       "Chunqiang Tang"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 14:15 – 14:35"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.10886"
+      },
       "sessionTrack": "Deep Learning / Memory Acceleration"
     },
     "id": "6B-LoKA_Low-precision_Kernel_Applications_for_Recommendation_Models_At_Scale",
+    "keywords": [
+      "Benchmarking",
+      "Kernel (algebra)",
+      "Process (computing)",
+      "Set (abstract data type)",
+      "Scale (ratio)",
+      "Stability (learning theory)",
+      "Quality (philosophy)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.10886"
+    ],
+    "publicationDate": "2026-05-11",
     "sessionTitles": [
       "Session 6B: Deep Learning / Memory Acceleration"
     ],
@@ -3415,11 +4009,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.10886",
+      "https://openalex.org/W7161091136"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As large language models (LLMs) continue to advance, retrieval-augmented generation (RAG) has become the key mechanism for expanding model knowledge and reducing hallucinations. Central to RAG is approximate nearest neighbor search (ANNS), which retrieves database vectors most similar to a given query. However, distance calculation over high-dimensional vectors is inherently memory-bound, causing retrieval performance to be constrained by I/O bandwidth on mainstream platforms such as CPUs and GPUs. Although many prior early exiting (EE) techniques attempt to reduce memory accesses by only computing partial dimensions, the partial distance converges too slowly to the EE threshold, which ultimately limits their performance gains. To address these challenges, we propose NASZIP, a hardware-software co-designed framework that integrates near data processing (NDP) with a novel feature-level early exiting guided by statistics-based principal component analysis (PCA). Instead of relying solely on partial distances, NASZIP incorporates estimation and correction parameters to approximate full dimensional distances accurately, enabling earlier exiting without compromising accuracy. We further introduce a bit-level NDP-aware dynamic-float scheme that significantly reduces memory access for vector data. On the hardware side, we develop a data aware neighbor list mapping strategy that reduces neighbor retrieval latency and inter-channel communication overhead, complemented by a dedicated cache that exploits data locality and enhances prefetch efficiency. With these co-optimized techniques, NASZIP delivers speedups of up to $8.4\\times$ / $1.4\\times$ over CPU baseline and state-of-the-art GPU implementation at equal accuracy. Relative to the state-of-the-art NDP ANNS accelerator ANSMET, NASZIP achieves $1.69\\times$ performance improvement.",
     "authorInstitutions": "Cheng Zou (Shanghai Jiao Tong University); Shuo Yang (Shanghai Jiao Tong University); Chen Nie (Shanghai Jiao Tong University, Shanghai AI Laboratory); Yu Zou (Institute of Information Engineering, Chinese Academy of Sciences); Yu He (Lenovo Research); Chao Jiang (Lenovo Research); Limin Xiao (Lenovo Research); Weifeng Zhang (Lenovo Research); Zhezhi He (Shanghai Jiao Tong University, Shanghai AI Laboratory)",
     "authors": [
       "Cheng Zou",
@@ -3432,17 +4029,42 @@
       "Weifeng Zhang",
       "Zhezhi He"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 14:55 – 15:15"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.21952"
+      },
       "sessionTrack": "Deep Learning / Memory Acceleration"
     },
     "id": "6B-NasZip_Software_and_Hardware_Co-design_to_Accelerate_Approximate_Nearest_Neighbo",
+    "keywords": [
+      "Instruction prefetch",
+      "Locality",
+      "Cache",
+      "Exploit",
+      "Software",
+      "k-nearest neighbors algorithm",
+      "Latency (audio)",
+      "Memory bandwidth",
+      "Key (lock)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.21952"
+    ],
+    "publicationDate": "2026-05-21",
     "sessionTitles": [
       "Session 6B: Deep Learning / Memory Acceleration"
     ],
@@ -3454,11 +4076,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.21952",
+      "https://openalex.org/W7162218383"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Artifact for \"Random-Access Hardware Sequence Compression\" (ISCA 2026). This artifact contains:- Software RST compression implementation (C++) for reproducing compression ratio results (Fig. 18, Fig. 19)- SystemVerilog RTL for the RST compressor and decompressor, compilable with Verilator for functional verification and performance metric extraction- Pre-generated ASIC synthesis results (ASAP7 7nm, 2.5 GHz) for a scaled configuration- Synthesis scripts for regeneration (requires Synopsys Design Compiler)- QEMU VM image with all dependencies pre-installed for easy evaluation- Memory dump test data from standard benchmarks See the included README.md for setup and usage instructions.",
     "authorInstitutions": "Nolan Chu (Virginia Tech); Yoon Lee (Virginia Tech); Gagandeep Panwar (AMD); Xun Jian (Virginia Tech)",
     "authors": [
       "Nolan Chu",
@@ -3466,17 +4091,40 @@
       "Gagandeep Panwar",
       "Xun Jian"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Tuesday, June 30, 2026 15:35 – 15:55"
     ],
+    "doi": "10.5281/zenodo.19449274",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19449274"
+      },
       "sessionTrack": "Deep Learning / Memory Acceleration"
     },
     "id": "6B-Random-Access_Hardware_Sequence_Compression",
+    "keywords": [
+      "Artifact (error)",
+      "Data compression",
+      "Software",
+      "Application-specific integrated circuit",
+      "Compression (physics)",
+      "Sequence (biology)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19449274"
+    ],
+    "publicationDate": "2026-04-10",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 6B: Deep Learning / Memory Acceleration"
     ],
@@ -3488,7 +4136,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19449274",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151587823"
     ]
   },
   {
@@ -3630,7 +4280,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This is the artifact for the ISCA'26 publication sCROOGe: Circuit-level Design and Optimization Framework for RISC-V Out-of-Order GPUs.This artifact comprises the source code for the baseline as well as frontend- and backend- based sCROOGe execution schemes implemented on top of Vortex 2. All dynamic instruction traces are included for the trace-driven analyses (Fig. 9,10), as well as intermediate csv files for performance, area and power evaluation. Performance measurements can be collected through RTL simulation within the provided container. Auxiliary scripts for reproducing the plots in the paper are also included. The artifact is available publicly through an archived repository. System requirements are specified and instructions are provided for evaluating sCROOGe, detailed in this appendix. A linux operating system with sufficient resources (detailed below) and Docker support is required to test the artifact. Users can reproduce the results shown in Figures 1,6,10-24, evaluating the performance, power and area overheads of sCROOGe.",
     "authorInstitutions": "Maria Zerva (National Technical University of Athens); Panagiotis-Eleftherios Eleftherakis (National Technical University of Athens); Alexis Maras (National Technical University of Athens); Konstantinos Iliakis (National Technical University of Athens); Alexandros Moiras (National Technical University of Athens); Sotirios Xydis (National Technical University of Athens)",
     "authors": [
       "Maria Zerva",
@@ -3640,17 +4290,41 @@
       "Alexandros Moiras",
       "Sotirios Xydis"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Tuesday, June 30, 2026 15:15 – 15:35"
     ],
+    "doi": "10.5281/zenodo.19453034",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19453034"
+      },
       "sessionTrack": "GPUs and Compilation"
     },
     "id": "6C-sCROOGe_Circuit-level_Design_and_Optimization_Framework_for_RISC-V_Out-of-Order",
+    "keywords": [
+      "Artifact (error)",
+      "Scripting language",
+      "Code (set theory)",
+      "Power (physics)",
+      "Source code",
+      "Program optimization",
+      "Software"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19453034"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 6C: GPUs and Compilation"
     ],
@@ -3662,7 +4336,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19453034",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151268301"
     ]
   },
   {
@@ -3680,17 +4356,39 @@
       "A. Giray Yaglikci",
       "Onur Mutlu"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Tuesday, June 30, 2026 14:15 – 14:35"
     ],
+    "doi": "10.5281/zenodo.19446518",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19446518"
+      },
       "sessionTrack": "Rowhammer and Security"
     },
     "id": "6D-ColumnKeeper_Efficient_Solutions_for_Mitigating_ColumnDisturb_in_DRAM-based_Syst",
+    "keywords": [
+      "Artifact (error)",
+      "Noise (video)",
+      "Feature (linguistics)",
+      "Key (lock)",
+      "Identification (biology)"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19446518"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 6D: Rowhammer and Security"
     ],
@@ -3702,7 +4400,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19446518",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151432445"
     ]
   },
   {
@@ -3743,7 +4443,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "DRAM scaling has exacerbated the RowHammer vulnerability. To counter this, JEDEC recently introduced Per Row Activation Counting (PRAC) with the Alert Back-Off protocol as an optional DDR5 feature. While promising, PRAC requires per-row counter cells that incur area overhead, and updating them on every activation lengthens DRAM timing parameters, degrading performance. Probabilistic mitigations such as MINT offer a lower-cost alternative by randomly selecting and mitigating rows within periodic mitigation windows. MINT is effective at higher thresholds (&gt;= 1000), but at lower thresholds, it must raise its mitigation rate to overcome the non-selection problem, where heavily hammered rows can repeatedly escape sampling. This fixed-rate scaling reduces effective memory bandwidth even when no attack is present. To overcome this limitation, we propose PrISM, an intersection-based probabilistic mitigation that correlates sampled rows across windows using a Sampled History Queue (SHQ). PrISM samples a few activation slots per window, stores sampled-but-unmitigated rows in the SHQ, and requests an additional mitigation through the existing Alert Back-Off protocol when a sampled row reappears in this history. This allows PrISM to increase mitigation only when persistent row activity is observed, without globally increasing the fixed mitigation rate. At the threshold of 500, PrISM incurs a negligible 0.2% average slowdown compared to 14% for PRAC, with no DRAM array changes or per-row counters and only 625B of SRAM per bank, one to two orders of magnitude less than prior secure counter-based in-DRAM defenses. Compared to MINT, PrISM provides better scalability at low thresholds, reducing average slowdown from 10.7% to 1.5% at a threshold of 250, a 7.1x reduction. PrISM is open-sourced at https://github.com/STAR-Laboratory/prism.",
     "authorInstitutions": "Jeonghyun Woo (The University of British Columbia); Junsu Kim (The University of British Columbia); Aamer Jaleel (NVIDIA); Prashant Nair (The University of British Columbia)",
     "authors": [
       "Jeonghyun Woo",
@@ -3751,17 +4451,41 @@
       "Aamer Jaleel",
       "Prashant Nair"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Tuesday, June 30, 2026 14:55 – 15:15"
     ],
+    "doi": "10.48550/arxiv.2605.17358",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2605.17358"
+      },
       "sessionTrack": "Rowhammer and Security"
     },
     "id": "6D-Loaded_Dice_Solving_the_Non-Selection_Problem_for_Scalable_Probabilistic_RowHamm",
+    "keywords": [
+      "Dram",
+      "Scalability",
+      "Row",
+      "Static random-access memory",
+      "Probabilistic logic",
+      "Scaling",
+      "Queue"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2605.17358"
+    ],
+    "publicationDate": "2026-05-17",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 6D: Rowhammer and Security"
     ],
@@ -3773,11 +4497,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.48550/arxiv.2605.17358",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7161712021"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This artifact demonstrates the core mechanism of PRowhammer, showing how a single Rowhammer-induced bit-flip in host DRAM can alter GPU-executed code. It provides a minimal, reproducible setup that illustrates how bit-flips in deduplicated shared library pages propagate to GPUs and modify low-level instructions while preserving syntactic validity. The artifact includes tools to identify vulnerable bit locations, emulate or induce controlled bit-flips, and observe their impact on GPU kernel execution. Through simplified examples, users can reproduce how a single bit-flip in a shared library can lead to semantically altered GPU computation, highlighting the security implications of PRowhammer in heterogeneous CPU–GPU systems.",
     "authorInstitutions": "Mrityunjay Shukla (Indian Institute of Technology Bombay); Shubham Roy (Indian Institute of Technology Bombay); Sayandeep Saha (Indian Institute of Technology Bombay); Biswabandan Panda (Indian Institute of Technology Bombay)",
     "authors": [
       "Mrityunjay Shukla",
@@ -3785,17 +4511,41 @@
       "Sayandeep Saha",
       "Biswabandan Panda"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Tuesday, June 30, 2026 15:15 – 15:35"
     ],
+    "doi": "10.5281/zenodo.19326669",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19326669"
+      },
       "sessionTrack": "Rowhammer and Security"
     },
     "id": "6D-PRowhammer_Propagating_Bit-flips_from_CPU_to_GPU",
+    "keywords": [
+      "Artifact (error)",
+      "Dram",
+      "Kernel (algebra)",
+      "Mechanism (biology)",
+      "Coprocessor",
+      "Host (biology)",
+      "Multi-core processor"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19326669"
+    ],
+    "publicationDate": "2026-04-02",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 6D: Rowhammer and Security"
     ],
@@ -3807,11 +4557,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19326669",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7148527144"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As DRAM scaling exacerbates RowHammer, DDR5 introduces per-row activation counting (PRAC) to track aggressor activity. However, PRAC indiscriminately increments counters on every activation -- including benign refreshes -- while relying solely on explicit RFM operations for resets. Consequently, counters saturate even in an idle bank, triggering cascading mitigations and degrading performance. This vulnerability arises from a fundamental mismatch: PRAC tracks the aggressor but aims to protect the victim. We present Per-Victim-row hAmmered Counting (PVAC), a victim-based counting mechanism that aligns the counter semantics with the physical disturbance mechanism of RowHammer. PVAC increments the counters of victim rows, resets the activated row, and naturally bounds counter values under normal refresh. To enable efficient victim-based updates, PVAC employs a dedicated counter subarray (CSA) that performs all counter resets and increments concurrently with normal accesses, without timing overhead. We further devise an energy-efficient CSA layout that minimizes refresh-induced counter accesses. Through victim-based counting, PVAC supports higher hammering tolerance than PRAC while maintaining the same worst-case safety guarantee. Across benign workloads and adversarial attack patterns, PVAC avoids spurious Alerts, eliminates PRAC timing penalties, and achieves higher performance and lower energy consumption than prior PRAC-based defenses.",
     "authorInstitutions": "Jumin Kim (Seoul National University); Seungmin Baek (Seoul National University); Hwayong Nam (Seoul National University); Minbok Wi (Samsung Electronics); Nam Sung Kim (University of Illinois, Urbana-Champaign); Jung Ho Ahn (Seoul National University)",
     "authors": [
       "Jumin Kim",
@@ -3821,17 +4573,41 @@
       "Nam Sung Kim",
       "Jung Ho Ahn"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Tuesday, June 30, 2026 14:35 – 14:55"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2604.20576"
+      },
       "sessionTrack": "Rowhammer and Security"
     },
     "id": "6D-PVAC_A_RowHammer_Mitigation_Architecture_Exploiting_Per-victim-row_Counting",
+    "keywords": [
+      "Dram",
+      "Spurious relationship",
+      "Idle",
+      "Throughput",
+      "Vulnerability (computing)",
+      "Semantics (computer science)",
+      "Energy consumption",
+      "Task (project management)"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2604.20576"
+    ],
+    "publicationDate": "2026-04-22",
     "sessionTitles": [
       "Session 6D: Rowhammer and Security"
     ],
@@ -3843,7 +4619,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2604.20576",
+      "https://openalex.org/W7155574563"
     ]
   },
   {
@@ -3888,17 +4667,39 @@
       "Stefanos Kaxiras",
       "Yuan Yao"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Wednesday, July 1, 2026 10:00 – 10:20"
     ],
+    "doi": "10.5281/zenodo.19428664",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19428664"
+      },
       "sessionTrack": "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     },
     "id": "7A-DICE_Detailed_Inter-Chiplet_End-to-End_PHY_Modeling_for_Accurate_Chiplet_Simulat",
+    "keywords": [
+      "PHY",
+      "Noise (video)",
+      "Key (lock)",
+      "Filter (signal processing)",
+      "Domain (mathematical analysis)"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19428664"
+    ],
+    "publicationDate": "2026-06-27",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 7A: Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
@@ -3910,7 +4711,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19428664",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7150741753"
     ]
   },
   {
@@ -4170,7 +4973,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The rapid expansion of Transformer-based large language models has dramatically increased the need for high-performance GPUs. As a result, there is growing demand for fast, accurate, and widely generalizable GPU performance models to support next-generation hardware selection and system-level exploration. However, current data-driven methods are limited, exhibiting poor generalization across hardware and inadequate modeling of complex production-level kernels common in modern inference stacks. To address these issues, we present PipeWeave, a unified GPU modeling framework. This approach first employs an analytical model to quantify a given kernel's demands on the GPU's heterogeneous instruction pipelines. These analytical features are then fed into a machine learning (ML) model to capture complex cross-pipeline interactions and resource dependencies, enabling high-fidelity performance prediction. Our evaluation across 11 GPU types from four generations of major architectures on two widely-used serving systems demonstrates that PipeWeave delivers high fidelity and strong generalizability. It achieves accurate predictions, with only 6.1% average error at the kernel level and 8.5% for end-to-end inference -- reducing the error of state-of-the-art methods by 6.7x and 4.4x, respectively. We also demonstrate PipeWeave's value \"beyond simulation\" by utilizing its performance ceiling to diagnose implementation shortcomings and guide the optimization of a production fused MoE Triton kernel, achieving up to 1.7x speedup. Code is available https://github.com/zksainx/pipeweave.",
     "authorInstitutions": "Kaixuan Zhang (Shanghai Jiao Tong University); Yunfan Cui (Shanghai Jiao Tong University); Shuhao Zhang (Shanghai Jiao Tong University); Chutong Ding (Shanghai Jiao Tong University); Shiyou Qian (Shanghai Jiao Tong University); Luping Wang (Alibaba Group); Jian Cao (Shanghai Jiaotong University); Guangtao Xue (Shanghai Jiao Tong University); Cheng Huang (Alibaba Group); Guodong Yang (Alibaba Group); Liping Zhang (Alibaba Group)",
     "authors": [
       "Kaixuan Zhang",
@@ -4185,17 +4988,41 @@
       "Guodong Yang",
       "Liping Zhang"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Wednesday, July 1, 2026 10:40 – 11:00"
     ],
+    "doi": "10.48550/arxiv.2601.14910",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2601.14910"
+      },
       "sessionTrack": "Performance Modeling / Datacenter"
     },
     "id": "7B-PIPEWEAVE_Synergizing_Analytical_and_Learning_Models_for_Unified_GPU_Performance",
+    "keywords": [
+      "Inference",
+      "Performance prediction",
+      "Kernel (algebra)",
+      "Generalization",
+      "Fidelity",
+      "Resource (disambiguation)",
+      "Selection (genetic algorithm)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2601.14910"
+    ],
+    "publicationDate": "2026-01-21",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 7B: Performance Modeling / Datacenter"
     ],
@@ -4207,7 +5034,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.48550/arxiv.2601.14910",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7125379295"
     ]
   },
   {
@@ -4248,7 +5077,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "An automated framework for characterizing the design of Memory Dependence Predictors (MDPs) across a wide range of CPU architectures, including Intel, AMD, Arm, and Apple Silicon.",
     "authorInstitutions": "Chang Liu (Tsinghua University); Yu Jin (Tsinghua University); Yuchen Fan (Tsinghua University); Tianrui Xiao (Tsinghua University); Lingfeng Yin (Zhongguancun Laboratory); Trevor E. Carlson (National University of Singapore); Shuwen Deng (Tsinghua University, Zhongguancun Laboratory); Dongsheng Wang (Tsinghua University, Zhongguancun Laboratory)",
     "authors": [
       "Chang Liu",
@@ -4260,17 +5089,39 @@
       "Shuwen Deng",
       "Dongsheng Wang"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Wednesday, July 1, 2026 11:00 – 11:20"
     ],
+    "doi": "10.5281/zenodo.19447257",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19447257"
+      },
       "sessionTrack": "Performance Modeling / Datacenter"
     },
     "id": "7B-SSBench_Automated_Characterization_of_Memory_Dependence_Predictors_on_Modern_CPU",
+    "keywords": [
+      "Range (aeronautics)",
+      "Characterization (materials science)",
+      "Component (thermodynamics)",
+      "Memory management",
+      "Semiconductor memory"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19447257"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 7B: Performance Modeling / Datacenter"
     ],
@@ -4282,7 +5133,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19447257",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151254713"
     ]
   },
   {
@@ -4568,7 +5421,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "CKKS, an emerging fully homomorphic encryption (FHE) scheme, has been promising in privacy-preserving applications by enabling SIMD fixed-point computations on ciphertexts. Despite its strong security guarantees, CKKS involves both compute-intensive operators (ComOps) with high computational cost and memory-intensive operators (MemOps) with large memory footprints, making existing ASIC-based or NMP-based acceleration approaches suffer from high hardware overhead and limited efficiency. This observation motivates the integration of the architectural advantages of both paradigms into a heterogeneous xPU (ASIC)-xMU (NMP) architecture. However, in such a design, frequent and long-latency heterogeneous communication caused by the dominant keyswitch operator remains a key performance bottleneck. In this paper, we propose $HE^2$, a communication-light xPU-xMU heterogeneous FHE accelerator with dataflow graph (DFG) optimization and architecture co-design. First, we observe that the majority of communication arises at the interface between ModUp/ModDown and neighboring MemOps. To address this, we propose a DFG-level optimization framework to fully exploit the ModUp/ModDown reduction potential of the hoisting algorithm by identifying parallel keyswitch blocks and fusing them for reduced communication frequency. Second, we design an efficient heterogeneous architecture that adopts a group-level pipelined execution to effectively hide communication latency by leveraging the inherent parallelism across decomposed groups. End-to-end evaluation results show that $HE^2$ achieves 1.66$\\times$ speedup and 9.23$\\times$ lower EDAP (Energy-Delay-Area Product) compared to the state-of-the-art accelerator, with communication stalls accounting for only 6.67% of the total latency.",
     "authorInstitutions": "Shangyi Shi (SKLP, Institute of Computing Technology, Chinese Academy of Sciences); Husheng Han (Institute of Computing Technology, Chinese Academy of Sciences); Zhaoxuan Kan (Institute of Computing Technology, Chinese Academy of Sciences); Yinghao Yang (Institute of Computing Technology, Chinese Academy of Sciences); Jianan Mu (ICT,CAS); Tenghui Hua (ICT,CAS); Ge Yu (School of Advanced Interdisciplinary Sciences, University of Chinese Academy of Sciences); Xinyao Zheng (Institute of Computing Technology, Chinese Academy of Sciences); Ling Liang (DAMO Academy Alibaba Group, Peking University); Zidong Du (Institute of Computing Technology, Chinese Academy of Sciences); Xing Hu (Institute of Computing Technology, Chinese Academy of Sciences)",
     "authors": [
       "Shangyi Shi",
@@ -4583,17 +5436,42 @@
       "Zidong Du",
       "Xing Hu"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 11:00 – 11:20"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.31004"
+      },
       "sessionTrack": "FHE"
     },
     "id": "7D-HE_2_A_Communication-Light_Heterogeneous_Architecture_for_Efficient_Fully_Homomo",
+    "keywords": [
+      "Dataflow",
+      "Homomorphic encryption",
+      "Exploit",
+      "Speedup",
+      "Encryption",
+      "Reduction (mathematics)",
+      "Key (lock)",
+      "Heterogeneous network",
+      "Computation"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.31004"
+    ],
+    "publicationDate": "2026-05-29",
     "sessionTitles": [
       "Session 7D: FHE"
     ],
@@ -4605,7 +5483,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.31004",
+      "https://openalex.org/W7163287178"
     ]
   },
   {
@@ -4804,24 +5685,49 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Ray tracing (RT) is a 3D graphics technique that offers highly realistic visuals. It is becoming prominent and accessible as GPU vendors have integrated dedicated ray tracing acceleration hardware. However, tracing millions of rays through 3D scenes consisting of high numbers of triangles in real time is challenging and requires expensive hardware. The main bottleneck in RT workloads is the expensive Bounding Volume Hierarchy (BVH) traversal task, which is a large tree structure that encodes the 3D scene. BVH traversal is a memory-bound problem, as the GPU threads spend most of their time reading tree node data from memory. In this work, we attack the memory latency bottleneck of ray tracing through prefetching. We propose a novel hardware prefetcher, named Tree Traversal Prefetcher (TTP), for ray tracing. The main idea is to leverage the existing tree traversal stack in the RT units for highly accurate prefetching. In particular, TTP prefetches nodes using the addresses already available on the hardware traversal stacks of each thread. For DFS (Depth-first search) based traversal, prefetches are generated when nodes are being popped consecutively from the traversal stack, potentially corresponding to upward traversal through the tree. We evaluate TTP on a cycle-level simulator, Vulkan-sim 2.0, and show that it achieves 1.48x speedup on average (up to 1.89x) compared to the baseline, with nearly negligible hardware overhead. TTP achieves 98.92% average L1 accuracy, which is the ratio of the prefetched blocks being actually referenced by demand loads. The coverage, computed as the ratio of L1 miss reduction over baseline L1 misses, is 31.54%, correlating well with the achieved speedup.",
     "authorInstitutions": "Yavuz Tozlu (North Carolina State University); Anshul Naithani (North Carolina State University); Huiyang Zhou (North Carolina State University)",
     "authors": [
       "Yavuz Tozlu",
       "Anshul Naithani",
       "Huiyang Zhou"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 12:35 – 12:55"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.16253"
+      },
       "sessionTrack": "Rendering"
     },
     "id": "8A-TTP_A_Hardware-Efficient_Design_for_Precise_Prefetching_in_Ray_Tracing",
+    "keywords": [
+      "Tree traversal",
+      "Graph traversal",
+      "Bottleneck",
+      "Speedup",
+      "Tracing",
+      "Tree (set theory)",
+      "Ray tracing (physics)",
+      "Data structure",
+      "Binary tree"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.16253"
+    ],
+    "publicationDate": "2026-05-15",
     "sessionTitles": [
       "Session 8A: Rendering"
     ],
@@ -4833,7 +5739,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.16253",
+      "https://openalex.org/W7161655052"
     ]
   },
   {
@@ -4873,7 +5782,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Irregular memory accesses pose challenges for effective and efficient data prefetching. While temporal prefetchers have recently shown promise for irregular memory access patterns, their effectiveness fundamentally depends on temporal address recurrence and large metadata storage. When memory addresses exhibit weak or no recurrence, as in indirect memory accesses, temporal prefetchers achieve limited performance gains while incurring substantial storage overhead. This paper proposes Instruction-Correlation Prefetching (ICP), a new hardware prefetching mechanism that exploits instruction-level correlations rather than memory-address correlations to handle irregular memory accesses. ICP observes that although memory addresses may not repeat, the instructions generating them often recur with stable data-dependency relationships. By learning these persistent instruction correlations, ICP speculatively computes and prefetches future irregular accesses using the execution results of their correlated predecessors. Across irregular SPEC CPU and GAP benchmarks, ICP outperforms the state-of-the-art temporal prefetcher Triangel by 14.0% and the indirect prefetcher DMP by 6.0%, while requiring only 2.1 KB of hardware storage, over three orders of magnitude smaller than temporal prefetchers.",
     "authorInstitutions": "Mengming Li (Hong Kong University of Science and Technology); Chenlu Miao (NVIDIA); Buqing Xu (Hong Kong University of Science and Technology); Qijun Zhang (Hong Kong University of Science and Technology); Xiangfeng Sun (The Hong Kong University of Science and Technology); Ceyu Xu (The Hong Kong University of Science and Technology); Yuan Xie (HKUST); Wenkai Li (Hong Kong University of Science and Technology); Shang Liu (Hong Kong University of Science and Technology); Zhiyao Xie (Hong Kong University of Science and Technology)",
     "authors": [
       "Mengming Li",
@@ -4887,17 +5796,39 @@
       "Shang Liu",
       "Zhiyao Xie"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 12:35 – 12:55"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.15645"
+      },
       "sessionTrack": "Prefetching and Caches 1"
     },
     "id": "8B-ICP_Exploiting_Instruction_Correlation_for_Prefetching_Irregular_Memory_Accesses",
+    "keywords": [
+      "Spec#",
+      "Exploit",
+      "Memory management",
+      "Interleaved memory",
+      "Metadata",
+      "Data access"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.15645"
+    ],
+    "publicationDate": "2026-05-15",
     "sessionTitles": [
       "Session 8B: Prefetching and Caches 1"
     ],
@@ -4909,7 +5840,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.15645",
+      "https://openalex.org/W7161655541"
     ]
   },
   {
@@ -4953,7 +5887,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Magic State Distillation is considered to be one of the promising methods for supplying the non-Clifford resources required to achieve universal fault tolerance. Conventional MSD protocols implemented in surface codes often require multiple code blocks and lattice surgery rounds, resulting in substantial qubit overhead, especially at low target error rates. In this work, we present practical magic state distillation factories on Bivariate Bicycle (BB) codes that execute Pauli-measurement-based Clifford circuits inside a single BB code block. We formulate distillation circuit design as a joint optimization of logical qubit mapping, gate scheduling, measurement nativization, and protocol compression via qubit recycling. Based on detailed resource analysis and simulations, our BB factories have space-time volume comparable to that of leading distillation factories while delivering lower target error at a smaller qubit footprint, and are particularly compelling as second-round distillers following magic state cultivations.",
     "authorInstitutions": "Shifan Xu (Yale University); Kun Liu (Yale University); Patrick Rall (IBM Quantum); Zhiyang He (MIT); Yongshan Ding (Yale University)",
     "authors": [
       "Shifan Xu",
@@ -4962,17 +5896,40 @@
       "Zhiyang He",
       "Yongshan Ding"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 12:15 – 12:35"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2602.20546"
+      },
       "sessionTrack": "Quantum 2"
     },
     "id": "8C-Distilling_Magic_States_in_the_Bicycle_Architecture",
+    "keywords": [
+      "MAGIC (telescope)",
+      "Distillation",
+      "Qubit",
+      "Error detection and correction",
+      "State (computer science)",
+      "Code (set theory)",
+      "Finite-state machine"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2602.20546"
+    ],
+    "publicationDate": "2026-02-24",
     "sessionTitles": [
       "Session 8C: Quantum 2"
     ],
@@ -4984,7 +5941,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2602.20546",
+      "https://openalex.org/W7131475583"
     ]
   },
   {
@@ -5026,7 +5986,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Toward the large-scale, practical realization of quantum computing, quantum error correction is essential. Among various quantum error-correcting codes, the surface code stands out as a leading candidate, and lattice surgery based on surface codes has emerged as a promising technique for fault-tolerant quantum computation (FTQC). However, implementing quantum algorithms using lattice surgery introduces both resource and time overhead. Existing approaches typically focus on large layout designs, with compiler passes aimed primarily at optimizing time overhead. This often overlooks the trade-off between rotation bottlenecks and movement distance, which leads to inefficient resource utilization and prevents further reduction of the quantum computation failure rate. To address these challenges, we introduce O3LS, a framework for optimizing lattice surgery through automatic layout search and loose scheduling. O3LS achieves an optimal balance by automatically generating squeezed data layouts to reduce space requirements and employing loose scheduling algorithms combined with circuit synthesis techniques to reduce time overhead, thereby effectively minimizing overall logical error rates. Numerical results indicate that O3LS can reduce space overhead by 28.0% over standard layouts and 46.7% over sparse layouts without increasing the number of time steps, leading to suppression of logical error rates by up to 16% relative to larger data layout designs. O3LS can also achieve time overhead reductions of 36.07% and 24.76% in compact and standard data layout designs, respectively. It suppresses logical error rates by up to an order of magnitude compared to prior compilers that focus primarily on maximizing parallelism.",
     "authorInstitutions": "Chenghong Zhu (Guangzhou); Xian Wu (Guangzhou); Jiahan Chen (Guangzhou); Keming He (The Hong Kong University of Science and Technology (Guangzhou)); Junjie Wu (National University of Defense Technology); Xin Wang (The Hong Kong University of Science and Technology (Guangzhou)); Lingling Lao (National University of Defense Technology)",
     "authors": [
       "Chenghong Zhu",
@@ -5037,17 +5997,41 @@
       "Xin Wang",
       "Lingling Lao"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 12:35 – 12:55"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2604.15099"
+      },
       "sessionTrack": "Quantum 2"
     },
     "id": "8C-O3LS_Optimizing_Lattice_Surgery_via_Automatic_Layout_Searching_and_Loose_Schedul",
+    "keywords": [
+      "Computation",
+      "Compiler",
+      "Quantum computer",
+      "Overhead (engineering)",
+      "Scheduling (production processes)",
+      "Quantum",
+      "Compile time",
+      "Error detection and correction"
+    ],
     "locations": [
       "Room 402"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2604.15099"
+    ],
+    "publicationDate": "2026-04-16",
     "sessionTitles": [
       "Session 8C: Quantum 2"
     ],
@@ -5059,11 +6043,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2604.15099",
+      "https://openalex.org/W7154864918"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This is the source code for the paper “Breaking Barriers in Atomic Scaling: A Hardware–Software-Collaborated Framework to Deconstruct RDMA Atomic”. The codebase is structured as follows: the directory contains the modified providers/mlx5/ for rdma-core, while ./fusioncas contains the FusionCAS runtime, experiment scripts, configurations, and evaluation workloads. We modify parts of rdma-core/providers/mlx5 to implement the Fusa framework, and the intended usage is to clone rdma-core, replace its providers/mlx5 directory with ours, and rebuild to run the framework and experiments.",
     "authorInstitutions": "Guangyang Deng (Xiamen University); Qiangsheng Su (Xiamen University); Zhirong Shen (Xiamen University); Qing Wang (Nanjing University); Yina Lv (Xiamen University); Ronglong Wu (Xiamen University); Jiwu Shu (Xiamen University)",
     "authors": [
       "Guangyang Deng",
@@ -5074,17 +6061,41 @@
       "Ronglong Wu",
       "Jiwu Shu"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Wednesday, July 1, 2026 12:55 – 13:15"
     ],
+    "doi": "10.5281/zenodo.19347430",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19347430"
+      },
       "sessionTrack": "HPC"
     },
     "id": "8D-Breaking_Barriers_in_Atomic_Scaling_A_Hardware_Software-Collaborated_Framework_t",
+    "keywords": [
+      "Codebase",
+      "Remote direct memory access",
+      "Directory",
+      "Source code",
+      "Code (set theory)",
+      "Unpacking",
+      "Atomicity"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19347430"
+    ],
+    "publicationDate": "2026-03-31",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 8D: HPC"
     ],
@@ -5096,7 +6107,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19347430",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7150801665"
     ]
   },
   {
@@ -5235,7 +6248,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This artifact contains the HartBreaker fuzzing framework for RISC-Vprocessor verification, together with pre-built simulator binaries,Docker containers, and scripts to reproduce all figures (Figures~8--14)from the paper. The artifact runs inside Docker containers to ensure aconsistent environment. Reviewers can reproduce each figureindependently using the provided scripts, which handle data collection,processing, and PDF figure generation. A Zenodo archive provides apersistent, citable snapshot of the full artifact.",
     "authorInstitutions": "Quentin Bordier (ETH Zurich); Tobias Kovats (ETH Zurich); Flavien Solt (UC Berkeley); Kaveh Razavi (ETH Zurich)",
     "authors": [
       "Quentin Bordier",
@@ -5243,17 +6256,39 @@
       "Flavien Solt",
       "Kaveh Razavi"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Wednesday, July 1, 2026 14:50 – 15:10"
     ],
+    "doi": "10.5281/zenodo.19417381",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19417381"
+      },
       "sessionTrack": "Verification and Robustness"
     },
     "id": "9A-HartBreaker_Deterministic_Fuzzing_of_Multi-Hart_RISC-V_CPUs_with_Non-Determinist",
+    "keywords": [
+      "Fuzz testing",
+      "Scripting language",
+      "Artifact (error)",
+      "Snapshot (computer storage)",
+      "Software"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19417381"
+    ],
+    "publicationDate": "2026-04-04",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 9A: Verification and Robustness"
     ],
@@ -5265,7 +6300,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19417381",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7149821477"
     ]
   },
   {
@@ -5303,24 +6340,50 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Accelerators provide large performance and energy-efficiency benefits, but can significantly change the hardware-software interface. The täkō programmable memory hierarchy accelerates data movement by enabling programmers to run user-defined callback functions triggered by cache misses, evictions, and writebacks. However, it also leads to drastically increased complexity and counterintuitive outcomes. In response, we develop an ISA-level memory consistency model (MCM) for täkō that captures the semantics of its operation, and we show how it enables programmers to formally reason about their täkō programs. We also prove the soundness of this ISA-level MCM by constructing a detailed täkō implementation model and verifying that all executions of the implementation model are allowed by our ISA-level MCM. Along the way, we discover useful insights about microarchitectural modeling and verification that are applicable to hardware in general. This is the extended version of the ISCA 2026 paper \"täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies\". This version adds material on additional litmus tests to Section V to further explore the programmability of täkō using our ISA-level MCM.",
     "authorInstitutions": "Pranav Srinivasan (University of Michigan); Manos Kapritsos (University of Michigan); Yatin A. Manerkar (University of Michigan)",
     "authors": [
       "Pranav Srinivasan",
       "Manos Kapritsos",
       "Yatin A. Manerkar"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 15:30 – 15:50"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.04172"
+      },
       "sessionTrack": "Verification and Robustness"
     },
     "id": "9A-t_k_Formal_Enabling_Robust_Software_for_Programmable_Memory_Hierarchies",
+    "keywords": [
+      "Callback",
+      "Sequential consistency",
+      "Memory hierarchy",
+      "Memory model",
+      "Semantics (computer science)",
+      "Consistency (knowledge bases)",
+      "Software",
+      "Soundness",
+      "Cache coherence",
+      "Consistency model"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.04172"
+    ],
+    "publicationDate": "2026-05-05",
     "sessionTitles": [
       "Session 9A: Verification and Robustness"
     ],
@@ -5332,11 +6395,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.04172",
+      "https://openalex.org/W7160670509"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Modern server workloads exhibit massive instruction footprints that heavily pressure the processor front-end, making L1 instruction (L1I) prefetching critical for sustaining performance. However, this paper shows that current L1I prefetchers fail to reach their full potential due to two key limitations. First, L1I prefetches crossing page boundaries require address translation before issuance, and translation latency reduces prefetch timeliness. Second, the reuse behavior of code lines fetched by L1I prefetches is highly heterogeneous: while some lines are reused many times, others are dead-on-arrival. This paper introduces Instruction Prefetch-Centric Cache and TLB Management (IP-CaT), the first microarchitectural framework jointly optimizing TLB and cache management for L1I prefetching. IP-CaT consists of two components: (i) the translation Prefetch Buffer (tPB), a small structure colocated with the second-level TLB (sTLB) that stores page table entries fetched by page-crossing L1I prefetches, reducing translation overheads; and (ii) the Trimodal Instruction Prefetch Replacement Policy (TIPRP), a decision-tree-based L2 cache replacement policy specialized for lines fetched by L1I prefetches. We evaluate IP-CaT with three state-of-the-art L1I prefetchers: EPI, FNL+MMA, and Barca. Across 105 contemporary server workloads, IP-CaT consistently improves performance. For example, IP-CaT+EPI achieves an 8.7% geomean speedup over EPI alone. We further show that IP-CaT outperforms state-of-the-art instruction TLB prefetching, advanced TLB replacement (CHiRP), and state-of-the-art code-aware, prefetch-aware, and general-purpose cache replacement policies, including Emissary, SHiP++, and Mockingjay.",
     "authorInstitutions": "Alexandre Valentin Jamet (Barcelona Supercomputing Center); Georgios Vavouliotis (Huawei Research); Marti Torrents (Barcelona Supercomputing Center); Dimitrios Chasapis (Barcelona Supercomputing Center); Marc Casas (Barcelona Supercomputing Center)",
     "authors": [
       "Alexandre Valentin Jamet",
@@ -5345,17 +6411,41 @@
       "Dimitrios Chasapis",
       "Marc Casas"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Wednesday, July 1, 2026 14:50 – 15:10"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.12433"
+      },
       "sessionTrack": "Prefetching and Caches 2"
     },
     "id": "9B-Enhancing_Instruction_Prefetching_via_Cache_and_TLB_Management",
+    "keywords": [
+      "Translation lookaside buffer",
+      "Instruction prefetch",
+      "Cache",
+      "Speedup",
+      "CPU cache",
+      "Key (lock)",
+      "Latency (audio)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.12433"
+    ],
+    "publicationDate": "2026-05-12",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 9B: Prefetching and Caches 2"
     ],
@@ -5367,7 +6457,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.12433",
+      "https://openalex.org/W7161204258"
     ]
   },
   {
@@ -5814,7 +6907,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The Mixture-of-Experts (MoE) architecture is crucial for scaling large language models, but its scalability is severely limited by inter-GPU communication bottlenecks in multi-GPU systems. Although overlapping communication with computation is a widely recognized optimization, its effective deployment still remains challenging, both in terms of performance and programmability. In this work, we identify the root cause as a fundamental abstraction mismatch between MoE's dynamic, irregular token-to-expert mapping and the static, address-centric communication model of modern GPUs, which necessitates a complex software mediation phase to resolve addresses before data transfers, limiting performance and software flexibility. To resolve this, we propose MoE-Hub, a hardware-software co-design that introduces a destination-agnostic communication paradigm. MoE-Hub decouples data transmission from address management, allowing producers to send data immediately after routing using only a logical destination, while address allocation and data-flow orchestration are handled transparently by lightweight hardware in the GPU hub. By hardware-accelerating the entire communication control plane, MoE-Hub enables seamless and transparent overlap. Our evaluation shows that MoE-Hub achieves 1.40x-3.08x per-layer and 1.21x-1.98x end-to-end speedup over state-of-the-art systems.",
     "authorInstitutions": "Zhuoshan Zhou (Shanghai Jiao Tong University); Chen Zhang (Shanghai Jiao Tong University); Shuyi Zhang (Shanghai Jiao Tong University); Qijun Zhang (Shanghai Jiao Tong University); Haibo Wang (Huawei); Zhe Zhou (Huawei); Zhipeng Tu (Huawei); Guangyu Sun (Peking University); Yijia Diao (Shanghai Jiao Tong University); Zhigang Ji (Shanghai Jiao Tong University); Jingwen Leng (Shanghai Jiao Tong University); Guanghui He (Shanghai Jiao Tong University); Minyi Guo (Shanghai Jiao Tong University)",
     "authors": [
       "Zhuoshan Zhou",
@@ -5831,17 +6924,44 @@
       "Guanghui He",
       "Minyi Guo"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Wednesday, July 1, 2026 17:00 – 17:20"
     ],
+    "doi": "10.48550/arxiv.2605.05888",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2605.05888"
+      },
       "sessionTrack": "LLM 5"
     },
     "id": "10A-MoE-Hub_Taming_Software_Complexity_for_Seamless_MoE_Overlap_with_Hardware-Accele",
+    "keywords": [
+      "Scalability",
+      "Software",
+      "Software deployment",
+      "Abstraction",
+      "Orchestration",
+      "Speedup",
+      "Key (lock)",
+      "Models of communication",
+      "Data transmission",
+      "Pipeline (software)"
+    ],
     "locations": [
       "Ballroom A"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2605.05888"
+    ],
+    "publicationDate": "2026-05-07",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 10A: LLM 5"
     ],
@@ -5853,7 +6973,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.48550/arxiv.2605.05888",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7160660520"
     ]
   },
   {
@@ -6070,17 +7192,39 @@
       "Jingyu Guo",
       "Xinyu Chen"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Wednesday, July 1, 2026 17:00 – 17:20"
     ],
+    "doi": "10.5281/zenodo.19449314",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.19449314"
+      },
       "sessionTrack": "ML Accelerators 2"
     },
     "id": "10B-UniCore_A_Bit-Width_Scalable_GEMM_Unit_for_Unified_LLM_Inference",
+    "keywords": [
+      "Scalability",
+      "Inference",
+      "Unit (ring theory)",
+      "Representation (politics)",
+      "Key (lock)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.19449314"
+    ],
+    "publicationDate": "2026-04-07",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 10B: ML Accelerators 2"
     ],
@@ -6092,11 +7236,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/10.5281/zenodo.19449314",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7151332840"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The widespread adoption of mixed-precision quantization in large language models (LLMs) has created demand for hardware that can efficiently perform multiply-accumulate (MAC) operations across mixed datatypes and switch datatypes at runtime. Existing FPGA-based MAC solutions fall short due to limitations in fixed-datatype design, inefficient spatial or temporal resource sharing, and poor support for mixed-precision execution. These limitations collectively lead to under-utilization of DSP resources, limiting achievable parallelism and throughput. In this work, we present XtraMAC, a novel MAC architecture that unifies integer, floating-point, and mixed-precision operations within a single, datatype-adaptive microarchitecture. XtraMAC decomposes all supported MAC formats into a shared integer mantissa product with lightweight sign and exponent handling, enabling dynamic operand packing and efficient DSP resource sharing with constant latency and initiation interval of one across all datatypes. Evaluated on an AMD Xilinx U55c FPGA, XtraMAC achieves 1.4-2.0x higher compute density, reduces per-operation LUT, FF, and DSP consumption by 27-51%, and delivers up to 1.9x greater energy efficiency and 1.2x speedup on representative mixed-precision LLM workloads. The implementation of XtraMAC is open-sourced at https://github.com/Xtra-Computing/XtraMAC.",
     "authorInstitutions": "Feng Yu (National University of Singapore); Hongshi Tan (National University of Singapore); Yao Chen (National University of Singapore); Weng-Fai Wong (National University of Singapore); Bingsheng He (National University of Singapore)",
     "authors": [
       "Feng Yu",
@@ -6105,17 +7251,42 @@
       "Weng-Fai Wong",
       "Bingsheng He"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 17:20 – 17:40"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.06052"
+      },
       "sessionTrack": "ML Accelerators 2"
     },
     "id": "10B-XtraMAC_An_Efficient_MAC_Architecture_for_Mixed-Precision_LLM_Inference_on_FPGA",
+    "keywords": [
+      "Operand",
+      "Speedup",
+      "Field-programmable gate array",
+      "Latency (audio)",
+      "Digital signal processing",
+      "Inference",
+      "Limiting",
+      "Architecture",
+      "Quantization (signal processing)"
+    ],
     "locations": [
       "Room 302"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.06052"
+    ],
+    "publicationDate": "2026-05-07",
     "sessionTitles": [
       "Session 10B: ML Accelerators 2"
     ],
@@ -6127,7 +7298,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.06052",
+      "https://openalex.org/W7160726962"
     ]
   },
   {
@@ -6321,7 +7495,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "While GPUs dominate massively parallel computing through the single-instruction, multiple-thread (SIMT) programming model, their underlying single-instruction, multiple-data (SIMD) execution incurs substantial energy overhead from frequent register file (RF) accesses and complex control logic. We present DICE, a novel architecture that addresses these inefficiencies by replacing the SIMD backend with minimal-overhead, statically scheduled coarse-grained reconfigurable arrays (CGRAs). Unlike SIMD units that execute warps of threads in lockstep, DICE dispatches active threads in a pipelined manner onto the CGRA fabric, where data flow directly between processing elements (PEs), reducing RF accesses for intermediate values. To handle operations with runtime dynamism, such as variable-latency memory loads and data-dependent control flow, while preserving static scheduling, DICE compiles programs into \"p-graphs\" by partitioning dynamic dependence edges across separate CGRA configurations. DICE further introduces several key optimizations: double-buffered configuration memory to hide reconfiguration latency, compile-time p-graph unrolling to enhance resource utilization, and a temporal memory coalescing unit (TMCU) to merge memory requests from consecutive, pipelined threads. Evaluations on Rodinia benchmarks in Accel-sim demonstrate that DICE reduces register file accesses by 68% on average. With equivalent computation and memory resources, DICE's CGRA Processors (CPs) achieve a geometric mean of 1.77-1.90x dynamic energy efficiency and 42.0%-45.9% average power reduction compared to the modeled NVIDIA Turing Streaming Multiprocessors (SMs), while the full DICE system achieves performance comparable to the modeled Turing GPU baselines. DICE demonstrates that spatial pipeline execution can deliver substantial energy savings without sacrificing performance.",
     "authorInstitutions": "Jiayi Wang (University of Washington); Ang Da Lu (University of Washington); Zhichen Zeng (University of Washington); Ang Li (University of Washington)",
     "authors": [
       "Jiayi Wang",
@@ -6329,17 +7503,42 @@
       "Zhichen Zeng",
       "Ang Li"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wednesday, July 1, 2026 16:20 – 16:40"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2605.05496"
+      },
       "sessionTrack": "Domain Specific Accelerators 3"
     },
     "id": "10D-DICE_Enabling_Efficient_General-Purpose_SIMT_Execution_with_Statically_Scheduled",
+    "keywords": [
+      "Control flow",
+      "Register file",
+      "SIMD",
+      "Control reconfiguration",
+      "Thread (computing)",
+      "Massively parallel",
+      "Overhead (engineering)",
+      "Computation",
+      "Pipeline (software)"
+    ],
     "locations": [
       "Room 301"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2605.05496"
+    ],
+    "publicationDate": "2026-05-06",
     "sessionTitles": [
       "Session 10D: Domain Specific Accelerators 3"
     ],
@@ -6351,7 +7550,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://arxiv.org/abs/2605.05496",
+      "https://openalex.org/W7160726999"
     ]
   },
   {
@@ -6457,7 +7659,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Graph Transformers (GTs) have emerged as a powerful paradigm for graph representation learning, as their attention mechanism can capture long-range dependencies and model complex structural interactions beyond the local message passing scope of conventional Graph Neural Networks (GNNs). This capability has enabled GTs to achieve strong accuracy across important domains, including recommendation systems and VLSI congestion prediction. However, the global attention mechanism in GTs requires each vertex to attend to all other vertices, incurring O(N 2 ) computation and intermediate data movement. As graph size increases, this quadratic complexity leads to prohibitive computational overhead and excessive off chip memory traffic, fundamentally limiting the scalability and efficiency of GT execution. In this paper, we propose TAGT, the first efficient topology aware Graph Transformer accelerator designed to mitigate these performance bottlenecks. Specifically, we integrate a topology aware sparsification and merging approach into the accelerator design that dramatically reduces the O(N 2 ) complexity. TAGT introduces a structure-aware sparse subgraph, termed the Topology Dependency Subgraph (TDS), which exploits inherent topological dependencies and reduces the number of attended edges to O(N log N) on average. The TDS is designed to retain local neighborhood structure while capturing essential higher order interrelationships. By performing attention on the TDS, TAGT approximates global attention over the entire graph with negligible accuracy loss while eliminating most unnecessary computations and off-chip data movements. To fully harness the performance potential of this approach, TAGT incorporates a data driven loading and merging engine to minimize off-chip memory accesses and reduce TDS construction overhead on the fly. TAGT also introduces a TDS-based fast attention unit to improve the parallelism of attention computation. We implement and evaluate TAGT on a Xilinx Alveo U280 FPGA card. Experimental results show that TAGT achieves average speedups of 175.4× and 18.6×, together with energy savings of 217.2× and 24.8×, over state-of-the-art software GT solutions on Intel Xeon CPUs and NVIDIA A100 GPUs, respectively. Compared with representative GNN accelerators, including FlowGNN, MEGA, and BingoGCN, TAGT delivers average speedups of 8.2×, 6.9×, and 4.7×, and energy savings of 9.3×, 7.5×, and 5.2×, respectively.",
     "authorInstitutions": "Hui Yu (The Hong Kong University of Science and Technology); Wei Zhang (Hong Kong University of Science and Technology); Ligang He (University of Warwick); Jin Zhao (Huazhong University of Science and Technology); Yu Zhang (Service Computing Technology and System Lab, Huazhong University of Science and Technology); Zixiao Wang (National Engineering Research Center for Big Data Technology and System, Services Computing Technology and System Lab, Cluster and Grid Computing Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, China)",
     "authors": [
       "Hui Yu",
@@ -6467,17 +7669,39 @@
       "Yu Zhang",
       "Zixiao Wang"
     ],
+    "container": "Warwick Research Archive Portal (University of Warwick)",
     "dates": [
       "Wednesday, July 1, 2026 16:40 – 17:00"
     ],
+    "doi": "None",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Domain Specific Accelerators 3"
     },
     "id": "10D-TAGT_An_Efficient_Graph_Transformer_Accelerator_with_Topology-aware_Sparsificati",
+    "keywords": [
+      "Scalability",
+      "Computation",
+      "Graph",
+      "Exploit",
+      "Network topology",
+      "Topology (electrical circuits)",
+      "Memory footprint",
+      "Dependency graph",
+      "Quadratic equation"
+    ],
     "locations": [
       "Room 301"
     ],
+    "publicationDate": "2026-03-28",
+    "publisher": "University of Warwick",
     "sessionTitles": [
       "Session 10D: Domain Specific Accelerators 3"
     ],
@@ -6489,7 +7713,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://iscaconf.org/isca2026/program/"
+      "https://doi.org/None",
+      "https://iscaconf.org/isca2026/program/",
+      "https://openalex.org/W7161102336"
     ]
   }
 ]

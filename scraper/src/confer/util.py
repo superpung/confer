@@ -9,11 +9,39 @@ from urllib.parse import parse_qs, urlparse
 
 from bs4 import Tag
 
+DOI_RE = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Za-z0-9]+", re.IGNORECASE)
+
 
 def clean_text(node: Tag | None) -> str:
     if node is None:
         return ""
     return re.sub(r"\s+", " ", node.get_text(" ", strip=True)).strip()
+
+
+def strip_markup_text(value: str) -> str:
+    if not value:
+        return ""
+    text = re.sub(r"<[^>]+>", "", value)
+    text = re.sub(r"</?[A-Za-z][^>\s]*(?=\s|$)", "", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def clean_doi(value: str) -> str:
+    text = re.sub(r"\s+", "", value or "")
+    text = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"^doi:\s*", "", text, flags=re.IGNORECASE)
+    match = DOI_RE.search(text)
+    doi = match.group(0) if match else text
+    return doi.strip(" .;,)")
+
+
+def doi_from_url(url: str) -> str:
+    if not url:
+        return ""
+    parsed = urlparse(url)
+    if parsed.netloc.lower() in {"doi.org", "dx.doi.org"}:
+        return clean_doi(parsed.path.lstrip("/"))
+    return clean_doi(url) if DOI_RE.search(url) else ""
 
 
 def split_classes(value: Any) -> list[str]:

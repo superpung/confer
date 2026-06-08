@@ -6,10 +6,21 @@
       "Markus Böck",
       "Jürgen Cito"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798223",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "02bf0cf8-f4a0-4899-9eb5-fa8823c44050",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "653-680",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -21,9 +32,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798223",
       "https://2026.splashcon.org/details/oopsla-2026/24/Static-Factorisation-of-Probabilistic-Programs-With-User-Labelled-Sample-Statements-a",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Levy’s call-by-push-value (CBPV) is a language that subsumes both call-by-name and call-by-value lambda calculi by syntactically distinguishing values from computations and explicitly specifying execution order. This low-level handling of computation suspension and resumption makes CBPV suitable as a compiler intermediate representation (IR), while its substitution evaluation semantics affords compositional reasoning about programs. In particular, βη-equivalences in CBPV have been used to justify compiler optimizations in low-level IRs. However, these equivalences do not validate commuting conversions , which are key transformations in compiler passes such as A-normalization. Such transformations syntactically rearrange computations without affecting evaluation order, and can reveal new opportunities for inlining. In this work, we identify the commuting conversions of CBPV, define a commuting conversion normal form (CCNF) for CBPV, present a single-pass transformation into CCNF based on A-normalization, and prove that well-typed, translated programs evaluate to the same result. To avoid the usual code duplication issues that also arise with ANF, we adapt the explicit join point constructs by Maurier et al. Our results are all mechanized in Lean 4.",
@@ -34,10 +47,21 @@
       "Annabel Levy",
       "Stephanie Weirich"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798210",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "082be025-8652-4e4a-8f5e-9ddbd171d998",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "289-313",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -49,11 +73,12 @@
       "OOPSLA"
     ],
     "urls": [
-      "https://2026.splashcon.org/details/oopsla-2026/11/Commuting-Conversions-and-Join-Points-for-Call-By-Push-Value",
       "https://doi.org/10.1145/3798210",
+      "https://2026.splashcon.org/details/oopsla-2026/11/Commuting-Conversions-and-Join-Points-for-Call-By-Push-Value",
       "https://ionathan.ch/assets/pdfs/ccnf.pdf",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Context-free grammars (CFGs) are the de-facto formalism for declaratively describing concrete syntax for programming languages and generating parsers. One of the major challenges in defining a desired syntax is ruling out all possible ambiguities in the CFG productions that determine scoping rules as well as operator precedence and associativity. Practical tools for parser generation typically apply ad-hoc approaches for resolving such ambiguities, which might result in a parser’s behavior that contradicts the intents of the language designer. In this work, we present a user-friendly approach to soundly repair grammars with ambiguities, which is inspired by the programming by example line of research in automated program synthesis. At the heart of our approach is the interpretation of both the initial CFG and additional examples that define the desired restrictions in precedence and associativity, as tree automata (TAs). The technical novelties of our approach are (1) a new TA learning algorithm that constructs an automaton based on the original grammar and examples that encode the user’s preferred ways of resolving ambiguities all in a single TA, and (2) an efficient algorithm for TA intersection that utilises reachability analysis and optimizations that significantly reduce the size of the resulting automaton, which results in idiomatic CFGs amenable to parser generators. We have proven the soundness of the algorithms, and implemented our approach in a tool called Greta, demonstrating its effectiveness on a series of case studies.",
@@ -63,10 +88,21 @@
       "Gokul Rajiv",
       "Ilya Sergey"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798242",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0a210cad-e651-4813-996f-8b2927abefcf",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1153-1179",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -78,9 +114,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798242",
       "https://2026.splashcon.org/details/oopsla-2026/42/Grammar-Repair-with-Examples-and-Tree-Automata",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Neural Theorem Proving (NTP) employs Large Language Models (LLMs) to automate formal proofs in proof assistants. While LLMs have achieved relatively remarkable success in informal reasoning tasks using natural languages, the transition to mechanized formal theorem proving presents persistent challenges. Mechanized proof languages often contain many syntactic constructs and diverse, specialized proof tactics, which facilitate expert use but have no direct counterpart in informal mathematical proofs. These prover-specific idioms represent an additional burden for LLM-based NTPs that might be otherwise successful in generating informal proofs. Seeking to bridge this gap between formal proof construction and informal reasoning, in order to better facilitate NTP, this work approaches these challenges from a language design perspective. We look at common reasoning patterns in informal proofs and in existing mechanized proofs, and design \\emph{Minilang} — a minimalist proof language that captures these reasoning patterns. In contrast to proof languages (informal and formal) that often feature a large collection of operations with unclear semantic boundaries, Minilang is deliberately kept minimalist — its core design comprises only 10 proof operations, each with clear semantic distinctions. We further develop a rule-based translator from Isabelle’s proof language (Isar) to Minilang, translating ~340K existing Isabelle proofs with an ~85% success rate. Using this translated corpus, we finetune two LLMs to compare machine learning performance on Minilang versus the original Isar language. Experiments show Minilang benefits the two LLMs by improving the pass@1 success rate on the PISA benchmark by up to 20/29 percentage points in comparison to the Isar-based LLMs w/wo Sledgehammer. The pass@1 rate reaches 69.1%, exceeding the prior work Baldur’s pass@64 (65.7%); the pass@8 rate reaches 79.2%, exceeding the state-of-the-art on PISA (71.0%) achieved by Magnushammer.",
@@ -92,10 +130,21 @@
       "Haonan Li",
       "Conrad Watt"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798275",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0ad45e5f-89c7-4db2-a9d9-a1efc9695105",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "2073-2098",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -107,9 +156,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798275",
       "https://2026.splashcon.org/details/oopsla-2026/73/A-Minimalist-Proof-Language-for-Neural-Theorem-Proving-over-Isabelle-HOL",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Cryptographic libraries are a main target of timing side-channel attacks. A practical means to protect against these attacks is to adhere to the constant-time (CT) policy. However, it is hard to write constant-time code, and even constant-time code can be turned vulnerable by mainstream compilers. So how can we verify that binary code is constant-time? The obvious answer is to use binary-level CT tools. To do so, a common approach is to use decompilers or lifters as a front-end for CT analysis tools operating on source code or IR. Unfortunately, this Decompile-then-Analyze approach is problematic with current decompilers. To illustrate this fact, we use the recent Clangover vulnerability and other constructed examples to show that five popular decompilers eliminate CT violations, making them unsound to be used as front-ends to the approach. In this paper, we formalize and develop foundations to asses whether a decompiler is fit for the Decompile- then-Analyze approach. We propose the property of CT transparency, which states that a transformation neither eliminates nor introduces CT violations. We also present a general method for proving that a program transformation is CT transparent. Then, we leverage our foundations and additional empirical methods to build CT-RetDec, a CT analysis tool based on a modified version of the popular LLVM-based decompiler RetDec. We evaluate CT-RetDec on a benchmark set of real-world vulnerabilities in binaries, and show that the modifications had significant impact on how well CT-RetDec performs. As a contribution of independent interest, we found that popular tools for binary-level CT analysis, which do not employ a decompiler explicitly, still rely on similar program transformations before analysis. We show that two such tools employ transformations that are not CT transparent, and, consequently, that the tools incorrectly accept non-CT programs. While our examples are very specific and do not invalidate the general approach of these tools for real-world code, we advocate that CT tool developers counter such potential issues by documenting and proving the transparency of the transformations used in their tools.",
@@ -122,10 +173,21 @@
       "Sören van der Wall",
       "Zhiyuan Zhang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798201",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0bc174f2-8281-4bfa-9265-d16f18ec26f9",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "29-58",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -137,9 +199,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798201",
       "https://2026.splashcon.org/details/oopsla-2026/2/Decompiling-for-Constant-Time-Analysis",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Large Language Models (LLMs) have gained significant traction in software engineering for automating tasks such as unit test generation. Most existing studies prioritize code coverage as the primary metric for enhancing test suite effectiveness. However, prior research has shown that although code coverage can reach approximately 80%, the mutation score, which generally exhibits a stronger correlation with defect detection effectiveness, attains only about 35%. This gap highlights the need to enhance test suite effectiveness guided by mutation score rather than code coverage. Recent studies, including MuTAP and MutGen, explored the use of survived mutants to enhance test suite effectiveness. However, their evaluations were limited to simple standalone methods that rely on built-in functions and standard libraries. Non-standalone methods, which depend on other classes and involve complex user-defined types, are more intricate and commonly found in real-world projects. The limited contextual information and basic repair mechanisms in their prompt designs make it unclear whether their performance can generalize to non-standalone methods. Moreover, the two studies rely on existing language-specific, rule-based mutation techniques, which require specific configurations and incur additional costs when adapting to other programming languages. To bridge this gap, we propose a novel, fully automatic LLM-based approach to enhance test suite effectiveness, guided by survived mutants. The approach augments initial test suites by integrating mutation testing with test case generation. It takes focal method information as input and generates test cases targeting survived mutants identified from applying the initial test suites. Our approach incorporates multiple prompt techniques, rich contextual information, and an advanced repair mechanism to effectively generate test cases for non-standalone methods. The evaluation covers 1,035 focal methods, categorized as standalone or non-standalone. On average, the mutation score increases by 16.11% for standalone methods and 8.09% for non-standalone methods. We validate the practical impact of augmented test suites in LLM-based code generation. After test suite augmentation, pass@1 decreased by 0.3152 and 0.1772 on average for standalone and non-standalone methods, respectively, indicating the effectiveness of our approach in reducing false positives caused by insufficient test cases in code generation evaluation.",
@@ -179,10 +243,21 @@
       "Tobias Gürtler",
       "Benjamin Lucien Kaminski"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798215",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "118dbb05-ab22-4e8b-af13-3e1cd74eb561",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "427-455",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -194,9 +269,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798215",
       "https://2026.splashcon.org/details/oopsla-2026/16/noDice-Inference-for-Discrete-Probabilistic-Programs-with-Nondeterminism-and-Conditi",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Higher-order concurrent separation logics, such as Iris, have been tremendously successful in verifying safety properties of concurrent programs. However, state-of-the-art attempts to verify liveness properties in such logics have so far either lacked modularity (the ability to compose specifications of independent modules), or they have been far too complex to mechanize in a proof assistant. In this work, we introduce Lawyer — a mechanized program logic for modular verification of (fair) termination of concurrent programs. Lawyer draws inspiration from state-of-the-art approaches which use obligations for specifying and proving termination. However, unlike these approaches which incorporate obligations by instrumenting the source code with erasable auxiliary code and state, Lawyer, avoids such instrumentations. Instead, Lawyer, incorporates obligations into the logic by embedding them into a purely logical labeled transition system that the program is shown to refine - this makes Lawyer far more amenable to mechanization. We demonstrate the expressivity of Lawyer by verifying termination of a range of examples, including modular verification of a client program whose termination relies on correctness of a fair lock library, and (separately) prove that a ticket lock implementation implements that library’s interface. To the best of our knowledge, Lawyer is the first mechanized program logic that supports modular higher-order impredicative liveness specifications of program modules. All the results that appear in the paper have been mechanized in the Rocq proof assistant on top of the Iris separation logic framework.",
@@ -208,10 +285,21 @@
       "Lars Birkedal",
       "Amin Timany"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798240",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "12d266df-73ee-4b70-8f94-961c3d946a5a",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1099-1125",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -223,9 +311,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798240",
       "https://2026.splashcon.org/details/oopsla-2026/40/Lawyer-Modular-Obligations-Based-Liveness-Reasoning-in-Higher-Order-Impredicative-Co",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Reasoning about floating-point arithmetic is notoriously hard. While static and dynamic analysis techniques or program repair have made significant progress, more work is still needed to make them relevant to real-world code. On the critical path to that goal is understanding what real-world floating-point code looks like. To close that knowledge gap, this paper presents the first large-scale empirical study of floating-point arithmetic usage across public GitHub repositories. We focus on statically typed languages to allow our study to scale to millions of repositories. We follow state-of the art mining practices including random sampling and filtering based on only intrinsic properties to avoid bias, and identify floating-point usage by searching for keywords in the source code, and programming language constructs (e.g., loops) by parsing the code. Our evaluation supports the claim often made in papers that floating-point arithmetic is widely used. Comparing statistics such as size and usage of certain constructs and functions, we find that benchmarks used in literature to evaluate automated reasoning techniques for floating-point arithmetic are in certain aspects representative of `real-world’ code, but not in all. We publish a dataset of 10 million real-world floating-point functions extracted from our study. We demonstrate in a case study how it may be used to identify new floating-point benchmarks and help future techniques for floating-point arithmetic to be designed and evaluated to match actual users’ expectations.",
@@ -236,6 +326,7 @@
       "Eva Darulova"
     ],
     "dates": [],
+    "doi": "10.1145/3798203",
     "eventType": "Paper",
     "id": "1731932d-de84-4b57-8c09-3350dc912b25",
     "locations": [],
@@ -265,10 +356,21 @@
       "Swarnendu Biswas",
       "Mainak Chaudhuri"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798244",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "17779ca0-0cf6-44f0-be93-3a40c84e6d59",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1208-1236",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -280,9 +382,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798244",
       "https://2026.splashcon.org/details/oopsla-2026/44/Designing-GPU-Data-Structures-for-Efficient-Memory-Oversubscription",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Profile-guided optimization (PGO) is a well-established technique for improving program performance, being integrated into major compilers such as GCC, LLVM/Clang, and Microsoft Visual C++. PGO collects information about a program’s execution and uses it to guide optimizations such as inlining, and code layout. However, these very transformations alter the program’s control flow, rendering the collected profiles stale or inaccurate. To deal with this problem, this paper investigates how to reuse profile data after optimization without re-executing the program. We study two complementary strategies: prediction, which estimates likely hot code paths in the optimized program, and projection, which transfers profile information from the original control-flow graph to its transformed version. We evaluate several techniques for reconstructing profile data, including a large language model (LLM)–based approach using GPT-4o, and a lightweight method that compares opcode histograms of code regions recursively to identify structural similarities. Our results show that the histogram-based method is not only simpler but also consistently more accurate than both the LLM-based approach and prior prediction and projection techniques, including those implemented in LLVM and the BOLT binary optimizer.",
@@ -352,10 +456,21 @@
       "Stefan Mitsch",
       "André Platzer"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798230",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1f9e0afc-61f5-49c9-b462-386564128a8d",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "850-876",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -367,9 +482,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798230",
       "https://2026.splashcon.org/details/oopsla-2026/31/Hybrid-Game-Control-Envelope-Synthesis",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "We propose a method for mechanically translating iterative dataflow analysis (IDA) algorithms to algebraic program analysis (APA) algorithms capable of computing exactly the same set of dataflow facts. The method is useful because while most of the dataflow analysis algorithms used in practice are expressed as iterative procedures, APA provides an alternative and inherently-compositional approach to solving dataflow problems, thus making it well suited for certain applications (e.g., incremental analysis of a program that goes through frequent code changes, or amortizing the cost of answering a large number of dataflow queries for the same program). However, manually crafting an APA algorithm not only is labor intensive and error prone but also can lead to suboptimal performance. Our method overcomes the limitation by providing a mechanical translation that guarantees to be correct by construction. Our method handles a broad class of dataflow analysis problems — the only requirements are that (1) the set of dataflow facts is finite and (2) the dataflow functions distribute over the confluence operation (e.g., set union). They include classical dataflow problems whose IDA algorithms can be expressed using Gen/Kill sets, such as reaching definitions, live variables, and available expressions. They also include non Gen/Kill problems such as copy constant propagation, truly-live variables, and possibly-initialized variables. Our experimental evaluation shows that the translated APA algorithms are not only simpler and easier to understand, but also significantly faster than manually-designed APA algorithms, especially for incremental program analysis.",
@@ -406,10 +523,21 @@
       "Jiefang Lin",
       "August Shi"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798265",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "26e143ed-7a6f-4f46-86fb-4cddaeb73788",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1790-1816",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -421,9 +549,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798265",
       "https://2026.splashcon.org/details/oopsla-2026/65/Detecting-Flaky-Tests-by-Controlling-Nondeterministic-API-Behavior",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Refinement types often use SMT solvers to automate program verification. However, since SMT solvers are first-order, verification of properties that requires higher-order reasoning is not possible. Proof by Logical Evaluation (PLE) is an algorithm that provides a layer between refinement types and SMT solvers that permits symbolic evaluation of functions, but it lacks support for higher-order reasoning. We introduce PLEX, an extension to PLE, that supports $\\eta$-expansions, $\\beta$-reductions, and dependent pattern matching. We prove that PLEXis sound and terminating, describe its implementation in Liquid Haskell, and evaluate it on examples that make essential use of higher-order data, and as such cannot be handled by PLE. The new PLEX algorithm bridges the gap between higher-order languages and first-order SMT solvers via the practical technique of refinement types.",
@@ -433,10 +563,21 @@
       "Niki Vazou",
       "Wouter Swierstra"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798248",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "27b44979-aa1b-4f8a-a308-9c381a7ab2ce",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1321-1347",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -448,9 +589,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798248",
       "https://2026.splashcon.org/details/oopsla-2026/48/PLEX-Normalization-for-Refinement-Types",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "The popularity of the Rust language continues to explode; yet, many critical codebases remain authored in C. Automatically translating C to Rust is thus an appealing course of action. Several works have gone down this path, handling an ever-increasing subset of C through a variety of Rust features, such as unsafe. While the prospect of automation is appealing, producing code that relies on unsafe negates the memory safety guarantees offered by Rust, and therefore the main advantages of porting existing codebases to memory-safe languages. We instead advocate for a different approach, where the programmer iterates on the original C, gradually making the code more structured until it becomes eligible for compilation to safe Rust. This means that redesigns and rewrites can be evaluated incrementally for performance and correctness against existing test suites and production environments. Compiling structured C to safe Rust relies on the following contributions: a type-directed translation from (a subset of) C to safe Rust; a novel static analysis based on “split trees” which allows expressing C’s pointer arithmetic using Rust’s slices and splitting operations; an analysis that infers which borrows need to be mutable; and a compilation strategy for C pointer types that is compatible with Rust’s distinction between non-owned and owned allocations. We evaluate our approach on real-world cryptographic libraries, binary parsers and serializers, and a file compression library. We show that these can be rewritten to Rust with small refactors of the original C code, and that the resulting Rust code exhibits similar performance characteristics as the original C code. As part of our translation process, we also identify and report undefined behaviors in the bzip2 compression library and in Microsoft’s implementation of the FrodoKEM cryptographic primitive.",
@@ -459,10 +602,21 @@
       "Aymeric Fromherz",
       "Jonathan Protzenko"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798229",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "284736f2-f184-49db-9dad-4078f06c8bc1",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "823-849",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -474,9 +628,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798229",
       "https://2026.splashcon.org/details/oopsla-2026/30/Scylla-Translating-an-Applicative-Subset-of-C-to-Safe-Rust",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Invariant synthesis is a fundamental problem in program verification, yet existing learning-based approaches rarely exploit the inherent symmetry present in many programs, particularly parameterized and concurrent systems. Such symmetry induces a symmetric reachable state space, naturally yielding symmetric samples and admitting symmetric invariants, motivating the task of learning symmetric invariants from symmetric samples. To this end, we introduce symmetric decision trees (SDTs), a novel hypothesis class that enforces symmetry structurally, guaranteeing symmetric invariants by construction. Furthermore, we develop a learning algorithm to construct SDTs and integrate it as the learner within the Horn-ICE framework, yielding our approach, Horn-SDT. Empirical evaluation on parameterized programs demonstrates that Horn-SDT achieves faster convergence and constructs more compact trees compared to non-symmetric baselines.",
@@ -486,6 +642,7 @@
       "Fei He"
     ],
     "dates": [],
+    "doi": "10.1145/3798200",
     "eventType": "Paper",
     "id": "2bc0e8f2-2202-403e-8b05-c7c392e9c858",
     "locations": [],
@@ -547,10 +704,21 @@
       "Sharad Malik",
       "Aarti Gupta"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798209",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2f97ae28-fa33-4e89-8fa3-34a2e31ad14b",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "260-288",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -562,10 +730,12 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798209",
       "https://2026.splashcon.org/details/oopsla-2026/10/Specy-Learning-Specifications-for-Distributed-Systems-from-Event-Traces",
       "https://www.cs.princeton.edu/~dh7120/assets/papers/PInfer_OOPSLA.pdf",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Software vulnerabilities pose severe security threats, highlighting the need for effective automated detection. Directed hybrid fuzzing, which combines the rapid exploration of fuzzing testing with the precise constraint solving of symbolic execution, has made notable advancements in vulnerability discovery. However, existing directed hybrid fuzzing approaches still face two key challenges: (1) inefficient seed selection, leading to inadequate prioritization of optimal inputs for symbolic execution, and (2) inefficient seed generation, resulting in suboptimal seed generation. To address these issues, we propose TACO-Fuzz, TArget-Centric cOncolic Fuzzing, which introduces a two-phase target-centric seed selection strategy to prioritize under-explored paths and a target-centric seed generation approach based on constructing extended path conditions, thereby improving seed quality. Our evaluation on a selected set of public benchmarks shows that TACO-Fuzz can outperform several representative state-of-the-art directed fuzzing tools, achieving up to an average speedup of nearly 10x in reaching target locations, along with comparable improvements in reproducing real-world vulnerabilities. Moreover, TACO-Fuzz contributed to the discovery of 17 previously unknown vulnerabilities, each assigned a CVE, and demonstrated faster vulnerability discovery and reproduction in most cases.",
@@ -577,10 +747,21 @@
       "Pengbo Du",
       "Hongliang Liang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798233",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "302caf15-95f3-4a3a-8a4d-0533751afba8",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "934-958",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -592,9 +773,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798233",
       "https://2026.splashcon.org/details/oopsla-2026/35/Efficient-Directed-Hybrid-Fuzzing-via-Target-Centric-Seed-Selection-and-Generation",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Debugging tools rely on compiler-generated metadata to present a source-language view, but current compilers often throw away or corrupt debugging information in optimised programs. Attempts to test debugging information are confounded by ad-hoc limitations of the debug info formats and a lack of clarity on whether the compiler or the format is to blame for any given loss. Adopting the “residual program” conceptual view of debug info, we conduct a study of the quality of debugging information in respect of the source-level dynamic call trees it can recover. We difference the trees recovered from optimised and unoptimised versions of the same program, producing a classification of the observed divergences. For each class we produce an analysis of whether format or compiler is to blame, and identify specific improvements that can address these defects.",
@@ -604,6 +787,7 @@
       "Stephen Kell"
     ],
     "dates": [],
+    "doi": "10.1145/3798213",
     "eventType": "Paper",
     "id": "33b68160-dd37-4bc9-a7c6-57d9798918ad",
     "locations": [],
@@ -635,10 +819,21 @@
       "Dalong Shi",
       "Yu Jiang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798235",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "38ac5514-d20d-492c-8588-739f321b68aa",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "985-1013",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -650,9 +845,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798235",
       "https://2026.splashcon.org/details/oopsla-2026/37/VeriEQ-Finding-Verilog-Simulators-and-Synthesizers-Bugs-with-Equivalence-Circuit-Tra",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Floating-point round-off errors are ubiquitous in numerically intensive programs arising in fields such as scientific computing and optimization. As floating-point errors potentially lead to unexpected and catastrophic program failures, one must derive guaranteed round-off thresholds to ensure the correctness of these programs. However, deterministic round-off thresholds tend to be too conservative to be usable in practice, since they often involve large round-off errors that occur with small probability. Probabilistic thresholds relax deterministic ones by specifying that the probability of the round-off error exceeding a threshold is below a given confidence. In this work, we propose a novel approach to probabilistic round-off analysis, by applying concentration inequalities over the Taylor expansion from FPTaylor (TOPLAS 2018). A major obstacle in applying concentration inequalities is that the Taylor expansion involves absolute values that make the calculation of the expected values of the first order partial differential terms difficult. Our first step to overcome this obstacle is a sound over-approximation that removes the absolute values in polynomial expressions. Then, we show how to handle fractional expressions by a transformation into polynomial case. Finally, we show how to improve our approach with range partitioning. Our approach is scalable since the key computational part is the calculation of expected values of polynomial expressions with independent variables, for which the linear and independence properties of expectation boost the computation. Experimental results show that our approach is orders of magnitude more time efficient, while producing thresholds with comparable precision against the state of the art.",
@@ -695,10 +892,21 @@
       "Yongbin Li",
       "Shuiguang Deng"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798238",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3cda72dc-0e38-4b8d-9736-faaad13abd69",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1041-1069",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -710,9 +918,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798238",
       "https://2026.splashcon.org/details/oopsla-2026/38/InspectCoder-Dynamic-Analysis-Driven-Self-Repair-through-interactive-LLM-Debugger-Co",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Verification of programs operating on mutable, heap-allocated data structures poses significant challenges due to potentially unbounded structures like linked lists and trees. In this paper, we present a novel relational heap encoding leveraging uninterpreted predicates and prophecy variables, reducing the task of verifying a program operating on heap data structures to the verification of a program operating on integers only. Our encoding of heap is general and not specific to any particular data structure. To the best of our knowledge, our approach is the first invariant-based method that achieves both soundness and completeness for heap-manipulating programs. We provide formal proofs establishing the correctness of our encodings. Through an experimental evaluation we demonstrate that our method significantly extends the capability of existing verification tools, allowing automatic verification of programs with heap that were previously out of reach for state-of-the-art tools.",
@@ -723,6 +933,7 @@
       "Tjark Weber"
     ],
     "dates": [],
+    "doi": "10.1145/3798228",
     "eventType": "Paper",
     "id": "42bcf861-a78e-4cd9-8def-195c671dc9e5",
     "locations": [],
@@ -783,10 +994,21 @@
       "Aneeket Yadav",
       "Manas Thakur"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798273",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "47f29dee-ad96-4eb6-83da-75cd44ba5bd6",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "2017-2043",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -798,9 +1020,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798273",
       "https://2026.splashcon.org/details/oopsla-2026/71/IRIDIUM-A-Framework-for-Statically-Optimizing-JavaScript-Programs",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Constant-time (CT) verification tools are commonly used for detecting potential side-channel vulnerabilities in cryptographic libraries. Recently, a new class of tools, called speculative constant-time (SCT) tools, has also been used for detecting potential Spectre vulnerabilities. In many cases, these SCT tools have emerged as liftings of CT tools. However, these liftings are seldom defined precisely and are almost never analyzed formally. The goal of this paper is to address this gap, by developing formal foundations for these liftings, and to demonstrate that these foundations can yield practical benefits. Concretely, we introduce a program transformation, coined Speculation-Passing Style (SPS), for reducing SCT verification to CT verification. Essentially, the transformation instruments the program with a new input that corresponds to attacker-controlled predictions and modifies the program to follow them. This approach is sound and complete, in the sense that a program is SCT if and only if its SPS transform is CT. Thus, we can leverage existing CT verification tools to prove SCT; we illustrate this by combining SPS with three standard methodologies for CT verification, namely reducing it to non-interference, assertion safety and dynamic taint analysis. We realize these combinations with three existing tools, EasyCrypt, Binsec/Rel, and CTGrind, and we evaluate them on Kocher’s benchmarks for Spectre-v1. Our results focus on Spectre-v1 in the standard CT leakage model; however, we also discuss applications of our method to other variants of Spectre and other leakage models.",
@@ -812,10 +1036,21 @@
       "Xingyu Xie",
       "Zhiyuan Zhang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798222",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "49960769-b9b2-49cf-adac-976d6b3e4b47",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "624-652",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -827,9 +1062,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798222",
       "https://2026.splashcon.org/details/oopsla-2026/23/-Dis-Proving-Spectre-Security-with-Speculation-Passing-Style",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "In software development, investigating the accessibility of dependency vulnerabilities is of great importance, as third-party libraries often contain known vulnerabilities that could be exploited in the application’s business logic. The existing accessibility analysis methods encounter challenges such as undecidability, abstraction loss, and path explosion in large-scale programs, resulting in an inaccurate distinction between accessibility vulnerabilities and non-accessibility vulnerabilities. This paper introduces an approach called ConVReach for analyzing the reachability of vulnerabilities in dependencies. ConVReach overcomes the problems of high abstraction loss and potential path explosion in the current methods by combining static and dynamic approaches, particularly a constraint-guided analysis method. This approach extracts and decomposes the path constraints that trigger vulnerabilities, independently verifies the satisfiability of each constraint, and then aggregates the feasible paths. This effectively reduces unnecessary path exploration and avoids the common path explosion issues in traditional methods. Experimental results show that ConVReach outperforms existing tools in both accuracy and efficiency, effectively distinguishing between reachable and unreachable vulnerabilities, and significantly reducing false positives and false negatives. We constructed a benchmark dataset to evaluate ConVReach, which includes 53 CVEs and 347 flags artificially inserted into various open-source projects. This dataset was designed to simulate both real-world vulnerabilities and complex scenarios. Through testing on this dataset, ConVReach demonstrated exceptional performance. It successfully identified 59 out of 61 reachable vulnerabilities and all 23 unreachable ones in the CVE dataset. Within a 24-hour time budget, ConVReach detected above 50% more reachable vulnerabilities than the baseline tools in the first 6 hours and nearly completed the detection of reachable vulnerabilities by the 12-hour mark. These results highlight ConVReach’s superior ability to handle both real-world vulnerabilities and challenging cases.",
@@ -844,10 +1081,21 @@
       "Yunqian Wang",
       "Yuqing Li"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798255",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4ad2adb3-1238-4660-8473-d1d4036598be",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1514-1541",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -859,9 +1107,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798255",
       "https://2026.splashcon.org/details/oopsla-2026/55/Determining-the-Unreachable-Constraint-Guided-Reachability-Analysis-for-Dependency-V",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Incrementalization speeds up computations by avoiding unnecessary recomputations and by efficiently reusing previous results. While domain-specific techniques achieve impressive speedups, e.g., in the context of database queries, they are difficult to generalize. Meanwhile, general approaches offer little support for incrementalizing domain-specific operations. In this work, we present DeCo, a novel core calculus for incremental functional programming with support for a wide range of user-defined data types. Despite its generic nature, our approach statically incrementalizes domain-specific operations on user-defined data types. It is, hence, more fine-grained than other generic techniques which resort to treating domain-specific operations as black boxes. We mechanized our work in Lean and proved it sound, meaning incrementalized execution computes the same result as full reevaluation. We also provide an executable implementation with three case studies from linear algebra, relational algebra, and conflict-free replicated data types, plus a brief performance evaluation on linear algebra.",
@@ -872,10 +1122,21 @@
       "David Richter",
       "Mira Mezini"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798264",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4ee20573-7246-417f-97f3-92432756feea",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1763-1789",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -887,10 +1148,12 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798264",
       "https://2026.splashcon.org/details/oopsla-2026/64/DeCo-A-Core-Calculus-for-Incremental-Functional-Programming-with-Generic-Data-Types",
       "https://arxiv.org/pdf/2602.20866",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "As build systems and their scripts grow in size and complexity, detecting bugs in build configurations becomes increasingly challenging due to the rich functionality and weak typing of build scripting languages. This paper introduces CMakeSonar, the first static approach to precisely identifying semantic bugs in CMake scripts. CMakeSonar addresses this challenge by (1) designing a fine-grained type system that captures the runtime semantics of CMake values, and (2) performing a flow-sensitive analysis that detects inconsistent and ill-typed value usages by solving type constraints. Our approach identifies configuration and usage errors that can silently affect build correctness, portability, and deployment safety. In our evaluation, CMakeSonar identifies 155 bugs across 36 real-world CMake projects on GitHub, of which 23 have been accepted and fixed by developers. With a false positive rate of 4.32% and a recall of 97.48%, CMakeSonar demonstrates that precise static analysis can effectively uncover high-impact bugs in untyped build systems.",
@@ -902,10 +1165,21 @@
       "Jingling Xue",
       "YUAN Mengting"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798218",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4f33a89e-3ce6-47a7-b92f-41c61ce0b922",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "513-539",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -917,9 +1191,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798218",
       "https://2026.splashcon.org/details/oopsla-2026/19/CMakeSonar-A-Static-Approach-to-Detecting-CMake-Bugs-with-a-Fine-Grained-Type-System",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "There exist many techniques for automatically deriving parametric resource (or cost) bounds by analyzing the source code of a program. These techniques work effectively for a large class of programs and language features. However, non-local transfer of control as needed for exception handlers or algebraic effects has remained a challenge. This paper presents the first automatic resource bound analysis that supports non-local control transfer between exceptions or effects and their handlers. The analysis is an extension of type-based automatic amortized resource analysis (AARA), which automates the potential method of amortized analysis. It is presented for a simple functional language with lists and linear potential functions. However, the ideas are directly applicable to richer settings and implemented for SML and polynomial potential functions. Apart from the new type system for exceptions and algebraic effects, a main contribution is a novel syntactic type-soundness theorem that establishes the correctness of the derived bounds with respect to a stack-based abstract machine. An experimental evaluation shows that the new analysis is capable of analyzing programs that cannot be analyzed by existing methods and that the efficiency overhead of supporting exception and effect handlers is low.",
@@ -929,10 +1205,21 @@
       "Jan Hoffmann",
       "Yiyang Guo"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798207",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5560d7a0-0a78-4afc-888f-e101c4a33f96",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "201-230",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -944,9 +1231,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798207",
       "https://2026.splashcon.org/details/oopsla-2026/8/Handling-Exceptions-and-Effects-with-Automatic-Resource-Analysis",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "An embodied agent is an intelligent entity that interacts with its environment through a physical body. Currently, the evaluation of embodied agents primarily relies on two paradigms: (1) manually annotated Visual Question Answering (VQA) pairs and (2) high-level task completion metrics, such as success in navigation or manipulation. The former is labor-intensive and subject to variability in annotation quality. The latter may obscure critical vulnerabilities, allowing agents to complete tasks through suboptimal means or safety violations, thereby concealing safety risks and inefficiencies. Given that spatial cognition is the cornerstone for executing embodied tasks, there is a pressing need to assess whether embodied agents possess robust spatial cognition during task execution. Inspired by metamorphic testing principles in software engineering, we propose MetaSpace, a novel framework designed to evaluate the spatial cognition of agents. By leveraging spatiotemporal multimodal states derived from real execution trajectories, MetaSpace automatically generates test cases based on predefined metamorphic relations (MRs) grounded in logical rules and physical laws. Crucially, we encode these MRs as executable rules in a logic programming language (Prolog). Violations of these relations indicate failures in spatial cognition. Our empirical evaluation across three embodied scenarios demonstrates that MetaSpace successfully detects 90,422 spatial cognition errors in state-of-the-art (SOTA) MLLM-driven agents. We introduce the Spatial Cognition (SC) score to quantify performance. Results indicate that all SOTA agents achieve average scores between 0.44 and 0.52, significantly lower than the human benchmark of 0.96. Additionally, these agents struggle with directional tasks, with SC scores consistently below 0.38. In contrast, their performance in magnitude-related tasks is relatively better, with most SC scores exceeding 0.5. To mitigate the identified spatial cognition errors, we explore potential improvement strategies. Preliminary results suggest that traditional prompting techniques (e.g., Chain of Thought) are limited, while spatially-aware prompting (e.g., cognitive maps) shows promise. Our findings underscore the importance of ongoing community efforts to enhance embodied agent performance by prioritizing the improvement of spatial cognition, a fundamental requirement for executing embodied tasks.",
@@ -957,10 +1246,21 @@
       "Yiteng Peng",
       "Shuai Wang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798212",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "55eddc9a-5bcc-47b1-b36f-a451a805d23a",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "343-372",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -972,9 +1272,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798212",
       "https://2026.splashcon.org/details/oopsla-2026/13/MetaSpace-Metamorphic-Testing-for-Spatial-Cognition-in-Embodied-Agents",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "We present a model checking approach for axiomatic memory consistency models written in the language CAT. It can prove properties of single memory models like the monotonicity of barriers, and also compare models like TSO and ARM8. To achieve this expressiveness, our approach supports the full rational fragment of CAT. We not only support the Kleene star operation, composition, and union to define relations in a memory model, but also, for the first time, intersection, converse, and the construction of relations from sets. Our model checking approach for memory consistency models is logical in nature: we formulate the problem as satisfiability in a logical theory of relations. Our technical contribution is then a new theory solver that is sound, complete, and optimal from a complexity point of view. At the heart of our solver is a cyclic proof system that can detect invariants on-the-fly. This allows us to terminate early not only in the case that a model has been found, but also in the case of unsatisfiability. Our solver is easy to implement and easy to combine with heuristics. We have implemented a combination with counterexample-guided abstraction refinement, and exercised the prototype on a number of benchmarks — with promising results.",
@@ -1248,10 +1550,21 @@
       "Liqiang Lu",
       "Jianwei Yin"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798268",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8f7f8da6-5e03-414d-af43-02de55237d6f",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1874-1902",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1263,9 +1576,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798268",
       "https://2026.splashcon.org/details/oopsla-2026/68/A-Tale-of-1001-LoC-Potential-Runtime-Error-Guided-Specification-Synthesis-for-Verify",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Property-based testing (PBT) relies on generators for random test cases, often constructed using embedded domain specific languages, which provide expressive combinators for building and composing generators. The effectiveness of PBT depends critically on the speed of these generators. However, careful measurements show that the generator performance of widely used PBT libraries falls well short of what is possible, due principally to (1) the abstraction overhead of their combinator-heavy style and (2) suboptimal sources of randomness. We characterize, quantify, and address these bottlenecks. To eliminate abstraction overheads, we propose a technique based on multi-stage programming, dubbed Allegro. We apply this technique to leading generator libraries in OCaml and Scala 3, significantly improving performance. To quantify the performance impact of the randomness source, we carry out a controlled experiment, replacing the randomness in the OCaml PBT library with an optimized version. Both interventions exactly preserve the semantics of generators, enabling precise, pointwise comparisons. Together, these improvements find bugs up to 13X faster.",
@@ -1276,10 +1591,21 @@
       "Harrison Goldstein",
       "Benjamin C. Pierce"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798263",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "97b9d073-c9e8-4545-af6c-05ac64695f92",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1737-1762",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1291,9 +1617,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798263",
       "https://2026.splashcon.org/details/oopsla-2026/63/Fail-Faster-Staging-and-Fast-Randomness-for-High-Performance-PBT",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Multi-stage programming (MSP) languages such as MetaML have subtle semantics, in which familiar properties often fail to hold and hazardous interactions with other language features such as state or polymorphism abound. The ongoing incorporation of MSP features into general purpose languages makes the need to establish confidence in their design increasingly pressing. Taking inspiration from existing MSP systems, we present a Coq mechanisation of a core calculus for compile-time and run-time MSP with effects, $\\lambda_{\\textsf{run}}^{$}$, formally establishing key properties such as type and elaboration soundness and phase distinction. We hope that our mechanised semantics will be a useful basis for formal study of other designs, easing the extension of existing languages with support for MSP.",
@@ -1304,10 +1632,21 @@
       "Ningning Xie",
       "Jeremy Yallop"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798260",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9c9041a3-4162-4e5b-ab6a-60688cb67cdc",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1654-1681",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1319,11 +1658,12 @@
       "OOPSLA"
     ],
     "urls": [
-      "https://2026.splashcon.org/details/oopsla-2026/60/Mechanised-Semantics-of-Multi-Stage-Programming",
       "https://doi.org/10.1145/3798260",
+      "https://2026.splashcon.org/details/oopsla-2026/60/Mechanised-Semantics-of-Multi-Stage-Programming",
       "https://www.cl.cam.ac.uk/~jdy22/papers/mechanised-semantics-of-multi-stage-programming.pdf",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Agentic systems are modern software systems: they consist of orchestrated modules, expose interfaces, and are deployed in software pipelines. Unlike conventional programs, their execution, i.e., trajectories, is inherently stochastic and adaptive to the problems they are solving. Evaluation of such systems is often outcome-centric, i.e., judging their performance based on success or failure at the final step. This narrow focus overlooks detailed insights about such systems, failing to explain how agents reason, plan, act, or change their strategies. Inspired by the structured representation of conventional software systems as graphs, we introduce Graphectory to systematically encode the temporal and semantic relations in such software systems. Graphectory facilitates the design of process-centric metrics and analyses to assess the quality of agentic workflows. Using Graphectory, we automatically analyze 4000 trajectories of two dominant agentic programming workflows, namely SWE-agent and OpenHands, with a combination of four backbone Large Language Models (LLMs), attempting to resolve SWE-bench Verified issues. Our fully automated analyses (completed within four minutes) reveal that: (1) agents using richer prompts or stronger LLMs exhibit more complex Graphectory, reflecting deeper exploration, broader context gathering, and more thorough validation before patch submission; (2) agents’ problem-solving strategies vary with both problem difficulty and the underlying LLM—for resolved issues, the strategies often follow coherent localization–patching–validation steps, while unresolved ones exhibit chaotic, repetitive, or backtracking behaviors; and (3) even when successful, agentic programming systems often display inefficient processes, leading to unnecessarily prolonged trajectories. We also implement a novel technique for real-time construction and analysis of Graphectory and Langutory during the agent’s execution to flag trajectory issues. Upon detecting such issues in the trajectory, the proposed technique notifies the agent with a diagnostic message and, when applicable, rolls back the trajectory. The experimental results show that online monitoring and process-centric analysis, when accompanied by proper interventions, can improve resolution rates by 6.9%-23.5% across different models for problematic instances, while significantly shortening trajectories with a near-zero overhead",
@@ -1336,10 +1676,21 @@
       "Jatin Ganhotra",
       "Reyhaneh Jabbarvand"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798271",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9ddb7a06-93bb-4d29-b51b-b01e5298af00",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1961-1988",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1351,9 +1702,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798271",
       "https://2026.splashcon.org/details/oopsla-2026/74/Process-Centric-Analysis-of-Agentic-Software-Systems",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Decidable automation is a key feature of program verification tools, which makes them easier for non-expert developers to use and understand. Unfortunately, decidable fragments of logic are very restrictive, and not ideal for the expression of idiomatic programs. The decidable Extended EPR fragment, combined with an encoding technique called relational abstraction , has seen wide use for its ability to handle both quantifiers and uninterpreted functions. However, the complexity of the relational abstraction encoding, combined with its inherent incompleteness, still poses a significant obstacle to non-experts. In this paper, we show that Extended EPR and relational abstraction can be deployed to achieve decidable, quantified verification within a familiar, principled domain: a higher-order, purely-functional programming language. We observe that, by defining the semantics of our language in terms of partial functions, we obtain a well-behaved, three-valued logic that matches the behavior of the relational abstraction encoding while hiding its complexity. We demonstrate that our prototype implementation can ergonomically replicate EPR-based program verification benchmarks and verify recursive programs on inductive datatypes.",
@@ -1364,10 +1717,21 @@
       "Bor-Yuh Evan Chang",
       "Gowtham Kaki"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798259",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9df95295-f1f4-4a94-8583-85038cd61633",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1627-1653",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1379,9 +1743,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798259",
       "https://2026.splashcon.org/details/oopsla-2026/59/Effectively-Propositional-Higher-Order-Functional-Programming",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Real-time systems must simultaneously deliver predictable timing, fault isolation, and memory safety, yet current operating systems expose only low-level primitives that force developers to manually balance concurrency, isolation, and performance. This paper presents LARTS, a language-aided runtime system that elevates these requirements into language abstractions with enforceable semantics. LARTS introduces execution domain, a unified process–thread abstraction that combines thread-level responsiveness with process-level isolation. Memory is managed through deterministic memory contracts, which bind allocation at load time to eliminate runtime failures and unpredictable latencies. Domain interactions are expressed via deterministic communication channels that integrate efficient transfer, type safety, and priority inheritance, ensuring analyzable end-to-end bounds. Moreover, LARTS enforces secure-by-construction semantics, making classes of bugs such as double fetch and use-after-free unrepresentable in the programming model. We formalize the core semantics of LARTS and show how they guarantee determinism and safety by design. A prototype built on RTEMS demonstrates that LARTS preserves competitive real-time performance while substantially reducing programming complexity and eliminating vulnerabilities in realistic case studies. Our results suggest that high-assurance real-time programming can be treated not as an ad-hoc engineering problem, but as a first-class abstraction with verifiable semantics.",
@@ -1395,10 +1761,21 @@
       "Lei Wang",
       "Qiuping Yi"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798241",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9dfa2e99-91c1-498e-a4b8-fd74e0ea31f9",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1126-1152",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1410,9 +1787,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798241",
       "https://2026.splashcon.org/details/oopsla-2026/41/LARTS-Language-Abstractions-for-Real-Time-and-Secure-Systems",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Although reactive synthesis guarantees correct-by-construction implementations, its practical adoption is limited by a performance bottleneck in the iterative design-and-refinement cycle of formal specifications. GR(1) synthesizers perform redundant, from-scratch computations for each specification modification, severely slowing the development workflow. To address this inefficiency, we propose an incremental synthesis method that exploits the monotonicity of the underlying fixed-point computations. By reusing the system winning region from the preceding check, our method significantly accelerates realizability check. Our work provides a fundamental explanation for the failure of prior incremental approaches in the unrealizable core minimization algorithm \\texttt{DDMin}, and successfully leverages this insight to accelerate iterative development, where specification changes are typically localized. We extend incremental analysis to the full GR(1) specification scope, encompassing both system guarantees and environment assumptions, and introduce two novel heuristics for early fixed-point detection. Evaluated on a large-scale benchmark of 8,282 specifications, our method exhibits a strong positive correlation between performance gain and specification complexity. For the most challenging specifications, which constitute the primary bottlenecks in development, our approach achieves speedups of several orders of magnitude, reducing computation times in some cases from nearly an hour to just seconds.",
@@ -1423,10 +1802,21 @@
       "Yijie Zheng",
       "Haonan Guo"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798234",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9e7632a3-74cf-498b-acac-5389a62c3926",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "959-984",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1438,9 +1828,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798234",
       "https://2026.splashcon.org/details/oopsla-2026/36/Efficient-Incremental-GR-1-Synthesis-via-Monotonic-Fixed-Point-Reuse",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Object evolution is a monotonic approach to typestate and object reclassification, enforcing that objects may gain, but not lose properties, to permit aliasing. We present a formalization and prototype implementation of our new language May, featuring inheritance-based evolution that changes the run-time class of an object to a subclass. To statically guarantee evolution succeeds, we introduce a simple affine permission system for ensuring evolvable references match the run-time type of an object. Furthermore, we demonstrate that our system provides an effective and type-safe way of expressing staged operations and complex initialization procedures.",
@@ -1451,10 +1843,21 @@
       "Gregor Richards",
       "Fabian Muehlboeck"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798252",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a641fc17-5948-4008-b703-3da4dc9e3f9c",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1432-1458",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1466,10 +1869,12 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798252",
       "https://2026.splashcon.org/details/oopsla-2026/52/Type-Safe-Monotonic-Object-Evolution",
       "https://users.cecs.anu.edu.au/~fabian.muehlboeck/papers/evolution-oopsla26.pdf",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "We present a new pure functional language and type system with borrows with lifetimes, and a corresponding fully-automatic type inference procedure. Inference provides users the performance benefits of borrows with lifetimes without requiring user annotation. If the user’s program cannot be typed, inference inserts a handful of reference count operations so that it can be typed. We provide a heap semantics for our borrowing language and prove a soundness theorem, guaranteeing that well-typed programs do not violate memory safety. We implement our memory management strategy as part of the Morphic language stack and compare it to Perceus, a state-of-the-art reference-counting technique based on linear type inference. We find that our system is able to eliminate almost all reference count operations across a range of programs, reducing reference count increments by 75–100% on all benchmarks with reference count increments under the baseline. As result, we achieve a 1.48x geomean speedup overall on all benchmarks.",
@@ -1482,10 +1887,21 @@
       "Mae Milano",
       "Alex Aiken"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798221",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ac2af348-92b5-4fb7-b399-d8f5c79c3811",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "597-623",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1497,9 +1913,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798221",
       "https://2026.splashcon.org/details/oopsla-2026/22/Fully-Automatic-Type-Inference-for-Borrows-with-Lifetimes",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Deep learning (DL) libraries are widely used in critical applications, where even subtle silent bugs can lead to serious consequences. While existing DL fuzzing techniques have made progress in detecting crashes, they inherently struggle to detect silent bugs due to the lack of effective test programs and corresponding oracles. Building on the observation that historical bug reports contain rich, underutilized information about silent bugs, we leverage large language models (LLMs) to perform \\emph{versatile yet controlled} bug transfer for silent bug fuzzing. Specifically, our approach uses LLMs to extract context-aware bug patterns from historical issues, match semantically related APIs using functionality-based embeddings, and synthesize test cases with customized oracles. This enables proactive detection of silent bugs by transferring high-risk contexts and oracle designs from known buggy APIs to functionally similar target APIs. To ensure the reliability of our context-aware bug transfer, we introduce an LLM-powered self-validation module that systematically evaluates the validity of each transferred bug instance. We implement this methodology in a tool named TRANSFUZZ and evaluate it on three mainstream DL libraries: PyTorch, TensorFlow, and MindSpore. TRANSFUZZ successfully discovers 79 previously unknown bugs (12 confirmed as CVEs) in 10 bug types, demonstrating its effectiveness and generalizability in migrating DL library bug discovery capabilities.",
@@ -1514,10 +1932,21 @@
       "Tongtong Xu",
       "Shaohua Wang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798258",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "af71c34c-251f-4337-bff4-6538153c5ccc",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1599-1626",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1529,9 +1958,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798258",
       "https://2026.splashcon.org/details/oopsla-2026/58/LLM-Powered-Silent-Bug-Fuzzing-in-Deep-Learning-Libraries-via-Versatile-and-Controlle",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Graph pattern mining is an important task for analyzing graph datasets. Graph mining systems typically require answering pattern matching queries, which involve solving the NP-complete subgraph isomorphism problem. To address this, domain experts often develop custom pattern matching query optimization strategies based on exploiting substructural similarities across different patterns. While these optimizers can be effective, their development is challenging due to the complex structural properties of the patterns (e.g., subsymmetries), which are difficult to address. This complexity limits the exploration of interactions between different optimization strategies and restricts experts from continuously improving the optimizers—such as by incorporating additional custom or general pattern-based equivalences over time. In this paper, we present a programmable pattern matching query optimizer called Geo, which automatically manages the interactions between various equivalences, ensures the optimizations do not affect the results, and simplifies the management of substructure equivalences. Geo exposes a simple but flexible language for expressing pattern equivalences as rewrite rules. By maintaining canonical representations of generated patterns during equality saturation, Geo avoids issues arising from syntactic differences in isomorphic patterns. Additionally, it tracks provenance across equivalences to ensure the reconstructability of desired outputs. Our evaluation demonstrates that Geo can discover novel query equivalences through complex composition of various rewrite rules, enabling our optimized queries to achieve a cost reduction of up to 99% compared to the queries in prior work. We further test Geo’s effectiveness at speeding up practical graph mining problems by using it in two representative case studies – approximate pattern matching and quasi-clique mining, and find it is highly effective at optimizing these tasks, enabling cost reductions of up to 99%.",
@@ -1542,10 +1973,21 @@
       "Keval Vora",
       "Anders Miltner"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798239",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "af77c63a-d85a-4c12-a386-e9e633936374",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1070-1098",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1557,9 +1999,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798239",
       "https://2026.splashcon.org/details/oopsla-2026/39/Geo-A-Query-Rewrite-Framework-for-Graph-Pattern-Mining",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Binary lifting, which translates binary code into LLVM intermediate representations (IRs) through iterative IR transformations for recovering high-level constructs from low-level machine features, is the cornerstone of many binary analysis systems. Therefore, the scalability and precision of the upper layer analysis could be greatly affected by the underlying binary lifting. However, all existing binary lifters still suffer from severe performance problems in that they require much time to handle extremely large binaries, which becomes a barrier to achieving the expected performance gains in various analyses and hinders them from meeting the requirement of quick response in modern continuous integration pipelines. We found that the root cause of the scalability issue is the inherent “monolithic” design that performs all lifting stages on a single LLVM module, which entails a global environment that enforces sequential dependences between any two transformations on IRs, thus limiting the parallelism. This paper presents Diatom, a novel parallel binary lifter powered by a new “polylithic” design, which decomposes the monolithic LLVM module into partitions to perform fully parallelized binary lifting. In the meantime, it leverages light-weight data-flow summaries and type-aware IR linking to avoid soundness loss caused by separating dependent code fragments. Large-scale experiments on 16 real-world benchmarks whose sizes range from dozens of megabytes (MBs) to several gigabytes (GBs) show that Diatom achieves an average speedup of 7.45× and a maximum speedup of 16.8× over a traditional monolithic binary lifter, while still maintaining the lifting soundness. Diatom can complete the translation for the Linux Kernel binary within only 10 minutes, which significantly accelerates the overall binary code analysis process.",
@@ -1568,10 +2012,21 @@
       "Anshunkang Zhou",
       "Charles Zhang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798206",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b457aeb0-272a-4e6d-a41f-88067ea715e5",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "170-200",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1583,9 +2038,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798206",
       "https://2026.splashcon.org/details/oopsla-2026/7/Diatom-Polylithic-Binary-Lifting-with-Data-flow-Summaries-and-Type-aware-IR-Linking",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Context-free language (CFL) reachability is a fundamental framework widely used to model a variety of program analysis tasks, though it often suffers from inherent inefficiency due to its (sub)cubic time complexity. In this paper, we propose a novel perspective, \\emph{relation chaining}, which interprets CFL-reachability solving as the process of chaining labeled edges representing binary relations. This formulation exposes substantial derivation redundancy (in terms of frequent and repetitive chaining operations) arising from inefficient chaining strategies employed by existing approaches. To address this, we introduce SQUID, a new algorithm that incorporates two simple yet effective chaining techniques—\\emph{adaptive chaining} and \\emph{differential chaining}—built upon an enhanced graph representation. We have implemented SQUID as a standalone tool and evaluated it against two state-of-the-art CFL-reachability solvers and a leading Datalog solver across three key program analyses: field-sensitive alias analysis and context-sensitive value-flow analysis for C/C++, and field-sensitive points-to analysis for Java. Experimental results show that SQUID substantially improves the scalability of CFL-reachability solving by effectively reducing a large portion of redundant chaining operations.",
@@ -1623,10 +2080,21 @@
       "Sunbeom So",
       "Hakjoo Oh"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798262",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b94ae846-1707-4a4f-9ca2-18e0608c3935",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1707-1736",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1638,9 +2106,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798262",
       "https://2026.splashcon.org/details/oopsla-2026/62/Prunario-Testing-Autonomous-Driving-Systems-by-Pruning-Likely-Redundant-Scenarios",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Building a high-performance JIT-capable VM for a dynamic language has traditionally required a tremendous amount of time, money, and expertise. We present Deegen, a meta-compiler that allows users to generate a high-performance JIT-capable VM for their own language at an engineering cost similar to writing a simple interpreter. Deegen takes in the execution semantics of the bytecodes implemented as C++ functions, and automatically generates a two-tier VM execution engine with a state-of-the-art interpreter, a state-of-the-art baseline JIT, and the tier-switching logic that connects them into a self-adaptive system. We are the first to show how to automatically generate a baseline JIT compiler that rivals the current state of the art, and an interpreter that outperforms the current state of the art. Our performance comes from Deegen’s ability to automatically apply many state-of-the-art optimizations that previously had to be hand-implemented. These optimizations include bytecode specialization and quickening, register pinning, tag register optimization, call inline caching, generic inline caching, JIT polymorphic IC, JIT IC inline slab, type-check removal and strength reduction, type-based slow-path extraction and outlining, JIT hot-cold code splitting, and JIT OSR-entry. As a result, the performance of the Deegen-generated interpreter and baseline JITs matches or surpasses state-of-the-art interpreters and baseline JITs. To evaluate Deegen, we use it to implement two languages: a Lua 5.1 VM called LuaJIT Remake (LJR) and a SOM VM called DSOM. Across 44 benchmarks, LJR’s interpreter is on average 2.79x faster than the official PUC Lua interpreter, and 1.31x faster than LuaJIT’s interpreter. LJR’s baseline JIT has negligible startup delay, and its execution performance is on average 4.60x faster than PUC Lua and only 33% slower (but faster on 13/44 benchmarks) than LuaJIT’s optimizing JIT. Across 13 benchmarks, DSOM’s interpreter is 4.28x-5.82x faster than the five existing SOM interpreters, and DSOM’s baseline JIT compiles 25.84x faster than 2SOM’s baseline JIT, while also generating code that runs 15.46x faster.",
@@ -1649,10 +2119,21 @@
       "Haoran Xu",
       "Fredrik Kjolstad"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798246",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "baecd5c0-b3c5-4a43-9f5d-ccc0a6f3a797",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1266-1294",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1664,9 +2145,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798246",
       "https://2026.splashcon.org/details/oopsla-2026/46/Deegen-A-JIT-Capable-VM-Generator-for-Dynamic-Languages",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Incremental computing promises large speed-ups after small input edits. Yet, most incrementality approaches merely skip unchanged work and recompute the remaining sub-computations, even when the inputs change only slightly. Differential execution avoids this by propagating data changes (i.e., deltas), and prior work has shown how to develop a provably correct differential big-step semantics. Unfortunately, that semantics must still replay the original computation at every step, squandering much of the potential gain of incrementalization. While the semantics clearly needs caching to avoid recomputations, a sound and efficient caching discipline is challenging. First, each execution step must be uniquely identified; second, the identifier must remain stable even when the preceding control flow changes. To this end, we develop lexical tracing, which identifies execution steps through their path in the derivation tree of the big-step semantics. We then extend differential execution with lexical tracing and caching to deliver, for the first time, a formally verified, asymptotically efficient account of differential execution for imperative languages. In particular, we developed a novel mechanized theory of cache stability for lexical traces and their semantic rules, which was essential in proving the differential caching semantics correct and complete in Rocq.",
@@ -1676,10 +2159,21 @@
       "Runqing Xu",
       "Mo Bitar"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798261",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "be433112-8887-4367-a65d-f67e58aad677",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1682-1706",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1691,9 +2185,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798261",
       "https://2026.splashcon.org/details/oopsla-2026/61/Differential-Execution-with-Lexical-Tracing",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Inline tests validate single program statements and were shown to find single-statement bugs or kill mutants that unit tests miss. Inline tests complement unit tests by enabling testing at a finer program granularity level than methods. So, inline tests can more easily find faults in target statements that unit tests do not reach, or where errors do not propagate to unit tests’ oracles. But, the limitation to single statements means inline tests cannot validate data or control flow across code fragments—sequences of multiple statements in a method. We motivate the need for testing arbitrary fragments and propose block tests, which generalize inline tests and validate fragments. To motivate, we discuss six software testing needs (e.g., due to increased usage of lambdas in imperative code) for which unit tests are too coarse grained and for which inline tests are too fine grained. We also give real-world examples where block tests could have found bugs that unit tests missed. To bridge this gap, we propose syntax and semantics for specifying inputs, outputs, test oracles, and scope of block tests in Java. We also implement a block-test development kit (BDK) for writing and running block tests. We evaluate block tests and BDK in two ways. First, we write 1,012 block tests for 346 fragments in 146 open-source projects. Developer written unit tests do not cover 58.67% of these fragments, and automated unit-test generation does not reach 45.95% of them after 30.81 CPU days. But, each block test takes 2.23 minutes to write and 0.934 seconds to run on average. Second, we use mutation testing to evaluate the fault-finding effectiveness of block tests. In fragments that unit tests cover, block tests kill many mutants that survived unit tests. These results provide initial but strong evidence on block tests’ feasibility and utility. We outline an agenda for future research on block testing.",
@@ -1704,10 +2200,21 @@
       "Milos Gligoric",
       "Owolabi Legunsen"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798274",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "bf837c05-f5a2-4f0d-8141-5820e2d416fb",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "2044-2072",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1719,9 +2226,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798274",
       "https://2026.splashcon.org/details/oopsla-2026/72/Block-Tests",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Interactive Bayesian program analysis enhances static analysis by modeling derivations as probabilistic dependencies, enabling ranking alarms by calculated confidences, proposing highly likely alarms for user inspection, and updating confidences with inspection results. Existing interactive approaches adopt a purely greedy, exploitation-only selection strategy that always inspects the highest-confidence alarm. However, such strategies are prone to local optima, leading to redundant inspections and delayed identification of true alarms. We propose BEER (Bayesian Exploration–Exploitation Ranker), a framework that systematically integrates the exploration–exploitation trade-off into Bayesian program analysis. BEER leverages structural correlations between alarms—derived from shared root causes in the Bayesian model—to estimate information gain and guide exploration. When repeated false alarms indicate model stagnation, BEER selects alarms from minimally explored, highly correlated clusters to accelerate learning. Implemented atop the Bingo framework, BEER achieves up to 38% effectiveness in ranking efficiency over the greedy baseline on data-race and thread-escape analyses, demonstrating the efficacy of exploration-guided alarm resolution.",
@@ -1731,10 +2240,21 @@
       "Zhenyu Yan",
       "Xin Zhang"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798214",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c010f0c9-6c89-494f-b1d8-905039c9c8ca",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "400-426",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1746,10 +2266,11 @@
       "OOPSLA"
     ],
     "urls": [
-      "https://2026.splashcon.org/details/oopsla-2026/15/Beer-Interactive-Alarm-Resolution-in-Bayesian-Program-Analysis-via-Exploration-Explo",
       "https://doi.org/10.1145/3798214",
+      "https://2026.splashcon.org/details/oopsla-2026/15/Beer-Interactive-Alarm-Resolution-in-Bayesian-Program-Analysis-via-Exploration-Explo",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "JavaScript obfuscators are widely deployed to protect intellectual property and resist reverse engineering, yet their correctness has been largely overlooked compared to performance and resilience. Existing evaluations typically measure resistance to deobfuscation, leaving the critical question of whether obfuscators preserve program semantics unanswered. Incorrect transformations can silently alter functionality, compromise reliability, and erode security—undermining the very purpose of obfuscation. To address this gap, we present OBsmith, a novel framework to systematically test JavaScript obfuscators using large language models (LLMs). OBsmith leverages LLMs to generate program sketches—abstract templates capturing diverse language constructs, idioms, and corner cases—which are instantiated into executable programs and subjected to obfuscation under different configurations. Besides LLM-powered sketching, OBsmith also employs a second source: automatic extraction of skeletons from real programs. This extraction path enables more focused testing of project-specific features and lets developers inject domain knowledge into the resulting test cases. OBsmith uses two techniques to derive test oracles: \\textit{(i)} differential testing, which treats the original program as ground truth and instruments control- and data-flow to detect semantic divergences, failures, or crashes; and \\textit{(ii)} metamorphic testing, which applies semantics-preserving transformations to the original program and checks if obfuscation violates expected behavior. We evaluate OBsmith on two widely used obfuscators, Obfuscator.IO and JS-Confuser, generating 600 sketches using six popular LLMs. OBsmith fills these sketches and generates over 3,000 candidate programs and obfuscates them across seven obfuscation configurations. OBsmith uncovers 11 previously unknown correctness bugs. Under an equal program budget, five general purpose state-of-the-art JavaScript fuzzers (FuzzJIT, Jsfunfuzz, Superion, DIE, Fuzzilli) failed to detect these issues, highlighting OBsmith’s complementary focus on obfuscation-induced misbehavior. An ablation shows that all components except our generic MRs contribute to at least one bug class; the negative MR result suggests the need for obfuscator-specific metamorphic relations. Our results also seed discussion on how to balance obfuscation presets and performance cost. We envision OBsmith as an important step towards automated testing and quality assurance of obfuscators and other semantic-preserving toolchains.",
@@ -1759,10 +2280,21 @@
       "Chenguang Zhu",
       "Sarfraz Khurshid"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798204",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c09c4583-3d85-44c2-b3bf-4f50eab61ded",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "114-142",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1774,9 +2306,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798204",
       "https://2026.splashcon.org/details/oopsla-2026/5/OBsmith-LLM-powered-JavaScript-Obfuscator-Testing",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Rank-2 polymorphism, when combined with type-class-constrained arguments, enables powerful abstractions and code reuse by allowing functions to accept arguments that are themselves ad-hoc polymorphic. Optimizing compilers like the Glasgow Haskell Compiler (GHC) use techniques like class-dictionary specialization and inlining for optimization. However, these techniques can falter when the rank-2 polymorphic functions are recursive. Specializing the polymorphic arguments of recursive rank-2 polymorphic function applications requires inlining the applied function to expose type and dictionary applications to the arguments, but the compiler’s heuristic-driven inliner is reluctant to inline recursive functions, risking non-termination during compilation. This stalemate causes recursive rank-2 polymorphic functions to remain un-optimized and be left with a runtime penalty. Within the Haskell ecosystem, we identify this stalemate within three widely used libraries: the Scrap Your Boilerplate (SYB) and SYB With Class (SYB3) generic-programming libraries, and a fragment of the lens optics library. In these libraries, the combination of rank-2 polymorphism, type-class constraints and recursion is central to their implementation. In this paper, we present a new optimization technique that breaks this stalemate and enables class-dictionary specialization with recursive rank-2 polymorphic functions. We introduce a partial evaluator that strategically applies the standard transformations of inlining, $\\beta$-reduction and memoization to applications of rank-2 polymorphic functions that are \\emph{partially static}, i.e., whose arguments have some information known statically. This process exposes applications of its polymorphic arguments onto concrete types and dictionaries, which can be specialized by the standard compiler optimization pipeline. Additionally, we introduce type-constant folding to evaluate run-time type-equality tests statically, further leveraging static type information gained from partial evaluation. We implement our technique as a GHC plugin and demonstrate its effectiveness by resolving the performance bottlenecks in the aforementioned Haskell libraries. On SYB and SYB3 traversals, our technique achieves speedups of $43\\times$ on average (up to $155\\times$) and $6.1\\times$ on average (up to $9.5\\times$), respectively, matching the performance of their hand-written counterparts. On the fragment of the \\texttt{lens} library containing the identified slowdowns, our technique achieves speedups of $1.6\\times$ on average (up to $2.1\\times$).",
@@ -1786,6 +2320,7 @@
       "Michael D. Adams"
     ],
     "dates": [],
+    "doi": "10.1145/3798227",
     "eventType": "Paper",
     "id": "ca89454a-ee3a-4e6b-b7b1-4b1700228745",
     "locations": [],
@@ -1814,10 +2349,21 @@
       "Mohamed Tarek Ibn Ziad",
       "Christos Kozyrakis"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798231",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cab68d7b-f82f-455a-a984-59fef2e82839",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "877-904",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1829,13 +2375,14 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798231",
       "https://2026.splashcon.org/details/oopsla-2026/32/Hunting-CUDA-Bugs-at-Scale-with-cuFuzz",
       "https://github.com/NVlabs/cuFuzz",
       "https://research.nvidia.com/publication/2026-03_hunting-cuda-bugs-scale-cufuzz",
-      "https://doi.org/10.1145/3798231",
       "https://mtarekibnziad.onrender.com/files/preprint_OOPSLA26_cuFuzz.pdf",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Path-sensitive vulnerabilities, such as use-after-free, integer overflows, and command injection, pose significant challenges for traditional static analysis tools, which often face trade-offs between precision, scalability, and interpretability. To address these challenges, we present SEVDF (Semantic-Enhanced Vulnerability Detection Framework), a novel methodology that integrates may-analysis taint propagation with large language models (LLMs) to detect path-related vulnerabilities in large C/C++ codebases. SEVDF begins by constructing a program dependency graph and performing a sound but incomplete taint analysis to extract all potential vulnerable paths. After segmentation, deduplication, feasibility check, and semantic summarization by LLMs, the vulnerable paths are reformed and confirmed with LLMs for their inter-procedural feasibility and semantic consistency. We evaluate SEVDF on the Juliet Test Suite (five representative CWE categories) and a curated real-world dataset of 73 vulnerabilities across 9 projects. SEVDF consistently outperforms the default CodeQL rules, CodeQL rules with all unnecessary constraints removed, and three open-source detectors, which are Infer, Cppcheck and CodeChecker. SEVDF is able to achieve 100% precision on several CWEs while maintaining or improving recall on Juliet benchmark. Moreover, our segment-based design reduces token consumption of LLMs by over 80% compared to direct-path prompting, making SEVDF cost-effective for large-scale deployment. Finally, SEVDF uncovered and reported 29 0-day vulnerabilities (12 confirmed to date), including 3 CVEs in VirtualBox, demonstrating practical value.",
@@ -1850,10 +2397,21 @@
       "Ziqiao Kong",
       "Yang Liu"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798272",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cdcc1d2b-aff0-4397-a23d-25055aa6a2f5",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1989-2016",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1865,9 +2423,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798272",
       "https://2026.splashcon.org/details/oopsla-2026/70/Reframing-Paths-as-Logic-Semantic-Segmentation-for-Vulnerability-Detection",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "To govern smart contracts running on Ethereum, multiple Ethereum Request for Comment (ERC) standards have been developed, each defining a set of rules governing contract behavior. Violating these rules can cause serious security issues and financial losses, signifying the importance of verifying ERC compliance. Today’s practices of such verification include manual audits, expert-developed program-analysis tools, and large language models (LLMs), all of which remain ineffective at detecting ERC rule violations. This paper introduces SymGPT, a tool that combines LLMs with symbolic execution to automatically verify smart contracts’ compliance with ERC rules. We begin by empirically analyzing 132 ERC rules from three major ERC standards, examining their content, security implications, and natural language descriptions. Based on this study, SymGPT instructs an LLM to translate ERC rules into a defined EBNF grammar, synthesizes constraints from the translated rules to model potential rule violations, and performs symbolic execution for violation detection. Our evaluation shows that SymGPT identifies 5,783 ERC rule violations in 4,000 realworld contracts, including 1,375 violations with clear attack paths for financial theft. Furthermore, SymGPT outperforms six automated techniques and a security-expert auditing service, underscoring its superiority over current smart contract analysis methods.",
@@ -1881,10 +2441,21 @@
       "Nobuko Yoshida",
       "Linhai Song"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798217",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d003fa97-b9c1-447f-9aec-36ebc2921ce6",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "482-512",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1896,9 +2467,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798217",
       "https://2026.splashcon.org/details/oopsla-2026/18/SymGPT-Auditing-Smart-Contracts-via-Combining-Symbolic-Execution-with-Large-Language",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "The Ethereum ecosystem, which secures over $381 billion in assets, fundamentally relies on client APIs as the sole interface between users and the blockchain. However, these critical APIs suffer from widespread implementation inconsistencies, which can lead to financial discrepancies, degraded user experiences, and threats to network reliability. Despite this criticality, existing testing approaches remain manual and incomplete: they require extensive domain expertise, struggle to keep pace with Ethereum’s rapid evolution, and fail to distinguish genuine bugs from acceptable implementation variations. We present APIDiffer, the first specification-guided differential testing framework designed to automatically detect API inconsistencies across Ethereum’s diverse client ecosystem. APIDiffer transforms API specifications into comprehensive test suites through two key innovations: (1) specification-guided test input generation that creates both syntactically valid and invalid requests enriched with real-time blockchain data, and (2) specification-aware false positive filtering that leverages large language models to distinguish genuine bugs from acceptable variations. Our evaluation across all 11 major Ethereum clients reveals the pervasiveness of API bugs in production systems. APIDiffer uncovered 72 bugs, with 90.28% already confirmed or fixed by developers, including one critical error in the official specifications themselves. Beyond these raw numbers, APIDiffer achieves up to 89.67% higher code coverage than existing tools and reduces false positive rates by 37.38%. The Ethereum community’s response validates our impact: developers have integrated our test cases, expressed interest in adopting our methodology, and escalated one bug to the official Ethereum Project Management meeting. By making APIDiffer open-source, we enable continuous validation of Ethereum client API implementations, thereby strengthening the foundational integrity of the entire Ethereum ecosystem.",
@@ -1916,10 +2489,21 @@
       "Ying Gao",
       "Yinliang Yue"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798219",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d0579c4d-6943-4ad9-86c5-ee4c7fab62b5",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "540-570",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1931,9 +2515,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798219",
       "https://2026.splashcon.org/details/oopsla-2026/20/When-Specifications-Meet-Reality-Uncovering-API-Inconsistencies-in-Ethereum-Infrastr",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "In this paper, we formalize a type system based on set-theoretic types for dynamic languages that support both functional and imperative programming paradigms. We adapt prior work in the typing of overloaded and generic functions to support an impure lambda-calculus, focusing on imperative features commonly found in dynamic languages such as JavaScript, Python, and Julia. We introduce a general notion of parametric opaque data types using set-theoretic types, enabling precise modeling of mutable data structures while promoting modularity, clarity, and readability. Finally, we compare our approach to existing work and evaluate our prototype implementation on a range of examples.",
@@ -1942,10 +2528,21 @@
       "Mickaël Laurent",
       "Jan Vitek"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798220",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d192f5a2-7326-411d-b7b2-096a5a1862ed",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "571-596",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -1957,9 +2554,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798220",
       "https://2026.splashcon.org/details/oopsla-2026/21/Type-inference-for-functional-and-imperative-dynamic-languages",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Rust combines high performance with strong memory safety through strict ownership and borrowing rules. However, its unsafe mode reintroduces vulnerabilities by allowing raw-pointer manipulation—a major source of memory-safety bugs. Existing whole-program analyses for Rust often suffer from low recall and high false positives. Since unsafe code is typically small and isolated, we propose a demand-driven alternative. We present Pincer, a flow-, field-, and context-sensitive dataflow analysis framework built on IFDS. Pincer performs mutually bidirectional analysis—backward to trace raw-pointer origins and forward to explore their aliases—adapting this strategy to Rust’s ownership model and low-level semantics. On this foundation, Pincer performs a modular, bottom-up vulnerability-oriented typestate analysis to detect use-after-free and double-free bugs. It tracks aliases and nullness states of raw pointers while exploiting new strong-update opportunities at function returns of container-manipulating calls and leveraging Rust’s safety invariants to prune safe regions early through aliasing XOR mutability checking. The modular design enables controlled exploration—optionally under a budget—to improve scalability. Controlled unsoundness further boosts efficiency while maintaining high recall and precision. We evaluate Pincer on vulnerable programs and large Rust projects. The results demonstrate that Pincer detects memory-safety errors with higher accuracy than state-of-the-art analyses while offering practical efficiency, confirming its effectiveness in securing Rust’s unsafe code.",
@@ -1997,10 +2596,21 @@
       "Di Wang",
       "Zhenjiang Hu"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798253",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "dc814b93-96e1-46ef-a2ad-62058de1abcb",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1459-1485",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -2012,9 +2622,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798253",
       "https://2026.splashcon.org/details/oopsla-2026/53/Localizing-Type-Errors-for-Syntactic-Sugar-by-Lifting",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Compilers are expected to generate optimized code, but they sometimes introduce pessimizations, quality-degrading redundant instructions. These bugs not only incur performance overhead but also, critically, expand the attack surface by introducing unexpected side effects (e.g., redundant memory accesses) without breaking compilation correctness. Existing bug-finding methods are neither designed for nor effective at identifying such security-sensitive pessimizations. This paper presents CLower, a novel, black-box approach for automatically detecting compiler pessimizations via redundant memory accesses. CLower’s core insight is that any extra global memory accesses in a fully optimized binary, compared to the source, indicate a pessimization. To reliably distinguish compiler-introduced redundancy from source-level redundancy, we generate random C programs in which each global variable has a predetermined, controlled number of memory accesses. CLower then executes the instrumented binary and verifies whether superfluous accesses have been introduced during compilation. We applied CLower to GCC and LLVM, reporting 23 unique bugs (21 in GCC, 2 in Clang), with 16 confirmed as new pessimization bugs. Our evaluation shows that CLower accurately detects diverse, impactful pessimization bugs, the majority of which (75%) also manifest for heap-allocated objects, demonstrating that the underlying compiler flaws are general and not limited to global memory. Furthermore, we identify a systematic conflict between compiler optimizations and pessimization bugs, which causes many such bugs to remain hidden in compiler versions. This study sheds light on the under-explored area of compiler pessimization and provides a practical tool for improving compiler quality.",
@@ -2026,10 +2638,21 @@
       "Kangjie Lu",
       "Bing Mao"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798250",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "de96066c-56e3-4fd1-8145-8f5ae7e566f6",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1376-1402",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -2041,9 +2664,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798250",
       "https://2026.splashcon.org/details/oopsla-2026/50/CLower-Detecting-Compiler-Pessimization-Bugs-through-Redundant-Memory-Accesses",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "We present a multiparty session type (MST) framework with asynchronous mixed choice (MC). We propose a core construct for MC that allows transient inconsistencies in protocol state between distributed participants, but ensures all participants can always eventually reach a mutually consistent state. We prove the correctness of our system by establishing a progress property and an operational correspondence between global types and distributed local type projections. Based on our theory, we implement a practical toolchain for specifying and validating asynchronous MST protocols featuring MC, and programming compliant gen_statem processes in Erlang/OTP. We test our framework by using our toolchain to specify and reimplement part of the amqp_client of the RabbitMQ broker for Erlang.",
@@ -2054,10 +2679,21 @@
       "Adriana Laura Voinea",
       "Simon Thompson"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798256",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ed65dcd8-7f95-49ac-a050-bc33a83cc6ca",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "1542-1569",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -2069,9 +2705,11 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798256",
       "https://2026.splashcon.org/details/oopsla-2026/56/Mixed-Choice-in-Asynchronous-Multiparty-Session-Types",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   },
   {
     "abstract": "Seed explosion is a fundamental problem in fuzzing seed scheduling. It occurs when a fuzzer maintains a corpus with a huge number of seeds and fails to choose a promising one. Existing seed scheduling works focus on seed prioritization but suffer from the seed explosion since the seed corpus size is still huge. We tackle seed explosion from a new perspective, corpus reduction, i.e., compute a seed corpus subset. Corpus reduction can eliminate redundant seeds in the corpus and significantly reduce corpus size. However, this could lead to poor diversity in seed selection and severely impact the fuzzing performance. Meanwhile, effective corpus reduction incurs large runtime overhead. In practice, it’s challenging to adopt corpus reduction in fuzzing seed scheduling. Prior techniques like cull_queue, AFLCmin and MinSet all suffer from poor seed diversity. AFL-Cmin and MinSet incur prohibitive runtime overhead and are hence only applicable to one-time task initial seed selection rather than high-frequency seed scheduling. We propose a novel randomized corpus reduction technique, RandSet, that can reduce the corpus size and yield diverse seed selection simultaneously. Meanwhile, the runtime overhead of RandSet is minimal, suiting a high-frequency seed scheduling task. Our key insight is to introduce randomness into corpus reduction so as to enjoy the two benefits of a randomized algorithm: randomized output (i.e., diverse seed selection) and low runtime overhead. Specifically, we formulate the corpus reduction in seed scheduling as a classic set cover problem and compute a randomized subset of seed corpus as a set cover to cover all features of the entire corpus. We then develop a novel seed scheduling approach using the randomized corpus subset. Our technique can effectively mitigate seed explosion by scheduling a small and randomized subset of the corpus rather than the entire corpus. We implement RandSet on three popular fuzzers: AFL++, LibAFL and Centipede to showcase its general algorithmic design. We perform a comprehensive evaluation of RandSet on three benchmarks: standalone programs, FuzzBench and Magma. Our evaluation results show that RandSet can achieve significantly more diverse seed selection compared with other corpus reduction techniques. RandSet also yields high reduction ratio, achieving an average subset ratio of 4.03% and 5.99% after corpus reduction in terms of standalone programs and FuzzBench programs. In terms of fuzzing performance gain from our randomized corpus reduction, RandSet achieves a 16.58% gain on standalone programs and up to 3.57% gain on FuzzBench programs in AFL++. RandSet triggers up to 7 more ground-truth bugs than the state-of-the-art fuzzer on Magma, while introducing only 3.93% overhead on standalone programs and as low as 1.17% overhead on FuzzBench.",
@@ -2112,10 +2750,21 @@
       "Iwan Quémerais",
       "Lars Birkedal"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [],
+    "doi": "10.1145/3798224",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "fb25fe85-f23f-42f4-9b76-cee6a2e3e63c",
+    "issue": "OOPSLA1",
     "locations": [],
+    "pages": "681-706",
+    "publicationDate": "2026-04-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "OOPSLA"
     ],
@@ -2127,8 +2776,10 @@
       "OOPSLA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3798224",
       "https://2026.splashcon.org/details/oopsla-2026/25/Mixtris-Mechanised-Higher-Order-Separation-Logic-for-Mixed-Choice-Multiparty-Message",
       "https://conf.researchr.org/track/splash-2026/oopsla-2026"
-    ]
+    ],
+    "volume": "10"
   }
 ]

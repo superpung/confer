@@ -174,14 +174,25 @@
       "Xiaoyin Wang",
       "Na Meng"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Thu 9 Jul 2026 11:04 - 11:21"
     ],
+    "doi": "10.1145/3731450",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "036e8ff8-69fd-4fc9-8191-0cff0cc6d8ec",
+    "issue": "2",
     "locations": [
       "MB 2.435"
     ],
+    "pages": "1-25",
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Service and Systems"
@@ -194,9 +205,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3731450",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/20/Programming-of-Automation-Configuration-in-Smart-Home-Systems-Challenges-and-Opportu",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "As the automotive industry transitions toward Software-Defined Vehicle (SDV), Over-the-Air (OTA) updates have become a critical capability. However, conventional update mechanisms often struggle to ensure update success due to the gap between static regulatory compliance and the dynamic operational complexities of modern vehicle architectures. This paper proposes a dependency-aware OTA orchestration framework that addresses these challenges by integrating four operational dimensions—Dependency, Safety, Update Sensitivity, and Governance—into a graph-based scheduling logic. Designed to align with major industrial standards such as AUTOSAR, UNECE R155/R156, and ISO 26262, our framework provides a standardized yet flexible foundation for managing software components across multiple Electronic Control Units (ECUs) environments. Evaluated against a Conventional Sequential Baseline that represents current industrial practices, the proposed approach demonstrates superior performance across three Research Questions (RQs): effectiveness in improving update success rates, efficiency in execution time and update requests through optimized scheduling, and feasibility in maintaining system-wide integrity by successfully reconciling stringent safety requirements and diverse update sensitivity constraints. These findings offer actionable insights for implementing high-integrity OTA solutions that meet both functional safety and legal requirements in production-grade SDV environments.",
@@ -574,14 +587,25 @@
       "Benoit Baudry",
       "Martin Monperrus"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1109/tse.2025.3627891",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "09a9e3ed-d800-4441-b301-3a992f864f0b",
+    "issue": "1",
     "locations": [
       "MB 9A"
     ],
+    "pages": "54-69",
+    "publicationDate": "2026-01-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Release Engineering"
@@ -594,11 +618,13 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3627891",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/10/Causes-and-Canonicalization-of-Unreproducible-Builds-in-Java",
       "https://ieeexplore.ieee.org/document/11223991",
       "https://arxiv.org/abs/2504.21679",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "In an industry dominated by straight men, many developers representing other gender identities and sexual orientations often encounter hateful or discriminatory messages. Such communications pose barriers to participation for women and LGBTQ+ persons. Due to sheer volume, manual inspection of all communications for discriminatory communication is infeasible for a large-scale Free Open-Source Software (FLOSS) community. To address this challenge, this study proposes an automated mechanism to identify Sexual Orientation and Gender Identity Discriminatory (SGID) texts in software developers’ communications. On this goal, we trained and evaluated SGID4SE (Sexual orientation and Gender Identity Discriminatory text identification for (4) Software Engineering texts), a supervised learning-based tool. SGID4SE incorporates six preprocessing steps and ten state-of-the-art algorithms. SGID4SE employs six distinct strategies to enhance the performance of the minority class. We empirically evaluated each strategy and identified an optimum configuration for each algorithm. In our ten-fold cross-validation-based evaluations, a BERT-based model achieves the best performance with 85.9% precision, 80.0% recall, and 82.9% F1-score for the SGID class. This model achieves 95.7% accuracy and a Matthews Correlation Coefficient of 80.4%. Our dataset and tool establish a foundation for further research in this direction",
@@ -610,14 +636,25 @@
       "Rajshakhar Paul",
       "Amiangshu Bosu"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 15:00 - 15:20"
     ],
+    "doi": "10.1145/3757739",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0a834056-fa91-4418-b58d-f3681b1c14ba",
+    "issue": "5",
     "locations": [
       "MB 3.430"
     ],
+    "pages": "1-31",
+    "publicationDate": "2026-05-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "MSR 1"
@@ -630,11 +667,12 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3757739",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/6/Automated-Identification-of-Sexual-Orientation-and-Gender-Identity-Discriminatory-Tex",
       "https://dl.acm.org/doi/pdf/10.1145/3757739",
-      "https://doi.org/10.1145/3757739",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Prime Video regularly conducts load tests to simulate the viewer traffic spikes seen during live events such as Thursday Night Football as well as video-on-demand (VOD) events such as Rings of Power. While these stress tests validate system capacity, they can sometimes miss service behaviors unique to real event traffic. We present a graph-based anomaly detection system that identifies under-represented services using unsupervised node-level graph embeddings. Built on a GCN-GAE, our approach learns structural representations from directed, weighted service graphs at minute-level resolution and flags anomalies based on cosine similarity between load test and event embeddings. The system identifies incident-related services that are documented and demonstrates early detection capability. We also introduce a preliminary synthetic anomaly injection framework for controlled evaluation that show promising precision (96%) and low false positive rate (0.08%), though recall (58%) remains limited under conservative propagation assumptions. This framework demonstrates practical utility within Prime Video while also surfacing methodological lessons and directions, providing a foundation for broader application across microservice ecosystems.",
@@ -1863,14 +1901,28 @@
       "Tien N. Nguyen",
       "Hridesh Rajan"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Tue 7 Jul 2026 12:00 - 12:20"
     ],
+    "doi": "10.1109/tse.2026.3656464",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1dbd127b-0252-4b7e-b110-72551fcf3f56",
+    "issue": "3",
     "locations": [
       "MB 3.430"
     ],
+    "pages": "1000-1014",
+    "pdfUrls": [
+      "https://ieeexplore.ieee.org/ielam/32/11440029/11359604-aam.pdf"
+    ],
+    "publicationDate": "2026-03-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Bug Detection and Localization"
@@ -1883,9 +1935,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2026.3656464",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/44/Typestate-based-Fault-Localization-of-API-Usage-Violations-in-a-Deep-Learning-Program",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "Promptly porting patches from a source codebase to its variants (e.g., forks and branches) is essential for mitigating propagated defects and vulnerabilities. Recent studies have explored automated patch porting to reduce manual effort and delay, but existing approaches mainly handle inconsistencies visible in a patch’s local context and struggle with those requiring global mapping knowledge between codebases. We refer to such non-local inconsistencies as implicit inconsistencies. Implicit inconsistencies pose greater challenges for developers to resolve due to their non-local nature. To address them, we propose MIP, which enables collaboration among an LLM, a compiler, and code analysis utilities. MIP adopts different strategies for different cases: when source identifiers exist in the target codebase, it leverages compiler diagnostics; otherwise, it retrieves matched code segment pairs from the two codebases as mapping knowledge for mitigation. Experiments on two representative scenarios, cross-fork and cross-branch patch porting, show that MIP successfully resolves more than twice as many patches as the best-performing baseline in both settings. A user study with our industry partner further demonstrates its practical effectiveness.",
@@ -2802,14 +2856,23 @@
       "Yongwang Zhao",
       "Kui Ren"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 17:00 - 17:20"
     ],
+    "doi": "10.1145/3795879",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3342c869-2751-487f-8d8a-08474ed60618",
     "locations": [
       "MB 2.430"
     ],
+    "publicationDate": "2026-02-16",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Verification 1"
@@ -2822,6 +2885,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3795879",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/12/Compiler-Optimization-Based-SMT-Simplifications-An-In-Depth-Study",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -2871,6 +2935,7 @@
     "dates": [
       "Thu 9 Jul 2026 16:10 - 16:20"
     ],
+    "doi": "10.1145/3803437.3805557",
     "eventType": "Paper",
     "id": "338cc3be-2844-44bc-bbb4-dd7009e11396",
     "locations": [
@@ -3462,6 +3527,7 @@
     "dates": [
       "Thu 9 Jul 2026 16:40 - 17:00"
     ],
+    "doi": "10.1145/3765754",
     "eventType": "Paper",
     "id": "3bddf0c2-cda4-4a96-b1e9-d629d6f079c1",
     "locations": [
@@ -3770,6 +3836,7 @@
     "dates": [
       "Tue 7 Jul 2026 16:10 - 16:30"
     ],
+    "doi": "10.1145/3808154",
     "eventType": "Paper",
     "id": "41c26308-95eb-449b-a46b-0e3032331fce",
     "locations": [
@@ -4077,6 +4144,7 @@
     "dates": [
       "Thu 9 Jul 2026 12:12 - 12:30"
     ],
+    "doi": "10.1145/3808100",
     "eventType": "Paper",
     "id": "448ac211-71c7-45ec-8981-9441470fe9ca",
     "locations": [
@@ -4736,6 +4804,7 @@
     "dates": [
       "Thu 9 Jul 2026 15:00 - 15:20"
     ],
+    "doi": "10.1145/3783989",
     "eventType": "Paper",
     "id": "51f1e446-b3e0-4ee2-af61-a51213c1e2a3",
     "locations": [
@@ -5969,14 +6038,27 @@
       "Bram Adams",
       "Ahmed E. Hassan"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 14:10 - 14:30"
     ],
+    "doi": "10.1007/s10664-026-10833-3",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "63deeedb-df55-45c3-88ff-6a2581cb533c",
+    "issue": "4",
     "locations": [
       "MB 3.430"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-026-10833-3.pdf"
+    ],
+    "publicationDate": "2026-07-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "MSR 2"
@@ -5989,9 +6071,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-026-10833-3",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/50/HAFix-History-Augmented-Large-Language-Models-for-Bug-Fixing",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "31"
   },
   {
     "abstract": "With the rapid development of large language models in code generation, AI-powered editors such as GitHub Copilot and Cursor are revolutionizing software development practices. At the same time, studies have identified potential defects in the generated code. Previous research has predominantly examined how code context influences the generation of defective code, often overlooking the impact of defects within commented-out code (CO code). AI coding assistants’ interpretation of CO code in prompts affects the code they generate. This study evaluates how AI coding assistants, GitHub Copilot and Cursor, are influenced by defective CO code. The experimental results show that defective CO code in the context causes AI coding assistants to generate more defective code, reaching up to 58.17 percent. Our findings further demonstrate that the tools do not simply copy the defective code from the context. Instead, they actively reason to complete incomplete defect patterns and continue to produce defective code despite distractions such as incorrect indentation or tags. Even with explicit instructions to ignore the defective CO code, the reduction in defects does not exceed 21.84 percent. These findings underscore the need for improved robustness and security measures in AI coding assistants.",
@@ -6811,6 +6895,7 @@
     "dates": [
       "Thu 9 Jul 2026 12:10 - 12:20"
     ],
+    "doi": "10.1145/3803437.3805583",
     "eventType": "Paper",
     "id": "71fcc8a9-8c02-4763-9956-086f79c9c66e",
     "locations": [
@@ -7020,6 +7105,7 @@
     "dates": [
       "Wed 8 Jul 2026 16:40 - 17:00"
     ],
+    "doi": "10.1145/3803437.3805789",
     "eventType": "Paper",
     "id": "76133b39-9320-4a46-9963-c773450ea448",
     "locations": [
@@ -7663,6 +7749,7 @@
     "dates": [
       "Thu 9 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1109/TSE.2025.3587794",
     "eventType": "Paper",
     "id": "81b02d04-e511-4d3a-9f65-fa9bd49b21ef",
     "locations": [
@@ -7943,6 +8030,7 @@
     "dates": [
       "Wed 8 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1145/3797144",
     "eventType": "Paper",
     "id": "880827c3-0c0d-4cab-8bbc-96c1f1d7d487",
     "locations": [
@@ -8833,14 +8921,23 @@
       "Shaowei Wang",
       "Bowen Xu"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 8 Jul 2026 14:50 - 15:10"
     ],
+    "doi": "10.1145/3796704",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9844f541-4a31-45c0-9816-b0f6bf6207a9",
     "locations": [
       "MB 1.210"
     ],
+    "publicationDate": "2026-02-10",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "LLM for SE 4"
@@ -8853,6 +8950,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3796704",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/17/A-Large-Scale-Empirical-Evaluation-of-LLMs-for-Automated-Self-Admitted-Technical-Debt",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -9067,6 +9165,7 @@
     "dates": [
       "Thu 9 Jul 2026 11:50 - 12:10"
     ],
+    "doi": "10.1145/3808179",
     "eventType": "Paper",
     "id": "9d614bd6-ec19-4d9a-a7b5-607a8563d870",
     "locations": [
@@ -9312,14 +9411,25 @@
       "Begüm Koç",
       "Mali Izadi"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Tue 7 Jul 2026 11:00 - 11:20"
     ],
+    "doi": "10.1109/tse.2025.3644183",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9fe69122-6c4c-4e58-99e8-1db9953e4143",
+    "issue": "2",
     "locations": [
       "MB 9D"
     ],
+    "pages": "651-674",
+    "publicationDate": "2026-02-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Benchmarking"
@@ -9332,9 +9442,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3644183",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/51/Benchmarking-AI-Models-in-Software-Engineering-A-Review-Search-Tool-and-Unified-Ap",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "Deep Reinforcement Learning (DRL) has made significant advancements in various fields, such as autonomous driving, healthcare, and robotics, by enabling agents to learn optimal policies through interactions with their environments. However, the application of DRL in safety-critical domains presents challenges, particularly concerning the safety of the learned policies. DRL agents, which are focused on maximizing rewards, may select unsafe actions, leading to safety violations. Runtime safety monitoring is thus essential to ensure the safe operation of these agents, especially in unpredictable and dynamic environments. This paper introduces SMARLA, a black-box safety monitoring approach specifically designed for DRL agents. SMARLA utilizes machine learning to predict safety violations by observing the agent’s behavior during execution. The approach is based on Q-values, which reflect the expected reward for taking actions in specific states. SMARLA employs state abstraction to reduce the complexity of the state space, enhancing the predictive capabilities of the monitoring model. Such abstraction enables the early detection of unsafe states, allowing for the implementation of corrective and preventive measures before incidents occur. We quantitatively and qualitatively validated SMARLA on three well-known case studies widely used in DRL research. Empirical results reveal that SMARLA is accurate at predicting safety violations, with a low false positive rate, and can predict violations at an early stage, approximately halfway through the execution of the agent, before violations occur. We also discuss different decision criteria, based on confidence intervals of the predicted violation probabilities, to trigger safety mechanisms aiming at a trade-off between early detection and low false positive rates.",
@@ -9447,14 +9559,23 @@
       "Raffaela Mirandola",
       "Andreas Vogelsang"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 15:10 - 15:30"
     ],
+    "doi": "10.1145/3788879",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a22952cf-e3bb-4887-a775-4d7c1bdd242c",
     "locations": [
       "MB 3.210"
     ],
+    "publicationDate": "2026-01-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "SE and AI 1"
@@ -9467,6 +9588,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3788879",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/29/A-Research-Roadmap-for-Augmenting-Software-Engineering-Processes-and-Software-Product",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -9655,14 +9777,23 @@
       "Qianyun Shen",
       "Weiyi Shang"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 15:00 - 15:20"
     ],
+    "doi": "10.1145/3787494",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a55833c0-86f1-4f5c-ba29-d11d9e3f87cf",
     "locations": [
       "MB 3.445"
     ],
+    "publicationDate": "2026-01-19",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Logging"
@@ -9675,6 +9806,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3787494",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/59/LPB-Gen-Systematic-Large-Log-Parsing-Benchmarks-Generation",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -10311,14 +10443,25 @@
       "Ruwei Pan",
       "Hongyu Zhang"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 10:30 - 10:50"
     ],
+    "doi": "10.1109/tse.2025.3642621",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "af07e118-5c15-4bde-9e77-61cdc85fb913",
+    "issue": "2",
     "locations": [
       "MB 3.270"
     ],
+    "pages": "631-650",
+    "publicationDate": "2026-02-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Code Generation 1"
@@ -10331,9 +10474,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3642621",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/15/AdaCoder-An-Adaptive-Planning-and-Multi-Agent-Framework-for-Function-Level-Code-Gene",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "\\textbf{\\textit{Background.}} Continuous Integration and Continuous Delivery (CI/CD) automates the building, testing, packaging, and deployment of software systems. In mobile app development, particularly for Android apps, CI/CD pipelines must accommodate platform-specific build tools and support reliable building, rigorous testing, packaging, and proper releasing processes. These requirements introduce additional configuration and maintenance considerations compared to many other software domains. \\textbf{\\textit{Motivation.}} Despite the availability of multiple CI/CD services, there is limited empirical evidence on how Android projects configure and evolve their pipelines, how complex these configurations are, and what drives their maintenance activities. A systematic understanding of these aspects is necessary to identify challenges, inefficiencies, and opportunities to improve CI/CD adoption in mobile development. \\textbf{\\textit{Approach.}} We conducted a large-scale empirical study of 2,557 open-source Android apps using four major CI/CD services: \\textit{GitHub Actions},\\textit{ Travis CI}, \\textit{CircleCI}, and \\textit{GitLab CI/CD}. We examined 4,295 YAML configuration files containing 24,976 directives. We addressed three research questions addressing (RQ1) configuration complexity, heterogeneity, and tool usage, (RQ2) the evolution of CI/CD configurations over time, and (RQ3) recurring themes in CI/CD maintenance. We also performed a thematic analysis of 384 commit messages and validated results using Latent Dirichlet Allocation (LDA) across the full commit data. \\textbf{\\textit{Findings.}} We observe substantial variation in configuration complexity across CI/CD services and programming languages, along with a lack of standardization. More than 81% of configuration effort is devoted to setup and initialization tasks. Only about half of the projects implement automated testing, predominantly standard unit tests via Gradle, and just 9% support deployment automation. When present, deployment rarely targets app stores directly; most projects rely on third-party tools or manual processes. CI/CD pipelines change approximately every two months on average, and maintenance frequency correlates positively with active issue tracking, project size and age, and community engagement. We identify 11 recurring maintenance themes: over one-third focus on workflow improvements and build fixing, while another third address updates to build environments, tools, and dependencies, partially automated by bots such as Dependabot and Renovate. \\textbf{\\textit{Implications.}} Our results highlight the need for greater standardization in Android CI/CD practices and reveal significant opportunities to reduce configuration overhead. The findings motivate the development of AI-powered and automated tooling to streamline setup, strengthen testing and deployment automation, and lower barriers to effective CI/CD adoption in mobile software engineering.",
@@ -10343,14 +10488,25 @@
       "Osamah Abduljalil",
       "Safwat Hassan"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 11:20 - 11:40"
     ],
+    "doi": "10.1145/3736758",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "af6da498-0bf1-4402-91a1-270ef0259e3a",
+    "issue": "2",
     "locations": [
       "MB 2.435"
     ],
+    "pages": "1-40",
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Mobile Apps 1"
@@ -10363,9 +10519,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3736758",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/41/CI-CD-Configuration-Practices-in-Open-Source-Android-Apps-An-Empirical-Study",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "In large software ecosystems, semantically related code changes—such as alternative solutions or overlapping modifications—are often discovered only days after submission, leading to duplicated effort and delayed reviews. We present SmartPatchLinker, a browser-based tool that supports the discovery of related patches directly within the code review interface. SmartPatchLinker is implemented as a lightweight Chrome extension with a local inference backend and integrates with Gerrit to retrieve and rank semantically linked changes when a reviewer opens a patch. The tool allows reviewers to configure the search scope, view ranked candidates with confidence indicators, and examine related work without leaving their workflow or relying on server-side installations. We perform both usefulness and usability evaluations to study how SmartPatchLinker can support reviewers during code review. SmartPatchLinker is open source, and its source code, Docker containers, and the replication package used in our evaluation are publicly available on GitHub. A screencast video demonstrating the tool is also available online",
@@ -12119,6 +12277,7 @@
     "dates": [
       "Tue 7 Jul 2026 12:00 - 12:10"
     ],
+    "doi": "10.1145/3803437.3805552",
     "eventType": "Paper",
     "id": "cae63afc-72f8-4a4f-9bca-fcc8bc1cefe2",
     "locations": [
@@ -12255,6 +12414,7 @@
     "dates": [
       "Thu 9 Jul 2026 14:40 - 14:50"
     ],
+    "doi": "10.1145/3803437.3805553",
     "eventType": "Paper",
     "id": "cbb92c09-435d-4184-a0ec-0423ba00b333",
     "locations": [
@@ -13062,14 +13222,27 @@
       "Bonita Sharif",
       "Robert Dyer"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 11:10 - 11:30"
     ],
+    "doi": "10.1007/s10586-026-05947-8",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "dbcec7ff-8934-4841-9e6e-44a59ace18e2",
+    "issue": "5",
     "locations": [
       "MB 5.215"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10774-3.pdf"
+    ],
+    "publicationDate": "2026-09-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Comprehension and Maintenance"
@@ -13082,10 +13255,12 @@
       "Journal-First Paper"
     ],
     "urls": [
-      "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/45/An-Exploratory-Eye-Tracking-Study-on-How-Developers-Classify-and-Debug-Python-Code-in",
       "https://doi.org/10.1007/s10586-026-05947-8",
-      "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+      "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/45/An-Exploratory-Eye-Tracking-Study-on-How-Developers-Classify-and-Debug-Python-Code-in",
+      "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline",
+      "https://doi.org/10.1007/s10664-025-10774-3"
+    ],
+    "volume": "31"
   },
   {
     "abstract": "COBOL forms the backbone of the global economy, with more than 220 billion lines of code supporting nearly 70% of all business transactions worldwide. But the ecosystem faces a serious skills crisis: a large proportion of experienced COBOL programmers are nearing retirement, while universities have largely removed the language from their curricula. At the same time, traditional COBOL tools rooted in 1980s-era workflows fail to appeal to a new generation of developers raised on modern, interactive environments. To address this gap, we developed COBook, a notebook based environment that brings modern interactive tooling to COBOL development and learning. COBook is one of the first tools to integrate these capabilities for COBOL in a notebook environment. COBook makes the program structure visible through visualizations, including flowcharts, data flow diagrams, and memory layouts, which may help learners build mental models of COBOL programs. Its AI-Assisted features include plain-language explanations, error suggestions, and code generation to support learners working with unfamiliar COBOL syntax. In a preliminary evaluation with 33 novice programmers across five COBOL comprehension tasks, COBook reduced mental demand by 53%, physical demand by 42%, temporal demand by 38%, and frustration by 59%, while improving perceived performance by 91% and simplifying the handling of logic complexity by 53% compared to traditional text-based COBOL IDE programming. By bridging the gap between legacy systems and modern tooling, COBook aims to make COBOL more accessible and engaging for today’s programmers. The tool demo video is available at https://youtu.be/kjdzJsCq_Lc , the tool website and the artifacts are at https://github.com/rishalab/COBook .",
@@ -13235,11 +13410,19 @@
     "dates": [
       "Wed 8 Jul 2026 12:20 - 12:30"
     ],
+    "doi": "10.2139/ssrn.6561338",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e1323197-c093-4ddb-8f16-f33281e28303",
     "locations": [
       "MB 9C"
     ],
+    "publicationDate": "2026-01-01",
+    "publisher": "Elsevier BV",
     "sessionTitles": [
       "Software Engineering Education",
       "SEET: Keynote + AI Orientation"
@@ -13252,6 +13435,7 @@
       "Software Engineering Education"
     ],
     "urls": [
+      "https://doi.org/10.2139/ssrn.6561338",
       "https://conf.researchr.org/details/fse-2026/fse-2026-software-engineering-education/19/Extended-Abstract-of-Enabling-Emotion-Aware-Collaboration-in-Capstone-Projects",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -13372,6 +13556,7 @@
     "dates": [
       "Wed 8 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1145/3803437.3805267",
     "eventType": "Paper",
     "id": "e29208ec-e3c9-471b-8fea-0303e5bd3516",
     "locations": [
@@ -13979,14 +14164,25 @@
       "Ying Zou",
       "Ahmed E. Hassan"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Tue 7 Jul 2026 16:20 - 16:40"
     ],
+    "doi": "10.1109/tse.2026.3663599",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ef33314a-4953-4cfa-83e8-fd9a862a1ee2",
+    "issue": "4",
     "locations": [
       "MB 2.210"
     ],
+    "pages": "1391-1406",
+    "publicationDate": "2026-04-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "LLM for SE 3"
@@ -13999,9 +14195,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2026.3663599",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/24/Towards-Refining-Developer-Questions-using-LLM-Based-Named-Entity-Recognition-for-Dev",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "The rapid integration of Large Language Models (LLMs) into software development workflows has given rise to a new class of AI-assisted coding tools, such as Claude-Code, Codex, and Gemini CLIs. While promising significant productivity gains, the engineering process of building these tools, which sit at the complex intersection of traditional software engineering, AI system design, and human-computer interaction, is fraught with unique and poorly understood challenges. This paper presents the first empirical study of engineering pitfalls in building such tools, on a systematic, manual analysis of over 3.8K publicly reported bugs in the open-source repositories of three AI-assisted coding tools (i.e., Claude-Code, Codex, and Gemini CLI) on GitHub. Specifically, we employ an open-coding methodology to manually examine the issue description, associated user discussions, and developer responses. Through this process, we categorize each bug along multiple dimensions, including bug type, bug location, root cause, and observed symptoms. This fine-grained annotation enables us to characterize common failure patterns and identify recurring engineering challenges. Our results show that more than 67% of the bugs in these tools are related to functionality. In terms of root causes, 36.9% of the bugs stem from API, integration, or configuration errors. Consequently, the most commonly observed symptoms reported by users are API errors (18.3%), terminal problems (14%), and command failures (12.7%). These bugs predominantly affect the tool invocation (37.2%) and command execution (24.7%) stages of the system workflow. Collectively, our findings provide a critical roadmap for developers seeking to design the next generation of reliable and robust AI coding assistants.",
@@ -14185,14 +14383,23 @@
       "Igor Steinmacher",
       "Anita Sarma"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 14:50 - 15:10"
     ],
+    "doi": "10.1145/3789210",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f12cfb04-c28b-432b-a009-e8a499ddfac7",
     "locations": [
       "MB 3.210"
     ],
+    "publicationDate": "2026-01-19",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "SE and AI 1"
@@ -14205,6 +14412,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3789210",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/8/Charting-Uncertain-Waters-A-Socio-Technical-Roadmap-for-Sustaining-Open-Source-Commu",
       "https://dl.acm.org/doi/10.1145/3789210",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
@@ -14984,6 +15192,7 @@
     "dates": [
       "Wed 8 Jul 2026 12:00 - 12:10"
     ],
+    "doi": "10.1145/3803437.3805778",
     "eventType": "Paper",
     "id": "f9dd4a8e-0eb1-403c-93a2-a8f38f814299",
     "locations": [

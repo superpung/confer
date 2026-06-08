@@ -13,6 +13,7 @@
 #   scraper   which adapter handles it; must be registered in scrapers/__init__.py
 #   enabled   skip when false
 #   source    adapter-specific options
+#             optional enrichers: crossref/openalex fetch publication metadata
 
 venues:
   - id: dac2026
@@ -27,6 +28,8 @@ venues:
       base_url: https://63dac.conference-program.com/
       prefixes: [RESEARCH]      # presentation-id prefixes to include
       all_presentations: false  # true = every presentation type, not just papers
+      enrichers:
+        - crossref
 
   - id: date2026
     name: DATE 2026
@@ -38,6 +41,8 @@ venues:
     enabled: true
     source:
       program_url: https://www.date-conference.com/programme
+      enrichers:
+        - crossref
 
   - id: asplos2026
     name: ASPLOS 2026
@@ -50,6 +55,9 @@ venues:
     source:
       program_url: https://www.asplos-conference.org/asplos2026/program/index.html
       default_track: Main Conference
+      enrichers:
+        - crossref
+        - openalex
 
   - id: hpca2026
     name: HPCA 2026
@@ -66,6 +74,8 @@ venues:
       require_authors: true
       include_tracks:
         - Main Conference
+      enrichers:
+        - crossref
 
   - id: isca2026
     name: ISCA 2026
@@ -78,6 +88,9 @@ venues:
     source:
       program_url: https://iscaconf.org/isca2026/program/
       default_track: Main Conference
+      enrichers:
+        - crossref
+        - openalex
 
   - id: micro2025
     name: MICRO 2025
@@ -90,6 +103,9 @@ venues:
     source:
       program_url: https://microarch.org/micro58/program/index.php
       default_track: Main Conference
+      enrichers:
+        - crossref
+        - openalex
 
   - id: icse2026
     name: ICSE 2026
@@ -121,6 +137,8 @@ venues:
         - SE in Society (SEIS)
         - SRC - ACM Student Research Competition
         - Software Engineering Education and Training (SEET)
+      enrichers:
+        - crossref
 
   - id: fse2026
     name: FSE 2026
@@ -145,6 +163,8 @@ venues:
         - Software Engineering Education
         - Student Research Competition
         - Tool Demonstrations
+      enrichers:
+        - crossref
 
   - id: ase2025
     name: ASE 2025
@@ -175,6 +195,8 @@ venues:
         - Research Papers
         - Student Research Competition
         - Tool Demonstration Track
+      enrichers:
+        - crossref
 
   - id: issta2025
     name: ISSTA 2025
@@ -193,6 +215,50 @@ venues:
         - Doctoral Symposium
         - Research Papers
         - Tool Demonstrations
+      enrichers:
+        - crossref
+
+  - id: tosem2026
+    name: TOSEM 2026
+    series: TOSEM
+    category: Software Engineering
+    kind: journal
+    year: 2026
+    scraper: dblp
+    enabled: true
+    source:
+      toc_url: https://dblp.org/db/journals/tosem/tosem35.xml
+      default_track: Volume 35
+      default_event_type: Journal Article
+      include_types:
+        - article
+      exclude_title_patterns:
+        - ^Editorial
+        - ^A Year in TOSEM
+      enrichers:
+        - crossref
+        - openalex
+
+  - id: tse2026
+    name: TSE 2026
+    series: TSE
+    category: Software Engineering
+    kind: journal
+    year: 2026
+    scraper: dblp
+    enabled: true
+    source:
+      toc_url: https://dblp.org/db/journals/tse/tse52.xml
+      default_track: Volume 52
+      default_event_type: Journal Article
+      include_types:
+        - article
+      exclude_title_patterns:
+        - ^Editorial
+        - ^A Journal for
+      enrichers:
+        - crossref
+        - openalex
 
   - id: oopsla2026
     name: OOPSLA 2026
@@ -209,6 +275,52 @@ venues:
       require_authors: true
       include_tracks:
         - OOPSLA
+      enrichers:
+        - crossref
+
+  - id: popl2026
+    name: POPL 2026
+    series: POPL
+    category: Programming Languages
+    kind: conference
+    year: 2026
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://popl26.sigplan.org/track/POPL-2026-popl-research-papers
+      context: popl-2026
+      default_event_type: Paper
+      require_authors: true
+      include_event_types:
+        - Paper
+        - Talk
+      include_tracks:
+        - POPL
+      enrichers:
+        - crossref
+        - openalex
+
+  - id: pldi2026
+    name: PLDI 2026
+    series: PLDI
+    category: Programming Languages
+    kind: conference
+    year: 2026
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://pldi26.sigplan.org/track/pldi-2026-papers
+      context: pldi-2026
+      default_event_type: Paper
+      require_authors: true
+      include_event_types:
+        - Paper
+        - Talk
+      include_tracks:
+        - Research Papers
+      enrichers:
+        - crossref
+        - openalex
 
   # Example of a second venue on a different platform (disabled until the
   # openreview adapter exists — see "Planned" in AGENTS.md).

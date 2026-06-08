@@ -44,14 +44,27 @@
       "Hideaki Hata",
       "Raula Gaikovina Kula"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 16 Apr 2026 11:00 - 11:15"
     ],
+    "doi": "10.1007/s10664-024-10599-6",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "00a36c90-8e4d-4a4c-b0bf-5170decfddea",
+    "issue": "2",
     "locations": [
       "Oceania V"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-024-10599-6.pdf"
+    ],
+    "publicationDate": "2025-03-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Human and Social Aspects 6"
     ],
@@ -63,12 +76,13 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-024-10599-6",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/60/Developer-reactions-to-protestware-in-open-source-software-the-cases-of-color-js-and",
       "https://rdcu.be/e3LXC",
-      "https://doi.org/10.1007/s10664-024-10599-6",
       "https://arxiv.org/abs/2409.15674",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "LLMs can produce functionally correct programs, yet correctness alone does not guarantee reliability. Two programs passing the same tests can exhibit drastically different runtime behavior, creating hidden risks like performance bottlenecks and memory leaks. Despite this, the runtime consistency of LLM-generated code remains largely unexplored. In this work, we introduce a framework to systematically quantify \\emph{execution-time memory stability} across multiple correct generations for the same task. We propose a novel solution-level metric, \\textbf{DMPD (Dynamic Mean Pairwise Distance)}, which uses \\textbf{Dynamic Time Warping} to compare the shapes of memory usage profiles. These profiles, which we term \\textbf{Monotonic Peak Profiles (MPPs)}, are transformed to suppress transient noise, enabling robust comparison. By aggregating these scores, we derive a model-level \\textbf{Model Instability Score (MIS)}. Across the BigOBench and CodeContests benchmarks, we find substantial runtime divergence among correct solutions, revealing that instability often increases with higher sampling temperatures even as pass@1 improves. We also uncover exploratory correlations between our stability metrics and established software-engineering indicators (e.g., Cognitive and Cyclomatic Complexity), suggesting a link between operational behavior and code maintainability. These findings enable stability-aware selection of passing candidates in CI/CD pipelines, reducing operational risk without sacrificing correctness.",
@@ -343,6 +357,7 @@
       "Tue 14 Apr 2026 17:30 - 18:00",
       "Thu 16 Apr 2026 15:30 - 16:00"
     ],
+    "doi": "10.1145/3774748.3787634",
     "eventType": "Poster",
     "id": "033fa60e-3218-45c5-aeaa-4559bd8c2708",
     "locations": [
@@ -815,6 +830,7 @@
     "dates": [
       "Fri 17 Apr 2026 12:00 - 12:15"
     ],
+    "doi": "10.1145/3744916.3773164",
     "eventType": "Talk",
     "id": "075c0caf-f9fb-494f-bf01-98f80403d647",
     "locations": [
@@ -2007,6 +2023,7 @@
     "dates": [
       "Thu 16 Apr 2026 16:15 - 16:30"
     ],
+    "doi": "10.1145/3786580.3786949",
     "eventType": "Talk",
     "id": "166c1eb2-db6d-4855-9656-d68dc5ec27fc",
     "locations": [
@@ -2755,6 +2772,7 @@
     "dates": [
       "Thu 16 Apr 2026 11:00 - 11:15"
     ],
+    "doi": "10.1109/TSE.2025.3614469",
     "eventType": "Talk",
     "id": "1f009848-4f23-40b5-80a2-530384b531b4",
     "locations": [
@@ -2789,6 +2807,7 @@
     "dates": [
       "Thu 16 Apr 2026 11:30 - 11:45"
     ],
+    "doi": "10.1145/3786583.3786896",
     "eventType": "Paper",
     "id": "1f18d66a-145f-4690-ad6a-231174c2936a",
     "locations": [
@@ -2866,6 +2885,7 @@
     "dates": [
       "Fri 17 Apr 2026 11:00 - 11:15"
     ],
+    "doi": "10.1145/3708526",
     "eventType": "Talk",
     "id": "20403b62-8c0c-4afc-8353-9aa3183e20c8",
     "locations": [
@@ -3429,6 +3449,7 @@
     "dates": [
       "Wed 15 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.1145/3744916.3787799",
     "eventType": "Talk",
     "id": "29613e2f-5ae0-4a99-ac96-3bf4d23cb3c5",
     "locations": [
@@ -3532,6 +3553,7 @@
     "dates": [
       "Wed 15 Apr 2026 15:00 - 15:15"
     ],
+    "doi": "10.1109/TSE.2025.3612199",
     "eventType": "Talk",
     "id": "29b69acc-6aad-4029-b4f8-77d1117e90f3",
     "locations": [
@@ -4174,14 +4196,25 @@
       "Luigi Quaranta",
       "Alexander Serebrenik"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 15 Apr 2026 14:30 - 14:45"
     ],
+    "doi": "10.1145/3766064",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3098d80e-e7e3-4fcf-9a0f-36ffa0cb1981",
+    "issue": "6",
     "locations": [
       "Oceania IV"
     ],
+    "pages": "1-38",
+    "publicationDate": "2026-06-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Human and Social Aspects 3"
     ],
@@ -4193,11 +4226,12 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3766064",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/2/Self-monitoring-of-Developers-Emotions-the-Case-of-Agile-Retrospective-Meetings",
       "https://dl.acm.org/doi/10.1145/3766064",
-      "https://doi.org/10.1145/3766064",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Despite the utility that Generative AI (GenAI) tools provide for tasks such as writing code, the use of these tools raises important legal questions and potential risks, particularly those associated with copyright law. As lawmakers and regulators respond to these questions, the views of users can offer relevant perspectives. In this paper, we provide: (1) a survey of 574 developers on the licensing and copyright aspects of GenAI for coding, as well as follow-up interviews; (2) a snapshot of developers’ views at a time when GenAI and perceptions of it were rapidly evolving; and (3) an analysis of developers’ perspectives, yielding insights and recommendations that can inform future regulatory decisions in this evolving field. Our results show the benefits developers derive from GenAI, how they view the use of AI-generated code as similar to using other existing code, the varied opinions they have on who should own or be compensated for such code, that they are concerned about data leakage via GenAI, and other findings, providing organizations and policymakers with valuable insights into how the technology is being used and the concerns that stakeholders believe warrant attention.",
@@ -4211,14 +4245,25 @@
       "Daniel M. German",
       "Denys Poshyvanyk"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Fri 17 Apr 2026 16:15 - 16:30"
     ],
+    "doi": "10.1145/3743133",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "30f6ac86-a013-420a-a63d-044478b8a595",
+    "issue": "2",
     "locations": [
       "Oceania V"
     ],
+    "pages": "1-39",
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Human and Social Aspects 13"
     ],
@@ -4230,9 +4275,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3743133",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/40/Developer-Perspectives-on-Licensing-and-Copyright-Issues-Arising-from-Generative-AI-f",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Open Source Software (OSS) supports modern digital infrastructure and industry, making the ability to contribute and collaborate in OSS communities an increasingly important professional skill. Participating in OSS gives students valuable real-world software engineering experience, but also introduces distinctive challenges. In this work, we investigate the barriers university students encounter when contributing to OSS projects. We qualitatively analyze experiences from an advanced master-level software engineering course at a European university and systematically map those experiences to existing barrier frameworks. Notably, we identify two barriers not described in prior work: Conflicting Mentor Guidance'' and Communication Channel Ambiguity''. By combining project characteristics with student reports, we also find that commit frequency is a more reliable indicator of contribution success than project size or age. Our findings show how barriers interconnect and compound for time-constrained student contributors, with interpersonal barriers often triggering or exacerbating technical and process barriers. Students who selected projects based on personal interest achieved higher success rates, underscoring the role of intrinsic motivation. We conclude with implications for practice: students should choose projects aligned with their interests and with active maintainer engagement; educators should use vitality metrics and prepare students for common barriers; and maintainers should prioritize timely communication and mentorship.",
@@ -4873,6 +4920,7 @@
     "dates": [
       "Wed 15 Apr 2026 11:15 - 11:30"
     ],
+    "doi": "10.1109/TSE.2025.3563121",
     "eventType": "Talk",
     "id": "3804e45a-640e-4795-b7b8-0e97981721e5",
     "locations": [
@@ -5315,6 +5363,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:45 - 15:00"
     ],
+    "doi": "10.1007/s10664-025-10690-6",
     "eventType": "Talk",
     "id": "3bc8cc73-83d5-431a-85e5-c1a49b274b31",
     "locations": [
@@ -5383,6 +5432,7 @@
     "dates": [
       "Thu 16 Apr 2026 17:00 - 17:15"
     ],
+    "doi": "10.1145/3786582.3786806",
     "eventType": "Talk",
     "id": "3c0b683a-8678-4973-8ab6-6ee837863802",
     "locations": [
@@ -6439,6 +6489,7 @@
     "dates": [
       "Fri 17 Apr 2026 14:15 - 14:30"
     ],
+    "doi": "10.1007/s10664-025-10651-z",
     "eventType": "Talk",
     "id": "46f437c5-397a-4cef-ba08-afb0a8a8c7f4",
     "locations": [
@@ -7063,6 +7114,7 @@
     "dates": [
       "Wed 15 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.1145/3786583.3786869",
     "eventType": "Talk",
     "id": "4defadeb-fcfe-4b1e-9a26-47d895f1923a",
     "locations": [
@@ -7294,14 +7346,25 @@
       "Andreas Happe",
       "Jürgen Cito"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 15 Apr 2026 14:15 - 14:30"
     ],
+    "doi": "10.1145/3766895",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4f6ee390-50be-499b-b777-eb147c9fae53",
+    "issue": "6",
     "locations": [
       "Oceania X"
     ],
+    "pages": "1-54",
+    "publicationDate": "2026-06-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Dependability and Security 2"
     ],
@@ -7313,9 +7376,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3766895",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/4/Can-LLMs-Hack-Enterprise-Networks-Autonomous-Assumed-Breach-Penetration-Testing-Acti",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Now is the first generation of young people learning programming alongside AI tools, raising questions about how novices critically engage with them and how they perceive related ethical responsibilities. Existing research has largely focused on university students or developers, leaving a gap in understanding of secondary school perspectives, which are the next cohort of students. To address this gap, we conducted an exploratory survey with 84 German secondary school students aged 16–19 who attended programming workshops and camps in preparation for future computer science studies. The questionnaire examined critical thinking practices in programming and perceptions of AI ethics and responsibility. Our results show that while most students adopt critical evaluation strategies, many also integrate AI-generated code without full comprehension. Gender differences emerged: boys reported more experimental and frequent AI use, whereas girls expressed stronger scepticism, emphasised peer collaboration, and articulated heightened privacy concerns. Across the cohort, students demonstrated notable ethical awareness, with a majority attributing strong responsibility to politics and corporations, potentially reflecting the cultural context of Germany. These findings highlight the importance of culturally responsive software engineering education that strengthens critical AI literacy, leverages gendered learning preferences, and prepares students for global collaboration in an AI-driven software landscape.",
@@ -7388,6 +7453,7 @@
     "dates": [
       "Fri 17 Apr 2026 11:30 - 11:45"
     ],
+    "doi": "10.1145/3707457",
     "eventType": "Talk",
     "id": "508c7359-d344-405f-8103-85a78f90059c",
     "locations": [
@@ -7621,6 +7687,7 @@
     "dates": [
       "Wed 15 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.1145/3786581.3786932",
     "eventType": "Talk",
     "id": "52dbcbc6-a6ad-4c81-9db8-658fd8312735",
     "locations": [
@@ -7650,7 +7717,8 @@
       "Juliana Outão"
     ],
     "dates": [
-      "Tue 14 Apr 2026 14:22 - 14:44"
+      "Tue 14 Apr 2026 14:22 - 14:44",
+      "Tue 14 Apr 2026 14:22 - 14:45"
     ],
     "eventType": "Talk",
     "id": "53e6a53e-4b83-45b5-b567-de65d97d5125",
@@ -8299,6 +8367,7 @@
     "dates": [
       "Wed 15 Apr 2026 11:15 - 11:30"
     ],
+    "doi": "10.1145/3744916.3773145",
     "eventType": "Talk",
     "id": "5c617d3b-38d4-4d23-a80d-68f200d6e75f",
     "locations": [
@@ -8993,6 +9062,7 @@
     "dates": [
       "Wed 15 Apr 2026 11:00 - 11:15"
     ],
+    "doi": "10.1145/3744916.3764541",
     "eventType": "Talk",
     "id": "63bf00b0-d592-4bd8-be01-b31674ec9b26",
     "locations": [
@@ -9184,7 +9254,8 @@
       "Eduard Frankford"
     ],
     "dates": [
-      "Tue 14 Apr 2026 15:07 - 15:29"
+      "Tue 14 Apr 2026 15:07 - 15:29",
+      "Tue 14 Apr 2026 15:07 - 15:30"
     ],
     "eventType": "Talk",
     "id": "65e0d34a-1170-417e-95bc-e79b5ce84515",
@@ -9415,11 +9486,19 @@
     "dates": [
       "Wed 15 Apr 2026 11:45 - 12:00"
     ],
+    "doi": "10.2139/ssrn.6047774",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "670e4952-3ced-4fb1-ae93-d3de73741bf0",
     "locations": [
       "Oceania VI"
     ],
+    "publicationDate": "2026-01-01",
+    "publisher": "Elsevier BV",
     "sessionTitles": [
       "Education 1"
     ],
@@ -9431,6 +9510,7 @@
       "Software Engineering Education and Training (SEET)"
     ],
     "urls": [
+      "https://doi.org/10.2139/ssrn.6047774",
       "https://conf.researchr.org/details/icse-2026/icse-2026-software-engineering-education-and-training--seet-/43/When-Emotions-Matter-Speech-Based-Emotion-Detection-in-Capstone-Project-Retrospectiv",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
     ]
@@ -9442,7 +9522,8 @@
       "Joel Castaño Fernández"
     ],
     "dates": [
-      "Tue 14 Apr 2026 11:22 - 11:44"
+      "Tue 14 Apr 2026 11:22 - 11:44",
+      "Tue 14 Apr 2026 11:22 - 11:45"
     ],
     "eventType": "Talk",
     "id": "67680044-081d-4925-b8b2-3cf6dbf4a733",
@@ -9473,14 +9554,23 @@
       "Max Hort",
       "Leon Moonen"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Fri 17 Apr 2026 14:15 - 14:30"
     ],
+    "doi": "10.1145/3771922",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "67be0eeb-fcf4-48d4-accc-1d313b957c29",
     "locations": [
       "Asia I"
     ],
+    "publicationDate": "2025-10-16",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "AI for Software Engineering 23"
     ],
@@ -9492,6 +9582,7 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3771922",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/44/Assessing-the-Latent-Automated-Program-Repair-Capabilities-of-Large-Language-Models-u",
       "https://dl.acm.org/doi/abs/10.1145/3771922",
       "https://arxiv.org/abs/2401.07994",
@@ -9880,6 +9971,7 @@
     "dates": [
       "Fri 17 Apr 2026 17:15 - 17:30"
     ],
+    "doi": "10.1145/3744916.3773183",
     "eventType": "Talk",
     "id": "6b0d22ff-54ff-41c0-9332-41d6dbcd47fc",
     "locations": [
@@ -10143,6 +10235,7 @@
     "dates": [
       "Fri 17 Apr 2026 11:30 - 11:45"
     ],
+    "doi": "10.1145/3744916.3787803",
     "eventType": "Talk",
     "id": "6cdfca3d-1b26-4251-bac5-b8ebea1837eb",
     "locations": [
@@ -10212,6 +10305,7 @@
     "dates": [
       "Wed 15 Apr 2026 16:30 - 16:45"
     ],
+    "doi": "10.1145/3786583.3786859",
     "eventType": "Talk",
     "id": "6dfd943b-8daf-4f65-9ed5-52c24be7adbe",
     "locations": [
@@ -10416,6 +10510,7 @@
     "dates": [
       "Fri 17 Apr 2026 14:30 - 14:45"
     ],
+    "doi": "10.1145/3744916.3773120",
     "eventType": "Talk",
     "id": "703b0cfe-da21-48f0-adbe-11d492a499ef",
     "locations": [
@@ -10755,7 +10850,8 @@
       "Lakshana Assalaarachchi"
     ],
     "dates": [
-      "Tue 14 Apr 2026 12:07 - 12:29"
+      "Tue 14 Apr 2026 12:07 - 12:29",
+      "Tue 14 Apr 2026 12:07 - 12:30"
     ],
     "eventType": "Talk",
     "id": "719bf816-e3bd-40f0-b341-934cfa58a116",
@@ -11031,6 +11127,7 @@
     "dates": [
       "Thu 16 Apr 2026 15:00 - 15:15"
     ],
+    "doi": "10.1007/s10664-025-10710-5",
     "eventType": "Talk",
     "id": "7832dd4d-c4ba-47d8-8c94-908d765d08b2",
     "locations": [
@@ -11350,6 +11447,7 @@
     "dates": [
       "Wed 15 Apr 2026 15:15 - 15:30"
     ],
+    "doi": "10.1007/s10664-024-10611-z",
     "eventType": "Talk",
     "id": "7ba7070f-ac5b-4226-8d22-8cd872f54902",
     "locations": [
@@ -12255,6 +12353,7 @@
       "Wed 15 Apr 2026 13:30 - 14:00",
       "Thu 16 Apr 2026 15:30 - 16:00"
     ],
+    "doi": "10.1145/3774748.3795659",
     "eventType": "Poster",
     "id": "8535715b-8050-4311-899a-55a318c99fd9",
     "locations": [
@@ -12321,14 +12420,25 @@
       "Andre van der Hoek",
       "Leonardo Murta"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Fri 17 Apr 2026 11:15 - 11:30"
     ],
+    "doi": "10.1145/3748256",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "85adf8c0-582f-49d5-9b6e-d10cf88d7c79",
+    "issue": "5",
     "locations": [
       "Oceania VIII"
     ],
+    "pages": "1-35",
+    "publicationDate": "2026-05-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Evolution 4"
     ],
@@ -12340,9 +12450,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3748256",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/20/Towards-a-feasible-evaluation-function-for-search-based-merge-conflict-resolution",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "In many introductory CS1 courses, students struggle to navigate multiple distributed resources to find answers to their questions, and often cannot formulate questions clearly because they are unaware of their knowledge gaps. Browsing the internet can yield resources that are too advanced or too simplistic for the course level. We leverage natural language processing to extract relevant knowledge from course materials and answer questions about past exams and conceptual topics, thereby enhancing learning in a first-year computer engineering class. Our approach interprets question context, navigates open-source course textbooks on demand, provides explanations aligned with CS1, and enables students to verify answers against cited course references. We developed a Retrieval-Augmented Generation (RAG) virtual teaching assistant that delivers accurate, just-in-time responses grounded in the textbook, with experiments demonstrating reliable, complete, and relevant answers and correct links to textbook sections. Usage data and surveys show that students ask more conceptual than problem-solving questions—likely due to hesitation in approaching instructors—and that 89% report the assistant is helpful, suggesting that accessible LLM-based support encourages deeper exploration of core concepts.",
@@ -12867,6 +12979,7 @@
     "dates": [
       "Wed 15 Apr 2026 11:45 - 12:00"
     ],
+    "doi": "10.1145/3786583.3786881",
     "eventType": "Talk",
     "id": "8978c072-8bf4-4351-83a3-ed8b790b1158",
     "locations": [
@@ -13361,6 +13474,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:15 - 14:30"
     ],
+    "doi": "10.1145/3786580.3786985",
     "eventType": "Talk",
     "id": "8dfa4060-27dc-4b32-a51c-fa64699ddb57",
     "locations": [
@@ -13724,6 +13838,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:45 - 15:00"
     ],
+    "doi": "10.1145/3766890",
     "eventType": "Talk",
     "id": "915e9df3-ce28-42e1-9951-c229eab14228",
     "locations": [
@@ -13952,14 +14067,25 @@
       "Mónica Jin",
       "Martin Monperrus"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Fri 17 Apr 2026 16:30 - 16:45"
     ],
+    "doi": "10.1109/tse.2025.3618123",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "94fe1f4e-8804-4ce2-82fd-dc0125794f6e",
+    "issue": "1",
     "locations": [
       "Oceania X"
     ],
+    "pages": "100-115",
+    "publicationDate": "2026-01-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Dependability and Security 11"
     ],
@@ -13971,9 +14097,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3618123",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/19/Do-Automated-Fixes-Truly-Mitigate-Smart-Contract-Exploits-",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "In next-generation traffic, multiple intelligent vehicles equipped with autonomous driving systems (ADS) operate simultaneously. These vehicles share real-time information through vehicle-to-vehicle (V2V) communication during operation and make decisions based on this mutual perception. In this paper, we present a novel METAmorphic testing framework to evaluate ADS performance in multi-vehicle scenarios, addressing the META information shared during V2V communication (META²V2V). META²V2V interacts with the shared information by systematically injecting four types of controlled common perturbations into V2V data streams and observing how these disruptions affect the vehicles’ mutual perception and subsequent interactions. META²V2V assesses ADS decisions from two aspects: soundness and robustness, by introducing soundness metamorphic testing relations (S-MRs) and robustness metamorphic relations (R-MRs), respectively. Specifically, S-MRs claim that the performance of ADS under perfect information should outperform that under perturbations, whereas R-MRs claim that the performance of ADS should not degrade too much under information perturbations. Furthermore, META²V2V employs multi-objective search-based testing conducted from two directions to efficiently generate test groups that violate S-MRs and R-MRs, respectively. Experimental results demonstrate that, compared to random testing, our approach can identify 733.3% and 133.0% more violations that reveal soundness and robustness issues.",
@@ -14657,6 +14785,7 @@
     "dates": [
       "Thu 16 Apr 2026 12:00 - 12:15"
     ],
+    "doi": "10.1145/3786583.3786898",
     "eventType": "Talk",
     "id": "9cd6cdb9-cb4b-4a0e-b71f-b4179ec3580f",
     "locations": [
@@ -14760,6 +14889,7 @@
     "dates": [
       "Fri 17 Apr 2026 15:15 - 15:30"
     ],
+    "doi": "10.1145/3744916.3787760",
     "eventType": "Talk",
     "id": "9d3f369e-36b9-4998-88bf-89b04f1944aa",
     "locations": [
@@ -15068,6 +15198,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1145/3769864",
     "eventType": "Talk",
     "id": "9fead38f-a949-4973-80ee-ce09557aed95",
     "locations": [
@@ -15101,6 +15232,7 @@
     "dates": [
       "Fri 17 Apr 2026 16:30 - 16:45"
     ],
+    "doi": "10.1145/3771283",
     "eventType": "Talk",
     "id": "a0bed07f-96b5-4926-ad9a-fb836022b6b8",
     "locations": [
@@ -15137,6 +15269,7 @@
     "dates": [
       "Fri 17 Apr 2026 14:30 - 14:45"
     ],
+    "doi": "10.1145/3786580.3786947",
     "eventType": "Talk",
     "id": "a0ecf020-fcbc-442f-a345-f934f73c8390",
     "locations": [
@@ -15173,6 +15306,7 @@
     "dates": [
       "Thu 16 Apr 2026 16:30 - 16:45"
     ],
+    "doi": "10.1145/3744916.3787783",
     "eventType": "Talk",
     "id": "a10ae980-4667-4403-9832-8fdc47d41482",
     "locations": [
@@ -15307,6 +15441,7 @@
     "dates": [
       "Fri 17 Apr 2026 15:15 - 15:30"
     ],
+    "doi": "10.1145/3744916.3773149",
     "eventType": "Talk",
     "id": "a1d8ebb9-4234-46b5-afd4-83733817fd8e",
     "locations": [
@@ -15710,6 +15845,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1145/3744916.3787769",
     "eventType": "Talk",
     "id": "a62ebf23-2794-4f69-8312-febad4f3041b",
     "locations": [
@@ -15881,6 +16017,7 @@
     "dates": [
       "Thu 16 Apr 2026 11:45 - 12:00"
     ],
+    "doi": "10.1145/3708525",
     "eventType": "Talk",
     "id": "a7fcbc85-913c-40c2-b331-686e5dd663fd",
     "locations": [
@@ -16047,6 +16184,7 @@
     "dates": [
       "Thu 16 Apr 2026 15:00 - 15:15"
     ],
+    "doi": "10.1145/3786580.3786953",
     "eventType": "Talk",
     "id": "a9c6edb9-30d9-4669-9062-f572d0b1c660",
     "locations": [
@@ -16352,6 +16490,7 @@
     "dates": [
       "Wed 15 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1145/3744916.3773178",
     "eventType": "Talk",
     "id": "ab7fda84-35ae-423b-9a53-b90479d65c5f",
     "locations": [
@@ -16943,6 +17082,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:45 - 15:00"
     ],
+    "doi": "10.1145/3786583.3786875",
     "eventType": "Talk",
     "id": "b1d0a094-d9ab-42af-9b14-4711d1557569",
     "locations": [
@@ -17241,6 +17381,7 @@
     "dates": [
       "Fri 17 Apr 2026 14:45 - 15:00"
     ],
+    "doi": "10.1145/3744916.3787795",
     "eventType": "Talk",
     "id": "b512b32e-a719-48a2-bb90-f0c38a9cac81",
     "locations": [
@@ -17333,6 +17474,7 @@
     "dates": [
       "Fri 17 Apr 2026 15:00 - 15:15"
     ],
+    "doi": "10.1145/3786582.3786823",
     "eventType": "Talk",
     "id": "b573be2f-b152-478d-95e8-ffae87c2b1e2",
     "locations": [
@@ -17581,6 +17723,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1145/3712002",
     "eventType": "Talk",
     "id": "b783a0f5-b0d7-4035-822f-b808db81e5c0",
     "locations": [
@@ -19813,6 +19956,7 @@
     "dates": [
       "Wed 15 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1109/TSE.2025.3572388",
     "eventType": "Talk",
     "id": "cacd17ac-1c5d-4f87-8cd9-57fcf3cac27e",
     "locations": [
@@ -20147,6 +20291,7 @@
     "dates": [
       "Wed 15 Apr 2026 16:15 - 16:30"
     ],
+    "doi": "10.1145/3786580.3786979",
     "eventType": "Talk",
     "id": "cef1def4-b5e8-4324-8193-b1cedf396ba9",
     "locations": [
@@ -20479,6 +20624,7 @@
     "dates": [
       "Fri 17 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1007/s10664-025-10717-y",
     "eventType": "Talk",
     "id": "d204eb11-248a-4c55-8e0f-32f0d83cbf4b",
     "locations": [
@@ -20590,6 +20736,7 @@
     "dates": [
       "Fri 17 Apr 2026 16:30 - 16:45"
     ],
+    "doi": "10.1145/3708523",
     "eventType": "Talk",
     "id": "d24be607-5adc-4512-b517-0b869b808a3f",
     "locations": [
@@ -20684,6 +20831,7 @@
     "dates": [
       "Fri 17 Apr 2026 11:00 - 11:15"
     ],
+    "doi": "10.1145/3744916.3787791",
     "eventType": "Talk",
     "id": "d49b0253-869b-4e62-81fb-d46946379ae1",
     "locations": [
@@ -20785,6 +20933,7 @@
     "dates": [
       "Fri 17 Apr 2026 11:45 - 12:00"
     ],
+    "doi": "10.1145/3746226",
     "eventType": "Talk",
     "id": "d62608f0-aa5f-42c3-be2e-203109c8a083",
     "locations": [
@@ -20956,6 +21105,7 @@
     "dates": [
       "Thu 16 Apr 2026 14:15 - 14:30"
     ],
+    "doi": "10.1007/s10664-025-10629-x",
     "eventType": "Talk",
     "id": "d67f6819-cd27-4e6d-af69-f76988d96054",
     "locations": [
@@ -21423,6 +21573,7 @@
     "dates": [
       "Fri 17 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.1145/3774748.3787605",
     "eventType": "Talk",
     "id": "dc6a0978-2092-4482-b242-4cec3028ecdb",
     "locations": [
@@ -21840,6 +21991,7 @@
     "dates": [
       "Thu 16 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.1145/3744916.3773207",
     "eventType": "Talk",
     "id": "e27ce9f6-bac5-4ba7-ac06-5cea632737cf",
     "locations": [
@@ -21875,6 +22027,7 @@
     "dates": [
       "Thu 16 Apr 2026 15:00 - 15:10"
     ],
+    "doi": "10.1145/3774748.3793623",
     "eventType": "Talk",
     "id": "e2af919f-08d0-434b-88fc-00b7c78054dc",
     "locations": [
@@ -22049,6 +22202,7 @@
     "dates": [
       "Thu 16 Apr 2026 16:15 - 16:30"
     ],
+    "doi": "10.1145/3744916.3773176",
     "eventType": "Talk",
     "id": "e45542b1-0776-4927-8b80-29cfb0ee98e1",
     "locations": [
@@ -22346,6 +22500,7 @@
       "Tue 14 Apr 2026 17:30 - 18:00",
       "Thu 16 Apr 2026 15:30 - 16:00"
     ],
+    "doi": "10.1145/3774748.3787644",
     "eventType": "Poster",
     "id": "e9504f67-58ea-491d-a74f-d4ab42c0cf68",
     "locations": [
@@ -22969,14 +23124,25 @@
       "Jacques Klein",
       "Tegawendé F. Bissyandé"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Fri 17 Apr 2026 11:45 - 12:00"
     ],
+    "doi": "10.1145/3749370",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "eefc8793-88ce-482a-b042-7582045b244e",
+    "issue": "6",
     "locations": [
       "Oceania X"
     ],
+    "pages": "1-34",
+    "publicationDate": "2026-06-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Dependability and Security 8"
     ],
@@ -22988,9 +23154,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3749370",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/79/Just-in-Time-Detection-of-Silent-Security-Patches",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "When software is designed by individuals from diverse identities and experiences, it is more likely to be inclusive and address a broader range of needs. However, for transgender and non-binary students in software engineering, the journey to becoming such creators may be marked by unique challenges. While existing research explores gender minorities in professional software engineering, limited attention has been given to their educational journey, a key phase for ensuring equal opportunities and preventing future exclusion in the tech workforce. This study aims to address this gap by investigating the experiences of transgender and non-binary students in software engineering, with a particular focus on their motivations for entering the field, the obstacles they encounter, and potential strategies for fostering greater inclusivity within their academic environments. Based on 13 semi-structured interviews with transgender and non-binary students across the globe, we found that gender identity plays an indirect role in their decision to pursue software engineering. Key factors include the appeal of remote work and a personal desire to create more inclusive technologies. Although the participants did not report direct discrimination within their universities, many described experiencing verbal insults, judgement, intolerance, and hostility, all of which negatively impacted their mental health. These challenges often stem from socio-cultural norms and a lack of representation. Despite these obstacles, the students remain committed to their choice of study but call for greater institutional support, structural changes, and increased representation. From these findings, we suggest concrete steps to support all students, regardless of gender identity.",
@@ -23134,6 +23302,7 @@
     "dates": [
       "Wed 15 Apr 2026 14:45 - 15:00"
     ],
+    "doi": "10.1145/3744916.3787824",
     "eventType": "Talk",
     "id": "f14a2956-0460-4370-9c59-a2b5ab00ec2c",
     "locations": [
@@ -23303,6 +23472,7 @@
     "dates": [
       "Wed 15 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.1145/3744916.3773252",
     "eventType": "Talk",
     "id": "f4005691-2b1f-4ac7-9b7e-b4653513c1f1",
     "locations": [
@@ -23433,6 +23603,7 @@
     "dates": [
       "Thu 16 Apr 2026 11:30 - 11:45"
     ],
+    "doi": "10.1007/s10664-025-10742-x",
     "eventType": "Talk",
     "id": "f4cde008-02c8-439a-8e99-3c14c85d2d74",
     "locations": [
@@ -23649,14 +23820,25 @@
       "José Amancio",
       "Manoel Mendonça"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 15 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1145/3748721",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f5de5173-6c3e-4eaa-8d53-46212e0df542",
+    "issue": "5",
     "locations": [
       "Oceania IV"
     ],
+    "pages": "1-45",
+    "publicationDate": "2026-05-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Human and Social Aspects 3"
     ],
@@ -23668,9 +23850,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3748721",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/14/Exploring-Empathy-in-Software-Engineering-Insights-from-a-Grey-Literature-Analysis-o",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "The deployment of AI-assisted development tools in compliance-relevant, large-scale industrial environments represents significant gaps in academic literature, despite growing industry adoption. We report on the industrial deployment of WhatsCode, a domain-specific AI development system that supports WhatsApp serving over 2 billion users and processes millions of lines of code across multiple platforms. Over 25 months (2023-2025), WhatsCode evolved from targeted privacy automation to autonomous agentic workflows integrated with end-to-end feature development and DevOps processes. WhatsCode achieved substantial quantifiable impact, improving automated privacy verification coverage 3.5x from 15% to 53%, identifying privacy requirements, and generating over 3,000 accepted code changes with acceptance rates ranging from 9% to 100% across different automation domains. The system committed 692 automated refactor/fix changes, 711 framework adoptions, 141 feature development assists and maintained 90% precision in bug triage. Our study identifies two stable human-AI collaboration patterns that emerged from production deployment: one-click rollout for high-confidence changes (60% of cases) and commandeer-revise for complex decisions (40%). We demonstrate that organizational factors: ownership models, adoption dynamics, and risk management, are as decisive as technical capabilities for enterprise-scale AI success. The findings provide evidence-based guidance for large-scale AI tool deployment in compliance-relevant environments, showing that effective human-AI collaboration, not full automation, drives sustainable business impact.",
@@ -23858,14 +24042,27 @@
       "Hanmeng Li",
       "David Lo"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 15 Apr 2026 11:00 - 11:15"
     ],
+    "doi": "10.1007/s10664-025-10747-6",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f8648b69-0f1c-41a1-bbbe-39bc8ee531c3",
+    "issue": "3",
     "locations": [
       "Oceania VIII"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10747-6.pdf"
+    ],
+    "publicationDate": "2026-05-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Evolution 1"
     ],
@@ -23877,9 +24074,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10747-6",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/49/Func-Reducing-the-impact-of-Android-framework-evolution-on-malware-detection",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "31"
   },
   {
     "abstract": "Open-source software (OSS) is a pillar of modern software development. Its success depends on the dedication of maintainers who work constantly to keep their libraries stable, adapt to changing needs, and support a growing community. Yet, they receive little to no continuous feedback on how the projects that rely on their libraries actually use their APIs. We believe that gaining these insights can help maintainers make better decisions, such as refining testing strategies, understanding the impact of changes, and guiding the evolution of their libraries more effectively. We propose the use of community-based analytics to analyze how an OSS library is used across its dependent ecosystem. We conduct an empirical study of 10 popular Java libraries and each with their respective dependent ecosystem of 50 projects. Our results reveal that while library developers offer a wide range of API methods, only 16% on average are actively used by their dependent ecosystem. Moreover, only 73% of the used API methods are partially or fully covered by their library test suite. We propose two metrics to help developers evaluate their test suite according to the APIs used by their community, and we conduct a survey on open-source practitioners to assess the practical value of these insights in guiding maintenance decisions.",
@@ -23955,6 +24154,7 @@
     "dates": [
       "Wed 15 Apr 2026 14:45 - 15:00"
     ],
+    "doi": "10.1145/3786580.3786962",
     "eventType": "Talk",
     "id": "f948cef8-81d7-4a17-99f8-2bd545feae41",
     "locations": [
@@ -24736,6 +24936,7 @@
     "dates": [
       "Thu 16 Apr 2026 11:30 - 11:45"
     ],
+    "doi": "10.1145/3769302",
     "eventType": "Talk",
     "id": "ff8730d9-deb6-468e-80cf-5d27a1b6b4c1",
     "locations": [

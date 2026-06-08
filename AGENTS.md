@@ -7,10 +7,11 @@ here; this is the canonical file.
 
 A pipeline that scrapes academic **conference / journal** programs and publishes a
 static, searchable website (Netlify) for browsing papers. Venues are configured in
-`config/venues.yaml`, scraped through pluggable adapters, normalized to one schema, and
-shown in a single site with a category **sidebar**. Enabled venues now span EDA,
-computer architecture, software engineering, testing, and programming languages;
-new venues are added by config + adapter, never by changing the site.
+`config/venues.yaml`, scraped through pluggable adapters, enriched from bibliographic
+metadata APIs, normalized to one schema, and shown in a single site with a category
+**sidebar**. Enabled venues now span EDA, computer architecture, software engineering,
+testing, programming languages, and journals; new venues are added by config + adapter,
+never by changing the site.
 
 **Stack:** a **monorepo** — a **Python** scraper (`scraper/`, package `confer`) that
 emits unified JSON, consumed by an **Astro** static site (`web/`) that renders a single
@@ -26,11 +27,14 @@ The site builds to static assets deployed on Netlify.
 Three decoupled layers joined by one **unified `Paper` schema**:
 
 ```
-config/venues.yaml ─▶ scraper (Python) ─▶ unified JSON per venue ─▶ Astro site ─▶ Netlify
+config/venues.yaml ─▶ scraper + enrichers (Python) ─▶ unified JSON per venue ─▶ Astro site ─▶ Netlify
 ```
 
-- **Config** names which scraper adapter a venue uses and passes it source options.
+- **Config** names which scraper adapter a venue uses, passes source options, and can
+  opt into metadata enrichers.
 - **Adapters** know one platform each and all emit the *same* `Paper` shape.
+- **Enrichers** merge DOI, abstracts, publication metadata, keywords, and open-access
+  links from Crossref/OpenAlex without changing venue-specific adapters.
 - **Site** consumes only the unified data — it never knows which platform data came from.
 
 ### Layout
@@ -47,15 +51,18 @@ scraper/               [now] Python project, package `confer`
     fetcher.py         [now] HTTP + disk cache
     paths.py           [now] cache / output path helpers
     pipeline.py        [now] per-venue orchestration
+    enrichers.py       [now] Crossref/OpenAlex metadata enrichment
     export.py          [now] write web/public/data/<venue>.json + venues.json
     util.py            [now] shared helpers
     scrapers/
-      base.py          [now] Scraper ABC + SCRAPERS registry
+      __init__.py      [now] SCRAPERS registry
+      base.py          [now] Scraper ABC
       dateconf.py      [now] DATE official programme adapter
+      dblp.py          [now] DBLP bibliography TOC adapter
       linklings.py     [now] DAC (Linklings program) adapter
       researchr.py     [now] Researchr program / timeline / accepted-list adapter
       sigarch.py       [now] SIGARCH-style static program adapter
-      ...              [target] openreview.py, dblp.py, ieee.py, acm_dl.py
+      ...              [target] openreview.py, ieee.py, acm_dl.py
   tests/fixtures/      [now] small sample of cached pages for offline parse tests
 web/                   [now] Astro static site (Netlify)
   package.json  astro.config.mjs  tsconfig.json
@@ -94,6 +101,16 @@ not reinvent it. Every adapter must produce records with these keys:
   "dates": ["..."],
   "locations": ["..."],
   "urls": ["https://..."],
+  "doi": "10.xxxx/...",          // optional publication metadata
+  "publicationDate": "2026-01-01",
+  "publisher": "ACM",
+  "container": "Proceedings / journal name",
+  "volume": "35",
+  "issue": "1",
+  "pages": "1-20",
+  "pdfUrls": ["https://..."],
+  "artifactUrls": ["https://..."],
+  "keywords": ["Software engineering"],
   "extra": { }                  // optional adapter-specific passthrough; never required
 }
 ```
@@ -123,7 +140,9 @@ file in `scrapers/` + one registry entry.** Do not branch on platform anywhere e
 ### How to add a venue
 1. Add an entry to `config/venues.yaml` (see the seed file for fields).
 2. Ensure its `scraper:` matches a registered adapter.
-3. Run `confer build --venue <id>` and check `web/public/data/<id>.json`.
+3. Add `source.enrichers` (`crossref`, `openalex`) when the primary source lacks DOI,
+   abstracts, publication details, PDF/open-access links, or keywords.
+4. Run `confer build --venue <id>` and check `web/public/data/<id>.json`.
 
 ### How to add a scraper adapter
 1. Create `scraper/src/confer/scrapers/<platform>.py` implementing `Scraper`.
@@ -144,6 +163,8 @@ uv run confer build --venue asplos2026    # SIGARCH-style static programme venue
 uv run confer build --venue hpca2026      # Researchr accepted-list venue
 uv run confer build --venue icse2026      # ICSE 2026 via Researchr
 uv run confer build --venue fse2026       # Researchr detailed timeline venue
+uv run confer build --venue tosem2026     # DBLP journal TOC + metadata enrichers
+uv run confer build --venue popl2026      # Researchr + Crossref/OpenAlex enrichers
 uv run confer build --refresh             # ignore cache, refetch over the network
 uv run confer build --venue dac2026 --limit 5   # debug: only a few detail pages
 uv run --extra dev pytest                    # offline parser tests (tests/fixtures/)
@@ -164,8 +185,9 @@ npm run build                     # static build → web/dist/ (what Netlify pub
 - **`data/cache/` is gitignored** raw HTML — do not commit it. It is regenerable and
   kept locally as the offline parser test corpus; copy a small sample into
   `tests/fixtures/` for committed tests.
-- **One schema:** if an adapter has data that does not fit the `Paper` keys, put it in
-  `extra`, do not add top-level keys the site does not read.
+- **One schema:** adapters may use the optional publication metadata keys above. If a
+  source has data that still does not fit the `Paper` keys, put it in `extra`; do not
+  add untyped top-level keys the site does not read.
 - **Site aesthetic:** keep the minimal, Claude-like style (warm paper bg `#faf9f5`,
   clay accent `#c96442`, Source Serif 4 headings, flat thin-bordered cards). The tokens
   live in `web/src/styles/global.css`.
@@ -204,14 +226,18 @@ npm run build                     # static build → web/dist/ (what Netlify pub
    program pages with session metadata and author affiliations, including malformed
    nested institution strings seen in live pages; publishes ASPLOS 2026, ISCA 2026,
    and MICRO 2025. HPCA 2026 is published through the Researchr adapter.
+8. **Publication metadata enrichment** — `enrichers.py` merges Crossref/OpenAlex data
+   after the primary scrape, filling DOI, abstracts, publication date, publisher,
+   container, volume/issue/pages, keywords, PDF/open-access links, and source provenance.
+9. **DBLP journals and PL venues** — `dblp` adapter publishes TOSEM 2026 and TSE 2026
+   journal articles from DBLP TOC XML; Researchr publishes POPL 2026 and PLDI 2026;
+   all four use metadata enrichment.
 
 **Planned:**
 
 - **More adapters** — OpenReview next (clean JSON API; `neurips2025` is seeded in
-  `config/venues.yaml` with `enabled: false` until the adapter exists), then dblp / ieee /
+  `config/venues.yaml` with `enabled: false` until the adapter exists), then ieee /
   acm_dl. Adding a platform stays "one file in `scrapers/` + one registry entry".
-- **Journals** — the schema and sidebar already split conference / journal; wire up a
-  journal venue end to end.
 
 ## Tech notes
 

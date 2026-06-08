@@ -1,0 +1,30 @@
+<bht key="db/journals/example/example1.bht" title="Example Journal, Volume 1">
+  <h1>Example Journal</h1>
+  <h2>Volume 1, Number 1, January 2026</h2>
+  <dblpcites>
+    <r style="ee">
+      <article key="journals/example/DoeR26" mdate="2026-01-01">
+        <author pid="00/1">Jane Doe</author>
+        <author pid="00/2">John Roe 0001</author>
+        <title>Precise Metadata Collection for Static Paper Sites.</title>
+        <pages>1-20</pages>
+        <year>2026</year>
+        <month>January</month>
+        <volume>1</volume>
+        <journal>Example J.</journal>
+        <number>1</number>
+        <ee>https://doi.org/10.1145/1234567</ee>
+        <url>db/journals/example/example1.html#DoeR26</url>
+      </article>
+    </r>
+    <r style="ee">
+      <article key="journals/example/Editorial26" mdate="2026-01-01">
+        <author pid="00/3">Editor Example</author>
+        <title>Editorial.</title>
+        <year>2026</year>
+        <journal>Example J.</journal>
+        <ee>https://doi.org/10.1145/9999999</ee>
+      </article>
+    </r>
+  </dblpcites>
+</bht>

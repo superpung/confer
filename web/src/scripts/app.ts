@@ -51,6 +51,9 @@ function searchBlob(p: Paper): string {
     p._search = [
       p.id, p.title, p.abstract, p.eventType, p.authorInstitutions,
       ...p.authors, ...p.tracks, ...p.sessionTitles, ...p.locations,
+      p.doi ?? '', p.publicationDate ?? '', p.publisher ?? '', p.container ?? '',
+      p.volume ?? '', p.issue ?? '', p.pages ?? '',
+      ...(p.keywords ?? []),
     ].join(' ').toLowerCase();
   }
   return p._search;
@@ -99,6 +102,10 @@ const FIELD_ALIASES: Record<string, string> = {
   venue: 'venue', conf: 'venue', conference: 'venue',
   event: 'event', type: 'event',
   session: 'session',
+  doi: 'doi',
+  keyword: 'keyword', keywords: 'keyword', kw: 'keyword',
+  container: 'container', journal: 'container', booktitle: 'container',
+  publisher: 'publisher',
   id: 'id', year: 'year',
 };
 /** Tokenize into AND terms; supports field:"quoted phrase", field:bare, "quoted", bare. */
@@ -122,6 +129,10 @@ function fieldText(p: Paper, field: string): string {
     case 'track': return p.tracks.join(' | ').toLowerCase();
     case 'event': return p.eventType.toLowerCase();
     case 'session': return p.sessionTitles.join(' | ').toLowerCase();
+    case 'doi': return (p.doi ?? '').toLowerCase();
+    case 'keyword': return (p.keywords ?? []).join(' | ').toLowerCase();
+    case 'container': return (p.container ?? '').toLowerCase();
+    case 'publisher': return (p.publisher ?? '').toLowerCase();
     case 'id': return p.id.toLowerCase();
     default: return searchBlob(p);
   }
@@ -284,11 +295,31 @@ function cardHtml(p: Paper, v: string): string {
   const extra = p.tracks.length > 5 ? `<span class="chip">+${p.tracks.length - 5} more</span>` : '';
   // Date / location / session are hidden by default; they live inside the
   // disclosure so they appear together with the abstract when expanded.
-  const hasMeta = p.dates.length || p.locations.length || p.sessionTitles.length;
+  const publicationBits = [
+    p.publicationDate,
+    p.volume ? `Vol. ${p.volume}` : '',
+    p.issue ? `No. ${p.issue}` : '',
+    p.pages ? `pp. ${p.pages}` : '',
+  ].filter(Boolean);
+  const doiHtml = p.doi
+    ? `<a class="meta-link" href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noreferrer">DOI ${esc(p.doi)}</a>`
+    : '';
+  const pdfHtml = p.pdfUrls?.[0]
+    ? `<a class="meta-link" href="${esc(p.pdfUrls[0])}" target="_blank" rel="noreferrer">PDF</a>`
+    : '';
+  const artifactHtml = p.artifactUrls?.[0]
+    ? `<a class="meta-link" href="${esc(p.artifactUrls[0])}" target="_blank" rel="noreferrer">Artifact</a>`
+    : '';
+  const hasMeta = p.dates.length || p.locations.length || p.sessionTitles.length ||
+    publicationBits.length || p.container || p.publisher || doiHtml || pdfHtml || artifactHtml;
   const metaHtml = hasMeta ? `<div class="compact-meta">
       <span class="meta-item" title="${esc(joinList(p.dates))}"><strong>Date</strong>${esc(shortList(p.dates))}</span>
       <span class="meta-item" title="${esc(joinList(p.locations))}"><strong>Location</strong>${esc(shortList(p.locations))}</span>
       <span class="meta-item" title="${esc(joinList(p.sessionTitles))}"><strong>Session</strong>${esc(shortList(p.sessionTitles))}</span>
+      ${p.container ? `<span class="meta-item" title="${esc(p.container)}"><strong>Published in</strong>${esc(p.container)}</span>` : ''}
+      ${publicationBits.length ? `<span class="meta-item"><strong>Publication</strong>${esc(publicationBits.join(' · '))}</span>` : ''}
+      ${p.publisher ? `<span class="meta-item"><strong>Publisher</strong>${esc(p.publisher)}</span>` : ''}
+      ${doiHtml || pdfHtml || artifactHtml ? `<span class="meta-item"><strong>Links</strong>${doiHtml}${pdfHtml}${artifactHtml}</span>` : ''}
     </div>` : '';
   const discInner = (p.abstract ? `<p class="disc-text">${esc(p.abstract)}</p>` : '') + metaHtml;
   // Custom disclosure (not <details>) so the card height animates open/closed

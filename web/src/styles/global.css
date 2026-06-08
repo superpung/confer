@@ -382,6 +382,9 @@ html.is-rail-collapsed { --col-right: 0; }
 .compact-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 13px 0 0; color: var(--muted); font-size: 12.5px; }
 .meta-item { max-width: min(100%, 340px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .meta-item strong { margin-right: 5px; color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.meta-link { color: var(--accent); text-decoration: none; }
+.meta-link + .meta-link { margin-left: 8px; }
+.meta-link:hover { text-decoration: underline; }
 
 /* Abstract disclosure — custom (not <details>) so the card height animates as it
    expands/collapses via the grid-template-rows 0fr↔1fr trick. */

@@ -21,6 +21,16 @@ export interface Paper {
   dates: string[];
   locations: string[];
   urls: string[];
+  doi?: string;
+  publicationDate?: string;
+  publisher?: string;
+  container?: string;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  pdfUrls?: string[];
+  artifactUrls?: string[];
+  keywords?: string[];
   /** lazily-cached lowercased search blob */
   _search?: string;
   /** lazily-cached author→institution pairs parsed from authorInstitutions */

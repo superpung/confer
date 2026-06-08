@@ -27,6 +27,7 @@ export function toBibtex(rows: ExportRow[]): string {
         `  ${container} = {${braces(venue.name)}}`,
       ];
       if (venue.year) lines.push(`  year = {${venue.year}}`);
+      if (paper.doi) lines.push(`  doi = {${braces(paper.doi)}}`);
       if (paper.urls[0]) lines.push(`  url = {${paper.urls[0]}}`);
       return `@${type}{${bibKey(row)},\n${lines.join(',\n')},\n}`;
     })
@@ -42,7 +43,9 @@ function csvCell(value: string): string {
 export function toCsv(rows: ExportRow[]): string {
   const header = [
     'venue', 'id', 'title', 'authors', 'institutions', 'tracks',
-    'eventType', 'sessions', 'dates', 'locations', 'url',
+    'eventType', 'sessions', 'dates', 'locations', 'doi', 'publicationDate',
+    'publisher', 'container', 'volume', 'issue', 'pages', 'url', 'pdfUrl',
+    'keywords',
   ];
   const lines = [header.join(',')];
   for (const { paper, venue } of rows) {
@@ -58,7 +61,16 @@ export function toCsv(rows: ExportRow[]): string {
         paper.sessionTitles.join('; '),
         paper.dates.join('; '),
         paper.locations.join('; '),
+        paper.doi ?? '',
+        paper.publicationDate ?? '',
+        paper.publisher ?? '',
+        paper.container ?? '',
+        paper.volume ?? '',
+        paper.issue ?? '',
+        paper.pages ?? '',
         paper.urls[0] ?? '',
+        paper.pdfUrls?.[0] ?? '',
+        paper.keywords?.join('; ') ?? '',
       ].map((v) => csvCell(String(v ?? ''))).join(','),
     );
   }

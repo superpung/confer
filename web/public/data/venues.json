@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T06:33:38+00:00",
+  "generatedAt": "2026-06-08T08:19:53+00:00",
   "venues": [
     {
       "category": "Computer Architecture",
@@ -65,6 +65,24 @@
       "year": 2026
     },
     {
+      "category": "Programming Languages",
+      "count": 118,
+      "id": "pldi2026",
+      "kind": "conference",
+      "name": "PLDI 2026",
+      "series": "PLDI",
+      "year": 2026
+    },
+    {
+      "category": "Programming Languages",
+      "count": 92,
+      "id": "popl2026",
+      "kind": "conference",
+      "name": "POPL 2026",
+      "series": "POPL",
+      "year": 2026
+    },
+    {
       "category": "Software Engineering",
       "count": 437,
       "id": "ase2025",
@@ -89,6 +107,24 @@
       "kind": "conference",
       "name": "ICSE 2026",
       "series": "ICSE",
+      "year": 2026
+    },
+    {
+      "category": "Software Engineering",
+      "count": 114,
+      "id": "tosem2026",
+      "kind": "journal",
+      "name": "TOSEM 2026",
+      "series": "TOSEM",
+      "year": 2026
+    },
+    {
+      "category": "Software Engineering",
+      "count": 97,
+      "id": "tse2026",
+      "kind": "journal",
+      "name": "TSE 2026",
+      "series": "TSE",
       "year": 2026
     },
     {

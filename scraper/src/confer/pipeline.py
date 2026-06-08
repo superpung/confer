@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .config import VenueConfig
+from .enrichers import enrich_papers
 from .export import write_manifest, write_venue
 from .fetcher import Fetcher
 from .models import Paper
@@ -32,7 +33,8 @@ def build_venue(
         delay=delay,
     )
     scraper = get_scraper(venue, fetcher, limit=limit, workers=workers)
-    return scraper.scrape()
+    papers = scraper.scrape()
+    return enrich_papers(venue, fetcher, papers)
 
 
 def build(

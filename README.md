@@ -25,8 +25,9 @@ interface — so you can scan a whole field in minutes instead of clicking throu
 dozen program pages.
 
 It's a static website backed by a small scraping pipeline: each venue is normalized
-to one shared `Paper` shape, so the site never cares which platform the data came from.
-No accounts, no backend — your favorites and saved searches live in your browser.
+to one shared `Paper` shape, then enriched from bibliographic/open metadata sources
+for DOI, abstracts, publication details, and open-access links where available. No
+accounts, no backend — your favorites and saved searches live in your browser.
 
 ## Highlights
 
@@ -39,25 +40,29 @@ No accounts, no backend — your favorites and saved searches live in your brows
   whatever is currently in view — click any bar to drill in.
 - ⭐ **Favorites & saved searches.** Star papers across venues; save a filter set to
   return to later.
-- 📤 **Export.** Copy BibTeX or download CSV for the current selection.
+- 📤 **Export.** Copy BibTeX or download CSV with DOI and publication metadata for
+  the current selection.
 - ⚡ **Fast & private.** A single pre-rendered page; all filtering happens client-side.
   Light/dark themes, keyboard shortcuts (`⌘K`, `⌘/`), and a responsive mobile layout.
 
 ## Venues
 
-confer currently brings together conferences across EDA, computer architecture,
-software engineering, testing, and programming languages — **DAC, DATE, ASPLOS,
-HPCA, ISCA, MICRO, ICSE, FSE, ASE, ISSTA, OOPSLA** — with more added purely through
-configuration. Browse them all from the category sidebar.
+confer currently brings together conferences and journals across EDA, computer
+architecture, software engineering, testing, and programming languages — **DAC,
+DATE, ASPLOS, HPCA, ISCA, MICRO, ICSE, FSE, ASE, ISSTA, TOSEM, TSE, OOPSLA, POPL,
+PLDI** — with more added purely through configuration. Browse them all from the
+category sidebar.
 
 ## How it works
 
 ```
-config/venues.yaml ─▶ scraper (Python) ─▶ unified JSON per venue ─▶ Astro site ─▶ static host
+config/venues.yaml ─▶ scraper + enrichers ─▶ unified JSON per venue ─▶ Astro site ─▶ static host
 ```
 
-- **Config** lists the venues and which adapter scrapes each one.
+- **Config** lists venues, their primary scraper, and optional metadata enrichers.
 - **Adapters** each understand one source platform and emit the *same* `Paper` shape.
+- **Enrichers** merge Crossref/OpenAlex metadata such as DOI, abstract, publication
+  date, volume/issue/pages, keywords, and open-access/PDF links.
 - **Site** consumes only the unified data — adding a venue never touches the UI.
 
 See **[AGENTS.md](AGENTS.md)** for the architecture, the `Paper` schema, and the
@@ -94,9 +99,11 @@ build — no Python at deploy time.
 ## Add a venue
 
 1. Add an entry to `config/venues.yaml` (fields are documented inline).
-2. Point its `scraper:` at a registered adapter (`dateconf`, `linklings`,
+2. Point its `scraper:` at a registered adapter (`dateconf`, `dblp`, `linklings`,
    `researchr`, `sigarch`).
-3. `uv run confer build --venue <id>` and check `web/public/data/<id>.json`.
+3. Add `source.enrichers` (`crossref`, `openalex`) when the primary source lacks
+   publication metadata.
+4. `uv run confer build --venue <id>` and check `web/public/data/<id>.json`.
 
 To support a new platform, add an adapter under `scraper/src/confer/scrapers/` and
 register it — see AGENTS.md, "How to add a scraper adapter".

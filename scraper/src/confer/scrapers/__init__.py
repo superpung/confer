@@ -10,6 +10,7 @@ from ..config import VenueConfig
 from ..fetcher import Fetcher
 from .base import Scraper
 from .dateconf import DateConfScraper
+from .dblp import DblpScraper
 from .linklings import LinklingsScraper
 from .researchr import ResearchrScraper
 from .sigarch import SigarchScraper
@@ -17,6 +18,7 @@ from .sigarch import SigarchScraper
 
 SCRAPERS: dict[str, type[Scraper]] = {
     DateConfScraper.name: DateConfScraper,
+    DblpScraper.name: DblpScraper,
     LinklingsScraper.name: LinklingsScraper,
     ResearchrScraper.name: ResearchrScraper,
     SigarchScraper.name: SigarchScraper,

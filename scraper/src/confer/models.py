@@ -10,6 +10,8 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
+from .util import clean_doi, doi_from_url, strip_markup_text, unique_preserve_order
+
 
 SMALL_TITLE_WORDS = {
     "a",
@@ -144,10 +146,26 @@ class Paper:
     dates: list[str] = field(default_factory=list)
     locations: list[str] = field(default_factory=list)
     urls: list[str] = field(default_factory=list)
+    doi: str = ""
+    publication_date: str = ""
+    publisher: str = ""
+    container: str = ""
+    volume: str = ""
+    issue: str = ""
+    pages: str = ""
+    pdf_urls: list[str] = field(default_factory=list)
+    artifact_urls: list[str] = field(default_factory=list)
+    keywords: list[str] = field(default_factory=list)
     extra: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.title = normalize_title(self.title)
+        self.abstract = strip_markup_text(self.abstract)
+        self.urls = unique_preserve_order(self.urls)
+        self.pdf_urls = unique_preserve_order(self.pdf_urls)
+        self.artifact_urls = unique_preserve_order(self.artifact_urls)
+        self.keywords = unique_preserve_order(self.keywords)
+        self.doi = clean_doi(self.doi) or next((d for url in self.urls if (d := doi_from_url(url))), "")
 
     def to_dict(self) -> dict[str, Any]:
         data: dict[str, Any] = {
@@ -164,6 +182,26 @@ class Paper:
             "locations": list(self.locations),
             "urls": list(self.urls),
         }
+        if self.doi:
+            data["doi"] = self.doi
+        if self.publication_date:
+            data["publicationDate"] = self.publication_date
+        if self.publisher:
+            data["publisher"] = self.publisher
+        if self.container:
+            data["container"] = self.container
+        if self.volume:
+            data["volume"] = self.volume
+        if self.issue:
+            data["issue"] = self.issue
+        if self.pages:
+            data["pages"] = self.pages
+        if self.pdf_urls:
+            data["pdfUrls"] = list(self.pdf_urls)
+        if self.artifact_urls:
+            data["artifactUrls"] = list(self.artifact_urls)
+        if self.keywords:
+            data["keywords"] = list(self.keywords)
         if self.extra:
             data["extra"] = self.extra
         return data

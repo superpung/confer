@@ -6,15 +6,39 @@
       "Tianhua Xia",
       "Sai Qian Zhang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756071",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Systems for AI (LLMs) - 1"
     },
     "id": "1A-Kelle_Co-design_KV_Caching_and_eDRAM_for_Efficient_LLM_Serving_in_Edge_Computing",
+    "keywords": [
+      "Enhanced Data Rates for GSM Evolution",
+      "Reliability (semiconductor)",
+      "Dram",
+      "Edge device",
+      "Process (computing)",
+      "Leakage (economics)"
+    ],
     "locations": [],
+    "pages": "18-33",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756071"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1A: Systems for AI (LLMs) - 1"
     ],
@@ -26,7 +50,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756071",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309218"
     ]
   },
   {
@@ -39,15 +65,26 @@
       "José F. Martínez",
       "Mohammad Alian"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756062",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (LLMs) - 1"
     },
     "id": "1A-LongSight_Compute-Enabled_Memory_to_Accelerate_Large-Context_LLMs_via_Sparse_Att",
     "locations": [],
+    "pages": "34-48",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756062"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1A: Systems for AI (LLMs) - 1"
     ],
@@ -59,11 +96,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756062",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As Large Language Models (LLMs) continue to evolve, Mixture of Experts (MoE) architecture has emerged as a prevailing design for achieving state-of-the-art performance across a wide range of tasks. MoE models use sparse gating to activate only a handful of expert sub-networks per input, achieving billion-parameter capacity with inference costs akin to much smaller models. However, such models often pose challenges for hardware deployment due to the massive data volume introduced by the MoE layers. To address the challenges of serving MoE models, we propose Stratum, a system-hardware co-design approach that combines the novel memory technology Monolithic 3D-Stackable DRAM (Mono3D DRAM), near-memory processing (NMP), and GPU acceleration. The logic and Mono3D DRAM dies are connected through hybrid bonding, whereas the Mono3D DRAM stack and GPU are interconnected via silicon interposer. Mono3D DRAM offers higher internal bandwidth than HBM thanks to the dense vertical interconnect pitch enabled by its monolithic structure, which supports implementations of higher-performance near-memory processing. Furthermore, we tackle the latency differences introduced by aggressive vertical scaling of Mono3D DRAM along the z-dimension by constructing internal memory tiers and assigning data across layers based on access likelihood, guided by topic-based expert usage prediction to boost NMP throughput. The Stratum system achieves up to 8.29x improvement in decoding throughput and 7.66x better energy efficiency across various benchmarks compared to GPU baselines.",
     "authorInstitutions": "Yue Pan (Univ. of California, San Diego); Zihan Xia (Univ. of California, San Diego); Po-Kai Hsu (Georgia Inst. of Technology); Lanxiang Hu (Univ. of California, San Diego); Hyungyo Kim (Univ. of Illinois Urbana-Champaign); Janak Sharda (Georgia Inst. of Technology); Minxuan Zhou (Illinois Inst. of Technology); Nam Sung Kim (Univ. of Illinois at Urbana Champaign); Shimeng Yu (Georgia Inst. of Technology); Tajana Rosing (Univ. of California, San Diego); Mingu Kang (Univ. of California, San Diego)",
     "authors": [
       "Yue Pan",
@@ -78,15 +116,43 @@
       "Tajana Rosing",
       "Mingu Kang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756043",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2510.05245"
+      },
       "sessionTrack": "Systems for AI (LLMs) - 1"
     },
     "id": "1A-Stratum_System-Hardware_Co-design_with_Tiered_Monolithic_3D-DRAM_for_Efficient_M",
+    "keywords": [
+      "Dram",
+      "Software deployment",
+      "Memory bandwidth",
+      "Implementation",
+      "Decoding methods",
+      "Interconnection",
+      "CAS latency",
+      "Throughput",
+      "Bandwidth (computing)"
+    ],
     "locations": [],
+    "pages": "1-17",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2510.05245"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1A: Systems for AI (LLMs) - 1"
     ],
@@ -98,7 +164,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756043",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4414974080"
     ]
   },
   {
@@ -112,15 +180,39 @@
       "Yang Hu",
       "Shouyi Yin"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756087",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756087"
+      },
       "sessionTrack": "Processing-In-Memory - 1"
     },
     "id": "1B-3D-PATH_A_Hierarchy_LUT_Processing-in-memory_Accelerator_with_Thermal-aware_Hybr",
+    "keywords": [
+      "Hierarchy",
+      "Lookup table",
+      "Table (database)",
+      "Key (lock)",
+      "Series (stratigraphy)"
+    ],
     "locations": [],
+    "pages": "78-93",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756087"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1B: Processing-In-Memory - 1"
     ],
@@ -132,7 +224,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756087",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285670"
     ]
   },
   {
@@ -146,15 +240,23 @@
       "Seongmin Cho",
       "Eojin Lee"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756017",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Processing-In-Memory - 1"
     },
     "id": "1B-ComPASS_A_Compatible_PIM_Protocol_Architecture_and_Scheduling_Solution_for_Proce",
     "locations": [],
+    "pages": "49-62",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1B: Processing-In-Memory - 1"
     ],
@@ -166,6 +268,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756017",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -180,15 +283,39 @@
       "Inho Lee",
       "Yongjun Park"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756034",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756034"
+      },
       "sessionTrack": "Processing-In-Memory - 1"
     },
     "id": "1B-PIM-CCA_An_Efficient_PIM_Architecture_with_Optimized_Integration_of_Configurable",
+    "keywords": [
+      "Architecture",
+      "Systems architecture",
+      "Software",
+      "Key (lock)",
+      "Component (thermodynamics)"
+    ],
     "locations": [],
+    "pages": "63-77",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756034"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1B: Processing-In-Memory - 1"
     ],
@@ -200,7 +327,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756034",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285676"
     ]
   },
   {
@@ -242,15 +371,38 @@
       "Ali Hajiabadi",
       "Kaveh Razavi"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756058",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756058"
+      },
       "sessionTrack": "Security and Privacy - Side Channels"
     },
     "id": "1C-One_Flew_over_the_Stack_Engine_s_Nest_Practical_Microarchitectural_Attacks_on_th",
+    "keywords": [
+      "Stack (abstract data type)",
+      "Call stack",
+      "Key (lock)",
+      "Microarchitecture"
+    ],
     "locations": [],
+    "pages": "94-110",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756058"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1C: Security and Privacy - Side Channels"
     ],
@@ -262,7 +414,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756058",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308404"
     ]
   },
   {
@@ -280,15 +434,26 @@
       "Dan Meng",
       "Rui Hou"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756136",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Security and Privacy - Side Channels"
     },
     "id": "1C-Sonar_A_Fuzzing_Framework_to_Uncover_Contention_Side_Channels_in_Processors",
     "locations": [],
+    "pages": "125-139",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756136"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1C: Security and Privacy - Side Channels"
     ],
@@ -300,6 +465,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756136",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -314,15 +480,38 @@
       "Heng Liao",
       "Guowei Zhang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756081",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Microarchitecture - Prefetching 1"
     },
     "id": "1D-RICH_Prefetcher_Storing_Rich_Information_in_Memory_to_Trade_Capacity_and_Bandwid",
+    "keywords": [
+      "Latency (audio)",
+      "Bandwidth (computing)",
+      "Channel capacity",
+      "Information hiding",
+      "Key (lock)"
+    ],
     "locations": [],
+    "pages": "170-183",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756081"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1D: Microarchitecture - Prefetching 1"
     ],
@@ -334,7 +523,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756081",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285674"
     ]
   },
   {
@@ -347,15 +538,38 @@
       "Christopher J. Hughes",
       "Jiayi Huang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756049",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756049"
+      },
       "sessionTrack": "Microarchitecture - Prefetching 1"
     },
     "id": "1D-Software_Prefetch_Multicast_Sharer-Exposed_Prefetching_for_Bandwidth_Efficiency",
+    "keywords": [
+      "Instruction prefetch",
+      "Software",
+      "Bandwidth (computing)",
+      "Key (lock)"
+    ],
     "locations": [],
+    "pages": "156-169",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756049"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1D: Microarchitecture - Prefetching 1"
     ],
@@ -367,25 +581,54 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756049",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415295061"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Task-parallel programming models enable programmers to extract parallelism from irregular applications.Since software-based taskparallel runtimes impose crippling overheads on fine-grain tasks, architects have designed manycores with hardware support for task management.These hardware task-parallel systems can scale challenging workloads to hundreds of cores, but fail to use conventional prefetchers due to short (100-cycle) tasks.Lacking prefetching, they often expose DRAM latency to applications, fumbling the performance gains of hardware.We present the Task-Seeded Prefetcher (TSP) and Memory Response Task Scheduler (MRS), a symbiotic pair that boost performance in general-purpose task-parallel hardware.TSP learns and prefetches the data-access pattern of each task function, seeded with its descriptor that is queued by the task scheduler.MRS augments the baseline task-to-core dispatch policy by using prefetch status from TSP to optimize core utilization.Together, TSP and MRS provide speedups of up to 3.1 (gmeans up to 1.4) across 13 benchmarks on 256-core task-parallel systems that were already 3-60 faster than parallel software.",
     "authorInstitutions": "Gilead Posluns (Univ. of Toronto); Mark Jeffrey (Univ. of Toronto)",
     "authors": [
       "Gilead Posluns",
       "Mark Jeffrey"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
     ],
+    "doi": "10.1145/3725843.3756031",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756031"
+      },
       "sessionTrack": "Microarchitecture - Prefetching 1"
     },
     "id": "1D-Symbiotic_Task_Scheduling_and_Data_Prefetching",
+    "keywords": [
+      "Instruction prefetch",
+      "Dram",
+      "Scheduling (production processes)",
+      "Latency (audio)",
+      "Task (project management)",
+      "CAS latency",
+      "Multi-core processor",
+      "Cache"
+    ],
     "locations": [],
+    "pages": "140-155",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756031"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 1D: Microarchitecture - Prefetching 1"
     ],
@@ -397,7 +640,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756031",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285671"
     ]
   },
   {
@@ -411,15 +656,39 @@
       "Hubertus Franke",
       "Josep Torrellas"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756083",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756083"
+      },
       "sessionTrack": "Systems for AI (LLMs) - 2"
     },
     "id": "2A-Chameleon_Adaptive_Caching_and_Scheduling_for_Many-Adapter_LLM_Inference_Environ",
+    "keywords": [
+      "Scheduling (production processes)",
+      "Inference",
+      "Job shop scheduling",
+      "Fair-share scheduling"
+    ],
     "locations": [],
+    "pages": "217-231",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756083",
+      "https://doi.org/10.1145/3725843.3756083"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2A: Systems for AI (LLMs) - 2"
     ],
@@ -431,7 +700,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756083",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415294970"
     ]
   },
   {
@@ -443,15 +714,26 @@
       "Ramyad Hadidi",
       "Bahar Asgari"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756065",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (LLMs) - 2"
     },
     "id": "2A-Coruscant_Co-Designing_GPU_Kernel_and_Sparse_Tensor_Core_to_Advocate_Unstructure",
     "locations": [],
+    "pages": "232-245",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756065"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2A: Systems for AI (LLMs) - 2"
     ],
@@ -463,6 +745,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756065",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -476,15 +759,39 @@
       "Wim Heirman",
       "Josep Torrellas"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756073",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756073"
+      },
       "sessionTrack": "Systems for AI (LLMs) - 2"
     },
     "id": "2A-DECA_A_Near-Core_LLM_Decompression_Accelerator_Grounded_on_a_3D_Roofline_Model",
+    "keywords": [
+      "Process (computing)",
+      "Decompression",
+      "Action (physics)",
+      "Compression (physics)"
+    ],
     "locations": [],
+    "pages": "184-200",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756073",
+      "https://doi.org/10.1145/3725843.3756073"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2A: Systems for AI (LLMs) - 2"
     ],
@@ -496,11 +803,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756073",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308857"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Efficient execution of deep learning workloads on dataflow architectures is crucial for overcoming memory bottlenecks and maximizing performance. While streaming intermediate results between computation kernels can significantly improve efficiency, existing approaches struggle with inter-kernel correlations, external memory access management, and buffer optimization. In this work, we propose StreamTensor, a compiler framework that automatically constructs and optimizes stream-based dataflow accelerators. StreamTensor introduces a novel iterative tensor type system to explicitly encode stream layouts, enabling seamless kernel fusion, buffer allocation, and memory optimization. By systematically exploring three hierarchical design spaces, including tensor tiling, kernel fusion, and resource allocation, StreamTensor balances computational intensity, memory efficiency, and data streaming to maximize performance. Based on FPGA evaluations on Large Language Models (LLM), StreamTensor achieves up to 0.76x and 0.64x lower latency compared to the state-of-the-art FPGA LLM accelerators and GPUs, and up to 1.99x higher energy efficiency compared to GPUs, making it a promising approach for scalable dataflow-based deep learning acceleration.",
     "authorInstitutions": "Hanchen Ye (Inspirit IoT, Inc. and Univ. of Illinois Urbana-Champaign); Deming Chen (Inspirit IoT, Inc. and Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Hanchen Ye",
@@ -509,12 +818,37 @@
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3762817",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2509.13694"
+      },
       "sessionTrack": "Systems for AI (LLMs) - 2"
     },
     "id": "2A-StreamTensor_Make_Tensors_Stream_in_Dataflow_Accelerators_for_LLMs",
+    "keywords": [
+      "Dataflow",
+      "Compiler",
+      "Scalability",
+      "Field-programmable gate array",
+      "Kernel (algebra)",
+      "Computation",
+      "Dataflow architecture",
+      "Latency (audio)",
+      "Deep learning"
+    ],
     "locations": [],
+    "pages": "201-216",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2509.13694"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 2A: Systems for AI (LLMs) - 2"
     ],
@@ -526,7 +860,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3762817",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308626"
     ]
   },
   {
@@ -578,15 +914,34 @@
       "Xiaoyao Liang",
       "Haibing Guan"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756117",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Processing-In-Memory - 2"
     },
     "id": "2B-HEAT_NPU-NDP_HE_terogeneous_A_rchitecture_for_T_ransformer-Empowered_Graph_Neura",
+    "keywords": [
+      "Artificial neural network",
+      "Graph",
+      "Context (archaeology)",
+      "Graph theory"
+    ],
     "locations": [],
+    "pages": "263-276",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2B: Processing-In-Memory - 2"
     ],
@@ -598,7 +953,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756117",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308824"
     ]
   },
   {
@@ -648,15 +1005,23 @@
       "Prashant J. Nair",
       "Tor M. Aamodt"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756067",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Processing-In-Memory - 2"
     },
     "id": "2B-RayN_Ray_Tracing_Acceleration_with_Near-memory_Computing",
     "locations": [],
+    "pages": "277-291",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2B: Processing-In-Memory - 2"
     ],
@@ -668,6 +1033,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756067",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -681,15 +1047,40 @@
       "Hang Lu",
       "Xiaowei Li"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756103",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756103"
+      },
       "sessionTrack": "Security and Privacy - Machine Learning"
     },
     "id": "2C-Athena_Accelerating_Quantized_Convolutional_Neural_Networks_under_Fully_Homomorp",
+    "keywords": [
+      "Convolutional neural network",
+      "Homomorphic encryption",
+      "Encryption",
+      "Artificial neural network",
+      "Key (lock)",
+      "Computation"
+    ],
     "locations": [],
+    "pages": "326-339",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756103"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2C: Security and Privacy - Machine Learning"
     ],
@@ -701,7 +1092,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756103",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293804"
     ]
   },
   {
@@ -740,7 +1133,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "With the wide application of machine learning (ML), privacy concerns arise with user data as they may contain sensitive information. Privacy-preserving ML (PPML) based on cryptographic primitives has emerged as a promising solution in which an ML model is directly computed on the encrypted data to provide a formal privacy guarantee. However, PPML frameworks heavily rely on the oblivious transfer (OT) primitive to compute nonlinear functions. OT mainly involves the computation of single-point correlated OT (SPCOT) and learning parity with noise (LPN) operations. As OT is still computed extensively on general-purpose CPUs, it becomes the latency bottleneck of modern PPML frameworks. In this paper, we propose a novel OT accelerator, dubbed Ironman, to significantly increase the efficiency of OT and the overall PPML framework. We observe that SPCOT is computation-bounded, and thus propose a hardware-friendly SPCOT algorithm with a customized accelerator to improve SPCOT computation throughput. In contrast, LPN is memory-bandwidth-bounded due to irregular memory access patterns. Hence, we further leverage the near-memory processing (NMP) architecture equipped with memory-side cache and index sorting to improve effective memory bandwidth. With extensive experiments, we demonstrate Ironman achieves a 39.2-237.4 times improvement in OT throughput across different NMP configurations compared to the full-thread CPU implementation. For different PPML frameworks, Ironman demonstrates a 2.1-3.4 times reduction in end-to-end latency for both CNN and Transformer models.",
     "authorInstitutions": "Chenqi Lin (School of Software & Microelectronics, Peking Univ.); Kang Yang (State Key Laboratory of Cryptology); Tianshi Xu (Peking Univ.); Ling Liang (DAMO Academy Alibaba Group, Peking Univ.); Yufei Wang (Alibaba Group); Zhaohui Chen (Computing Technology Lab, Alibaba Group); Runsheng Wang (Peking Univ.); Mingyu Gao (Tsinghua Univ.); Meng Li (Peking Univ.)",
     "authors": [
       "Chenqi Lin",
@@ -753,15 +1146,42 @@
       "Mingyu Gao",
       "Meng Li"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756025",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2507.16391"
+      },
       "sessionTrack": "Security and Privacy - Machine Learning"
     },
     "id": "2C-Ironman_Accelerating_Oblivious_Transfer_Extension_for_Privacy-Preserving_AI_with",
+    "keywords": [
+      "Bottleneck",
+      "Computation",
+      "Encryption",
+      "Cryptography",
+      "Cryptographic primitive",
+      "Latency (audio)",
+      "Leverage (statistics)",
+      "Cache"
+    ],
     "locations": [],
+    "pages": "354-368",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2507.16391"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2C: Security and Privacy - Machine Learning"
     ],
@@ -773,7 +1193,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756025",
+      "https://microarch.org/micro58/program/index.php",
+      "http://arxiv.org/abs/2507.16391",
+      "https://openalex.org/W4417439630"
     ]
   },
   {
@@ -792,15 +1215,39 @@
       "Tao Wei",
       "Zhengyu He"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756104",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756104"
+      },
       "sessionTrack": "Security and Privacy - Machine Learning"
     },
     "id": "2C-ccAI_A_Compatible_and_Confidential_System_for_AI_Computing",
+    "keywords": [
+      "Confidentiality",
+      "Key (lock)",
+      "Matching (statistics)",
+      "Field (mathematics)",
+      "Identification (biology)"
+    ],
     "locations": [],
+    "pages": "340-353",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756104"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2C: Security and Privacy - Machine Learning"
     ],
@@ -812,11 +1259,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756104",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293796"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "GPUs are the most popular platform for accelerating HPC workloads, such as artificial intelligence and science simulations. However, most microarchitectural research in academia relies on simulators that model GPU core architectures based on designs that are more than 15 years old, and differ significantly from modern core architectures. This work reverse engineers the architecture of modern NVIDIA GPU cores, unveiling key aspects of its design and the important role of the compiler in some of its main components. In particular, it reveals how the issue logic works, the structure of the register file and its associated cache, multiple features of the instruction and data memory pipelines. When modeling all these discovered microarchitectural details in a state-of-the-art simulation framework, we show that its accuracy is significantly improved, achieving a 20.58% reduction in mean absolute percentage error (MAPE) on average, which results in a 13.45% MAPE on average with respect to real modern hardware. In addition, we show that the software-based dependence management mechanism included in modern NVIDIA GPUs outperforms a hardware mechanism based on scoreboards in terms of performance and area.",
     "authorInstitutions": "Rodrigo Huerta (Universitat Politecnica de Catalunya); Mojtaba Abaie Shoushtary (Universitat Politecnica de Catalunya); José-Lorenzo Cruz (Universitat Politecnica de Catalunya); Antonio Gonzalez (Universitat Politecnica de Catalunya)",
     "authors": [
       "Rodrigo Huerta",
@@ -824,15 +1273,41 @@
       "José-Lorenzo Cruz",
       "Antonio Gonzalez"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756041",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://upcommons.upc.edu/bitstreams/3d75bf4b-84c5-4901-a435-413ba8036f1b/download"
+      },
       "sessionTrack": "GPU - 1"
     },
     "id": "2D-Dissecting_and_Modeling_the_Architecture_of_Modern_GPU_Cores",
+    "keywords": [
+      "Compiler",
+      "Architecture",
+      "Key (lock)",
+      "Reduction (mathematics)",
+      "CUDA",
+      "Core (optical fiber)",
+      "Coprocessor"
+    ],
     "locations": [],
+    "pages": "369-384",
+    "pdfUrls": [
+      "https://upcommons.upc.edu/bitstreams/3d75bf4b-84c5-4901-a435-413ba8036f1b/download"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2D: GPU - 1"
     ],
@@ -844,26 +1319,52 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756041",
+      "https://microarch.org/micro58/program/index.php",
+      "https://hdl.handle.net/2117/444976",
+      "https://openalex.org/W7111200206"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Pattern matching is a key operation in unstructured data analytics, commonly supported by regular expression (regex) engines.Bitparallel regex engines compile regexes into bitstream programs, which expose fine-grained parallelism and are well-suited for GPU execution.A straightforward strategy executes each bitstream instruction sequentially, processing all data blocks in a loop.However, this execution suffers from poor data reuse and high memory consumption, limiting throughput.Our key insight is to adopt an interleaved execution model, where all bitstream instructions are fused into a single loop and executed block-wise.While interleaved execution could improve data reuse, enabling it on GPUs is non-trivial due to cross-block data dependencies.To address this, we introduce 1) Dependency-Aware Thread-Data Mapping, which resolves cross-block dependencies via selective recomputation.We further improve interleaved execution performance with two additional optimizations: 2) Shift Rebalancing, which balances dependency chains to reduce synchronization barriers; and 3) Zero Block Skipping, which exploits bitstream sparsity to skip computation on zero blocks.Together, these techniques make interleaved execution practical and efficient.Experiments on real-world regex benchmarks demonstrate a 19.5 geometric mean speedup over the state-of-theart GPU regex engine.",
     "authorInstitutions": "Tianao Ge (Hong Kong Univ. of Science and Technology (Guangzhou)); Xiaowen Chu (Data Science and Analytics Thrust, HKUST(GZ)); Hongyuan Liu (Stevens Inst. of Technology)",
     "authors": [
       "Tianao Ge",
       "Xiaowen Chu",
       "Hongyuan Liu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756052",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756052"
+      },
       "sessionTrack": "GPU - 1"
     },
     "id": "2D-Interleaved_Bitstream_Execution_for_Multi-Pattern_Regex_Matching_on_GPUs",
+    "keywords": [
+      "Bitstream",
+      "Matching (statistics)",
+      "Key (lock)",
+      "Domain (mathematical analysis)"
+    ],
     "locations": [],
+    "pages": "385-400",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756052"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2D: GPU - 1"
     ],
@@ -875,7 +1376,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756052",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308628"
     ]
   },
   {
@@ -890,15 +1393,26 @@
       "Won Woo Ro",
       "Youngsok Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756069",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "GPU - 1"
     },
     "id": "2D-LATPC_Accelerating_GPU_Address_Translation_Using_Locality-Aware_TLB_Prefetching",
     "locations": [],
+    "pages": "418-431",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756069"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2D: GPU - 1"
     ],
@@ -910,6 +1424,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756069",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -925,15 +1440,38 @@
       "Juyoung Seok",
       "Seokin Hong"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756056",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756056"
+      },
       "sessionTrack": "GPU - 1"
     },
     "id": "2D-SoftWalker_Supporting_Software_Page_Table_Walk_for_Irregular_GPU_Applications",
+    "keywords": [
+      "Software",
+      "Table (database)",
+      "Software system",
+      "Visualization"
+    ],
     "locations": [],
+    "pages": "401-417",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756056"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2D: GPU - 1"
     ],
@@ -945,7 +1483,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756056",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293789"
     ]
   },
   {
@@ -957,15 +1497,39 @@
       "Jaeha Min",
       "Joo-Young Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756115",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756115"
+      },
       "sessionTrack": "Systems for AI (Emerging Applications)"
     },
     "id": "3A-HLX_A_Unified_Pipelined_Architecture_for_Optimized_Performance_of_Hybrid_Transfo",
+    "keywords": [
+      "Architecture",
+      "Language model",
+      "Systems architecture",
+      "Pipeline (software)",
+      "Mode (computer interface)"
+    ],
     "locations": [],
+    "pages": "461-475",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756115"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3A: Systems for AI (Emerging Applications)"
     ],
@@ -977,11 +1541,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756115",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308935"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "As the parameter size of large language models (LLMs) continues to expand, the need for a large memory footprint and high communication bandwidth have become significant bottlenecks for the training and inference of LLMs. To mitigate these bottlenecks, various tensor compression techniques have been proposed to reduce the data size, thereby alleviating memory requirements and communication pressure. Our research found that video codecs, despite being originally designed for compressing videos, show excellent efficiency when compressing various types of tensors. We demonstrate that video codecs can be versatile and general-purpose tensor codecs while achieving the state-of-the-art compression efficiency in various tasks. We further make use of the hardware video encoding and decoding module available on GPUs to create a framework capable of both inference and training with video codecs repurposed as tensor codecs. Building on insights gained from video codecs, we further show that the hardware of the video codecs can be customized and enhanced to significantly improve tensor encoding/decoding throughput without incurring substantial costs, making it a highly effective solution for large-scale model deployment without requiring significant modifications to the existing GPU architecture.",
     "authorInstitutions": "Ceyu Xu (Duke Univ.); Yongji Wu (Duke Univ.); Xinyu Yang (Carnegie Mellon Univ.); Beidi Chen (Carnegie Mellon Univ.); Matthew Lentz (Duke Univ.); Danyang Zhuo (Duke Univ.); Lisa Wu Wills (Duke Univ.)",
     "authors": [
       "Ceyu Xu",
@@ -995,12 +1561,36 @@
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756078",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756078"
+      },
       "sessionTrack": "Systems for AI (Emerging Applications)"
     },
     "id": "3A-LLM.265_Video_Codecs_are_Secretly_Tensor_Codecs",
+    "keywords": [
+      "Codec",
+      "Data compression",
+      "Decoding methods",
+      "Memory footprint",
+      "Encoding (memory)",
+      "Encoder",
+      "Inference",
+      "Software deployment"
+    ],
     "locations": [],
+    "pages": "445-460",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756078"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 3A: Systems for AI (Emerging Applications)"
     ],
@@ -1012,7 +1602,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756078",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415294442"
     ]
   },
   {
@@ -1070,12 +1662,29 @@
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756046",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Systems for AI (Emerging Applications)"
     },
     "id": "3A-S-DMA_Sparse_Diffusion_Models_Acceleration_via_Spatiality-Aware_Prediction_and_D",
+    "keywords": [
+      "Acceleration",
+      "Diffusion",
+      "Dataflow",
+      "Noise (video)",
+      "Feature (linguistics)"
+    ],
     "locations": [],
+    "pages": "432-444",
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 3A: Systems for AI (Emerging Applications)"
     ],
@@ -1087,11 +1696,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756046",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309543"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Modern mobile CPU software pose challenges for conventional instruction cache replacement policies due to their complex runtime behavior causing high reuse distance between executions of the same instruction. Mobile code commonly suffers from large amounts of stalls in the CPU frontend and thus starvation of the rest of the CPU resources. Complexity of these applications and their code footprint are projected to grow at a rate faster than available on-chip memory due to power and area constraints, making conventional hardware-centric methods for managing instruction caches to be inadequate. We present a novel software-hardware co-design approach called TRRIP (Temperature-based Re-Reference Interval Prediction) that enables the compiler to analyze, classify, and transform code based on \"temperature\" (hot/cold), and to provide the hardware with a summary of code temperature information through a well-defined OS interface based on using code page attributes. TRRIP's lightweight hardware extension employs code temperature attributes to optimize the instruction cache replacement policy resulting in the eviction rate reduction of hot code. TRRIP is designed to be practical and adoptable in real mobile systems that have strict feature requirements on both the software and hardware components. TRRIP can reduce the L2 MPKI for instructions by 26.5% resulting in geomean speedup of 3.9%, on top of RRIP cache replacement running mobile code already optimized using PGO.",
     "authorInstitutions": "Henry Kao (Huawei Technologies Canada); Nikhil Sreekumar (Huawei Technologies Canada); Prabhdeep Singh Soni (Huawei Technologies Canada); Ali Sedaghati (Huawei Technologies Canada); Fang Su (Huawei); Bryan Chan (Huawei Technologies Canada); Maziar Goudarzi (Huawei Technologies 2012 Labs, Canada Research Center); Reza Azimi (Huawei)",
     "authors": [
       "Henry Kao",
@@ -1103,15 +1714,43 @@
       "Maziar Goudarzi",
       "Reza Azimi"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756110",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756110"
+      },
       "sessionTrack": "Microarchitecture I"
     },
     "id": "3B-A_TRRIP_Down_Memory_Lane_Temperature-Based_Re-Reference_Interval_Prediction_For",
+    "keywords": [
+      "Cache",
+      "Dead code",
+      "Unreachable code",
+      "Code (set theory)",
+      "Central processing unit",
+      "CPU cache",
+      "Software",
+      "Redundant code",
+      "Compiler"
+    ],
     "locations": [],
+    "pages": "533-546",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756110"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3B: Microarchitecture I"
     ],
@@ -1123,26 +1762,52 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756110",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308586"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "High-performance Last-level Cache (LLC) replacement policies mitigate off-chip memory access latency by intelligently determining which cache lines to retain in the LLC.State-of-the-art replacement policies significantly outperform policies like LRU.However, the effectiveness of these policies is not evaluated on many-core systems with sliced LLCs, which is common in commercial many-core systems.Recent state-of-the-art LLC replacement policies use two seminal ideas: (i) a sampled cache and (ii) a reuse predictor.In a monolithic LLC, there is a single sampled cache and a single reuse predictor.However, these structures must be created per slice with the sliced LLC.We study the interaction between sliced LLC and state-of-the-art replacement policies, identifying a few unexplored interactions.A per-slice reuse predictor makes myopic decisions based on the accesses made to a particular slice, unaware of the global reuse behavior.A trivial solution to this problem is to design a centralized reuse predictor shared by all the LLC slices.However, this will significantly increase interconnect traffic, requiring more bandwidth to access the centralized reuse predictor.Next, we observe that with a sliced LLC, the LLC sets used for the sampled cache do not receive sufficient LLC misses.As these LLC sets drive the decisions of LLC replacement policies, some of the decisions become suboptimal.We propose Drishti, which is designed to improve the effectiveness of LLC replacement policies further.We make a case for two enhancements: (i) a per-core and yet global reuse predictor with a local (per-slice) sampled cache, and argue that there is no need for a global sampled cache, and (ii) a per-slice dynamic sampled cache to improve the utility of LLC sets used for the sampled cache.We evaluate two state-of-the-art LLC replacement policies, Hawkeye and Mockingjay, on four, 16, and 32-core systems with eight, 32, and 64MB sliced LLC.On a 32-core system, Drishti enhances the effectiveness of two state-of-the-art replacement policies, Hawkeye and Mockingjay, by improving performance by 5.6% and 13.2%, respectively, compared to the baseline LRU policy.Without Drishti, Hawkeye and Mockingjay improve performance by 3.3% and 6.7%, respectively.",
     "authorInstitutions": "Sweta (Indian Inst. of Technology Bombay); Prerna Priyadarshini (Indian Inst. of Technology Bombay); Biswabandan Panda (Indian Inst. of Technology Bombay)",
     "authors": [
       "Sweta",
       "Prerna Priyadarshini",
       "Biswabandan Panda"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756028",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756028"
+      },
       "sessionTrack": "Microarchitecture I"
     },
     "id": "3B-Drishti_Do_Not_Forget_Slicing_While_Designing_Last-Level_Cache_Replacement_Polic",
+    "keywords": [
+      "Cache",
+      "Slicing",
+      "Work (physics)",
+      "Key (lock)",
+      "Troubleshooting"
+    ],
     "locations": [],
+    "pages": "519-532",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756028"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3B: Microarchitecture I"
     ],
@@ -1154,7 +1819,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756028",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308952"
     ]
   },
   {
@@ -1171,15 +1838,43 @@
       "Giacomo Gabrielli",
       "Timothy M Jones"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756051",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756051"
+      },
       "sessionTrack": "Microarchitecture I"
     },
     "id": "3B-LoopFrog_In-Core_Hint-Based_Loop_Parallelization",
+    "keywords": [
+      "Spec#",
+      "Compiler",
+      "Speedup",
+      "Loop tiling",
+      "Multithreading",
+      "Thread (computing)",
+      "Speculative multithreading",
+      "Multi-core processor",
+      "Scaling"
+    ],
     "locations": [],
+    "pages": "490-503",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756051"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3B: Microarchitecture I"
     ],
@@ -1191,7 +1886,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756051",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415294841"
     ]
   },
   {
@@ -1201,15 +1898,23 @@
       "Qingxuan Kang",
       "Trevor E. Carlson"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3762248",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Microarchitecture I"
     },
     "id": "3B-Multi-Stream_Squash_Reuse_for_Control-Independent_Processors",
     "locations": [],
+    "pages": "504-518",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3B: Microarchitecture I"
     ],
@@ -1221,25 +1926,53 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3762248",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Quantum Error Correction (QEC) protects qubits against bit- and phase-flip errors in the |0> or |1> subspace, but physical qubits can also leak into higher energy levels (e.g., |2>). Leakage is especially harmful, as it corrupts all subsequent syndrome measurements and can spread to neighboring qubits. Detecting leakage on data qubits is particularly challenging, since they are never measured directly during QEC cycles. Prior work, such as eraser, addresses this by inferring leakage from syndrome patterns using a fixed heuristic. However, this approach often misclassifies benign syndromes, triggering excessive leakage-reduction circuits (LRCs). Because LRCs are themselves noisy and slow, these false triggers lengthen QEC cycles and inflate logical error rates. We propose gladiator, a general and adaptable leakage speculation framework that works across surface code, color code, and qLDPC codes. Offline, gladiator builds a code-aware error-propagation graph calibrated to device data. Online, it classifies each syndrome in a few nanoseconds and schedules LRC only when the observed pattern is provably leakage-dominated. This precise speculation eliminates up to 3x (and on average 2x) unnecessary LRCs, shortens QEC cycles, and suppresses false positives at their source. Evaluated on standard fault-tolerant benchmarks, gladiator delivers 1.7x-3.9x speedups and 16% reduction in logical error rate, advancing the efficiency of fault-tolerant quantum computing.",
     "authorInstitutions": "Chaithanya Naik Mude (Univ. of Wisconsin-Madison); Swamit Tannu (Univ. of Wisconsin-Madison)",
     "authors": [
       "Chaithanya Naik Mude",
       "Swamit Tannu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756053",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756053"
+      },
       "sessionTrack": "Quantum - 1"
     },
     "id": "3C-Accurate_Leakage_Speculation_for_Quantum_Error_Correction",
+    "keywords": [
+      "Leakage (economics)",
+      "Qubit",
+      "Error detection and correction",
+      "Quantum error correction",
+      "Speculation",
+      "Quantum",
+      "Quantum computer",
+      "Operand"
+    ],
     "locations": [],
+    "pages": "579-594",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756053"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3C: Quantum - 1"
     ],
@@ -1251,11 +1984,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756053",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293795"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The design of a scalable Quantum Control Architecture (QCA) faces two primary challenges. First, the continuous growth in qubit counts has rendered distributed QCA inevitable, yet the nondeterministic latencies inherent in feedback loops demand cycleaccurate synchronization across multiple controllers. Existing synchronization strategies -- whether lock-step or demand-driven -- introduce significant performance penalties. Second, existing quantum instruction set architectures are polarized, being either too abstract or too granular. This lack of a unifying design necessitates recurrent hardware customization for each new control requirement, which limits the system's reconfigurability and impedes the path toward a scalable and unified digital microarchitecture. Addressing these challenges, we propose Distributed-HISQ, featuring: (i) HISQ, A universal instruction set that redefines quantum control with a hardware-agnostic design. By decoupling from quantum operation semantics, HISQ provides a unified language for control sequences, enabling a single microarchitecture to support various control methods and enhancing system reconfigurability. (ii) BISP, a booking-based synchronization protocol that can potentially achieve zero-cycle synchronization overhead. The feasibility and adaptability of Distributed-HISQ are validated through its implementation on a commercial quantum control system targeting superconducting qubits. We performed a comprehensive evaluation using a customized quantum software stack. Our results show that BISP effectively synchronizes multiple control boards, leading to a 22.8% reduction in average program execution time and a $\\sim$5$\\times$ reduction in infidelity when compared to an existing lock-step synchronization scheme.",
     "authorInstitutions": "Yilun Zhao (Inst. of Computing Technology, Chinese Academy of Sciences); Kangding Zhao (College of Computer Science and Technology, National Univ. of Defense Technology); Peng Zhou (China Greatwall Quantum Laboratory); Dingdong Liu (College of Computer Science and Technology, National Univ. of Defense Technology); Tingyu Luo (East China Normal Univ.); Yuzhen Zheng (College of Computer Science and Technology, National Univ. of Defense Technology); Peng Luo (College of Computer Science and Technology, National Univ. of Defense Technology); Shun Hu (College of Computer Science and Technology, National Univ. of Defense Technology); Jin Lin (Hefei National Laboratory, Univ. of Science and Technology of China); Cheng Guo (Hefei National Laboratory); Yinhe Han (ICT, Chinese Academy of Sciences); Ying Wang (Inst. of Computing Technology, Chinese Academy of Sciences); Mingtang Deng (College of Computer Science and Technology, National Univ. of Defense Technology); Junjie Wu (College of Computer Science and Technology, National Univ. of Defense Technology); Xiang Fu (College of Computer Science and Technology, National Univ. of Defense Technology)",
     "authors": [
       "Yilun Zhao",
@@ -1274,15 +2009,43 @@
       "Junjie Wu",
       "Xiang Fu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756048",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756048"
+      },
       "sessionTrack": "Quantum - 1"
     },
     "id": "3C-Distributed-HISQ_A_Distributed_Quantum_Control_Architecture",
+    "keywords": [
+      "Synchronization (alternating current)",
+      "Scalability",
+      "Reconfigurability",
+      "Qubit",
+      "Nondeterministic algorithm",
+      "Synchronizer",
+      "Controller (irrigation)",
+      "Quantum computer",
+      "Decoupling (probability)"
+    ],
     "locations": [],
+    "pages": "564-578",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756048"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3C: Quantum - 1"
     ],
@@ -1294,7 +2057,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756048",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308407"
     ]
   },
   {
@@ -1309,15 +2074,38 @@
       "Juwon Hong",
       "Jangwoo Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756026",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756026"
+      },
       "sessionTrack": "Quantum - 1"
     },
     "id": "3C-LANCER_Low-Overhead_Accurate_and_Non-Destructive_Calibration_for_Real-World_Faul",
+    "keywords": [
+      "Calibration",
+      "Quantum",
+      "Field (mathematics)",
+      "Noise (video)"
+    ],
     "locations": [],
+    "pages": "547-563",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756026"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3C: Quantum - 1"
     ],
@@ -1329,7 +2117,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756026",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308413"
     ]
   },
   {
@@ -1346,15 +2136,23 @@
       "Mingshuai Chen",
       "Jianwei Yin"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
     ],
+    "doi": "10.1145/3725843.3756061",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Quantum - 1"
     },
     "id": "3C-YOUTIAO_Hybrid_Multiplexing_with_Dynamic_Qubit_Grouping_for_Low-cost_and_Scalabl",
     "locations": [],
+    "pages": "595-608",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3C: Quantum - 1"
     ],
@@ -1366,6 +2164,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756061",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1382,15 +2181,39 @@
       "Tushar Krishna",
       "Divya Mahajan"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756111",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756111"
+      },
       "sessionTrack": "Systems for AI (Training)"
     },
     "id": "4A-Characterizing_the_Efficiency_of_Distributed_Training_A_Power_Performance_and_Th",
+    "keywords": [
+      "Perspective (graphical)",
+      "Thermal",
+      "Context (archaeology)",
+      "Domain (mathematical analysis)",
+      "Key (lock)"
+    ],
     "locations": [],
+    "pages": "626-642",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756111"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4A: Systems for AI (Training)"
     ],
@@ -1402,7 +2225,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756111",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308595"
     ]
   },
   {
@@ -1419,15 +2244,39 @@
       "Fan Lai",
       "Nam Sung Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756079",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756079"
+      },
       "sessionTrack": "Systems for AI (Training)"
     },
     "id": "4A-NetZIP_Algorithm_Hardware_Co-design_of_In-network_Lossless_Compression_for_Distr",
+    "keywords": [
+      "Compression (physics)",
+      "Lossless compression",
+      "Training (meteorology)",
+      "Data compression",
+      "Work (physics)"
+    ],
     "locations": [],
+    "pages": "609-625",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756079"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4A: Systems for AI (Training)"
     ],
@@ -1439,7 +2288,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756079",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293446"
     ]
   },
   {
@@ -1485,15 +2336,23 @@
       "Jungwook Choi",
       "John Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756092",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (Training)"
     },
     "id": "4A-SkipReduce_Interconnection_Network_Sparsity_to_Accelerate_Distributed_Machine_Le",
     "locations": [],
+    "pages": "643-658",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4A: Systems for AI (Training)"
     ],
@@ -1505,6 +2364,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756092",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1517,15 +2377,26 @@
       "Mingsheng Xu",
       "Heiner Litz"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756135",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Microarchitecture II"
     },
     "id": "4B-ATR_Out-of-Order_Register_Release_Exploiting_Atomic_Regions",
     "locations": [],
+    "pages": "705-718",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756135"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4B: Microarchitecture II"
     ],
@@ -1537,6 +2408,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756135",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1600,12 +2472,29 @@
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756059",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Microarchitecture II"
     },
     "id": "4B-Titan-I_An_Open-Source_High_Performance_RISC-V_Vector_Core",
+    "keywords": [
+      "Core (optical fiber)",
+      "Set (abstract data type)",
+      "Identification (biology)",
+      "Work (physics)",
+      "Point (geometry)"
+    ],
     "locations": [],
+    "pages": "675-690",
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 4B: Microarchitecture II"
     ],
@@ -1617,7 +2506,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756059",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309624"
     ]
   },
   {
@@ -1629,15 +2520,23 @@
       "Jingbo Wang",
       "Xin Wang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756129",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Quantum - 2"
     },
     "id": "4C-MUSS-TI_Multi-level_Shuttle_Scheduling_for_Large-Scale_Entanglement_Module_Linke",
     "locations": [],
+    "pages": "749-763",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4C: Quantum - 2"
     ],
@@ -1649,6 +2548,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756129",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1667,15 +2567,23 @@
       "Xiaoming Sun",
       "Jianwei Yin"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756107",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Quantum - 2"
     },
     "id": "4C-Rasengan_A_Transition_Hamiltonian-based_Approximation_Algorithm_for_Solving_Cons",
     "locations": [],
+    "pages": "764-777",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4C: Quantum - 2"
     ],
@@ -1687,6 +2595,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756107",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1738,15 +2647,41 @@
       "Mingshuai Chen",
       "Jianwei Yin"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756084",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756084"
+      },
       "sessionTrack": "Quantum - 2"
     },
     "id": "4C-Vegapunk_Accurate_and_Fast_Decoding_for_Quantum_LDPC_Codes_with_Online_Hierarchi",
+    "keywords": [
+      "Decoding methods",
+      "Code (set theory)",
+      "Low-density parity-check code",
+      "Quantum",
+      "Encoding (memory)",
+      "Sequential decoding",
+      "Quantum computer"
+    ],
     "locations": [],
+    "pages": "719-732",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756084"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4C: Quantum - 2"
     ],
@@ -1758,11 +2693,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756084",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308860"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "MICRO ’25, Seoul, Republic of Korea",
     "authorInstitutions": "Ritvik Sharma (Stanford Univ.); Fisher Xue (Massachusetts Inst. of Technology); Nathan Zhang (Stanford Univ.); Rubens Lacouture (Stanford Univ.); Fredrik Kjolstad (Stanford Univ.); Sara Achour (Stanford Univ.); Mark Horowitz (Stanford Univ.)",
     "authors": [
       "Ritvik Sharma",
@@ -1776,12 +2713,36 @@
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756095",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756095"
+      },
       "sessionTrack": "Sparsity - 1"
     },
     "id": "4D-A_Probabilistic_Perspective_on_Tiling_Sparse_Tensor_Algebra",
+    "keywords": [
+      "Perspective (graphical)",
+      "Algebra over a field",
+      "Probabilistic logic",
+      "Tensor (intrinsic definition)",
+      "Matrix algebra",
+      "Tensor product",
+      "Kleene algebra",
+      "Multilinear algebra"
+    ],
     "locations": [],
+    "pages": "795-808",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756095"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 4D: Sparsity - 1"
     ],
@@ -1793,7 +2754,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756095",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285476"
     ]
   },
   {
@@ -1803,15 +2766,26 @@
       "Sanjali Yadav",
       "Bahar Asgari"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756125",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Sparsity - 1"
     },
     "id": "4D-Bo_tes_Boosting_the_Efficiency_of_Sparse_Accelerators_Using_Spectral_Clustering",
     "locations": [],
+    "pages": "809-823",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756125"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4D: Sparsity - 1"
     ],
@@ -1823,6 +2797,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756125",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1834,15 +2809,23 @@
       "Amirmahdi Namjoo",
       "Bahar Asgari"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756086",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Sparsity - 1"
     },
     "id": "4D-Chaso_Supporting_Cross_HBM_Channel_Data_Migration_to_Enable_Efficient_Sparse_Alg",
     "locations": [],
+    "pages": "778-794",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4D: Sparsity - 1"
     ],
@@ -1854,6 +2837,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756086",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -1905,12 +2889,29 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756113",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Systems for AI (Quantization)"
     },
     "id": "5A-Amove_Accelerating_LLMs_through_Mitigating_Outliers_and_Salient_Points_via_Fine-",
+    "keywords": [
+      "Salient",
+      "Outlier",
+      "Point (geometry)",
+      "Type (biology)",
+      "Data type"
+    ],
     "locations": [],
+    "pages": "854-868",
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 5A: Systems for AI (Quantization)"
     ],
@@ -1922,7 +2923,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756113",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309806"
     ]
   },
   {
@@ -1935,15 +2938,35 @@
       "Chenxi Xu",
       "Xinyu Chen"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756094",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Systems for AI (Quantization)"
     },
     "id": "5A-AxCore_A_Quantization-Aware_Approximate_GEMM_Unit_for_LLM_Inference",
+    "keywords": [
+      "Unit (ring theory)",
+      "Inference",
+      "Feature (linguistics)",
+      "Generalization",
+      "Set (abstract data type)"
+    ],
     "locations": [],
+    "pages": "839-853",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5A: Systems for AI (Quantization)"
     ],
@@ -1955,7 +2978,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756094",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285478"
     ]
   },
   {
@@ -1971,12 +2996,33 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756118",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756118"
+      },
       "sessionTrack": "Systems for AI (Quantization)"
     },
     "id": "5A-MX_Pushing_the_Limits_of_Microscaling_Formats_for_Efficient_Large_Language_Model",
+    "keywords": [
+      "Field (mathematics)",
+      "Set (abstract data type)",
+      "Limit (mathematics)",
+      "Key (lock)",
+      "Language model"
+    ],
     "locations": [],
+    "pages": "869-883",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756118"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 5A: Systems for AI (Quantization)"
     ],
@@ -1988,7 +3034,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756118",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308961"
     ]
   },
   {
@@ -2037,15 +3085,23 @@
       "Giacomo Gabrielli",
       "Timothy M. Jones"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756106",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Microarchitecture - Prefetching 2"
     },
     "id": "5B-Ghost_Threading_Helper-Thread_Prefetching_for_Real_Systems",
     "locations": [],
+    "pages": "899-914",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5B: Microarchitecture - Prefetching 2"
     ],
@@ -2057,26 +3113,51 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756106",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Online reinforcement learning (RL) holds promise for microarchitectural techniques like prefetching.Its ability to adapt to changing and previously-unseen scenarios makes it a versatile technique.However, when multiple RL-operated components compete for shared resources in multicore systems, they can often converge to sub-optimal policies due to conflicting incentives.In this work, we identify key challenges that arise when scaling RL-based prefetchers to multi-core environments, and relate these to known problems from Multi-Agent Reinforcement Learning (MARL).In particular, we find that recent work using multi-armed bandit algorithms for prefetching can lead to inefficient systems when memory bandwidth is limited, as each agent attempts to claim a disproportionate share of the system's bandwidth.To solve this problem, we present Mama, a light-weight supervisor of distributed multi-armed bandit agents, which learns performant joint-policies.In Mama, distributed local agents narrow the global joint-action search space, while a central agent with a global perspective learns system-wide policies.Additionally, Mama provides key local agents with a system perspective, encouraging them to avoid actions that would harm the others.Mama exhibits high adaptability, which we show by evaluating it using multiple measures of performance.In our evaluation of an 8-core system, the policies learned by Mama outperform those of independently-operating agents by an average of 2.1% when optimizing for throughput, and by an average of 10.4% when optimizing for fairness.We also show that Mama performs better in systems that are more bandwidth constrained, as well as when profiles of the workloads are provided.",
     "authorInstitutions": "Charles Block (Univ. of Illinois Urbana-Champaign); Gerasimos Gerogiannis (Univ. of Illinois Urbana-Champaign); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Charles Block",
       "Gerasimos Gerogiannis",
       "Josep Torrellas"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756096",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756096"
+      },
       "sessionTrack": "Microarchitecture - Prefetching 2"
     },
     "id": "5B-Micro-MAMA_Multi-Agent_Reinforcement_Learning_for_Multicore_Prefetching",
+    "keywords": [
+      "Reinforcement learning",
+      "Multi-core processor",
+      "Core (optical fiber)",
+      "Variety (cybernetics)",
+      "Reinforcement"
+    ],
     "locations": [],
+    "pages": "884-898",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756096"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5B: Microarchitecture - Prefetching 2"
     ],
@@ -2088,7 +3169,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756096",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285480"
     ]
   },
   {
@@ -2127,7 +3210,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "MICRO ’25, Seoul, Republic of Korea",
     "authorInstitutions": "Courtney Golden (Massachusetts Inst. of Technology); Axel Feldmann (Massachusetts Inst. of Technology); Joel Emer (MIT/NVIDIA); Daniel Sanchez (Massachusetts Inst. of Technology)",
     "authors": [
       "Courtney Golden",
@@ -2135,15 +3218,40 @@
       "Joel Emer",
       "Daniel Sanchez"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756035",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756035"
+      },
       "sessionTrack": "Sparsity - 2"
     },
     "id": "5C-Quartz_A_Reconfigurable_Distributed_Memory_Accelerator_for_Sparse_Applications",
+    "keywords": [
+      "Noise (video)",
+      "Feature (linguistics)",
+      "Software",
+      "Key (lock)",
+      "Product (mathematics)"
+    ],
     "locations": [],
+    "pages": "929-943",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756035",
+      "https://doi.org/10.1145/3725843.3756035"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5C: Sparsity - 2"
     ],
@@ -2155,11 +3263,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756035",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285678"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Sparse tensor computations are highly memory-bound, making on-chip data reuse in SRAM buffers critical to the performance of domain-specific sparse accelerators.On-demand caches are commonly used in recent sparse accelerators, due to the advantage of easy space allocation and the ability to avoid unnecessary data fetches compared to scratchpad-style data buffering.However, existing cache designs suffer from inefficient space utilization due to the difficulty of fitting variable-length sparse data into fixedsize cache blocks.The theoretically optimal replacement policies used by them also have substantial implementation cost, requiring significant on-chip space to manage the metadata.To address these issues, we propose SeaCache to enable efficient and adaptive caching for sparse accelerators.SeaCache includes three key techniques.First, it incorporates fiber packing and splitting to efficiently map variable-length data into fixed-size cache blocks with high space utilization.Second, it proposes a practical replacement policy that performs similarly to the optimal one but has a much cheaper implementation.Third, it shares the cache space between the actual data and the replacement policy metadata, with a two-phase adaptive mechanism to decide the best partition ratio.Overall, Sea-Cache outperforms state-of-the-art sparse cache designs by 2.8 on average, demonstrating the effectiveness of its novel optimizations.",
     "authorInstitutions": "Xintong Li (Tsinghua Univ.); Jinchen Jiang (Tsinghua Univ.); Mingyu Gao (Tsinghua Univ.)",
     "authors": [
       "Xintong Li",
@@ -2169,12 +3279,33 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756040",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756040"
+      },
       "sessionTrack": "Sparsity - 2"
     },
     "id": "5C-SeaCache_Efficient_and_Adaptive_Caching_for_Sparse_Accelerators",
+    "keywords": [
+      "Noise (video)",
+      "Key (lock)",
+      "Feature (linguistics)",
+      "Software",
+      "Term (time)"
+    ],
     "locations": [],
+    "pages": "944-957",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756040"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 5C: Sparsity - 2"
     ],
@@ -2186,7 +3317,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756040",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415295242"
     ]
   },
   {
@@ -2204,12 +3337,33 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756132",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756132"
+      },
       "sessionTrack": "Superconducting Systems"
     },
     "id": "5D-Characterizing_and_Optimizing_Realistic_Workloads_on_a_Commercial_Compute-in-SRA",
+    "keywords": [
+      "Key (lock)",
+      "Work (physics)",
+      "Set (abstract data type)",
+      "Noise (video)",
+      "Field (mathematics)"
+    ],
     "locations": [],
+    "pages": "1011-1025",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756132"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 5D: Superconducting Systems"
     ],
@@ -2221,7 +3375,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756132",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285479"
     ]
   },
   {
@@ -2235,15 +3391,40 @@
       "Abdullah Giray Yaglikci",
       "Onur Mutlu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756022",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756022"
+      },
       "sessionTrack": "Superconducting Systems"
     },
     "id": "5D-ColumnDisturb_Understanding_Column-based_Read_Disturbance_in_Real_DRAM_Chips_and",
+    "keywords": [
+      "Dram",
+      "Disturbance (geology)",
+      "Troubleshooting",
+      "Component (thermodynamics)",
+      "Control system",
+      "Key (lock)"
+    ],
     "locations": [],
+    "pages": "975-994",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756022"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5D: Superconducting Systems"
     ],
@@ -2255,7 +3436,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756022",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293420"
     ]
   },
   {
@@ -2275,12 +3458,33 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756024",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756024"
+      },
       "sessionTrack": "Superconducting Systems"
     },
     "id": "5D-SuperSFQ_A_Hardware_Design_to_Realize_High-Frequency_Superconducting_Processors",
+    "keywords": [
+      "Circuit design",
+      "Noise (video)",
+      "Key (lock)",
+      "Pipeline (software)",
+      "Troubleshooting"
+    ],
     "locations": [],
+    "pages": "995-1010",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756024"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 5D: Superconducting Systems"
     ],
@@ -2292,7 +3496,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756024",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308554"
     ]
   },
   {
@@ -2371,15 +3577,38 @@
       "Yanan Guo",
       "Yuanchao Xu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756116",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756116"
+      },
       "sessionTrack": "GPUs - 2"
     },
     "id": "6A-Security_and_Performance_Implications_of_GPU_Cache_Eviction_Priority_Hints",
+    "keywords": [
+      "Cache",
+      "Scheme (mathematics)",
+      "Eviction",
+      "Cache algorithms"
+    ],
     "locations": [],
+    "pages": "1058-1072",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756116"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6A: GPUs - 2"
     ],
@@ -2391,7 +3620,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756116",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415300368"
     ]
   },
   {
@@ -2407,15 +3638,40 @@
       "Michael Niemier",
       "X. Sharon Hu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756047",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756047"
+      },
       "sessionTrack": "Security and Privacy - Memory"
     },
     "id": "6B-COSMOS_RL-Enhanced_Locality-Aware_Counter_Cache_Optimization_for_Secure_Memory",
+    "keywords": [
+      "Cache",
+      "Memory management",
+      "CPU cache",
+      "Cache-only memory architecture",
+      "Identification (biology)"
+    ],
     "locations": [],
+    "pages": "1073-1086",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756047",
+      "https://doi.org/10.1145/3725843.3756047"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6B: Security and Privacy - Memory"
     ],
@@ -2427,7 +3683,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756047",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308580"
     ]
   },
   {
@@ -2438,15 +3696,26 @@
       "Walter Wang",
       "Alexandros Daglis"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756098",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Security and Privacy - Memory"
     },
     "id": "6B-Citadel_Rethinking_Memory_Allocation_to_Safeguard_Against_Inter-Domain_Rowhammer",
     "locations": [],
+    "pages": "1117-1131",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756098"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6B: Security and Privacy - Memory"
     ],
@@ -2458,6 +3727,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756098",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -2494,22 +3764,46 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Current DRAM technologies face critical scaling limitations, significantly impacting the expansion of memory bandwidth and capacity required by modern data-intensive applications.Compute eXpress Link (CXL) emerges as a promising technology to address these limitations, enabling efficient cache-coherent memory expansion through direct connections between processors and CXL memory devices.Despite its potential, broad adoption of CXL memory in public cloud computing introduces substantial security challenges.Trusted Execution Environments (TEEs), such as Intel SGX/TDX and AMD SEV, provide robust protection for data integrity and confidentiality in cloud environments, complemented by CXL Integrity and Data Encryption (CXL IDE), which employs XTS encryption and Galois/Counter Mode (GCM) for secure message transmission.However, this approach incurs significant performance overhead due to the latency of XTS encryption on memory-intensive workloads.To mitigate this, we propose Adaptive Incremental Offloaded (Re-)Encryption (AIORE), an adaptive security framework combining Counter (CTR) and XTS encryption.AIORE dynamically selects encryption schemes based on page access frequency, implements incremental and offloaded re-encryption strategies, and leverages memory node computation to reduce overheads.Evaluation with Gem5 across diverse benchmarks reveals that AIORE significantly reduces security overhead by 62.8% on average and maintains overhead within 3.7% relative to an insecure baseline.",
     "authorInstitutions": "Chuanhan Li (UC-Santa Cruz); Jishen Zhao (Univ. of California, San Diego); Yuanchao Xu (Univ. of California, Santa Cruz)",
     "authors": [
       "Chuanhan Li",
       "Jishen Zhao",
       "Yuanchao Xu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756119",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756119"
+      },
       "sessionTrack": "Security and Privacy - Memory"
     },
     "id": "6B-Efficient_Security_Support_for_CXL_Memory_through_Adaptive_Incremental_Offloaded",
+    "keywords": [
+      "Software",
+      "Field (mathematics)",
+      "Key (lock)",
+      "Mobile device",
+      "Feature (linguistics)"
+    ],
     "locations": [],
+    "pages": "1102-1116",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756119"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6B: Security and Privacy - Memory"
     ],
@@ -2521,7 +3815,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756119",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308949"
     ]
   },
   {
@@ -2535,15 +3831,23 @@
       "Seulki Kim",
       "Daehoon Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756021",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Energy and Power"
     },
     "id": "6C-EcoCore_Dynamic_Core_Management_for_Improving_Energy_Efficiency_in_Latency-Criti",
     "locations": [],
+    "pages": "1132-1146",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6C: Energy and Power"
     ],
@@ -2555,11 +3859,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756021",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This paper presents an automated approach for designing processors that support a subset of the RISC-V instruction set architecture (ISA) for a new class of applications at Extreme Edge. The electronics used in extreme edge applications must be area and power-efficient, but also provide additional qualities, such as low cost, conformability, comfort and sustainability. Flexible electronics, rather than silicon-based electronics, will be able to meet the above qualities. For this purpose, we propose a methodology for generating RISC-V instruction subset processors (RISSPs) tailored to these applications and implementing them as flexible integrated circuits (FlexICs). The methodology makes verification an integral part of the processor design by treating each instruction in the ISA as a discrete, fully functional, pre-verified hardware block. It automatically builds a custom processor by stitching together the instruction hardware blocks required by an application or a set of applications in a specific domain. We generate RISSPs using the proposed methodology for three extreme edge applications, and embedded applications from the Embench benchmark suite. When synthesized, RISSPs can achieve 8-to-43% reduction in area and 3-to-30% reduction in power compared to a processor supporting the full RISC-V ISA, and are also on average ~40 times more energy efficient than Serv - the world's smallest 32-bit RISC-V processor. When physically implemented as FlexICs, the three extreme edge RISSPs achieve up to 42% area and 21% power savings with respect to the full RISC-V processor.",
     "authorInstitutions": "Alireza Raisiardali (Pragmatic Semiconductor / KU Leuven); Konstantinos Iordanou (Pragmatic Semiconductor); Jedrzej Kufel (Pragmatic Semiconductor); Kowshik Gudimetla (Pragmatic Semiconductor); Kris Myny (KU Leuven); Emre Ozer (Pragmatic Semiconductor)",
     "authors": [
       "Alireza Raisiardali",
@@ -2569,15 +3874,41 @@
       "Kris Myny",
       "Emre Ozer"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756036",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2505.04567"
+      },
       "sessionTrack": "Energy and Power"
     },
     "id": "6C-Flexing_RISC-V_Instruction_Subset_Processors_to_Extreme_Edge",
+    "keywords": [
+      "Benchmark (surveying)",
+      "Set (abstract data type)",
+      "Instruction set",
+      "Image stitching",
+      "Enhanced Data Rates for GSM Evolution",
+      "Class (philosophy)",
+      "Application-specific instruction-set processor"
+    ],
     "locations": [],
+    "pages": "1147-1159",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2505.04567"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6C: Energy and Power"
     ],
@@ -2589,7 +3920,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756036",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285685"
     ]
   },
   {
@@ -2605,15 +3938,23 @@
       "Mahmut T Kandemir",
       "Vijaykrishnan Narayanan"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756088",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Energy and Power"
     },
     "id": "6C-Multi-Dimensional_ML-Pipeline_Optimization_in_Cost-Effective_Disaggregated_Datac",
     "locations": [],
+    "pages": "1178-1192",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6C: Energy and Power"
     ],
@@ -2625,11 +3966,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756088",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The energy efficiency of neural processing units (NPU) plays a critical role in developing sustainable data centers.Our study with different generations of NPU chips reveals that 30%-72% of their energy consumption is contributed by static power dissipation, due to the lack of power management support in modern NPU chips.In this paper, we present ReGate, which enables fine-grained power-gating of each hardware component in NPU chips with hardware/software co-design.Unlike conventional power-gating techniques for generic processors, enabling power-gating in NPUs faces unique challenges due to the fundamental difference in hardware architecture and program execution model.To address these challenges, we carefully investigate the power-gating opportunities in each component of NPU chips and decide the best-fit power management scheme (i.e., hardware-vs.software-managed power gating).Specifically, for systolic arrays (SAs) that have deterministic execution patterns, ReGate enables cycle-level power gating at the granularity of processing elements (PEs) following the inherent dataflow execution in SAs.For inter-chip interconnect (ICI) and HBM controllers that have long idle intervals, ReGate employs a lightweight hardware-based idle-detection mechanism.For vector units and SRAM whose idle periods vary significantly depending on workload patterns, ReGate extends the NPU ISA and allows software (e.g., compilers) to manage the power gating.With implementation on a production-level NPU simulator, we show that ReGate can reduce the energy consumption of NPU chips by up to 32.8% (15.5% on average), with negligible impact on AI workload performance.The hardware implementation of power-gating logic introduces less than 3.3% overhead in NPU chips.",
     "authorInstitutions": "Yuqi Xue (Univ. of Illinois Urbana-Champaign); Jian Huang (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Yuqi Xue",
@@ -2638,12 +3980,38 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756038",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756038"
+      },
       "sessionTrack": "Energy and Power"
     },
     "id": "6C-ReGate_Enabling_Power_Gating_in_Neural_Processing_Units",
+    "keywords": [
+      "Energy consumption",
+      "Component (thermodynamics)",
+      "Power gating",
+      "Dataflow",
+      "Power (physics)",
+      "Software",
+      "Granularity",
+      "Overhead (engineering)",
+      "FIFO (computing and electronics)",
+      "Artificial neural network"
+    ],
     "locations": [],
+    "pages": "1160-1177",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756038"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 6C: Energy and Power"
     ],
@@ -2655,7 +4023,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756038",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285679"
     ]
   },
   {
@@ -2674,12 +4044,29 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756055",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Reconfigurable Computing and Storage"
     },
     "id": "6D-CrossBit_Bitwise_Computing_in_NAND_Flash_Memory_with_Inter-Bitline_Data_Communic",
+    "keywords": [
+      "Bitwise operation",
+      "Flash (photography)",
+      "Key (lock)",
+      "Data transmission",
+      "Data loss"
+    ],
     "locations": [],
+    "pages": "1193-1206",
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 6D: Reconfigurable Computing and Storage"
     ],
@@ -2691,7 +4078,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756055",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308696"
     ]
   },
   {
@@ -2811,12 +4200,33 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756023",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756023"
+      },
       "sessionTrack": "Systems for AI (HW/SW Support)"
     },
     "id": "7A-Crane_Inter-Layer_Scheduling_Framework_for_DNN_Inference_and_Training_Co-Support",
+    "keywords": [
+      "Scheduling (production processes)",
+      "Training (meteorology)",
+      "Inference",
+      "Architecture",
+      "Systems architecture"
+    ],
     "locations": [],
+    "pages": "1250-1263",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756023"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 7A: Systems for AI (HW/SW Support)"
     ],
@@ -2828,11 +4238,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756023",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293423"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "To meet the increasing demand of deep learning (DL) models, AI chips are employing both off-chip memory (e.g., HBM) and high-bandwidth low-latency interconnect for direct inter-core data exchange. However, it is not easy to explore the efficiency of these inter-core connected AI (ICCA) chips, due to a fundamental tussle among compute (per-core execution), communication (inter-core data exchange), and I/O (off-chip data access). In this paper, we develop Elk, a DL compiler framework to maximize the efficiency of ICCA chips by jointly trading off all the three performance factors discussed above. Elk structures these performance factors into configurable parameters and forms a global trade-off space in the DL compiler. To systematically explore this space and maximize overall efficiency, Elk employs a new inductive operator scheduling policy and a cost-aware on-chip memory allocation algorithm. It generates globally optimized execution plans that best overlap off-chip data loading and on-chip execution. To examine the efficiency of Elk, we build a full-fledged emulator based on a real ICCA chip IPU-POD4, and an ICCA chip simulator for sensitivity analysis with different interconnect network topologies. Elk achieves 94% of the ideal roofline performance of ICCA chips on average, showing the benefits of supporting large DL models on ICCA chips. We also show Elk's capability of enabling architecture design space exploration for new ICCA chip development.",
     "authorInstitutions": "Yiqi Liu (Univ. of Illinois Urbana-Champaign); Yuqi Xue (Univ. of Illinois Urbana-Champaign); Noelle Crawford (Univ. of Illinois Urbana-Champaign); Jilong Xue (Microsoft Research); Jian Huang (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Yiqi Liu",
@@ -2841,15 +4253,38 @@
       "Jilong Xue",
       "Jian Huang"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.48550/arxiv.2507.11506",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2507.11506"
+      },
       "sessionTrack": "Systems for AI (HW/SW Support)"
     },
     "id": "7A-ELK_Exploring_the_Efficiency_of_Inter-core_Connected_AI_Chips_with_Deep_Learning",
+    "keywords": [
+      "Compiler",
+      "Scheduling (production processes)",
+      "Interconnection",
+      "Deep learning",
+      "Design space exploration",
+      "Chip",
+      "Architecture"
+    ],
     "locations": [],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2507.11506"
+    ],
+    "publicationDate": "2025-07-15",
     "sessionTitles": [
       "Session 7A: Systems for AI (HW/SW Support)"
     ],
@@ -2861,11 +4296,14 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.48550/arxiv.2507.11506",
+      "https://microarch.org/micro58/program/index.php",
+      "http://arxiv.org/abs/2507.11506",
+      "https://openalex.org/W4414946629"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "This study presents the Cartesian Accumulative Matrix Pipeline (CAMP) architecture, a novel approach designed to enhance matrix multiplication in Vector Architectures (VAs) and Single Instruction Multiple Data (SIMD) units. CAMP improves the processing efficiency of Quantized Neural Networks (QNNs). Matrix multiplication is a cornerstone of machine learning applications, and its quantized versions are increasingly popular for more efficient operations. Unfortunately, existing VAs and SIMD-support units struggle to efficiently handle these quantized formats. In this work, we propose CAMP, a simple yet effective architecture that leverages a hybrid multiplier. The CAMP architecture significantly advances the performance of vector architectures in handling quantized data, enabling more efficient execution of matrix multiplication across various platforms, specifically targeting the ARMv8 Scalable Vector Extension (SVE) and edge RISC-V SIMD-based architectures. In addition to increasing throughput, CAMP's architectural design also contributes to energy efficiency, making it an effective solution for low-power applications. Evaluations on a range of Large Language Models (LLMs) and Convolutional Neural Networks (CNNs) demonstrate that matrix multiplication operations using the proposed micro-architecture achieve up to 17$\\times$ and 23$\\times$ performance improvements compared to their respective baselines, the ARM A64FX core and a RISC-V-based edge System-on-Chip (SoC). Furthermore, synthesis and place-and-route (PnR) of the CAMP micro-architecture using Synopsys tools -- targeting ARM TSMC 7nm for A64FX and GlobalFoundries 22nm for the RISC-V SoC -- add only 1\\% and 4\\% area overhead, respectively, compared to the baseline designs.",
     "authorInstitutions": "Mohammadreza Esmali Nojehdeh (Barcelona supercomputing center); Hossein Mokhtarnia (Barcelona Supercomputing Center); Julian Pavon Rivera (Barcelona Supercomputing Center); Narcis Rodas Quiroga (Barcelona Supercomputing Center); Roger Figueras Bagué (Barcelona Supercomputing Center); Enrico Reggiani (Barcelona Supercomputing Center); Miquel Moreto (UPC/BSC); Osman Unsal (BSC); Adrian Cristal (BSC); Eduard Ayguade (Universitat Politecnica de Catalunya & Barcelona Supercomputing Center, Barcelona, Spain)",
     "authors": [
       "Mohammadreza Esmali Nojehdeh",
@@ -2879,15 +4317,43 @@
       "Adrian Cristal",
       "Eduard Ayguade"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3760547",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2504.08137"
+      },
       "sessionTrack": "Systems for AI (HW/SW Support)"
     },
     "id": "7A-Empowering_Vector_Architectures_for_ML_The_CAMP_Architecture_for_Matrix_Multipli",
+    "keywords": [
+      "Scalability",
+      "Multiplication (music)",
+      "Pipeline (software)",
+      "Matrix multiplication",
+      "Architecture",
+      "Matrix (chemical analysis)",
+      "Convolutional neural network",
+      "Enhanced Data Rates for GSM Evolution",
+      "Transformation matrix"
+    ],
     "locations": [],
+    "pages": "1300-1315",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2504.08137"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7A: Systems for AI (HW/SW Support)"
     ],
@@ -2899,7 +4365,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3760547",
+      "https://microarch.org/micro58/program/index.php",
+      "http://arxiv.org/abs/2504.08137",
+      "https://openalex.org/W4414827607"
     ]
   },
   {
@@ -2914,15 +4383,23 @@
       "Zonghui Hong",
       "Jiali Qu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756054",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (HW/SW Support)"
     },
     "id": "7A-OASIS_A_Commercial_High_Performance_Terminal_AI_Processor_Supporting_RISC-V_Tens",
     "locations": [],
+    "pages": "1264-1283",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7A: Systems for AI (HW/SW Support)"
     ],
@@ -2934,6 +4411,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756054",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -2949,15 +4427,26 @@
       "Krut Patel",
       "Charith Mendis"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756075",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (HW/SW Support)"
     },
     "id": "7A-TAIDL_Tensor_Accelerator_ISA_Definition_Language_with_Auto-generation_of_Scalabl",
     "locations": [],
+    "pages": "1316-1333",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756075"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7A: Systems for AI (HW/SW Support)"
     ],
@@ -2969,6 +4458,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756075",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -2991,15 +4481,37 @@
       "Mingzhe Zhang",
       "Kui Ren"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.5281/zenodo.16886880",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.16886880"
+      },
       "sessionTrack": "Tools and Simulators"
     },
     "id": "7B-LEGOSim_A_Unified_Parallel_Simulation_Framework_for_Multi-chiplet_Heterogeneous",
+    "keywords": [
+      "Component (thermodynamics)",
+      "Context (archaeology)",
+      "Key (lock)",
+      "Set (abstract data type)",
+      "Stability (learning theory)"
+    ],
     "locations": [],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.16886880"
+    ],
+    "publicationDate": "2025-08-16",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Session 7B: Tools and Simulators"
     ],
@@ -3011,7 +4523,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.5281/zenodo.16886880",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W7127096965"
     ]
   },
   {
@@ -3027,12 +4541,33 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756027",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756027"
+      },
       "sessionTrack": "Tools and Simulators"
     },
     "id": "7B-LLMulator_Generalizable_Cost_Modeling_for_Dataflow_Accelerators_with_Input-Adapt",
+    "keywords": [
+      "Dataflow",
+      "Control (management)",
+      "Flow (mathematics)",
+      "Control flow",
+      "Control system"
+    ],
     "locations": [],
+    "pages": "1381-1396",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756027"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 7B: Tools and Simulators"
     ],
@@ -3044,7 +4579,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756027",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309078"
     ]
   },
   {
@@ -3063,12 +4600,32 @@
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756045",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756045"
+      },
       "sessionTrack": "Tools and Simulators"
     },
     "id": "7B-PyTorchSim_A_Comprehensive_Fast_and_Accurate_NPU_Simulation_Framework",
+    "keywords": [
+      "Work (physics)",
+      "Noise (video)",
+      "Component (thermodynamics)",
+      "Stability (learning theory)"
+    ],
     "locations": [],
+    "pages": "1363-1380",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756045"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 7B: Tools and Simulators"
     ],
@@ -3080,7 +4637,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756045",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293436"
     ]
   },
   {
@@ -3092,15 +4651,38 @@
       "Cong",
       "Hao"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756033",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756033"
+      },
       "sessionTrack": "Tools and Simulators"
     },
     "id": "7B-Simulating_Hardware_with_C_Speed_and_RTL_Accuracy_for_High-Level_Synthesis_Desig",
+    "keywords": [
+      "Software",
+      "Pipeline (software)",
+      "Set (abstract data type)",
+      "Noise (video)"
+    ],
     "locations": [],
+    "pages": "1334-1346",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756033"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7B: Tools and Simulators"
     ],
@@ -3112,7 +4694,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756033",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285672"
     ]
   },
   {
@@ -3163,15 +4747,23 @@
       "Yang Zhou",
       "Nam Sung Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756089",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Reliability, Fault-tolerance"
     },
     "id": "7C-DRAM_Fault_Classification_through_Large-Scale_Field_Monitoring_for_Robust_Memory",
     "locations": [],
+    "pages": "1448-1461",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7C: Reliability, Fault-tolerance"
     ],
@@ -3183,6 +4775,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756089",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3197,15 +4790,23 @@
       "Yaoyang Zhou",
       "Yungang Bao"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756108",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Reliability, Fault-tolerance"
     },
     "id": "7C-DiffTest-H_Toward_Semantic-Aware_Communication_in_Hardware-Accelerated_Processor",
     "locations": [],
+    "pages": "1462-1476",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7C: Reliability, Fault-tolerance"
     ],
@@ -3217,11 +4818,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756108",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Rowhammer is a critical vulnerability in dynamic random access memory (DRAM) that continues to pose a significant threat to various systems. However, we find that conventional load-based attacks are becoming highly ineffective on the most recent architectures such as Intel Alder and Raptor Lake. In this paper, we present $ρ$Hammer, a new Rowhammer framework that systematically overcomes three core challenges impeding attacks on these new architectures. First, we design an efficient and generic DRAM address mapping reverse-engineering method that uses selective pairwise measurements and structured deduction, enabling recovery of complex mappings within seconds on the latest memory controllers. Second, to break through the activation rate bottleneck of load-based hammering, we introduce a novel prefetch-based hammering paradigm that leverages the asynchronous nature of x86 prefetch instructions and is further enhanced by multi-bank parallelism to maximize throughput. Third, recognizing that speculative execution causes more severe disorder issues for prefetching, which cannot be simply mitigated by memory barriers, we develop a counter-speculation hammering technique using control-flow obfuscation and optimized NOP-based pseudo-barriers to maintain prefetch order with minimal overhead. Evaluations across four latest Intel architectures demonstrate $ρ$Hammer's breakthrough effectiveness: it induces up to 200K+ additional bit flips within 2-hour attack pattern fuzzing processes and has a 112x higher flip rate than the load-based hammering baselines on Comet and Rocket Lake. Also, we are the first to revive Rowhammer attacks on the latest Raptor Lake architecture, where baselines completely fail, achieving stable flip rates of 2,291/min and fast end-to-end exploitation.",
     "authorInstitutions": "Weijie Chen (Huazhong Univ. of Science and Technology); Shan Tang (Huazhong Univ. of Science and Technology); Yulin Tang (Huazhong Univ. of Science and Technology); Xiapu Luo (The Hong Kong Polytechnic Univ.); Yinqian Zhang (Southern Univ. of Science and Technology); Weizhong Qiang (Huazhong Univ. of Science and Technology)",
     "authors": [
       "Weijie Chen",
@@ -3231,15 +4833,43 @@
       "Yinqian Zhang",
       "Weizhong Qiang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756042",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2510.16544"
+      },
       "sessionTrack": "Reliability, Fault-tolerance"
     },
     "id": "7C-Hammer_Reviving_RowHammer_Attacks_on_New_Architectures_via_Prefetching",
+    "keywords": [
+      "Instruction prefetch",
+      "x86",
+      "Dram",
+      "Bottleneck",
+      "Overhead (engineering)",
+      "Microarchitecture",
+      "Vulnerability (computing)",
+      "Exploit",
+      "Microcode"
+    ],
     "locations": [],
+    "pages": "1433-1447",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2510.16544"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7C: Reliability, Fault-tolerance"
     ],
@@ -3251,7 +4881,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756042",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415954379"
     ]
   },
   {
@@ -3300,15 +4932,40 @@
       "Abdullah Giray Yaglikci",
       "Onur Mutlu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756029",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756029"
+      },
       "sessionTrack": "Reliability, Fault-tolerance"
     },
     "id": "7C-Understanding_and_Mitigating_Covert_and_Side_Channel_Vulnerabilities_Introduced",
+    "keywords": [
+      "Side channel attack",
+      "Channel (broadcasting)",
+      "Vulnerability (computing)",
+      "Covert",
+      "Covert channel",
+      "Countermeasure"
+    ],
     "locations": [],
+    "pages": "1412-1432",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756029"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7C: Reliability, Fault-tolerance"
     ],
@@ -3320,11 +4977,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756029",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293402"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Task Scheduling is a popular technique for exploiting parallelism in modern computing systems. In particular, HW-accelerated Task Scheduling has been shown to be effective at improving the performance of fine-grained workloads by dynamically assigning tasks to cores based on their data dependencies with minimal overhead, allowing the handling of tasks with execution times in the order of thousands of cycles. However, the performance of applications assisted by accelerated Task Scheduling is limited by the fact that once a task has all its dependencies fulfilled, it is typically executed on the first available core, which might not be locality-optimal. We thus propose a novel approach to Task Scheduling that leverages HW-accelerated Label Propagation (LP), a graph clustering algorithm, to group tasks with intersecting data patterns such that they are executed on the same core. We show that our approach can significantly improve the performance of task-based applications, improving overall program execution times by up to 1.50 × while simultaneously reducing average task sizes by up to 1.81 ×, augmenting both synthetic benchmarks and real-world applications running on a 24-core RISC-V processor mapped to the Alveo U55C FPGA. These gains rely heavily on the low-latency nature of our proposed label propagation accelerator, which will typically cluster dynamic task graphs in under 300 cycles, up to 581 × faster than an equivalent software implementation. Furthermore, by ensuring that ideal placement predictions are used as a hint rather than a hard constraint, we allow the system to benefit from improved data locality for memory-intensive applications while also maintaining high core utilization in compute-bound scenarios. Our results hence demonstrate the potential of HW-accelerated label propagation to improve the performance of Task Scheduling systems with low-latency, dynamic data locality optimization.",
     "authorInstitutions": "Lucas Morais (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Juan Miguel de Haro Ruiz (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Alfredo Goldman (Univ. of São Paulo); Guido Araujo (Univ. of Campinas); Giacomo Pedretti (HPE); Jim Ignowski (HPE); Michael Frank (MagiCore); Xavier Martorell (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Daniel Jiménez-González (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Carlos Álvarez (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya)",
     "authors": [
       "Lucas Morais",
@@ -3338,15 +4997,39 @@
       "Daniel Jiménez-González",
       "Carlos Álvarez"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756080",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://upcommons.upc.edu/bitstreams/c71378e0-2109-4e15-aa82-6c30cbeee28c/download"
+      },
       "sessionTrack": "Graph processing and HPC"
     },
     "id": "7D-Boosting_Task_Scheduling_Data_Locality_with_Low-latency_HW-accelerated_Label_Pro",
+    "keywords": [
+      "Boosting (machine learning)",
+      "Locality",
+      "Scheduling (production processes)",
+      "Task (project management)",
+      "Data modeling"
+    ],
     "locations": [],
+    "pages": "1549-1564",
+    "pdfUrls": [
+      "https://upcommons.upc.edu/bitstreams/c71378e0-2109-4e15-aa82-6c30cbeee28c/download"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7D: Graph processing and HPC"
     ],
@@ -3358,7 +5041,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756080",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285683"
     ]
   },
   {
@@ -3372,15 +5057,26 @@
       "Hongsun Jang",
       "Jinho Lee"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756127",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Graph processing and HPC"
     },
     "id": "7D-FALA_Locality-Aware_PIM-Host_Cooperation_for_Graph_Processing_with_Fine-Grained",
     "locations": [],
+    "pages": "1520-1534",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756127"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7D: Graph processing and HPC"
     ],
@@ -3392,6 +5088,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756127",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3406,15 +5103,38 @@
       "Fan Yao",
       "Hao Zheng"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756128",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Graph processing and HPC"
     },
     "id": "7D-Rethinking_Tiling_and_Dataflow_for_SpMM_Acceleration_A_Graph_Transformation_Fram",
+    "keywords": [
+      "Dataflow",
+      "Graph",
+      "Graph rewriting",
+      "Transformation (genetics)",
+      "Graph theory"
+    ],
     "locations": [],
+    "pages": "1535-1548",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756128"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7D: Graph processing and HPC"
     ],
@@ -3426,7 +5146,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756128",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309304"
     ]
   },
   {
@@ -3437,15 +5159,23 @@
       "J. Nelson Amaral",
       "Di Niu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756105",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Graph processing and HPC"
     },
     "id": "7D-TransFusion_End-to-End_Transformer_Acceleration_via_Graph_Fusion_and_Pipelining",
     "locations": [],
+    "pages": "1491-1504",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7D: Graph processing and HPC"
     ],
@@ -3457,6 +5187,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756105",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3470,15 +5201,35 @@
       "JIDONG ZHAI",
       "Xinyu Chen"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3756112",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Graph processing and HPC"
     },
     "id": "7D-X-SET_An_Efficient_Graph_Pattern_Matching_Accelerator_With_Order-Aware_Parallel",
+    "keywords": [
+      "Pattern matching",
+      "Graph",
+      "Intersection (aeronautics)",
+      "Matching (statistics)",
+      "Graph theory"
+    ],
     "locations": [],
+    "pages": "1505-1519",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7D: Graph processing and HPC"
     ],
@@ -3490,7 +5241,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756112",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308969"
     ]
   },
   {
@@ -3507,12 +5260,34 @@
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756044",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756044"
+      },
       "sessionTrack": "Systems for AI (Data Representations)"
     },
     "id": "8A-BitL_A_Hybrid_Bit-Serial_and_Parallel_Deep_Learning_Accelerator_for_Critical_Pat",
+    "keywords": [
+      "Deep learning",
+      "Critical path method",
+      "Reduction (mathematics)",
+      "Path (computing)",
+      "Artificial neural network",
+      "Parallel processing"
+    ],
     "locations": [],
+    "pages": "1565-1578",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756044"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 8A: Systems for AI (Data Representations)"
     ],
@@ -3524,7 +5299,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756044",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293798"
     ]
   },
   {
@@ -3559,7 +5336,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Large language models (LLMs) face significant inference latency due to inefficiencies in GEMM operations, weight access, and KV cache access, especially in real-time scenarios. This highlights the need for a versatile compute-memory efficient accelerator. Unfortunately, existing Transformer accelerators struggle to address both aspects simultaneously, as they focus on value-level processing, missing fine-grained opportunities to optimize computation and memory collaboratively. This paper introduces MCBP, a bit-grained compute-memory efficient algorithm-hardware co-design that leverages bit-slice (BS) enabled repetitiveness and sparsity to accelerate LLM inference. MCBP features three key innovations: 1) BS-repetitiveness-enabled computation reduction (BRCR), which eliminates redundant GEMM computations via leveraging redundancy hidden among BS vectors; 2) BS-sparsity-enabled two-state coding (BSTC), which reduces weight access via exploiting significant sparsity in high-order bit-slice weight; 3) Bit-grained progressive prediction (BGPP), which reduces KV cache access by leveraging early-termination-based bit-grained prediction. These techniques, supported by custom accelerator designs, effectively alleviate the burden in GEMM, weight access, and KV cache access. Extensive experiments on 26 benchmarks show that MCBP achieves 9.43x speed up and 31.1x higher energy efficiency than Nvidia A100 GPU. Compared to SOTA Transformer accelerators, MCBP achieves 35x, 5.2x and 3.2x energy saving than Spatten, FACT and SOFA, respectively.",
     "authorInstitutions": "Huizheng Wang (Tsinghua Univ.); Zichuan Wang (Tsinghua Univ.); Zhiheng Yue (Tsinghua Univ.); Yousheng Long (Tsinghua Univ.); Taiquan Wei (Tsinghua Univ.); Jianxun Yang (Tsinghua Univ.); Yang Wang (Tsinghua Univ.); Chao Li (Shanghai Jiao Tong Univ.); Shaojun Wei (Tsinghua Univ.); Yang Hu (Tsinghua Univ.); Shouyi Yin (Tsinghua Univ.)",
     "authors": [
       "Huizheng Wang",
@@ -3574,15 +5351,41 @@
       "Yang Hu",
       "Shouyi Yin"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756037",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2509.10372"
+      },
       "sessionTrack": "Systems for AI (Data Representations)"
     },
     "id": "8A-MCBP_A_Memory-Compute_Efficient_LLM_Inference_Accelerator_Leveraging_Bit-Slice-e",
+    "keywords": [
+      "Cache",
+      "Computation",
+      "Inference",
+      "Efficient energy use",
+      "Redundancy (engineering)",
+      "Transformer"
+    ],
     "locations": [],
+    "pages": "1592-1608",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756037",
+      "https://arxiv.org/pdf/2509.10372"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8A: Systems for AI (Data Representations)"
     ],
@@ -3594,7 +5397,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756037",
+      "https://microarch.org/micro58/program/index.php",
+      "http://arxiv.org/abs/2509.10372",
+      "https://openalex.org/W4414596626"
     ]
   },
   {
@@ -3615,15 +5421,23 @@
       "Xiaotian Wang",
       "Xi Jin"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756101",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (Processor architecture)"
     },
     "id": "8B-MHE-TPE_Multi-Operand_High-Radix_Encoder_for_Mixed-Precision_Fixed-Point_Tensor",
     "locations": [],
+    "pages": "1625-1639",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8B: Systems for AI (Processor architecture)"
     ],
@@ -3635,6 +5449,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756101",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3649,15 +5464,23 @@
       "Kang You",
       "Zhezhi He"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756066",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Systems for AI (Processor architecture)"
     },
     "id": "8B-PolymorPIC_Embedding_Polymorphic_Processing-in-Cache_in_RISC-V_based_Processor_f",
     "locations": [],
+    "pages": "1609-1624",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8B: Systems for AI (Processor architecture)"
     ],
@@ -3669,6 +5492,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756066",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3684,12 +5508,33 @@
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756085",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756085"
+      },
       "sessionTrack": "Systems for AI (Processor architecture)"
     },
     "id": "8B-SuperMesh_Energy-Efficient_Collective_Communications_for_Accelerators",
+    "keywords": [
+      "Communications satellite",
+      "Key (lock)",
+      "Communications system",
+      "Process (computing)",
+      "Work (physics)"
+    ],
     "locations": [],
+    "pages": "1640-1655",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756085"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 8B: Systems for AI (Processor architecture)"
     ],
@@ -3701,7 +5546,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756085",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309062"
     ]
   },
   {
@@ -3717,15 +5564,43 @@
       "Ang Li",
       "Tong Geng"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756082",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756082"
+      },
       "sessionTrack": "Emerging Applications - 1"
     },
     "id": "8C-DS-TIDE_Harnessing_Dynamical_Systems_for_Efficient_Time-Independent_Differential",
+    "keywords": [
+      "Dynamical systems theory",
+      "Differential equation",
+      "Projected dynamical system",
+      "Dynamical system (definition)",
+      "Work (physics)",
+      "Stability (learning theory)",
+      "Linear dynamical system",
+      "Sequence (biology)"
+    ],
     "locations": [],
+    "pages": "1690-1703",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756082",
+      "https://doi.org/10.1145/3725843.3756082"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8C: Emerging Applications - 1"
     ],
@@ -3737,7 +5612,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756082",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415309074"
     ]
   },
   {
@@ -3751,15 +5628,23 @@
       "Kenneth Shepard",
       "Luca Carloni"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756032",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Emerging Applications - 1"
     },
     "id": "8C-MINDFUL_Safe_Implantable_Large-Scale_Brain-Computer_Interfaces_from_a_System-Lev",
     "locations": [],
+    "pages": "1672-1689",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8C: Emerging Applications - 1"
     ],
@@ -3771,11 +5656,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756032",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Sequence alignment is a fundamental building block for critical applications across multiple fields, such as computational biology and information retrieval. The rapid advancement of genome sequencing technologies and breakthrough generative AI tools, like AlphaFold, has driven an exponential increase in sequence-data production, creating a pressing need for fast and efficient sequence alignment tools to analyze ever-growing biological sequence databases. Notwithstanding the numerous accelerators proposed, from general-purpose architectures (CPUs and GPUs) to domain-specific designs (FPGAs and ASICs), the most efficient solutions suffer from over-specialization and fail to adapt to the wide variety of irregular use cases demanded by practical sequence alignment applications. Thus, it remains a challenge to design an architecture that can balance efficiency and flexibility to meet the demands of real-world alignment applications. This work introduces SMX, a heterogeneous architecture designed for high-performance sequence alignment that supports various configurations for different sequence types (DNA, protein, and ASCII text) and alignment models (including weighted gaps and substitution matrices). SMX integrates an ISA extension (SMX-1D) for irregular and sequential tasks and a specialized coprocessor (SMX-2D) to accelerate regular and parallel tasks, both orchestrated by the general-purpose core to enable seamless integration with state-of-the-art sequence alignment algorithms. Our results demonstrate that SMX’s heterogeneous architecture accelerates different sequence alignment use cases by 256–744 × compared to state-of-the-art software implementations when aligning real datasets. Compared to specialized hardware accelerators, SMX delivers up to 18.5 × more peak performance per area added while providing greater flexibility to accelerate different use cases. Physical design results targeting a 22nm technology node estimate SMX’s area at 0.34mm2, which is only 30% of a single-issue in-order CPU. SMX offers a high-performance and efficient heterogeneous architecture for accelerating practical sequence alignment algorithms, providing a scalable and flexible solution tailored to meet the needs of modern sequence-analysis tools. Furthermore, an SMX case study explores the frontier between flexibility and efficiency in domain-specific architectures and accelerators.",
     "authorInstitutions": "Max Doblas Font (Barcelona Supercomputing Center); Po Jui Shih (Cornell Univ.); Oscar Lostes-Cazorla (Barcelona Supercomputing Center, Universitat Politecnica de Catalunya); Miquel Moreto (UPC/BSC); Christopher Batten (Cornell Univ.); Santiago Marco-Sola (Universitat Politecnica de Catalunya - Barcelona Supercomputing Center)",
     "authors": [
       "Max Doblas Font",
@@ -3785,15 +5671,43 @@
       "Christopher Batten",
       "Santiago Marco-Sola"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
+    "doi": "10.1145/3725843.3756018",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://hdl.handle.net/2117/454001"
+      },
       "sessionTrack": "Emerging Applications - 1"
     },
     "id": "8C-SMX_Heterogeneous_Architecture_for_Universal_Sequence_Alignment_Acceleration",
+    "keywords": [
+      "Sequence (biology)",
+      "Flexibility (engineering)",
+      "Block (permutation group theory)",
+      "Sequence alignment",
+      "Variety (cybernetics)",
+      "Alignment-free sequence analysis",
+      "Node (physics)",
+      "Architecture"
+    ],
     "locations": [],
+    "pages": "1656-1671",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756018",
+      "https://hdl.handle.net/2117/454001"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8C: Emerging Applications - 1"
     ],
@@ -3805,7 +5719,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756018",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285482"
     ]
   },
   {
@@ -3823,15 +5739,26 @@
       "Shoumeng Yan",
       "Mingzhe Zhang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756123",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
     },
     "id": "9A-HAWK_Fully_Homomorphic_Encryption_Accelerator_with_Fixed-Word_Key_Decomposition",
     "locations": [],
+    "pages": "1719-1734",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756123"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
@@ -3843,25 +5770,49 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756123",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Secure speculation schemes have shown great promise in the war against speculative side-channel attacks and will be a key building block for developing secure, high-performance architectures moving forward.As the field matures, the need for rigorous microarchitectures, and corresponding performance and cost analysis, become critical for evaluating secure schemes and for enabling their future adoption.In ShadowBinding, we present effective microarchitectures for two state-of-the-art secure schemes, uncovering and mitigating fundamental microarchitectural limitations within the analyzed schemes, and providing important design characteristics.We uncover that Speculative Taint Tracking's (STT's) rename-based taint computation must be completed in a single cycle, creating an expensive dependency chain that limits performance for wider processor cores.We also introduce a novel microarchitectural approach for STT, named STT-Issue, which, by delaying the taint computation to the issue stage, eliminates the dependency chain, achieving better instructions per cycle (IPC), timing, area, and performance results.Through a comprehensive evaluation of our STT and Non-Speculative Data Access (NDA) microarchitectural designs on the RISC-V Berkeley Out-of-Order Machine, we find that the IPC impact of in-core secure schemes is higher than previously estimated, close to 20% for the highest performance core.With insights into timing from our RTL evaluation, the performance loss, created by the combined impact of IPC and timing, becomes even greater, at 35%, 27%, and 22% for STT-Rename, STT-Issue, and NDA, respectively.If these trends were to hold for leading processor core designs, the performance impact would be well over 30%, even for the bestperforming scheme.Through these findings, research sentiments that Spectre can be solved by in-core secure schemes at low-performance costs are challenged.ShadowBinding serves as a call to arms for a more indepth evaluation of secure speculation schemes and further work on in-core methods and optimizations, which can help mitigate the high performance cost of current state-of-the-art schemes without requiring extensive and expensive modifications.",
     "authorInstitutions": "Amund Bergland Kvalsvik (Norwegian Univ. of Science and Technology); Magnus Själander (Norwegian Univ. of Science and Technology)",
     "authors": [
       "Amund Bergland Kvalsvik",
       "Magnus Själander"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756074",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756074"
+      },
       "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
     },
     "id": "9A-ShadowBinding_Realizing_Effective_Microarchitectures_for_In-Core_Secure_Speculat",
+    "keywords": [
+      "Speculation",
+      "Key (lock)",
+      "Scheme (mathematics)",
+      "Synchronization (alternating current)"
+    ],
     "locations": [],
+    "pages": "1735-1748",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756074"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
@@ -3873,7 +5824,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756074",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415308910"
     ]
   },
   {
@@ -3887,15 +5840,23 @@
       "Zhaoyan Shen",
       "Lei Ju"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756060",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
     },
     "id": "9A-SmartPIR_A_Private_Information_Retrieval_System_using_Computational_Storage_Devi",
     "locations": [],
+    "pages": "1749-1762",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
@@ -3907,11 +5868,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756060",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "Specialized hardware like application-specific integrated circuits (ASICs) remains the primary accelerator type for cryptographic kernels based on large integer arithmetic.Prior work has shown that commodity and server-class GPUs can achieve near-ASIC performance for these workloads.However, achieving comparable performance on CPUs remains an open challenge.This work investigates the following question: How can we narrow the performance gap between CPUs and specialized hardware for key cryptographic kernels like basic linear algebra subprograms (BLAS) operations and the number theoretic transform (NTT)?To this end, we develop an optimized scalar implementation of these kernels for x86 CPUs at the per-core level.We utilize SIMD instructions-specifically AVX2 and AVX-512-to further improve performance, achieving an average speedup of 38 times and 62 times over state-of-the-art CPU baselines for NTTs and BLAS operations, respectively.To narrow the gap further, we propose a small AVX-512 extension, dubbed multi-word extension (MQX), which delivers substantial speedup with only three new instructions and minimal proposed hardware modifications.MQX cuts the slowdown relative to ASICs to as low as 35 times on a single CPU core.Finally, we perform a roofline analysis to evaluate the peak performance achievable with MQX when scaled across an entire multi-core CPU.Our results show that, with MQX, top-tier servergrade CPUs can approach the performance of state-of-the-art ASICs for cryptographic workloads.",
     "authorInstitutions": "Naifeng Zhang (Carnegie Mellon Univ.); Sophia Fu (Carnegie Mellon Univ.); Franz Franchetti (Carnegie Mellon Univ.)",
     "authors": [
       "Naifeng Zhang",
@@ -3921,12 +5883,33 @@
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756120",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3725843.3756120"
+      },
       "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
     },
     "id": "9A-Towards_Closing_the_Performance_Gap_for_Cryptographic_Kernels_Between_CPUs_and_S",
+    "keywords": [
+      "Closing (real estate)",
+      "Cryptography",
+      "Key (lock)",
+      "Field-programmable gate array",
+      "Software"
+    ],
     "locations": [],
+    "pages": "1704-1718",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756120"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
@@ -3938,7 +5921,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756120",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285687"
     ]
   },
   {
@@ -3953,15 +5938,23 @@
       "Seunghak Lee",
       "Daehoon Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756063",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Memory"
     },
     "id": "9B-Beyond_Page_Migration_Enhancing_Tiered_Memory_Performance_via_Integrated_Last-Le",
     "locations": [],
+    "pages": "1763-1776",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9B: Memory"
     ],
@@ -3973,11 +5966,12 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756063",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "The irruption of chiplet-based architectures has been a game changer, enabling higher transistor integration and core counts in a single socket. However, chiplets impose higher and non-uniform memory access (NUMA) latencies than monolithic integration. This harms the efficiency of atomic memory operations (AMOs), which are fundamental to implementing fine-grained synchronization and concurrent data structures on large systems. AMOs are executed either near the core (near) or at a remote location within the cache hierarchy (far). On near AMOs, the core’s private cache fetches the target cache line in exclusiveness to modify it locally. Near AMOs cause significant data movement between private caches, especially harming parallel applications’ performance on chiplet-based architectures. Alternatively, far AMOs can alleviate the communication overhead by reducing data movement between processing elements. However, current multicore architectures only support one type of far AMO, which sends all updates to a single serialization point (centralized AMOs). This work introduces two new types of far AMOs, delegated and migrating, that execute AMOs remotely without centralizing updates in a single point of the cache hierarchy. Combining centralized, delegated, and migrating AMOs allows the directory to select the best location to execute AMOs. Moreover, we propose Delegato, a tracing optimization to effectively transport usage information from private caches to the directory to predict the best atomic type to issue accurately. Additionally, we design a simple predictor on top of Delegato that seamlessly selects the best placement to perform AMOs based on the data access pattern and usage activity of cores. Our evaluation using gem5 shows that Delegato can speed up applications on average by 1.07 × over centralized AMOs and by 1.13 × over the state-of-the-art AMO predictor.",
     "authorInstitutions": "Víctor Soria-Pardos (Barcelona Supercomputing Center (BSC)); Adrià Armejach (Universitat Politecnica de Catalunya (UPC) & Barcelona Supercomputing Center (BSC)); Tiago Mück (Arm); Darío Suárez (Universidad de Zaragoza); Jose Joao (Arm); Miquel Moretó (Universitat Politecnica de Catalunya (UPC) & Barcelona Supercomputing Center (BSC))",
     "authors": [
       "Víctor Soria-Pardos",
@@ -3990,12 +5984,37 @@
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756030",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://upcommons.upc.edu/bitstreams/11143a3e-c050-4d62-8e61-14d752987990/download"
+      },
       "sessionTrack": "Memory"
     },
     "id": "9B-Delegato_Locality-Aware_Atomic_Memory_Operations_on_Chiplets",
+    "keywords": [
+      "Cache",
+      "Memory hierarchy",
+      "Overhead (engineering)",
+      "Serialization",
+      "Directory",
+      "CPU cache",
+      "Synchronization (alternating current)",
+      "Multi-core processor",
+      "Cache pollution"
+    ],
     "locations": [],
+    "pages": "1793-1808",
+    "pdfUrls": [
+      "https://upcommons.upc.edu/bitstreams/11143a3e-c050-4d62-8e61-14d752987990/download"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 9B: Memory"
     ],
@@ -4007,7 +6026,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756030",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285682"
     ]
   },
   {
@@ -4023,15 +6044,40 @@
       "Andy Anderson",
       "Dimitrios Skarlatos"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756093",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756093"
+      },
       "sessionTrack": "Memory"
     },
     "id": "9B-Learning_to_Walk_Architecting_Learned_Virtual_Memory_Translation",
+    "keywords": [
+      "Translation (biology)",
+      "Feature (linguistics)",
+      "Virtual reality",
+      "Visualization",
+      "Key (lock)"
+    ],
     "locations": [],
+    "pages": "1777-1792",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756093",
+      "https://doi.org/10.1145/3725843.3756093"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9B: Memory"
     ],
@@ -4043,7 +6089,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756093",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415285485"
     ]
   },
   {
@@ -4058,15 +6106,23 @@
       "Saksham Agarwal",
       "Nam Sung Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756102",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Memory"
     },
     "id": "9B-Re-architecting_End-host_Networking_with_CXL_Coherence_Memory_and_Offloading",
     "locations": [],
+    "pages": "1809-1823",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9B: Memory"
     ],
@@ -4078,6 +6134,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756102",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -4098,12 +6155,28 @@
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756072",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      },
       "sessionTrack": "Emerging Applications - 2"
     },
     "id": "9C-GCC_A_3DGS_Inference_Architecture_with_Gaussian-Wise_and_Cross-Stage_Conditional",
+    "keywords": [
+      "Inference",
+      "Feature (linguistics)",
+      "Architecture",
+      "Pattern recognition (psychology)"
+    ],
     "locations": [],
+    "pages": "1824-1837",
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 9C: Emerging Applications - 2"
     ],
@@ -4115,7 +6188,9 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756072",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293928"
     ]
   },
   {
@@ -4156,7 +6231,7 @@
     ]
   },
   {
-    "abstract": "",
+    "abstract": "3D Gaussian Splatting (3DGS) has emerged as a promising approach for high-fidelity scene reconstruction and has been widely adopted in Simultaneous Localization and Mapping (SLAM) systems. 3DGS SLAM requires incremental training and rendering of Gaussians in real-time from continuous camera viewpoints. To match the streaming nature of SLAM, 3DGS-based mapping must sustain over 30 frames per second (FPS), which is a widely recognized threshold for maintaining accurate tracking and mapping quality. Existing GPU-based solutions and prior accelerators fall short of this target, primarily due to redundant training computation, unnecessary loss computing, and irregular memory access patterns. To address these challenges, we propose REACT3D, a real-time edge accelerator designed for incremental training in 3DGS SLAM systems. At the algorithmic level, we introduce spatial consistency and convergence aware sparsification, which eliminates redundant computation in both forward and backward rendering by predicting under-optimized regions based on spatial coherence and convergence dynamics. At the architectural level, we design a pixel block-wise fine-grained dataflow to eliminate explicit loss computing, establish a tightly coupled pipeline, and improve hardware utilization. Furthermore, we develop a Content Addressable Memory (CAM)-based Dual-index Gaussian Buffer to resolve discontinuous memory accesses and avoid computation conflicts during gradient merging. Experimental results show that REACT3D achieves 12.10 × performance and 33.69 × energy efficiency improvement over NVIDIA Jetson AGX Orin. To the best of our knowledge, REACT3D is the first hardware design that meets the real-time requirements of 3DGS SLAM on the edge.",
     "authorInstitutions": "Hongyi Wang (Tsinghua Univ.); Zhenhua Zhu (Tsinghua Univ.; HKUST); Tianchen Zhao (Tsinghua Univ.); Yunfei Xiang (Tsinghua Univ.); Zehao Wang (Tsinghua Univ.); Jincheng Yu (Tsinghua Univ.); Huazhong Yang (Tsinghua Univ.); Yuan Xie (HKUST); Yu Wang (Tsinghua Univ.)",
     "authors": [
       "Hongyi Wang",
@@ -4172,12 +6247,37 @@
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756109",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3725843.3756109"
+      },
       "sessionTrack": "Emerging Applications - 2"
     },
     "id": "9C-REACT3D_Real-time_Edge_Accelerator_for_Incremental_Training_in_3D_Gaussian_Splat",
+    "keywords": [
+      "Rendering (computer graphics)",
+      "Computation",
+      "Simultaneous localization and mapping",
+      "Dataflow",
+      "Gaussian",
+      "Overlay",
+      "Enhanced Data Rates for GSM Evolution",
+      "Convergence (economics)",
+      "Correctness"
+    ],
     "locations": [],
+    "pages": "1852-1866",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725843.3756109"
+    ],
+    "publicationDate": "2025-10-17",
     "sessionTitles": [
       "Session 9C: Emerging Applications - 2"
     ],
@@ -4189,11 +6289,13 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756109",
+      "https://microarch.org/micro58/program/index.php",
+      "https://openalex.org/W4415293807"
     ]
   },
   {
-    "abstract": "",
+    "abstract": "3D Gaussian Splatting (3DGS) based Simultaneous Localization and Mapping (SLAM) systems can largely benefit from 3DGS's state-of-the-art rendering efficiency and accuracy, but have not yet been adopted in resource-constrained edge devices due to insufficient speed. Addressing this, we identify notable redundancies across the SLAM pipeline for acceleration. While conceptually straightforward, practical approaches are required to minimize the overhead associated with identifying and eliminating these redundancies. In response, we propose RTGS, an algorithm-hardware co-design framework that comprehensively reduces the redundancies for real-time 3DGS-SLAM on edge. To minimize the overhead, RTGS fully leverages the characteristics of the 3DGS-SLAM pipeline. On the algorithm side, we introduce (1) an adaptive Gaussian pruning step to remove the redundant Gaussians by reusing gradients computed during backpropagation; and (2) a dynamic downsampling technique that directly reuses the keyframe identification and alpha computing steps to eliminate redundant pixels. On the hardware side, we propose (1) a subtile-level streaming strategy and a pixel-level pairwise scheduling strategy that mitigates workload imbalance via a Workload Scheduling Unit (WSU) guided by previous iteration information; (2) a Rendering and Backpropagation (R&amp;B) Buffer that accelerates the rendering backpropagation by reusing intermediate data computed during rendering; and (3) a Gradient Merging Unit (GMU) to reduce intensive memory accesses caused by atomic operations while enabling pipelined aggregation. Integrated into an edge GPU, RTGS achieves real-time performance (&gt;= 30 FPS) on four datasets and three algorithms, with up to 82.5x energy efficiency over the baseline and negligible quality loss. Code is available at https://github.com/UMN-ZhaoLab/RTGS.",
     "authorInstitutions": "Leshu LI (Univ. of Minnesota, Twin Cities); Jiayin Qin (Univ. of Minnesota, Twin Cities); Jie Peng (Univ. of North Carolina at Chapel Hill); Zishen Wan (Georgia Inst. of Technology); Huaizhi Qu (Univ. of North Carolina at Chapel Hill); Ye Han (Vanderbilt Univ.); Pingqing Zheng (Univ. of Minnesota, Twin Cities); Hongsen Zhang (Univ. of Minnesota, Twin Cities); Yu Cao (Univ. of Minnesota Twin Cities); Tianlong Chen (Univ. of North Carolina at Chapel Hill); Yang (Katie); Zhao (Univ. of Minnesota, Twin Cities)",
     "authors": [
       "Leshu LI",
@@ -4209,15 +6311,43 @@
       "Yang",
       "Zhao"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756099",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2510.06644"
+      },
       "sessionTrack": "Emerging Applications - 2"
     },
     "id": "9C-RTGS_Real-Time_3D_Gaussian_Splatting_SLAM_via_Multi-Level_Redundancy_Reduction",
+    "keywords": [
+      "Rendering (computer graphics)",
+      "Redundancy (engineering)",
+      "Backup",
+      "Reuse",
+      "Scheduling (production processes)",
+      "Gaussian",
+      "Edge device",
+      "Upsampling",
+      "Edge computing"
+    ],
     "locations": [],
+    "pages": "1838-1851",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2510.06644"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9C: Emerging Applications - 2"
     ],
@@ -4229,7 +6359,10 @@
       "Main Conference"
     ],
     "urls": [
-      "https://microarch.org/micro58/program/index.php"
+      "https://doi.org/10.1145/3725843.3756099",
+      "https://microarch.org/micro58/program/index.php",
+      "http://arxiv.org/abs/2510.06644",
+      "https://openalex.org/W4415097159"
     ]
   }
 ]
