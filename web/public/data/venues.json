@@ -1,6 +1,42 @@
 {
-  "generatedAt": "2026-06-07T17:43:39+00:00",
+  "generatedAt": "2026-06-08T06:33:38+00:00",
   "venues": [
+    {
+      "category": "Computer Architecture",
+      "count": 168,
+      "id": "asplos2026",
+      "kind": "conference",
+      "name": "ASPLOS 2026",
+      "series": "ASPLOS",
+      "year": 2026
+    },
+    {
+      "category": "Computer Architecture",
+      "count": 119,
+      "id": "hpca2026",
+      "kind": "conference",
+      "name": "HPCA 2026",
+      "series": "HPCA",
+      "year": 2026
+    },
+    {
+      "category": "Computer Architecture",
+      "count": 172,
+      "id": "isca2026",
+      "kind": "conference",
+      "name": "ISCA 2026",
+      "series": "ISCA",
+      "year": 2026
+    },
+    {
+      "category": "Computer Architecture",
+      "count": 123,
+      "id": "micro2025",
+      "kind": "conference",
+      "name": "MICRO 2025",
+      "series": "MICRO",
+      "year": 2025
+    },
     {
       "category": "EDA & Design Automation",
       "count": 543,

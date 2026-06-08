@@ -45,8 +45,9 @@ No accounts, no backend — your favorites and saved searches live in your brows
 
 ## Venues
 
-confer currently brings together conferences across EDA and software engineering —
-**DAC, DATE, ICSE, FSE, ASE, ISSTA, OOPSLA** — with more added purely through
+confer currently brings together conferences across EDA, computer architecture,
+software engineering, testing, and programming languages — **DAC, DATE, ASPLOS,
+HPCA, ISCA, MICRO, ICSE, FSE, ASE, ISSTA, OOPSLA** — with more added purely through
 configuration. Browse them all from the category sidebar.
 
 ## How it works
@@ -93,7 +94,8 @@ build — no Python at deploy time.
 ## Add a venue
 
 1. Add an entry to `config/venues.yaml` (fields are documented inline).
-2. Point its `scraper:` at a registered adapter (`dateconf`, `linklings`, `researchr`).
+2. Point its `scraper:` at a registered adapter (`dateconf`, `linklings`,
+   `researchr`, `sigarch`).
 3. `uv run confer build --venue <id>` and check `web/public/data/<id>.json`.
 
 To support a new platform, add an adapter under `scraper/src/confer/scrapers/` and

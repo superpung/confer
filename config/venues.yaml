@@ -10,7 +10,7 @@
 #   category  research area; the sidebar groups venues by this
 #   kind      conference | journal  (the sidebar splits these)
 #   year      integer (optional for journals)
-#   scraper   which adapter handles it; must be registered in scrapers/base.py
+#   scraper   which adapter handles it; must be registered in scrapers/__init__.py
 #   enabled   skip when false
 #   source    adapter-specific options
 
@@ -38,6 +38,58 @@ venues:
     enabled: true
     source:
       program_url: https://www.date-conference.com/programme
+
+  - id: asplos2026
+    name: ASPLOS 2026
+    series: ASPLOS
+    category: Computer Architecture
+    kind: conference
+    year: 2026
+    scraper: sigarch
+    enabled: true
+    source:
+      program_url: https://www.asplos-conference.org/asplos2026/program/index.html
+      default_track: Main Conference
+
+  - id: hpca2026
+    name: HPCA 2026
+    series: HPCA
+    category: Computer Architecture
+    kind: conference
+    year: 2026
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference
+      context: hpca-2026
+      default_event_type: Paper
+      require_authors: true
+      include_tracks:
+        - Main Conference
+
+  - id: isca2026
+    name: ISCA 2026
+    series: ISCA
+    category: Computer Architecture
+    kind: conference
+    year: 2026
+    scraper: sigarch
+    enabled: true
+    source:
+      program_url: https://iscaconf.org/isca2026/program/
+      default_track: Main Conference
+
+  - id: micro2025
+    name: MICRO 2025
+    series: MICRO
+    category: Computer Architecture
+    kind: conference
+    year: 2025
+    scraper: sigarch
+    enabled: true
+    source:
+      program_url: https://microarch.org/micro58/program/index.php
+      default_track: Main Conference
 
   - id: icse2026
     name: ICSE 2026

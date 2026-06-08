@@ -12,12 +12,14 @@ from .base import Scraper
 from .dateconf import DateConfScraper
 from .linklings import LinklingsScraper
 from .researchr import ResearchrScraper
+from .sigarch import SigarchScraper
 
 
 SCRAPERS: dict[str, type[Scraper]] = {
     DateConfScraper.name: DateConfScraper,
     LinklingsScraper.name: LinklingsScraper,
     ResearchrScraper.name: ResearchrScraper,
+    SigarchScraper.name: SigarchScraper,
 }
 
 

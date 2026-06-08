@@ -8,9 +8,9 @@ here; this is the canonical file.
 A pipeline that scrapes academic **conference / journal** programs and publishes a
 static, searchable website (Netlify) for browsing papers. Venues are configured in
 `config/venues.yaml`, scraped through pluggable adapters, normalized to one schema, and
-shown in a single site with a category **sidebar**. DAC 2026 and ICSE 2026 are
-the first enabled venues; additional Researchr venues are added by config +
-adapter, never by changing the site.
+shown in a single site with a category **sidebar**. Enabled venues now span EDA,
+computer architecture, software engineering, testing, and programming languages;
+new venues are added by config + adapter, never by changing the site.
 
 **Stack:** a **monorepo** — a **Python** scraper (`scraper/`, package `confer`) that
 emits unified JSON, consumed by an **Astro** static site (`web/`) that renders a single
@@ -54,6 +54,7 @@ scraper/               [now] Python project, package `confer`
       dateconf.py      [now] DATE official programme adapter
       linklings.py     [now] DAC (Linklings program) adapter
       researchr.py     [now] Researchr program / timeline / accepted-list adapter
+      sigarch.py       [now] SIGARCH-style static program adapter
       ...              [target] openreview.py, dblp.py, ieee.py, acm_dl.py
   tests/fixtures/      [now] small sample of cached pages for offline parse tests
 web/                   [now] Astro static site (Netlify)
@@ -126,7 +127,7 @@ file in `scrapers/` + one registry entry.** Do not branch on platform anywhere e
 
 ### How to add a scraper adapter
 1. Create `scraper/src/confer/scrapers/<platform>.py` implementing `Scraper`.
-2. Register it in `scrapers/base.py` `SCRAPERS`.
+2. Register it in `scrapers/__init__.py` `SCRAPERS`.
 3. Add a fixture (a cached page) under `scraper/tests/fixtures/` and a parse test.
 4. All output must already be normalized to the `Paper` schema — normalization lives
    in the adapter, not the site.
@@ -139,6 +140,8 @@ uv run confer list                       # show configured venues
 uv run confer build                       # all enabled venues → web/public/data/
 uv run confer build --venue dac2026       # a single venue
 uv run confer build --venue date2026      # DATE official programme venue
+uv run confer build --venue asplos2026    # SIGARCH-style static programme venue
+uv run confer build --venue hpca2026      # Researchr accepted-list venue
 uv run confer build --venue icse2026      # ICSE 2026 via Researchr
 uv run confer build --venue fse2026       # Researchr detailed timeline venue
 uv run confer build --refresh             # ignore cache, refetch over the network
@@ -197,6 +200,10 @@ npm run build                     # static build → web/dist/ (what Netlify pub
 6. **DATE 2026** — `dateconf` adapter parses the DATE official detailed programme,
    keeps downloadable paper rows, normalizes session metadata / author affiliations /
    PDF links, and publishes DATE 2026 alongside DAC.
+7. **Computer architecture venues** — `sigarch` adapter parses SIGARCH-style static
+   program pages with session metadata and author affiliations, including malformed
+   nested institution strings seen in live pages; publishes ASPLOS 2026, ISCA 2026,
+   and MICRO 2025. HPCA 2026 is published through the Researchr adapter.
 
 **Planned:**
 

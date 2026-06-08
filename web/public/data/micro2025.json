@@ -1,0 +1,4235 @@
+[
+  {
+    "abstract": "",
+    "authorInstitutions": "Tianhua Xia (New York Univ.); Sai Qian Zhang (New York Univ.)",
+    "authors": [
+      "Tianhua Xia",
+      "Sai Qian Zhang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 1"
+    },
+    "id": "1A-Kelle_Co-design_KV_Caching_and_eDRAM_for_Efficient_LLM_Serving_in_Edge_Computing",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1A: Systems for AI (LLMs) - 1"
+    ],
+    "sessions": [
+      "1A"
+    ],
+    "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Derrick Quinn (Cornell Univ.); E. Ezgi Yücel (Cornell Univ.); Jinkwon Kim (Cornell Univ.); José F. Martínez (Cornell Univ.); Mohammad Alian (Cornell Univ.)",
+    "authors": [
+      "Derrick Quinn",
+      "E. Ezgi Yücel",
+      "Jinkwon Kim",
+      "José F. Martínez",
+      "Mohammad Alian"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 1"
+    },
+    "id": "1A-LongSight_Compute-Enabled_Memory_to_Accelerate_Large-Context_LLMs_via_Sparse_Att",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1A: Systems for AI (LLMs) - 1"
+    ],
+    "sessions": [
+      "1A"
+    ],
+    "title": "LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yue Pan (Univ. of California, San Diego); Zihan Xia (Univ. of California, San Diego); Po-Kai Hsu (Georgia Inst. of Technology); Lanxiang Hu (Univ. of California, San Diego); Hyungyo Kim (Univ. of Illinois Urbana-Champaign); Janak Sharda (Georgia Inst. of Technology); Minxuan Zhou (Illinois Inst. of Technology); Nam Sung Kim (Univ. of Illinois at Urbana Champaign); Shimeng Yu (Georgia Inst. of Technology); Tajana Rosing (Univ. of California, San Diego); Mingu Kang (Univ. of California, San Diego)",
+    "authors": [
+      "Yue Pan",
+      "Zihan Xia",
+      "Po-Kai Hsu",
+      "Lanxiang Hu",
+      "Hyungyo Kim",
+      "Janak Sharda",
+      "Minxuan Zhou",
+      "Nam Sung Kim",
+      "Shimeng Yu",
+      "Tajana Rosing",
+      "Mingu Kang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 1"
+    },
+    "id": "1A-Stratum_System-Hardware_Co-design_with_Tiered_Monolithic_3D-DRAM_for_Efficient_M",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1A: Systems for AI (LLMs) - 1"
+    ],
+    "sessions": [
+      "1A"
+    ],
+    "title": "Stratum: System-Hardware Co-design with Tiered Monolithic 3D-DRAM for Efficient MoE Serving",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Zhiheng Yue (Tsinghua Univ.); Yang Wang (Tsinghua Univ.); Chao Li (Shanghai Jiao Tong Univ.); Shaojun Wei (Tsinghua Univ.); Yang Hu (Tsinghua Univ.); Shouyi Yin (Tsinghua Univ.)",
+    "authors": [
+      "Zhiheng Yue",
+      "Yang Wang",
+      "Chao Li",
+      "Shaojun Wei",
+      "Yang Hu",
+      "Shouyi Yin"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 1"
+    },
+    "id": "1B-3D-PATH_A_Hierarchy_LUT_Processing-in-memory_Accelerator_with_Thermal-aware_Hybr",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1B: Processing-In-Memory - 1"
+    ],
+    "sessions": [
+      "1B"
+    ],
+    "title": "3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Seunghyuk Yu (Inha Univ.); Hyeonu Kim (Inha Univ.); Kyoungho Jeun (Inha Univ.); Sunyoung Hwang (Inha Univ.); Seongmin Cho (Inha Univ.); Eojin Lee (Inha Univ.)",
+    "authors": [
+      "Seunghyuk Yu",
+      "Hyeonu Kim",
+      "Kyoungho Jeun",
+      "Sunyoung Hwang",
+      "Seongmin Cho",
+      "Eojin Lee"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 1"
+    },
+    "id": "1B-ComPASS_A_Compatible_PIM_Protocol_Architecture_and_Scheduling_Solution_for_Proce",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1B: Processing-In-Memory - 1"
+    ],
+    "sessions": [
+      "1B"
+    ],
+    "title": "ComPASS: A Compatible PIM Protocol Architecture and Scheduling Solution for Processor-PIM Collaboration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jeehyun Kim (Yonsei Univ.); Donghyeon Kim (Yonsei Univ.); Seokwon Kang (Yonsei Univ.); Bongjoon Hyun (KAIST); Inho Lee (Hanyang Univ.); Yongjun Park (Yonsei Univ.)",
+    "authors": [
+      "Jeehyun Kim",
+      "Donghyeon Kim",
+      "Seokwon Kang",
+      "Bongjoon Hyun",
+      "Inho Lee",
+      "Yongjun Park"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 1"
+    },
+    "id": "1B-PIM-CCA_An_Efficient_PIM_Architecture_with_Optimized_Integration_of_Configurable",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1B: Processing-In-Memory - 1"
+    ],
+    "sessions": [
+      "1B"
+    ],
+    "title": "PIM-CCA: An Efficient PIM Architecture with Optimized Integration of Configurable Functional Units",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Md Sadik Awal (Florida International Univ.); Md Tauhidur Rahman (Florida International Univ.)",
+    "authors": [
+      "Md Sadik Awal",
+      "Md Tauhidur Rahman"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Side Channels"
+    },
+    "id": "1C-DExiM_Exposing_Impedance-Based_Data_Leakage_in_Emerging_Memories",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1C: Security and Privacy - Side Channels"
+    ],
+    "sessions": [
+      "1C"
+    ],
+    "title": "DExiM: Exposing Impedance-Based Data Leakage in Emerging Memories",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Silvan Niederer (ETH Zürich); Sandro Rüegge (ETH Zürich); Ali Hajiabadi (ETH Zürich); Kaveh Razavi (ETH Zürich)",
+    "authors": [
+      "Silvan Niederer",
+      "Sandro Rüegge",
+      "Ali Hajiabadi",
+      "Kaveh Razavi"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Side Channels"
+    },
+    "id": "1C-One_Flew_over_the_Stack_Engine_s_Nest_Practical_Microarchitectural_Attacks_on_th",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1C: Security and Privacy - Side Channels"
+    ],
+    "sessions": [
+      "1C"
+    ],
+    "title": "One Flew over the Stack Engine’s Nest: Practical Microarchitectural Attacks on the Stack Engine",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Kanqi Zhang (Inst. of Information Engineering, Chinese Academy of Sciences); Peinan Li (Inst. of Information Engineering, Chinese Academy of Sciences); Miao Li (Inst. of Information Engineering, Chinese Academy of Sciences); Xin Tian (Inst. of Information Engineering, Chinese Academy of Sciences); Zelong Du (Inst. of Information Engineering, Chinese Academy of Sciences); Quachen Liu (Inst. of Information Engineering, Chinese Academy of Sciences); Yongqiang Lyu (Tsinghua Univ., Beijing, China); Yu Jiang (Tsinghua university); Dan Meng (Inst. of Information Engineering, CAS); Rui Hou (Inst. of Information Engineering, CAS)",
+    "authors": [
+      "Kanqi Zhang",
+      "Peinan Li",
+      "Miao Li",
+      "Xin Tian",
+      "Zelong Du",
+      "Quachen Liu",
+      "Yongqiang Lyu",
+      "Yu Jiang",
+      "Dan Meng",
+      "Rui Hou"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Side Channels"
+    },
+    "id": "1C-Sonar_A_Fuzzing_Framework_to_Uncover_Contention_Side_Channels_in_Processors",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1C: Security and Privacy - Side Channels"
+    ],
+    "sessions": [
+      "1C"
+    ],
+    "title": "Sonar: A Fuzzing Framework to Uncover Contention Side Channels in Processors",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ningzhi Ai (Huawei Technologies Co., Ltd, Tsinghua Univ.); Wenjian He (Huawei Technologies Co., Ltd); Hu He (Tsinghua Univ.); Jing Xia (Huawei Technologies Co., Ltd); Heng Liao (Huawei Technologies Co., Ltd); Guowei Zhang (Huawei Technologies Co., Ltd)",
+    "authors": [
+      "Ningzhi Ai",
+      "Wenjian He",
+      "Hu He",
+      "Jing Xia",
+      "Heng Liao",
+      "Guowei Zhang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture - Prefetching 1"
+    },
+    "id": "1D-RICH_Prefetcher_Storing_Rich_Information_in_Memory_to_Trade_Capacity_and_Bandwid",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1D: Microarchitecture - Prefetching 1"
+    ],
+    "sessions": [
+      "1D"
+    ],
+    "title": "RICH Prefetcher: Storing Rich Information in Memory to Trade Capacity and Bandwidth for Latency Hiding",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yanhua Chen (The Hong Kong Univ. of Science and Technology (Guangzhou)); Jiong Feng (The Hong Kong Univ. of Science and Technology (Guangzhou)); Zhe Wang (Intel Labs); Christopher J. Hughes (Intel); Jiayi Huang (HKUST(GZ))",
+    "authors": [
+      "Yanhua Chen",
+      "Jiong Feng",
+      "Zhe Wang",
+      "Christopher J. Hughes",
+      "Jiayi Huang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture - Prefetching 1"
+    },
+    "id": "1D-Software_Prefetch_Multicast_Sharer-Exposed_Prefetching_for_Bandwidth_Efficiency",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1D: Microarchitecture - Prefetching 1"
+    ],
+    "sessions": [
+      "1D"
+    ],
+    "title": "Software Prefetch Multicast: Sharer-Exposed Prefetching for Bandwidth Efficiency in Manycore Processors",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Gilead Posluns (Univ. of Toronto); Mark Jeffrey (Univ. of Toronto)",
+    "authors": [
+      "Gilead Posluns",
+      "Mark Jeffrey"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 9:50 AM KST – 10:50 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture - Prefetching 1"
+    },
+    "id": "1D-Symbiotic_Task_Scheduling_and_Data_Prefetching",
+    "locations": [],
+    "sessionTitles": [
+      "Session 1D: Microarchitecture - Prefetching 1"
+    ],
+    "sessions": [
+      "1D"
+    ],
+    "title": "Symbiotic Task Scheduling and Data Prefetching",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Nikoleta Iliakopoulou (Univ. of Illinois Urbana-Champaign); Jovan Stojkovic (Univ. of Illinois Urbana-Champaign); Chloe Alverti (Univ. of Illinois Urbana-Champaign); Tianyin Xu (Univ. of Illinois Urbana-Champaign); Hubertus Franke (IBM Research); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Nikoleta Iliakopoulou",
+      "Jovan Stojkovic",
+      "Chloe Alverti",
+      "Tianyin Xu",
+      "Hubertus Franke",
+      "Josep Torrellas"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 2"
+    },
+    "id": "2A-Chameleon_Adaptive_Caching_and_Scheduling_for_Many-Adapter_LLM_Inference_Environ",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2A: Systems for AI (LLMs) - 2"
+    ],
+    "sessions": [
+      "2A"
+    ],
+    "title": "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Donghyeon Joo (Univ. of Maryland, College Park); Helya Hosseini (Univ. of Maryland, College Park); Ramyad Hadidi (d-Matrix); Bahar Asgari (Univ. of Maryland, College Park)",
+    "authors": [
+      "Donghyeon Joo",
+      "Helya Hosseini",
+      "Ramyad Hadidi",
+      "Bahar Asgari"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 2"
+    },
+    "id": "2A-Coruscant_Co-Designing_GPU_Kernel_and_Sparse_Tensor_Core_to_Advocate_Unstructure",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2A: Systems for AI (LLMs) - 2"
+    ],
+    "sessions": [
+      "2A"
+    ],
+    "title": "Coruscant: Co-Designing GPU Kernel and Sparse Tensor Core to Advocate Unstructured Sparsity in Efficient LLM Inference",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Gerasimos Gerogiannis (Intel, Univ. of Illinois at Urbana-Champaign); Stijn Eyerman (Intel); Evangelos Georganas (Intel Labs); Wim Heirman (Intel); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Gerasimos Gerogiannis",
+      "Stijn Eyerman",
+      "Evangelos Georganas",
+      "Wim Heirman",
+      "Josep Torrellas"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 2"
+    },
+    "id": "2A-DECA_A_Near-Core_LLM_Decompression_Accelerator_Grounded_on_a_3D_Roofline_Model",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2A: Systems for AI (LLMs) - 2"
+    ],
+    "sessions": [
+      "2A"
+    ],
+    "title": "DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hanchen Ye (Inspirit IoT, Inc. and Univ. of Illinois Urbana-Champaign); Deming Chen (Inspirit IoT, Inc. and Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Hanchen Ye",
+      "Deming Chen"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (LLMs) - 2"
+    },
+    "id": "2A-StreamTensor_Make_Tensors_Stream_in_Dataflow_Accelerators_for_LLMs",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2A: Systems for AI (LLMs) - 2"
+    ],
+    "sessions": [
+      "2A"
+    ],
+    "title": "StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Je-Woo Jang (Yonsei Univ.); Junyong Oh (Yonsei Univ.); Youngbae Kong (Yonsei Univ.); Jae-Youn Hong (Yonsei Univ.); Sung-Hyuk Cho (Yonsei Univ.); Jeongyeol Lee (Yonsei Univ.); Hoeseok Yang (Santa Clara Univ.); Joon-Sung Yang (Yonsei Univ.)",
+    "authors": [
+      "Je-Woo Jang",
+      "Junyong Oh",
+      "Youngbae Kong",
+      "Jae-Youn Hong",
+      "Sung-Hyuk Cho",
+      "Jeongyeol Lee",
+      "Hoeseok Yang",
+      "Joon-Sung Yang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 2"
+    },
+    "id": "2B-Accelerating_Retrieval_Augmented_Language_Model_via_PIM_and_PNM_Integration",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2B: Processing-In-Memory - 2"
+    ],
+    "sessions": [
+      "2B"
+    ],
+    "title": "Accelerating Retrieval Augmented Language Model via PIM and PNM Integration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ruiyang Chen (Shanghai Jiao Tong Univ.); Zhuoran Song (Shanghai Jiao Tong Univ.); Yicheng Zheng (Shanghai Jiao Tong Univ.); Zeyu Zhu (Inst. of Automation, Chinese Academy of Sciences); Gang Li (Inst. of Automation, Chinese Academy of Sciences); Naifeng Jing (Shanghai Jiao Tong Univ.); Xiaoyao Liang (Shanghai Jiao Tong Univ.); Haibing Guan (Shanghai Jiao Tong Univ.)",
+    "authors": [
+      "Ruiyang Chen",
+      "Zhuoran Song",
+      "Yicheng Zheng",
+      "Zeyu Zhu",
+      "Gang Li",
+      "Naifeng Jing",
+      "Xiaoyao Liang",
+      "Haibing Guan"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 2"
+    },
+    "id": "2B-HEAT_NPU-NDP_HE_terogeneous_A_rchitecture_for_T_ransformer-Empowered_Graph_Neura",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2B: Processing-In-Memory - 2"
+    ],
+    "sessions": [
+      "2B"
+    ],
+    "title": "HEAT: NPU-NDP HE terogeneous A rchitecture for T ransformer-Empowered Graph Neural Networks",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Wonung Kim (KAIST); Yubin Lee (KAIST); Yoonsung Kim (KAIST); Jinwoo Hwang (KAIST); Seongryong Oh (KAIST); Jiyong Jung (KAIST); Aziz Huseynov (KAIST); Woong Gyu Park (KAIST); Chang Hyun Park (Uppsala Univ.); Divya Mahajan (Georgia Inst. of Technology); Jongse Park (KAIST)",
+    "authors": [
+      "Wonung Kim",
+      "Yubin Lee",
+      "Yoonsung Kim",
+      "Jinwoo Hwang",
+      "Seongryong Oh",
+      "Jiyong Jung",
+      "Aziz Huseynov",
+      "Woong Gyu Park",
+      "Chang Hyun Park",
+      "Divya Mahajan",
+      "Jongse Park"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 2"
+    },
+    "id": "2B-Pimba_A_Processing-in-Memory_Acceleration_for_Post-Transformer_Large_Language_Mo",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2B: Processing-In-Memory - 2"
+    ],
+    "sessions": [
+      "2B"
+    ],
+    "title": "Pimba: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Mohammadreza Saed (Univ. of British Columbia); Prashant J. Nair (Univ. of British Columbia); Tor M. Aamodt (Univ. of British Columbia)",
+    "authors": [
+      "Mohammadreza Saed",
+      "Prashant J. Nair",
+      "Tor M. Aamodt"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Processing-In-Memory - 2"
+    },
+    "id": "2B-RayN_Ray_Tracing_Acceleration_with_Near-memory_Computing",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2B: Processing-In-Memory - 2"
+    ],
+    "sessions": [
+      "2B"
+    ],
+    "title": "RayN: Ray Tracing Acceleration with Near-memory Computing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yinghao Yang (Inst. of Computing Technology, Chinese Academy of Sciences); Xicheng Xu (Inst. of Computing Technology, Chinese Academy of Sciences); Liang Chang (Univ. of Electronic Science and Technology of China); Hang Lu (Inst. of Computing Technology, Chinese Academy of Sciences); Xiaowei Li (Inst. of Computing Technology, Chinese Academy of Sciences)",
+    "authors": [
+      "Yinghao Yang",
+      "Xicheng Xu",
+      "Liang Chang",
+      "Hang Lu",
+      "Xiaowei Li"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Machine Learning"
+    },
+    "id": "2C-Athena_Accelerating_Quantized_Convolutional_Neural_Networks_under_Fully_Homomorp",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2C: Security and Privacy - Machine Learning"
+    ],
+    "sessions": [
+      "2C"
+    ],
+    "title": "Athena: Accelerating Quantized Convolutional Neural Networks under Fully Homomorphic Encryption",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Joshua Kalyanapu (North Carolina State Univ.); Farshad Dizani (North Carolina State Univ.); Darsh Asher (North Carolina State Univ.); Azam Ghanbari (North Carolina State Univ.); Rosario Cammarota (Intel); Aydin Aysu (North Carolina State Univ.); Samira Mirbagher (North Carolina State Univ.)",
+    "authors": [
+      "Joshua Kalyanapu",
+      "Farshad Dizani",
+      "Darsh Asher",
+      "Azam Ghanbari",
+      "Rosario Cammarota",
+      "Aydin Aysu",
+      "Samira Mirbagher"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Machine Learning"
+    },
+    "id": "2C-GateBleed_A_Timing-Only_Membership_Inference_Attack_MoE-Routing_Inference_and_a",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2C: Security and Privacy - Machine Learning"
+    ],
+    "sessions": [
+      "2C"
+    ],
+    "title": "GateBleed: A Timing-Only Membership Inference Attack, MoE-Routing Inference, and a Stealthy, Generic Magnifier Via Hardware Power Gating in AI Accelerators",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Chenqi Lin (School of Software & Microelectronics, Peking Univ.); Kang Yang (State Key Laboratory of Cryptology); Tianshi Xu (Peking Univ.); Ling Liang (DAMO Academy Alibaba Group, Peking Univ.); Yufei Wang (Alibaba Group); Zhaohui Chen (Computing Technology Lab, Alibaba Group); Runsheng Wang (Peking Univ.); Mingyu Gao (Tsinghua Univ.); Meng Li (Peking Univ.)",
+    "authors": [
+      "Chenqi Lin",
+      "Kang Yang",
+      "Tianshi Xu",
+      "Ling Liang",
+      "Yufei Wang",
+      "Zhaohui Chen",
+      "Runsheng Wang",
+      "Mingyu Gao",
+      "Meng Li"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Machine Learning"
+    },
+    "id": "2C-Ironman_Accelerating_Oblivious_Transfer_Extension_for_Privacy-Preserving_AI_with",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2C: Security and Privacy - Machine Learning"
+    ],
+    "sessions": [
+      "2C"
+    ],
+    "title": "Ironman: Accelerating Oblivious Transfer Extension for Privacy-Preserving AI with Near-Memory Processing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Chenxu Wang (Southern Univ. of Science and Technology (SUSTech) and The Hong Kong Polytechnic Univ.); Danqing Tang (Ant Group); Changxu Ci (Ant Group); Junjie Huang (Southern Univ. of Science and Technology (SUSTech)); Yankai Xu (Southern Univ. of Science and Technology (SUSTech)); Fengwei Zhang (Southern Univ. of Science and Technology (SUSTech)); Jiannong Cao (The Hong Kong Polytechnic Univ.); Jie Song (Ant Group); Shoumeng Yan (Ant Group); Tao Wei (Ant Group); Zhengyu He (Ant Group)",
+    "authors": [
+      "Chenxu Wang",
+      "Danqing Tang",
+      "Changxu Ci",
+      "Junjie Huang",
+      "Yankai Xu",
+      "Fengwei Zhang",
+      "Jiannong Cao",
+      "Jie Song",
+      "Shoumeng Yan",
+      "Tao Wei",
+      "Zhengyu He"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Machine Learning"
+    },
+    "id": "2C-ccAI_A_Compatible_and_Confidential_System_for_AI_Computing",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2C: Security and Privacy - Machine Learning"
+    ],
+    "sessions": [
+      "2C"
+    ],
+    "title": "ccAI: A Compatible and Confidential System for AI Computing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Rodrigo Huerta (Universitat Politecnica de Catalunya); Mojtaba Abaie Shoushtary (Universitat Politecnica de Catalunya); José-Lorenzo Cruz (Universitat Politecnica de Catalunya); Antonio Gonzalez (Universitat Politecnica de Catalunya)",
+    "authors": [
+      "Rodrigo Huerta",
+      "Mojtaba Abaie Shoushtary",
+      "José-Lorenzo Cruz",
+      "Antonio Gonzalez"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPU - 1"
+    },
+    "id": "2D-Dissecting_and_Modeling_the_Architecture_of_Modern_GPU_Cores",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2D: GPU - 1"
+    ],
+    "sessions": [
+      "2D"
+    ],
+    "title": "Dissecting and Modeling the Architecture of Modern GPU Cores",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Tianao Ge (Hong Kong Univ. of Science and Technology (Guangzhou)); Xiaowen Chu (Data Science and Analytics Thrust, HKUST(GZ)); Hongyuan Liu (Stevens Inst. of Technology)",
+    "authors": [
+      "Tianao Ge",
+      "Xiaowen Chu",
+      "Hongyuan Liu"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPU - 1"
+    },
+    "id": "2D-Interleaved_Bitstream_Execution_for_Multi-Pattern_Regex_Matching_on_GPUs",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2D: GPU - 1"
+    ],
+    "sessions": [
+      "2D"
+    ],
+    "title": "Interleaved Bitstream Execution for Multi-Pattern Regex Matching on GPUs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yeonan Ha (Yonsei Univ.); Jiho Park (Yonsei Univ.); Hanna Cha (Yonsei Univ.); Jiwon Lee (Yonsei Univ. / Samsung Electronics); Joonsung Kim (Sungkyunkwan Univ.); Won Woo Ro (Yonsei Univ.); Youngsok Kim (Yonsei Univ.)",
+    "authors": [
+      "Yeonan Ha",
+      "Jiho Park",
+      "Hanna Cha",
+      "Jiwon Lee",
+      "Joonsung Kim",
+      "Won Woo Ro",
+      "Youngsok Kim"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPU - 1"
+    },
+    "id": "2D-LATPC_Accelerating_GPU_Address_Translation_Using_Locality-Aware_TLB_Prefetching",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2D: GPU - 1"
+    ],
+    "sessions": [
+      "2D"
+    ],
+    "title": "LATPC: Accelerating GPU Address Translation Using Locality-Aware TLB Prefetching and MSHR Compression",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Sungbin Jang (Sungkyunkwan Univ.); Junhyeok Park (Sungkyunkwan Univ.); Yongho Lee (Sungkyunkwan Univ.); Osang Kwon (Sungkyunkwan Univ.); Donghyun Kim (Sungkyunkwan Univ.); Juyoung Seok (Sungkyunkwan Univ.); Seokin Hong (Sungkyunkwan Univ.)",
+    "authors": [
+      "Sungbin Jang",
+      "Junhyeok Park",
+      "Yongho Lee",
+      "Osang Kwon",
+      "Donghyun Kim",
+      "Juyoung Seok",
+      "Seokin Hong"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPU - 1"
+    },
+    "id": "2D-SoftWalker_Supporting_Software_Page_Table_Walk_for_Irregular_GPU_Applications",
+    "locations": [],
+    "sessionTitles": [
+      "Session 2D: GPU - 1"
+    ],
+    "sessions": [
+      "2D"
+    ],
+    "title": "SoftWalker: Supporting Software Page Table Walk for Irregular GPU Applications",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "In-Jun Jung (KAIST); Gyeongrok Yang (KAIST); Jaeha Min (KAIST); Joo-Young Kim (KAIST)",
+    "authors": [
+      "In-Jun Jung",
+      "Gyeongrok Yang",
+      "Jaeha Min",
+      "Joo-Young Kim"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Emerging Applications)"
+    },
+    "id": "3A-HLX_A_Unified_Pipelined_Architecture_for_Optimized_Performance_of_Hybrid_Transfo",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3A: Systems for AI (Emerging Applications)"
+    ],
+    "sessions": [
+      "3A"
+    ],
+    "title": "HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ceyu Xu (Duke Univ.); Yongji Wu (Duke Univ.); Xinyu Yang (Carnegie Mellon Univ.); Beidi Chen (Carnegie Mellon Univ.); Matthew Lentz (Duke Univ.); Danyang Zhuo (Duke Univ.); Lisa Wu Wills (Duke Univ.)",
+    "authors": [
+      "Ceyu Xu",
+      "Yongji Wu",
+      "Xinyu Yang",
+      "Beidi Chen",
+      "Matthew Lentz",
+      "Danyang Zhuo",
+      "Lisa Wu Wills"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Emerging Applications)"
+    },
+    "id": "3A-LLM.265_Video_Codecs_are_Secretly_Tensor_Codecs",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3A: Systems for AI (Emerging Applications)"
+    ],
+    "sessions": [
+      "3A"
+    ],
+    "title": "LLM.265: Video Codecs are Secretly Tensor Codecs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Sixu Li (Celine); Yuzhou Chen (Celine); Chaojian Li (Celine); Yonggan Fu (Celine); Zheng Wang (Celine); Zhongzhi Yu (Celine); Haoran You (Celine); Zhifan Ye (Celine); Wei Zhou (Celine); Yongan Zhang (Celine); Yingyan (Celine); Lin (Georgia Inst. of Technology)",
+    "authors": [
+      "Sixu Li",
+      "Yuzhou Chen",
+      "Chaojian Li",
+      "Yonggan Fu",
+      "Zheng Wang",
+      "Zhongzhi Yu",
+      "Haoran You",
+      "Zhifan Ye",
+      "Wei Zhou",
+      "Yongan Zhang",
+      "Yingyan",
+      "Lin"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Emerging Applications)"
+    },
+    "id": "3A-ORCHES_Orchestrated_Test-Time-Computation-based_LLM_Reasoning_on_Collaborative_G",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3A: Systems for AI (Emerging Applications)"
+    ],
+    "sessions": [
+      "3A"
+    ],
+    "title": "ORCHES: Orchestrated Test-Time-Computation-based LLM Reasoning on Collaborative GPU-PIM HEterogeneous System",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Zihan Zou (Southeast Univ.); Xinming Yan (Southeast Univ.); Shun Zhang (Southeast Univ.); Peng Zheng (Southeast Univ.); Guang Yang (Southeast Univ.); Hao Cai (Southeast Univ.); Bo Liu (Southeast Univ.)",
+    "authors": [
+      "Zihan Zou",
+      "Xinming Yan",
+      "Shun Zhang",
+      "Peng Zheng",
+      "Guang Yang",
+      "Hao Cai",
+      "Bo Liu"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Emerging Applications)"
+    },
+    "id": "3A-S-DMA_Sparse_Diffusion_Models_Acceleration_via_Spatiality-Aware_Prediction_and_D",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3A: Systems for AI (Emerging Applications)"
+    ],
+    "sessions": [
+      "3A"
+    ],
+    "title": "S-DMA: Sparse Diffusion Models Acceleration via Spatiality-Aware Prediction and Dimension-Adaptive Dataflow",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Henry Kao (Huawei Technologies Canada); Nikhil Sreekumar (Huawei Technologies Canada); Prabhdeep Singh Soni (Huawei Technologies Canada); Ali Sedaghati (Huawei Technologies Canada); Fang Su (Huawei); Bryan Chan (Huawei Technologies Canada); Maziar Goudarzi (Huawei Technologies 2012 Labs, Canada Research Center); Reza Azimi (Huawei)",
+    "authors": [
+      "Henry Kao",
+      "Nikhil Sreekumar",
+      "Prabhdeep Singh Soni",
+      "Ali Sedaghati",
+      "Fang Su",
+      "Bryan Chan",
+      "Maziar Goudarzi",
+      "Reza Azimi"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture I"
+    },
+    "id": "3B-A_TRRIP_Down_Memory_Lane_Temperature-Based_Re-Reference_Interval_Prediction_For",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3B: Microarchitecture I"
+    ],
+    "sessions": [
+      "3B"
+    ],
+    "title": "A TRRIP Down Memory Lane: Temperature-Based Re-Reference Interval Prediction For Instruction Caching",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Sweta (Indian Inst. of Technology Bombay); Prerna Priyadarshini (Indian Inst. of Technology Bombay); Biswabandan Panda (Indian Inst. of Technology Bombay)",
+    "authors": [
+      "Sweta",
+      "Prerna Priyadarshini",
+      "Biswabandan Panda"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture I"
+    },
+    "id": "3B-Drishti_Do_Not_Forget_Slicing_While_Designing_Last-Level_Cache_Replacement_Polic",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3B: Microarchitecture I"
+    ],
+    "sessions": [
+      "3B"
+    ],
+    "title": "Drishti: Do Not Forget Slicing While Designing Last-Level Cache Replacement Policies for Many-Core Systems",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Marton Erdos (Univ. of Cambridge); Utpal Bora (Univ. of Cambridge); Akshay Bhosale (Univ. of Cambridge); Bob Lytton (Arm); Ali Zaidi (Arm); Alexandra W Chadwick (Univ. of Cambridge); Yuxin Guo (Univ. of Cambridge); Giacomo Gabrielli (Arm); Timothy M Jones (Univ. of Cambridge)",
+    "authors": [
+      "Marton Erdos",
+      "Utpal Bora",
+      "Akshay Bhosale",
+      "Bob Lytton",
+      "Ali Zaidi",
+      "Alexandra W Chadwick",
+      "Yuxin Guo",
+      "Giacomo Gabrielli",
+      "Timothy M Jones"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture I"
+    },
+    "id": "3B-LoopFrog_In-Core_Hint-Based_Loop_Parallelization",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3B: Microarchitecture I"
+    ],
+    "sessions": [
+      "3B"
+    ],
+    "title": "LoopFrog: In-Core Hint-Based Loop Parallelization",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Qingxuan Kang (National Univ. of Singapore); Trevor E. Carlson (National Univ. of Singapore)",
+    "authors": [
+      "Qingxuan Kang",
+      "Trevor E. Carlson"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture I"
+    },
+    "id": "3B-Multi-Stream_Squash_Reuse_for_Control-Independent_Processors",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3B: Microarchitecture I"
+    ],
+    "sessions": [
+      "3B"
+    ],
+    "title": "Multi-Stream Squash Reuse for Control-Independent Processors",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Chaithanya Naik Mude (Univ. of Wisconsin-Madison); Swamit Tannu (Univ. of Wisconsin-Madison)",
+    "authors": [
+      "Chaithanya Naik Mude",
+      "Swamit Tannu"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 1"
+    },
+    "id": "3C-Accurate_Leakage_Speculation_for_Quantum_Error_Correction",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3C: Quantum - 1"
+    ],
+    "sessions": [
+      "3C"
+    ],
+    "title": "Accurate Leakage Speculation for Quantum Error Correction",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yilun Zhao (Inst. of Computing Technology, Chinese Academy of Sciences); Kangding Zhao (College of Computer Science and Technology, National Univ. of Defense Technology); Peng Zhou (China Greatwall Quantum Laboratory); Dingdong Liu (College of Computer Science and Technology, National Univ. of Defense Technology); Tingyu Luo (East China Normal Univ.); Yuzhen Zheng (College of Computer Science and Technology, National Univ. of Defense Technology); Peng Luo (College of Computer Science and Technology, National Univ. of Defense Technology); Shun Hu (College of Computer Science and Technology, National Univ. of Defense Technology); Jin Lin (Hefei National Laboratory, Univ. of Science and Technology of China); Cheng Guo (Hefei National Laboratory); Yinhe Han (ICT, Chinese Academy of Sciences); Ying Wang (Inst. of Computing Technology, Chinese Academy of Sciences); Mingtang Deng (College of Computer Science and Technology, National Univ. of Defense Technology); Junjie Wu (College of Computer Science and Technology, National Univ. of Defense Technology); Xiang Fu (College of Computer Science and Technology, National Univ. of Defense Technology)",
+    "authors": [
+      "Yilun Zhao",
+      "Kangding Zhao",
+      "Peng Zhou",
+      "Dingdong Liu",
+      "Tingyu Luo",
+      "Yuzhen Zheng",
+      "Peng Luo",
+      "Shun Hu",
+      "Jin Lin",
+      "Cheng Guo",
+      "Yinhe Han",
+      "Ying Wang",
+      "Mingtang Deng",
+      "Junjie Wu",
+      "Xiang Fu"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 1"
+    },
+    "id": "3C-Distributed-HISQ_A_Distributed_Quantum_Control_Architecture",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3C: Quantum - 1"
+    ],
+    "sessions": [
+      "3C"
+    ],
+    "title": "Distributed-HISQ: A Distributed Quantum Control Architecture",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Junpyo Kim (Seoul National Univ.); Jungmin Cho (Seoul National Univ.); Hyeonseong Jeong (Seoul National Univ.); Dongmoon Min (Sungkyunkwan Univ.); Junhyuk Choi (Seoul National Univ.); Juwon Hong (Seoul National Univ.); Jangwoo Kim (Seoul National Univ.)",
+    "authors": [
+      "Junpyo Kim",
+      "Jungmin Cho",
+      "Hyeonseong Jeong",
+      "Dongmoon Min",
+      "Junhyuk Choi",
+      "Juwon Hong",
+      "Jangwoo Kim"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 1"
+    },
+    "id": "3C-LANCER_Low-Overhead_Accurate_and_Non-Destructive_Calibration_for_Real-World_Faul",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3C: Quantum - 1"
+    ],
+    "sessions": [
+      "3C"
+    ],
+    "title": "LANCER: Low-Overhead, Accurate, and Non-Destructive Calibration for Real-World Fault-Tolerant Quantum Applications",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Wuwei Tian (Zhejiang Univ.); Liqiang Lu (Zhejiang Univ.); Siwei Tan (Zhejiang Univ.); Shiyu Li (Zhejiang Univ.); Hengyi Li (Zhejiang Univ.); Tianyao Chu (Zhejiang Univ.); Xuhong Zhang (Zhejiang Univ.); Mingshuai Chen (Zhejiang Univ.); Jianwei Yin (Zhejiang Univ.)",
+    "authors": [
+      "Wuwei Tian",
+      "Liqiang Lu",
+      "Siwei Tan",
+      "Shiyu Li",
+      "Hengyi Li",
+      "Tianyao Chu",
+      "Xuhong Zhang",
+      "Mingshuai Chen",
+      "Jianwei Yin"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 2:00 PM KST – 3:20 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 1"
+    },
+    "id": "3C-YOUTIAO_Hybrid_Multiplexing_with_Dynamic_Qubit_Grouping_for_Low-cost_and_Scalabl",
+    "locations": [],
+    "sessionTitles": [
+      "Session 3C: Quantum - 1"
+    ],
+    "sessions": [
+      "3C"
+    ],
+    "title": "YOUTIAO: Hybrid Multiplexing with Dynamic Qubit Grouping for Low-cost and Scalable Quantum Wiring",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Seokjin Go (Georgia Inst. of Technology); Joongun Park (Georgia Inst. of Technology); Spandan More (Georgia Inst. of Technology); Hanjiang Wu (Georgia Inst. of Technology); Irene Wang (Georgia Inst. of Technology); Aaron Jezghani (Georgia Inst. of Technology); Tushar Krishna (Georgia Inst. of Technology); Divya Mahajan (Georgia Inst. of Technology)",
+    "authors": [
+      "Seokjin Go",
+      "Joongun Park",
+      "Spandan More",
+      "Hanjiang Wu",
+      "Irene Wang",
+      "Aaron Jezghani",
+      "Tushar Krishna",
+      "Divya Mahajan"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Training)"
+    },
+    "id": "4A-Characterizing_the_Efficiency_of_Distributed_Training_A_Power_Performance_and_Th",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4A: Systems for AI (Training)"
+    ],
+    "sessions": [
+      "4A"
+    ],
+    "title": "Characterizing the Efficiency of Distributed Training: A Power, Performance, and Thermal Perspective",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jinghan Huang (Univ. of Illinois Urbana-Champaign); Hyungyo Kim (Univ. of Illinois Urbana-Champaign); Nachuan Wang (Univ. of Illinois Urbana-Champaign); Jaeyoung Kang (Univ. of Illinois Urbana-Champaign); Hrishi Shah (Univ. of Illinois Urbana-Champaign); Eun Kyung Lee (IBM Research); Minjia Zhang (Univ. of Illinois Urbana-Champaign); Fan Lai (Univ. of Illinois Urbana-Champaign); Nam Sung Kim (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Jinghan Huang",
+      "Hyungyo Kim",
+      "Nachuan Wang",
+      "Jaeyoung Kang",
+      "Hrishi Shah",
+      "Eun Kyung Lee",
+      "Minjia Zhang",
+      "Fan Lai",
+      "Nam Sung Kim"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Training)"
+    },
+    "id": "4A-NetZIP_Algorithm_Hardware_Co-design_of_In-network_Lossless_Compression_for_Distr",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4A: Systems for AI (Training)"
+    ],
+    "sessions": [
+      "4A"
+    ],
+    "title": "NetZIP: Algorithm/Hardware Co-design of In-network Lossless Compression for Distributed Large Model Training",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Le Qin (The Hong Kong Univ. of Science and Technology (Guangzhou)); Junwei Cui (The Hong Kong Univ. of Science and Technology (Guangzhou)); Weilin Cai (The Hong Kong Univ. of Science and Technology (Guangzhou)); Meng Niu (Huawei); Yan Yang (Huawei); Jiayi Huang (HKUST(GZ))",
+    "authors": [
+      "Le Qin",
+      "Junwei Cui",
+      "Weilin Cai",
+      "Meng Niu",
+      "Yan Yang",
+      "Jiayi Huang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Training)"
+    },
+    "id": "4A-Optimizing_All-to-All_Collective_Communication_with_Fault_Tolerance_on_Torus_Net",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4A: Systems for AI (Training)"
+    ],
+    "sessions": [
+      "4A"
+    ],
+    "title": "Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hans Kasan (KAIST); Dennis Abts (NVIDIA); Jungwook Choi (Hanyang Univ.); John Kim (KAIST)",
+    "authors": [
+      "Hans Kasan",
+      "Dennis Abts",
+      "Jungwook Choi",
+      "John Kim"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Training)"
+    },
+    "id": "4A-SkipReduce_Interconnection_Network_Sparsity_to_Accelerate_Distributed_Machine_Le",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4A: Systems for AI (Training)"
+    ],
+    "sessions": [
+      "4A"
+    ],
+    "title": "SkipReduce: (Interconnection) Network Sparsity to Accelerate Distributed Machine Learning",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yinyuan Zhao (Univ. of California, Santa Cruz); Surim Oh (Univ. of California, Santa Cruz); Mingsheng Xu (Univ. of California, Santa Cruz); Heiner Litz (Univ. of California, Santa Cruz)",
+    "authors": [
+      "Yinyuan Zhao",
+      "Surim Oh",
+      "Mingsheng Xu",
+      "Heiner Litz"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture II"
+    },
+    "id": "4B-ATR_Out-of-Order_Register_Release_Exploiting_Atomic_Regions",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4B: Microarchitecture II"
+    ],
+    "sessions": [
+      "4B"
+    ],
+    "title": "ATR: Out-of-Order Register Release Exploiting Atomic Regions",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ishita Chaturvedi (Princeton Univ.); Bhargav Reddy Godala (AheadComputing); Abiram Gangavaram (Princeton Univ.); Daniel Flyer (Princeton Univ.); Tyler Sorensen (UC Santa Cruz and Microsoft); Tor M. Aamodt (Univ. of British Columbia); David I. August (Princeton Univ.)",
+    "authors": [
+      "Ishita Chaturvedi",
+      "Bhargav Reddy Godala",
+      "Abiram Gangavaram",
+      "Daniel Flyer",
+      "Tyler Sorensen",
+      "Tor M. Aamodt",
+      "David I. August"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture II"
+    },
+    "id": "4B-SHADOW_Simultaneous_Multi-Threading_Architecture_with_Asymmetric_Threads",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4B: Microarchitecture II"
+    ],
+    "sessions": [
+      "4B"
+    ],
+    "title": "SHADOW: Simultaneous Multi-Threading Architecture with Asymmetric Threads",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jiuyang Liu (Huazhong Univ. of Science and Technology); Qinjun Li (Inst. of Software, Chinese Academy of Sciences); Yunqian Luo (Tsinghua Univ.); Hongbin Zhang (Inst. of Software, Chinese Academy of Sciences; Univ. of Chinese Academy of Sciences); Jiongjia Lu (Henan Academy of Sciences); Shupei Fan (Tsinghua Univ.); Jianhao Ye (Univ. of Chinese Academy of Sciences); Xiaoyi Liu (Tsinghua Univ.); Ao Shen (Tsinghua Univ.); Yang Liu (Inst. of Software, Chinese Academy of Sciences); Yanqi Yang (Huazhong Univ. of Science and Technology); Zewen Ye (Zhejiang Univ.); Yuhang Zeng (Wuhan Xinpian Technology Co., Ltd.); Rui Huang (Wuhan Xinpian Technology Co., Ltd.); Mingyu Gao (Tsinghua Univ.); Xuecheng Zou (Henan Academy of Sciences); Wei Cong (Nanjing UCUN Technology Inc)",
+    "authors": [
+      "Jiuyang Liu",
+      "Qinjun Li",
+      "Yunqian Luo",
+      "Hongbin Zhang",
+      "Jiongjia Lu",
+      "Shupei Fan",
+      "Jianhao Ye",
+      "Xiaoyi Liu",
+      "Ao Shen",
+      "Yang Liu",
+      "Yanqi Yang",
+      "Zewen Ye",
+      "Yuhang Zeng",
+      "Rui Huang",
+      "Mingyu Gao",
+      "Xuecheng Zou",
+      "Wei Cong"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture II"
+    },
+    "id": "4B-Titan-I_An_Open-Source_High_Performance_RISC-V_Vector_Core",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4B: Microarchitecture II"
+    ],
+    "sessions": [
+      "4B"
+    ],
+    "title": "Titan-I: An Open-Source, High Performance RISC-V Vector Core",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Xian Wu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Chenghong Zhu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Jingbo Wang (Beijing Academy of Quantum Information Sciences); Xin Wang (The Hong Kong Univ. of Science and Technology (Guangzhou))",
+    "authors": [
+      "Xian Wu",
+      "Chenghong Zhu",
+      "Jingbo Wang",
+      "Xin Wang"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 2"
+    },
+    "id": "4C-MUSS-TI_Multi-level_Shuttle_Scheduling_for_Large-Scale_Entanglement_Module_Linke",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4C: Quantum - 2"
+    ],
+    "sessions": [
+      "4C"
+    ],
+    "title": "MUSS-TI: Multi-level Shuttle Scheduling for Large-Scale Entanglement Module Linked Trapped-Ion",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Qifan Jiang (Zhejiang Univ.); Liqiang Lu (Zhejiang Univ.); Debin Xiang (Zhejiang Univ.); Tianyao Chu (Zhejiang Univ.); Tianze Zhu (Zhejiang Univ.); Jingwen Leng (Shanghai Jiao Tong Univ.); Yun (Eric); Liang (Peking Univ.); Xiaoming Sun (Inst. of Computing Technology, Chinese Academy of Sciences); Jianwei Yin (Zhejiang Univ.)",
+    "authors": [
+      "Qifan Jiang",
+      "Liqiang Lu",
+      "Debin Xiang",
+      "Tianyao Chu",
+      "Tianze Zhu",
+      "Jingwen Leng",
+      "Yun",
+      "Liang",
+      "Xiaoming Sun",
+      "Jianwei Yin"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 2"
+    },
+    "id": "4C-Rasengan_A_Transition_Hamiltonian-based_Approximation_Algorithm_for_Solving_Cons",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4C: Quantum - 2"
+    ],
+    "sessions": [
+      "4C"
+    ],
+    "title": "Rasengan: A Transition Hamiltonian-based Approximation Algorithm for Solving Constrained Binary Optimization Problems",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hezi Zhang (Univ. of California San Diego); Jixuan Ruan (Univ. of California San Diego); Dean Tullsen (Univ. of California San Diego); Yufei Ding (Univ. of California San Diego); Ang Li (PNNL and UW); Travis Humble (Quantum Science Center, Oak Ridge National Laboratory)",
+    "authors": [
+      "Hezi Zhang",
+      "Jixuan Ruan",
+      "Dean Tullsen",
+      "Yufei Ding",
+      "Ang Li",
+      "Travis Humble"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 2"
+    },
+    "id": "4C-Resource-adaptive_Compilation_of_Photonic_One-way_Quantum_Computing",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4C: Quantum - 2"
+    ],
+    "sessions": [
+      "4C"
+    ],
+    "title": "Resource-adaptive Compilation of Photonic One-way Quantum Computing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Kaiwen Zhou (Zhejiang Univ.); Liqiang Lu (Zhejiang Univ.); Debin Xiang (Zhejiang Univ.); Chenning Tao (Zhejiang Univ.); Anbang Wu (Shanghai Jiao Tong Univ.); Jingwen Leng (Shanghai Jiao Tong Univ.); Fangxin Liu (Shanghai Jiao Tong Univ.); Mingshuai Chen (Zhejiang Univ.); Jianwei Yin (Zhejiang Univ.)",
+    "authors": [
+      "Kaiwen Zhou",
+      "Liqiang Lu",
+      "Debin Xiang",
+      "Chenning Tao",
+      "Anbang Wu",
+      "Jingwen Leng",
+      "Fangxin Liu",
+      "Mingshuai Chen",
+      "Jianwei Yin"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Quantum - 2"
+    },
+    "id": "4C-Vegapunk_Accurate_and_Fast_Decoding_for_Quantum_LDPC_Codes_with_Online_Hierarchi",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4C: Quantum - 2"
+    ],
+    "sessions": [
+      "4C"
+    ],
+    "title": "Vegapunk: Accurate and Fast Decoding for Quantum LDPC Codes with Online Hierarchical Algorithm and Sparse Accelerator",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ritvik Sharma (Stanford Univ.); Fisher Xue (Massachusetts Inst. of Technology); Nathan Zhang (Stanford Univ.); Rubens Lacouture (Stanford Univ.); Fredrik Kjolstad (Stanford Univ.); Sara Achour (Stanford Univ.); Mark Horowitz (Stanford Univ.)",
+    "authors": [
+      "Ritvik Sharma",
+      "Fisher Xue",
+      "Nathan Zhang",
+      "Rubens Lacouture",
+      "Fredrik Kjolstad",
+      "Sara Achour",
+      "Mark Horowitz"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 1"
+    },
+    "id": "4D-A_Probabilistic_Perspective_on_Tiling_Sparse_Tensor_Algebra",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4D: Sparsity - 1"
+    ],
+    "sessions": [
+      "4D"
+    ],
+    "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Sanjali Yadav (Univ. of Maryland); Bahar Asgari (Univ. of Maryland, College Park)",
+    "authors": [
+      "Sanjali Yadav",
+      "Bahar Asgari"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 1"
+    },
+    "id": "4D-Bo_tes_Boosting_the_Efficiency_of_Sparse_Accelerators_Using_Spectral_Clustering",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4D: Sparsity - 1"
+    ],
+    "sessions": [
+      "4D"
+    ],
+    "title": "Boötes: Boosting the Efficiency of Sparse Accelerators Using Spectral Clustering",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ubaid Bakhtiar (Univ. of Maryland-College Park); Amirmahdi Namjoo (Univ. of Maryland-College Park); Bahar Asgari (Univ. of Maryland, College Park)",
+    "authors": [
+      "Ubaid Bakhtiar",
+      "Amirmahdi Namjoo",
+      "Bahar Asgari"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 1"
+    },
+    "id": "4D-Chaso_Supporting_Cross_HBM_Channel_Data_Migration_to_Enable_Efficient_Sparse_Alg",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4D: Sparsity - 1"
+    ],
+    "sessions": [
+      "4D"
+    ],
+    "title": "Chasoň: Supporting Cross HBM Channel Data Migration to Enable Efficient Sparse Algebraic Acceleration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Sanjali Yadav (Univ. of Maryland); Amirmehdi Namjoo (Univ. of Maryland-College Park); Bahar Asgari (Univ. of Maryland, College Park)",
+    "authors": [
+      "Sanjali Yadav",
+      "Amirmehdi Namjoo",
+      "Bahar Asgari"
+    ],
+    "dates": [
+      "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 1"
+    },
+    "id": "4D-Misam_Machine_Learning_Assisted_Dataflow_Selection_in_Accelerators_for_Sparse_Ma",
+    "locations": [],
+    "sessionTitles": [
+      "Session 4D: Sparsity - 1"
+    ],
+    "sessions": [
+      "4D"
+    ],
+    "title": "Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Xilong Xie (Beihang Univ.); Liang Wang (Beihang Univ.); Limin Xiao (Beihang Univ.); Meng Han (Tsinghua Univ.); Lei Liu (Beihang Univ.); Xiangrong Xu (Beihang Univ.); Jinquan Wang (Beihang Univ.); Zhen Song (Beihang Univ.); Xiaojian Liao (Beihang Univ.)",
+    "authors": [
+      "Xilong Xie",
+      "Liang Wang",
+      "Limin Xiao",
+      "Meng Han",
+      "Lei Liu",
+      "Xiangrong Xu",
+      "Jinquan Wang",
+      "Zhen Song",
+      "Xiaojian Liao"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Quantization)"
+    },
+    "id": "5A-Amove_Accelerating_LLMs_through_Mitigating_Outliers_and_Salient_Points_via_Fine-",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5A: Systems for AI (Quantization)"
+    ],
+    "sessions": [
+      "5A"
+    ],
+    "title": "Amove: Accelerating LLMs through Mitigating Outliers and Salient Points via Fine-Grained Grouped Vectorized Data Type",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jiaxiang Zou (The Hong Kong Univ. of Science and Technology (Guangzhou)); Yonghao Chen (The Hong Kong Univ. of Science and Technology (Guangzhou)); Xingyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou)); Chenxi Xu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Xinyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou))",
+    "authors": [
+      "Jiaxiang Zou",
+      "Yonghao Chen",
+      "Xingyu Chen",
+      "Chenxi Xu",
+      "Xinyu Chen"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Quantization)"
+    },
+    "id": "5A-AxCore_A_Quantization-Aware_Approximate_GEMM_Unit_for_LLM_Inference",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5A: Systems for AI (Quantization)"
+    ],
+    "sessions": [
+      "5A"
+    ],
+    "title": "AxCore: A Quantization-Aware Approximate GEMM Unit for LLM Inference",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jungi Lee (Seoul National Univ.); Junyong Park (Seoul National Univ.); Soohyun Cha (Seoul National Univ.); Jaehoon Cho (Seoul National Univ.); Jaewoong Sim (Seoul National Univ.)",
+    "authors": [
+      "Jungi Lee",
+      "Junyong Park",
+      "Soohyun Cha",
+      "Jaehoon Cho",
+      "Jaewoong Sim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Quantization)"
+    },
+    "id": "5A-MX_Pushing_the_Limits_of_Microscaling_Formats_for_Efficient_Large_Language_Model",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5A: Systems for AI (Quantization)"
+    ],
+    "sessions": [
+      "5A"
+    ],
+    "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Shuiyi He (National Univ. of Defense Technology); Zicong Wang (National Univ. of Defense Technology); Xuan Tang (National Univ. of Defense Technology); Hao Tang (National Univ. of Defense Technology); Dezun Dong (NUDT); Liquan Xiao (National Univ. of Defense Technology)",
+    "authors": [
+      "Shuiyi He",
+      "Zicong Wang",
+      "Xuan Tang",
+      "Hao Tang",
+      "Dezun Dong",
+      "Liquan Xiao"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture - Prefetching 2"
+    },
+    "id": "5B-Elevating_Temporal_Prefetching_Through_Instruction_Correlation",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5B: Microarchitecture - Prefetching 2"
+    ],
+    "sessions": [
+      "5B"
+    ],
+    "title": "Elevating Temporal Prefetching Through Instruction Correlation",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yuxin Guo (Univ. of Cambridge); Alexandra W. Chadwick (Univ. of Cambridge); Márton Erdös (Univ. of Cambridge); Utpal Bora (Univ. of Cambridge); Akshay Bhosale (Univ. of Cambridge); Giacomo Gabrielli (Arm); Timothy M. Jones (Univ. of Cambridge)",
+    "authors": [
+      "Yuxin Guo",
+      "Alexandra W. Chadwick",
+      "Márton Erdös",
+      "Utpal Bora",
+      "Akshay Bhosale",
+      "Giacomo Gabrielli",
+      "Timothy M. Jones"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture - Prefetching 2"
+    },
+    "id": "5B-Ghost_Threading_Helper-Thread_Prefetching_for_Real_Systems",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5B: Microarchitecture - Prefetching 2"
+    ],
+    "sessions": [
+      "5B"
+    ],
+    "title": "Ghost Threading: Helper-Thread Prefetching for Real Systems",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Charles Block (Univ. of Illinois Urbana-Champaign); Gerasimos Gerogiannis (Univ. of Illinois Urbana-Champaign); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Charles Block",
+      "Gerasimos Gerogiannis",
+      "Josep Torrellas"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Microarchitecture - Prefetching 2"
+    },
+    "id": "5B-Micro-MAMA_Multi-Agent_Reinforcement_Learning_for_Multicore_Prefetching",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5B: Microarchitecture - Prefetching 2"
+    ],
+    "sessions": [
+      "5B"
+    ],
+    "title": "Micro-MAMA: Multi-Agent Reinforcement Learning for Multicore Prefetching",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Gerasimos Gerogiannis (Univ. of Illinois Urbana-Champaign); Dimitrios Merkouriadis (Univ. of Illinois Urbana-Champaign); Charles Block (Univ. of Illinois Urbana-Champaign); Annus Zulfiqar (Univ. of Michigan); Filippos Tofalos (Univ. of Illinois Urbana-Champaign); Muhammad Shahbaz (Univ. of Michigan); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Gerasimos Gerogiannis",
+      "Dimitrios Merkouriadis",
+      "Charles Block",
+      "Annus Zulfiqar",
+      "Filippos Tofalos",
+      "Muhammad Shahbaz",
+      "Josep Torrellas"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 2"
+    },
+    "id": "5C-NetSparse_In-Network_Acceleration_of_Distributed_Sparse_Kernels",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5C: Sparsity - 2"
+    ],
+    "sessions": [
+      "5C"
+    ],
+    "title": "NetSparse: In-Network Acceleration of Distributed Sparse Kernels",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Courtney Golden (Massachusetts Inst. of Technology); Axel Feldmann (Massachusetts Inst. of Technology); Joel Emer (MIT/NVIDIA); Daniel Sanchez (Massachusetts Inst. of Technology)",
+    "authors": [
+      "Courtney Golden",
+      "Axel Feldmann",
+      "Joel Emer",
+      "Daniel Sanchez"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 2"
+    },
+    "id": "5C-Quartz_A_Reconfigurable_Distributed_Memory_Accelerator_for_Sparse_Applications",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5C: Sparsity - 2"
+    ],
+    "sessions": [
+      "5C"
+    ],
+    "title": "Quartz: A Reconfigurable, Distributed Memory Accelerator for Sparse Applications",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Xintong Li (Tsinghua Univ.); Jinchen Jiang (Tsinghua Univ.); Mingyu Gao (Tsinghua Univ.)",
+    "authors": [
+      "Xintong Li",
+      "Jinchen Jiang",
+      "Mingyu Gao"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Sparsity - 2"
+    },
+    "id": "5C-SeaCache_Efficient_and_Adaptive_Caching_for_Sparse_Accelerators",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5C: Sparsity - 2"
+    ],
+    "sessions": [
+      "5C"
+    ],
+    "title": "SeaCache: Efficient and Adaptive Caching for Sparse Accelerators",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Niansong Zhang (Cornell Univ.); Wenbo Zhu (Univ. of Southern California); Courtney Golden (Massachusetts Inst. of Technology); Dan Ilan (GSI Inc.); Hongzheng Chen (Cornell Univ.); Christopher Batten (Cornell Univ.); Zhiru Zhang (Cornell Univ.)",
+    "authors": [
+      "Niansong Zhang",
+      "Wenbo Zhu",
+      "Courtney Golden",
+      "Dan Ilan",
+      "Hongzheng Chen",
+      "Christopher Batten",
+      "Zhiru Zhang"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Superconducting Systems"
+    },
+    "id": "5D-Characterizing_and_Optimizing_Realistic_Workloads_on_a_Commercial_Compute-in-SRA",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5D: Superconducting Systems"
+    ],
+    "sessions": [
+      "5D"
+    ],
+    "title": "Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ismail Emir Yuksel (ETH Zürich); Ataberk Olgun (ETH Zürich); Nisa Bostanci (ETH Zürich); Haocong Luo (ETH Zürich); Abdullah Giray Yaglikci (ETH Zürich); Onur Mutlu (ETH Zürich)",
+    "authors": [
+      "Ismail Emir Yuksel",
+      "Ataberk Olgun",
+      "Nisa Bostanci",
+      "Haocong Luo",
+      "Abdullah Giray Yaglikci",
+      "Onur Mutlu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Superconducting Systems"
+    },
+    "id": "5D-ColumnDisturb_Understanding_Column-based_Read_Disturbance_in_Real_DRAM_Chips_and",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5D: Superconducting Systems"
+    ],
+    "sessions": [
+      "5D"
+    ],
+    "title": "ColumnDisturb: Understanding Column-based Read Disturbance in Real DRAM Chips and Implications for Future Systems",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Junhyuk Choi (Seoul National Univ.); Juwon Hong (Seoul National Univ.); Junpyo Kim (Seoul National Univ.); Jungmin Cho (Seoul National Univ.); Hyeonseong Jeong (Seoul National Univ.); Dongmoon Min (Sungkyunkwan Univ.); Masamitsu Tanaka (Nagoya Univ.); Koji Inoue (Kyushu Univ.); Jangwoo Kim (Seoul National Univ.)",
+    "authors": [
+      "Junhyuk Choi",
+      "Juwon Hong",
+      "Junpyo Kim",
+      "Jungmin Cho",
+      "Hyeonseong Jeong",
+      "Dongmoon Min",
+      "Masamitsu Tanaka",
+      "Koji Inoue",
+      "Jangwoo Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Superconducting Systems"
+    },
+    "id": "5D-SuperSFQ_A_Hardware_Design_to_Realize_High-Frequency_Superconducting_Processors",
+    "locations": [],
+    "sessionTitles": [
+      "Session 5D: Superconducting Systems"
+    ],
+    "sessions": [
+      "5D"
+    ],
+    "title": "SuperSFQ: A Hardware Design to Realize High-Frequency Superconducting Processors",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Xiaojie Li (Sun Yat-sen Univ.); Mingyu Wang (Sun Yat-Sen Univ.); Baiqing Zhong (Sun Yat-Sen Univ.); Haiqiu Huang (Sun Yat-Sen Univ.); Guangjie Cao (Sun Yat-sen Univ.); Zhiyi Yu (Sun Yat-sen Univ.)",
+    "authors": [
+      "Xiaojie Li",
+      "Mingyu Wang",
+      "Baiqing Zhong",
+      "Haiqiu Huang",
+      "Guangjie Cao",
+      "Zhiyi Yu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPUs - 2"
+    },
+    "id": "6A-C3ache_Towards_Hierarchical_Cache-Centric_Computing_for_Sparse_Matrix_Multiplica",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6A: GPUs - 2"
+    ],
+    "sessions": [
+      "6A"
+    ],
+    "title": "C3ache: Towards Hierarchical Cache-Centric Computing for Sparse Matrix Multiplication on GPGPUs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Junhyeok Park (Sungkyunkwan Univ.); Sungbin Jang (Sungkyunkwan Univ.); Osang Kwon (Sungkyunkwan Univ.); Yongho Lee (Sungkyunkwan Univ.); Seokin Hong (Sungkyunkwan Univ.)",
+    "authors": [
+      "Junhyeok Park",
+      "Sungbin Jang",
+      "Osang Kwon",
+      "Yongho Lee",
+      "Seokin Hong"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPUs - 2"
+    },
+    "id": "6A-Leveraging_Chiplet-Locality_for_Efficient_Memory_Mapping_in_Multi-Chip_Module_GP",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6A: GPUs - 2"
+    ],
+    "sessions": [
+      "6A"
+    ],
+    "title": "Leveraging Chiplet-Locality for Efficient Memory Mapping in Multi-Chip Module GPUs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Qizhong Wang (Univ. of California, Santa Cruz); Xiangyue Huang (Univ. of California, Santa Cruz); Yanan Guo (Univ. of Rochester); Yuanchao Xu (Univ. of California, Santa Cruz)",
+    "authors": [
+      "Qizhong Wang",
+      "Xiangyue Huang",
+      "Yanan Guo",
+      "Yuanchao Xu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "GPUs - 2"
+    },
+    "id": "6A-Security_and_Performance_Implications_of_GPU_Cache_Eviction_Priority_Hints",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6A: GPUs - 2"
+    ],
+    "sessions": [
+      "6A"
+    ],
+    "title": "Security and Performance Implications of GPU Cache Eviction Priority Hints",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Haoran Geng (Univ. of Notre Dame); Xiaoyang Lu (Illinois Inst. of Technology); Yuezhi Che (Wuhan Univ.); Ziang Tian (Wuhan Univ.); Dazhao Cheng (WuHan Univ.); Xian-He Sun (Illinois Inst. of Technology); Michael Niemier (Univ. of Notre Dame); X. Sharon Hu (Univ. of Notre Dame)",
+    "authors": [
+      "Haoran Geng",
+      "Xiaoyang Lu",
+      "Yuezhi Che",
+      "Ziang Tian",
+      "Dazhao Cheng",
+      "Xian-He Sun",
+      "Michael Niemier",
+      "X. Sharon Hu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Memory"
+    },
+    "id": "6B-COSMOS_RL-Enhanced_Locality-Aware_Counter_Cache_Optimization_for_Secure_Memory",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6B: Security and Privacy - Memory"
+    ],
+    "sessions": [
+      "6B"
+    ],
+    "title": "COSMOS: RL-Enhanced Locality-Aware Counter Cache Optimization for Secure Memory",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Anish Saxena (Georgia Inst. of Technology); Walter Wang (Georgia Inst. of Technology); Alexandros Daglis (Georgia Inst. of Technology)",
+    "authors": [
+      "Anish Saxena",
+      "Walter Wang",
+      "Alexandros Daglis"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Memory"
+    },
+    "id": "6B-Citadel_Rethinking_Memory_Allocation_to_Safeguard_Against_Inter-Domain_Rowhammer",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6B: Security and Privacy - Memory"
+    ],
+    "sessions": [
+      "6B"
+    ],
+    "title": "Citadel: Rethinking Memory Allocation to Safeguard Against Inter-Domain Rowhammer Exploits",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Debpratim Adak (North Carolina State Univ.); Eric Rotenberg (North Carolina State Univ.); Amro Awad (Univ. of Oxford); Huiyang Zhou (North Carolina State Univ.)",
+    "authors": [
+      "Debpratim Adak",
+      "Eric Rotenberg",
+      "Amro Awad",
+      "Huiyang Zhou"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Memory"
+    },
+    "id": "6B-CryptoBTB_A_Secure_Hierarchical_BTB_for_Diverse_Instruction_Footprint_Workloads",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6B: Security and Privacy - Memory"
+    ],
+    "sessions": [
+      "6B"
+    ],
+    "title": "CryptoBTB: A Secure Hierarchical BTB for Diverse Instruction Footprint Workloads",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Chuanhan Li (UC-Santa Cruz); Jishen Zhao (Univ. of California, San Diego); Yuanchao Xu (Univ. of California, Santa Cruz)",
+    "authors": [
+      "Chuanhan Li",
+      "Jishen Zhao",
+      "Yuanchao Xu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Memory"
+    },
+    "id": "6B-Efficient_Security_Support_for_CXL_Memory_through_Adaptive_Incremental_Offloaded",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6B: Security and Privacy - Memory"
+    ],
+    "sessions": [
+      "6B"
+    ],
+    "title": "Efficient Security Support for CXL Memory through Adaptive Incremental Offloaded (Re-)Encryption",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Gyeongseo Park (ETRI); Minho Kim (DGIST); Ki-Dong Kang (ETRI); Yunhyeong Jeon (DGIST); Seulki Kim (DGIST); Daehoon Kim (Yonsei Univ.)",
+    "authors": [
+      "Gyeongseo Park",
+      "Minho Kim",
+      "Ki-Dong Kang",
+      "Yunhyeong Jeon",
+      "Seulki Kim",
+      "Daehoon Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Energy and Power"
+    },
+    "id": "6C-EcoCore_Dynamic_Core_Management_for_Improving_Energy_Efficiency_in_Latency-Criti",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6C: Energy and Power"
+    ],
+    "sessions": [
+      "6C"
+    ],
+    "title": "EcoCore: Dynamic Core Management for Improving Energy Efficiency in Latency-Critical Applications",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Alireza Raisiardali (Pragmatic Semiconductor / KU Leuven); Konstantinos Iordanou (Pragmatic Semiconductor); Jedrzej Kufel (Pragmatic Semiconductor); Kowshik Gudimetla (Pragmatic Semiconductor); Kris Myny (KU Leuven); Emre Ozer (Pragmatic Semiconductor)",
+    "authors": [
+      "Alireza Raisiardali",
+      "Konstantinos Iordanou",
+      "Jedrzej Kufel",
+      "Kowshik Gudimetla",
+      "Kris Myny",
+      "Emre Ozer"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Energy and Power"
+    },
+    "id": "6C-Flexing_RISC-V_Instruction_Subset_Processors_to_Extreme_Edge",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6C: Energy and Power"
+    ],
+    "sessions": [
+      "6C"
+    ],
+    "title": "Flexing RISC-V Instruction Subset Processors to Extreme Edge",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Pingyi Huo (The Pennsylvania State Univ.); Anusha Devulapally (The Pennsylvania State Univ.); Hasan Al Maruf (META, Inc); Nandhini Chandramoorthy (IBM, Inc); Meena Arunachalam (AMD, Inc); Gulsum Gudukbay Akbulut (The Pennsylvania State Univ.); Mahmut T Kandemir (The Pennsylvania State Univ.); Vijaykrishnan Narayanan (The Pennsylvania State Univ.)",
+    "authors": [
+      "Pingyi Huo",
+      "Anusha Devulapally",
+      "Hasan Al Maruf",
+      "Nandhini Chandramoorthy",
+      "Meena Arunachalam",
+      "Gulsum Gudukbay Akbulut",
+      "Mahmut T Kandemir",
+      "Vijaykrishnan Narayanan"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Energy and Power"
+    },
+    "id": "6C-Multi-Dimensional_ML-Pipeline_Optimization_in_Cost-Effective_Disaggregated_Datac",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6C: Energy and Power"
+    ],
+    "sessions": [
+      "6C"
+    ],
+    "title": "Multi-Dimensional ML-Pipeline Optimization in Cost-Effective Disaggregated Datacenter",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yuqi Xue (Univ. of Illinois Urbana-Champaign); Jian Huang (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Yuqi Xue",
+      "Jian Huang"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Energy and Power"
+    },
+    "id": "6C-ReGate_Enabling_Power_Gating_in_Neural_Processing_Units",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6C: Energy and Power"
+    ],
+    "sessions": [
+      "6C"
+    ],
+    "title": "ReGate: Enabling Power Gating in Neural Processing Units",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hyunjin Kim (Seoul National Univ.); Seunghwan Song (Samsung Electronics); Sukhyun Choi (Seoul National Univ.); Jeongin Choe (Samsung Electronics); Sanghyeok Han (Seoul National Univ.); Jisung Park (POSTECH (Pohang Univ. of Science and Technology)); Jinho Lee (Seoul National Univ.); Jae-Joon Kim (Seoul National Univ.)",
+    "authors": [
+      "Hyunjin Kim",
+      "Seunghwan Song",
+      "Sukhyun Choi",
+      "Jeongin Choe",
+      "Sanghyeok Han",
+      "Jisung Park",
+      "Jinho Lee",
+      "Jae-Joon Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reconfigurable Computing and Storage"
+    },
+    "id": "6D-CrossBit_Bitwise_Computing_in_NAND_Flash_Memory_with_Inter-Bitline_Data_Communic",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6D: Reconfigurable Computing and Storage"
+    ],
+    "sessions": [
+      "6D"
+    ],
+    "title": "CrossBit: Bitwise Computing in NAND Flash Memory with Inter-Bitline Data Communication",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jaeyong Lee (Seoul National Univ.); Beomjun Kim (Kyungpook National Univ.); Myoungjun Chun (Seoul National Univ.); Myungsuk Kim (Kyungpook National Univ.); Jihong Kim (Seoul National Univ.)",
+    "authors": [
+      "Jaeyong Lee",
+      "Beomjun Kim",
+      "Myoungjun Chun",
+      "Myungsuk Kim",
+      "Jihong Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reconfigurable Computing and Storage"
+    },
+    "id": "6D-DEAR_Improving_Performance_and_Lifetime_of_SSDs_Using_Dynamic_Error-Aware_Refres",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6D: Reconfigurable Computing and Storage"
+    ],
+    "sessions": [
+      "6D"
+    ],
+    "title": "DEAR: Improving Performance and Lifetime of SSDs Using Dynamic Error-Aware Refresh",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yufei Yang (Harbin Inst. of Technology); Chenhao Xie (Beihang Univ.); Chuliang Guo (Harbin Inst. of Technology); Liansheng Liu (Harbin Inst. of Technology); Yu Peng (Harbin Inst. of Technology); Xiyuan Peng (Harbin Inst. of Technology); Datong Liu (Harbin Inst. of Technology)",
+    "authors": [
+      "Yufei Yang",
+      "Chenhao Xie",
+      "Chuliang Guo",
+      "Liansheng Liu",
+      "Yu Peng",
+      "Xiyuan Peng",
+      "Datong Liu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reconfigurable Computing and Storage"
+    },
+    "id": "6D-FexMo_Enabling_Fuse_Execution_Mode_for_Multi-task_CGRAs",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6D: Reconfigurable Computing and Storage"
+    ],
+    "sessions": [
+      "6D"
+    ],
+    "title": "FexMo: Enabling Fuse Execution Mode for Multi-task CGRAs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Rohan Juneja (National Univ. of Singapore); Pranav Dangi (National Univ. Of Singapore); Thilini Kaushalya Bandara (National Univ. of Singapore); Tulika Mitra (National Univ. of Singapore); Li-shiuan Peh (National Univ. of Singapore)",
+    "authors": [
+      "Rohan Juneja",
+      "Pranav Dangi",
+      "Thilini Kaushalya Bandara",
+      "Tulika Mitra",
+      "Li-shiuan Peh"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reconfigurable Computing and Storage"
+    },
+    "id": "6D-Nexus_Machine_An_Energy-Efficient_Active_Message_Inspired_Reconfigurable_Archite",
+    "locations": [],
+    "sessionTitles": [
+      "Session 6D: Reconfigurable Computing and Storage"
+    ],
+    "sessions": [
+      "6D"
+    ],
+    "title": "Nexus Machine: An Energy-Efficient Active Message Inspired Reconfigurable Architecture",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yu Gong (Rutgers Univ.); Haodong Chang (Texas A&M Univ.); Lingyi Huang (Rutgers Univ.); Rongjian Liang (NVIDIA); Cheng Yang (Rutgers Univ.); Zhexiang Tang (Rutgers Univ.); Jiang Hu (Texas A&M Univ.); Bo Yuan (Rutgers Univ.)",
+    "authors": [
+      "Yu Gong",
+      "Haodong Chang",
+      "Lingyi Huang",
+      "Rongjian Liang",
+      "Cheng Yang",
+      "Zhexiang Tang",
+      "Jiang Hu",
+      "Bo Yuan"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (HW/SW Support)"
+    },
+    "id": "7A-Crane_Inter-Layer_Scheduling_Framework_for_DNN_Inference_and_Training_Co-Support",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7A: Systems for AI (HW/SW Support)"
+    ],
+    "sessions": [
+      "7A"
+    ],
+    "title": "Crane: Inter-Layer Scheduling Framework for DNN Inference and Training Co-Support on Tiled Architecture",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yiqi Liu (Univ. of Illinois Urbana-Champaign); Yuqi Xue (Univ. of Illinois Urbana-Champaign); Noelle Crawford (Univ. of Illinois Urbana-Champaign); Jilong Xue (Microsoft Research); Jian Huang (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Yiqi Liu",
+      "Yuqi Xue",
+      "Noelle Crawford",
+      "Jilong Xue",
+      "Jian Huang"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (HW/SW Support)"
+    },
+    "id": "7A-ELK_Exploring_the_Efficiency_of_Inter-core_Connected_AI_Chips_with_Deep_Learning",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7A: Systems for AI (HW/SW Support)"
+    ],
+    "sessions": [
+      "7A"
+    ],
+    "title": "ELK: Exploring the Efficiency of Inter-core Connected AI Chips with Deep Learning Compiler Techniques",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Mohammadreza Esmali Nojehdeh (Barcelona supercomputing center); Hossein Mokhtarnia (Barcelona Supercomputing Center); Julian Pavon Rivera (Barcelona Supercomputing Center); Narcis Rodas Quiroga (Barcelona Supercomputing Center); Roger Figueras Bagué (Barcelona Supercomputing Center); Enrico Reggiani (Barcelona Supercomputing Center); Miquel Moreto (UPC/BSC); Osman Unsal (BSC); Adrian Cristal (BSC); Eduard Ayguade (Universitat Politecnica de Catalunya & Barcelona Supercomputing Center, Barcelona, Spain)",
+    "authors": [
+      "Mohammadreza Esmali Nojehdeh",
+      "Hossein Mokhtarnia",
+      "Julian Pavon Rivera",
+      "Narcis Rodas Quiroga",
+      "Roger Figueras Bagué",
+      "Enrico Reggiani",
+      "Miquel Moreto",
+      "Osman Unsal",
+      "Adrian Cristal",
+      "Eduard Ayguade"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (HW/SW Support)"
+    },
+    "id": "7A-Empowering_Vector_Architectures_for_ML_The_CAMP_Architecture_for_Matrix_Multipli",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7A: Systems for AI (HW/SW Support)"
+    ],
+    "sessions": [
+      "7A"
+    ],
+    "title": "Empowering Vector Architectures for ML: The CAMP Architecture for Matrix Multiplication",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Peng Gao (Beijing Univ. of Posts and Telecommunications, SOPHGO TECHNOLOGIES LTD.); Yang Liu (Beijing Univ. of Posts and Telecommunications); Haonan Sun (Beijing Univ. of Posts and Telecommunications); Jiang Jiang (SOPHGO TECHNOLOGIES LTD.); Jun Wang (SOPHGO TECHNOLOGIES LTD.); Zonghui Hong (SOPHGO TECHNOLOGIES LTD.); Jiali Qu (SOPHGO TECHNOLOGIES LTD.)",
+    "authors": [
+      "Peng Gao",
+      "Yang Liu",
+      "Haonan Sun",
+      "Jiang Jiang",
+      "Jun Wang",
+      "Zonghui Hong",
+      "Jiali Qu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (HW/SW Support)"
+    },
+    "id": "7A-OASIS_A_Commercial_High_Performance_Terminal_AI_Processor_Supporting_RISC-V_Tens",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7A: Systems for AI (HW/SW Support)"
+    ],
+    "sessions": [
+      "7A"
+    ],
+    "title": "OASIS: A Commercial High Performance Terminal AI Processor Supporting RISC-V Tensor Extension Instructions",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Devansh Jain (Univ. of Illinois Urbana-Champaign); Marco Frigo (Univ. of Illinois Urbana-Champaign); Jai Arora (Univ. of Illinois Urbana-Champaign); Akash Pardeshi (Univ. of Illinois Urbana-Champaign); Zhihao Wang (Univ. of Illinois Urbana-Champaign); Krut Patel (Univ. of Illinois Urbana-Champaign); Charith Mendis (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Devansh Jain",
+      "Marco Frigo",
+      "Jai Arora",
+      "Akash Pardeshi",
+      "Zhihao Wang",
+      "Krut Patel",
+      "Charith Mendis"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (HW/SW Support)"
+    },
+    "id": "7A-TAIDL_Tensor_Accelerator_ISA_Definition_Language_with_Auto-generation_of_Scalabl",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7A: Systems for AI (HW/SW Support)"
+    ],
+    "sessions": [
+      "7A"
+    ],
+    "title": "TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Tiantian Lin (Zhejiang Univ.); Cheng Qiu (South China Univ. of Technology); Xiaohang Wang (Zhejiang Univ.); Ling Wang (The Univ. of Western Australia); Zhulin Zheng (Zhejiang Univ.); Yingtao Jiang (Univ. of Nevada, Las Vegas); Amit Kumar Singh (Univ. of Essex); Jieming Yin (Nanjing Univ. of Posts and Telecommunications); Sihai Qiu (Beijing Smart-chip Microelectronics Technology Co., Ltd,); Xiaodong Li (Ant Group); Xin Tang (Ant Group); Jie Song (Ant Group); Mingzhe Zhang (Ant Group); Kui Ren (Zhejiang Univ.)",
+    "authors": [
+      "Tiantian Lin",
+      "Cheng Qiu",
+      "Xiaohang Wang",
+      "Ling Wang",
+      "Zhulin Zheng",
+      "Yingtao Jiang",
+      "Amit Kumar Singh",
+      "Jieming Yin",
+      "Sihai Qiu",
+      "Xiaodong Li",
+      "Xin Tang",
+      "Jie Song",
+      "Mingzhe Zhang",
+      "Kui Ren"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Tools and Simulators"
+    },
+    "id": "7B-LEGOSim_A_Unified_Parallel_Simulation_Framework_for_Multi-chiplet_Heterogeneous",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7B: Tools and Simulators"
+    ],
+    "sessions": [
+      "7B"
+    ],
+    "title": "LEGOSim: A Unified Parallel Simulation Framework for Multi-chiplet Heterogeneous Integration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Kaiyan Chang (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Wenlong Zhu (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Shengwen Liang (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Huawei Li (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Ying Wang (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences)",
+    "authors": [
+      "Kaiyan Chang",
+      "Wenlong Zhu",
+      "Shengwen Liang",
+      "Huawei Li",
+      "Ying Wang"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Tools and Simulators"
+    },
+    "id": "7B-LLMulator_Generalizable_Cost_Modeling_for_Dataflow_Accelerators_with_Input-Adapt",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7B: Tools and Simulators"
+    ],
+    "sessions": [
+      "7B"
+    ],
+    "title": "LLMulator: Generalizable Cost Modeling for Dataflow Accelerators with Input-Adaptive Control Flow",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Wonhyuk Yang (POSTECH); Yunseon Shin (POSTECH); Okkyun Woo (POSTECH); Geonwoo Park (POSTECH); Hyungkyu Ham (POSTECH); Jeehoon Kang (KAIST / FuriosaAI); Jongse Park (KAIST); Gwangsun Kim (POSTECH / Arm)",
+    "authors": [
+      "Wonhyuk Yang",
+      "Yunseon Shin",
+      "Okkyun Woo",
+      "Geonwoo Park",
+      "Hyungkyu Ham",
+      "Jeehoon Kang",
+      "Jongse Park",
+      "Gwangsun Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Tools and Simulators"
+    },
+    "id": "7B-PyTorchSim_A_Comprehensive_Fast_and_Accurate_NPU_Simulation_Framework",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7B: Tools and Simulators"
+    ],
+    "sessions": [
+      "7B"
+    ],
+    "title": "PyTorchSim: A Comprehensive, Fast, and Accurate NPU Simulation Framework",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Rishov Sarkar (Callie); Cong Hao (Callie); Cong (Callie); Hao (Georgia Inst. of Technology)",
+    "authors": [
+      "Rishov Sarkar",
+      "Cong Hao",
+      "Cong",
+      "Hao"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Tools and Simulators"
+    },
+    "id": "7B-Simulating_Hardware_with_C_Speed_and_RTL_Accuracy_for_High-Level_Synthesis_Desig",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7B: Tools and Simulators"
+    ],
+    "sessions": [
+      "7B"
+    ],
+    "title": "Simulating Hardware with C Speed and RTL Accuracy for High-Level Synthesis Designs",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Euijun Chung (Georgia Inst. of Technology); Seonjin Na (Georgia Inst. of Technology); Sung Ha Kang (Georgia Inst. of Technology); Hyesoon Kim (Georgia Inst. of Technology)",
+    "authors": [
+      "Euijun Chung",
+      "Seonjin Na",
+      "Sung Ha Kang",
+      "Hyesoon Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Tools and Simulators"
+    },
+    "id": "7B-Swift_and_Trustworthy_Large-Scale_GPU_Simulation_with_Fine-Grained_Error_Modelin",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7B: Tools and Simulators"
+    ],
+    "sessions": [
+      "7B"
+    ],
+    "title": "Swift and Trustworthy Large-Scale GPU Simulation with Fine-Grained Error Modeling and Hierarchical Clustering",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hoeju Chung (SK hynix America); Euisang Oh (SK hynix America); Seungmin Baek (SK hynix America); Hyeongshin Yoon (SK hynix America); Jaesung Yoo (SK hynix America); Sanghwan Lee (SK hynix America); Yongjun Lee (Microsoft); Arhatha Bramhanand (Microsoft); Brett Dodds (Microsoft); Yang Zhou (Univ. of Illinois Urbana-Champaign); Nam Sung Kim (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Hoeju Chung",
+      "Euisang Oh",
+      "Seungmin Baek",
+      "Hyeongshin Yoon",
+      "Jaesung Yoo",
+      "Sanghwan Lee",
+      "Yongjun Lee",
+      "Arhatha Bramhanand",
+      "Brett Dodds",
+      "Yang Zhou",
+      "Nam Sung Kim"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reliability, Fault-tolerance"
+    },
+    "id": "7C-DRAM_Fault_Classification_through_Large-Scale_Field_Monitoring_for_Robust_Memory",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7C: Reliability, Fault-tolerance"
+    ],
+    "sessions": [
+      "7C"
+    ],
+    "title": "DRAM Fault Classification through Large-Scale Field Monitoring for Robust Memory RAS Management",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Kunlin You (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Yinan Xu (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Kehan Feng (Beijing Inst. of Open Source Chip); Luoshan Cai (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Yaoyang Zhou (Beijing Inst. of Open Source Chip); Yungang Bao (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences)",
+    "authors": [
+      "Kunlin You",
+      "Yinan Xu",
+      "Kehan Feng",
+      "Luoshan Cai",
+      "Yaoyang Zhou",
+      "Yungang Bao"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reliability, Fault-tolerance"
+    },
+    "id": "7C-DiffTest-H_Toward_Semantic-Aware_Communication_in_Hardware-Accelerated_Processor",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7C: Reliability, Fault-tolerance"
+    ],
+    "sessions": [
+      "7C"
+    ],
+    "title": "DiffTest-H: Toward Semantic-Aware Communication in Hardware-Accelerated Processor Verification",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Weijie Chen (Huazhong Univ. of Science and Technology); Shan Tang (Huazhong Univ. of Science and Technology); Yulin Tang (Huazhong Univ. of Science and Technology); Xiapu Luo (The Hong Kong Polytechnic Univ.); Yinqian Zhang (Southern Univ. of Science and Technology); Weizhong Qiang (Huazhong Univ. of Science and Technology)",
+    "authors": [
+      "Weijie Chen",
+      "Shan Tang",
+      "Yulin Tang",
+      "Xiapu Luo",
+      "Yinqian Zhang",
+      "Weizhong Qiang"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reliability, Fault-tolerance"
+    },
+    "id": "7C-Hammer_Reviving_RowHammer_Attacks_on_New_Architectures_via_Prefetching",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7C: Reliability, Fault-tolerance"
+    ],
+    "sessions": [
+      "7C"
+    ],
+    "title": "ρHammer: Reviving RowHammer Attacks on New Architectures via Prefetching",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Samit Shahnawaz Miftah (Univ. of Texas at Dallas); Amisha Srivastava (Univ. of Texas at Dallas); Hyunmin Kim (Technology Innovation Inst.); Shiyi Wei (Univ. of Texas at Dallas); Kanad Basu (Univ. of Texas at Dallas)",
+    "authors": [
+      "Samit Shahnawaz Miftah",
+      "Amisha Srivastava",
+      "Hyunmin Kim",
+      "Shiyi Wei",
+      "Kanad Basu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reliability, Fault-tolerance"
+    },
+    "id": "7C-SymbFuzz_Symbolic_Execution_Guided_Hardware_Fuzzing",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7C: Reliability, Fault-tolerance"
+    ],
+    "sessions": [
+      "7C"
+    ],
+    "title": "SymbFuzz: Symbolic Execution Guided Hardware Fuzzing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Nisa Bostanci (ETH Zürich); Oguzhan Canpolat (TOBB ETÜ and ETH Zurich); Ataberk Olgun (ETH Zürich); Ismail Emir Yuksel (ETH Zürich); Konstantinos Kanellopoulos (ETH Zürich); Mohammad Sadrosadati (ETH Zürich); Abdullah Giray Yaglikci (ETH Zürich); Onur Mutlu (ETH Zürich)",
+    "authors": [
+      "Nisa Bostanci",
+      "Oguzhan Canpolat",
+      "Ataberk Olgun",
+      "Ismail Emir Yuksel",
+      "Konstantinos Kanellopoulos",
+      "Mohammad Sadrosadati",
+      "Abdullah Giray Yaglikci",
+      "Onur Mutlu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Reliability, Fault-tolerance"
+    },
+    "id": "7C-Understanding_and_Mitigating_Covert_and_Side_Channel_Vulnerabilities_Introduced",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7C: Reliability, Fault-tolerance"
+    ],
+    "sessions": [
+      "7C"
+    ],
+    "title": "Understanding and Mitigating Covert and Side Channel Vulnerabilities Introduced by RowHammer Defenses",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Lucas Morais (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Juan Miguel de Haro Ruiz (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Alfredo Goldman (Univ. of São Paulo); Guido Araujo (Univ. of Campinas); Giacomo Pedretti (HPE); Jim Ignowski (HPE); Michael Frank (MagiCore); Xavier Martorell (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Daniel Jiménez-González (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Carlos Álvarez (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya)",
+    "authors": [
+      "Lucas Morais",
+      "Juan Miguel de Haro Ruiz",
+      "Alfredo Goldman",
+      "Guido Araujo",
+      "Giacomo Pedretti",
+      "Jim Ignowski",
+      "Michael Frank",
+      "Xavier Martorell",
+      "Daniel Jiménez-González",
+      "Carlos Álvarez"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Graph processing and HPC"
+    },
+    "id": "7D-Boosting_Task_Scheduling_Data_Locality_with_Low-latency_HW-accelerated_Label_Pro",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7D: Graph processing and HPC"
+    ],
+    "sessions": [
+      "7D"
+    ],
+    "title": "Boosting Task Scheduling Data Locality with Low-latency, HW-accelerated Label Propagation",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Changmin Shin (Seoul National Univ.); Jaeyong Song (Seoul National Univ.); Seongmin Na (Seoul National Univ.); Jun Sung (Seoul National Univ.); Hongsun Jang (Seoul National Univ.); Jinho Lee (Seoul National Univ.)",
+    "authors": [
+      "Changmin Shin",
+      "Jaeyong Song",
+      "Seongmin Na",
+      "Jun Sung",
+      "Hongsun Jang",
+      "Jinho Lee"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Graph processing and HPC"
+    },
+    "id": "7D-FALA_Locality-Aware_PIM-Host_Cooperation_for_Graph_Processing_with_Fine-Grained",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7D: Graph processing and HPC"
+    ],
+    "sessions": [
+      "7D"
+    ],
+    "title": "FALA: Locality-Aware PIM-Host Cooperation for Graph Processing with Fine-Grained Column Access",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Amir Ghazizadeh Ahsaei (Univ. of Central Florida); Lingxiang Yin (Univ. of Central Florida); Shilin Tian (Univ. of Central Florida); Fangzhou Ye (Univ. of Central Florida); Fan Yao (Univ. of Central Florida); Hao Zheng (Univ. of Central Florida)",
+    "authors": [
+      "Amir Ghazizadeh Ahsaei",
+      "Lingxiang Yin",
+      "Shilin Tian",
+      "Fangzhou Ye",
+      "Fan Yao",
+      "Hao Zheng"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Graph processing and HPC"
+    },
+    "id": "7D-Rethinking_Tiling_and_Dataflow_for_SpMM_Acceleration_A_Graph_Transformation_Fram",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7D: Graph processing and HPC"
+    ],
+    "sessions": [
+      "7D"
+    ],
+    "title": "Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Linxuan Zhang (Univ. of Alberta); J. Nelson Amaral (Univ. of Alberta); Di Niu (Univ. of Alberta)",
+    "authors": [
+      "Linxuan Zhang",
+      "J. Nelson Amaral",
+      "Di Niu"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Graph processing and HPC"
+    },
+    "id": "7D-TransFusion_End-to-End_Transformer_Acceleration_via_Graph_Fusion_and_Pipelining",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7D: Graph processing and HPC"
+    ],
+    "sessions": [
+      "7D"
+    ],
+    "title": "TransFusion: End-to-End Transformer Acceleration via Graph Fusion and Pipelining",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Chenxi Xu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Tianhui SHI (QingCheng.AI); Shixuan Sun (Shanghai Jiao Tong Univ.); JIDONG ZHAI (TSINGHUA UNIVERSITY); Xinyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou))",
+    "authors": [
+      "Chenxi Xu",
+      "Tianhui SHI",
+      "Shixuan Sun",
+      "JIDONG ZHAI",
+      "Xinyu Chen"
+    ],
+    "dates": [
+      "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Graph processing and HPC"
+    },
+    "id": "7D-X-SET_An_Efficient_Graph_Pattern_Matching_Accelerator_With_Order-Aware_Parallel",
+    "locations": [],
+    "sessionTitles": [
+      "Session 7D: Graph processing and HPC"
+    ],
+    "sessions": [
+      "7D"
+    ],
+    "title": "X-SET: An Efficient Graph Pattern Matching Accelerator With Order-Aware Parallel Intersection Units",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Seunghyun Lee (Yonsei Univ.); Dongho Ha (Yonsei Univ.); Sungbin Kim (Yonsei Univ.); Sungwoo Kim (Yonsei Univ.); Hyunwuk Lee (Samsung Electronics); Won Woo Ro (Yonsei Univ.)",
+    "authors": [
+      "Seunghyun Lee",
+      "Dongho Ha",
+      "Sungbin Kim",
+      "Sungwoo Kim",
+      "Hyunwuk Lee",
+      "Won Woo Ro"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Data Representations)"
+    },
+    "id": "8A-BitL_A_Hybrid_Bit-Serial_and_Parallel_Deep_Learning_Accelerator_for_Critical_Pat",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8A: Systems for AI (Data Representations)"
+    ],
+    "sessions": [
+      "8A"
+    ],
+    "title": "BitL: A Hybrid Bit-Serial and Parallel Deep Learning Accelerator for Critical Path Reduction",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Yao CHEN (National Univ. of Singapore); Cheng Gong (Tiangong Univ.); Bingsheng He (National Univ. of Singapore)",
+    "authors": [
+      "Yao CHEN",
+      "Cheng Gong",
+      "Bingsheng He"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Data Representations)"
+    },
+    "id": "8A-HiPACK_Efficient_Sub-8-Bit_Direct_Convolution_with_SIMD_and_Bitwise_Management",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8A: Systems for AI (Data Representations)"
+    ],
+    "sessions": [
+      "8A"
+    ],
+    "title": "HiPACK: Efficient Sub-8-Bit Direct Convolution with SIMD and Bitwise Management",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Huizheng Wang (Tsinghua Univ.); Zichuan Wang (Tsinghua Univ.); Zhiheng Yue (Tsinghua Univ.); Yousheng Long (Tsinghua Univ.); Taiquan Wei (Tsinghua Univ.); Jianxun Yang (Tsinghua Univ.); Yang Wang (Tsinghua Univ.); Chao Li (Shanghai Jiao Tong Univ.); Shaojun Wei (Tsinghua Univ.); Yang Hu (Tsinghua Univ.); Shouyi Yin (Tsinghua Univ.)",
+    "authors": [
+      "Huizheng Wang",
+      "Zichuan Wang",
+      "Zhiheng Yue",
+      "Yousheng Long",
+      "Taiquan Wei",
+      "Jianxun Yang",
+      "Yang Wang",
+      "Chao Li",
+      "Shaojun Wei",
+      "Yang Hu",
+      "Shouyi Yin"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Data Representations)"
+    },
+    "id": "8A-MCBP_A_Memory-Compute_Efficient_LLM_Inference_Accelerator_Leveraging_Bit-Slice-e",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8A: Systems for AI (Data Representations)"
+    ],
+    "sessions": [
+      "8A"
+    ],
+    "title": "MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Qizhe Wu (Univ. of Science and Technology of China); Jinyi Zhou (Univ. of Science and Technology of China); Zhanhe Hu (Univ. of Science and Technology of China); Zhichen Zeng (Univ. of Washington); Huawen Liang (Univ. of Science and Technology of China); Jiuru Zhu (Univ. of Science and Technology of China); Linfeng Tao (Univ. of Science and Technology of China); Xin Zhang (China Univ. of Mining and Technology); Zekang Cheng (Univ. of science and technology of China); Letian Zhao (Univ. of Science and Technology of China); Wei Yuan (Univ. of Science and Technology of China); Xiaotian Wang (Univ. of Science and Technology of China); Xi Jin (Univ. of Science and Technology of China)",
+    "authors": [
+      "Qizhe Wu",
+      "Jinyi Zhou",
+      "Zhanhe Hu",
+      "Zhichen Zeng",
+      "Huawen Liang",
+      "Jiuru Zhu",
+      "Linfeng Tao",
+      "Xin Zhang",
+      "Zekang Cheng",
+      "Letian Zhao",
+      "Wei Yuan",
+      "Xiaotian Wang",
+      "Xi Jin"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Processor architecture)"
+    },
+    "id": "8B-MHE-TPE_Multi-Operand_High-Radix_Encoder_for_Mixed-Precision_Fixed-Point_Tensor",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8B: Systems for AI (Processor architecture)"
+    ],
+    "sessions": [
+      "8B"
+    ],
+    "title": "MHE-TPE: Multi-Operand High-Radix Encoder for Mixed-Precision Fixed-Point Tensor Processing Engines",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Cheng Zou (Shanghai Jiao Tong Univ.); Ziling Wei (Shanghai Jiao Tong Univ.); Lee Jun Yan (Shanghai Jiao Tong Univ.); Chen Nie (Shanghai Jiao Tong Univ.); Kang You (Shanghai Jiao Tong Univ.); Zhezhi He (Shanghai Jiao Tong Univ.)",
+    "authors": [
+      "Cheng Zou",
+      "Ziling Wei",
+      "Lee Jun Yan",
+      "Chen Nie",
+      "Kang You",
+      "Zhezhi He"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Processor architecture)"
+    },
+    "id": "8B-PolymorPIC_Embedding_Polymorphic_Processing-in-Cache_in_RISC-V_based_Processor_f",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8B: Systems for AI (Processor architecture)"
+    ],
+    "sessions": [
+      "8B"
+    ],
+    "title": "PolymorPIC: Embedding Polymorphic Processing-in-Cache in RISC-V based Processor for Full-stack Efficient AI Inference",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Sabuj Laskar (Texas A&M Univ.); Pranati Majhi (Texas A&M Univ.); Abdullah Muzahid (Texas A&M Univ.); Eun Jung Kim (Texas A&M Univ.)",
+    "authors": [
+      "Sabuj Laskar",
+      "Pranati Majhi",
+      "Abdullah Muzahid",
+      "Eun Jung Kim"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Systems for AI (Processor architecture)"
+    },
+    "id": "8B-SuperMesh_Energy-Efficient_Collective_Communications_for_Accelerators",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8B: Systems for AI (Processor architecture)"
+    ],
+    "sessions": [
+      "8B"
+    ],
+    "title": "SuperMesh: Energy-Efficient Collective Communications for Accelerators",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Chuan Liu (Univ. of Rochester); Chunshu Wu (Univ. of Rochester); Ruibing Song (Univ. of Rochester); Guangyan Sun (Univ. of Rochester); Ying Nian Wu (Univ. of California, Los Angeles); Yousu Chen (Pacific Northwest National Laboratory); Ang Li (PNNL and UW); Tong Geng (Univ. of Rochester / Rice Univ.)",
+    "authors": [
+      "Chuan Liu",
+      "Chunshu Wu",
+      "Ruibing Song",
+      "Guangyan Sun",
+      "Ying Nian Wu",
+      "Yousu Chen",
+      "Ang Li",
+      "Tong Geng"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 1"
+    },
+    "id": "8C-DS-TIDE_Harnessing_Dynamical_Systems_for_Efficient_Time-Independent_Differential",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8C: Emerging Applications - 1"
+    ],
+    "sessions": [
+      "8C"
+    ],
+    "title": "DS-TIDE: Harnessing Dynamical Systems for Efficient Time-Independent Differential Equation Solving",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Guy Eichler (Columbia Univ.); Yatin Gilhotra (Columbia Univ.); Nanyu Zeng (Columbia Univ.); Martha Kim (Columbia Univ.); Kenneth Shepard (Columbia Univ.); Luca Carloni (Columbia Univ.)",
+    "authors": [
+      "Guy Eichler",
+      "Yatin Gilhotra",
+      "Nanyu Zeng",
+      "Martha Kim",
+      "Kenneth Shepard",
+      "Luca Carloni"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 1"
+    },
+    "id": "8C-MINDFUL_Safe_Implantable_Large-Scale_Brain-Computer_Interfaces_from_a_System-Lev",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8C: Emerging Applications - 1"
+    ],
+    "sessions": [
+      "8C"
+    ],
+    "title": "MINDFUL: Safe, Implantable, Large-Scale Brain-Computer Interfaces from a System-Level Design Perspective",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Max Doblas Font (Barcelona Supercomputing Center); Po Jui Shih (Cornell Univ.); Oscar Lostes-Cazorla (Barcelona Supercomputing Center, Universitat Politecnica de Catalunya); Miquel Moreto (UPC/BSC); Christopher Batten (Cornell Univ.); Santiago Marco-Sola (Universitat Politecnica de Catalunya - Barcelona Supercomputing Center)",
+    "authors": [
+      "Max Doblas Font",
+      "Po Jui Shih",
+      "Oscar Lostes-Cazorla",
+      "Miquel Moreto",
+      "Christopher Batten",
+      "Santiago Marco-Sola"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 1"
+    },
+    "id": "8C-SMX_Heterogeneous_Architecture_for_Universal_Sequence_Alignment_Acceleration",
+    "locations": [],
+    "sessionTitles": [
+      "Session 8C: Emerging Applications - 1"
+    ],
+    "sessions": [
+      "8C"
+    ],
+    "title": "SMX: Heterogeneous Architecture for Universal Sequence Alignment Acceleration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Liang Kong (Ant Group); Shengyu Fan (Chinese Academy of Sciences, CAS); Xianglong Deng (Chinese Academy of Sciences, CAS); Guang Fan (Ant Group); Lei Chen (Ant Group); Guiming Shi (Tsinghua Univ.); Yilan Zhu (Ant Group); Geng Yang (Ant Group); Shoumeng Yan (Ant Group); Mingzhe Zhang (Ant Group)",
+    "authors": [
+      "Liang Kong",
+      "Shengyu Fan",
+      "Xianglong Deng",
+      "Guang Fan",
+      "Lei Chen",
+      "Guiming Shi",
+      "Yilan Zhu",
+      "Geng Yang",
+      "Shoumeng Yan",
+      "Mingzhe Zhang"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
+    },
+    "id": "9A-HAWK_Fully_Homomorphic_Encryption_Accelerator_with_Fixed-Word_Key_Decomposition",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
+    ],
+    "sessions": [
+      "9A"
+    ],
+    "title": "HAWK: Fully Homomorphic Encryption Accelerator with Fixed-Word Key Decomposition Switching",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Amund Bergland Kvalsvik (Norwegian Univ. of Science and Technology); Magnus Själander (Norwegian Univ. of Science and Technology)",
+    "authors": [
+      "Amund Bergland Kvalsvik",
+      "Magnus Själander"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
+    },
+    "id": "9A-ShadowBinding_Realizing_Effective_Microarchitectures_for_In-Core_Secure_Speculat",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
+    ],
+    "sessions": [
+      "9A"
+    ],
+    "title": "ShadowBinding: Realizing Effective Microarchitectures for In-Core Secure Speculation Schemes",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Zehao Chen (Shandong Univ.); Honghui You (Shandong Univ.); Qian Wei (Shandong Univ.); Hang Lu (Inst. of Computing Technology, Chinese Academy of Sciences); Zhaoyan Shen (Shandong Univ.); Lei Ju (Shandong Univ.)",
+    "authors": [
+      "Zehao Chen",
+      "Honghui You",
+      "Qian Wei",
+      "Hang Lu",
+      "Zhaoyan Shen",
+      "Lei Ju"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
+    },
+    "id": "9A-SmartPIR_A_Private_Information_Retrieval_System_using_Computational_Storage_Devi",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
+    ],
+    "sessions": [
+      "9A"
+    ],
+    "title": "SmartPIR: A Private Information Retrieval System using Computational Storage Devices",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Naifeng Zhang (Carnegie Mellon Univ.); Sophia Fu (Carnegie Mellon Univ.); Franz Franchetti (Carnegie Mellon Univ.)",
+    "authors": [
+      "Naifeng Zhang",
+      "Sophia Fu",
+      "Franz Franchetti"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Security and Privacy - Cryptography, Speculation and Computational Storage"
+    },
+    "id": "9A-Towards_Closing_the_Performance_Gap_for_Cryptographic_Kernels_Between_CPUs_and_S",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9A: Security and Privacy - Cryptography, Speculation and Computational Storage"
+    ],
+    "sessions": [
+      "9A"
+    ],
+    "title": "Towards Closing the Performance Gap for Cryptographic Kernels Between CPUs and Specialized Hardware",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hwanjun Lee (DGIST); Minho Kim (DGIST); Yeji Jung (DGIST); Seonmu Oh (DGIST); Ki-Dong Kang (ETRI); Seunghak Lee (DGIST/Samsung Electronics); Daehoon Kim (Yonsei Univ.)",
+    "authors": [
+      "Hwanjun Lee",
+      "Minho Kim",
+      "Yeji Jung",
+      "Seonmu Oh",
+      "Ki-Dong Kang",
+      "Seunghak Lee",
+      "Daehoon Kim"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Memory"
+    },
+    "id": "9B-Beyond_Page_Migration_Enhancing_Tiered_Memory_Performance_via_Integrated_Last-Le",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9B: Memory"
+    ],
+    "sessions": [
+      "9B"
+    ],
+    "title": "Beyond Page Migration: Enhancing Tiered Memory Performance via Integrated Last-Level Cache Management and Page Migration",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Víctor Soria-Pardos (Barcelona Supercomputing Center (BSC)); Adrià Armejach (Universitat Politecnica de Catalunya (UPC) & Barcelona Supercomputing Center (BSC)); Tiago Mück (Arm); Darío Suárez (Universidad de Zaragoza); Jose Joao (Arm); Miquel Moretó (Universitat Politecnica de Catalunya (UPC) & Barcelona Supercomputing Center (BSC))",
+    "authors": [
+      "Víctor Soria-Pardos",
+      "Adrià Armejach",
+      "Tiago Mück",
+      "Darío Suárez",
+      "Jose Joao",
+      "Miquel Moretó"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Memory"
+    },
+    "id": "9B-Delegato_Locality-Aware_Atomic_Memory_Operations_on_Chiplets",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9B: Memory"
+    ],
+    "sessions": [
+      "9B"
+    ],
+    "title": "Delegato: Locality-Aware Atomic Memory Operations on Chiplets",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Kaiyang Zhao (Carnegie Mellon Univ.); Yuang Chen (Carnegie Mellon Univ.); Xenia Xu (Carnegie Mellon Univ.); Dan Schatzberg (Meta); Nastaran Hajinaza (Intel); Rupin Vakharwala (Intel); Andy Anderson (Intel); Dimitrios Skarlatos (Carnegie Mellon Univ.)",
+    "authors": [
+      "Kaiyang Zhao",
+      "Yuang Chen",
+      "Xenia Xu",
+      "Dan Schatzberg",
+      "Nastaran Hajinaza",
+      "Rupin Vakharwala",
+      "Andy Anderson",
+      "Dimitrios Skarlatos"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Memory"
+    },
+    "id": "9B-Learning_to_Walk_Architecting_Learned_Virtual_Memory_Translation",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9B: Memory"
+    ],
+    "sessions": [
+      "9B"
+    ],
+    "title": "Learning to Walk: Architecting Learned Virtual Memory Translation",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Houxiang Ji (Univ. of Illinois Urbana Champaign); Yifan Yuan (Meta); Yang Zhou (Univ. of Illinois Urbana Champaign); Ipoom Jeong (Yonsei Univ.); Ren Wang (Intel); Saksham Agarwal (Univ. of Illinois Urbana-Champaign); Nam Sung Kim (Univ. of Illinois Urbana-Champaign)",
+    "authors": [
+      "Houxiang Ji",
+      "Yifan Yuan",
+      "Yang Zhou",
+      "Ipoom Jeong",
+      "Ren Wang",
+      "Saksham Agarwal",
+      "Nam Sung Kim"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Memory"
+    },
+    "id": "9B-Re-architecting_End-host_Networking_with_CXL_Coherence_Memory_and_Offloading",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9B: Memory"
+    ],
+    "sessions": [
+      "9B"
+    ],
+    "title": "Re-architecting End-host Networking with CXL: Coherence, Memory, and Offloading",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "MINNAN PEI (Inst. of Automation, Chinese Academy of Sciences); Gang Li (Inst. of Automation, Chinese Academy of Sciences); Junwen Si (Inst. of Automation, Chinese Academy of Sciences); Zeyu Zhu (Inst. of Automation, Chinese Academy of Sciences); Zitao Mo (Inst. of Automation, Chinese Academy of Sciences); Peisong Wang (Inst. of Automation, Chinese Academy of Sciences); Zhuoran Song (Shanghai Jiao Tong Univ.); Xiaoyao Liang (Shanghai Jiao Tong Univ.); Jian Cheng (Inst. of Automation, Chinese Academy of Sciences)",
+    "authors": [
+      "MINNAN PEI",
+      "Gang Li",
+      "Junwen Si",
+      "Zeyu Zhu",
+      "Zitao Mo",
+      "Peisong Wang",
+      "Zhuoran Song",
+      "Xiaoyao Liang",
+      "Jian Cheng"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 2"
+    },
+    "id": "9C-GCC_A_3DGS_Inference_Architecture_with_Gaussian-Wise_and_Cross-Stage_Conditional",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9C: Emerging Applications - 2"
+    ],
+    "sessions": [
+      "9C"
+    ],
+    "title": "GCC: A 3DGS Inference Architecture with Gaussian-Wise and Cross-Stage Conditional Processing",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Meng Han (Tsinghua Univ.); Liang Wang (Beihang Univ.); Limin Xiao (Beihang Univ.); Hao Zhang (Beihang Univ.); Bowen Jiang (Beihang Univ.); Xilong Xie (Beihang Univ.); Jianfeng Zhu (Tsinghua Univ.); Shaojun Wei (Tsinghua Univ.); Leibo Liu (Tsinghua Univ.)",
+    "authors": [
+      "Meng Han",
+      "Liang Wang",
+      "Limin Xiao",
+      "Hao Zhang",
+      "Bowen Jiang",
+      "Xilong Xie",
+      "Jianfeng Zhu",
+      "Shaojun Wei",
+      "Leibo Liu"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 2"
+    },
+    "id": "9C-PointISA_ISA-Extensions_for_Efficient_Point_Cloud_Analytics_via_Architecture_and",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9C: Emerging Applications - 2"
+    ],
+    "sessions": [
+      "9C"
+    ],
+    "title": "PointISA: ISA-Extensions for Efficient Point Cloud Analytics via Architecture and Algorithm Co-Design",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hongyi Wang (Tsinghua Univ.); Zhenhua Zhu (Tsinghua Univ.; HKUST); Tianchen Zhao (Tsinghua Univ.); Yunfei Xiang (Tsinghua Univ.); Zehao Wang (Tsinghua Univ.); Jincheng Yu (Tsinghua Univ.); Huazhong Yang (Tsinghua Univ.); Yuan Xie (HKUST); Yu Wang (Tsinghua Univ.)",
+    "authors": [
+      "Hongyi Wang",
+      "Zhenhua Zhu",
+      "Tianchen Zhao",
+      "Yunfei Xiang",
+      "Zehao Wang",
+      "Jincheng Yu",
+      "Huazhong Yang",
+      "Yuan Xie",
+      "Yu Wang"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 2"
+    },
+    "id": "9C-REACT3D_Real-time_Edge_Accelerator_for_Incremental_Training_in_3D_Gaussian_Splat",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9C: Emerging Applications - 2"
+    ],
+    "sessions": [
+      "9C"
+    ],
+    "title": "REACT3D: Real-time Edge Accelerator for Incremental Training in 3D Gaussian Splatting based SLAM Systems",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Leshu LI (Univ. of Minnesota, Twin Cities); Jiayin Qin (Univ. of Minnesota, Twin Cities); Jie Peng (Univ. of North Carolina at Chapel Hill); Zishen Wan (Georgia Inst. of Technology); Huaizhi Qu (Univ. of North Carolina at Chapel Hill); Ye Han (Vanderbilt Univ.); Pingqing Zheng (Univ. of Minnesota, Twin Cities); Hongsen Zhang (Univ. of Minnesota, Twin Cities); Yu Cao (Univ. of Minnesota Twin Cities); Tianlong Chen (Univ. of North Carolina at Chapel Hill); Yang (Katie); Zhao (Univ. of Minnesota, Twin Cities)",
+    "authors": [
+      "Leshu LI",
+      "Jiayin Qin",
+      "Jie Peng",
+      "Zishen Wan",
+      "Huaizhi Qu",
+      "Ye Han",
+      "Pingqing Zheng",
+      "Hongsen Zhang",
+      "Yu Cao",
+      "Tianlong Chen",
+      "Yang",
+      "Zhao"
+    ],
+    "dates": [
+      "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
+    ],
+    "eventType": "Paper",
+    "extra": {
+      "sessionTrack": "Emerging Applications - 2"
+    },
+    "id": "9C-RTGS_Real-Time_3D_Gaussian_Splatting_SLAM_via_Multi-Level_Redundancy_Reduction",
+    "locations": [],
+    "sessionTitles": [
+      "Session 9C: Emerging Applications - 2"
+    ],
+    "sessions": [
+      "9C"
+    ],
+    "title": "RTGS: Real-Time 3D Gaussian Splatting SLAM via Multi-Level Redundancy Reduction",
+    "tracks": [
+      "Main Conference"
+    ],
+    "urls": [
+      "https://microarch.org/micro58/program/index.php"
+    ]
+  }
+]
