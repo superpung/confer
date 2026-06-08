@@ -7436,6 +7436,16 @@
   },
   {
     "abstract": "Training satellite-edge deep learning models remains constrained by limited onboard resources and high data download latency. Although split federated learning (SFL) offers a potential solution through model partitioning, its convergence and robustness are fundamentally compromised by the intermittent and asymmetric satellite–ground links. To address these issues, we introduce SatSFL as a novel SFL system for satellite-based computing networks. SatSFL employs an interpolated gradient approximation to emulate ground feedback during disconnections, markedly accelerating convergence while maintaining robustness under heterogeneous data. In addition, we design adaptive uplink compression under asymmetric bandwidth to ensure that balanced and critical gradients are reliably transmitted back to satellites. We implement and evaluate SatSFL on real-world LEO satellite systems and datasets, demonstrating superior accuracy and convergence speed compared to state-of-the-art methods.",
+    "authorIds": [
+      "",
+      "",
+      "",
+      "",
+      "0009-0003-2420-2774",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Yuxin Zhang (Fudan University); Haoyu Chen (Fudan University); Zheng Lin (The University of Hong Kong); Wenjun Zhu (Fudan University); Ju Ren (Tsinghua University); Jin Zhao (Fudan University); Yue Gao (Fudan University); Zhe Chen (Fudan University)",
     "authors": [
       "Yuxin Zhang",
@@ -10452,6 +10462,15 @@
   },
   {
     "abstract": "Timing closure is a key objective in FPGA placement. As designs scale, heterogeneous interconnections induce strong RC effects, weakening delay–wirelength correlation and limiting existing placers with inaccurate timing models and fixed weighting. We propose LS-Placer, a learning-based, slack-aware timing-driven placement framework that jointly models net and logic delays through a graph representation and integrates the learned timing model into a dynamic global placement flow with adaptive TNS-guided weighting. On average, LS-Placer improves WNS and TNS by ~11% and ~19% and achieves 3% shorter critical path delay than Vivado 2021.2.",
+    "authorIds": [
+      "0000-0001-8674-4948",
+      "",
+      "0000-0002-8554-6365",
+      "",
+      "0000-0002-5068-1938",
+      "",
+      "0000-0001-7323-5052"
+    ],
     "authorInstitutions": "Yi Guo (Dalian University of Technology); Shikai Guo (Dalian Maritime University); Huijiang Liu (Dalian University of Technology); Ning Wang (Chengdu Sino Microelectronics System Co.Ltd.); Zhixiong Di (Southwest Jiaotong University); Xiaochen Li (Dalian University of Technology); He Jiang (Dalian University of Technology)",
     "authors": [
       "Yi Guo",

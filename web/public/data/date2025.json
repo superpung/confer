@@ -615,17 +615,27 @@
       "Josh Joffrion",
       "Ken Mai"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 16:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993214",
     "eventType": "Best Paper Award Candidate",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "BPA03.2",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-6",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1394.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "BPA03 BPA Session 3"
     ],
@@ -637,6 +647,7 @@
       "Best Paper Award Candidate"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993214",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1394.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -695,17 +706,27 @@
       "Florenc Demrozi",
       "Graziano Pravadelli"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 08:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993022",
     "eventType": "Best Paper Award Candidate",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "BPA04.1",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/560.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "BPA04 BPA Session 4"
     ],
@@ -717,6 +738,7 @@
       "Best Paper Award Candidate"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993022",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/560.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -776,17 +798,27 @@
       "Dimitrios Stamoulis",
       "Iraklis Anagnostopoulos"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 09:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992856",
     "eventType": "Best Paper Award Candidate",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "BPA04.3",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/555.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "BPA04 BPA Session 4"
     ],
@@ -798,6 +830,7 @@
       "Best Paper Award Candidate"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992856",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/555.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -814,17 +847,27 @@
       "Hoon Sung Chwa",
       "Yeseong Kim"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 08:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992978",
     "eventType": "Late Breaking Results",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "LBR01.1",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/3032.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "LBR01 Late Breaking Results on AI Algorithms and Architectures"
     ],
@@ -836,6 +879,7 @@
       "Late Breaking Results"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992978",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/3032.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -904,17 +948,27 @@
       "KYEONG SEOK LEE",
       "Suyoun Lee"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 08:36 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993187",
     "eventType": "Late Breaking Results",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "LBR01.3",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/3041.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "LBR01 Late Breaking Results on AI Algorithms and Architectures"
     ],
@@ -926,6 +980,7 @@
       "Late Breaking Results"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993187",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/3041.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -1082,17 +1137,27 @@
       "Konstantinos Balaskas",
       "Georgios Zervakis"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 08:48 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993127",
     "eventType": "Late Breaking Results",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "LBR01.7",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/3023.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "LBR01 Late Breaking Results on AI Algorithms and Architectures"
     ],
@@ -1104,6 +1169,7 @@
       "Late Breaking Results"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993127",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/3023.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -2475,17 +2541,27 @@
       "Luca Benini",
       "Francesco Conti"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:40 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993254",
     "eventType": "Multi-Partner Project",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "MPP03.3",
     "locations": [
       "Roseraie 1&2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/4019.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "MPP03 Multi-Partner Projects"
     ],
@@ -2497,6 +2573,7 @@
       "Multi-Partner Project"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993254",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/4019.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -2630,17 +2707,27 @@
       "Bart Driessen",
       "Jeronimo Castrillon"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992704",
     "eventType": "Multi-Partner Project",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "MPP03.6",
     "locations": [
       "Roseraie 1&2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/4007.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "MPP03 Multi-Partner Projects"
     ],
@@ -2652,6 +2739,7 @@
       "Multi-Partner Project"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992704",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/4007.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -2858,17 +2946,27 @@
       "Wei Zhang",
       "Jiang Xu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993137",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.3",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/331.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Emerging design technologies for future computing"
     ],
@@ -2880,6 +2978,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993137",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/331.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -2941,17 +3040,27 @@
       "Michael Huang",
       "Hui Wu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993070",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.5",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-6",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/613.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Emerging design technologies for future computing"
     ],
@@ -2963,6 +3072,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993070",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/613.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3172,17 +3282,27 @@
       "Qianqian Huang",
       "Ru Huang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:45 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993040",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.10",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1139.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Emerging design technologies for future computing"
     ],
@@ -3194,6 +3314,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993040",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1139.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3207,17 +3328,27 @@
       "Pushen Zuo",
       "Zhong Sun"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992953",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.11",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1195.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Emerging design technologies for future computing"
     ],
@@ -3229,6 +3360,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992953",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1195.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3242,17 +3374,27 @@
       "Zhibiao Xue",
       "Liuyang Zhang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:51 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993209",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.12",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1060.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Emerging design technologies for future computing"
     ],
@@ -3264,6 +3406,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993209",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1060.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3648,17 +3791,27 @@
       "Lars Folkerts",
       "Nektarios Georgios Tsoutsos"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:40 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992988",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS02.9",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1346.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS02 Secure systems, circuits, and architectures"
     ],
@@ -3670,6 +3823,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992988",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1346.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3683,17 +3837,27 @@
       "Ioannis Savidis",
       "Naghmeh Karimi"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:45 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992948",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS02.10",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1373.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS02 Secure systems, circuits, and architectures"
     ],
@@ -3705,6 +3869,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992948",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1373.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3764,17 +3929,27 @@
     "authors": [
       "Bokyung Kim"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 11:51 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993066",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS02.12",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/889.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS02 Secure systems, circuits, and architectures"
     ],
@@ -3786,6 +3961,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993066",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/889.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3850,17 +4026,27 @@
       "Andrew Searles",
       "Gene Tsudik"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 14:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993255",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS03.2",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/246.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS03 Embedded software architecture, compilers and tool chains"
     ],
@@ -3872,6 +4058,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993255",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/246.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -3975,17 +4162,27 @@
       "Yajuan Du",
       "Sam H. Noh"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 14:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993203",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS03.5",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/754.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS03 Embedded software architecture, compilers and tool chains"
     ],
@@ -3997,6 +4194,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993203",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/754.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4143,17 +4341,27 @@
       "Tao Xu",
       "Meng Zhang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 14:40 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993076",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS03.9",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1400.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS03 Embedded software architecture, compilers and tool chains"
     ],
@@ -4165,6 +4373,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993076",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1400.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4180,17 +4389,27 @@
       "Jalil Boukhobza",
       "David Espes"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 14:45 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992889",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS03.10",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1484.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS03 Embedded software architecture, compilers and tool chains"
     ],
@@ -4202,6 +4421,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992889",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1484.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4382,17 +4602,27 @@
       "Zhigang Cai",
       "Jianwei Liao"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 16:45 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992710",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.4",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/382.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 Emerging design technologies for future memories"
     ],
@@ -4404,6 +4634,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992710",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/382.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4424,17 +4655,27 @@
       "Irem Boybat",
       "Thomas Boesch"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 16:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992944",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.5",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/544.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 Emerging design technologies for future memories"
     ],
@@ -4446,6 +4687,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992944",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/544.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4506,17 +4748,27 @@
       "Donguk Seo",
       "Yoonmyung Lee"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 17:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993250",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.7",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/716.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 Emerging design technologies for future memories"
     ],
@@ -4528,6 +4780,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993250",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/716.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4543,17 +4796,27 @@
       "Ningyuan Yin",
       "Zhiyi Yu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 17:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992966",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.8",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/784.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 Emerging design technologies for future memories"
     ],
@@ -4565,6 +4828,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992966",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/784.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4576,17 +4840,27 @@
       "Bolun Zhu",
       "Yu Hua"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 17:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992828",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.9",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/998.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 Emerging design technologies for future memories"
     ],
@@ -4598,6 +4872,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992828",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/998.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -4753,17 +5028,27 @@
       "Yongxiang Cao",
       "Yaochen Han"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 16:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993044",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS05.2",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/677.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS05 System-level design methodologies and high-level synthesis"
     ],
@@ -4775,6 +5060,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993044",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/677.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5160,17 +5446,27 @@
       "Wei He",
       "Dan Tang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 31 March 2025 17:12 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992783",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS05.11",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/741.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS05 System-level design methodologies and high-level synthesis"
     ],
@@ -5182,6 +5478,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992783",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/741.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5361,17 +5658,27 @@
       "Georgia Tech",
       "US"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 08:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992779",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS06.5",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/840.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS06 Design Automation for Quantum Computing"
     ],
@@ -5383,6 +5690,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992779",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/840.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5396,17 +5704,27 @@
       "Laura Schulz",
       "Robert Wille"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 08:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992761",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS06.6",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1077.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS06 Design Automation for Quantum Computing"
     ],
@@ -5418,6 +5736,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992761",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1077.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5432,17 +5751,27 @@
       "Markus Müller",
       "Robert Wille"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 09:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992896",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS06.7",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1130.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS06 Design Automation for Quantum Computing"
     ],
@@ -5454,6 +5783,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992896",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1130.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5466,17 +5796,27 @@
       "Maurizio Palesi",
       "Davide Patti"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 09:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992725",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS06.8",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1281.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS06 Design Automation for Quantum Computing"
     ],
@@ -5488,6 +5828,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992725",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1281.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5777,17 +6118,27 @@
       "Wei Tang",
       "Zhengya Zhang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 08:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992822",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS07.5",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/538.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS07 Applications of emerging technologies"
     ],
@@ -5799,6 +6150,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992822",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/538.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -5895,17 +6247,27 @@
       "Michael Beigl",
       "Mehdi Tahoori"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 09:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992786",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS07.8",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/868.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS07 Applications of emerging technologies"
     ],
@@ -5917,6 +6279,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992786",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/868.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -6292,17 +6655,27 @@
       "Kang Eun Jeon",
       "Jong Hwan Ko"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993253",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS08.5",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1407.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS08 Design Methodologies and Applications for Machine Learning"
     ],
@@ -6314,6 +6687,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993253",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1407.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -6407,17 +6781,27 @@
       "Dohyun Kim",
       "Jae-Joon Kim"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993229",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS08.8",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/125.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS08 Design Methodologies and Applications for Machine Learning"
     ],
@@ -6429,6 +6813,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993229",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/125.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -6446,17 +6831,27 @@
       "Qi Sun",
       "Li Jiang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:40 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993106",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS08.9",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/137.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS08 Design Methodologies and Applications for Machine Learning"
     ],
@@ -6468,6 +6863,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993106",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/137.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -6797,17 +7193,27 @@
       "Dan Niu",
       "Zhou Jin"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:25 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993121",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS09.6",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/751.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS09 Low-power, energy-efficient and thermal-aware design"
     ],
@@ -6819,6 +7225,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993121",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/751.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7027,17 +7434,27 @@
       "Zhuoran Song",
       "Li Jiang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993093",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS10.1",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/7.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS10 Applications of Artificial Intelligence Systems"
     ],
@@ -7049,6 +7466,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993093",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/7.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7064,17 +7482,27 @@
       "Shaahin Angizi",
       "Mohsen Imani"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993058",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS10.2",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/130.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS10 Applications of Artificial Intelligence Systems"
     ],
@@ -7086,6 +7514,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993058",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/130.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7101,17 +7530,27 @@
       "Kaiye Zhou",
       "Qiang Cao"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 11:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992907",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS10.3",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/184.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS10 Applications of Artificial Intelligence Systems"
     ],
@@ -7123,6 +7562,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992907",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/184.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7397,6 +7837,14 @@
   },
   {
     "abstract": "Designing AI-based applications personalized to each user's behavior presents significant challenges due to the cold start problem and the impracticality of extensive individual data labeling. These challenges are further compounded when deploying such applications at the edge, where limited computing resources constrain the design space. This paper introduces a novel approach to AI-driven personalized solutions in biosensing applications by combining deep learning with clustering-based separation techniques. The proposed Clustering and Learning for Emotion Adaptive Recognition (CLEAR) methodology strikes a balance between population-wide models and fully personalized systems by leveraging data-driven clustering. CLEAR demonstrates its effectiveness in emotion recognition tasks, and its integration with fine-tuning enables efficient deployment on edge devices, ensuring data privacy and real-time detection when new users are introduced to the system. We conducted experiments for model personalization on two edge computing platforms: the Coral Edge TPU Dev Board and the Raspberry Pi with an Intel Movidius Neural Compute Stick 2. The results show that initial cluster assignment for new users can be achieved without labeled data, directly addressing the cold-start problem. Compared to baseline validation without clustering, this proposal improves accuracy metric from 75% to 81.9%. Furthermore, fine-tuning with minimal labeled data significantly improves accuracy, achieving up to 86.34% for the fear detection task in the WEMAC dataset while remaining suitable for deployment on resource-constrained edge devices.",
+    "authorIds": [
+      "0000-0001-6940-3164",
+      "0000-0002-0679-7300",
+      "0000-0001-9451-6611",
+      "0000-0002-7275-4616",
+      "0000-0003-4896-6229",
+      "0000-0003-4995-7009"
+    ],
     "authorInstitutions": "Junjiao Sun (Centro de Electrónica Industrial Universidad Politecnica de Madrid, ES); Laura Gutierrez Martin (UC3M (Universidad Carlos III de Madrid), ES); Jose Miranda Calero (EPFL, CH); Celia López-Ongil (UC3M (Universidad Carlos III de Madrid), ES); Jorge Portilla (Centro de Electrónica Industrial Universidad Politecnica de Madrid, ES); Jose Andres Otero Marnotes (Centro de Electrónica Industrial Universidad Politecnica de Madrid, ES)",
     "authors": [
       "Junjiao Sun",
@@ -7547,17 +7995,27 @@
       "Fan Dongrui",
       "Tang Zhimin"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 14:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992864",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS11.1",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/32.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS11 Architectural and microarchitectural design - 1"
     ],
@@ -7569,6 +8027,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992864",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/32.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7703,17 +8162,27 @@
       "Jesus Lopez",
       "Tosiron Adegbija"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 14:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992893",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS11.5",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/219.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS11 Architectural and microarchitectural design - 1"
     ],
@@ -7725,6 +8194,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992893",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/219.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7879,17 +8349,27 @@
     "authors": [
       "Neethu Bal Mallya"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 14:40 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992969",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS11.9",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/445.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS11 Architectural and microarchitectural design - 1"
     ],
@@ -7901,6 +8381,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992969",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/445.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -7913,17 +8394,27 @@
       "Ke Wang",
       "Ahmed Louri"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 14:45 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992726",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS11.10",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/501.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS11 Architectural and microarchitectural design - 1"
     ],
@@ -7935,6 +8426,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992726",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/501.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -8282,17 +8774,27 @@
       "Hengrui Zhao",
       "Lei Xun"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 14:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993247",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS12.7",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1239.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS12 Smart and Autonomous Systems for a Smart World"
     ],
@@ -8304,6 +8806,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993247",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1239.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -8602,17 +9105,27 @@
       "Zhixin Pan",
       "Ziyu Shu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993115",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS13.1",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/358.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS13 Embedded, Real-Time and Dependable Systems"
     ],
@@ -8624,6 +9137,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993115",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/358.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -8635,17 +9149,27 @@
       "Jintao Chen",
       "Yuankai Xu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993261",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS13.2",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/427.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS13 Embedded, Real-Time and Dependable Systems"
     ],
@@ -8657,6 +9181,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993261",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/427.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -8856,17 +9381,27 @@
       "Rodrigo Otoni",
       "Laura Pozzi"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 17:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992940",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS13.7",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/321.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS13 Embedded, Real-Time and Dependable Systems"
     ],
@@ -8878,6 +9413,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992940",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/321.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -9076,17 +9612,27 @@
       "Heba Khdr",
       "Joerg Henkel"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 17:17 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992765",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS13.12",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/516.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS13 Embedded, Real-Time and Dependable Systems"
     ],
@@ -9098,6 +9644,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992765",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/516.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -9160,17 +9707,27 @@
       "Joongho Jo",
       "Jongsun Park"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992921",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS14.2",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1426.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS14 Architectural and microarchitectural design - 2"
     ],
@@ -9182,6 +9739,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992921",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1426.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -9293,17 +9851,27 @@
       "Hyoukjun Kwon",
       "Mohammad Al Faruque"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993228",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS14.5",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/883.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS14 Architectural and microarchitectural design - 2"
     ],
@@ -9315,6 +9883,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993228",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/883.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -9331,17 +9900,27 @@
       "Li Li",
       "Yuxiang Fu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992890",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS14.6",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-6",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/943.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS14 Architectural and microarchitectural design - 2"
     ],
@@ -9353,6 +9932,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992890",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/943.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -9801,17 +10381,27 @@
       "Tushar Krishna",
       "Azad J Naeemi"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992860",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS15.6",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/128.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS15 Power and Energy Efficient Systems"
     ],
@@ -9823,6 +10413,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992860",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/128.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -10057,17 +10648,27 @@
       "Zijun JIANG",
       "Yangdi Lyu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 17:13 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992716",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS15.12",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1457.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS15 Power and Energy Efficient Systems"
     ],
@@ -10079,6 +10680,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992716",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1457.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -10126,17 +10728,27 @@
       "Bogil Kim",
       "William Song"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 16:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992787",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS16.2",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/303.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS16 Design, Test, Modeling and Mitigation of defects and faults"
     ],
@@ -10148,6 +10760,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992787",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/303.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -10537,17 +11150,27 @@
       "UFRGS",
       "BR"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 17:12 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993181",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS16.11",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1320.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS16 Design, Test, Modeling and Mitigation of defects and faults"
     ],
@@ -10559,6 +11182,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993181",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1320.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -10829,17 +11453,27 @@
       "Lukas Jünger",
       "Rainer Leupers"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 08:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993216",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS17.6",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/160.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS17 System simulation and validation"
     ],
@@ -10851,6 +11485,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993216",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/160.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -10864,17 +11499,27 @@
       "Yier Jin",
       "An Zou"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 09:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992806",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS17.7",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/323.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS17 System simulation and validation"
     ],
@@ -10886,6 +11531,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992806",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/323.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -11236,17 +11882,27 @@
       "Daniel Mueller-Gritschneder",
       "Walter Stechele"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 08:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992937",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS18.5",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/861.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS18 Machine learning solutions for embedded and cyber-physical systems"
     ],
@@ -11258,6 +11914,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992937",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/861.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -11270,17 +11927,27 @@
       "Qing Wang",
       "Marco Zuniga"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 08:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993050",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS18.6",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/865.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS18 Machine learning solutions for embedded and cyber-physical systems"
     ],
@@ -11292,6 +11959,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993050",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/865.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -11381,17 +12049,27 @@
     "authors": [
       "Yujie Zhang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 09:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992741",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS18.9",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1041.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS18 Machine learning solutions for embedded and cyber-physical systems"
     ],
@@ -11403,6 +12081,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992741",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1041.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -11506,17 +12185,27 @@
       "Wujie Zhong",
       "Yangdi Lyu"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 09:21 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992792",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS18.12",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/193.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS18 Machine learning solutions for embedded and cyber-physical systems"
     ],
@@ -11528,6 +12217,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992792",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/193.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -11891,17 +12581,27 @@
       "Ozgur Sinanoglu",
       "Johann Knechtel"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 09:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993260",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS19.9",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1438.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS19 Design and test of secure systems"
     ],
@@ -11913,6 +12613,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993260",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1438.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -11928,17 +12629,27 @@
       "Selcuk Kose",
       "Mehmet Belviranli"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 09:15 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992919",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS19.10",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1454.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS19 Design and test of secure systems"
     ],
@@ -11950,6 +12661,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992919",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1454.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -12196,17 +12908,27 @@
       "DhouI Lim",
       "Heechun Park"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:15 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992920",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS20.4",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/493.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS20 Physical analysis and design"
     ],
@@ -12218,6 +12940,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992920",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/493.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -12470,17 +13193,27 @@
       "Vasilis Pavlidis",
       "Yuanqing Cheng"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992810",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS20.11",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/791.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS20 Physical analysis and design"
     ],
@@ -12492,6 +13225,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992810",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/791.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -12602,17 +13336,27 @@
       "Anirudh Itagi",
       "Tushar Krishna"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993035",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.3",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/389.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 Design methodologies for machine learning architectures"
     ],
@@ -12624,6 +13368,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993035",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/389.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -12638,17 +13383,27 @@
       "Jihun Yoon",
       "Seokin Hong"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:15 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993213",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.4",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/480.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 Design methodologies for machine learning architectures"
     ],
@@ -12660,6 +13415,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993213",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/480.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -12724,17 +13480,27 @@
       "Ru Huang",
       "Tianyu Jia"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:25 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993224",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.6",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/627.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 Design methodologies for machine learning architectures"
     ],
@@ -12746,6 +13512,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993224",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/627.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -12940,17 +13707,27 @@
       "Byungkuk Yoon",
       "Jae-Joon Kim"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:50 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993092",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.11",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/368.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 Design methodologies for machine learning architectures"
     ],
@@ -12962,6 +13739,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993092",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/368.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13022,17 +13800,27 @@
       "RuiJie Wang",
       "TingTing Hwang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:00 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992750",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS22.1",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/106.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS22 Design and test of hardware security primitives"
     ],
@@ -13044,6 +13832,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992750",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/106.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13057,17 +13846,27 @@
       "Shimeng Yu",
       "Krishnendu Chakrabarty"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993204",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS22.2",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/121.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS22 Design and test of hardware security primitives"
     ],
@@ -13079,6 +13878,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993204",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/121.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13235,17 +14035,27 @@
       "Liji Wu",
       "Jian Weng"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:25 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992764",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS22.6",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/921.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS22 Design and test of hardware security primitives"
     ],
@@ -13257,6 +14067,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992764",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/921.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13450,17 +14261,27 @@
       "yong liu",
       "ninghui sun"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:46 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992884",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS22.11",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/698.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS22 Design and test of hardware security primitives"
     ],
@@ -13472,6 +14293,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992884",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/698.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13680,17 +14502,27 @@
       "Jun Lin",
       "Kun Wang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993117",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS23.5",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/773.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS23 Reconfigurable systems"
     ],
@@ -13702,6 +14534,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993117",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/773.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13764,17 +14597,27 @@
       "Ricardo Ferreira",
       "José Nacif"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992752",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS23.7",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1152.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS23 Reconfigurable systems"
     ],
@@ -13786,6 +14629,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992752",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1152.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -13886,17 +14730,27 @@
       "Jiang Xu",
       "Wei Zhang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 11:45 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993051",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS23.10",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/139.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS23 Reconfigurable systems"
     ],
@@ -13908,6 +14762,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993051",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/139.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -14152,17 +15007,27 @@
       "Clark Barrett",
       "Mark Horowitz"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992737",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS24.5",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/592.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS24 Logical analysis and design"
     ],
@@ -14174,6 +15039,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992737",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/592.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -14191,17 +15057,27 @@
       "Bei Yu",
       "Chuan Shi"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:25 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992972",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS24.6",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/673.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS24 Logical analysis and design"
     ],
@@ -14213,6 +15089,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992972",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/673.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -14474,17 +15351,27 @@
       "Yuan Wang",
       "Xiyuan Tang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993192",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS25.2",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/254.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS25 Design and Test for Machine Learning and Machine Learning for Design and Test"
     ],
@@ -14496,6 +15383,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993192",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/254.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -14757,17 +15645,27 @@
       "IIT Jammu",
       "IN"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992945",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS25.8",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1525.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS25 Design and Test for Machine Learning and Machine Learning for Design and Test"
     ],
@@ -14779,6 +15677,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992945",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1525.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -14847,17 +15746,27 @@
       "Meng Wang",
       "Wang Kang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:41 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993259",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS25.10",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/252.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS25 Design and Test for Machine Learning and Machine Learning for Design and Test"
     ],
@@ -14869,6 +15778,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993259",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/252.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -15075,17 +15985,27 @@
       "Yun Hu",
       "Pingqiang Zhou"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:20 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992916",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS26.5",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/663.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS26 Design and test for analog and mixed-signal circuits / systems / MEMS"
     ],
@@ -15097,6 +16017,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992916",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/663.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -15110,17 +16031,27 @@
       "Yining Wang",
       "Peng Wang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:25 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992776",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS26.6",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/696.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS26 Design and test for analog and mixed-signal circuits / systems / MEMS"
     ],
@@ -15132,6 +16063,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992776",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/696.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -15418,17 +16350,27 @@
       "Xing Zhang",
       "Yuan Wang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 14:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993111",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS27.2",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/404.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS27 Design for On-Chip Interconnects"
     ],
@@ -15440,6 +16382,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993111",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/404.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -15831,17 +16774,27 @@
       "Zhiyuan Yan",
       "Hongce Zhang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:35 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993237",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS28.2",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/488.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS28 Test and Verification for Dependability"
     ],
@@ -15853,6 +16806,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993237",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/488.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -15993,17 +16947,27 @@
       "RAVINDRA METTA",
       "Samarjit Chakraborty"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992923",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS28.6",
     "locations": [
       "Salon Pasteur"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1397.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS28 Test and Verification for Dependability"
     ],
@@ -16015,6 +16979,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992923",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1397.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -16358,17 +17323,27 @@
       "Gezi Li",
       "Weikang Qian"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992706",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS29.1",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/306.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS29 Approximate Computing Solutions"
     ],
@@ -16380,6 +17355,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992706",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/306.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -16663,17 +17639,27 @@
       "Jie Han",
       "Honglan Jiang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 17:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993215",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS29.8",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1250.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS29 Approximate Computing Solutions"
     ],
@@ -16685,6 +17671,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993215",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1250.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -16700,17 +17687,27 @@
       "Junping Zhao",
       "Li Jiang"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 17:10 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992781",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS29.9",
     "locations": [
       "St Clair 3AB"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/136.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS29 Approximate Computing Solutions"
     ],
@@ -16722,6 +17719,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992781",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/136.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -16790,17 +17788,27 @@
       "Huawei Li",
       "Xiaowei Li"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10993024",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS30.1",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/70.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS30 System Level Design and Test, Modeling and Verification"
     ],
@@ -16812,6 +17820,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10993024",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/70.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -17011,17 +18020,27 @@
       "Massimo Violante",
       "Giorgio Di Natale"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:55 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992995",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS30.6",
     "locations": [
       "Rhône 3AB"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/447.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS30 System Level Design and Test, Modeling and Verification"
     ],
@@ -17033,6 +18052,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992995",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/447.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -17320,17 +18340,27 @@
       "Nandakishor Yadav",
       "Thomas Kämpfe"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 16:30 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992694",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS31.1",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1305.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS31 Emerging Design Technologies"
     ],
@@ -17342,6 +18372,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992694",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1305.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -17635,17 +18666,27 @@
       "Hyuk-Jae Lee",
       "Xuan Truong Nguyen"
     ],
+    "container": "2025 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 2 April 2025 17:05 CEST"
     ],
+    "doi": "10.23919/date64628.2025.10992691",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS31.8",
     "locations": [
       "Rhône 2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1209.pdf"
     ],
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS31 Emerging Design Technologies"
     ],
@@ -17657,6 +18698,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date64628.2025.10992691",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/1209.pdf",
       "https://date25.date-conference.com/programme"
     ]

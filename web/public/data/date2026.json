@@ -1781,17 +1781,27 @@
       "Sercan Aygun",
       "Dayane Reis"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 11:24 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539348",
     "eventType": "Late Breaking Results",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "LBR02.9",
     "locations": [
       "Aida"
     ],
+    "pages": "1-3",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/3043.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "LBR02 From Sensors to Systems: Efficient and Resilient AI Models and Accelerators"
     ],
@@ -1803,6 +1813,7 @@
       "Late Breaking Results"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539348",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/3043.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -2946,17 +2957,27 @@
       "Chen Pan",
       "Mimi Xie"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 11:00 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539118",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.1",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1420.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Energy Efficiency and Performance Optimization"
     ],
@@ -2968,6 +2989,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539118",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1420.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -3027,17 +3049,27 @@
       "Adrian Evans",
       "Lorena Anghel"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 11:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539599",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.3",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/380.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Energy Efficiency and Performance Optimization"
     ],
@@ -3049,6 +3081,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539599",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/380.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -3146,17 +3179,27 @@
       "Jiang XU",
       "Wei Zhang"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 11:25 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539266",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS01.6",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/227.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS01 Energy Efficiency and Performance Optimization"
     ],
@@ -3168,6 +3211,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539266",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/227.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -3420,17 +3464,27 @@
       "Sylvain Guilley",
       "Naghmeh Karimi"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 11:00 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539660",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS02.1",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1291.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS02 Trustworthy AI-Driven and Hardware-Level Security Techniques"
     ],
@@ -3442,6 +3496,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539660",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1291.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -4311,17 +4366,27 @@
       "Alessio Burrello",
       "Luca Benini"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 11:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539322",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.3",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/603.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 AI inference and learning at the edge"
     ],
@@ -4333,6 +4398,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539322",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/603.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -4486,17 +4552,27 @@
       "Bassem Ouni",
       "Muhammad Shafique"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 11:30 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539297",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS04.7",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1615.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS04 AI inference and learning at the edge"
     ],
@@ -4508,6 +4584,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539297",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1615.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -4739,17 +4816,27 @@
       "Chanhee Jeon",
       "Taewhan Kim"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 14:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539328",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS05.3",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/149.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS05 Innovations in Cross-Layer Optimization for advanced DES"
     ],
@@ -4761,6 +4848,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539328",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/149.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -5153,17 +5241,27 @@
       "Chanhee Jeon",
       "Taewhan Kim"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 14:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539600",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS06.3",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/151.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS06 Thermal and Power Integrity Modeling for Advanced 3D/2.5D IC Systems"
     ],
@@ -5175,6 +5273,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539600",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/151.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -5281,17 +5380,27 @@
       "Georgios Keramidas",
       "Vasilis Pavlidis"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 14:25 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539293",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS06.6",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1055.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS06 Thermal and Power Integrity Modeling for Advanced 3D/2.5D IC Systems"
     ],
@@ -5303,6 +5412,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539293",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1055.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -6017,17 +6127,27 @@
       "Angelo Garofalo",
       "Luca Benini"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 14:20 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539385",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS08.5",
     "locations": [
       "Nabucco"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1290.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS08 Next-Generation AI Hardware Accelerators"
     ],
@@ -6039,6 +6159,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539385",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1290.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -6379,17 +6500,27 @@
       "Steven Derrien",
       "Isabelle Puaut"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 16:45 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539349",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS09.4",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/489.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS09 Intelligent Design Space Exploration and High-Level Synthesis Optimization"
     ],
@@ -6401,6 +6532,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539349",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/489.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -6705,17 +6837,27 @@
       "Ruokai Yin",
       "Priyadarshini Panda"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 16:40 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539133",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS10.3",
     "locations": [
       "Rigoletto"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/346.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS10 Optical, Neuromorphic and In-Sensor Accelerators"
     ],
@@ -6727,6 +6869,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539133",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/346.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -7233,17 +7376,27 @@
       "Said Hamdioui",
       "Mottaqiallah Taouil"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 16:55 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539260",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS11.6",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1252.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS11 Performance and Security in Next-Generation Cryptographic Systems"
     ],
@@ -7255,6 +7408,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539260",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1252.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -7689,17 +7843,27 @@
       "Lukas Burgholzer",
       "Robert Wille"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Monday, 20 April 2026 16:55 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539407",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS12.6",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/613.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS12 Design Automation for Quantum Computing"
     ],
@@ -7711,6 +7875,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539407",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/613.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -8058,17 +8223,27 @@
       "Andreas Gerstlauer",
       "Joon-Sung Yang"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 08:40 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539099",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS13.3",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/431.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS13 Test Generation and Fault Detection for AI/ML and Hybrid Hardware Systems"
     ],
@@ -8080,6 +8255,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539099",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/431.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -8452,17 +8628,27 @@
       "Michael Feldmeier",
       "Robert Wille"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 08:40 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539139",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS14.3",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/515.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS14 Logic and FPGA Synthesis"
     ],
@@ -8474,6 +8660,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539139",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/515.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -8762,17 +8949,27 @@
       "Danila Gorodecky",
       "Leonel Sousa"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 09:11 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539483",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS14.10",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-2",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1247.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS14 Logic and FPGA Synthesis"
     ],
@@ -8784,6 +8981,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539483",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1247.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -9359,17 +9557,27 @@
       "Kevin Garello",
       "Louis Hutin"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 08:35 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539540",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS16.2",
     "locations": [
       "Rigoletto"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/520.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS16 Spintronic Memory-centric Design Architectures"
     ],
@@ -9381,6 +9589,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539540",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/520.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -9765,17 +9974,27 @@
       "Yong Liu",
       "Ninghui Sun"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 11:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539343",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS17.3",
     "locations": [
       "Rigoletto"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1448.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS17 Emerging Threats and Countermeasures in Hardware Security"
     ],
@@ -9787,6 +10006,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539343",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1448.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -9799,17 +10019,27 @@
       "Minhyeok Jeong",
       "Jongmin Lee"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 11:15 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539361",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS17.4",
     "locations": [
       "Rigoletto"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/441.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS17 Emerging Threats and Countermeasures in Hardware Security"
     ],
@@ -9821,6 +10051,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539361",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/441.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -10413,17 +10644,27 @@
       "Jaemin Park",
       "Taejin Paik"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 11:36 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539311",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS18.9",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-3",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1021.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS18 Next-Generation Routing Optimization Techniques"
     ],
@@ -10435,6 +10676,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539311",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1021.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -10635,17 +10877,27 @@
       "Nikil Dutt",
       "Mohsen Imani"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 11:20 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539096",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS19.5",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/705.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS19 Quantization for Hardware-Efficient Neural Networks"
     ],
@@ -10657,6 +10909,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539096",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/705.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -11194,17 +11447,27 @@
       "Li Shang",
       "Fan Yang"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 14:30 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539435",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS20.7",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1201.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS20 Memory-Centric and Neuromorphic Computing: Design and Simulation"
     ],
@@ -11216,6 +11479,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539435",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1201.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -11409,17 +11673,27 @@
       "Tinghuan Chen",
       "Bei Yu"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 14:05 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539075",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.2",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/195.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 AI-driven Analogue and Mixed-Signal Design"
     ],
@@ -11431,6 +11705,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539075",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/195.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -11491,17 +11766,27 @@
       "Rohan Kumar",
       "Borivoje Nikolic"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 14:15 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539309",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.4",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/939.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 AI-driven Analogue and Mixed-Signal Design"
     ],
@@ -11513,6 +11798,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539309",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/939.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -11620,17 +11906,27 @@
       "Bin Ye",
       "Shuo Li"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 14:30 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539333",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS21.7",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1113.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS21 AI-driven Analogue and Mixed-Signal Design"
     ],
@@ -11642,6 +11938,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539333",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1113.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -12803,17 +13100,27 @@
       "Zhi Qu",
       "Yangdi Lyu"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 16:35 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539325",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS24.2",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1054.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS24 Formal Verification and Automated Testing"
     ],
@@ -12825,6 +13132,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539325",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1054.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -13336,17 +13644,27 @@
       "Christoph Strohmeyer",
       "Jürgen Teich"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 16:45 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539313",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS25.4",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/492.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS25 Efficient AI Systems, Model Compression, and Edge Optimisation"
     ],
@@ -13358,6 +13676,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539313",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/492.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -13646,17 +13965,27 @@
       "Tsung-Yi Ho",
       "Tinghuan Chen"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 16:30 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539307",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS26.1",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/21.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS26 Advanced methods for Placement and Partitioning"
     ],
@@ -13668,6 +13997,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539307",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/21.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -14014,17 +14344,27 @@
       "Dimitrios Garyfallou",
       "George Stamoulis"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 17:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539147",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS26.9",
     "locations": [
       "Aida"
     ],
+    "pages": "1-3",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/865.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS26 Advanced methods for Placement and Partitioning"
     ],
@@ -14036,6 +14376,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539147",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/865.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -14097,17 +14438,27 @@
       "Bei Yu",
       "Ningmu Zou"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 21 April 2026 16:30 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539589",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS27.1",
     "locations": [
       "Nabucco"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/262.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS27 Advances in modelling and mitigation of defects, faults, variability, and reliability"
     ],
@@ -14119,6 +14470,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539589",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/262.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -14604,17 +14956,27 @@
       "Josep Balasch",
       "Ingrid Verbauwhede"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 08:35 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539659",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS28.2",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/184.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS28 Design and test of hardware security primitives"
     ],
@@ -14626,6 +14988,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539659",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/184.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -15503,17 +15866,27 @@
       "Jianli Chen",
       "Jun Yu"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 08:35 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539284",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS30.2",
     "locations": [
       "Nabucco"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/72.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS30 Reconfigurable systems, accelerators and tools"
     ],
@@ -15525,6 +15898,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539284",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/72.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -15631,17 +16005,27 @@
     "authors": [
       "Rohit Prasad"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 08:50 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539188",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS30.5",
     "locations": [
       "Nabucco"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/518.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS30 Reconfigurable systems, accelerators and tools"
     ],
@@ -15653,6 +16037,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539188",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/518.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -16088,17 +16473,27 @@
       "IIT Hyderabad",
       "IN"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 08:50 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539728",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS31.5",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1011.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS31 Beyond the Core: Optimising, Scaling and Securing Heterogeneous Architectures"
     ],
@@ -16110,6 +16505,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539728",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1011.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -16875,17 +17271,27 @@
       "Xiyuan Tang",
       "Yuan Wang"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 11:10 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539612",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS33.3",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/701.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS33 Efficient and Secure AI for Robotics and Autonomous Systems"
     ],
@@ -16897,6 +17303,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539612",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/701.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -16958,17 +17365,27 @@
       "Chaoran Yuan",
       "Fadi Kurdahi"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 11:20 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539505",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS33.5",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/646.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS33 Efficient and Secure AI for Robotics and Autonomous Systems"
     ],
@@ -16980,6 +17397,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539505",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/646.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -17135,17 +17553,27 @@
       "Junzhan Liu",
       "Wang Kang"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 11:40 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539336",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS33.9",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-3",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/217.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS33 Efficient and Secure AI for Robotics and Autonomous Systems"
     ],
@@ -17157,6 +17585,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539336",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/217.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -18023,17 +18452,27 @@
       "Jungmin Choi",
       "Yeseong Kim"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 14:00 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539271",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS36.1",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/87.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS36 Next-Generation Memory Systems for AI acceleration"
     ],
@@ -18045,6 +18484,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539271",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/87.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -18195,17 +18635,27 @@
       "yinhe han",
       "Xiaoming Chen"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 14:20 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539626",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS36.5",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/801.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS36 Next-Generation Memory Systems for AI acceleration"
     ],
@@ -18217,6 +18667,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539626",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/801.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -18328,17 +18779,27 @@
       "Jingyi Yu",
       "Xin Lou"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 14:35 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539641",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS36.9",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-3",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/221.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS36 Next-Generation Memory Systems for AI acceleration"
     ],
@@ -18350,6 +18811,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539641",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/221.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -18548,17 +19010,27 @@
       "Karim Ali Ahmed",
       "Massimo Alioto"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 14:15 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539712",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS37.4",
     "locations": [
       "Aida"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/724.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS37 Low-power, energy-efficient, and thermal-aware design"
     ],
@@ -18570,6 +19042,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539712",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/724.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -18822,17 +19295,27 @@
       "Lianmao Peng",
       "Rongmei Chen"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 14:41 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539119",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS37.10",
     "locations": [
       "Aida"
     ],
+    "pages": "1-3",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1074.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS37 Low-power, energy-efficient, and thermal-aware design"
     ],
@@ -18844,6 +19327,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539119",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/1074.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -19090,17 +19574,27 @@
       "Meiyan Teng",
       "Yanchao Zhao"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 16:55 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539340",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS38.6",
     "locations": [
       "Tosca"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/226.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS38 Ultra-Reliable and Efficient Mixed-Criticality Systems"
     ],
@@ -19112,6 +19606,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539340",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/226.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -19226,17 +19721,27 @@
       "Gang Li",
       "Jian Cheng"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 16:30 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539465",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS39.1",
     "locations": [
       "Traviata"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/267.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS39 Approximate Computing Solutions for Deep Learning"
     ],
@@ -19248,6 +19753,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539465",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/267.pdf",
       "https://www.date-conference.com/programme"
     ]
@@ -20213,17 +20719,27 @@
       "Peng Lianmao",
       "Chen Rongmei"
     ],
+    "container": "2026 Design, Automation &amp;amp; Test in Europe Conference (DATE)",
     "dates": [
       "Wednesday, 22 April 2026 16:45 CEST"
     ],
+    "doi": "10.23919/date69613.2026.11539364",
     "eventType": "Technical Session",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "TS41.4",
     "locations": [
       "Nabucco"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://www.date-conference.com/proceedings-archive/2026/DATA/822.pdf"
     ],
+    "publicationDate": "2026-04-20",
+    "publisher": "IEEE",
     "sessionTitles": [
       "TS41 Photonics, 3D integration, and more: bridging physics and performance"
     ],
@@ -20235,6 +20751,7 @@
       "Technical Session"
     ],
     "urls": [
+      "https://doi.org/10.23919/date69613.2026.11539364",
       "https://www.date-conference.com/proceedings-archive/2026/DATA/822.pdf",
       "https://www.date-conference.com/programme"
     ]

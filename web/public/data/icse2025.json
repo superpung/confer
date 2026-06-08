@@ -592,14 +592,24 @@
       "Antu Saha",
       "Oscar Chaparro"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 14:00 - 14:15"
     ],
+    "doi": "10.1109/icse55347.2025.00241",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "063d8edd-b80a-4134-9729-3005ca6ea4c5",
     "locations": [
       "204"
     ],
+    "pages": "2316-2328",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Comprehension 4"
     ],
@@ -611,6 +621,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00241",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/244/Decoding-the-Issue-Resolution-Process-In-Practice-via-Issue-Report-Analysis-A-Case-S",
       "https://arxiv.org/abs/2502.16546",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -618,6 +629,13 @@
   },
   {
     "abstract": "As software projects rapidly evolve, software artifacts become more complex and defects behind get harder to identify. The emerging Transformer-based approaches, though achieving remarkable performance, struggle with long code sequences due to their self-attention mechanism, which scales quadratically with the sequence length. This paper introduces SparseCoder, an innovative approach incorporating sparse attention and learned token pruning (LTP) method (adapted from natural language processing) to address this limitation. Compared to previous state-of-the-art models (CodeBERT, RoBERTa and CodeT5), our experiments demonstrate that SparseCoder can handle significantly longer input sequences–at least twice as long, within the limits of our hardware resources and data statistics. Additionally, SparseCoder is four times faster than other methods measured in runtime, achieving a 50% reduction in floating point operations per second (FLOPs) with a negligible performance drop of less than 1% compared to Transformers using sparse attention (Sparse Atten). Plotting FLOPs of model inference against token lengths reveals that SparseCoder scales linearly, whereas other methods, including the current state-of-the-art model CodeT5, scale quadratically. Moreover, SparseCoder enhances interpretability by visualizing non-trivial tokens layer-wise.",
+    "authorIds": [
+      "0000-0002-8256-0604",
+      "",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Xueqi Yang (North Carolina State University); Mariusz Jakubowski (Microsoft); Li Kang (Microsoft); Haojie Yu (Microsoft); Tim Menzies (North Carolina State University)",
     "authors": [
       "Xueqi Yang",
@@ -626,15 +644,27 @@
       "Haojie Yu",
       "Tim Menzies"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 30 Apr 2025 17:15 - 17:22"
     ],
     "doi": "10.1007/s10664-024-10558-1",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "069a5d89-f9e2-4d63-987a-8df69368f871",
+    "issue": "1",
     "locations": [
       "212"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-024-10558-1.pdf"
+    ],
+    "publicationDate": "2025-01-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "AI for Analysis 2"
     ],
@@ -646,11 +676,12 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-024-10558-1",
       "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/84/SparseCoder-Advancing-Source-Code-Analysis-with-Sparse-Attention-and-Learned-Token-P",
       "https://link.springer.com/article/10.1007/s10664-024-10558-1",
-      "https://doi.org/10.1007/s10664-024-10558-1",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Machine Learning (ML) algorithms are increasingly used in decision-making process across various social-critical domains, but they often somewhat inherit and amplify bias from their training data, leading to unfair and unethical outcomes. This issue highlights the urgent need for effective methods to detect, explain, and mitigate bias to ensure the fairness of ML systems. Previous studies are prone to analyze the root causes of algorithmic bias from a statistical perspective. However, to the best of our knowledge, none of them has discussed how sensitive information inducing the final discriminatory decision is encoded by ML models. In this work, we attempt to explain and mitigate algorithmic bias from a game-theoretic view. We mathematically decode an essential and common component of sensitive information implicitly defined by various fairness metrics with Harsanyi interactions, and on this basis, we propose an in-processing method HIFI for bias mitigation. We conduct an extensive evaluation of HIFI with 11 state-of-the-art methods, 5 real-world datasets, 4 fairness criteria, and 5 ML performance metrics, while also considering intersectional fairness for multiple protected attributes. The results show that HIFI surpasses state-of-the-art in-processing methods in terms of fairness improvement and fairness-performance trade-off, and also achieves notable effectiveness in reducing violations of individual fairness simultaneously.",
@@ -792,14 +823,24 @@
       "Xiwei (Sherry) Xu",
       "Liming Zhu"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:30 - 11:45"
     ],
+    "doi": "10.1109/icse55347.2025.00144",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "08b8c2a6-88f0-4174-bafc-f1400e89fe1d",
     "locations": [
       "214"
     ],
+    "pages": "463-475",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Testing and QA 1"
     ],
@@ -811,6 +852,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00144",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/74/SeeAction-Towards-Reverse-Engineering-How-What-Where-of-HCI-Actions-from-Screencasts",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -898,6 +940,15 @@
   },
   {
     "abstract": "Deep Learning (DL) techniques have been widely deployed in many application domains. The growth of DL models’ size and complexity demands distributed training of DL models. Since DL training is complex, software implementing distributed DL training is error-prone. Thus, it is crucial to test distributed deep learning software to improve its reliability and quality. To address this issue, we propose a differential testing technique�D3, which leverages a distributed equivalence rule that we create to test distributed deep learning software. The rationale is that the same model trained with the same model input under different distributed settings should produce equivalent prediction output within certain thresholds. The different output indicates potential bugs in the distributed deep learning software. D3 automatically generates a diverse set of distributed settings, DL models, and model input to test distributed deep learning software. Our evaluation on two of the most popular DL libraries, i.e., PyTorch and TensorFlow, shows that D3 detects 21 bugs, including 12 previously unknown bugs.",
+    "authorIds": [
+      "0009-0002-8978-312X",
+      "",
+      "0009-0005-3058-2034",
+      "0000-0002-6690-8332",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Jiannan Wang (Purdue University); Hung Viet Pham (York University); Qi Li; Lin Tan (Purdue University); Yu Guo (Meta Inc.); Adnan Aziz (Meta Inc.); Erik Meijer",
     "authors": [
       "Jiannan Wang",
@@ -998,14 +1049,24 @@
       "Ying Li",
       "Gang Huang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 17:00 - 17:15"
     ],
+    "doi": "10.1109/icse55347.2025.00189",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0b4955ce-a635-4c59-9acc-d4029141d617",
     "locations": [
       "213"
     ],
+    "pages": "2918-2930",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 3"
     ],
@@ -1017,6 +1078,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00189",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/213/Weakly-supervised-Log-based-Anomaly-Detection-with-Inexact-Labels-via-Multi-instance-",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -1032,14 +1094,24 @@
       "Haowen Yang",
       "Pinjia He"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:00 - 11:15"
     ],
+    "doi": "10.1109/icse55347.2025.00046",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0ba7f001-a556-4f1d-b13f-bcb4a84b0cdb",
     "locations": [
       "204"
     ],
+    "pages": "66-77",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Comprehension 1"
     ],
@@ -1051,6 +1123,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00046",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/35/An-Empirical-Study-on-Package-Level-Deprecation-in-Python-Ecosystem",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -1218,14 +1291,24 @@
       "Mutian Yang",
       "Wenxiang Ou"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Thu 1 May 2025 15:00 - 15:15"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00083",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0ce4666f-c2b5-443d-b024-a94cb0d2c848",
     "locations": [
       "211"
     ],
+    "pages": "291-302",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Industry Challenge Presentations"
     ],
@@ -1237,6 +1320,7 @@
       "Industry Challenge Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00083",
       "https://conf.researchr.org/details/icse-2025/icse-2025-industry-challenge-track/6/Exploring-Large-Language-Models-for-Analyzing-Open-Source-License-Conflicts-How-Far-",
       "https://huggingface.co/datasets/AnonymousAuthors/OSS-License-Terms",
       "https://huggingface.co/AnonymousAuthors/License-Llama3-8B",
@@ -1443,14 +1527,24 @@
       "Juergen Rahmel",
       "Shuai Wang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 12:00 - 12:15"
     ],
+    "doi": "10.1109/icse55347.2025.00107",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0fb2894b-1a96-49d6-89d2-ee271aec1c68",
     "locations": [
       "215"
     ],
+    "pages": "2251-2263",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI with Quality 1"
     ],
@@ -1462,6 +1556,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00107",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/81/Testing-and-Understanding-Deviation-Behaviors-in-FHE-hardened-Machine-Learning-Models",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -1655,14 +1750,24 @@
       "Lutfar Rahman Alif",
       "Denys Poshyvanyk"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "dates": [
       "Fri 2 May 2025 15:15 - 15:30"
     ],
+    "doi": "10.1109/icse-nier66352.2025.00025",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1270f7df-19b1-48d3-8778-6718835afb9b",
     "locations": [
       "214"
     ],
+    "pages": "96-100",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Testing and QA 6"
     ],
@@ -1674,6 +1779,7 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-nier66352.2025.00025",
       "https://conf.researchr.org/details/icse-2025/icse-2025-nier/10/How-Propense-Are-Large-Language-Models-at-Producing-Code-Smells-A-Benchmarking-Study",
       "https://arxiv.org/abs/2412.18989",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -1734,14 +1840,24 @@
       "Denys Poshyvanyk",
       "Jinsong Su"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "dates": [
       "Fri 2 May 2025 11:45 - 12:00"
     ],
+    "doi": "10.1109/icse-nier66352.2025.00020",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "13ece32a-d490-4196-a4f4-5f975ab11a05",
     "locations": [
       "Canada Hall 1 and 2"
     ],
+    "pages": "71-75",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for SE 3"
     ],
@@ -1753,6 +1869,7 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-nier66352.2025.00020",
       "https://conf.researchr.org/details/icse-2025/icse-2025-nier/8/UniGenCoder-Merging-Seq2Seq-and-Seq2Tree-Paradigms-for-Unified-Code-Generation",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -1804,14 +1921,24 @@
       "Ben Ferrari-Church",
       "Satish Chandra"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Fri 2 May 2025 17:00 - 17:15"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00060",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "14f6187a-f307-42bb-9f80-f546dea0928a",
     "locations": [
       "212"
     ],
+    "pages": "618-629",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Process"
     ],
@@ -1823,6 +1950,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00060",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/26/How-much-does-AI-impact-development-speed-An-enterprise-based-randomized-controlled-",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -1839,14 +1967,24 @@
       "Sen Nie",
       "Shi Wu"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 14:15 - 14:30"
     ],
+    "doi": "10.1109/icse55347.2025.00055",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "15e42a85-620e-49bc-aeb5-579106748969",
     "locations": [
       "204"
     ],
+    "pages": "2329-2341",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Comprehension 4"
     ],
@@ -1858,6 +1996,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00055",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/66/Preserving-Privacy-in-Software-Composition-Analysis-A-Study-of-Technical-Solutions-a",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -1906,14 +2045,24 @@
       "Huajie Shao",
       "Denys Poshyvanyk"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:45 - 17:00"
     ],
+    "doi": "10.1109/icse55347.2025.00177",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "173d0f8c-0182-4ae8-ad05-edd45b858605",
     "locations": [
       "210"
     ],
+    "pages": "769-781",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI with Security"
     ],
@@ -1925,6 +2074,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00177",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/168/Towards-More-Trustworthy-Deep-Code-Models-by-Enabling-Out-of-Distribution-Detection",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -3030,6 +3180,14 @@
   },
   {
     "abstract": "Neural Language Models of Code, or Neural Code Models (NCMs), are rapidly progressing from research prototypes to commercial developer tools. As such, understanding the capabilities and limitations of such models is becoming critical. However, the abilities of these models are typically measured using automated metrics that often only reveal a portion of their real-world performance. While, in general, the performance of NCMs appears promising, currently much is unknown about how such models arrive at decisions. To this end, this paper introduces do-code , a post hoc interpretability method specific to NCMs that is capable of explaining model predictions. do-code is based upon causal inference to enable programming language-oriented explanations. While the theoretical underpinnings of docodecode are extensible to exploring different model properties, we provide a concrete instantiation that aims to mitigate the impact of spurious correlations by grounding explanations of model behavior in properties of programming languages. To demonstrate the practical benefit of docodecode , we illustrate the insights that our framework can provide by performing a case study on two popular deep learning architectures and ten NCMs. The results of this case study illustrate that our studied NCMs are sensitive to changes in code syntax. All our NCMs, except for the BERT-like model, statistically learn to predict tokens related to blocks of code ( e.g., brackets, parenthesis, semicolon) with less confounding bias as compared to other programming language constructs. These insights demonstrate the potential of docodecode as a useful method to detect and facilitate the elimination of confounding bias in NCMs.",
+    "authorIds": [
+      "0000-0001-6166-7595",
+      "0000-0002-4829-1017",
+      "0000-0003-2498-705X",
+      "0009-0004-0333-8880",
+      "0000-0001-9683-5616",
+      "0000-0002-5626-7586"
+    ],
     "authorInstitutions": "David Nader Palacio (William & Mary); Alejandro Velasco (William & Mary); Nathan Cooper (William & Mary); Alvaro Rodriguez (Universidad Nacional de Colombia); Kevin Moran (University of Central Florida); Denys Poshyvanyk (William & Mary)",
     "authors": [
       "David Nader Palacio",
@@ -3039,15 +3197,28 @@
       "Kevin Moran",
       "Denys Poshyvanyk"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 30 Apr 2025 17:15 - 17:30"
     ],
     "doi": "10.1109/TSE.2024.3379943",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "24119cc5-616d-47cc-bce1-188652b61fc5",
+    "issue": "5",
     "locations": [
       "Canada Hall 1 and 2"
     ],
+    "pages": "1215-1243",
+    "pdfUrls": [
+      "https://ieeexplore.ieee.org/ielam/32/10531114/10477672-aam.pdf"
+    ],
+    "publicationDate": "2024-05-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "AI for SE 2"
     ],
@@ -3059,12 +3230,14 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/TSE.2024.3379943",
       "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/59/Toward-a-Theory-of-Causation-for-Interpreting-Neural-Code-Models",
       "https://ieeexplore.ieee.org/document/10477672",
-      "https://doi.org/10.1109/TSE.2024.3379943",
       "https://arxiv.org/abs/2302.03788",
-      "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+      "https://conf.researchr.org/program/icse-2025/program-icse-2025/",
+      "https://doi.org/10.1109/tse.2024.3379943"
+    ],
+    "volume": "50"
   },
   {
     "abstract": "Software has become ubiquitous, and emerging software applications quickly become part of everyday life. Despite its many positive contributions, software is often perceived negatively, for example when users worry about software-mediated surveillance, discrimination and manipulation. Software users regularly share their perspectives on ethical issues, discussing it online with international communities. Our goal is to fill current knowledge gaps about these perspectives and understand the distinct contexts of communities that hold them. We aim to structure the context that describes ethical issues in a knowledge graph, and deduce user’s stances towards them. We analyze how these perspectives change over time. Our work is meant to support software evolution by explaining different sides of ethical issues found in software.",
@@ -3170,15 +3343,25 @@
       "Harsha Perera",
       "Arif Nurwidyantoro"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Thu 1 May 2025 15:30 - 16:00",
       "Fri 2 May 2025 13:00 - 13:30"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00025",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "24d1284b-86ee-4b88-a5fe-6c52ca332312",
     "locations": [
       "Canada Hall 3 Poster Area"
     ],
+    "pages": "197-201",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Thu Afternoon Break Posters 15:30-16:00",
       "Fri Lunch Posters 13:00-13:30"
@@ -3192,6 +3375,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00025",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/16/Strategies-to-Embed-Human-Values-in-Mobile-Apps-What-do-End-Users-and-Practitioners-",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -3237,6 +3421,15 @@
   },
   {
     "abstract": "Program reduction strives to eliminate bug-irrelevant code elements from a bug-triggering program, so that (1) a smaller and more straightforward bug-triggering program can be obtained, (2) and the difference among duplicates (i.e., different programs that trigger the same bug) can be minimized or even eliminated. With such reduction and canonicalization functionality, program reduction facilitates debugging for software, especially language toolchains, such as compilers, interpreters, and debuggers. While many program reduction techniques have been proposed, most of them (especially the language-agnostic ones) overlooked the potential reduction opportunities hidden within tokens. Therefore, their capabilities in terms of reduction and canonicalization are significantly restricted. To fill this gap, we propose T-Rec, a fine-grained language-agnostic program reduction technique guided by lexical syntax. Instead of treating tokens as atomic and irreducible components, T-Rec introduces a fine-grained reduction process that leverages the lexical syntax of programming languages to effectively explore the reduction opportunities in tokens. Through comprehensive evaluations with versatile benchmark suites, we demonstrate that T-Rec significantly improves the reduction and canonicalization capability of two existing language-agnostic program reducers (i.e., Perses and Vulcan). T-Rec enables Perses and Vulcan to further eliminate 1,294 and 1,315 duplicates in a benchmark suite that contains 3,796 test cases that triggers 46 unique bugs. Additionally, T-Rec can also reduce up to 65.52% and 53.73% bytes in the results of Perses and Vulcan on our multi-lingual benchmark suite, respectively.",
+    "authorIds": [
+      "0000-0002-9451-4031",
+      "0000-0003-1644-2965",
+      "0000-0002-3463-2802",
+      "0009-0007-7663-6207",
+      "0000-0002-8995-5924",
+      "0000-0003-0955-503X",
+      "0000-0002-0862-2491"
+    ],
     "authorInstitutions": "Zhenyang Xu (University of Waterloo); Yongqiang Tian; Mengxiao Zhang; Jiarui Zhang (University of Waterloo); Puzhuo Liu (Ant Group & Tsinghua University); Yu Jiang (Tsinghua University); Chengnian Sun (University of Waterloo)",
     "authors": [
       "Zhenyang Xu",
@@ -3582,15 +3775,25 @@
       "will wang",
       "Fenglin Bi"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Thu 1 May 2025 10:30 - 11:00",
       "Fri 2 May 2025 13:00 - 13:30"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00022",
     "eventType": "Poster",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "272fd779-4ce1-4cfc-aac5-9c964dcb1c8d",
     "locations": [
       "Canada Hall 3 Poster Area"
     ],
+    "pages": "49-52",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Thu Morning Break Posters 10:30-11",
       "Fri Lunch Posters 13:00-13:30"
@@ -3604,6 +3807,7 @@
       "Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00022",
       "https://conf.researchr.org/details/icse-2025/icse-2025-demonstrations/6/HyperCRX-2-0-A-Comprehensive-and-Automated-Tool-for-Empowering-GitHub-Insights",
       "https://github.com/hypertrons/hypertrons-crx",
       "https://youtu.be/y4mCCfFVux0",
@@ -3783,14 +3987,24 @@
       "Hashini Gunatilake",
       "Rashina Hoda"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Fri 2 May 2025 17:15 - 17:30"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00023",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "298b3bab-88b6-4d1a-9e83-69f984c9732f",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "173-184",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social for AI"
     ],
@@ -3802,12 +4016,20 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00023",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/8/What-Does-a-Software-Engineer-Look-Like-Exploring-Societal-Stereotypes-in-LLMs",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
   },
   {
     "abstract": "Quantum Neural Network (QNN) combines the Deep Learning (DL) principle with the fundamental theory of quantum mechanics to achieve machine learning tasks with quantum acceleration. Recently, QNN systems have been found to manifest robustness issues similar to classical DL systems. There is an urgent need for ways to test their correctness and security. However, QNN systems differ significantly from traditional quantum software and classical DL systems, posing critical challenges for QNN testing. These challenges include the inapplicability of traditional quantum software testing methods to QNN systems due to differences in programming paradigms and decision logic representations, the dependence of quantum test sample generation on perturbation operators, and the absence of effective information in quantum neurons. In this paper, we propose QuanTest, a quantum entanglement-guided adversarial testing framework to uncover potential erroneous behaviors in QNN systems. We design a quantum entanglement adequacy criterion to quantify the entanglement acquired by the input quantum states from the QNN system, along with two similarity metrics to measure the proximity of generated quantum adversarial examples to the original inputs. Subsequently, QuanTest formulates the problem of generating test inputs that maximize the quantum entanglement adequacy and capture incorrect behaviors of the QNN system as a joint optimization problem and solves it in a gradient-based manner to generate quantum adversarial examples. Experimental results demonstrate that QuanTest possesses the capability to capture erroneous behaviors in QNN systems (generating 67.48%-96.05% more high-quality test samples than the random noise under the same perturbation size constraints). The entanglement-guided approach proves effective in adversarial testing, generating more adversarial examples (maximum increase reached 21.32%).",
+    "authorIds": [
+      "0000-0002-0624-3340",
+      "0009-0004-6842-5440",
+      "0000-0002-9040-7247",
+      "0000-0003-0955-503X",
+      "0000-0002-0019-4197"
+    ],
     "authorInstitutions": "Jinjing Shi (Central South University); Zimeng Xiao (Central South University); Heyuan Shi (Central South University); Yu Jiang (Tsinghua University); Xuelong LI (China Telecom)",
     "authors": [
       "Jinjing Shi",
@@ -3816,6 +4038,7 @@
       "Yu Jiang",
       "Xuelong LI"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 30 Apr 2025 15:30 - 16:00",
       "Thu 1 May 2025 13:00 - 13:30",
@@ -3823,11 +4046,20 @@
     ],
     "doi": "10.1145/3688840",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "29ffd938-409d-4f0c-a778-a527f15a9da7",
+    "issue": "2",
     "locations": [
       "Canada Hall 3 Poster Area",
       "214"
     ],
+    "pages": "1-32",
+    "publicationDate": "2025-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Wed Afternoon Break Posters 15:30-16:00",
       "Thu Lunch Posters 13:00-13:30",
@@ -3843,10 +4075,12 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3688840",
       "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/52/QuanTest-Entanglement-Guided-Testing-of-Quantum-Neural-Network-Systems",
       "https://dl.acm.org/doi/10.1145/3688840",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+    ],
+    "volume": "34"
   },
   {
     "abstract": "Dockerfile flakiness—unpredictable temporal build failures caused by external dependencies and evolving environments—undermines deployment reliability and increases debugging overhead. Unlike traditional Dockerfile issues, flakiness occurs without modifications to the Dockerfile itself, complicating its resolution. In this work, we present the first comprehensive study of Dockerfile flakiness, featuring a nine-month analysis of 8,132 Dockerized projects, revealing that around 10% exhibit flaky behavior. We propose a taxonomy categorizing common flakiness causes, including dependency errors and server connectivity issues. Existing tools fail to effectively address these challenges due to their reliance on pre-defined rules and limited generalizability. To overcome these limitations, we introduce FLAKIDOCK, a novel repair framework combining static and dynamic analysis, similarity retrieval, and an iterative feedback loop powered by Large Language Models (LLMs). Our evaluation demonstrates that FLAKIDOCK achieves a repair accuracy of 73.55%, significantly surpassing state-of-the-art tools and baselines.",
@@ -3901,14 +4135,24 @@
       "Foutse Khomh",
       "Hridesh Rajan"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 16:30 - 16:45"
     ],
+    "doi": "10.1109/icse55347.2025.00220",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2afe95b1-2338-412a-9e7b-8a51fb08b9d3",
     "locations": [
       "215"
     ],
+    "pages": "2970-2982",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI with Quality 3"
     ],
@@ -3920,6 +4164,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00220",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/236/Mock-Deep-Testing-Toward-Separate-Development-of-Data-and-Models-for-Deep-Learning",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4103,14 +4348,24 @@
       "Kristóf Umann",
       "Zoltán Porkoláb"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Thu 1 May 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00021",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2e1010d4-bbb9-4aa1-aa2a-a99e0147c84b",
     "locations": [
       "205"
     ],
+    "pages": "170-180",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Analysis 2"
     ],
@@ -4122,6 +4377,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00021",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/13/Towards-Better-Static-Analysis-Bug-Reports-in-the-Clang-Static-Analyzer",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4179,14 +4435,24 @@
       "Youngjae Choi",
       "Seunghoon Woo"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 14:45 - 15:00"
     ],
+    "doi": "10.1109/icse55347.2025.00188",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2f1c16a9-602a-4fe2-b3cb-823ff9ee3a85",
     "locations": [
       "210"
     ],
+    "pages": "2458-2469",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security and Analysis 3"
     ],
@@ -4198,6 +4464,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00188",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/190/TIVER-Identifying-Adaptive-Versions-of-C-C-Third-Party-Open-Source-Components-Usin",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4208,14 +4475,24 @@
     "authors": [
       "Mohammed Latif Siddiq"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 09:05 - 09:11"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00023",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2f9bf3b7-b57d-46ff-bc24-c613513284a6",
     "locations": [
       "212"
     ],
+    "pages": "53-57",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 1: Security & Miscellaneous (talks and panel)"
     ],
@@ -4227,6 +4504,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00023",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/26/Advancing-Secure-and-Standard-Source-Code-Generation-Techniques",
       "https://lsiddiqsunny.github.io/public/ICSE_DS.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -4243,14 +4521,24 @@
       "Yong Wang",
       "Qing Liao"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 14:00 - 14:15"
     ],
+    "doi": "10.1109/icse55347.2025.00121",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2fdd06b2-0390-45ca-b41a-1f336d773df9",
     "locations": [
       "213"
     ],
+    "pages": "1-13",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 2"
     ],
@@ -4262,6 +4550,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00121",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/106/Repository-Level-Graph-Representation-Learning-for-Enhanced-Security-Patch-Detection",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4275,14 +4564,24 @@
       "Robert Feldt",
       "Dhasarathy Parthasarathy"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00211",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "31321893-d6c3-4a80-877c-7910d3638dff",
     "locations": [
       "213"
     ],
+    "pages": "373-384",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Autonomy"
     ],
@@ -4294,6 +4593,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00211",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/214/Automating-a-Complete-Software-Test-Process-Using-LLMs-An-Automotive-Case-Study",
       "https://arxiv.org/abs/2502.04008",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -4354,14 +4654,24 @@
       "Yuchi Ma",
       "Zibin Zheng"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:45 - 17:00"
     ],
+    "doi": "10.1109/icse55347.2025.00014",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3240a207-b9d7-457b-abcf-fcc69eace68b",
     "locations": [
       "Canada Hall 1 and 2"
     ],
+    "pages": "1140-1152",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for SE 2"
     ],
@@ -4373,6 +4683,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00014",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/24/RLCoder-Reinforcement-Learning-for-Repository-Level-Code-Completion",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4497,14 +4808,24 @@
       "Filipe Cogo",
       "Bram Adams"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 17:00 - 17:15"
     ],
+    "doi": "10.1109/icse55347.2025.00236",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "33edfb0e-7571-4d5d-bc6d-99f2811406f0",
     "locations": [
       "Canada Hall 1 and 2"
     ],
+    "pages": "1153-1164",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for SE 2"
     ],
@@ -4516,6 +4837,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00236",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/234/InterTrans-Leveraging-Transitive-Intermediate-Translations-to-Enhance-LLM-based-Code",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4529,14 +4851,24 @@
       "Minghui Zhou",
       "Kai Yang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Thu 1 May 2025 11:00 - 11:15"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00013",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "34662300-9f1e-4678-8c5d-f4930f18764b",
     "locations": [
       "205"
     ],
+    "pages": "13-16",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Analysis 2"
     ],
@@ -4548,6 +4880,7 @@
       "Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00013",
       "https://conf.researchr.org/details/icse-2025/icse-2025-demonstrations/5/SIT-An-accurate-compliant-SBOM-generator-with-incremental-construction",
       "https://github.com/osslab-pku/SIT",
       "https://youtu.be/LbzslijVPLc",
@@ -4564,14 +4897,24 @@
       "Qi Xin",
       "Wenjie Liu"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 14:30 - 14:45"
     ],
+    "doi": "10.1109/icse55347.2025.00008",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3494f8fb-2a9e-480b-9cba-bd5fdce6b164",
     "locations": [
       "213"
     ],
+    "pages": "1857-1868",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Program Comprehension 2"
     ],
@@ -4583,6 +4926,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00008",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/4/HedgeCode-A-Multi-Task-Hedging-Contrastive-Learning-Framework-for-Code-Search",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -4794,6 +5138,18 @@
   },
   {
     "abstract": "Cloud systems, typically comprised of various components (e.g., microservices), are susceptible to performance issues, which may cause service-level agreement violations and financial losses. Identifying performance issues is thus of paramount importance for cloud vendors. In current practice, crucial metrics, i.e., key performance indicators (KPIs), are monitored periodically to provide insight into the operational status of components. Identifying performance issues is often formulated as an anomaly detection problem, which is tackled by analyzing each metric independently. However, this approach overlooks the complex dependencies existing among cloud components. Some graph neural network-based methods take both temporal and relational information into account, however, the correlation violations in the metrics that serve as indicators of underlying performance issues are difficult for them to identify. Furthermore, a large volume of components in a cloud system results in a vast array of noisy metrics. This complexity renders it impractical for engineers to fully comprehend the correlations, making it challenging to identify performance issues accurately. To address these limitations, we propose Identifying Performance Issues based on Relational-Temporal Features (ISOLATE ), a learning-based approach that leverages both the relational and temporal features of metrics to identify performance issues. In particular, it adopts a graph neural network with attention to characterizing the relations among metrics and extracts long-term and multi-scale temporal patterns using a GRU and a convolution network, respectively. The learned graph attention weights can be further used to localize the correlation-violated metrics. Moreover, to relieve the impact of noisy data, ISOLATE utilizes a positive unlabeled learning strategy that tags pseudo labels based on a small portion of confirmed negative examples. Extensive evaluation on both public and industrial datasets shows that ISOLATE outperforms all baseline models with 0.945 F1-score and 0.920 Hit rate@3. The ablation study also proves the effectiveness of the relational-temporal features and the PU-learning strategy. Furthermore, we share the success stories of leveraging ISOLATE to identify performance issues in Huawei Cloud, which demonstrates its superiority in practice.",
+    "authorIds": [
+      "0000-0003-1096-2732",
+      "0000-0003-0037-1912",
+      "0000-0001-5158-6716",
+      "0000-0002-8262-9608",
+      "0000-0002-3338-8561",
+      "0000-0002-5831-9474",
+      "0009-0000-5556-4004",
+      "0000-0001-6307-7310",
+      "0000-0001-9733-4346",
+      "0000-0002-3666-5798"
+    ],
     "authorInstitutions": "Wenwei Gu (The Chinese University of Hong Kong); Jinyang Liu (Chinese University of Hong Kong); Zhuangbin Chen (Sun Yat-sen University); Jianping Zhang (The Chinese University of Hong Kong); Yuxin Su (Sun Yat-sen University); Jiazhen Gu (Chinese University of Hong Kong); Cong Feng (Huawei Cloud Computing Technology); Zengyin Yang (Computing and Networking Innovation Lab, Huawei Cloud Computing Technology Co., Ltd); Yongqiang Yang (Huawei Cloud Computing Technology); Michael Lyu (The Chinese University of Hong Kong)",
     "authors": [
       "Wenwei Gu",
@@ -4985,14 +5341,24 @@
       "Nikita Povarov",
       "Timofey Bryksin"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Fri 2 May 2025 16:00 - 16:15"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00055",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "36b1c892-25e8-4919-8262-b7bcaf1f24b5",
     "locations": [
       "203"
     ],
+    "pages": "563-574",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Process"
     ],
@@ -5004,6 +5370,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00055",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/9/Full-Line-Code-Completion-Bringing-AI-to-Desktop",
       "https://arxiv.org/abs/2405.08704",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -5201,14 +5568,24 @@
       "minglong li",
       "Ji Wang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 12:00 - 12:15"
     ],
+    "doi": "10.1109/icse55347.2025.00225",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3769fb11-32ed-472b-8465-7209e2b4b47c",
     "locations": [
       "103"
     ],
+    "pages": "54-65",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Formal Methods 1"
     ],
@@ -5220,6 +5597,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00225",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/180/EffBT-An-Efficient-Behavior-Tree-Reactive-Synthesis-and-Execution-Framework",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -5302,14 +5680,24 @@
       "Yang Liu",
       "Haoyu Wang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Thu 1 May 2025 14:00 - 14:15"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00079",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3a6c7c0a-5a85-4cbb-b1da-833ade404354",
     "locations": [
       "211"
     ],
+    "pages": "243-254",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Industry Challenge Presentations"
     ],
@@ -5321,6 +5709,7 @@
       "Industry Challenge Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00079",
       "https://conf.researchr.org/details/icse-2025/icse-2025-industry-challenge-track/2/CKGFuzzer-LLM-Based-Fuzz-Driver-Generation-Enhanced-By-Code-Knowledge-Graph",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -5334,14 +5723,24 @@
       "Kui Liu",
       "Xin Xia"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:45 - 17:00"
     ],
+    "doi": "10.1109/icse55347.2025.00243",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3a85716f-16ed-4964-91df-1e76058efab9",
     "locations": [
       "214"
     ],
+    "pages": "1026-1038",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Testing and QA 2"
     ],
@@ -5353,6 +5752,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00243",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/242/Test-Intention-Guided-LLM-based-Unit-Test-Generation",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -5405,18 +5805,28 @@
     "authors": [
       "Fabian C. Peña"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 15:00 - 15:30",
       "Wed 30 Apr 2025 17:30 - 18:00",
       "Thu 1 May 2025 17:30 - 18:00",
       "Fri 2 May 2025 17:30 - 18:00"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00059",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3d46aa13-bedf-4292-b665-a5ec14a9dbfc",
     "locations": [
       "209 Poster Area",
       "Canada Hall 3 Poster Area"
     ],
+    "pages": "196-198",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 3: Maintenance (posters)",
       "Doctoral Symposium Poster Session (Wednesday) at Canada Hall 3 poster area",
@@ -5434,6 +5844,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00059",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/28/Augmenting-the-Generality-and-Performance-of-Large-Language-Models-for-Software-Engin",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -5452,14 +5863,24 @@
       "Baowen Xu",
       "Zhenyu Chen"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 15:15 - 15:30"
     ],
+    "doi": "10.1109/icse55347.2025.00247",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3db27d15-ea0d-4d22-9d5b-fa029f328b9d",
     "locations": [
       "213"
     ],
+    "pages": "2663-2675",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 2"
     ],
@@ -5471,6 +5892,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00247",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/193/Show-Me-Your-Code-Kill-Code-Poisoning-A-Lightweight-Method-Based-on-Code-Naturalnes",
       "https://chenzhenpeng18.github.io/papers/ICSE25_CodeLM.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -5574,14 +5996,24 @@
       "Bin Ji",
       "Weimin Zhang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:30 - 16:45"
     ],
+    "doi": "10.1109/icse55347.2025.00049",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3f00f3e5-c593-442a-a012-03dafd352e4d",
     "locations": [
       "213"
     ],
+    "pages": "937-949",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Program Comprehension 1"
     ],
@@ -5593,6 +6025,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00049",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/94/Model-Editing-for-LLMs4Code-How-Far-are-We-",
       "https://shangwenwang.github.io/files/ICSE-25A.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -5715,16 +6148,26 @@
       "myunggwan kim",
       "changseo park"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Thu 1 May 2025 11:45 - 12:00",
       "Fri 2 May 2025 17:15 - 17:30"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00028",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "40f7dbc3-fd1a-442e-b7d8-8099bdfd39e2",
     "locations": [
       "212",
       "215"
     ],
+    "pages": "249-259",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Analysis 3",
       "SE for AI with Quality 3"
@@ -5738,12 +6181,18 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00028",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/6/SEMANTIC-CODE-FINDER-An-Efficient-Semantic-Search-Framework-for-Large-Scale-Codebase",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
   },
   {
     "abstract": "The automation of UML sequence diagram generation has posed a persistent challenge in software engineering, with existing approaches relying heavily on manual processes. Recent advancements in natural language processing, particularly through large language models, offer promising solutions for automating this task. This paper investigates the use of large language models in automating the generation of UML sequence diagrams from natural language requirements. We evaluate three state-of-the-art large language models, GPT 4o, Mixtral 8x7B, and Llama 3.1 8B, across multiple datasets, including both public and proprietary requirements, to assess their performance in terms of correctness, completeness, clarity, and readability. The results indicate GPT 4o consistently outperforms the other models in most metrics. Our findings highlight the potential of large language models to streamline requirements engineering by reducing manual effort, although further refinement is needed to enhance their performance in complex scenarios. This study provides key insights into the strengths and limitations of these models, and offers practical guidance for their application, advancing the understanding of how large language models can support automation in software engineering tasks.",
+    "authorIds": [
+      "",
+      "0000-0003-1675-6884",
+      ""
+    ],
     "authorInstitutions": "Chi Xiao (Ericsson AB); Daniel Ståhl (Ericsson AB); Jan Bosch (Chalmers University of Technology)",
     "authors": [
       "Chi Xiao",
@@ -6040,14 +6489,24 @@
       "Manasvi Parikh",
       "Andrew Begel"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00242",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "438ec01a-d0c1-4b78-ad15-9f1dac06ac1b",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "1217-1229",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social 2"
     ],
@@ -6059,6 +6518,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00242",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/200/-Get-Me-In-The-Groove-A-Mixed-Methods-Study-on-Supporting-ADHD-Professional-Program",
       "https://kaianew.github.io/GetMeInTheGroove.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -6160,14 +6620,24 @@
       "Rui Chen",
       "Tingting Yu"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:30 - 11:45"
     ],
+    "doi": "10.1109/icse55347.2025.00149",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "43ee8f7c-a9dc-4e2d-a7d3-ac44e9a0499a",
     "locations": [
       "211"
     ],
+    "pages": "242-254",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and Security"
     ],
@@ -6179,6 +6649,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00149",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/65/Reduce-Dependence-for-Sound-Concurrency-Bug-Prediction",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -6238,14 +6709,24 @@
       "Lauren Olson",
       "Emitzá Guzmán"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Wed 30 Apr 2025 17:15 - 17:30"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00017",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "450c1b9d-6afd-4351-a3f1-679e1b026fed",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "118-129",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social 1"
     ],
@@ -6257,6 +6738,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00017",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/11/What-is-unethical-about-software-User-perceptions-in-the-Netherlands",
       "https://arxiv.org/abs/2503.12640",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -6308,6 +6790,12 @@
   },
   {
     "abstract": "The growing software development market has increased the demand for qualified professionals in Software Engineering (SE). To this end, companies must enhance their Recruitment and Selection (R&S) processes to maintain high-quality teams, including opening opportunities for beginners, such as trainees and interns. However, given the various judgments and sociotechnical factors involved, this complex process of R&S poses a challenge for recent graduates seeking to enter the market. This paper aims to identify a set of anti-patterns and recommendations for early career SE professionals concerning R&S processes. Under an exploratory and qualitative methodological approach, we conducted six online Focus Groups with 18 recruiters with experience in R&S in the software industry. After completing our qualitative analysis, we identified 12 anti-patterns and 31 actionable recommendations regarding the hiring process focused on entry-level SE professionals. The identified anti-patterns encompass behavioral and technical dimensions innate to R&S processes. These findings provide a rich opportunity for reflection in the SE industry and offer valuable guidance for early-career candidates and organizations. From an academic perspective, this work also raises awareness of the intersection of Human Resources and SE, an area with considerable potential to be expanded in the context of cooperative and human aspects of SE.",
+    "authorIds": [
+      "0009-0000-6831-0169",
+      "0000-0001-6436-3773",
+      "0000-0003-1445-3425",
+      "0000-0003-2108-2335"
+    ],
     "authorInstitutions": "Miguel Setúbal (Federal University of Ceará); Tayana Conte (Universidade Federal do Amazonas); Marcos Kalinowski (Pontifical Catholic University of Rio de Janeiro (PUC-Rio)); Allysson Allex Araújo (Federal University of Cariri)",
     "authors": [
       "Miguel Setúbal",
@@ -6315,15 +6803,27 @@
       "Marcos Kalinowski",
       "Allysson Allex Araújo"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 1 May 2025 12:00 - 12:15"
     ],
     "doi": "10.1007/s10664-024-10498-w",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "45cc2474-c6e3-48d4-96c6-d497195f84a7",
+    "issue": "5",
     "locations": [
       "206 plus 208"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-024-10498-w.pdf"
+    ],
+    "publicationDate": "2024-09-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Human and Social 2"
     ],
@@ -6335,11 +6835,13 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-024-10498-w",
       "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/5/Investigating-the-Online-Recruitment-and-Selection-Journey-of-Novice-Software-Enginee",
       "https://link.springer.com/article/10.1007/s10664-024-10498-w",
       "https://arxiv.org/pdf/2406.02487",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+    ],
+    "volume": "29"
   },
   {
     "abstract": "Software developers spend a significant portion of time fixing bugs in their projects. To streamline this process, bug localization approaches have been proposed to identify the source code files that are likely responsible for a particular bug. Prior work proposed several similarity-based machine-learning techniques for bug localization. Despite significant advances in these techniques, they do not directly optimize the evaluation measures. We argue that directly optimizing evaluation measures can positively contribute to the performance of bug localization approaches. Therefore, in this paper, we utilize Reinforcement Learning (RL) techniques to directly optimize the ranking metrics. We propose RLocator , a Reinforcement Learning-based bug localization approach. We formulate RLocator using a Markov Decision Process (MDP) to optimize the evaluation measures directly. We present the technique and experimentally evaluate it based on a benchmark dataset of 8,316 bug reports from six highly popular Apache projects. The results of our evaluation reveal that RLocator achieves a Mean Reciprocal Rank (MRR) of 0.62, a Mean Average Precision (MAP) of 0.59, and a Top 1 score of 0.46. We compare RLocator with three state-of-the-art bug localization tools, FLIM, BugLocator, and BL-GAN. Our evaluation reveals that RLocator outperforms both approaches by a substantial margin, with improvements of 38.3% in MAP, 36.73% in MRR, and 23.68% in the Top K metric. These findings highlight that directly optimizing evaluation measures considerably contributes to performance improvement of the bug localization problem.",
@@ -6383,14 +6885,24 @@
       "Claire Le Goues",
       "Xiapu Luo"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00233",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "46d6fdf7-f44c-4847-9de5-1c903d25f4bd",
     "locations": [
       "205"
     ],
+    "pages": "153-164",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and QA 1"
     ],
@@ -6402,6 +6914,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00233",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/225/LWDIFF-An-LLM-Assisted-Differential-Testing-Framework-for-WebAssembly-Runtimes",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -6456,14 +6969,24 @@
       "Junwei Quan",
       "Marsha Chechik"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Fri 2 May 2025 14:15 - 14:30"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00018",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4765f388-865b-489f-825c-46028ec17b27",
     "locations": [
       "203"
     ],
+    "pages": "33-36",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Real-Time SE"
     ],
@@ -6475,6 +6998,7 @@
       "Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00018",
       "https://conf.researchr.org/details/icse-2025/icse-2025-demonstrations/11/LEGOS-SLEEC-Tool-for-Formalizing-and-Analyzing-Normative-Requirements",
       "https://youtu.be/LLaBLGxSi8A",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -6593,14 +7117,24 @@
       "Si Zheng",
       "Liao Xiangke"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 12:15 - 12:30"
     ],
+    "doi": "10.1109/icse55347.2025.00082",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4a3e5c2d-9257-4711-9a5d-36e63d3bf120",
     "locations": [
       "Canada Hall 1 and 2"
     ],
+    "pages": "604-615",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for SE 1"
     ],
@@ -6612,6 +7146,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00082",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/63/Unseen-Horizons-Unveiling-the-Real-Capability-of-LLM-Code-Generation-Beyond-the-Fami",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -6946,14 +7481,24 @@
       "Ronnie de Souza Santos",
       "Sebastian Baltes"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Wed 30 Apr 2025 17:00 - 17:15"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00016",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4d6f240a-987d-4af7-b985-55a0c5398329",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "106-117",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social 1"
     ],
@@ -6965,6 +7510,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00016",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/20/Not-real-or-too-soft-On-the-challenges-of-publishing-interdisciplinary-software-engi",
       "https://arxiv.org/abs/2501.06523",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -7692,17 +8238,27 @@
       "Taylor Le Lievre",
       "James C. Davis"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "dates": [
       "Wed 30 Apr 2025 13:30 - 14:00",
       "Wed 30 Apr 2025 17:15 - 17:22",
       "Thu 1 May 2025 10:30 - 11:00"
     ],
+    "doi": "10.1109/icse-nier66352.2025.00013",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "55261e7f-be74-48e3-a5ce-d875c9bc1854",
     "locations": [
       "Canada Hall 3 Poster Area",
       "103"
     ],
+    "pages": "36-40",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Wed Lunch Posters 13:30-14:00",
       "Formal Methods 2",
@@ -7718,6 +8274,7 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-nier66352.2025.00013",
       "https://conf.researchr.org/details/icse-2025/icse-2025-nier/3/A-Unit-Proofing-Framework-for-Code-level-Verification-A-Research-Agenda",
       "https://arxiv.org/abs/2410.14818",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -7907,18 +8464,28 @@
     "authors": [
       "Benedetta Donato"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 10:05 - 10:30",
       "Wed 30 Apr 2025 17:30 - 18:00",
       "Thu 1 May 2025 17:30 - 18:00",
       "Fri 2 May 2025 17:30 - 18:00"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00045",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "563a6bc7-8640-4676-8b7e-75b7a99b9bfd",
     "locations": [
       "209 Poster Area",
       "Canada Hall 3 Poster Area"
     ],
+    "pages": "154-156",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 1: Security & Miscellaneous (posters)",
       "Doctoral Symposium Poster Session (Wednesday) at Canada Hall 3 poster area",
@@ -7936,6 +8503,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00045",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/42/Rethinking-Software-Development-Considering-Collaboration-with-AI-Assistants",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -8002,14 +8570,24 @@
       "Tobias Schimmer",
       "Bert Arnrich"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Wed 30 Apr 2025 12:15 - 12:30"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00008",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "56d0745d-dc47-42bd-97e3-eeb815d80193",
     "locations": [
       "207"
     ],
+    "pages": "23-33",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social Process 1"
     ],
@@ -8021,6 +8599,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00008",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/39/Wearables-to-measure-developer-experience-at-work",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -8371,6 +8950,12 @@
   },
   {
     "abstract": "Modern video games are extremely complex software systems and, as such, they might suffer from several types of post-release issues. A particularly insidious issue is constituted by drops in the frame rate (i.e., stuttering events), which might have a negative impact on the user experience. Stuttering events are frequently documented in the million of hours of gameplay videos shared by players on platforms such as Twitch or YouTube. From the developers’ perspective, these videos represent a free source of documented �testing activities�. However, especially for popular games, the quantity and length of these videos make impractical their manual inspection. We introduce HASTE, an approach for the automatic detection of stuttering events in gameplay videos that can be exploited to generate candidate bug reports. HASTE firstly splits a given video into visually coherent slices, with the goal of filtering-out those that not representing actual gameplay (e.g., navigating the game settings). Then, it identifies the subset of pixels in the video frames which actually show the game in action excluding additional elements on screen such as the logo of the YouTube channel, on-screen chats etc. In this way, HASTE can exploit state-of-the-art image similarity metrics to identify candidate stuttering events, namely subsequent frames being almost identical in the pixels depicting the game. We evaluate the different steps behind HASTE on a total of 105 videos showing that it can correctly extract video slices with a 76% precision, and can correctly identify the slices related to gameplay with a recall and precision higher than 77%. Overall, HASTE achieves 71% recall and 89% precision for the identification of stuttering events in gameplay videos.",
+    "authorIds": [
+      "0000-0002-5443-1303",
+      "0000-0002-2216-3148",
+      "0000-0002-7995-8582",
+      "0000-0003-1764-9685"
+    ],
     "authorInstitutions": "Emanuela Guglielmi (University of Molise); Gabriele Bavota (Software Institute @ Università della Svizzera Italiana); Rocco Oliveto (University of Molise); Simone Scalabrino (University of Molise)",
     "authors": [
       "Emanuela Guglielmi",
@@ -8503,15 +9088,24 @@
     "authors": [
       "Sofana Alfuhaid"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 09:11 - 09:17"
     ],
     "doi": "10.1007/978-3-031-77908-4_14",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "60e8ab3e-1e58-4a35-a6a0-5b4825e4308d",
     "locations": [
       "212"
     ],
+    "pages": "58-62",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 1: Security & Miscellaneous (talks and panel)"
     ],
@@ -8523,9 +9117,11 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1007/978-3-031-77908-4_14",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/32/Towards-Secure-and-Interactive-Smart-Contract-Code-from-Formal-SYMBOLEO-Specification",
       "https://link.springer.com/chapter/10.1007/978-3-031-77908-4_14",
-      "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
+      "https://conf.researchr.org/program/icse-2025/program-icse-2025/",
+      "https://doi.org/10.1109/icse-companion66252.2025.00024"
     ]
   },
   {
@@ -8703,14 +9299,24 @@
       "Shuvendu K. Lahiri",
       "Nikhil Swamy"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 15:00 - 15:15"
     ],
+    "doi": "10.1109/icse55347.2025.00002",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "624cdd79-6f5d-4e2b-b67a-5904cd4d7702",
     "locations": [
       "210"
     ],
+    "pages": "1755-1767",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 1"
     ],
@@ -8722,6 +9328,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00002",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/41/Towards-Neural-Synthesis-for-SMT-assisted-Proof-Oriented-Programming",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -8784,14 +9391,24 @@
       "Shanshan Li",
       "Liao Xiangke"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:30 - 16:45"
     ],
+    "doi": "10.1109/icse55347.2025.00001",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "62a1c697-c06f-4b30-8253-434aeb00c896",
     "locations": [
       "104"
     ],
+    "pages": "655-666",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Databases and Business"
     ],
@@ -8803,6 +9420,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00001",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/15/Thanos-DBMS-Bug-Detection-via-Storage-Engine-Rotation-Based-Differential-Testing",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -8813,16 +9431,26 @@
     "authors": [
       "Emmanuel Iko-Ojo Simon"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 09:00 - 10:30",
       "Thu 1 May 2025 11:12 - 11:18"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00066",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "65e92944-9432-423f-8ec3-67a50b154d08",
     "locations": [
       "Canada Hall 3 Poster Area",
       "204"
     ],
+    "pages": "216-217",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "ACM Student Research Posters and Judging Session 1",
       "ACM Student Research Presentations"
@@ -8836,6 +9464,7 @@
       "SRC - ACM Student Research Competition"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00066",
       "https://conf.researchr.org/details/icse-2025/icse-2025-SRC/2/Characterising-Algorithm-Debt-in-Machine-and-Deep-Learning-Systems",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -9313,14 +9942,24 @@
       "Yu Jiang",
       "Wanli Chang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Fri 2 May 2025 17:00 - 17:15"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00057",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6d31eb7f-9286-4b2b-bfd2-39c760b71782",
     "locations": [
       "210"
     ],
+    "pages": "586-596",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security and QA"
     ],
@@ -9332,6 +9971,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00057",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/2/Sunflower-Enhancing-Linux-Kernel-Fuzzing-via-Exploit-Driven-Seed-Generation",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -9713,14 +10353,24 @@
       "Gemma Catolino",
       "Fabio Palomba"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Wed 30 Apr 2025 16:45 - 17:00"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00015",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "70142b36-c13a-4d62-8e1f-41e5c691fcb5",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "94-105",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social 1"
     ],
@@ -9732,6 +10382,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00015",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/3/From-Expectation-to-Habit-Why-Do-Software-Practitioners-Adopt-Fairness-Toolkits-",
       "https://arxiv.org/abs/2412.13846",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -10155,14 +10806,24 @@
       "Ali El Husseini",
       "Abhik Roychoudhury"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Thu 1 May 2025 11:45 - 12:00"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00024",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "77bc81c1-f1e6-45bf-9b40-601f6b2906f8",
     "locations": [
       "210"
     ],
+    "pages": "203-214",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security and Analysis 1"
     ],
@@ -10174,6 +10835,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00024",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/3/Detecting-Python-Malware-in-the-Software-Supply-Chain-with-Program-Analysis",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -10392,14 +11054,24 @@
       "Daniel Engel",
       "Binoy Ravindran"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:45 - 12:00"
     ],
+    "doi": "10.1109/icse55347.2025.00231",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "793f7972-8b0a-4019-a49e-bcb34d410eef",
     "locations": [
       "103"
     ],
+    "pages": "42-53",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Formal Methods 1"
     ],
@@ -10411,6 +11083,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00231",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/194/Formally-Verified-Binary-level-Pointer-Analysis",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -10719,14 +11392,24 @@
       "August Shi",
       "Wing Lam"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Fri 2 May 2025 16:00 - 16:15"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00021",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7af70e8b-bfb6-4fdd-99a5-b9309fbee77e",
     "locations": [
       "212"
     ],
+    "pages": "45-48",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Process"
     ],
@@ -10738,6 +11421,7 @@
       "Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00021",
       "https://conf.researchr.org/details/icse-2025/icse-2025-demonstrations/10/OptCD-Optimizing-Continuous-Development",
       "https://www.youtube.com/watch?v=G3_W9nQmJUI",
       "https://github.com/software-research/optCD-demo",
@@ -10750,16 +11434,26 @@
     "authors": [
       "Boqi Chen"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 09:00 - 10:30",
       "Thu 1 May 2025 11:18 - 11:24"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00067",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7ba2fdc7-3ebd-4c90-b034-cd638173fafc",
     "locations": [
       "Canada Hall 3 Poster Area",
       "204"
     ],
+    "pages": "218-219",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "ACM Student Research Posters and Judging Session 1",
       "ACM Student Research Presentations"
@@ -10773,6 +11467,7 @@
       "SRC - ACM Student Research Competition"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00067",
       "https://conf.researchr.org/details/icse-2025/icse-2025-SRC/4/Consistent-Graph-Model-Generation-with-Large-Language-Models",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -10820,14 +11515,24 @@
       "Bingzhou Qian",
       "Yu Jiang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 17:15 - 17:30"
     ],
+    "doi": "10.1109/icse55347.2025.00013",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7c6b9135-5a71-4b8c-93eb-6d7025eb6a50",
     "locations": [
       "205"
     ],
+    "pages": "2702-2713",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and QA 6"
     ],
@@ -10839,6 +11544,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00013",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/6/Janus-Detecting-Rendering-Bugs-in-Web-Browsers-via-Visual-Delta-Consistency",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -10856,14 +11562,24 @@
       "Xiangyu Zhang",
       "Xiaokuan Zhang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 16:00 - 16:15"
     ],
+    "doi": "10.1109/icse55347.2025.00083",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7c8a5b41-217d-42b3-9417-df71f8ecd3d5",
     "locations": [
       "Canada Hall 1 and 2"
     ],
+    "pages": "2996-3008",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Blockchain"
     ],
@@ -10875,6 +11591,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00083",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/125/An-Empirical-Study-of-Proxy-Smart-Contracts-at-the-Ethereum-Ecosystem-Scale",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -11089,14 +11806,24 @@
       "Dejan Nickovic",
       "Alessio Gambi"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "dates": [
       "Fri 2 May 2025 14:45 - 15:00"
     ],
+    "doi": "10.1109/icse-nier66352.2025.00021",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7f9503d8-9110-40b8-87c7-025fe6304b1c",
     "locations": [
       "203"
     ],
+    "pages": "76-80",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Real-Time SE"
     ],
@@ -11108,6 +11835,7 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-nier66352.2025.00021",
       "https://conf.researchr.org/details/icse-2025/icse-2025-nier/12/Automatically-Generating-Content-for-Testing-Autonomous-Vehicles-from-User-Descriptio",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -11120,14 +11848,24 @@
       "Silverio Martínez-Fernández",
       "Fabio Palomba"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Fri 2 May 2025 14:30 - 14:45"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00019",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "80a07600-cac8-40f4-86d6-5b6f706507e4",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "135-139",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social 4"
     ],
@@ -11139,6 +11877,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00019",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/2/Do-Developers-Adopt-Green-Architectural-Tactics-for-ML-Enabled-Systems-A-Mining-Soft",
       "https://arxiv.org/abs/2410.06708",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -11399,14 +12138,24 @@
       "Dong Jae Kim",
       "Tse-Hsun (Peter) Chen"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:15 - 16:30"
     ],
+    "doi": "10.1109/icse55347.2025.00103",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8522768d-050f-4383-9bc9-98f72a1e81b5",
     "locations": [
       "213"
     ],
+    "pages": "924-936",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Program Comprehension 1"
     ],
@@ -11418,6 +12167,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00103",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/75/LibreLog-Accurate-and-Efficient-Unsupervised-Log-Parsing-Using-Open-Source-Large-Lan",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -11793,14 +12543,24 @@
       "Ge Li",
       "Xin Xia"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 14:45 - 15:00"
     ],
+    "doi": "10.1109/icse55347.2025.00012",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8b304d90-f6c6-48ca-8543-9971c71be32b",
     "locations": [
       "213"
     ],
+    "pages": "1869-1881",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Program Comprehension 2"
     ],
@@ -11812,6 +12572,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00012",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/32/Reasoning-Runtime-Behavior-of-a-Program-with-LLM-How-Far-Are-We-",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -12079,14 +12840,24 @@
       "Simon Speth",
       "Alexander Pretschner"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Fri 2 May 2025 16:15 - 16:30"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00020",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8e2131f5-c68f-43e5-8825-a92ffe5e881c",
     "locations": [
       "205"
     ],
+    "pages": "41-44",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and QA 6"
     ],
@@ -12098,6 +12869,7 @@
       "Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00020",
       "https://conf.researchr.org/details/icse-2025/icse-2025-demonstrations/9/GeMTest-A-General-Metamorphic-Testing-Framework",
       "https://mediatum.ub.tum.de/doc/1779593/1779593.pdf",
       "https://youtu.be/Ec5SK-meu90",
@@ -12198,17 +12970,27 @@
       "Maria Camporese",
       "Fabio Massacci"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "dates": [
       "Thu 1 May 2025 10:30 - 11:00",
       "Fri 2 May 2025 12:15 - 12:22",
       "Fri 2 May 2025 13:00 - 13:30"
     ],
+    "doi": "10.1109/icse-nier66352.2025.00019",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "901bf7fb-1e95-430b-bccf-75487a794af1",
     "locations": [
       "Canada Hall 3 Poster Area",
       "212"
     ],
+    "pages": "66-70",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Thu Morning Break Posters 10:30-11",
       "AI for Analysis 4",
@@ -12224,6 +13006,7 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-nier66352.2025.00019",
       "https://conf.researchr.org/details/icse-2025/icse-2025-nier/24/Using-ML-filters-to-help-automated-vulnerability-repairs-when-it-helps-and-when-it-d",
       "https://arxiv.org/abs/2504.07027",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -12275,14 +13058,24 @@
       "Ying Li",
       "Gang Huang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 14:15 - 14:30"
     ],
+    "doi": "10.1109/icse55347.2025.00073",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "91ddb6b7-cf0d-4a86-af66-9966d8bece98",
     "locations": [
       "213"
     ],
+    "pages": "2613-2624",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 2"
     ],
@@ -12294,6 +13087,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00073",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/79/FAMOS-Fault-diagnosis-for-Microservice-Systems-through-Effective-Multi-modal-Data-Fu",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -12384,14 +13178,24 @@
       "Alessio Merlo",
       "Luca Verderame"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 15:00 - 15:15"
     ],
+    "doi": "10.1109/icse55347.2025.00136",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "93adeda8-0c2f-4acb-931e-2329f3972f5a",
     "locations": [
       "212"
     ],
+    "pages": "1052-1063",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Analysis 3"
     ],
@@ -12403,6 +13207,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00136",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/104/An-Empirical-Study-on-Reproducible-Packaging-in-Open-Source-Ecosystems",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -12898,14 +13703,24 @@
       "Antinisca Di Marco",
       "Michele Tucci"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Fri 2 May 2025 14:45 - 15:00"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00020",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9be6c79f-1053-4234-9955-c893245b3f21",
     "locations": [
       "207"
     ],
+    "pages": "140-150",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "User Experience"
     ],
@@ -12917,6 +13732,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00020",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/18/Designing-a-Tool-for-Evacuation-Plan-Validation-Multi-Agent-Simulations-with-Persona",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -13257,14 +14073,24 @@
       "Timo Kehrer",
       "Norbert Seyff"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "dates": [
       "Wed 30 Apr 2025 17:15 - 17:30"
     ],
+    "doi": "10.1109/icse-nier66352.2025.00014",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a0029767-e0b3-4787-8049-ae732ea0fd82",
     "locations": [
       "211"
     ],
+    "pages": "41-45",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Requirements"
     ],
@@ -13276,6 +14102,7 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-nier66352.2025.00014",
       "https://conf.researchr.org/details/icse-2025/icse-2025-nier/25/What-is-a-Feature-Really-Toward-a-Unified-Understanding-Across-SE-Disciplines",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -13379,14 +14206,24 @@
       "Federica Sarro",
       "Yang Liu"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:15 - 16:30"
     ],
+    "doi": "10.1109/icse55347.2025.00122",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a15879ef-66a3-4f42-bbd5-e7a5b7c4f45a",
     "locations": [
       "210"
     ],
+    "pages": "743-755",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI with Security"
     ],
@@ -13398,6 +14235,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00122",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/147/Diversity-Drives-Fairness-Ensemble-of-Higher-Order-Mutants-for-Intersectional-Fairne",
       "https://chenzhenpeng18.github.io/papers/ICSE25_FairHOME.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -14003,14 +14841,24 @@
       "Christopher Sanchez",
       "Anita Sarma"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 15:15 - 15:30"
     ],
+    "doi": "10.1109/icse55347.2025.00087",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a8aa3095-9042-4af0-a8de-bbfc9067ae5b",
     "locations": [
       "207"
     ],
+    "pages": "1691-1703",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human and Social using AI 1"
     ],
@@ -14022,6 +14870,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00087",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/70/What-Guides-Our-Choices-Modeling-Developers-Trust-and-Behavioral-Intentions-Towards",
       "https://arxiv.org/abs/2409.04099",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -14034,14 +14883,24 @@
       "Matteo Camilli",
       "Raffaela Mirandola"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:45 - 12:00"
     ],
+    "doi": "10.1109/icse55347.2025.00237",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a97a204b-726e-41fd-b3b0-5e9559e4c07f",
     "locations": [
       "205"
     ],
+    "pages": "178-190",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and QA 1"
     ],
@@ -14053,6 +14912,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00237",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/199/Parametric-Falsification-of-Many-Probabilistic-Requirements-under-Flakiness",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -14110,14 +14970,24 @@
       "Kate Kalcevich",
       "Sam Malek"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:00 - 11:15"
     ],
+    "doi": "10.1109/icse55347.2025.00043",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "aa584c8b-f46f-400c-a3ec-6541d29f1676",
     "locations": [
       "210"
     ],
+    "pages": "204-216",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for User Experience"
     ],
@@ -14129,6 +14999,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00043",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/12/Automated-Generation-of-Accessibility-Test-Reports-from-Recorded-User-Transcripts",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -14139,14 +15010,24 @@
     "authors": [
       "Nimmi Weeraddana"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 14:06 - 14:12"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00034",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "aa97fd6d-05a9-492c-9ecf-67ad21a10303",
     "locations": [
       "212"
     ],
+    "pages": "107-111",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 3: Maintenance (talks and panel)"
     ],
@@ -14158,6 +15039,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00034",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/38/Mitigating-Waste-That-Tacitly-Accrues-in-Continuous-Integration-Pipelines",
       "https://rebels.cs.uwaterloo.ca/papers/icse2025ds_weeraddana.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -14198,6 +15080,12 @@
   },
   {
     "abstract": "Simulation-based testing represents an important step to ensure the reliability of autonomous driving software. In practice, when companies rely on third-party general-purpose simulators, either for in-house or outsourced testing, the generalizability of testing results to real autonomous vehicles is at stake. In this paper, we enhance simulation-based testing by introducing the notion of digital siblings�a multi-simulator approach that tests a given autonomous vehicle on multiple general-purpose simulators built with different technologies, that operate collectively as an ensemble in the testing process. We exemplify our approach on a case study focused on testing the lane-keeping component of an autonomous vehicle. We use two open-source simulators as digital siblings, and we empirically compare such a multi-simulator approach against a digital twin of a physical scaled autonomous vehicle on a large set of test cases. Our approach requires generating and running test cases for each individual simulator, in the form of sequences of road points. Then, test cases are migrated between simulators, using feature maps to characterize the exercised driving conditions. Finally, the joint predicted failure probability is computed, and a failure is reported only in cases of agreement among the siblings. Our empirical evaluation shows that the ensemble failure predictor by the digital siblings is superior to each individual simulator at predicting the failures of the digital twin. We discuss the findings of our case study and detail how our approach can help researchers interested in automated testing of autonomous driving software.",
+    "authorIds": [
+      "0000-0002-7825-3409",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Matteo Biagiola (Università della Svizzera italiana); Andrea Stocco (Technical University of Munich, fortiss); Vincenzo Riccio (University of Udine); Paolo Tonella (USI Lugano)",
     "authors": [
       "Matteo Biagiola",
@@ -14205,15 +15093,27 @@
       "Vincenzo Riccio",
       "Paolo Tonella"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Fri 2 May 2025 15:15 - 15:30"
     ],
     "doi": "10.1007/s10664-024-10458-4",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "aae541fa-ad96-4f19-9472-04216de23a70",
+    "issue": "4",
     "locations": [
       "215"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-024-10458-4.pdf"
+    ],
+    "publicationDate": "2024-07-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "SE for AI with Quality 2"
     ],
@@ -14225,11 +15125,12 @@
       "Journal-first Papers"
     ],
     "urls": [
-      "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/78/Two-is-Better-Than-One-Digital-Siblings-to-Improve-Autonomous-Driving-Testing",
       "https://doi.org/10.1007/s10664-024-10458-4",
+      "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/78/Two-is-Better-Than-One-Digital-Siblings-to-Improve-Autonomous-Driving-Testing",
       "https://arxiv.org/abs/2305.08060",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+    ],
+    "volume": "29"
   },
   {
     "abstract": "Deep Learning (DL) compilers typically load a DL model and optimize it with intermediate representation. Existing DL compiler testing techniques mainly focus on model optimization stages, but rarely explore bug detection at the model loading stage. Effectively testing the model loading stage requires covering diverse usages of each DL operator from various DL libraries, which shares a common objective with DL library testing, indicating that the embedded knowledge in DL library tests could potentially be beneficial for testing the model loading stage of DL compilers. Thus, we conducted the first empirical study to investigate the effectiveness and efficiency of migrating the knowledge embedded in DL library tests to test the model loading stage. To support the conduct of this study, we develop a technique, called OPERA, consisting of test migration (regarding effectiveness investigation) and test prioritization (regarding efficiency investigation). We considered three sources of tests in DL libraries for migration and used eight frontends from three DL compilers (e.g., TVM, TensorRT, and OpenVINO) for evaluation. The migrated tests with the aid of OPERA detected 170 previously unknown bugs in total, 90 of which have been confirmed/fixed by developers, demonstrating the effectiveness of such the migration-based idea. The test prioritization strategy in OPERA improves testing efficiency with migrated tests by 11.9%~47.4% on average compared to general test prioritization strategies. Finally, we obtained 7 major findings and provided a set of guidelines for future work from this study.",
@@ -14603,14 +15504,24 @@
     "authors": [
       "Jason Lefever"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 14:00 - 14:06"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00033",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b088420b-aa24-4f39-8bdc-0ab34908788f",
     "locations": [
       "212"
     ],
+    "pages": "102-106",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 3: Maintenance (talks and panel)"
     ],
@@ -14622,6 +15533,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00033",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/47/Concern-based-Management-of-Software-Design-Complexity",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -14703,14 +15615,24 @@
     "authors": [
       "Hao Zhong"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 15:00 - 15:15"
     ],
+    "doi": "10.1109/icse55347.2025.00068",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b183d8fd-5003-4829-af02-48242d45d87b",
     "locations": [
       "204"
     ],
+    "pages": "2368-2379",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Comprehension 4"
     ],
@@ -14722,6 +15644,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00068",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/71/Understanding-Compiler-Bugs-in-Real-Development",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -14822,14 +15745,24 @@
       "Martin Schäf",
       "Willem Visser"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Wed 30 Apr 2025 17:15 - 17:30"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00015",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b3151100-0a9a-4528-afeb-d72421f5065e",
     "locations": [
       "104"
     ],
+    "pages": "101-111",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Databases and Business"
     ],
@@ -14841,6 +15774,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00015",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/1/Safe-Validation-of-Pricing-Agreements",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -14853,14 +15787,24 @@
       "Yuandao Cai",
       "Charles Zhang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 14:00 - 14:15"
     ],
+    "doi": "10.1109/icse55347.2025.00195",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b3df4a80-ec34-4cb2-b3c4-83fd455fa453",
     "locations": [
       "212"
     ],
+    "pages": "1781-1792",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Analysis 3"
     ],
@@ -14872,6 +15816,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00195",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/239/Boosting-Path-Sensitive-Value-Flow-Analysis-via-Removal-of-Redundant-Summaries",
       "https://www.arxiv.org/abs/2502.04952",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -14931,14 +15876,24 @@
       "Subhajit Roy",
       "Rahul Sharma"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Thu 1 May 2025 14:15 - 14:30"
     ],
+    "doi": "10.1109/icse55347.2025.00023",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b7a49cbb-f576-4892-bb60-edd762ecf3ef",
     "locations": [
       "210"
     ],
+    "pages": "1717-1728",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 1"
     ],
@@ -14950,6 +15905,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00023",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/25/LLM-Assistance-for-Memory-Safety",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -15038,14 +15994,24 @@
       "Xiaokuan Zhang",
       "Taesoo Kim"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 16:45 - 17:00"
     ],
+    "doi": "10.1109/icse55347.2025.00097",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b8ca2372-4ab7-460b-b757-30a916b80679",
     "locations": [
       "215"
     ],
+    "pages": "2983-2995",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI with Quality 3"
     ],
@@ -15057,6 +16023,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00097",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/171/RUG-Turbo-LLM-for-Rust-Unit-Test-Generation",
       "https://taesoo.kim/pubs/2025/cheng:rug.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -15075,14 +16042,24 @@
       "Zhi Guan",
       "Zhong Chen"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 11:00 - 11:15"
     ],
+    "doi": "10.1109/icse55347.2025.00096",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "bb9b4e5b-de56-4521-a393-459e5cbf1e3e",
     "locations": [
       "204"
     ],
+    "pages": "1947-1959",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Comprehension 3"
     ],
@@ -15094,6 +16071,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00096",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/57/Automated-Test-Generation-For-Smart-Contracts-via-On-Chain-Test-Case-Augmentation-and",
       "https://nzjohng.github.io/publications/papers/icse2025.pdf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -15361,6 +16339,14 @@
   },
   {
     "abstract": "[Motivation] Code understandability plays a crucial role in software development, as developers spend between 58% and 70% of their time reading source code. Improving code understandability can lead to enhanced productivity and save maintenance costs. [Problem] Experimental studies aim to establish what makes code more or less understandable in a controlled setting, but ignore that what makes code easier to understand in the real world also depends on extraneous elements such as project culture and guidelines, and developers’ background. Not accounting for the influence of these factors may lead to results that are sound but have little external validity. [Objective]: This study aims to investigate how developers improve code understandability during software development through code review comments. Its basic assumption is that code reviewers are specialists in code quality within a project. [Method and Results] We manually analyzed 2,401 code review comments from Java open-source projects on GitHub and find that over 42% of all comments focus on improving code understandability, demonstrating the significance of this aspect in code reviews. We further explored a subset of 385 comments related to code understandability and identified eight categories of code understandability concerns, such as incomplete or inadequate code documentation, bad identifier, and unnecessary code. Among the suggestions to improve code understandability, 83.9% were accepted and integrated into the codebase. Among these, only two (less than 1%) end up being reverted later. We also identified types of patches that improve code understandability, ranging from simple changes (e.g., removing unused code) to more context-dependent improvements (e.g., replacing method calling chain by existing API). Finally, we evaluated the ability of four well-known linters to flag the identified code understandability issues. These linters cover less than 30% of these issues, although some of them could be easily added as new rules. [Implications] Our findings motivate and provide practical insight for the construction of tools to make code more understandable, e.g., understandability improvements are rarely reverted and thus can be used as reliable training data for specialized ML-based tools. This is also supported by our dataset, which can be used to train such models. Finally, our findings can also serve as a basis to develop evidence-based code style guides. [Data Availability] Our data is publicly available at https://codeupcrc.github.io .",
+    "authorIds": [
+      "0000-0001-6815-9251",
+      "0009-0006-3510-0521",
+      "0000-0002-6386-1591",
+      "0000-0003-3505-3383",
+      "0000-0002-6389-3630",
+      "0000-0003-2048-7648"
+    ],
     "authorInstitutions": "Delano Hélio Oliveira; Reydne Bruno dos Santos (UFPE); Benedito Fernando Albuquerque de Oliveira (Federal University of Pernambuco); Martin Monperrus (KTH Royal Institute of Technology); Fernando Castor (University of Twente); Fernanda Madeiral (Universidade Federal de Pernambuco)",
     "authors": [
       "Delano Hélio Oliveira",
@@ -15654,14 +16640,24 @@
       "Hank Lenham",
       "Sandeep Kuttal"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Wed 30 Apr 2025 11:30 - 11:45"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00008",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c537a4a2-bcce-47db-bba5-c53f321f23f6",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "25-36",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Gender, Equity and Diversity"
     ],
@@ -15673,6 +16669,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00008",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/15/Breaking-the-Silos-An-Actionable-Framework-for-Recruiting-Diverse-Participants-in-SE",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -15716,16 +16713,26 @@
     "authors": [
       "Reem Aleithan"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 11:00 - 12:30",
       "Thu 1 May 2025 12:06 - 12:12"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00075",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c5af5608-49cc-4554-8f6e-1d15f637f80e",
     "locations": [
       "Canada Hall 3 Poster Area",
       "204"
     ],
+    "pages": "235-236",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "ACM Student Research Posters and Judging Session 2",
       "ACM Student Research Presentations"
@@ -15739,6 +16746,7 @@
       "SRC - ACM Student Research Competition"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00075",
       "https://conf.researchr.org/details/icse-2025/icse-2025-SRC/6/Revisiting-SWE-Bench-On-the-Importance-of-Data-Quality-for-LLM-based-Code-Models",
       "https://www.eecs.yorku.ca/~wangsong/",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -16510,14 +17518,24 @@
       "Taha Shabani",
       "Ali Mesbah"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00141",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cd3d4282-f073-4b46-974a-95882637a44e",
     "locations": [
       "214"
     ],
+    "pages": "450-462",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Testing and QA 1"
     ],
@@ -16529,6 +17547,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00141",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/61/Feature-Driven-End-To-End-Test-Generation",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -16679,14 +17698,24 @@
       "Nadine Aburumman",
       "Thomas Shippey"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS)",
     "dates": [
       "Wed 30 Apr 2025 12:15 - 12:30"
     ],
+    "doi": "10.1109/icse-seis66351.2025.00011",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cef7e1ed-56a8-4beb-8dcb-1a2f934f8013",
     "locations": [
       "206 plus 208"
     ],
+    "pages": "55-58",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Gender, Equity and Diversity"
     ],
@@ -16698,6 +17727,7 @@
       "SE in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seis66351.2025.00011",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-society/4/There-s-Nothing-to-See-Here-A-Study-of-Deaf-and-Hearing-Developer-Use-of-Stack-Overf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -16889,14 +17919,24 @@
       "Tao Chen",
       "Ke Li"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:00 - 16:15"
     ],
+    "doi": "10.1109/icse55347.2025.00201",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d341bf9c-a8ea-4ac7-90a5-5eea91ef7b6c",
     "locations": [
       "214"
     ],
+    "pages": "988-1000",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Testing and QA 2"
     ],
@@ -16908,6 +17948,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00201",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/217/Faster-Configuration-Performance-Bug-Testing-with-Neural-Dual-level-Prioritization",
       "https://arxiv.org/pdf/2501.15392",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
@@ -17060,14 +18101,24 @@
       "Xin Wang",
       "Yangfan Zhou"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)",
     "dates": [
       "Wed 30 Apr 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse-seip66354.2025.00009",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d5373edf-6c04-4cd4-b5fa-c5fdc2eca3be",
     "locations": [
       "210"
     ],
+    "pages": "34-45",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for User Experience"
     ],
@@ -17079,6 +18130,7 @@
       "SE In Practice (SEIP)"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-seip66354.2025.00009",
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/7/KuiTest-Leveraging-Knowledge-in-the-Wild-as-GUI-Testing-Oracle-for-Mobile-Apps",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -17216,15 +18268,25 @@
       "Rishi Poddar",
       "Aseem Rastogi"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 15:30 - 16:00",
       "Thu 1 May 2025 13:30 - 14:00"
     ],
+    "doi": "10.1109/icse55347.2025.00022",
     "eventType": "Poster",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d733c9f3-43ed-4158-8bf7-8f2c5e249b18",
     "locations": [
       "Canada Hall 3 Poster Area"
     ],
+    "pages": "3097-3109",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Wed Afternoon Break Posters 15:30-16:00",
       "Thu Lunch Posters 13:30-14:00"
@@ -17238,6 +18300,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00022",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/9/RustAssistant-Using-LLMs-to-Fix-Compilation-Errors-in-Rust-Code",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -17296,14 +18359,24 @@
       "Adithya Bhattiprolu",
       "Iftekhar Ahmed"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 16:15 - 16:30"
     ],
+    "doi": "10.1109/icse55347.2025.00064",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d7d391a2-2ac8-4570-942b-6705aa6bfcc1",
     "locations": [
       "212"
     ],
+    "pages": "859-871",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Analysis 2"
     ],
@@ -17315,6 +18388,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00064",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/134/An-Empirical-Study-on-Automatically-Detecting-AI-Generated-Source-Code-How-Far-Are-W",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -17677,18 +18751,28 @@
     "authors": [
       "Thi Dinh Tran"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 15:00 - 15:30",
       "Wed 30 Apr 2025 17:30 - 18:00",
       "Thu 1 May 2025 17:30 - 18:00",
       "Fri 2 May 2025 17:30 - 18:00"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00055",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "dd5ac7a8-26c9-432f-a9f1-912350e7dabd",
     "locations": [
       "209 Poster Area",
       "Canada Hall 3 Poster Area"
     ],
+    "pages": "184-186",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 3: Maintenance (posters)",
       "Doctoral Symposium Poster Session (Wednesday) at Canada Hall 3 poster area",
@@ -17706,6 +18790,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00055",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/25/Distilling-Reference-Architectures-from-Open-Source-Repositories",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -18330,6 +19415,12 @@
   },
   {
     "abstract": "The convergence of technology and human creativity in Society 5.0 demands innovative approaches to address complex scientific challenges across diverse domains, making cohesive experiments essential. The increasing complexity, diversity, and scale of data, along with the need for interdisciplinary exploration and knowledge discovery, present significant challenges. Computational scientific experiments leverage methods such as data acquisition, preprocessing, analysis, and visualization to simulate and understand intricate phenomena. However, existing interactive environments (e.g., Jupyter Notebook, Google Colab), collaborative groupware systems (e.g., Co-Taverna, iPlant Collaborative), and scientific workflow management systems (e.g., Galaxy, Kepler) often fall short in providing the automation, scalability, and reproducibility required for scientific experimentation. Additionally, they lack the usability and flexibility necessary for accommodating varying skill levels among researchers and supporting effective collaboration across domains. This paper introduces a collaborative framework designed to support cross-domain computational scientific experiments, fostering automation of complex operations, intuitive workflow composition, easy collaboration among researchers, comprehensive data and process lineage management, and seamless integration of data, tools, and experiments, allowing domain experts to focus on scientific discovery rather than the technical complexities involved. This study outlines the architecture and key features of the framework and discusses the challenges it addresses for Society 5.0. As a proof of concept, we developed prototype workflow management systems for code clone analysis, bioinformatics, image processing, and machine learning by integrating tools and services from the respective domains. We conducted case studies illustrating the creation of numerous cross-domain workflows and evaluated the framework’s flexibility through tool integration via a user study. The results demonstrate its effectiveness in facilitating cross-domain scientific experimentation, aligning with the principles of Society 5.0, and fostering innovation and knowledge discovery across diverse scientific domains. Two anonymous virtual machines of the prototype are hosted at http://143.110.214.145 and http://165.22.229.234 for experimentation.",
+    "authorIds": [
+      "0000-0003-1704-669X",
+      "0000-0003-1247-7781",
+      "0000-0003-0519-6164",
+      "0000-0003-1113-1754"
+    ],
     "authorInstitutions": "Muhammad Mainul Hossain (University of Saskatchewan); Banani Roy (University of Saskatchewan); Chanchal K. Roy (University of Saskatchewan); Kevin Schneider (University of Saskatchewan)",
     "authors": [
       "Muhammad Mainul Hossain",
@@ -18472,14 +19563,24 @@
       "Yang Liu",
       "Xin Peng"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:45 - 12:00"
     ],
+    "doi": "10.1109/icse55347.2025.00019",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e4f378c9-e089-4c36-9e8b-1ffdb1af8d39",
     "locations": [
       "212"
     ],
+    "pages": "321-333",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Analysis 1"
     ],
@@ -18491,6 +19592,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00019",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/29/TIGER-A-Generating-Then-Ranking-Framework-for-Practical-Python-Type-Inference",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -18552,14 +19654,24 @@
       "Yang Liu",
       "Yiling Lou"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 16:45 - 17:00"
     ],
+    "doi": "10.1109/icse55347.2025.00131",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e5a1c3e6-4940-4dbb-9ea6-4b707508b95b",
     "locations": [
       "213"
     ],
+    "pages": "2905-2917",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "AI for Security 3"
     ],
@@ -18571,6 +19683,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00131",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/144/Boosting-Static-Resource-Leak-Detection-via-LLM-based-Resource-Oriented-Intention-Inf",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -18585,14 +19698,24 @@
       "Stephen Neuendorffer",
       "Hao Chen"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00130",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e6020006-463f-4123-bea0-f990ee52fc90",
     "locations": [
       "205"
     ],
+    "pages": "1986-1998",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and QA 4"
     ],
@@ -18604,6 +19727,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00130",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/135/IRFuzzer-Specialized-Fuzzing-for-LLVM-Backend-Code-Generation",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -18658,14 +19782,24 @@
       "Vijay Krishna Palepu",
       "James Jones"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 14:00 - 14:15"
     ],
+    "doi": "10.1109/icse55347.2025.00150",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e790ecd0-b531-4c89-91a9-129fc82cd03b",
     "locations": [
       "205"
     ],
+    "pages": "3136-3148",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing and QA 5"
     ],
@@ -18677,6 +19811,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00150",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/178/Leveraging-Propagated-Infection-to-Crossfire-Mutants",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -18826,14 +19961,24 @@
     "authors": [
       "JianChen Zhao"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 14:18 - 14:24"
     ],
+    "doi": "10.1109/icse-companion66252.2025.00036",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e92de29f-a799-4020-8df3-d2c0067898ca",
     "locations": [
       "212"
     ],
+    "pages": "117-121",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 3: Maintenance (talks and panel)"
     ],
@@ -18845,6 +19990,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse-companion66252.2025.00036",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/14/Practical-Preprocessing-of-Logs-at-Scale",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -18932,14 +20078,24 @@
       "Eriky Rodrigues",
       "Tayana Conte"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 11:00 - 11:15"
     ],
+    "doi": "10.1109/icse55347.2025.00079",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e9cde715-9573-4a6c-934d-0d81d03e82a1",
     "locations": [
       "211"
     ],
+    "pages": "2151-2162",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Design and Architecture 1"
     ],
@@ -18951,6 +20107,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00079",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/114/A-Catalog-of-Micro-Frontends-Anti-patterns",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -19351,14 +20508,24 @@
       "Weifeng Sun",
       "Meng Yan"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Fri 2 May 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00086",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ee9ea19e-3098-458e-9ebf-57728cc35c99",
     "locations": [
       "215"
     ],
+    "pages": "2213-2224",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI with Quality 1"
     ],
@@ -19370,6 +20537,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00086",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/77/Iterative-Generation-of-Adversarial-Example-for-Deep-Code-Models",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -19423,6 +20591,15 @@
   },
   {
     "abstract": "There are a multitude of software artifacts which need to be handled during the development and maintenance of a software system. These artifacts interrelate in multiple, complex ways. Therefore, many software engineering tasks are enabled — and even empowered — by a clear understanding of artifact interrelationships and also by the continued advancement of techniques for automated artifact linking. However, current approaches in automatic Traceability Link Recovery (TLR) target mostly the links between specific sets of artifacts, such as those between requirements and code. Fortunately, recent advancements in Large Language Models (LLMs) can enable TLR approaches to achieve broad applicability. Still, it is a nontrivial problem how to provide the LLMs with the specific information needed to perform TLR. In this paper, we present LiSSA, a framework that harnesses LLM performance and enhances them through Retrieval-Augmented Generation (RAG). We empirically evaluate LiSSA on three different TLR tasks, requirements to code, documentation to code, and architecture documentation to architecture models, and we compare our approach to state-of-the-art approaches. Our results show that the RAG-based approach can significantly outperform the state-of-the-art on the code-related tasks. However, further research is required to improve the performance of RAG-based approaches to be applicable in practice.",
+    "authorIds": [
+      "0000-0001-6410-6769",
+      "0000-0003-0381-1020",
+      "0000-0002-8899-7081",
+      "0009-0002-7676-5010",
+      "0009-0000-8868-0562",
+      "0009-0006-7052-4020",
+      "0000-0002-1593-3394"
+    ],
     "authorInstitutions": "Dominik Fuchß (Karlsruhe Institute of Technology (KIT)); Tobias Hey (Karlsruhe Institute of Technology (KIT)); Jan Keim (Karlsruhe Institute of Technology (KIT)); Haoyu Liu (Karlsruhe Institute of Technology (KIT)); Niklas Ewald (Karlsruhe Institute of Technology (KIT)); Tobias Thirolf (Karlsruhe Institute of Technology (KIT)); Anne Koziolek (Karlsruhe Institute of Technology)",
     "authors": [
       "Dominik Fuchß",
@@ -19648,20 +20825,34 @@
   },
   {
     "abstract": "Machine Learning Operations (MLOps) is the practice of streamlining and optimising the machine learning (ML) workflow, from development to deployment, using DevOps (software development and IT operations) principles and ML-specific activities. Architectural descriptions of MLOps systems often consist of informal textual descriptions and informal graphical system diagrams that vary considerably in consistency, quality, detail, and content. Such descriptions only sometimes follow standards or schemata and may be hard to understand. We aimed to investigate informal textual descriptions and informal graphical MLOps system architecture representations and compare them with semi-formal MLOps system diagrams for those systems. We report on a controlled experiment with sixty-three participants investigating the understandability of MLOps system architecture descriptions based on informal and semi-formal representations. The results indicate that the understandability (quantified by task correctness) of MLOps system descriptions is significantly greater using supplementary semi-formal MLOps system diagrams, that using semi-formal MLOps system diagrams does not significantly increase task duration (and thus hinder understanding), and that task correctness is only significantly correlated with task duration when semi-formal MLOps system diagrams are provided.",
+    "authorIds": [
+      "0000-0003-0650-0981",
+      "0000-0002-6233-2591"
+    ],
     "authorInstitutions": "Stephen John Warnett (University of Vienna); Uwe Zdun (University of Vienna)",
     "authors": [
       "Stephen John Warnett",
       "Uwe Zdun"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 30 Apr 2025 16:15 - 16:30"
     ],
     "doi": "10.1109/TSE.2024.3367488",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f0d63d0e-b964-4f7f-bc98-63ee6d6f13eb",
+    "issue": "5",
     "locations": [
       "204"
     ],
+    "pages": "1015-1039",
+    "publicationDate": "2024-05-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Program Comprehension 2"
     ],
@@ -19673,11 +20864,13 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/TSE.2024.3367488",
       "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/49/On-the-Understandability-of-MLOps-System-Architectures",
       "https://ieeexplore.ieee.org/document/10440483",
-      "https://doi.org/10.1109/TSE.2024.3367488",
-      "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+      "https://conf.researchr.org/program/icse-2025/program-icse-2025/",
+      "https://doi.org/10.1109/tse.2024.3367488"
+    ],
+    "volume": "50"
   },
   {
     "abstract": "Developers spend most of their time reading code. Previous studies have shown that less understandable code hinders developers’ productivity, making reading and debugging code harder and raising maintenance costs. In this research, we investigate how Atoms of Confusion (AoCs)–a set of low-level programming idioms for C-like languages proposed as a potential source of code confusion–can affect program comprehension and code quality. Specifically, we investigate (1) the impact of AoCs in the Open-Source Software (OSS) development community with Mining Software Repository (MSR) techniques, (2) how developers perceive how AoCs can affect comprehension, and (3) how Large Language Models (LLMs) can be used to refactor AoCs when appropriate. To this end, our preliminary study explores the defect-proneness of AoCs in open-source Java projects. We discovered that AoCs generally did not affect defect-proneness in opensource Java projects, but future works are needed to investigate how developers interact with AoCs under various circumstances, such as different projects and programming languages. As our next steps, we aim to gather developers’ perceptions of AoCs by conducting developer surveys. Next, based on these empirical findings, we will study how to LLMs can help refactor AoCs according to specific contexts such as developer experience and project convention. We expect this work will offer insights for researchers seeking to understand cognitive challenges in coding and practitioners looking to implement more effective strategies for enhancing code understandability and maintainability.",
@@ -19866,14 +21059,24 @@
       "zijie zhao",
       "Wei Yang"
     ],
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "dates": [
       "Wed 30 Apr 2025 11:15 - 11:30"
     ],
+    "doi": "10.1109/icse55347.2025.00139",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f40cc62d-dc13-4894-a2e2-ad6b84b26cb5",
     "locations": [
       "215"
     ],
+    "pages": "514-526",
+    "publicationDate": "2025-04-26",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE for AI 1"
     ],
@@ -19885,6 +21088,7 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/icse55347.2025.00139",
       "https://conf.researchr.org/details/icse-2025/icse-2025-research-track/167/CodeImprove-Program-Adaptation-for-Deep-Code-Models",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
@@ -20141,6 +21345,9 @@
   },
   {
     "abstract": "The Impostor Phenomenon (IP) is a pervasive psychological condition characterized by self-doubt and a fear of being exposed as a fraud, despite evidence of one’s competence. This condition is particularly prevalent in high-pressure fields such as software engineering, where constant innovation and expertise are demanded. An initial survey of 624 software engineering professionals across 26 countries revealed that more than half experience frequent and intense impostor feelings, negatively impacting mental health and productivity. To address this concern, this Ph.D. thesis seeks to identify key factors driving IP’s prevalence in software engineering and develop targeted strategies for its mitigation. Using a mixed-methods approach, this research combines quantitative survey data from the prior study with in-depth qualitative interviews to provide a comprehensive understanding of IP within the software industry. Based on this understanding, the research will examine mitigation strategies from other fields, adapt them to the unique demands of software engineering, and empirically assess their effectiveness, evolving our knowledge on how software professionals can be best supported. Expected contributions include a detailed analysis of IP’s underlying factors in software engineering and the development of innovative and tailored interventions to reduce impostor feelings in software professionals. The findings are expected to have relevant implications for both industry and academia, fostering psychologically safe environments that enhance well-being and productivity and laying the groundwork for future advancements in workplace support and mental health for software professionals.",
+    "authorIds": [
+      "0009-0004-8080-1760"
+    ],
     "authorInstitutions": "Paloma Guenes (Pontifical Catholic University of Rio de Janeiro (PUC-Rio))",
     "authors": [
       "Paloma Guenes"
@@ -20715,21 +21922,36 @@
   },
   {
     "abstract": "Qualitative surveys are emerging as a popular research method in software engineering (SE), particularly as many aspects of the field are increasingly socio-technical and thus concerned with the subtle, social, and often ambiguous issues that are not amenable to a simple quantitative survey. While many argue that qualitative surveys play a vital role amongst the diverse range of methods employed in SE there are a number of shortcomings that inhibits its use and value. First there is a lack of clarity as to what defines a qualitative survey and what features differentiate it from other methods. There is an absence of a clear set of principles and guidelines for its execution, and what does exist is very inconsistent and sometimes contradictory. These issues undermine the perceived reliability and rigour of this method. Researchers are unsure about how to ensure reliability and rigour when designing qualitative surveys and reviewers are unsure how these should be evaluated. In this paper, we present a systematic mapping study to identify how qualitative surveys have been employed in SE research to date. This paper proposes a set of principles, based on a multidisciplinary review of qualitative surveys and capturing some of the commonalities of the diffuse approaches found. These principles can be used by researchers when choosing whether to do a qualitative survey or not. They can then be used to design their study. The principles can also be used by editors and reviewers to judge the quality and rigour of qualitative surveys. It is hoped that this will result in more widespread use of the method and also more effective and evidence-based reviews of studies that use these methods in the future.",
+    "authorIds": [
+      "0000-0003-1303-4173",
+      "0000-0001-8260-4075",
+      "0000-0002-9107-7681"
+    ],
     "authorInstitutions": "Jorge Melegati (Free University of Bozen-Bolzano); Kieran Conboy (University of Galway); Daniel Graziotin (University of Hohenheim)",
     "authors": [
       "Jorge Melegati",
       "Kieran Conboy",
       "Daniel Graziotin"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Fri 2 May 2025 16:30 - 16:45"
     ],
     "doi": "10.1109/TSE.2024.3474173",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ff53556e-a918-4d6f-8e46-c47392867238",
+    "issue": "12",
     "locations": [
       "203"
     ],
+    "pages": "3172-3187",
+    "publicationDate": "2024-12-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Process"
     ],
@@ -20741,10 +21963,12 @@
       "Journal-first Papers"
     ],
     "urls": [
-      "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/56/Qualitative-Surveys-in-Software-Engineering-Research-Definition-Critical-Review-an",
       "https://doi.org/10.1109/TSE.2024.3474173",
-      "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
-    ]
+      "https://conf.researchr.org/details/icse-2025/icse-2025-journal-first-papers/56/Qualitative-Surveys-in-Software-Engineering-Research-Definition-Critical-Review-an",
+      "https://conf.researchr.org/program/icse-2025/program-icse-2025/",
+      "https://doi.org/10.1109/tse.2024.3474173"
+    ],
+    "volume": "50"
   },
   {
     "abstract": "Formal verification is a promising method for producing reliable software, but the difficulty of manually writing verification proofs severely limits its utility in practice. Recent methods have automated some proof synthesis by guiding a search through the proof space using a theorem prover. Unfortunately, the theorem prover provides only the crudest estimate of progress, resulting in effectively undirected search. To address this problem, we create QEDCartographer, an automated proof-synthesis tool that combines supervised and reinforcement learning to more effectively explore the proof space. QEDCartographer incorporates the proofs’ branching structure, enabling reward-free search and overcoming the sparse reward problem inherent to formal verification. We evaluate QEDCartographer using the CoqGym benchmark of 68.5K theorems from 124 open-source Coq projects. QEDCartographer fully automatically proves 21.4% of the test-set theorems. Previous search-based proof-synthesis tools Tok, Tac, ASTactic, Passport, and Proverbot9001, which rely only on supervised learning, prove 9.6%, 9.8%, 10.9%, 12.5%, and 19.8%, respectively. Diva, which combines 62 tools, proves 19.2%. Comparing to the most effective prior tool, Proverbot9001, QEDCartographer produces 26% shorter proofs 27% faster, on average over the theorems both tools prove. Together, QEDCartographer and non-learning-based CoqHammer prove 31.8% of the theorems, while CoqHammer alone proves 26.6%. Our work demonstrates that reinforcement learning is a fruitful research direction for improving proof-synthesis tools’ search mechanisms.",

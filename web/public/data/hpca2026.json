@@ -2115,14 +2115,24 @@
       "Fengbin Tu",
       "Shouyi Yin"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Mon 2 Feb 2026 15:10 - 15:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408482",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6936f652-42f9-4cc9-8540-208cab28b59b",
     "locations": [
       "Collaroy"
     ],
+    "pages": "1-15",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Memory System Reliability",
       "Main Conference"
@@ -2136,6 +2146,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408482",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/9/HR-DCIM-High-Reliability-Floating-Point-Digital-CIM-Architecture-with-Unified-Low-Co",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -2342,14 +2353,24 @@
       "Zhenman Fang",
       "Mingzhe Zhang"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 12:10 - 12:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408615",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8599b189-04b3-4525-b6db-23c3eb991339",
     "locations": [
       "Cronulla"
     ],
+    "pages": "1-14",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Zero-Knowledge and Private Information Retrieval",
       "Main Conference"
@@ -2363,6 +2384,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408615",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/84/An-Efficient-and-Scalable-Hardware-Architecture-for-Number-Theoretic-Transform-on-FPG",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -2788,14 +2810,24 @@
       "Kenneth R. Brown",
       "Jonathan M. Baker"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Mon 2 Feb 2026 11:50 - 12:10"
     ],
+    "doi": "10.1109/hpca68181.2026.11408498",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "91e28d83-facd-490a-8a8f-24af535c980f",
     "locations": [
       "Cronulla"
     ],
+    "pages": "1-14",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Quantum Computing Architecture",
       "Main Conference"
@@ -2809,6 +2841,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408498",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/86/Cyclone-Designing-Efficient-and-Highly-Parallel-QCCD-Architectural-Codesigns-for-Fau",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -3066,14 +3099,24 @@
       "Jingwen Leng",
       "Minyi Guo"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 16:50 - 17:10"
     ],
+    "doi": "10.1109/hpca68181.2026.11408460",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9e1805d2-c3f5-4767-acc2-a3bc0c017139",
     "locations": [
       "Coogee"
     ],
+    "pages": "1-15",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Distributed and Multi-GPU Training",
       "Main Conference"
@@ -3087,6 +3130,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408460",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/73/Towards-Compute-Aware-In-Switch-Computing-for-LLMs-Tensor-Parallelism-on-Multi-GPU-Sy",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -3196,14 +3240,24 @@
       "Ren Wang",
       "Nam Sung Kim"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 14:10 - 14:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408577",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a51b9efc-c1d0-4819-8f5b-71e856494c70",
     "locations": [
       "Coogee"
     ],
+    "pages": "1-17",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "LLM Systems and Microarchitecture Tools",
       "Main Conference"
@@ -3217,6 +3271,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408577",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/54/LILo-Harnessing-the-On-chip-Accelerators-in-Intel-CPUs-for-Compressed-LLM-Inference-",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -4192,14 +4247,24 @@
       "Jahyun Koo",
       "Jaeha Kung"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 15:10 - 15:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408587",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c8187a5e-38e3-4fb8-af06-7b0a6c886138",
     "locations": [
       "Cronulla"
     ],
+    "pages": "1-14",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Emerging Compute Paradigms",
       "Main Conference"
@@ -4213,6 +4278,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408587",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/83/GustavSNN-Unleashing-the-Power-of-Gustavson-s-Algorithm-on-SNN-Acceleration-with-Col",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]

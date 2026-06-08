@@ -34,6 +34,15 @@
   },
   {
     "abstract": "There is growing concern about maintainers self-sabotaging their work in order to take political or economic stances, a practice referred to as “protestware”. Our objective is to understand the discourse around discussions on such an attack, how it is received by the community, and whether developers respond to the attack in a timely manner. We study two notable protestware cases i.e., colors.js and es5-ext. Results indicate that protestware discussions are spread more quickly on the GitHub platform, while security vulnerabilities are faster on social media. By establishing a taxonomy of protestware discussions, we identify posts that express stances and provide technical mitigation instructions. We applied a thematic analysis to 684 protestware related posts to identify five major themes during the discussions: i. disseminate and response, ii. stance, iii. reputation, iv. communicative styles, v. rights and ethics. This work sheds light on the nuanced landscape of protestware discussions, offering insights for both researchers and developers into maintaining a healthy balance between the political or social actions of developers and the collective well-being of the open-source community.",
+    "authorIds": [
+      "0000-0001-9372-2966",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Youmei Fan (Nara Institute of Science and Technology); Dong Wang (Tianjin University); Supatsara Wattanakriengkrai (Nara Institute of Science and Technology); Hathaichanok Damrongsiri (Nara Institute of Science and Technology); Christoph Treude (Singapore Management University); Hideaki Hata (Shinshu University); Raula Gaikovina Kula (The University of Osaka)",
     "authors": [
       "Youmei Fan",
@@ -4188,6 +4197,13 @@
   },
   {
     "abstract": "Developers experience a wide range of emotions while creating software. Being able to identify the causes of one’s own and peers’ emotions can equip developers with the ability to regulate their behavior to restore positive moods and productivity. In this paper, we investigate to what extent self-monitoring of emotions can enhance agile retrospective meetings by improving the emotion awareness of participants. To this aim, we conducted a controlled experiment involving three software development teams involving two student teams and one professional developers team. The experiment design involves the collection of biometrics and self-reported information about emotions, which are then visualized before the retrospective meetings to inform discussion using EmoVizPhy, a tool that we designed and implemented for this aim. While students found that self-monitoring helped them recall significant emotional episodes, leading to more meaningful contributions during retrospectives, professional developers perceived limited benefits from this practice. Furthermore, based on the analysis of corrective actions identified by the participants during the study, we hypothesize that self-monitoring of emotions through EmoVizPhy may play a valuable role in facilitating the consolidation of new agile teams for which roles and collaboration dynamics are still being defined.",
+    "authorIds": [
+      "0000-0001-8376-1232",
+      "0000-0003-3373-7589",
+      "0000-0003-1160-2608",
+      "0000-0002-9221-0739",
+      "0000-0002-1418-0095"
+    ],
     "authorInstitutions": "Daniela Grassi (University of Bari); Filippo Lanubile (University of Bari); Nicole Novielli (University of Bari); Luigi Quaranta (University of Bari, Italy); Alexander Serebrenik (Eindhoven University of Technology)",
     "authors": [
       "Daniela Grassi",
@@ -4235,6 +4251,15 @@
   },
   {
     "abstract": "Despite the utility that Generative AI (GenAI) tools provide for tasks such as writing code, the use of these tools raises important legal questions and potential risks, particularly those associated with copyright law. As lawmakers and regulators respond to these questions, the views of users can offer relevant perspectives. In this paper, we provide: (1) a survey of 574 developers on the licensing and copyright aspects of GenAI for coding, as well as follow-up interviews; (2) a snapshot of developers’ views at a time when GenAI and perceptions of it were rapidly evolving; and (3) an analysis of developers’ perspectives, yielding insights and recommendations that can inform future regulatory decisions in this evolving field. Our results show the benefits developers derive from GenAI, how they view the use of AI-generated code as similar to using other existing code, the varied opinions they have on who should own or be compensated for such code, that they are concerned about data leakage via GenAI, and other findings, providing organizations and policymakers with valuable insights into how the technology is being used and the concerns that stakeholders believe warrant attention.",
+    "authorIds": [
+      "0009-0005-6000-4227",
+      "0009-0006-2123-7412",
+      "0000-0003-2838-685X",
+      "0000-0001-9258-2105",
+      "0000-0002-0340-9747",
+      "0000-0001-5661-4392",
+      "0000-0002-5626-7586"
+    ],
     "authorInstitutions": "Trevor Stalnaker (William & Mary); Nathan Wintersgill (William & Mary); Oscar Chaparro (William & Mary); Laura A. Heymann (William & Mary); Massimiliano Di Penta (University of Sannio, Italy); Daniel M. German (University of Victoria); Denys Poshyvanyk (William & Mary)",
     "authors": [
       "Trevor Stalnaker",
@@ -4409,6 +4434,17 @@
   },
   {
     "abstract": "Unit testing plays a pivotal role in the software development lifecycle, as it ensures code quality. However, writing high-quality unit tests remains a time-consuming task for developers in practice. More recently, the application of large language models (LLMs) in automated unit test generation has demonstrated promising results. Existing approaches primarily focus on interpreted programming languages (e.g., Java), while mature solutions tailored to compiled programming languages like C++ are yet to be explored. The intricate language features of C++, such as pointers, templates, and virtual functions, pose particular challenges for LLMs in generating both executable and high-coverage unit tests. To tackle the aforementioned problems, this paper introduces CITYWALK, a novel LLM-based framework for C++ unit test generation. CITYWALK enhances LLMs by providing a comprehensive understanding of the dependency relationships within the project under test via program analysis. Furthermore, CITYWALK incorporates language-specific knowledge about C++ derived from project documentation and empirical observations, significantly improving the correctness of the LLM-generated unit tests. We implement CITYWALK by employing the widely popular LLM GPT-4o. The experimental results show that CITYWALK outperforms current state-of-the-art approaches on a collection of ten popular C++ projects. Our findings demonstrate the effectiveness of CITYWALK in generating high-quality C++ unit tests.",
+    "authorIds": [
+      "0009-0008-1016-7361",
+      "0009-0000-8024-1143",
+      "0009-0008-7988-8298",
+      "0000-0002-3323-0449",
+      "0000-0002-0905-2355",
+      "0000-0001-8270-2425",
+      "0000-0003-0594-8995",
+      "0009-0005-0710-7593",
+      "0000-0002-8561-2481"
+    ],
     "authorInstitutions": "Yuwei Zhang (Institute of Software Chinese Academy of Sciences); Qingyuan Lu (Institute of Software Chinese Academy of Sciences); Kai Liu (Shanghai Stock Exchange Technology Co., Ltd.); Wensheng Dou (Institute of Software Chinese Academy of Sciences); Jiaxin Zhu (Institute of Software at Chinese Academy of Sciences); Li Qian (Shanghai Stock Exchange Technology Co., Ltd.); Chunxi Zhang (Shanghai Stock Exchange Technology Co., Ltd.); Zheng Lin (Shanghai Stock Exchange Technology Co., Ltd.); Jun Wei (Institute of Software at Chinese Academy of Sciences; University of Chinese Academy of Sciences)",
     "authors": [
       "Yuwei Zhang",
@@ -4421,14 +4457,25 @@
       "Zheng Lin",
       "Jun Wei"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Fri 17 Apr 2026 14:15 - 14:30"
     ],
+    "doi": "10.1145/3763791",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "32f73bbe-7227-4f6f-9ccd-7a0c9831519d",
+    "issue": "5",
     "locations": [
       "Oceania IX"
     ],
+    "pages": "1-32",
+    "publicationDate": "2026-05-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Testing and Analysis 18"
     ],
@@ -4440,9 +4487,11 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3763791",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/37/CITYWALK-Enhancing-LLM-Based-C-Unit-Test-Generation-via-Project-Dependency-Awarene",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Smart cities, smart grids, and in general Smart Human-centric Ecosystems (SHEs) emerge from the co-existence of many systems that operate according to independently owned specifications, and evolve over time. SHEs may fail despite the correct behavior of the systems that comprise the SHE. Fully testing SHEs on testbed to prevent failures in production is impossible, and scenarios that may lead to catastrophic SHE failures are unavoidable. In this paper we frame the core issues of SHE failures, and propose Smart human-centric Ecosystem Monitoring, SEM, an approach that predicts SHE failures to enable corrective actions for mitigating the catastrophic effects of failures. SEM identifies failure-prone scenarios from the reconstruction error of SHE indicators, that is, metric values that SEM collects from the SHE at constant frequency. SEM computes the reconstruction error with a suitably trained denoising autoencoder combined with a Transformer architecture. The results of experimenting with a peer-to-peer ride-sharing ecosystem operating in San Francisco confirm that SEM can effectively predict SHE failures early enough to activate preventing actions, and indicate the generalizability of SEM with continual learning. The main contributions of the paper are the definition and the exemplification of the impact of failures in SHEs, and an approach to detect incoming failures before otherwise inevitable disruptive effects.",
@@ -7341,6 +7390,10 @@
   },
   {
     "abstract": "Traditional enterprise penetration-testing, while critical for validating defenses and uncovering vulnerabilities, is often limited by high operational costs and the scarcity of human expertise. This paper investigates the feasibility and effectiveness of using Large Language Model (LLM)-driven autonomous systems to address these challenges in real-world Active Directory (AD) enterprise networks. We introduce a novel prototype, \\textit{cochise}, designed to employ LLMs to autonomously perform Assumed Breach penetration-testing against enterprise networks. Our system represents the first demonstration of a fully autonomous, LLM-driven framework capable of compromising accounts within a real-life Microsoft Active Directory testbed, the \\textit{Game of Active Directory} (GOAD). The evaluation deliberately utilizes GOAD to capture the intricate interactions and sometimes nondeterministic outcomes of live network penetration-testing, moving beyond the limitations of synthetic benchmarks. We perform our empirical evaluation using five LLMs, comparing reasoning to non-reasoning models as well as including open-weight models. Through comprehensive quantitative and qualitative analysis, incorporating insights from cybersecurity experts, we demonstrate that autonomous LLMs can effectively conduct Assumed Breach simulations. Key findings highlight their ability to dynamically adapt attack strategies, perform inter-context attacks (e.g., web application audits, social engineering, and unstructured data analysis for credentials), and generate scenario-specific attack parameters like realistic password candidates. The prototype also exhibits robust self-correction mechanisms, automatically installing missing tools and rectifying invalid command generations. Critically, we find that the associated costs are competitive with, and often significantly lower than, those incurred by professional human penetration testers, suggesting a path toward democratizing access to essential security testing for organizations with budgetary constraints. However, our research also illuminates existing limitations, including instances of LLM ``going down rabbit holes'', challenges in comprehensive information transfer between planning and execution modules, and critical safety concerns that necessitate human oversight. Our findings lay foundational groundwork for future software engineering research into LLM-driven cybersecurity automation, emphasizing that the prototype’s underlying LLM-driven architecture and techniques are domain-agnostic and hold promise for improving autonomous LLM usage in broader software engineering domains. The source code, traces, and analyzed logs are open-sourced to foster collective cybersecurity and future research.",
+    "authorIds": [
+      "0009-0000-2484-0109",
+      "0000-0001-8619-1271"
+    ],
     "authorInstitutions": "Andreas Happe (TU Wien); Jürgen Cito (TU Wien)",
     "authors": [
       "Andreas Happe",
@@ -9183,6 +9236,14 @@
   },
   {
     "abstract": "This work was accepted for publication in the ACM Transactions on Software Engineering and Methodology (TOSEM) in April 2025. We report completely new research results. The Linux kernel is a well-known configurable software system, which can be adapted to a wide range of hardware platforms and use cases. Despite its importance, fundamental aspects of the kernel’s configurability (such as its number and evolution of features and configurations) remain poorly understood, largely due to the kernel’s size and the limited scalability of existing analysis techniques. This work provides the first comprehensive, longitudinal study of the Linux kernel’s configurability, covering more than two decades of feature-model history. Using our analysis tool torte, we extract, transform, and analyze over 3,000 feature-model versions to quantify and characterize the kernel’s variability over time. Our study establishes a foundation for reproducible configurability analyses and contributes data, insights, and recommendations that support both researchers and practitioners working on Linux.",
+    "authorIds": [
+      "0000-0003-0429-2461",
+      "0000-0002-5239-3307",
+      "0000-0001-8069-9584",
+      "0000-0001-9389-9278",
+      "0000-0001-7077-7091",
+      "0000-0001-9576-8474"
+    ],
     "authorInstitutions": "Elias Kuiter (University of Magdeburg); Chico Sundermann (TU Braunschweig); Thomas Thüm (TU Braunschweig); Tobias Heß (University of Ulm); Sebastian Krieter (TU Braunschweig, Germany); Gunter Saake (University of Magdeburg, Germany)",
     "authors": [
       "Elias Kuiter",
@@ -9560,6 +9621,12 @@
   },
   {
     "abstract": "Research shows that errors in natural language can be corrected by translating texts to another language and back using language models. We explore to what extent this latent correction capability extends to Automated Program Repair (APR) by investigating Round-Trip Translation (RTT): translating code from one programming language into another programming or natural language and back, using Large Language Models (LLMs). We hypothesize that RTT restores patterns most commonly seen in the LLM’s training corpora through regression toward the mean, replacing infrequent bugs with more frequent, natural, bug-free code. To test this hypothesis, we employ nine LLMs and four common APR benchmarks in Java, and perform a detailed quantitative and qualitative analysis of RTT-generated patches. We find that RTT through English generates plausible patches for 100 of 164 bugs with GPT-4 on the HumanEval-Java benchmark, and 97 are found to be correct in our manual assessment. Moreover, RTT uniquely generates plausible patches for 46 bugs that were missed by LLMs specifically fine-tuned for APR. While this demonstrates the viability of RTT for APR, we also observe limitations, such as a lower overall bug fix rate than the state-of-the-art and diluting the original coding style. We analyze the impact of these limitations and discuss the potential of using RTT as a complementary component in APR frameworks.",
+    "authorIds": [
+      "0000-0001-7213-3732",
+      "0000-0003-3139-0200",
+      "0000-0001-8684-5909",
+      "0000-0002-1761-6771"
+    ],
     "authorInstitutions": "Fernando Vallecillos Ruiz (Simula Research Laboratory); Anastasiia Grishina (Simula Research Laboratory); Max Hort (Simula Research Laboratory); Leon Moonen (Simula Research Laboratory)",
     "authors": [
       "Fernando Vallecillos Ruiz",
@@ -12425,6 +12492,13 @@
   },
   {
     "abstract": "Resolving merge conflicts manually is a tedious and complex task. While automated approaches exist, many challenges persist. One promising yet underexplored solution is the use of search-based optimization algorithms, which require an evaluation function to measure the quality of intermediary solutions. However, using code compilation and test execution to guide the search is computationally expensive. This study investigates the relationship between conflict resolutions and conflicting content to identify a metric for guiding search-based optimization techniques. We analyzed 9,998 conflict chunks from 1,062 open-source projects, focusing on the similarity of resolutions to their parents and the correlation between randomly generated candidates, parent versions, and the resolution. Our findings reveal that conflict resolutions are, on average, 70% similar to both parents. A strong correlation ($\\rho=0.791$) exists between candidate-parent and candidate-resolution similarities when aggregating parent similarities with the mean function. Based on these findings, we propose and evaluate SBCR, a Search-Based Conflict Resolution approach that uses parent similarity as a guiding function. We found that the conflict resolution candidates generated by SBCR have a median of 86.5% similarity to the expected resolution, achieving 100% of similarity in 25.2% of the conflicts.",
+    "authorIds": [
+      "0000-0001-5541-0021",
+      "0000-0002-8480-676X",
+      "0000-0001-8136-9624",
+      "0000-0001-7917-932X",
+      "0000-0002-5173-1247"
+    ],
     "authorInstitutions": "Heleno de Souza Campos Junior (Universidade Federal Fluminense); Gleiph Ghiotto L. de Menezes (Universidade Federal de Juiz de Fora); Marcio Barros (UNIRIO); Andre van der Hoek (University of California, Irvine); Leonardo Murta (Universidade Federal Fluminense (UFF))",
     "authors": [
       "Heleno de Souza Campos Junior",
@@ -13456,6 +13530,12 @@
   },
   {
     "abstract": "We introduce Modelizer—a novel framework that, given a black-box program, learns a model from its input/output behavior using neural machine translation algorithms. The resulting model mocks the original program: Given an input, the model predicts the output that would have been produced by the program. However, the model is also reversible—that is, the model can predict the input that would have produced a given output. Finally, the model is differentiable and can be efficiently restricted to predict only a certain aspect of the program behavior. Modelizer uses grammars to synthesize and inputs and unsupervised tokenizers to decompose the resulting outputs, allowing it to learn sequence-to-sequence associations between token streams. Other than input grammars, Modelizer only requires the ability to execute the program. The resulting models are small, requiring fewer than 6.3 million parameters for languages such as Markdown or HTML; and they are accurate, achieving up to 95.4% accuracy and a BLEU score of 0.98 with standard error 0.04 in mocking real-world applications. As it learns from and predicts executions rather than code, Modelizer departs from the LLM-centric research trend, opening new opportunities for program-specific models that are fully tuned towards individual programs. Indeed, we foresee several applications of these models, especially as the output of the program can be any aspect of program behavior. Beyond mocking and predicting program behavior, the models can also synthesize inputs that are likely to produce a particular behavior, such as failures or coverage, thus assisting in program understanding and maintenance.",
+    "authorIds": [
+      "0009-0007-8466-3694",
+      "0000-0002-4147-9690",
+      "0000-0002-5317-6689",
+      "0000-0003-4719-8803"
+    ],
     "authorInstitutions": "Tural Mammadov (CISPA Helmholtz Center for Information Security); Dietrich Klakow (Saarland University); Alexander Koller (Saarland University); Andreas Zeller (CISPA Helmholtz Center for Information Security)",
     "authors": [
       "Tural Mammadov",
@@ -13863,6 +13943,12 @@
   },
   {
     "abstract": "Deep neural networks (DNNs) are being utilized in various aspects of our daily lives, including high-stakes decision-making applications that impact individuals. However, these systems reflect and amplify bias from the data used during training and testing, potentially resulting in biased behavior and inaccurate decisions. For instance, having different misclassification rates between white and black sub-populations. However, effectively and efficiently identifying and correcting biased behavior in DNNs is a challenge. In [1], we introduced FairFLRep (shown in Fig. 1), an automated fairness-aware fault localization and repair technique that identifies and corrects potentially bias-inducing neurons in DNN classifiers. FairFLRep focuses on adjusting neuron weights associated with sensitive attributes, such as race or gender, that contribute to unfair decisions. By analyzing the input-output relationships within the network, FairFLRep corrects neurons responsible for disparities in predictive quality parity. We evaluate FairFLRep on four image classification datasets using two DNN classifiers, and four tabular datasets with a DNN model. The results show that FairFLRep consistently outperforms existing methods in improving fairness while preserving accuracy. An ablation study confirms the importance of considering fairness during both fault localization and repair stages. Our findings also show that FairFLRep is more efficient than the baseline approaches in repairing the network.",
+    "authorIds": [
+      "0000-0002-4115-3834",
+      "0000-0002-6253-4062",
+      "0000-0002-5704-4173",
+      "0000-0001-7725-2618"
+    ],
     "authorInstitutions": "Moses Openja (Polytechnique Montreal); Paolo Arcaini (National Institute of Informatics); Foutse Khomh (Polytechnique Montréal); Fuyuki Ishikawa (National Institute of Informatics)",
     "authors": [
       "Moses Openja",
@@ -14104,6 +14190,11 @@
   },
   {
     "abstract": "Automated Program Repair (APR) for smart contract security promises to automatically mitigate smart contract vulnerabilities responsible for billions in financial losses. However, the true effectiveness of this research in addressing smart contract exploits remains uncharted territory. This paper bridges this critical gap by introducing a novel and systematic experimental framework for evaluating exploit mitigation of program repair tools for smart contracts. We qualitatively and quantitatively analyze 20 state-of-the-art APR tools using a dataset of 143 vulnerable smart contracts, for which we manually craft 91 executable exploits. We are the very first to define and measure the essential ``exploit mitigation rate'', giving researchers and practitioners a real sense of effectiveness. Our findings reveal substantial disparities in the state of the art, with an exploit mitigation rate ranging from a low of 29% to a high of 74%. Our study identifies systemic limitations, such as inconsistent functionality preservation, that must be addressed in future research on program repair for smart contracts.",
+    "authorIds": [
+      "0000-0003-3116-3278",
+      "0009-0000-8775-2093",
+      "0000-0003-3505-3383"
+    ],
     "authorInstitutions": "Sofia Bobadilla (KTH Royal Institute of Technology, Sweden); Mónica Jin (KTH Royal Institute of Technology); Martin Monperrus (KTH Royal Institute of Technology)",
     "authors": [
       "Sofia Bobadilla",
@@ -14476,6 +14567,12 @@
   },
   {
     "abstract": "Fuzzing is a dynamic testing technique that is extensively researched in the past decade. Especially to one of its flavours, greybox fuzzing, many improvements are suggested to its internal components. However, to what extent do these improvements affect the internal components or internals of a given greybox fuzzer is not yet understood as the improvements are mostly evaluated using code coverage and bug finding capability. Although it is tempting to conclude that a fuzzer, a tool that performs greybox fuzzing, that reaches more code or finds more bugs is better than others, it is hard to infer if only the suggested improvements are responsible for the performance deviations given the inherent stochastic nature of fuzzing. Therefore, we believe that such an evaluation is insufficient to really understand the effect of these improvements on the fuzzer internals. Some of the literature visualizes the outcomes of fuzzing to enhance the understanding. However, they only focus on high-level information and no previous research on visualization has been dedicated to understanding fuzzing internals. To close this gap, we propose the first step towards the development of a fuzzing-specific visualization analysis framework: a taxonomy of visualization analysis tasks that fuzzing experts desire to help them understand the fuzzing internals. Our approach involves conducting semi-structured interviews with fuzzing experts and using qualitative data analysis to systematically extract the task taxonomy from the interview data. In total, we have conducted 33 interviews with fuzzing practitioners: 23 of them had the highest level of fuzzing expertise. From the interview data, we extracted a taxonomy of 120 visualization analysis tasks and grouped them into six categories that are based on the analysis type. To the best of our knowledge, we are the first to conduct such an interview-based study with fuzzing experts to understand the interested tasks. We also evaluate the support of existing fuzzing visualization tools through the lens of our taxonomy. Our evaluation shows that the existing fuzzing visualization tools only provide aids to support 10 of them. Along with the taxonomy, we extracted the four main hurdles from the fuzzing expert responses that hinder the development of a fuzzing-specific visualization analysis framework. The outcomes from our study lays foundation and supports three research directions in fuzzing: our taxonomy and the hurdles can be considered as a pre-requisite to build better fuzzing visualization or introspection tools, our taxonomy helps in evaluating fuzzing visualization tools, and the taxonomy can be used to derive extended evaluation criteria for evaluating fuzzing improvements.",
+    "authorIds": [
+      "0009-0003-1963-4265",
+      "0009-0004-6650-6239",
+      "0000-0003-3470-3647",
+      "0000-0002-2826-1857"
+    ],
     "authorInstitutions": "Sriteja Kummita (Paderborn University); Miao Miao (The University of Texas at Dallas); Eric Bodden (Heinz Nixdorf Institute at Paderborn University & Fraunhofer IEM); Shiyi Wei (University of Texas at Dallas)",
     "authors": [
       "Sriteja Kummita",
@@ -15588,6 +15685,9 @@
   },
   {
     "abstract": "Accurate classification of issues is essential for effective project management and timely responses, as the volume of issue reports continues to grow. Manual classification is labor-intensive and error-prone, necessitating automated solutions. While large language models (LLMs) show promise in automated issue labeling, most research focuses on broad categorization (e.g., bugs, feature requests), with limited attention to fine-grained categorization. Understanding specific bug types is crucial, as different bugs require tailored resolution strategies. This study addresses this gap by evaluating LLMs and prompt engineering strategies for fine-grained bug report categorization. We analyze 221,184 fine-grained bug report category labels generated by selected LLMs using various prompt engineering strategies for 1,024 bug reports. We examine how LLMs and prompt engineering influence output characteristics, control over outputs, and categorization performance. Our findings highlight that LLMs and prompt engineering significantly impact output consistency and classification capability, with some yielding consistent results and others introducing variability. Based on these findings, we analyze the agreements and disagreements between LLM-generated labels and human annotations to assess category correctness. Our results suggest that examining label consistency and discrepancies can serve as a complementary method for validating bug report categories, identifying unclear reports, and detecting misclassifications in human annotations.",
+    "authorIds": [
+      "0000-0001-6975-6752"
+    ],
     "authorInstitutions": "Anil Koyuncu (Bilkent University)",
     "authors": [
       "Anil Koyuncu"
@@ -20993,6 +21093,11 @@
   },
   {
     "abstract": "As software systems increasingly rely on natural language interfaces, ensuring the reliability of these systems is crucial. One critical component is the ability to accurately translate natural language queries into corresponding SQL queries, a field known as Text-to-SQL. However, the scarcity of high-quality, large-scale, and domain-specific Text-to-SQL datasets hinders the development of reliable and robust models. To tackle these challenges, we propose SelectCraft, a novel automatic generation approach designed to create realistic Text-to-SQL datasets tailored to specific domains. Our method leverages existing databases and their structures to generate complex text-SQL pairs that mirror real-world usage scenarios. As a proof of concept, we have successfully generated a substantial financial Text-to-SQL dataset, denominated as BanQies, encompassing over 1 million samples utilizing our proposed approach. Moreover, we introduce BanQL, a new large language model (LLM) based on StarCoder2, a state-of-the-art code-based LLM, and fine-tuned on our newly created dataset. We evaluate BanQL performance against several state-of-the-art models, demonstrating significant enhancements in accuracy and generalizability, highlighting the advantages of incorporating domain-specific data in Text-to-SQL tasks. We firmly believe that our contributions have the potential to improve the overall reliability of Text-to-SQL software systems.",
+    "authorIds": [
+      "0009-0002-9387-6847",
+      "0000-0001-7657-4738",
+      "0000-0003-4225-911X"
+    ],
     "authorInstitutions": "Salmane Chafik (UM6P College of Computing); Saad Ezzini (King Fahd University of Petroleum and Minerals); Ismail Berrada (UM6P College of Computing)",
     "authors": [
       "Salmane Chafik",
@@ -23194,6 +23299,15 @@
   },
   {
     "abstract": "Open-source code is pervasive. In this setting, embedded vulnerabilities are spreading to downstream software at an alarming rate. Although such vulnerabilities are generally identified and addressed rapidly, inconsistent maintenance policies can cause security patches to go unnoticed. Indeed, security patches can be {\\em silent}, i.e., they do not always come with comprehensive advisories such as CVEs. This lack of transparency leaves users oblivious to available security updates, providing ample opportunity for attackers to exploit unpatched vulnerabilities. Consequently, identifying silent security patches just in time when they are released is essential for preventing n-day attacks and for ensuring robust and secure maintenance practices. With LLMDA we propose to (1) leverage large language models (LLMs) to augment patch information with generated code change explanations, (2) design a representation learning approach that explores code-text alignment methodologies for feature combination, (3) implement a label-wise training with labeled instructions for guiding the embedding based on security relevance, and (4) rely on a probabilistic batch contrastive learning mechanism for building a high-precision identifier of security patches. We evaluate LLMDA on the PatchDB and SPI-DB literature datasets and show that our approach substantially improves over the state-of-the-art, notably GraphSPD by 20% in terms of F-Measure on the SPI-DB benchmark.",
+    "authorIds": [
+      "0000-0002-6377-0884",
+      "0000-0002-4462-6916",
+      "0000-0001-7657-4738",
+      "0000-0002-6314-7515",
+      "0000-0002-8049-3997",
+      "0000-0003-4052-475X",
+      "0000-0001-7270-9869"
+    ],
     "authorInstitutions": "Xunzhu Tang (University of Luxembourg); Kisub Kim (DGIST); Saad Ezzini (King Fahd University of Petroleum and Minerals); Yewei Song (University of Luxembourg); Haoye Tian (Aalto University); Jacques Klein (University of Luxembourg); Tegawendé F. Bissyandé (University of Luxembourg)",
     "authors": [
       "Xunzhu Tang",
@@ -23672,6 +23786,13 @@
   },
   {
     "abstract": "Data protection regulations such as the General Data Protection Regulation (GDPR) in the European Union and the California Consumer Privacy Act (CCPA) in the US affect how software may handle the personal data of its users. Prior literature focused on how data protection regulations are discussed for software in operation, or how this topic is discussed in various channels outside of the software development process. Yet, what is missing, is a perspective on the impact of such regulations on the software development process. In our work, we address this gap, and explore how discussions during the development of software are impacted by regulations, who reports and discusses issues related to personal data and data protection, and how developers react to those issues. To that end, we used inductive coding to analyze 652 issues from Open Source GitHub projects and used the codes to quantitatively analyze the relation between the roles, resolutions, and data protection issues to understand correlations and predict resolutions of issues. Most notably we observed a significant increase in reporting when GDPR came into effect. The most common issue types were feature requests for privacy enhancement, which were mainly reported and discussed by frequent reporters and frequent committers. But especially issues regarding privacy enhancement were also frequently reported by one-time reporters. Most of the requests were solved without opposing votes. All in all, our findings indicate that data protection regulations effectively start discussions about privacy within the software development community.",
+    "authorIds": [
+      "0000-0002-6964-589X",
+      "0000-0001-9336-2075",
+      "0000-0001-9765-2803",
+      "0000-0003-4218-1658",
+      "0000-0002-6267-4874"
+    ],
     "authorInstitutions": "Anne Hennig (Karlsruhe Institute of Technology); Lukas Schulte (University of Passau); Steffen Herbold (University of Passau); Oksana Kulyk (IT University of Copenhagen, Denmark); Peter Mayer (University of Southern Denmark)",
     "authors": [
       "Anne Hennig",
@@ -23680,15 +23801,27 @@
       "Oksana Kulyk",
       "Peter Mayer"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 16 Apr 2026 11:30 - 11:45"
     ],
     "doi": "10.1007/s10664-025-10742-x",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f4cde008-02c8-439a-8e99-3c14c85d2d74",
+    "issue": "1",
     "locations": [
       "Oceania V"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10742-x.pdf"
+    ],
+    "publicationDate": "2026-01-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Human and Social Aspects 6"
     ],
@@ -23700,11 +23833,12 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10742-x",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/29/The-whos-whats-and-whys-of-issues-related-to-personal-data-and-data-protection-in-o",
       "https://link.springer.com/article/10.1007/s10664-025-10742-x",
-      "https://doi.org/10.1007/s10664-025-10742-x",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "31"
   },
   {
     "abstract": "This paper explores the use of mutation testing to reveal weaknesses in formal specifications written in Dafny. In verification-aware programming languages, such as Dafny, despite their critical role, specifications are as prone to errors as implementations. Flaws in specs can result in formally verified programs that deviate from the intended behavior. We present MutDafny, a tool that increases the reliability of Dafny specifications by automatically signaling potential weaknesses. Using a mutation testing approach, we introduce faults (mutations) into the code and rely on formal specifications for detecting them. If a program with a mutant verifies, this may indicate a weakness in the specification. We extensively analyze mutation operators from popular tools, identifying the ones applicable to Dafny. In addition, we synthesize new operators tailored for Dafny from bugfix commits in publicly available Dafny projects on GitHub. Drawing from both, we equipped our tool with a total of 32 mutation operators. We evaluate MutDafny’s effectiveness and efficiency in a dataset of 794 real-world Dafny programs and we manually analyze a subset of the resulting undetected mutants, identifying five weak real-world specifications (on average, one at every 241 lines of code) that would benefit from strengthening.",
@@ -23889,6 +24023,16 @@
   },
   {
     "abstract": "Context. Empathy, a key social skill, is essential for communication and collaboration in SE but remains an under-researched topic. Aims. This study investigates empathy in SE from practitioners’ perspectives, aiming to characterize its meaning, identify barriers, discuss practices to overcome them, and explore its effects. Method. A qualitative content analysis was conducted on 55 web articles from DEV and Medium, two communities widely used by practitioners. To strengthen our findings, we conducted a follow-up survey with empathy experts. Results. The study proposes a definition of empathy in SE, identifies barriers such as toxic culture and excessive technical focus, practices to foster empathy in teams, and outcomes, including improved collaboration, communication, and reduced anxiety, frustration, and stress. These findings are synthesized into a conceptual framework. Conclusion. Survey results indicate the framework is clear, valuable, and raises empathy awareness, with suggestions for improvements and integration into training. This study paves the way for improving team dynamics by addressing barriers and offering strategies to cultivate empathy. Future work will explore empathy’s broader implications in SE practice.",
+    "authorIds": [
+      "0000-0002-4989-0986",
+      "0009-0004-4247-1430",
+      "0000-0003-4754-7882",
+      "0000-0001-6241-1612",
+      "0000-0003-0272-9578",
+      "0000-0002-3989-9442",
+      "0000-0002-9509-5238",
+      "0000-0002-0874-7665"
+    ],
     "authorInstitutions": "Lidiany Cerqueira (BRAVAS in Tech); João Pedro Silva Bastos (UEFS); Danilo Neves (IFS); Glauco Carneiro (UFS); Rodrigo Spinola (Virginia Commonwealth University); Sávio Freire (Federal Institute of Ceará); José Amancio (UEFS); Manoel Mendonça (Federal University of Bahia)",
     "authors": [
       "Lidiany Cerqueira",
@@ -24114,6 +24258,13 @@
   },
   {
     "abstract": "Android malware detection approaches commonly use APIs and permissions as features for classifying malware. However, since the release of the first Android operating system in 2008, the Android framework has undergone numerous version updates. The evolution of the Android framework over time has led to changes in APIs and permissions, including deprecations and replacements. These changes can result in inaccurate characterization of Android malware, thereby affecting performance of malware detectors. There is a lack of methods to mitigate the impact of Android framework evolution on malware detection. To fill this gap, we conduct a systematic study of the impact of Android framework evolution on APIs and permissions. We then propose a new representation of APIs and permissions that is robust against framework evolution. This new representation characterizes deprecated APIs / permissions and their corresponding replacements. Additionally, for class-level replacements, due to the absence of corresponding API replacement information, we use a LLM to assist in mining deprecation-replacement relationships. We also explore how to better utilize the LLM by applying it to the mining of deprecation-replacement pairs in framework evolution. We consider APIs / permissions with deprecation-replacement relationships as the same feature, as they typically perform the same or similar functions. We apply our proposed representation to improve the performance of four popular Android malware detectors, namely Drebin, Mamadroid, Xmal, and FAMCF. Our experiments focus on evaluating the performance of these malware detectors in the context of framework evolution, more specifically, over API levels 9 to 24. The results indicate that malware detectors utilizing Func features achieve statistically better F1 scores according to Wilcoxon rank-sum tests.",
+    "authorIds": [
+      "",
+      "0000-0003-2958-8066",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Hailong Yu (Harbin Institute of Technology, Harbin Institute of Technology Zhengzhou Research Institute); Tiantian Wang (Harbin Institute of Technology); Lwin Khin Shar (Singapore Management University); Hanmeng Li (Harbin Institute of Technology); David Lo (Singapore Management University)",
     "authors": [
       "Hailong Yu",
@@ -25005,6 +25156,13 @@
   },
   {
     "abstract": "With the rapid advancement of quantum computing, research on quantum machine learning (QML) algorithms has grown significantly. Among these, the Quantum Neural Network (QNN) stands out as one of the promising algorithms that integrates the principles of quantum computing with artificial neural networks to process data. Inspired by applications of QNN across fields, we investigate their use in software testing for the Cancer Registry of Norway (CRN), part of the Norwegian Institute of Public Health (NIPH), responsible for cancer statistics among the Norwegian population. CRN develops a complex socio-technical software system, Cancer Registration Support System (CARESS), interacting with many entities (e.g., hospitals, medical laboratories, and other patient registries) to achieve its task. For cost-effective testing of CARESS, CRN has employed EvoMaster, an AI-based REST API testing tool combined with an integrated classical machine learning model EvoClass, to predict whether an API request generated by EvoMaster is likely to be invalid, so saving testing time. Within this context, we propose EvoQlass to investigate the feasibility of using, inside EvoMaster, a QNN classifier instead of the existing classical machine learning model. Results indicate that EvoQlass can achieve performance comparable to that of EvoClass, but by using significantly fewer training features in certain configurations. We further explore the effects of various QNN configurations on performance and offer recommendations for optimal QNN settings for future QNN developers.",
+    "authorIds": [
+      "0000-0001-5621-6140",
+      "0000-0002-9979-3519",
+      "0000-0002-6253-4062",
+      "0000-0002-4875-9708",
+      "0000-0001-9655-7003"
+    ],
     "authorInstitutions": "Xinyi Wang (Simula Research Laboratory; University of Oslo); Shaukat Ali (Simula Research Laboratory and Oslo Metropolitan University); Paolo Arcaini (National Institute of Informatics); Narasimha Raghavan Veeraragavan (Cancer Registry of Norway and Norwegian Institute of Public Health); Jan F. Nygård (Cancer Registry of Norway)",
     "authors": [
       "Xinyi Wang",
@@ -25013,15 +25171,25 @@
       "Narasimha Raghavan Veeraragavan",
       "Jan F. Nygård"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Thu 16 Apr 2026 11:30 - 11:45"
     ],
     "doi": "10.1145/3769302",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ff8730d9-deb6-468e-80cf-5d27a1b6b4c1",
+    "issue": "5",
     "locations": [
       "Oceania II"
     ],
+    "pages": "1-24",
+    "publicationDate": "2026-05-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Testing and Analysis 9"
     ],
@@ -25033,11 +25201,12 @@
       "Journal-first Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3769302",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/59/Quantum-Neural-Network-Classifier-for-Cancer-Registry-System-Testing-A-Feasibility-S",
       "https://dl.acm.org/doi/10.1145/3769302",
-      "https://doi.org/10.1145/3769302",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Novice programmers experience emotional difficulties in informal online learning environments, where Confusion and Frustration can hinder motivation and learning outcomes. This study investigates novice programmers’ emotional experiences in informal settings, identifies causes of emotional struggle, and explores design opportunities for affect-aware support systems. We manually annotated 1,500 posts from r/learnprogramming using the Learning-Centered Emotions framework, applying clustering, and axial coding. Confusion, Curiosity, and Frustration dominated emotional experiences, sometimes co-occurring and linked to early learning stages. Positive emotions were infrequent. The primary emotional triggers included ambiguous errors, unclear learning pathways, and misaligned resources. We identify five key areas where novice programmers need support in informal space: Stress Relief and Resilient Motivation, Topic Explanation and Resource Recommendation, Strategic Decision Making and Learning Guidance, Technical Support, and Supporting Acknowledgment . Our findings underscore the need for intelligent, affect-sensitive mechanism for providing timely support aligned with learners’ emotional states.",

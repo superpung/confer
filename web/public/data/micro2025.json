@@ -1,6 +1,10 @@
 [
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0007-4376-0885",
+      "0000-0002-4815-9235"
+    ],
     "authorInstitutions": "Tianhua Xia (New York Univ.); Sai Qian Zhang (New York Univ.)",
     "authors": [
       "Tianhua Xia",
@@ -57,6 +61,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-5862-6565",
+      "0009-0000-0460-8230",
+      "0000-0002-1744-1393",
+      "0000-0001-5451-5681",
+      "0000-0002-4622-2181"
+    ],
     "authorInstitutions": "Derrick Quinn (Cornell Univ.); E. Ezgi Yücel (Cornell Univ.); Jinkwon Kim (Cornell Univ.); José F. Martínez (Cornell Univ.); Mohammad Alian (Cornell Univ.)",
     "authors": [
       "Derrick Quinn",
@@ -102,6 +113,19 @@
   },
   {
     "abstract": "As Large Language Models (LLMs) continue to evolve, Mixture of Experts (MoE) architecture has emerged as a prevailing design for achieving state-of-the-art performance across a wide range of tasks. MoE models use sparse gating to activate only a handful of expert sub-networks per input, achieving billion-parameter capacity with inference costs akin to much smaller models. However, such models often pose challenges for hardware deployment due to the massive data volume introduced by the MoE layers. To address the challenges of serving MoE models, we propose Stratum, a system-hardware co-design approach that combines the novel memory technology Monolithic 3D-Stackable DRAM (Mono3D DRAM), near-memory processing (NMP), and GPU acceleration. The logic and Mono3D DRAM dies are connected through hybrid bonding, whereas the Mono3D DRAM stack and GPU are interconnected via silicon interposer. Mono3D DRAM offers higher internal bandwidth than HBM thanks to the dense vertical interconnect pitch enabled by its monolithic structure, which supports implementations of higher-performance near-memory processing. Furthermore, we tackle the latency differences introduced by aggressive vertical scaling of Mono3D DRAM along the z-dimension by constructing internal memory tiers and assigning data across layers based on access likelihood, guided by topic-based expert usage prediction to boost NMP throughput. The Stratum system achieves up to 8.29x improvement in decoding throughput and 7.66x better energy efficiency across various benchmarks compared to GPU baselines.",
+    "authorIds": [
+      "0009-0001-6358-0394",
+      "0000-0002-5409-321X",
+      "0000-0002-7518-9472",
+      "0000-0003-0641-3677",
+      "0000-0002-1157-0127",
+      "0000-0002-1438-2439",
+      "0000-0002-5523-7270",
+      "0009-0007-5700-8846",
+      "0000-0002-0068-3652",
+      "0000-0002-6954-997X",
+      "0000-0001-8104-5136"
+    ],
     "authorInstitutions": "Yue Pan (Univ. of California, San Diego); Zihan Xia (Univ. of California, San Diego); Po-Kai Hsu (Georgia Inst. of Technology); Lanxiang Hu (Univ. of California, San Diego); Hyungyo Kim (Univ. of Illinois Urbana-Champaign); Janak Sharda (Georgia Inst. of Technology); Minxuan Zhou (Illinois Inst. of Technology); Nam Sung Kim (Univ. of Illinois at Urbana Champaign); Shimeng Yu (Georgia Inst. of Technology); Tajana Rosing (Univ. of California, San Diego); Mingu Kang (Univ. of California, San Diego)",
     "authors": [
       "Yue Pan",
@@ -171,6 +195,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0003-4084-3478",
+      "0000-0002-8293-8881",
+      "0000-0001-6218-4659",
+      "0000-0001-5117-7920",
+      "0000-0001-6942-4395",
+      "0000-0003-2309-572X"
+    ],
     "authorInstitutions": "Zhiheng Yue (Tsinghua Univ.); Yang Wang (Tsinghua Univ.); Chao Li (Shanghai Jiao Tong Univ.); Shaojun Wei (Tsinghua Univ.); Yang Hu (Tsinghua Univ.); Shouyi Yin (Tsinghua Univ.)",
     "authors": [
       "Zhiheng Yue",
@@ -231,6 +263,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-3902-3451",
+      "0009-0008-5951-2541",
+      "0009-0004-4695-7083",
+      "0009-0001-2809-2272",
+      "0009-0006-1449-8825",
+      "0000-0003-2739-2924"
+    ],
     "authorInstitutions": "Seunghyuk Yu (Inha Univ.); Hyeonu Kim (Inha Univ.); Kyoungho Jeun (Inha Univ.); Sunyoung Hwang (Inha Univ.); Seongmin Cho (Inha Univ.); Eojin Lee (Inha Univ.)",
     "authors": [
       "Seunghyuk Yu",
@@ -274,6 +314,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-2717-0952",
+      "0000-0001-5019-8199",
+      "0000-0003-0017-592X",
+      "0000-0002-2529-7264",
+      "0000-0002-2907-4252",
+      "0000-0003-3725-0380"
+    ],
     "authorInstitutions": "Jeehyun Kim (Yonsei Univ.); Donghyeon Kim (Yonsei Univ.); Seokwon Kang (Yonsei Univ.); Bongjoon Hyun (KAIST); Inho Lee (Hanyang Univ.); Yongjun Park (Yonsei Univ.)",
     "authors": [
       "Jeehyun Kim",
@@ -334,6 +382,10 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-1635-3324",
+      "0000-0002-0010-6388"
+    ],
     "authorInstitutions": "Md Sadik Awal (Florida International Univ.); Md Tauhidur Rahman (Florida International Univ.)",
     "authors": [
       "Md Sadik Awal",
@@ -373,6 +425,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-2142-7728",
+      "0009-0009-8004-740X",
+      "0000-0002-3219-7544",
+      "0000-0002-8588-7100"
+    ],
     "authorInstitutions": "Silvan Niederer (ETH Zürich); Sandro Rüegge (ETH Zürich); Ali Hajiabadi (ETH Zürich); Kaveh Razavi (ETH Zürich)",
     "authors": [
       "Silvan Niederer",
@@ -430,6 +488,18 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0006-8263-6329",
+      "0000-0001-5109-3495",
+      "0009-0002-5666-9793",
+      "0009-0008-0303-4069",
+      "0009-0001-6041-4120",
+      "0009-0004-2130-5628",
+      "0000-0003-2573-963X",
+      "0000-0003-0955-503X",
+      "0009-0002-9868-5353",
+      "0000-0002-9215-7632"
+    ],
     "authorInstitutions": "Kanqi Zhang (Inst. of Information Engineering, Chinese Academy of Sciences); Peinan Li (Inst. of Information Engineering, Chinese Academy of Sciences); Miao Li (Inst. of Information Engineering, Chinese Academy of Sciences); Xin Tian (Inst. of Information Engineering, Chinese Academy of Sciences); Zelong Du (Inst. of Information Engineering, Chinese Academy of Sciences); Quachen Liu (Inst. of Information Engineering, Chinese Academy of Sciences); Yongqiang Lyu (Tsinghua Univ., Beijing, China); Yu Jiang (Tsinghua university); Dan Meng (Inst. of Information Engineering, CAS); Rui Hou (Inst. of Information Engineering, CAS)",
     "authors": [
       "Kanqi Zhang",
@@ -480,6 +550,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0003-6747-8500",
+      "0000-0002-6546-6907",
+      "0000-0003-3239-430X",
+      "0009-0005-4188-3983",
+      "0009-0002-5992-5000",
+      "0000-0003-1034-2306"
+    ],
     "authorInstitutions": "Ningzhi Ai (Huawei Technologies Co., Ltd, Tsinghua Univ.); Wenjian He (Huawei Technologies Co., Ltd); Hu He (Tsinghua Univ.); Jing Xia (Huawei Technologies Co., Ltd); Heng Liao (Huawei Technologies Co., Ltd); Guowei Zhang (Huawei Technologies Co., Ltd)",
     "authors": [
       "Ningzhi Ai",
@@ -539,6 +617,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0008-0031-9579",
+      "0009-0002-4706-5031",
+      "0009-0004-7190-9905",
+      "0009-0009-2888-0314",
+      "0000-0003-4011-6668"
+    ],
     "authorInstitutions": "Yanhua Chen (The Hong Kong Univ. of Science and Technology (Guangzhou)); Jiong Feng (The Hong Kong Univ. of Science and Technology (Guangzhou)); Zhe Wang (Intel Labs); Christopher J. Hughes (Intel); Jiayi Huang (HKUST(GZ))",
     "authors": [
       "Yanhua Chen",
@@ -597,6 +682,10 @@
   },
   {
     "abstract": "Task-parallel programming models enable programmers to extract parallelism from irregular applications.Since software-based taskparallel runtimes impose crippling overheads on fine-grain tasks, architects have designed manycores with hardware support for task management.These hardware task-parallel systems can scale challenging workloads to hundreds of cores, but fail to use conventional prefetchers due to short (100-cycle) tasks.Lacking prefetching, they often expose DRAM latency to applications, fumbling the performance gains of hardware.We present the Task-Seeded Prefetcher (TSP) and Memory Response Task Scheduler (MRS), a symbiotic pair that boost performance in general-purpose task-parallel hardware.TSP learns and prefetches the data-access pattern of each task function, seeded with its descriptor that is queued by the task scheduler.MRS augments the baseline task-to-core dispatch policy by using prefetch status from TSP to optimize core utilization.Together, TSP and MRS provide speedups of up to 3.1 (gmeans up to 1.4) across 13 benchmarks on 256-core task-parallel systems that were already 3-60 faster than parallel software.",
+    "authorIds": [
+      "0000-0002-9837-5120",
+      "0000-0003-4816-0356"
+    ],
     "authorInstitutions": "Gilead Posluns (Univ. of Toronto); Mark Jeffrey (Univ. of Toronto)",
     "authors": [
       "Gilead Posluns",
@@ -656,6 +745,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-0519-8683",
+      "0009-0007-4914-336X",
+      "0000-0002-7965-0510",
+      "0000-0003-4443-8170",
+      "0009-0005-0150-1055",
+      "0000-0003-2595-5228"
+    ],
     "authorInstitutions": "Nikoleta Iliakopoulou (Univ. of Illinois Urbana-Champaign); Jovan Stojkovic (Univ. of Illinois Urbana-Champaign); Chloe Alverti (Univ. of Illinois Urbana-Champaign); Tianyin Xu (Univ. of Illinois Urbana-Champaign); Hubertus Franke (IBM Research); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Nikoleta Iliakopoulou",
@@ -716,6 +813,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0001-7876-0531",
+      "0009-0003-4628-9006",
+      "0000-0002-8731-1084",
+      "0000-0003-2305-9892"
+    ],
     "authorInstitutions": "Donghyeon Joo (Univ. of Maryland, College Park); Helya Hosseini (Univ. of Maryland, College Park); Ramyad Hadidi (d-Matrix); Bahar Asgari (Univ. of Maryland, College Park)",
     "authors": [
       "Donghyeon Joo",
@@ -760,6 +863,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-7946-2683",
+      "0000-0002-2587-7541",
+      "0009-0007-8738-3532",
+      "0000-0003-2286-1525",
+      "0000-0003-2595-5228"
+    ],
     "authorInstitutions": "Gerasimos Gerogiannis (Intel, Univ. of Illinois at Urbana-Champaign); Stijn Eyerman (Intel); Evangelos Georganas (Intel Labs); Wim Heirman (Intel); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Gerasimos Gerogiannis",
@@ -819,6 +929,10 @@
   },
   {
     "abstract": "Efficient execution of deep learning workloads on dataflow architectures is crucial for overcoming memory bottlenecks and maximizing performance. While streaming intermediate results between computation kernels can significantly improve efficiency, existing approaches struggle with inter-kernel correlations, external memory access management, and buffer optimization. In this work, we propose StreamTensor, a compiler framework that automatically constructs and optimizes stream-based dataflow accelerators. StreamTensor introduces a novel iterative tensor type system to explicitly encode stream layouts, enabling seamless kernel fusion, buffer allocation, and memory optimization. By systematically exploring three hierarchical design spaces, including tensor tiling, kernel fusion, and resource allocation, StreamTensor balances computational intensity, memory efficiency, and data streaming to maximize performance. Based on FPGA evaluations on Large Language Models (LLM), StreamTensor achieves up to 0.76x and 0.64x lower latency compared to the state-of-the-art FPGA LLM accelerators and GPUs, and up to 1.99x higher energy efficiency compared to GPUs, making it a promising approach for scalable dataflow-based deep learning acceleration.",
+    "authorIds": [
+      "0000-0002-6646-8146",
+      "0000-0002-3016-0270"
+    ],
     "authorInstitutions": "Hanchen Ye (Inspirit IoT, Inc. and Univ. of Illinois Urbana-Champaign); Deming Chen (Inspirit IoT, Inc. and Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Hanchen Ye",
@@ -880,6 +994,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0002-3585-6020",
+      "0009-0009-9317-3886",
+      "0009-0006-2293-7656",
+      "0009-0006-9487-5562",
+      "0009-0007-2647-9661",
+      "0009-0006-5634-8710",
+      "0000-0002-7929-7470",
+      "0000-0002-1502-5353"
+    ],
     "authorInstitutions": "Je-Woo Jang (Yonsei Univ.); Junyong Oh (Yonsei Univ.); Youngbae Kong (Yonsei Univ.); Jae-Youn Hong (Yonsei Univ.); Sung-Hyuk Cho (Yonsei Univ.); Jeongyeol Lee (Yonsei Univ.); Hoeseok Yang (Santa Clara Univ.); Joon-Sung Yang (Yonsei Univ.)",
     "authors": [
       "Je-Woo Jang",
@@ -925,6 +1049,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0001-5531-0688",
+      "0000-0002-6494-4786",
+      "0009-0007-6655-5665",
+      "0009-0003-0709-2438",
+      "0000-0001-7835-4739",
+      "0000-0001-8417-5796",
+      "0000-0002-2790-5884",
+      "0000-0002-4714-7400"
+    ],
     "authorInstitutions": "Ruiyang Chen (Shanghai Jiao Tong Univ.); Zhuoran Song (Shanghai Jiao Tong Univ.); Yicheng Zheng (Shanghai Jiao Tong Univ.); Zeyu Zhu (Inst. of Automation, Chinese Academy of Sciences); Gang Li (Inst. of Automation, Chinese Academy of Sciences); Naifeng Jing (Shanghai Jiao Tong Univ.); Xiaoyao Liang (Shanghai Jiao Tong Univ.); Haibing Guan (Shanghai Jiao Tong Univ.)",
     "authors": [
       "Ruiyang Chen",
@@ -982,6 +1116,19 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-1180-0503",
+      "0009-0002-6541-6739",
+      "0009-0000-2333-292X",
+      "0009-0008-8498-2502",
+      "0009-0004-6707-0641",
+      "0009-0007-0420-179X",
+      "0009-0009-0516-0605",
+      "0009-0002-4106-8039",
+      "0000-0002-8250-8574",
+      "0009-0007-8184-0528",
+      "0000-0002-6629-449X"
+    ],
     "authorInstitutions": "Wonung Kim (KAIST); Yubin Lee (KAIST); Yoonsung Kim (KAIST); Jinwoo Hwang (KAIST); Seongryong Oh (KAIST); Jiyong Jung (KAIST); Aziz Huseynov (KAIST); Woong Gyu Park (KAIST); Chang Hyun Park (Uppsala Univ.); Divya Mahajan (Georgia Inst. of Technology); Jongse Park (KAIST)",
     "authors": [
       "Wonung Kim",
@@ -996,15 +1143,23 @@
       "Divya Mahajan",
       "Jongse Park"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 11:10 AM KST – 12:30 PM KST"
     ],
+    "doi": "10.1145/3725843.3756121",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Processing-In-Memory - 2"
     },
     "id": "2B-Pimba_A_Processing-in-Memory_Acceleration_for_Post-Transformer_Large_Language_Mo",
     "locations": [],
+    "pages": "292-307",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 2B: Processing-In-Memory - 2"
     ],
@@ -1016,11 +1171,17 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756121",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-1125-2033",
+      "0000-0002-1732-4314",
+      "0000-0003-1161-692X"
+    ],
     "authorInstitutions": "Mohammadreza Saed (Univ. of British Columbia); Prashant J. Nair (Univ. of British Columbia); Tor M. Aamodt (Univ. of British Columbia)",
     "authors": [
       "Mohammadreza Saed",
@@ -1061,6 +1222,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-0551-5703",
+      "0009-0009-0361-7894",
+      "0000-0002-6685-5576",
+      "0000-0001-6233-3538",
+      "0000-0002-0874-814X"
+    ],
     "authorInstitutions": "Yinghao Yang (Inst. of Computing Technology, Chinese Academy of Sciences); Xicheng Xu (Inst. of Computing Technology, Chinese Academy of Sciences); Liang Chang (Univ. of Electronic Science and Technology of China); Hang Lu (Inst. of Computing Technology, Chinese Academy of Sciences); Xiaowei Li (Inst. of Computing Technology, Chinese Academy of Sciences)",
     "authors": [
       "Yinghao Yang",
@@ -1156,6 +1324,17 @@
   },
   {
     "abstract": "With the wide application of machine learning (ML), privacy concerns arise with user data as they may contain sensitive information. Privacy-preserving ML (PPML) based on cryptographic primitives has emerged as a promising solution in which an ML model is directly computed on the encrypted data to provide a formal privacy guarantee. However, PPML frameworks heavily rely on the oblivious transfer (OT) primitive to compute nonlinear functions. OT mainly involves the computation of single-point correlated OT (SPCOT) and learning parity with noise (LPN) operations. As OT is still computed extensively on general-purpose CPUs, it becomes the latency bottleneck of modern PPML frameworks. In this paper, we propose a novel OT accelerator, dubbed Ironman, to significantly increase the efficiency of OT and the overall PPML framework. We observe that SPCOT is computation-bounded, and thus propose a hardware-friendly SPCOT algorithm with a customized accelerator to improve SPCOT computation throughput. In contrast, LPN is memory-bandwidth-bounded due to irregular memory access patterns. Hence, we further leverage the near-memory processing (NMP) architecture equipped with memory-side cache and index sorting to improve effective memory bandwidth. With extensive experiments, we demonstrate Ironman achieves a 39.2-237.4 times improvement in OT throughput across different NMP configurations compared to the full-thread CPU implementation. For different PPML frameworks, Ironman demonstrates a 2.1-3.4 times reduction in end-to-end latency for both CNN and Transformer models.",
+    "authorIds": [
+      "0009-0009-6575-2194",
+      "0000-0002-7453-4043",
+      "0009-0001-7832-828X",
+      "0000-0002-8534-6494",
+      "0009-0004-4678-7774",
+      "0000-0001-6468-7575",
+      "0000-0002-7514-0767",
+      "0000-0001-8433-7281",
+      "0000-0002-7212-2264"
+    ],
     "authorInstitutions": "Chenqi Lin (School of Software & Microelectronics, Peking Univ.); Kang Yang (State Key Laboratory of Cryptology); Tianshi Xu (Peking Univ.); Ling Liang (DAMO Academy Alibaba Group, Peking Univ.); Yufei Wang (Alibaba Group); Zhaohui Chen (Computing Technology Lab, Alibaba Group); Runsheng Wang (Peking Univ.); Mingyu Gao (Tsinghua Univ.); Meng Li (Peking Univ.)",
     "authors": [
       "Chenqi Lin",
@@ -1223,6 +1402,19 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0001-7039-033X",
+      "0009-0001-6281-9121",
+      "0009-0000-6148-3104",
+      "0009-0000-9249-0550",
+      "0009-0008-9886-2368",
+      "0000-0003-3365-2526",
+      "0000-0002-2725-2529",
+      "0009-0005-4802-9587",
+      "0009-0007-9580-5395",
+      "0009-0000-4027-0310",
+      "0009-0002-7682-1019"
+    ],
     "authorInstitutions": "Chenxu Wang (Southern Univ. of Science and Technology (SUSTech) and The Hong Kong Polytechnic Univ.); Danqing Tang (Ant Group); Changxu Ci (Ant Group); Junjie Huang (Southern Univ. of Science and Technology (SUSTech)); Yankai Xu (Southern Univ. of Science and Technology (SUSTech)); Fengwei Zhang (Southern Univ. of Science and Technology (SUSTech)); Jiannong Cao (The Hong Kong Polytechnic Univ.); Jie Song (Ant Group); Shoumeng Yan (Ant Group); Tao Wei (Ant Group); Zhengyu He (Ant Group)",
     "authors": [
       "Chenxu Wang",
@@ -1288,6 +1480,12 @@
   },
   {
     "abstract": "GPUs are the most popular platform for accelerating HPC workloads, such as artificial intelligence and science simulations. However, most microarchitectural research in academia relies on simulators that model GPU core architectures based on designs that are more than 15 years old, and differ significantly from modern core architectures. This work reverse engineers the architecture of modern NVIDIA GPU cores, unveiling key aspects of its design and the important role of the compiler in some of its main components. In particular, it reveals how the issue logic works, the structure of the register file and its associated cache, multiple features of the instruction and data memory pipelines. When modeling all these discovered microarchitectural details in a state-of-the-art simulation framework, we show that its accuracy is significantly improved, achieving a 20.58% reduction in mean absolute percentage error (MAPE) on average, which results in a 13.45% MAPE on average with respect to real modern hardware. In addition, we show that the software-based dependence management mechanism included in modern NVIDIA GPUs outperforms a hardware mechanism based on scoreboards in terms of performance and area.",
+    "authorIds": [
+      "0000-0003-0052-7710",
+      "0000-0003-2377-6939",
+      "0000-0001-5325-9153",
+      "0000-0002-0009-0996"
+    ],
     "authorInstitutions": "Rodrigo Huerta (Universitat Politecnica de Catalunya); Mojtaba Abaie Shoushtary (Universitat Politecnica de Catalunya); José-Lorenzo Cruz (Universitat Politecnica de Catalunya); Antonio Gonzalez (Universitat Politecnica de Catalunya)",
     "authors": [
       "Rodrigo Huerta",
@@ -1349,6 +1547,11 @@
   },
   {
     "abstract": "Pattern matching is a key operation in unstructured data analytics, commonly supported by regular expression (regex) engines.Bitparallel regex engines compile regexes into bitstream programs, which expose fine-grained parallelism and are well-suited for GPU execution.A straightforward strategy executes each bitstream instruction sequentially, processing all data blocks in a loop.However, this execution suffers from poor data reuse and high memory consumption, limiting throughput.Our key insight is to adopt an interleaved execution model, where all bitstream instructions are fused into a single loop and executed block-wise.While interleaved execution could improve data reuse, enabling it on GPUs is non-trivial due to cross-block data dependencies.To address this, we introduce 1) Dependency-Aware Thread-Data Mapping, which resolves cross-block dependencies via selective recomputation.We further improve interleaved execution performance with two additional optimizations: 2) Shift Rebalancing, which balances dependency chains to reduce synchronization barriers; and 3) Zero Block Skipping, which exploits bitstream sparsity to skip computation on zero blocks.Together, these techniques make interleaved execution practical and efficient.Experiments on real-world regex benchmarks demonstrate a 19.5 geometric mean speedup over the state-of-theart GPU regex engine.",
+    "authorIds": [
+      "0000-0003-0605-0888",
+      "0000-0001-9745-4372",
+      "0000-0002-6961-6394"
+    ],
     "authorInstitutions": "Tianao Ge (Hong Kong Univ. of Science and Technology (Guangzhou)); Xiaowen Chu (Data Science and Analytics Thrust, HKUST(GZ)); Hongyuan Liu (Stevens Inst. of Technology)",
     "authors": [
       "Tianao Ge",
@@ -1405,6 +1608,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-3418-5299",
+      "0009-0006-4131-7145",
+      "0000-0002-0302-7503",
+      "0009-0009-6529-5333",
+      "0000-0002-5432-7813",
+      "0000-0001-5390-6445",
+      "0000-0002-1015-9969"
+    ],
     "authorInstitutions": "Yeonan Ha (Yonsei Univ.); Jiho Park (Yonsei Univ.); Hanna Cha (Yonsei Univ.); Jiwon Lee (Yonsei Univ. / Samsung Electronics); Joonsung Kim (Sungkyunkwan Univ.); Won Woo Ro (Yonsei Univ.); Youngsok Kim (Yonsei Univ.)",
     "authors": [
       "Yeonan Ha",
@@ -1452,6 +1664,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0004-0680-2642",
+      "0009-0003-3802-7524",
+      "0000-0002-9181-4186",
+      "0000-0001-6021-9926",
+      "0009-0002-9940-2845",
+      "0009-0005-0646-8303",
+      "0000-0001-7842-125X"
+    ],
     "authorInstitutions": "Sungbin Jang (Sungkyunkwan Univ.); Junhyeok Park (Sungkyunkwan Univ.); Yongho Lee (Sungkyunkwan Univ.); Osang Kwon (Sungkyunkwan Univ.); Donghyun Kim (Sungkyunkwan Univ.); Juyoung Seok (Sungkyunkwan Univ.); Seokin Hong (Sungkyunkwan Univ.)",
     "authors": [
       "Sungbin Jang",
@@ -1512,6 +1733,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-3228-3725",
+      "0009-0009-3263-0705",
+      "0009-0001-1125-1521",
+      "0000-0003-1099-1496"
+    ],
     "authorInstitutions": "In-Jun Jung (KAIST); Gyeongrok Yang (KAIST); Jaeha Min (KAIST); Joo-Young Kim (KAIST)",
     "authors": [
       "In-Jun Jung",
@@ -1570,6 +1797,15 @@
   },
   {
     "abstract": "As the parameter size of large language models (LLMs) continues to expand, the need for a large memory footprint and high communication bandwidth have become significant bottlenecks for the training and inference of LLMs. To mitigate these bottlenecks, various tensor compression techniques have been proposed to reduce the data size, thereby alleviating memory requirements and communication pressure. Our research found that video codecs, despite being originally designed for compressing videos, show excellent efficiency when compressing various types of tensors. We demonstrate that video codecs can be versatile and general-purpose tensor codecs while achieving the state-of-the-art compression efficiency in various tasks. We further make use of the hardware video encoding and decoding module available on GPUs to create a framework capable of both inference and training with video codecs repurposed as tensor codecs. Building on insights gained from video codecs, we further show that the hardware of the video codecs can be customized and enhanced to significantly improve tensor encoding/decoding throughput without incurring substantial costs, making it a highly effective solution for large-scale model deployment without requiring significant modifications to the existing GPU architecture.",
+    "authorIds": [
+      "0000-0002-2668-6456",
+      "0009-0000-6297-1599",
+      "0000-0003-0335-5512",
+      "0009-0009-9166-6476",
+      "0000-0003-1034-2736",
+      "0000-0002-0611-3941",
+      "0000-0002-3574-3440"
+    ],
     "authorInstitutions": "Ceyu Xu (Duke Univ.); Yongji Wu (Duke Univ.); Xinyu Yang (Carnegie Mellon Univ.); Beidi Chen (Carnegie Mellon Univ.); Matthew Lentz (Duke Univ.); Danyang Zhuo (Duke Univ.); Lisa Wu Wills (Duke Univ.)",
     "authors": [
       "Ceyu Xu",
@@ -1635,6 +1871,20 @@
   },
   {
     "abstract": "Recent breakthroughs in AI reasoning, enabled by test-time compute (TTC) on compact large language models (LLMs), offer great potential for edge devices to effectively execute complex reasoning tasks. However, the intricate inference pipelines associated with TTC pose new efficiency bottlenecks, limiting achievable latency and hindering widespread adoption. Through an in-depth analysis, we identify three key barriers: (1) variable parallelism, characterized by inference-dependent dynamic control flows and varying batch sizes, complicating workload scheduling; (2) branch dependencies, hindering efficient pipelining across sequential reasoning steps; and (3) branch pruning, causing memory fragmentation and irregular data access patterns. Motivated by the memory-bound nature of LLMs and Processing-in-Memory (PIM)'s capability to reduce data movement, we propose ORCHES, a novel GPU-PIM collaborative system specifically designed to address these barriers. ORCHES integrates three key innovations: (1) adaptive workload assignment, dynamically balancing workloads between GPU and PIM units to maximize parallelism despite unpredictable branching; (2) branch-aware pipelining, leveraging speculative execution to substantially reduce inter-step pipeline stalls; and (3) fragmentation-aware memory structuring, enhancing data locality and access efficiency through coordinated caching and optimized memory layout reorganization. Experimental results demonstrate that ORCHES achieves average speedups of 4.16 × and 3.10 × over state-of-the-art (SOTA) GPU implementations for text-based and vision-based reasoning tasks, respectively, without any loss in the accuracy of the original reasoning pipeline.",
+    "authorIds": [
+      "0000-0002-9105-9299",
+      "0009-0004-9236-0480",
+      "0000-0003-4030-9777",
+      "0000-0002-7483-2921",
+      "0009-0002-9467-7460",
+      "0000-0002-9981-4981",
+      "0000-0002-2873-2153",
+      "0000-0003-0755-8843",
+      "0000-0002-9770-3583",
+      "0000-0001-7919-049X",
+      "",
+      ""
+    ],
     "authorInstitutions": "Sixu Li (Celine); Yuzhou Chen (Celine); Chaojian Li (Celine); Yonggan Fu (Celine); Zheng Wang (Celine); Zhongzhi Yu (Celine); Haoran You (Celine); Zhifan Ye (Celine); Wei Zhou (Celine); Yongan Zhang (Celine); Yingyan (Celine); Lin (Georgia Inst. of Technology)",
     "authors": [
       "Sixu Li",
@@ -1706,6 +1956,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0002-1510-1341",
+      "0009-0001-7661-6165",
+      "0009-0003-1981-9999",
+      "0009-0002-0671-615X",
+      "0009-0001-0000-1447",
+      "0000-0001-9251-0574",
+      "0000-0002-0894-1054"
+    ],
     "authorInstitutions": "Zihan Zou (Southeast Univ.); Xinming Yan (Southeast Univ.); Shun Zhang (Southeast Univ.); Peng Zheng (Southeast Univ.); Guang Yang (Southeast Univ.); Hao Cai (Southeast Univ.); Bo Liu (Southeast Univ.)",
     "authors": [
       "Zihan Zou",
@@ -1763,6 +2022,16 @@
   },
   {
     "abstract": "Modern mobile CPU software pose challenges for conventional instruction cache replacement policies due to their complex runtime behavior causing high reuse distance between executions of the same instruction. Mobile code commonly suffers from large amounts of stalls in the CPU frontend and thus starvation of the rest of the CPU resources. Complexity of these applications and their code footprint are projected to grow at a rate faster than available on-chip memory due to power and area constraints, making conventional hardware-centric methods for managing instruction caches to be inadequate. We present a novel software-hardware co-design approach called TRRIP (Temperature-based Re-Reference Interval Prediction) that enables the compiler to analyze, classify, and transform code based on \"temperature\" (hot/cold), and to provide the hardware with a summary of code temperature information through a well-defined OS interface based on using code page attributes. TRRIP's lightweight hardware extension employs code temperature attributes to optimize the instruction cache replacement policy resulting in the eviction rate reduction of hot code. TRRIP is designed to be practical and adoptable in real mobile systems that have strict feature requirements on both the software and hardware components. TRRIP can reduce the L2 MPKI for instructions by 26.5% resulting in geomean speedup of 3.9%, on top of RRIP cache replacement running mobile code already optimized using PGO.",
+    "authorIds": [
+      "0009-0002-6897-4218",
+      "0009-0005-5380-2247",
+      "0009-0008-8084-6132",
+      "0000-0003-2072-8704",
+      "0000-0001-5897-7998",
+      "0009-0004-7389-5017",
+      "0000-0002-1272-4589",
+      "0009-0006-6000-8997"
+    ],
     "authorInstitutions": "Henry Kao (Huawei Technologies Canada); Nikhil Sreekumar (Huawei Technologies Canada); Prabhdeep Singh Soni (Huawei Technologies Canada); Ali Sedaghati (Huawei Technologies Canada); Fang Su (Huawei); Bryan Chan (Huawei Technologies Canada); Maziar Goudarzi (Huawei Technologies 2012 Labs, Canada Research Center); Reza Azimi (Huawei)",
     "authors": [
       "Henry Kao",
@@ -1829,6 +2098,11 @@
   },
   {
     "abstract": "High-performance Last-level Cache (LLC) replacement policies mitigate off-chip memory access latency by intelligently determining which cache lines to retain in the LLC.State-of-the-art replacement policies significantly outperform policies like LRU.However, the effectiveness of these policies is not evaluated on many-core systems with sliced LLCs, which is common in commercial many-core systems.Recent state-of-the-art LLC replacement policies use two seminal ideas: (i) a sampled cache and (ii) a reuse predictor.In a monolithic LLC, there is a single sampled cache and a single reuse predictor.However, these structures must be created per slice with the sliced LLC.We study the interaction between sliced LLC and state-of-the-art replacement policies, identifying a few unexplored interactions.A per-slice reuse predictor makes myopic decisions based on the accesses made to a particular slice, unaware of the global reuse behavior.A trivial solution to this problem is to design a centralized reuse predictor shared by all the LLC slices.However, this will significantly increase interconnect traffic, requiring more bandwidth to access the centralized reuse predictor.Next, we observe that with a sliced LLC, the LLC sets used for the sampled cache do not receive sufficient LLC misses.As these LLC sets drive the decisions of LLC replacement policies, some of the decisions become suboptimal.We propose Drishti, which is designed to improve the effectiveness of LLC replacement policies further.We make a case for two enhancements: (i) a per-core and yet global reuse predictor with a local (per-slice) sampled cache, and argue that there is no need for a global sampled cache, and (ii) a per-slice dynamic sampled cache to improve the utility of LLC sets used for the sampled cache.We evaluate two state-of-the-art LLC replacement policies, Hawkeye and Mockingjay, on four, 16, and 32-core systems with eight, 32, and 64MB sliced LLC.On a 32-core system, Drishti enhances the effectiveness of two state-of-the-art replacement policies, Hawkeye and Mockingjay, by improving performance by 5.6% and 13.2%, respectively, compared to the baseline LRU policy.Without Drishti, Hawkeye and Mockingjay improve performance by 3.3% and 6.7%, respectively.",
+    "authorIds": [
+      "0009-0008-2945-3536",
+      "0009-0005-1560-3212",
+      "0009-0007-0468-9414"
+    ],
     "authorInstitutions": "Sweta (Indian Inst. of Technology Bombay); Prerna Priyadarshini (Indian Inst. of Technology Bombay); Biswabandan Panda (Indian Inst. of Technology Bombay)",
     "authors": [
       "Sweta",
@@ -1886,6 +2160,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-5146-4361",
+      "0000-0002-0076-1059",
+      "0000-0002-1264-5274",
+      "0009-0000-6157-3185",
+      "0000-0002-4894-0603",
+      "0000-0003-4091-5355",
+      "0009-0007-0169-3864",
+      "0000-0003-3179-5873",
+      "0000-0002-4114-7661"
+    ],
     "authorInstitutions": "Marton Erdos (Univ. of Cambridge); Utpal Bora (Univ. of Cambridge); Akshay Bhosale (Univ. of Cambridge); Bob Lytton (Arm); Ali Zaidi (Arm); Alexandra W Chadwick (Univ. of Cambridge); Yuxin Guo (Univ. of Cambridge); Giacomo Gabrielli (Arm); Timothy M Jones (Univ. of Cambridge)",
     "authors": [
       "Marton Erdos",
@@ -1953,6 +2238,10 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-5272-0231",
+      "0000-0001-8742-134X"
+    ],
     "authorInstitutions": "Qingxuan Kang (National Univ. of Singapore); Trevor E. Carlson (National Univ. of Singapore)",
     "authors": [
       "Qingxuan Kang",
@@ -1992,6 +2281,10 @@
   },
   {
     "abstract": "Quantum Error Correction (QEC) protects qubits against bit- and phase-flip errors in the |0> or |1> subspace, but physical qubits can also leak into higher energy levels (e.g., |2>). Leakage is especially harmful, as it corrupts all subsequent syndrome measurements and can spread to neighboring qubits. Detecting leakage on data qubits is particularly challenging, since they are never measured directly during QEC cycles. Prior work, such as eraser, addresses this by inferring leakage from syndrome patterns using a fixed heuristic. However, this approach often misclassifies benign syndromes, triggering excessive leakage-reduction circuits (LRCs). Because LRCs are themselves noisy and slow, these false triggers lengthen QEC cycles and inflate logical error rates. We propose gladiator, a general and adaptable leakage speculation framework that works across surface code, color code, and qLDPC codes. Offline, gladiator builds a code-aware error-propagation graph calibrated to device data. Online, it classifies each syndrome in a few nanoseconds and schedules LRC only when the observed pattern is provably leakage-dominated. This precise speculation eliminates up to 3x (and on average 2x) unnecessary LRCs, shortens QEC cycles, and suppresses false positives at their source. Evaluated on standard fault-tolerant benchmarks, gladiator delivers 1.7x-3.9x speedups and 16% reduction in logical error rate, advancing the efficiency of fault-tolerant quantum computing.",
+    "authorIds": [
+      "0009-0002-0531-3551",
+      "0000-0003-4479-7413"
+    ],
     "authorInstitutions": "Chaithanya Naik Mude (Univ. of Wisconsin-Madison); Swamit Tannu (Univ. of Wisconsin-Madison)",
     "authors": [
       "Chaithanya Naik Mude",
@@ -2051,6 +2344,23 @@
   },
   {
     "abstract": "The design of a scalable Quantum Control Architecture (QCA) faces two primary challenges. First, the continuous growth in qubit counts has rendered distributed QCA inevitable, yet the nondeterministic latencies inherent in feedback loops demand cycleaccurate synchronization across multiple controllers. Existing synchronization strategies -- whether lock-step or demand-driven -- introduce significant performance penalties. Second, existing quantum instruction set architectures are polarized, being either too abstract or too granular. This lack of a unifying design necessitates recurrent hardware customization for each new control requirement, which limits the system's reconfigurability and impedes the path toward a scalable and unified digital microarchitecture. Addressing these challenges, we propose Distributed-HISQ, featuring: (i) HISQ, A universal instruction set that redefines quantum control with a hardware-agnostic design. By decoupling from quantum operation semantics, HISQ provides a unified language for control sequences, enabling a single microarchitecture to support various control methods and enhancing system reconfigurability. (ii) BISP, a booking-based synchronization protocol that can potentially achieve zero-cycle synchronization overhead. The feasibility and adaptability of Distributed-HISQ are validated through its implementation on a commercial quantum control system targeting superconducting qubits. We performed a comprehensive evaluation using a customized quantum software stack. Our results show that BISP effectively synchronizes multiple control boards, leading to a 22.8% reduction in average program execution time and a $\\sim$5$\\times$ reduction in infidelity when compared to an existing lock-step synchronization scheme.",
+    "authorIds": [
+      "0000-0002-6812-5120",
+      "0009-0004-6035-2865",
+      "0009-0004-2432-7347",
+      "0009-0005-4976-9763",
+      "0009-0004-4962-6183",
+      "0009-0005-3158-295X",
+      "0009-0005-0422-5471",
+      "0009-0001-8116-292X",
+      "0000-0002-2543-3692",
+      "0000-0003-1185-4805",
+      "0000-0001-5113-8067",
+      "0000-0001-5172-4736",
+      "0000-0003-2809-6158",
+      "0000-0001-5951-8988",
+      "0000-0002-1365-8501"
+    ],
     "authorInstitutions": "Yilun Zhao (Inst. of Computing Technology, Chinese Academy of Sciences); Kangding Zhao (College of Computer Science and Technology, National Univ. of Defense Technology); Peng Zhou (China Greatwall Quantum Laboratory); Dingdong Liu (College of Computer Science and Technology, National Univ. of Defense Technology); Tingyu Luo (East China Normal Univ.); Yuzhen Zheng (College of Computer Science and Technology, National Univ. of Defense Technology); Peng Luo (College of Computer Science and Technology, National Univ. of Defense Technology); Shun Hu (College of Computer Science and Technology, National Univ. of Defense Technology); Jin Lin (Hefei National Laboratory, Univ. of Science and Technology of China); Cheng Guo (Hefei National Laboratory); Yinhe Han (ICT, Chinese Academy of Sciences); Ying Wang (Inst. of Computing Technology, Chinese Academy of Sciences); Mingtang Deng (College of Computer Science and Technology, National Univ. of Defense Technology); Junjie Wu (College of Computer Science and Technology, National Univ. of Defense Technology); Xiang Fu (College of Computer Science and Technology, National Univ. of Defense Technology)",
     "authors": [
       "Yilun Zhao",
@@ -2124,6 +2434,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-3178-1669",
+      "0000-0002-3308-5018",
+      "0009-0008-8448-7915",
+      "0000-0002-4503-0823",
+      "0000-0003-3865-3827",
+      "0009-0006-6149-7251",
+      "0000-0003-2193-5748"
+    ],
     "authorInstitutions": "Junpyo Kim (Seoul National Univ.); Jungmin Cho (Seoul National Univ.); Hyeonseong Jeong (Seoul National Univ.); Dongmoon Min (Sungkyunkwan Univ.); Junhyuk Choi (Seoul National Univ.); Juwon Hong (Seoul National Univ.); Jangwoo Kim (Seoul National Univ.)",
     "authors": [
       "Junpyo Kim",
@@ -2184,6 +2503,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-8620-3591",
+      "0000-0002-3801-6847",
+      "0000-0002-0634-8089",
+      "0009-0005-6662-4099",
+      "0009-0006-5492-3603",
+      "0009-0002-0378-8502",
+      "0000-0002-8571-9780",
+      "0000-0001-9663-7441",
+      "0000-0003-4703-7348"
+    ],
     "authorInstitutions": "Wuwei Tian (Zhejiang Univ.); Liqiang Lu (Zhejiang Univ.); Siwei Tan (Zhejiang Univ.); Shiyu Li (Zhejiang Univ.); Hengyi Li (Zhejiang Univ.); Tianyao Chu (Zhejiang Univ.); Xuhong Zhang (Zhejiang Univ.); Mingshuai Chen (Zhejiang Univ.); Jianwei Yin (Zhejiang Univ.)",
     "authors": [
       "Wuwei Tian",
@@ -2230,6 +2560,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0006-9225-7728",
+      "0009-0000-8406-0817",
+      "0009-0008-5903-2847",
+      "0009-0003-3718-5272",
+      "0000-0003-1912-5834",
+      "0000-0002-4302-4227",
+      "0000-0001-5738-6942",
+      "0009-0007-8184-0528"
+    ],
     "authorInstitutions": "Seokjin Go (Georgia Inst. of Technology); Joongun Park (Georgia Inst. of Technology); Spandan More (Georgia Inst. of Technology); Hanjiang Wu (Georgia Inst. of Technology); Irene Wang (Georgia Inst. of Technology); Aaron Jezghani (Georgia Inst. of Technology); Tushar Krishna (Georgia Inst. of Technology); Divya Mahajan (Georgia Inst. of Technology)",
     "authors": [
       "Seokjin Go",
@@ -2292,6 +2632,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-2314-2734",
+      "0000-0002-1157-0127",
+      "0009-0000-1431-0067",
+      "0009-0006-0023-743X",
+      "0009-0001-5373-5743",
+      "0000-0002-2335-4798",
+      "0000-0002-8165-166X",
+      "0009-0005-0472-107X",
+      "0000-0002-0442-5634"
+    ],
     "authorInstitutions": "Jinghan Huang (Univ. of Illinois Urbana-Champaign); Hyungyo Kim (Univ. of Illinois Urbana-Champaign); Nachuan Wang (Univ. of Illinois Urbana-Champaign); Jaeyoung Kang (Univ. of Illinois Urbana-Champaign); Hrishi Shah (Univ. of Illinois Urbana-Champaign); Eun Kyung Lee (IBM Research); Minjia Zhang (Univ. of Illinois Urbana-Champaign); Fan Lai (Univ. of Illinois Urbana-Champaign); Nam Sung Kim (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Jinghan Huang",
@@ -2355,6 +2706,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0001-9861-0469",
+      "0000-0001-6805-7669",
+      "0000-0002-6369-6389",
+      "0000-0002-4951-4075",
+      "0009-0003-5174-7788",
+      "0000-0003-4011-6668"
+    ],
     "authorInstitutions": "Le Qin (The Hong Kong Univ. of Science and Technology (Guangzhou)); Junwei Cui (The Hong Kong Univ. of Science and Technology (Guangzhou)); Weilin Cai (The Hong Kong Univ. of Science and Technology (Guangzhou)); Meng Niu (Huawei); Yan Yang (Huawei); Jiayi Huang (HKUST(GZ))",
     "authors": [
       "Le Qin",
@@ -2398,6 +2757,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-8828-8058",
+      "0009-0007-7108-9013",
+      "0000-0002-5691-4771",
+      "0000-0003-3958-3891"
+    ],
     "authorInstitutions": "Hans Kasan (KAIST); Dennis Abts (NVIDIA); Jungwook Choi (Hanyang Univ.); John Kim (KAIST)",
     "authors": [
       "Hans Kasan",
@@ -2439,6 +2804,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0001-7203-4590",
+      "0000-0002-1279-3306",
+      "0009-0004-0369-7744",
+      "0000-0001-5181-9639"
+    ],
     "authorInstitutions": "Yinyuan Zhao (Univ. of California, Santa Cruz); Surim Oh (Univ. of California, Santa Cruz); Mingsheng Xu (Univ. of California, Santa Cruz); Heiner Litz (Univ. of California, Santa Cruz)",
     "authors": [
       "Yinyuan Zhao",
@@ -2483,6 +2854,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-5955-7747",
+      "0009-0007-2739-0538",
+      "0009-0007-2356-0413",
+      "0009-0007-1916-2842",
+      "0000-0003-1646-7935",
+      "0000-0003-1161-692X",
+      "0000-0003-3327-1803"
+    ],
     "authorInstitutions": "Ishita Chaturvedi (Princeton Univ.); Bhargav Reddy Godala (AheadComputing); Abiram Gangavaram (Princeton Univ.); Daniel Flyer (Princeton Univ.); Tyler Sorensen (UC Santa Cruz and Microsoft); Tor M. Aamodt (Univ. of British Columbia); David I. August (Princeton Univ.)",
     "authors": [
       "Ishita Chaturvedi",
@@ -2493,15 +2873,26 @@
       "Tor M. Aamodt",
       "David I. August"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756070",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Microarchitecture II"
     },
     "id": "4B-SHADOW_Simultaneous_Multi-Threading_Architecture_with_Asymmetric_Threads",
     "locations": [],
+    "pages": "691-704",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756070"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4B: Microarchitecture II"
     ],
@@ -2513,11 +2904,31 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756070",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-2488-0693",
+      "0009-0006-8212-362X",
+      "0009-0000-3366-3722",
+      "0009-0004-3826-9758",
+      "0009-0001-3675-3798",
+      "0009-0004-5314-3002",
+      "0009-0005-0221-6408",
+      "0009-0004-3182-2290",
+      "0009-0007-5045-7884",
+      "0009-0004-5905-6866",
+      "0000-0003-3623-3554",
+      "0009-0008-7217-4620",
+      "0009-0005-1128-4664",
+      "0009-0007-8719-3464",
+      "0009-0009-6077-8707",
+      "0000-0002-6404-5270",
+      "0000-0001-8433-7281"
+    ],
     "authorInstitutions": "Jiuyang Liu (Huazhong Univ. of Science and Technology); Qinjun Li (Inst. of Software, Chinese Academy of Sciences); Yunqian Luo (Tsinghua Univ.); Hongbin Zhang (Inst. of Software, Chinese Academy of Sciences; Univ. of Chinese Academy of Sciences); Jiongjia Lu (Henan Academy of Sciences); Shupei Fan (Tsinghua Univ.); Jianhao Ye (Univ. of Chinese Academy of Sciences); Xiaoyi Liu (Tsinghua Univ.); Ao Shen (Tsinghua Univ.); Yang Liu (Inst. of Software, Chinese Academy of Sciences); Yanqi Yang (Huazhong Univ. of Science and Technology); Zewen Ye (Zhejiang Univ.); Yuhang Zeng (Wuhan Xinpian Technology Co., Ltd.); Rui Huang (Wuhan Xinpian Technology Co., Ltd.); Mingyu Gao (Tsinghua Univ.); Xuecheng Zou (Henan Academy of Sciences); Wei Cong (Nanjing UCUN Technology Inc)",
     "authors": [
       "Jiuyang Liu",
@@ -2538,6 +2949,7 @@
       "Xuecheng Zou",
       "Wei Cong"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
@@ -2545,6 +2957,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2563,7 +2976,8 @@
     ],
     "locations": [],
     "pages": "675-690",
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4B: Microarchitecture II"
     ],
@@ -2582,6 +2996,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0003-5263-6967",
+      "0009-0008-5613-1030",
+      "0000-0001-7086-8401",
+      "0000-0002-0641-3186"
+    ],
     "authorInstitutions": "Xian Wu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Chenghong Zhu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Jingbo Wang (Beijing Academy of Quantum Information Sciences); Xin Wang (The Hong Kong Univ. of Science and Technology (Guangzhou))",
     "authors": [
       "Xian Wu",
@@ -2623,6 +3043,18 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-1965-6361",
+      "0000-0002-3801-6847",
+      "0009-0004-5333-6955",
+      "0009-0002-0378-8502",
+      "0009-0006-8350-0351",
+      "0000-0002-5660-5493",
+      "",
+      "",
+      "0000-0002-0281-1670",
+      "0000-0003-4703-7348"
+    ],
     "authorInstitutions": "Qifan Jiang (Zhejiang Univ.); Liqiang Lu (Zhejiang Univ.); Debin Xiang (Zhejiang Univ.); Tianyao Chu (Zhejiang Univ.); Tianze Zhu (Zhejiang Univ.); Jingwen Leng (Shanghai Jiao Tong Univ.); Yun (Eric); Liang (Peking Univ.); Xiaoming Sun (Inst. of Computing Technology, Chinese Academy of Sciences); Jianwei Yin (Zhejiang Univ.)",
     "authors": [
       "Qifan Jiang",
@@ -2704,6 +3136,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-1017-8878",
+      "0000-0002-3801-6847",
+      "0009-0004-5333-6955",
+      "0000-0002-9221-0317",
+      "0009-0000-2596-9385",
+      "0000-0002-5660-5493",
+      "0000-0002-8769-293X",
+      "0000-0001-9663-7441",
+      "0000-0003-4703-7348"
+    ],
     "authorInstitutions": "Kaiwen Zhou (Zhejiang Univ.); Liqiang Lu (Zhejiang Univ.); Debin Xiang (Zhejiang Univ.); Chenning Tao (Zhejiang Univ.); Anbang Wu (Shanghai Jiao Tong Univ.); Jingwen Leng (Shanghai Jiao Tong Univ.); Fangxin Liu (Shanghai Jiao Tong Univ.); Mingshuai Chen (Zhejiang Univ.); Jianwei Yin (Zhejiang Univ.)",
     "authors": [
       "Kaiwen Zhou",
@@ -2769,6 +3212,15 @@
   },
   {
     "abstract": "MICRO ’25, Seoul, Republic of Korea",
+    "authorIds": [
+      "0000-0002-5809-7031",
+      "0000-0001-5236-2829",
+      "0000-0002-9668-902X",
+      "0009-0008-2268-0074",
+      "0000-0002-2267-903X",
+      "0000-0003-3444-1544",
+      "0000-0003-3245-7542"
+    ],
     "authorInstitutions": "Ritvik Sharma (Stanford Univ.); Fisher Xue (Massachusetts Inst. of Technology); Nathan Zhang (Stanford Univ.); Rubens Lacouture (Stanford Univ.); Fredrik Kjolstad (Stanford Univ.); Sara Achour (Stanford Univ.); Mark Horowitz (Stanford Univ.)",
     "authors": [
       "Ritvik Sharma",
@@ -2779,6 +3231,7 @@
       "Sara Achour",
       "Mark Horowitz"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
@@ -2786,6 +3239,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2811,7 +3265,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3725843.3756095"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4D: Sparsity - 1"
     ],
@@ -2830,6 +3285,10 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-5611-5892",
+      "0000-0003-2305-9892"
+    ],
     "authorInstitutions": "Sanjali Yadav (Univ. of Maryland); Bahar Asgari (Univ. of Maryland, College Park)",
     "authors": [
       "Sanjali Yadav",
@@ -2872,6 +3331,11 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0006-5143-8055",
+      "0000-0002-7876-1454",
+      "0000-0003-2305-9892"
+    ],
     "authorInstitutions": "Ubaid Bakhtiar (Univ. of Maryland-College Park); Amirmahdi Namjoo (Univ. of Maryland-College Park); Bahar Asgari (Univ. of Maryland, College Park)",
     "authors": [
       "Ubaid Bakhtiar",
@@ -2912,21 +3376,37 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-5611-5892",
+      "0000-0002-7876-1454",
+      "0000-0003-2305-9892"
+    ],
     "authorInstitutions": "Sanjali Yadav (Univ. of Maryland); Amirmehdi Namjoo (Univ. of Maryland-College Park); Bahar Asgari (Univ. of Maryland, College Park)",
     "authors": [
       "Sanjali Yadav",
       "Amirmehdi Namjoo",
       "Bahar Asgari"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 1: Monday, October 20, 2025 3:40 PM KST – 5:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756126",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Sparsity - 1"
     },
     "id": "4D-Misam_Machine_Learning_Assisted_Dataflow_Selection_in_Accelerators_for_Sparse_Ma",
     "locations": [],
+    "pages": "824-838",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756126"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 4D: Sparsity - 1"
     ],
@@ -2938,11 +3418,23 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756126",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-9988-2940",
+      "0000-0002-6112-1928",
+      "0000-0001-9438-9181",
+      "0000-0002-8085-9047",
+      "0000-0003-4854-7382",
+      "0000-0001-7650-5169",
+      "0000-0001-6690-8386",
+      "0000-0002-3099-6078",
+      "0000-0002-7924-9268"
+    ],
     "authorInstitutions": "Xilong Xie (Beihang Univ.); Liang Wang (Beihang Univ.); Limin Xiao (Beihang Univ.); Meng Han (Tsinghua Univ.); Lei Liu (Beihang Univ.); Xiangrong Xu (Beihang Univ.); Jinquan Wang (Beihang Univ.); Zhen Song (Beihang Univ.); Xiaojian Liao (Beihang Univ.)",
     "authors": [
       "Xilong Xie",
@@ -2955,6 +3447,7 @@
       "Zhen Song",
       "Xiaojian Liao"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
@@ -2962,6 +3455,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2980,7 +3474,8 @@
     ],
     "locations": [],
     "pages": "854-868",
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5A: Systems for AI (Quantization)"
     ],
@@ -2999,6 +3494,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-8613-2589",
+      "0009-0008-6273-9894",
+      "0009-0002-6028-0019",
+      "0009-0001-0405-436X",
+      "0000-0003-1951-5015"
+    ],
     "authorInstitutions": "Jiaxiang Zou (The Hong Kong Univ. of Science and Technology (Guangzhou)); Yonghao Chen (The Hong Kong Univ. of Science and Technology (Guangzhou)); Xingyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou)); Chenxi Xu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Xinyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou))",
     "authors": [
       "Jiaxiang Zou",
@@ -3054,6 +3556,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0004-5629-6258",
+      "0009-0003-4228-1138",
+      "0009-0007-8624-9913",
+      "0009-0003-6853-368X",
+      "0000-0002-0403-9928"
+    ],
     "authorInstitutions": "Jungi Lee (Seoul National Univ.); Junyong Park (Seoul National Univ.); Soohyun Cha (Seoul National Univ.); Jaehoon Cho (Seoul National Univ.); Jaewoong Sim (Seoul National Univ.)",
     "authors": [
       "Jungi Lee",
@@ -3144,6 +3653,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0007-0169-3864",
+      "0000-0002-1264-5274",
+      "0000-0002-0076-1059",
+      "0000-0003-4091-5355",
+      "0000-0002-5146-4361",
+      "0000-0003-3179-5873",
+      "0000-0002-4114-7661"
+    ],
     "authorInstitutions": "Yuxin Guo (Univ. of Cambridge); Alexandra W. Chadwick (Univ. of Cambridge); Márton Erdös (Univ. of Cambridge); Utpal Bora (Univ. of Cambridge); Akshay Bhosale (Univ. of Cambridge); Giacomo Gabrielli (Arm); Timothy M. Jones (Univ. of Cambridge)",
     "authors": [
       "Yuxin Guo",
@@ -3188,6 +3706,11 @@
   },
   {
     "abstract": "Online reinforcement learning (RL) holds promise for microarchitectural techniques like prefetching.Its ability to adapt to changing and previously-unseen scenarios makes it a versatile technique.However, when multiple RL-operated components compete for shared resources in multicore systems, they can often converge to sub-optimal policies due to conflicting incentives.In this work, we identify key challenges that arise when scaling RL-based prefetchers to multi-core environments, and relate these to known problems from Multi-Agent Reinforcement Learning (MARL).In particular, we find that recent work using multi-armed bandit algorithms for prefetching can lead to inefficient systems when memory bandwidth is limited, as each agent attempts to claim a disproportionate share of the system's bandwidth.To solve this problem, we present Mama, a light-weight supervisor of distributed multi-armed bandit agents, which learns performant joint-policies.In Mama, distributed local agents narrow the global joint-action search space, while a central agent with a global perspective learns system-wide policies.Additionally, Mama provides key local agents with a system perspective, encouraging them to avoid actions that would harm the others.Mama exhibits high adaptability, which we show by evaluating it using multiple measures of performance.In our evaluation of an 8-core system, the policies learned by Mama outperform those of independently-operating agents by an average of 2.1% when optimizing for throughput, and by an average of 10.4% when optimizing for fairness.We also show that Mama performs better in systems that are more bandwidth constrained, as well as when profiles of the workloads are provided.",
+    "authorIds": [
+      "0009-0003-7770-003X",
+      "0000-0002-7946-2683",
+      "0000-0003-2595-5228"
+    ],
     "authorInstitutions": "Charles Block (Univ. of Illinois Urbana-Champaign); Gerasimos Gerogiannis (Univ. of Illinois Urbana-Champaign); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Charles Block",
@@ -3280,6 +3803,12 @@
   },
   {
     "abstract": "MICRO ’25, Seoul, Republic of Korea",
+    "authorIds": [
+      "0009-0009-8874-7873",
+      "0000-0002-8797-7476",
+      "0000-0002-3459-5466",
+      "0000-0002-2453-2904"
+    ],
     "authorInstitutions": "Courtney Golden (Massachusetts Inst. of Technology); Axel Feldmann (Massachusetts Inst. of Technology); Joel Emer (MIT/NVIDIA); Daniel Sanchez (Massachusetts Inst. of Technology)",
     "authors": [
       "Courtney Golden",
@@ -3339,6 +3868,11 @@
   },
   {
     "abstract": "Sparse tensor computations are highly memory-bound, making on-chip data reuse in SRAM buffers critical to the performance of domain-specific sparse accelerators.On-demand caches are commonly used in recent sparse accelerators, due to the advantage of easy space allocation and the ability to avoid unnecessary data fetches compared to scratchpad-style data buffering.However, existing cache designs suffer from inefficient space utilization due to the difficulty of fitting variable-length sparse data into fixedsize cache blocks.The theoretically optimal replacement policies used by them also have substantial implementation cost, requiring significant on-chip space to manage the metadata.To address these issues, we propose SeaCache to enable efficient and adaptive caching for sparse accelerators.SeaCache includes three key techniques.First, it incorporates fiber packing and splitting to efficiently map variable-length data into fixed-size cache blocks with high space utilization.Second, it proposes a practical replacement policy that performs similarly to the optimal one but has a much cheaper implementation.Third, it shares the cache space between the actual data and the replacement policy metadata, with a two-phase adaptive mechanism to decide the best partition ratio.Overall, Sea-Cache outperforms state-of-the-art sparse cache designs by 2.8 on average, demonstrating the effectiveness of its novel optimizations.",
+    "authorIds": [
+      "A5058196045",
+      "0009-0004-1039-619X",
+      "0000-0001-8433-7281"
+    ],
     "authorInstitutions": "Xintong Li (Tsinghua Univ.); Jinchen Jiang (Tsinghua Univ.); Mingyu Gao (Tsinghua Univ.)",
     "authors": [
       "Xintong Li",
@@ -3393,6 +3927,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-2850-0176",
+      "0000-0002-9583-7502",
+      "0009-0009-8874-7873",
+      "0000-0002-8768-2985",
+      "0000-0002-6617-0075",
+      "0000-0002-2835-667X",
+      "0000-0002-0778-0308"
+    ],
     "authorInstitutions": "Niansong Zhang (Cornell Univ.); Wenbo Zhu (Univ. of Southern California); Courtney Golden (Massachusetts Inst. of Technology); Dan Ilan (GSI Inc.); Hongzheng Chen (Cornell Univ.); Christopher Batten (Cornell Univ.); Zhiru Zhang (Cornell Univ.)",
     "authors": [
       "Niansong Zhang",
@@ -3403,6 +3946,7 @@
       "Christopher Batten",
       "Zhiru Zhang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
@@ -3410,6 +3954,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3430,9 +3975,11 @@
     "locations": [],
     "pages": "1011-1025",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756132",
       "https://doi.org/10.1145/3725843.3756132"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5D: Superconducting Systems"
     ],
@@ -3451,6 +3998,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0003-3310-4423",
+      "0000-0001-5333-5726",
+      "0000-0002-2718-0297",
+      "0009-0009-0849-8724",
+      "0000-0002-9333-6077",
+      "0000-0002-0075-2312"
+    ],
     "authorInstitutions": "Ismail Emir Yuksel (ETH Zürich); Ataberk Olgun (ETH Zürich); Nisa Bostanci (ETH Zürich); Haocong Luo (ETH Zürich); Abdullah Giray Yaglikci (ETH Zürich); Onur Mutlu (ETH Zürich)",
     "authors": [
       "Ismail Emir Yuksel",
@@ -3512,6 +4067,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0003-3865-3827",
+      "0009-0006-6149-7251",
+      "0000-0002-3178-1669",
+      "0000-0002-3308-5018",
+      "0009-0008-8448-7915",
+      "0000-0002-4503-0823",
+      "0000-0001-8577-3819",
+      "0000-0003-3926-0646",
+      "0000-0003-2193-5748"
+    ],
     "authorInstitutions": "Junhyuk Choi (Seoul National Univ.); Juwon Hong (Seoul National Univ.); Junpyo Kim (Seoul National Univ.); Jungmin Cho (Seoul National Univ.); Hyeonseong Jeong (Seoul National Univ.); Dongmoon Min (Sungkyunkwan Univ.); Masamitsu Tanaka (Nagoya Univ.); Koji Inoue (Kyushu Univ.); Jangwoo Kim (Seoul National Univ.)",
     "authors": [
       "Junhyuk Choi",
@@ -3575,6 +4141,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-3903-9686",
+      "0000-0003-4006-8870",
+      "0009-0001-7455-815X",
+      "0009-0008-6366-7386",
+      "0009-0006-2387-4802",
+      "0000-0002-8802-0457"
+    ],
     "authorInstitutions": "Xiaojie Li (Sun Yat-sen Univ.); Mingyu Wang (Sun Yat-Sen Univ.); Baiqing Zhong (Sun Yat-Sen Univ.); Haiqiu Huang (Sun Yat-Sen Univ.); Guangjie Cao (Sun Yat-sen Univ.); Zhiyi Yu (Sun Yat-sen Univ.)",
     "authors": [
       "Xiaojie Li",
@@ -3618,6 +4192,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0003-3802-7524",
+      "0009-0004-0680-2642",
+      "0000-0001-6021-9926",
+      "0000-0002-9181-4186",
+      "0000-0001-7842-125X"
+    ],
     "authorInstitutions": "Junhyeok Park (Sungkyunkwan Univ.); Sungbin Jang (Sungkyunkwan Univ.); Osang Kwon (Sungkyunkwan Univ.); Yongho Lee (Sungkyunkwan Univ.); Seokin Hong (Sungkyunkwan Univ.)",
     "authors": [
       "Junhyeok Park",
@@ -3660,6 +4241,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0003-3514-9008",
+      "0009-0008-6904-573X",
+      "0000-0003-0034-0358",
+      "0000-0003-4165-9138"
+    ],
     "authorInstitutions": "Qizhong Wang (Univ. of California, Santa Cruz); Xiangyue Huang (Univ. of California, Santa Cruz); Yanan Guo (Univ. of Rochester); Yuanchao Xu (Univ. of California, Santa Cruz)",
     "authors": [
       "Qizhong Wang",
@@ -3717,6 +4304,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-2510-2825",
+      "0009-0005-9481-7234",
+      "0000-0003-4351-7993",
+      "0000-0002-4185-0672",
+      "0000-0003-2869-7623",
+      "0000-0002-1093-0792",
+      "0000-0001-7776-4306",
+      "0000-0002-6636-9738"
+    ],
     "authorInstitutions": "Haoran Geng (Univ. of Notre Dame); Xiaoyang Lu (Illinois Inst. of Technology); Yuezhi Che (Wuhan Univ.); Ziang Tian (Wuhan Univ.); Dazhao Cheng (WuHan Univ.); Xian-He Sun (Illinois Inst. of Technology); Michael Niemier (Univ. of Notre Dame); X. Sharon Hu (Univ. of Notre Dame)",
     "authors": [
       "Haoran Geng",
@@ -3780,6 +4377,11 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-8925-8109",
+      "0009-0007-8837-6094",
+      "0000-0002-0211-1666"
+    ],
     "authorInstitutions": "Anish Saxena (Georgia Inst. of Technology); Walter Wang (Georgia Inst. of Technology); Alexandros Daglis (Georgia Inst. of Technology)",
     "authors": [
       "Anish Saxena",
@@ -3855,6 +4457,11 @@
   },
   {
     "abstract": "Current DRAM technologies face critical scaling limitations, significantly impacting the expansion of memory bandwidth and capacity required by modern data-intensive applications.Compute eXpress Link (CXL) emerges as a promising technology to address these limitations, enabling efficient cache-coherent memory expansion through direct connections between processors and CXL memory devices.Despite its potential, broad adoption of CXL memory in public cloud computing introduces substantial security challenges.Trusted Execution Environments (TEEs), such as Intel SGX/TDX and AMD SEV, provide robust protection for data integrity and confidentiality in cloud environments, complemented by CXL Integrity and Data Encryption (CXL IDE), which employs XTS encryption and Galois/Counter Mode (GCM) for secure message transmission.However, this approach incurs significant performance overhead due to the latency of XTS encryption on memory-intensive workloads.To mitigate this, we propose Adaptive Incremental Offloaded (Re-)Encryption (AIORE), an adaptive security framework combining Counter (CTR) and XTS encryption.AIORE dynamically selects encryption schemes based on page access frequency, implements incremental and offloaded re-encryption strategies, and leverages memory node computation to reduce overheads.Evaluation with Gem5 across diverse benchmarks reveals that AIORE significantly reduces security overhead by 62.8% on average and maintains overhead within 3.7% relative to an insecure baseline.",
+    "authorIds": [
+      "0009-0000-1964-4760",
+      "0000-0002-8766-0946",
+      "0000-0003-4165-9138"
+    ],
     "authorInstitutions": "Chuanhan Li (UC-Santa Cruz); Jishen Zhao (Univ. of California, San Diego); Yuanchao Xu (Univ. of California, Santa Cruz)",
     "authors": [
       "Chuanhan Li",
@@ -3912,6 +4519,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-9791-5447",
+      "0009-0006-3604-3901",
+      "0000-0002-3778-5978",
+      "0009-0005-2890-3134",
+      "0009-0000-7224-0917",
+      "0000-0003-0837-0877"
+    ],
     "authorInstitutions": "Gyeongseo Park (ETRI); Minho Kim (DGIST); Ki-Dong Kang (ETRI); Yunhyeong Jeon (DGIST); Seulki Kim (DGIST); Daehoon Kim (Yonsei Univ.)",
     "authors": [
       "Gyeongseo Park",
@@ -3955,6 +4570,14 @@
   },
   {
     "abstract": "This paper presents an automated approach for designing processors that support a subset of the RISC-V instruction set architecture (ISA) for a new class of applications at Extreme Edge. The electronics used in extreme edge applications must be area and power-efficient, but also provide additional qualities, such as low cost, conformability, comfort and sustainability. Flexible electronics, rather than silicon-based electronics, will be able to meet the above qualities. For this purpose, we propose a methodology for generating RISC-V instruction subset processors (RISSPs) tailored to these applications and implementing them as flexible integrated circuits (FlexICs). The methodology makes verification an integral part of the processor design by treating each instruction in the ISA as a discrete, fully functional, pre-verified hardware block. It automatically builds a custom processor by stitching together the instruction hardware blocks required by an application or a set of applications in a specific domain. We generate RISSPs using the proposed methodology for three extreme edge applications, and embedded applications from the Embench benchmark suite. When synthesized, RISSPs can achieve 8-to-43% reduction in area and 3-to-30% reduction in power compared to a processor supporting the full RISC-V ISA, and are also on average ~40 times more energy efficient than Serv - the world's smallest 32-bit RISC-V processor. When physically implemented as FlexICs, the three extreme edge RISSPs achieve up to 42% area and 21% power savings with respect to the full RISC-V processor.",
+    "authorIds": [
+      "0009-0009-3808-0345",
+      "0000-0001-9568-2638",
+      "0009-0003-3648-5898",
+      "0009-0004-8123-2782",
+      "0000-0002-5230-495X",
+      "0000-0001-8285-1551"
+    ],
     "authorInstitutions": "Alireza Raisiardali (Pragmatic Semiconductor / KU Leuven); Konstantinos Iordanou (Pragmatic Semiconductor); Jedrzej Kufel (Pragmatic Semiconductor); Kowshik Gudimetla (Pragmatic Semiconductor); Kris Myny (KU Leuven); Emre Ozer (Pragmatic Semiconductor)",
     "authors": [
       "Alireza Raisiardali",
@@ -4017,6 +4640,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-9769-2570",
+      "0000-0001-5273-1110",
+      "0000-0003-0089-9370",
+      "0000-0002-5672-795X",
+      "0000-0002-3155-6269",
+      "0000-0002-1767-2204",
+      "0000-0002-9940-9951",
+      "0000-0001-6266-6068"
+    ],
     "authorInstitutions": "Pingyi Huo (The Pennsylvania State Univ.); Anusha Devulapally (The Pennsylvania State Univ.); Hasan Al Maruf (META, Inc); Nandhini Chandramoorthy (IBM, Inc); Meena Arunachalam (AMD, Inc); Gulsum Gudukbay Akbulut (The Pennsylvania State Univ.); Mahmut T Kandemir (The Pennsylvania State Univ.); Vijaykrishnan Narayanan (The Pennsylvania State Univ.)",
     "authors": [
       "Pingyi Huo",
@@ -4062,6 +4695,10 @@
   },
   {
     "abstract": "The energy efficiency of neural processing units (NPU) plays a critical role in developing sustainable data centers.Our study with different generations of NPU chips reveals that 30%-72% of their energy consumption is contributed by static power dissipation, due to the lack of power management support in modern NPU chips.In this paper, we present ReGate, which enables fine-grained power-gating of each hardware component in NPU chips with hardware/software co-design.Unlike conventional power-gating techniques for generic processors, enabling power-gating in NPUs faces unique challenges due to the fundamental difference in hardware architecture and program execution model.To address these challenges, we carefully investigate the power-gating opportunities in each component of NPU chips and decide the best-fit power management scheme (i.e., hardware-vs.software-managed power gating).Specifically, for systolic arrays (SAs) that have deterministic execution patterns, ReGate enables cycle-level power gating at the granularity of processing elements (PEs) following the inherent dataflow execution in SAs.For inter-chip interconnect (ICI) and HBM controllers that have long idle intervals, ReGate employs a lightweight hardware-based idle-detection mechanism.For vector units and SRAM whose idle periods vary significantly depending on workload patterns, ReGate extends the NPU ISA and allows software (e.g., compilers) to manage the power gating.With implementation on a production-level NPU simulator, we show that ReGate can reduce the energy consumption of NPU chips by up to 32.8% (15.5% on average), with negligible impact on AI workload performance.The hardware implementation of power-gating logic introduces less than 3.3% overhead in NPU chips.",
+    "authorIds": [
+      "0009-0002-0363-9486",
+      "0000-0002-1125-671X"
+    ],
     "authorInstitutions": "Yuqi Xue (Univ. of Illinois Urbana-Champaign); Jian Huang (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Yuqi Xue",
@@ -4123,6 +4760,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0006-7179-345X",
+      "0000-0003-2142-8842",
+      "0009-0001-7524-5884",
+      "0000-0003-1519-2407",
+      "0009-0006-2634-7581",
+      "0000-0002-1826-9003",
+      "0000-0003-4010-6611",
+      "0000-0001-5175-8258"
+    ],
     "authorInstitutions": "Hyunjin Kim (Seoul National Univ.); Seunghwan Song (Samsung Electronics); Sukhyun Choi (Seoul National Univ.); Jeongin Choe (Samsung Electronics); Sanghyeok Han (Seoul National Univ.); Jisung Park (POSTECH (Pohang Univ. of Science and Technology)); Jinho Lee (Seoul National Univ.); Jae-Joon Kim (Seoul National Univ.)",
     "authors": [
       "Hyunjin Kim",
@@ -4181,6 +4828,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-2724-8888",
+      "0000-0003-1211-5641",
+      "0000-0002-8188-4324",
+      "0000-0002-8667-3198",
+      "0000-0002-7977-9883"
+    ],
     "authorInstitutions": "Jaeyong Lee (Seoul National Univ.); Beomjun Kim (Kyungpook National Univ.); Myoungjun Chun (Seoul National Univ.); Myungsuk Kim (Kyungpook National Univ.); Jihong Kim (Seoul National Univ.)",
     "authors": [
       "Jaeyong Lee",
@@ -4189,15 +4843,23 @@
       "Myungsuk Kim",
       "Jihong Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756134",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Reconfigurable Computing and Storage"
     },
     "id": "6D-DEAR_Improving_Performance_and_Lifetime_of_SSDs_Using_Dynamic_Error-Aware_Refres",
     "locations": [],
+    "pages": "1207-1220",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6D: Reconfigurable Computing and Storage"
     ],
@@ -4209,11 +4871,21 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756134",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0003-1189-7661",
+      "0000-0002-1399-0352",
+      "0000-0001-7403-0163",
+      "0000-0001-5834-9772",
+      "0000-0001-7424-1008",
+      "0000-0001-9967-5427",
+      "0000-0002-3315-5581"
+    ],
     "authorInstitutions": "Yufei Yang (Harbin Inst. of Technology); Chenhao Xie (Beihang Univ.); Chuliang Guo (Harbin Inst. of Technology); Liansheng Liu (Harbin Inst. of Technology); Yu Peng (Harbin Inst. of Technology); Xiyuan Peng (Harbin Inst. of Technology); Datong Liu (Harbin Inst. of Technology)",
     "authors": [
       "Yufei Yang",
@@ -4224,15 +4896,23 @@
       "Xiyuan Peng",
       "Datong Liu"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756019",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Reconfigurable Computing and Storage"
     },
     "id": "6D-FexMo_Enabling_Fuse_Execution_Mode_for_Multi-task_CGRAs",
     "locations": [],
+    "pages": "1236-1249",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6D: Reconfigurable Computing and Storage"
     ],
@@ -4244,11 +4924,19 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756019",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-6015-1084",
+      "0009-0004-1339-6048",
+      "0000-0003-3413-136X",
+      "0000-0003-4136-4188",
+      "0000-0001-9010-6519"
+    ],
     "authorInstitutions": "Rohan Juneja (National Univ. of Singapore); Pranav Dangi (National Univ. Of Singapore); Thilini Kaushalya Bandara (National Univ. of Singapore); Tulika Mitra (National Univ. of Singapore); Li-shiuan Peh (National Univ. of Singapore)",
     "authors": [
       "Rohan Juneja",
@@ -4291,6 +4979,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0001-5465-9044",
+      "0000-0002-8204-4837",
+      "0009-0006-9207-2993",
+      "0000-0001-8626-2359",
+      "0000-0002-8087-3367",
+      "0000-0001-6693-0735",
+      "0000-0003-1157-7799",
+      "0000-0002-3978-2930"
+    ],
     "authorInstitutions": "Yu Gong (Rutgers Univ.); Haodong Chang (Texas A&M Univ.); Lingyi Huang (Rutgers Univ.); Rongjian Liang (NVIDIA); Cheng Yang (Rutgers Univ.); Zhexiang Tang (Rutgers Univ.); Jiang Hu (Texas A&M Univ.); Bo Yuan (Rutgers Univ.)",
     "authors": [
       "Yu Gong",
@@ -4353,6 +5051,13 @@
   },
   {
     "abstract": "To meet the increasing demand of deep learning (DL) models, AI chips are employing both off-chip memory (e.g., HBM) and high-bandwidth low-latency interconnect for direct inter-core data exchange. However, it is not easy to explore the efficiency of these inter-core connected AI (ICCA) chips, due to a fundamental tussle among compute (per-core execution), communication (inter-core data exchange), and I/O (off-chip data access). In this paper, we develop Elk, a DL compiler framework to maximize the efficiency of ICCA chips by jointly trading off all the three performance factors discussed above. Elk structures these performance factors into configurable parameters and forms a global trade-off space in the DL compiler. To systematically explore this space and maximize overall efficiency, Elk employs a new inductive operator scheduling policy and a cost-aware on-chip memory allocation algorithm. It generates globally optimized execution plans that best overlap off-chip data loading and on-chip execution. To examine the efficiency of Elk, we build a full-fledged emulator based on a real ICCA chip IPU-POD4, and an ICCA chip simulator for sensitivity analysis with different interconnect network topologies. Elk achieves 94% of the ideal roofline performance of ICCA chips on average, showing the benefits of supporting large DL models on ICCA chips. We also show Elk's capability of enabling architecture design space exploration for new ICCA chip development.",
+    "authorIds": [
+      "0009-0006-8171-4970",
+      "0009-0002-0363-9486",
+      "0009-0006-3018-2273",
+      "0000-0002-4495-1997",
+      "0000-0002-1125-671X"
+    ],
     "authorInstitutions": "Yiqi Liu (Univ. of Illinois Urbana-Champaign); Yuqi Xue (Univ. of Illinois Urbana-Champaign); Noelle Crawford (Univ. of Illinois Urbana-Champaign); Jilong Xue (Microsoft Research); Jian Huang (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Yiqi Liu",
@@ -4416,6 +5121,18 @@
   },
   {
     "abstract": "This study presents the Cartesian Accumulative Matrix Pipeline (CAMP) architecture, a novel approach designed to enhance matrix multiplication in Vector Architectures (VAs) and Single Instruction Multiple Data (SIMD) units. CAMP improves the processing efficiency of Quantized Neural Networks (QNNs). Matrix multiplication is a cornerstone of machine learning applications, and its quantized versions are increasingly popular for more efficient operations. Unfortunately, existing VAs and SIMD-support units struggle to efficiently handle these quantized formats. In this work, we propose CAMP, a simple yet effective architecture that leverages a hybrid multiplier. The CAMP architecture significantly advances the performance of vector architectures in handling quantized data, enabling more efficient execution of matrix multiplication across various platforms, specifically targeting the ARMv8 Scalable Vector Extension (SVE) and edge RISC-V SIMD-based architectures. In addition to increasing throughput, CAMP's architectural design also contributes to energy efficiency, making it an effective solution for low-power applications. Evaluations on a range of Large Language Models (LLMs) and Convolutional Neural Networks (CNNs) demonstrate that matrix multiplication operations using the proposed micro-architecture achieve up to 17$\\times$ and 23$\\times$ performance improvements compared to their respective baselines, the ARM A64FX core and a RISC-V-based edge System-on-Chip (SoC). Furthermore, synthesis and place-and-route (PnR) of the CAMP micro-architecture using Synopsys tools -- targeting ARM TSMC 7nm for A64FX and GlobalFoundries 22nm for the RISC-V SoC -- add only 1\\% and 4\\% area overhead, respectively, compared to the baseline designs.",
+    "authorIds": [
+      "0000-0003-2635-5312",
+      "0009-0000-3286-635X",
+      "0000-0002-8291-509X",
+      "0009-0008-0237-5654",
+      "0000-0003-2407-1228",
+      "0000-0003-1385-7962",
+      "0000-0002-9848-8758",
+      "0000-0002-0544-9697",
+      "0000-0003-1277-9296",
+      "0000-0002-5146-103X"
+    ],
     "authorInstitutions": "Mohammadreza Esmali Nojehdeh (Barcelona supercomputing center); Hossein Mokhtarnia (Barcelona Supercomputing Center); Julian Pavon Rivera (Barcelona Supercomputing Center); Narcis Rodas Quiroga (Barcelona Supercomputing Center); Roger Figueras Bagué (Barcelona Supercomputing Center); Enrico Reggiani (Barcelona Supercomputing Center); Miquel Moreto (UPC/BSC); Osman Unsal (BSC); Adrian Cristal (BSC); Eduard Ayguade (Universitat Politecnica de Catalunya & Barcelona Supercomputing Center, Barcelona, Spain)",
     "authors": [
       "Mohammadreza Esmali Nojehdeh",
@@ -4485,6 +5202,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-5636-7008",
+      "0000-0003-0667-6813",
+      "0009-0007-9794-943X",
+      "0009-0007-1297-1348",
+      "0009-0003-1907-2979",
+      "0009-0003-4703-6529",
+      "0009-0003-2578-3275"
+    ],
     "authorInstitutions": "Peng Gao (Beijing Univ. of Posts and Telecommunications, SOPHGO TECHNOLOGIES LTD.); Yang Liu (Beijing Univ. of Posts and Telecommunications); Haonan Sun (Beijing Univ. of Posts and Telecommunications); Jiang Jiang (SOPHGO TECHNOLOGIES LTD.); Jun Wang (SOPHGO TECHNOLOGIES LTD.); Zonghui Hong (SOPHGO TECHNOLOGIES LTD.); Jiali Qu (SOPHGO TECHNOLOGIES LTD.)",
     "authors": [
       "Peng Gao",
@@ -4529,6 +5255,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0006-1442-1502",
+      "0009-0008-2320-9989",
+      "0009-0004-7759-481X",
+      "0009-0006-2792-589X",
+      "0009-0008-9527-0308",
+      "0009-0001-2802-2354",
+      "0000-0002-8140-2321"
+    ],
     "authorInstitutions": "Devansh Jain (Univ. of Illinois Urbana-Champaign); Marco Frigo (Univ. of Illinois Urbana-Champaign); Jai Arora (Univ. of Illinois Urbana-Champaign); Akash Pardeshi (Univ. of Illinois Urbana-Champaign); Zhihao Wang (Univ. of Illinois Urbana-Champaign); Krut Patel (Univ. of Illinois Urbana-Champaign); Charith Mendis (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Devansh Jain",
@@ -4576,6 +5311,22 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0004-9305-1962",
+      "0009-0004-3291-7806",
+      "0000-0002-2263-5643",
+      "0000-0003-1233-9557",
+      "0009-0007-1875-0730",
+      "0000-0001-7453-9365",
+      "0000-0003-2056-0569",
+      "0009-0008-2878-1853",
+      "0000-0002-5619-8226",
+      "0009-0001-8330-2041",
+      "0009-0006-0241-8138",
+      "0009-0005-4802-9587",
+      "0000-0002-6440-7550",
+      "0000-0003-3441-6277"
+    ],
     "authorInstitutions": "Tiantian Lin (Zhejiang Univ.); Cheng Qiu (South China Univ. of Technology); Xiaohang Wang (Zhejiang Univ.); Ling Wang (The Univ. of Western Australia); Zhulin Zheng (Zhejiang Univ.); Yingtao Jiang (Univ. of Nevada, Las Vegas); Amit Kumar Singh (Univ. of Essex); Jieming Yin (Nanjing Univ. of Posts and Telecommunications); Sihai Qiu (Beijing Smart-chip Microelectronics Technology Co., Ltd,); Xiaodong Li (Ant Group); Xin Tang (Ant Group); Jie Song (Ant Group); Mingzhe Zhang (Ant Group); Kui Ren (Zhejiang Univ.)",
     "authors": [
       "Tiantian Lin",
@@ -4645,6 +5396,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0003-1920-0101",
+      "0009-0002-9237-559X",
+      "0000-0001-8407-2594",
+      "0000-0001-8082-4218",
+      "0000-0001-5172-4736"
+    ],
     "authorInstitutions": "Kaiyan Chang (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Wenlong Zhu (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Shengwen Liang (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Huawei Li (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Ying Wang (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences)",
     "authors": [
       "Kaiyan Chang",
@@ -4653,6 +5411,7 @@
       "Huawei Li",
       "Ying Wang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
@@ -4660,6 +5419,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -4682,7 +5442,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3725843.3756027"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7B: Tools and Simulators"
     ],
@@ -4701,6 +5462,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0003-1918-8445",
+      "0009-0003-6738-3288",
+      "0009-0006-6821-1594",
+      "0009-0007-0248-3439",
+      "0000-0002-4989-2834",
+      "0000-0002-2115-0871",
+      "0000-0002-6629-449X",
+      "0000-0001-5749-5794"
+    ],
     "authorInstitutions": "Wonhyuk Yang (POSTECH); Yunseon Shin (POSTECH); Okkyun Woo (POSTECH); Geonwoo Park (POSTECH); Hyungkyu Ham (POSTECH); Jeehoon Kang (KAIST / FuriosaAI); Jongse Park (KAIST); Gwangsun Kim (POSTECH / Arm)",
     "authors": [
       "Wonhyuk Yang",
@@ -4762,6 +5533,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-9168-0392",
+      "0000-0002-2541-8767",
+      "",
+      ""
+    ],
     "authorInstitutions": "Rishov Sarkar (Callie); Cong Hao (Callie); Cong (Callie); Hao (Georgia Inst. of Technology)",
     "authors": [
       "Rishov Sarkar",
@@ -4819,6 +5596,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0002-7380-3552",
+      "0009-0009-0734-8126",
+      "0000-0002-0312-6595",
+      "0000-0002-6061-7825"
+    ],
     "authorInstitutions": "Euijun Chung (Georgia Inst. of Technology); Seonjin Na (Georgia Inst. of Technology); Sung Ha Kang (Georgia Inst. of Technology); Hyesoon Kim (Georgia Inst. of Technology)",
     "authors": [
       "Euijun Chung",
@@ -4826,15 +5609,26 @@
       "Sung Ha Kang",
       "Hyesoon Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 1:30 PM KST – 3:10 PM KST"
     ],
+    "doi": "10.1145/3725843.3757107",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Tools and Simulators"
     },
     "id": "7B-Swift_and_Trustworthy_Large-Scale_GPU_Simulation_with_Fine-Grained_Error_Modelin",
     "locations": [],
+    "pages": "1397-1411",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3757107"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 7B: Tools and Simulators"
     ],
@@ -4846,11 +5640,25 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3757107",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0003-0475-9911",
+      "0009-0004-1330-0528",
+      "0009-0001-4801-8969",
+      "0009-0006-1793-6587",
+      "0009-0003-8049-4388",
+      "0009-0009-6392-3826",
+      "0009-0005-5350-5170",
+      "0009-0009-2958-1375",
+      "0009-0004-7954-6512",
+      "0009-0001-7531-3365",
+      "0000-0002-0442-5634"
+    ],
     "authorInstitutions": "Hoeju Chung (SK hynix America); Euisang Oh (SK hynix America); Seungmin Baek (SK hynix America); Hyeongshin Yoon (SK hynix America); Jaesung Yoo (SK hynix America); Sanghwan Lee (SK hynix America); Yongjun Lee (Microsoft); Arhatha Bramhanand (Microsoft); Brett Dodds (Microsoft); Yang Zhou (Univ. of Illinois Urbana-Champaign); Nam Sung Kim (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Hoeju Chung",
@@ -4899,6 +5707,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-2286-6766",
+      "0000-0002-9702-2542",
+      "0009-0004-7650-6363",
+      "0009-0008-7326-3211",
+      "0009-0006-3725-1446",
+      "0000-0001-6565-5276"
+    ],
     "authorInstitutions": "Kunlin You (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Yinan Xu (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Kehan Feng (Beijing Inst. of Open Source Chip); Luoshan Cai (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences); Yaoyang Zhou (Beijing Inst. of Open Source Chip); Yungang Bao (SKLP, Inst. of Computing Technology, Chinese Academy of Sciences)",
     "authors": [
       "Kunlin You",
@@ -4942,6 +5758,14 @@
   },
   {
     "abstract": "Rowhammer is a critical vulnerability in dynamic random access memory (DRAM) that continues to pose a significant threat to various systems. However, we find that conventional load-based attacks are becoming highly ineffective on the most recent architectures such as Intel Alder and Raptor Lake. In this paper, we present $ρ$Hammer, a new Rowhammer framework that systematically overcomes three core challenges impeding attacks on these new architectures. First, we design an efficient and generic DRAM address mapping reverse-engineering method that uses selective pairwise measurements and structured deduction, enabling recovery of complex mappings within seconds on the latest memory controllers. Second, to break through the activation rate bottleneck of load-based hammering, we introduce a novel prefetch-based hammering paradigm that leverages the asynchronous nature of x86 prefetch instructions and is further enhanced by multi-bank parallelism to maximize throughput. Third, recognizing that speculative execution causes more severe disorder issues for prefetching, which cannot be simply mitigated by memory barriers, we develop a counter-speculation hammering technique using control-flow obfuscation and optimized NOP-based pseudo-barriers to maintain prefetch order with minimal overhead. Evaluations across four latest Intel architectures demonstrate $ρ$Hammer's breakthrough effectiveness: it induces up to 200K+ additional bit flips within 2-hour attack pattern fuzzing processes and has a 112x higher flip rate than the load-based hammering baselines on Comet and Rocket Lake. Also, we are the first to revive Rowhammer attacks on the latest Raptor Lake architecture, where baselines completely fail, achieving stable flip rates of 2,291/min and fast end-to-end exploitation.",
+    "authorIds": [
+      "0009-0003-9850-0141",
+      "0009-0003-7978-0504",
+      "0009-0009-7850-0631",
+      "0000-0002-9082-3208",
+      "0000-0002-7585-1075",
+      "0000-0003-4390-3819"
+    ],
     "authorInstitutions": "Weijie Chen (Huazhong Univ. of Science and Technology); Shan Tang (Huazhong Univ. of Science and Technology); Yulin Tang (Huazhong Univ. of Science and Technology); Xiapu Luo (The Hong Kong Polytechnic Univ.); Yinqian Zhang (Southern Univ. of Science and Technology); Weizhong Qiang (Huazhong Univ. of Science and Technology)",
     "authors": [
       "Weijie Chen",
@@ -5006,6 +5830,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-7533-376X",
+      "0009-0008-9231-6331",
+      "0009-0008-1549-9277",
+      "0000-0002-2826-1857",
+      "0000-0002-6431-7512"
+    ],
     "authorInstitutions": "Samit Shahnawaz Miftah (Univ. of Texas at Dallas); Amisha Srivastava (Univ. of Texas at Dallas); Hyunmin Kim (Technology Innovation Inst.); Shiyi Wei (Univ. of Texas at Dallas); Kanad Basu (Univ. of Texas at Dallas)",
     "authors": [
       "Samit Shahnawaz Miftah",
@@ -5048,6 +5879,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-2718-0297",
+      "0009-0007-6166-0781",
+      "0000-0001-5333-5726",
+      "0000-0003-3310-4423",
+      "0000-0002-2375-7490",
+      "0000-0002-4029-0175",
+      "0000-0002-9333-6077",
+      "0000-0002-0075-2312"
+    ],
     "authorInstitutions": "Nisa Bostanci (ETH Zürich); Oguzhan Canpolat (TOBB ETÜ and ETH Zurich); Ataberk Olgun (ETH Zürich); Ismail Emir Yuksel (ETH Zürich); Konstantinos Kanellopoulos (ETH Zürich); Mohammad Sadrosadati (ETH Zürich); Abdullah Giray Yaglikci (ETH Zürich); Onur Mutlu (ETH Zürich)",
     "authors": [
       "Nisa Bostanci",
@@ -5111,6 +5952,18 @@
   },
   {
     "abstract": "Task Scheduling is a popular technique for exploiting parallelism in modern computing systems. In particular, HW-accelerated Task Scheduling has been shown to be effective at improving the performance of fine-grained workloads by dynamically assigning tasks to cores based on their data dependencies with minimal overhead, allowing the handling of tasks with execution times in the order of thousands of cycles. However, the performance of applications assisted by accelerated Task Scheduling is limited by the fact that once a task has all its dependencies fulfilled, it is typically executed on the first available core, which might not be locality-optimal. We thus propose a novel approach to Task Scheduling that leverages HW-accelerated Label Propagation (LP), a graph clustering algorithm, to group tasks with intersecting data patterns such that they are executed on the same core. We show that our approach can significantly improve the performance of task-based applications, improving overall program execution times by up to 1.50 × while simultaneously reducing average task sizes by up to 1.81 ×, augmenting both synthetic benchmarks and real-world applications running on a 24-core RISC-V processor mapped to the Alveo U55C FPGA. These gains rely heavily on the low-latency nature of our proposed label propagation accelerator, which will typically cluster dynamic task graphs in under 300 cycles, up to 581 × faster than an equivalent software implementation. Furthermore, by ensuring that ideal placement predictions are used as a hint rather than a hard constraint, we allow the system to benefit from improved data locality for memory-intensive applications while also maintaining high core utilization in compute-bound scenarios. Our results hence demonstrate the potential of HW-accelerated label propagation to improve the performance of Task Scheduling systems with low-latency, dynamic data locality optimization.",
+    "authorIds": [
+      "0000-0002-9461-9183",
+      "0000-0002-7427-9118",
+      "0000-0001-5746-4154",
+      "0000-0003-4869-5190",
+      "0000-0002-4501-8672",
+      "0000-0001-5091-3674",
+      "0009-0004-5963-2165",
+      "0000-0002-0417-3430",
+      "0000-0001-6064-7883",
+      "0000-0003-0536-5183"
+    ],
     "authorInstitutions": "Lucas Morais (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Juan Miguel de Haro Ruiz (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Alfredo Goldman (Univ. of São Paulo); Guido Araujo (Univ. of Campinas); Giacomo Pedretti (HPE); Jim Ignowski (HPE); Michael Frank (MagiCore); Xavier Martorell (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Daniel Jiménez-González (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya); Carlos Álvarez (Barcelona Supercomputing Center and Universitat Politecnica de Catalunya)",
     "authors": [
       "Lucas Morais",
@@ -5175,6 +6028,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0004-8242-8330",
+      "0000-0001-9976-7487",
+      "0000-0002-9758-1811",
+      "0009-0003-1951-5987",
+      "0000-0003-4291-6124",
+      "0000-0003-4010-6611"
+    ],
     "authorInstitutions": "Changmin Shin (Seoul National Univ.); Jaeyong Song (Seoul National Univ.); Seongmin Na (Seoul National Univ.); Jun Sung (Seoul National Univ.); Hongsun Jang (Seoul National Univ.); Jinho Lee (Seoul National Univ.)",
     "authors": [
       "Changmin Shin",
@@ -5221,6 +6082,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0008-3499-9197",
+      "0009-0005-9279-9220",
+      "0009-0002-6310-2787",
+      "0009-0008-7468-2987",
+      "0000-0002-0360-5641",
+      "0000-0003-4391-2774"
+    ],
     "authorInstitutions": "Amir Ghazizadeh Ahsaei (Univ. of Central Florida); Lingxiang Yin (Univ. of Central Florida); Shilin Tian (Univ. of Central Florida); Fangzhou Ye (Univ. of Central Florida); Fan Yao (Univ. of Central Florida); Hao Zheng (Univ. of Central Florida)",
     "authors": [
       "Amir Ghazizadeh Ahsaei",
@@ -5280,6 +6149,11 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-6760-5504",
+      "0000-0002-9943-1809",
+      "0000-0002-5250-7327"
+    ],
     "authorInstitutions": "Linxuan Zhang (Univ. of Alberta); J. Nelson Amaral (Univ. of Alberta); Di Niu (Univ. of Alberta)",
     "authors": [
       "Linxuan Zhang",
@@ -5320,6 +6194,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0001-0405-436X",
+      "0009-0008-2418-4007",
+      "0000-0003-4060-9438",
+      "0000-0002-7656-6428",
+      "0000-0003-1951-5015"
+    ],
     "authorInstitutions": "Chenxi Xu (The Hong Kong Univ. of Science and Technology (Guangzhou)); Tianhui SHI (QingCheng.AI); Shixuan Sun (Shanghai Jiao Tong Univ.); JIDONG ZHAI (TSINGHUA UNIVERSITY); Xinyu Chen (The Hong Kong Univ. of Science and Technology (Guangzhou))",
     "authors": [
       "Chenxi Xu",
@@ -5375,6 +6256,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-5879-6599",
+      "0009-0005-4090-4025",
+      "0009-0005-8455-3298",
+      "0009-0009-0106-6590",
+      "0009-0000-2643-3435",
+      "0000-0001-5390-6445"
+    ],
     "authorInstitutions": "Seunghyun Lee (Yonsei Univ.); Dongho Ha (Yonsei Univ.); Sungbin Kim (Yonsei Univ.); Sungwoo Kim (Yonsei Univ.); Hyunwuk Lee (Samsung Electronics); Won Woo Ro (Yonsei Univ.)",
     "authors": [
       "Seunghyun Lee",
@@ -5436,6 +6325,11 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-5798-2282",
+      "0000-0002-6594-8375",
+      "0000-0001-8618-4581"
+    ],
     "authorInstitutions": "Yao CHEN (National Univ. of Singapore); Cheng Gong (Tiangong Univ.); Bingsheng He (National Univ. of Singapore)",
     "authors": [
       "Yao CHEN",
@@ -5476,6 +6370,19 @@
   },
   {
     "abstract": "Large language models (LLMs) face significant inference latency due to inefficiencies in GEMM operations, weight access, and KV cache access, especially in real-time scenarios. This highlights the need for a versatile compute-memory efficient accelerator. Unfortunately, existing Transformer accelerators struggle to address both aspects simultaneously, as they focus on value-level processing, missing fine-grained opportunities to optimize computation and memory collaboratively. This paper introduces MCBP, a bit-grained compute-memory efficient algorithm-hardware co-design that leverages bit-slice (BS) enabled repetitiveness and sparsity to accelerate LLM inference. MCBP features three key innovations: 1) BS-repetitiveness-enabled computation reduction (BRCR), which eliminates redundant GEMM computations via leveraging redundancy hidden among BS vectors; 2) BS-sparsity-enabled two-state coding (BSTC), which reduces weight access via exploiting significant sparsity in high-order bit-slice weight; 3) Bit-grained progressive prediction (BGPP), which reduces KV cache access by leveraging early-termination-based bit-grained prediction. These techniques, supported by custom accelerator designs, effectively alleviate the burden in GEMM, weight access, and KV cache access. Extensive experiments on 26 benchmarks show that MCBP achieves 9.43x speed up and 31.1x higher energy efficiency than Nvidia A100 GPU. Compared to SOTA Transformer accelerators, MCBP achieves 35x, 5.2x and 3.2x energy saving than Spatten, FACT and SOFA, respectively.",
+    "authorIds": [
+      "0000-0002-9763-8208",
+      "0009-0001-7114-0647",
+      "0000-0003-4084-3478",
+      "0009-0008-0326-2029",
+      "0009-0005-3501-3148",
+      "0000-0001-9905-0961",
+      "0000-0002-8293-8881",
+      "0000-0001-6218-4659",
+      "0000-0001-5117-7920",
+      "0000-0001-6942-4395",
+      "0000-0002-8438-8588"
+    ],
     "authorInstitutions": "Huizheng Wang (Tsinghua Univ.); Zichuan Wang (Tsinghua Univ.); Zhiheng Yue (Tsinghua Univ.); Yousheng Long (Tsinghua Univ.); Taiquan Wei (Tsinghua Univ.); Jianxun Yang (Tsinghua Univ.); Yang Wang (Tsinghua Univ.); Chao Li (Shanghai Jiao Tong Univ.); Shaojun Wei (Tsinghua Univ.); Yang Hu (Tsinghua Univ.); Shouyi Yin (Tsinghua Univ.)",
     "authors": [
       "Huizheng Wang",
@@ -5544,6 +6451,21 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-4977-5363",
+      "0009-0007-0685-1817",
+      "0009-0001-5352-3126",
+      "0009-0005-0023-2367",
+      "0000-0003-3196-2942",
+      "0000-0002-7130-1949",
+      "0000-0002-7001-8893",
+      "0009-0006-1450-2740",
+      "0009-0001-9047-1783",
+      "0000-0003-0352-8946",
+      "0000-0001-9357-5716",
+      "0000-0002-4024-4013",
+      "0009-0005-1109-1328"
+    ],
     "authorInstitutions": "Qizhe Wu (Univ. of Science and Technology of China); Jinyi Zhou (Univ. of Science and Technology of China); Zhanhe Hu (Univ. of Science and Technology of China); Zhichen Zeng (Univ. of Washington); Huawen Liang (Univ. of Science and Technology of China); Jiuru Zhu (Univ. of Science and Technology of China); Linfeng Tao (Univ. of Science and Technology of China); Xin Zhang (China Univ. of Mining and Technology); Zekang Cheng (Univ. of science and technology of China); Letian Zhao (Univ. of Science and Technology of China); Wei Yuan (Univ. of Science and Technology of China); Xiaotian Wang (Univ. of Science and Technology of China); Xi Jin (Univ. of Science and Technology of China)",
     "authors": [
       "Qizhe Wu",
@@ -5594,6 +6516,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0006-4739-351X",
+      "0009-0001-5271-0114",
+      "0009-0002-2375-5572",
+      "0000-0002-8811-156X",
+      "0009-0009-5685-2521",
+      "0000-0002-6357-236X"
+    ],
     "authorInstitutions": "Cheng Zou (Shanghai Jiao Tong Univ.); Ziling Wei (Shanghai Jiao Tong Univ.); Lee Jun Yan (Shanghai Jiao Tong Univ.); Chen Nie (Shanghai Jiao Tong Univ.); Kang You (Shanghai Jiao Tong Univ.); Zhezhi He (Shanghai Jiao Tong Univ.)",
     "authors": [
       "Cheng Zou",
@@ -5637,6 +6567,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "A5072358118",
+      "0009-0009-5928-3053",
+      "0000-0001-8145-815X",
+      "A5002298749"
+    ],
     "authorInstitutions": "Sabuj Laskar (Texas A&M Univ.); Pranati Majhi (Texas A&M Univ.); Abdullah Muzahid (Texas A&M Univ.); Eun Jung Kim (Texas A&M Univ.)",
     "authors": [
       "Sabuj Laskar",
@@ -5692,6 +6628,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0001-5830-1840",
+      "0009-0006-2039-0853",
+      "0000-0001-7395-0734",
+      "0009-0001-4082-5248",
+      "0000-0001-8029-3664",
+      "0000-0001-7591-9597",
+      "0000-0003-3734-9137",
+      "0000-0002-3644-2922"
+    ],
     "authorInstitutions": "Chuan Liu (Univ. of Rochester); Chunshu Wu (Univ. of Rochester); Ruibing Song (Univ. of Rochester); Guangyan Sun (Univ. of Rochester); Ying Nian Wu (Univ. of California, Los Angeles); Yousu Chen (Pacific Northwest National Laboratory); Ang Li (PNNL and UW); Tong Geng (Univ. of Rochester / Rice Univ.)",
     "authors": [
       "Chuan Liu",
@@ -5758,6 +6704,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0003-3793-1872",
+      "0000-0002-6364-3324",
+      "0009-0004-8601-8486",
+      "0000-0001-6243-5753",
+      "0000-0003-0665-6775",
+      "0000-0001-5600-8931"
+    ],
     "authorInstitutions": "Guy Eichler (Columbia Univ.); Yatin Gilhotra (Columbia Univ.); Nanyu Zeng (Columbia Univ.); Martha Kim (Columbia Univ.); Kenneth Shepard (Columbia Univ.); Luca Carloni (Columbia Univ.)",
     "authors": [
       "Guy Eichler",
@@ -5801,6 +6755,14 @@
   },
   {
     "abstract": "Sequence alignment is a fundamental building block for critical applications across multiple fields, such as computational biology and information retrieval. The rapid advancement of genome sequencing technologies and breakthrough generative AI tools, like AlphaFold, has driven an exponential increase in sequence-data production, creating a pressing need for fast and efficient sequence alignment tools to analyze ever-growing biological sequence databases. Notwithstanding the numerous accelerators proposed, from general-purpose architectures (CPUs and GPUs) to domain-specific designs (FPGAs and ASICs), the most efficient solutions suffer from over-specialization and fail to adapt to the wide variety of irregular use cases demanded by practical sequence alignment applications. Thus, it remains a challenge to design an architecture that can balance efficiency and flexibility to meet the demands of real-world alignment applications. This work introduces SMX, a heterogeneous architecture designed for high-performance sequence alignment that supports various configurations for different sequence types (DNA, protein, and ASCII text) and alignment models (including weighted gaps and substitution matrices). SMX integrates an ISA extension (SMX-1D) for irregular and sequential tasks and a specialized coprocessor (SMX-2D) to accelerate regular and parallel tasks, both orchestrated by the general-purpose core to enable seamless integration with state-of-the-art sequence alignment algorithms. Our results demonstrate that SMX’s heterogeneous architecture accelerates different sequence alignment use cases by 256–744 × compared to state-of-the-art software implementations when aligning real datasets. Compared to specialized hardware accelerators, SMX delivers up to 18.5 × more peak performance per area added while providing greater flexibility to accelerate different use cases. Physical design results targeting a 22nm technology node estimate SMX’s area at 0.34mm2, which is only 30% of a single-issue in-order CPU. SMX offers a high-performance and efficient heterogeneous architecture for accelerating practical sequence alignment algorithms, providing a scalable and flexible solution tailored to meet the needs of modern sequence-analysis tools. Furthermore, an SMX case study explores the frontier between flexibility and efficiency in domain-specific architectures and accelerators.",
+    "authorIds": [
+      "0000-0002-8909-3033",
+      "0000-0001-9088-4409",
+      "0000-0001-5166-3806",
+      "0000-0002-9848-8758",
+      "0000-0002-2835-667X",
+      "0000-0001-7951-3914"
+    ],
     "authorInstitutions": "Max Doblas Font (Barcelona Supercomputing Center); Po Jui Shih (Cornell Univ.); Oscar Lostes-Cazorla (Barcelona Supercomputing Center, Universitat Politecnica de Catalunya); Miquel Moreto (UPC/BSC); Christopher Batten (Cornell Univ.); Santiago Marco-Sola (Universitat Politecnica de Catalunya - Barcelona Supercomputing Center)",
     "authors": [
       "Max Doblas Font",
@@ -5865,6 +6827,18 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0009-6031-4312",
+      "0009-0009-9160-8540",
+      "0009-0002-2058-5109",
+      "0009-0002-0001-6929",
+      "0000-0002-5389-0823",
+      "0009-0003-0663-0863",
+      "0009-0006-7480-7562",
+      "0000-0001-6921-1007",
+      "0009-0007-9580-5395",
+      "0000-0002-6440-7550"
+    ],
     "authorInstitutions": "Liang Kong (Ant Group); Shengyu Fan (Chinese Academy of Sciences, CAS); Xianglong Deng (Chinese Academy of Sciences, CAS); Guang Fan (Ant Group); Lei Chen (Ant Group); Guiming Shi (Tsinghua Univ.); Yilan Zhu (Ant Group); Geng Yang (Ant Group); Shoumeng Yan (Ant Group); Mingzhe Zhang (Ant Group)",
     "authors": [
       "Liang Kong",
@@ -5915,6 +6889,10 @@
   },
   {
     "abstract": "Secure speculation schemes have shown great promise in the war against speculative side-channel attacks and will be a key building block for developing secure, high-performance architectures moving forward.As the field matures, the need for rigorous microarchitectures, and corresponding performance and cost analysis, become critical for evaluating secure schemes and for enabling their future adoption.In ShadowBinding, we present effective microarchitectures for two state-of-the-art secure schemes, uncovering and mitigating fundamental microarchitectural limitations within the analyzed schemes, and providing important design characteristics.We uncover that Speculative Taint Tracking's (STT's) rename-based taint computation must be completed in a single cycle, creating an expensive dependency chain that limits performance for wider processor cores.We also introduce a novel microarchitectural approach for STT, named STT-Issue, which, by delaying the taint computation to the issue stage, eliminates the dependency chain, achieving better instructions per cycle (IPC), timing, area, and performance results.Through a comprehensive evaluation of our STT and Non-Speculative Data Access (NDA) microarchitectural designs on the RISC-V Berkeley Out-of-Order Machine, we find that the IPC impact of in-core secure schemes is higher than previously estimated, close to 20% for the highest performance core.With insights into timing from our RTL evaluation, the performance loss, created by the combined impact of IPC and timing, becomes even greater, at 35%, 27%, and 22% for STT-Rename, STT-Issue, and NDA, respectively.If these trends were to hold for leading processor core designs, the performance impact would be well over 30%, even for the bestperforming scheme.Through these findings, research sentiments that Spectre can be solved by in-core secure schemes at low-performance costs are challenged.ShadowBinding serves as a call to arms for a more indepth evaluation of secure speculation schemes and further work on in-core methods and optimizations, which can help mitigate the high performance cost of current state-of-the-art schemes without requiring extensive and expensive modifications.",
+    "authorIds": [
+      "0009-0007-7112-865X",
+      "0000-0003-4232-6976"
+    ],
     "authorInstitutions": "Amund Bergland Kvalsvik (Norwegian Univ. of Science and Technology); Magnus Själander (Norwegian Univ. of Science and Technology)",
     "authors": [
       "Amund Bergland Kvalsvik",
@@ -5970,6 +6948,14 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0005-3247-8417",
+      "0009-0000-5853-2040",
+      "0000-0001-6854-7289",
+      "0000-0001-6233-3538",
+      "0000-0001-6186-5399",
+      "0000-0001-9526-6634"
+    ],
     "authorInstitutions": "Zehao Chen (Shandong Univ.); Honghui You (Shandong Univ.); Qian Wei (Shandong Univ.); Hang Lu (Inst. of Computing Technology, Chinese Academy of Sciences); Zhaoyan Shen (Shandong Univ.); Lei Ju (Shandong Univ.)",
     "authors": [
       "Zehao Chen",
@@ -6013,6 +6999,11 @@
   },
   {
     "abstract": "Specialized hardware like application-specific integrated circuits (ASICs) remains the primary accelerator type for cryptographic kernels based on large integer arithmetic.Prior work has shown that commodity and server-class GPUs can achieve near-ASIC performance for these workloads.However, achieving comparable performance on CPUs remains an open challenge.This work investigates the following question: How can we narrow the performance gap between CPUs and specialized hardware for key cryptographic kernels like basic linear algebra subprograms (BLAS) operations and the number theoretic transform (NTT)?To this end, we develop an optimized scalar implementation of these kernels for x86 CPUs at the per-core level.We utilize SIMD instructions-specifically AVX2 and AVX-512-to further improve performance, achieving an average speedup of 38 times and 62 times over state-of-the-art CPU baselines for NTTs and BLAS operations, respectively.To narrow the gap further, we propose a small AVX-512 extension, dubbed multi-word extension (MQX), which delivers substantial speedup with only three new instructions and minimal proposed hardware modifications.MQX cuts the slowdown relative to ASICs to as low as 35 times on a single CPU core.Finally, we perform a roofline analysis to evaluate the peak performance achievable with MQX when scaled across an entire multi-core CPU.Our results show that, with MQX, top-tier servergrade CPUs can approach the performance of state-of-the-art ASICs for cryptographic workloads.",
+    "authorIds": [
+      "0009-0004-0190-4041",
+      "0009-0002-2358-3336",
+      "0000-0002-3529-8973"
+    ],
     "authorInstitutions": "Naifeng Zhang (Carnegie Mellon Univ.); Sophia Fu (Carnegie Mellon Univ.); Franz Franchetti (Carnegie Mellon Univ.)",
     "authors": [
       "Naifeng Zhang",
@@ -6070,6 +7061,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0001-0513-2112",
+      "0009-0006-3604-3901",
+      "0009-0008-7840-4669",
+      "0009-0007-9998-8053",
+      "0000-0002-3778-5978",
+      "0000-0003-2221-8433",
+      "0000-0003-0837-0877"
+    ],
     "authorInstitutions": "Hwanjun Lee (DGIST); Minho Kim (DGIST); Yeji Jung (DGIST); Seonmu Oh (DGIST); Ki-Dong Kang (ETRI); Seunghak Lee (DGIST/Samsung Electronics); Daehoon Kim (Yonsei Univ.)",
     "authors": [
       "Hwanjun Lee",
@@ -6114,6 +7114,14 @@
   },
   {
     "abstract": "The irruption of chiplet-based architectures has been a game changer, enabling higher transistor integration and core counts in a single socket. However, chiplets impose higher and non-uniform memory access (NUMA) latencies than monolithic integration. This harms the efficiency of atomic memory operations (AMOs), which are fundamental to implementing fine-grained synchronization and concurrent data structures on large systems. AMOs are executed either near the core (near) or at a remote location within the cache hierarchy (far). On near AMOs, the core’s private cache fetches the target cache line in exclusiveness to modify it locally. Near AMOs cause significant data movement between private caches, especially harming parallel applications’ performance on chiplet-based architectures. Alternatively, far AMOs can alleviate the communication overhead by reducing data movement between processing elements. However, current multicore architectures only support one type of far AMO, which sends all updates to a single serialization point (centralized AMOs). This work introduces two new types of far AMOs, delegated and migrating, that execute AMOs remotely without centralizing updates in a single point of the cache hierarchy. Combining centralized, delegated, and migrating AMOs allows the directory to select the best location to execute AMOs. Moreover, we propose Delegato, a tracing optimization to effectively transport usage information from private caches to the directory to predict the best atomic type to issue accurately. Additionally, we design a simple predictor on top of Delegato that seamlessly selects the best placement to perform AMOs based on the data access pattern and usage activity of cores. Our evaluation using gem5 shows that Delegato can speed up applications on average by 1.07 × over centralized AMOs and by 1.13 × over the state-of-the-art AMO predictor.",
+    "authorIds": [
+      "0000-0001-8337-6326",
+      "0000-0003-2869-668X",
+      "0000-0002-6515-0312",
+      "0000-0002-7490-4067",
+      "0000-0002-3571-5562",
+      "0000-0002-9848-8758"
+    ],
     "authorInstitutions": "Víctor Soria-Pardos (Barcelona Supercomputing Center (BSC)); Adrià Armejach (Universitat Politecnica de Catalunya (UPC) & Barcelona Supercomputing Center (BSC)); Tiago Mück (Arm); Darío Suárez (Universidad de Zaragoza); Jose Joao (Arm); Miquel Moretó (Universitat Politecnica de Catalunya (UPC) & Barcelona Supercomputing Center (BSC))",
     "authors": [
       "Víctor Soria-Pardos",
@@ -6178,6 +7186,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-7856-4274",
+      "0009-0004-3082-397X",
+      "0009-0004-8247-9541",
+      "0009-0000-0945-4429",
+      "0000-0003-2817-0223",
+      "0009-0007-5940-181X",
+      "0009-0004-6022-8098",
+      "0000-0002-0289-5499"
+    ],
     "authorInstitutions": "Kaiyang Zhao (Carnegie Mellon Univ.); Yuang Chen (Carnegie Mellon Univ.); Xenia Xu (Carnegie Mellon Univ.); Dan Schatzberg (Meta); Nastaran Hajinaza (Intel); Rupin Vakharwala (Intel); Andy Anderson (Intel); Dimitrios Skarlatos (Carnegie Mellon Univ.)",
     "authors": [
       "Kaiyang Zhao",
@@ -6241,6 +7259,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0008-8402-0127",
+      "0000-0002-8389-2133",
+      "0009-0001-7531-3365",
+      "0000-0001-7513-2858",
+      "0009-0005-2937-5804",
+      "0000-0002-1530-2568",
+      "0000-0002-0442-5634"
+    ],
     "authorInstitutions": "Houxiang Ji (Univ. of Illinois Urbana Champaign); Yifan Yuan (Meta); Yang Zhou (Univ. of Illinois Urbana Champaign); Ipoom Jeong (Yonsei Univ.); Ren Wang (Intel); Saksham Agarwal (Univ. of Illinois Urbana-Champaign); Nam Sung Kim (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Houxiang Ji",
@@ -6285,6 +7312,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-8263-1919",
+      "0000-0001-7835-4739",
+      "0009-0006-0981-4563",
+      "0009-0003-0709-2438",
+      "0000-0001-8623-5465",
+      "0000-0002-6384-0280",
+      "0000-0002-6494-4786",
+      "0000-0002-2790-5884",
+      "0000-0003-1289-2758"
+    ],
     "authorInstitutions": "MINNAN PEI (Inst. of Automation, Chinese Academy of Sciences); Gang Li (Inst. of Automation, Chinese Academy of Sciences); Junwen Si (Inst. of Automation, Chinese Academy of Sciences); Zeyu Zhu (Inst. of Automation, Chinese Academy of Sciences); Zitao Mo (Inst. of Automation, Chinese Academy of Sciences); Peisong Wang (Inst. of Automation, Chinese Academy of Sciences); Zhuoran Song (Shanghai Jiao Tong Univ.); Xiaoyao Liang (Shanghai Jiao Tong Univ.); Jian Cheng (Inst. of Automation, Chinese Academy of Sciences)",
     "authors": [
       "MINNAN PEI",
@@ -6343,6 +7381,17 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-8085-9047",
+      "0000-0002-6112-1928",
+      "0000-0001-9438-9181",
+      "0009-0005-2554-5773",
+      "0009-0008-7797-3202",
+      "0009-0005-9988-2940",
+      "0000-0002-0485-8034",
+      "0000-0001-5117-7920",
+      "0000-0001-7548-4116"
+    ],
     "authorInstitutions": "Meng Han (Tsinghua Univ.); Liang Wang (Beihang Univ.); Limin Xiao (Beihang Univ.); Hao Zhang (Beihang Univ.); Bowen Jiang (Beihang Univ.); Xilong Xie (Beihang Univ.); Jianfeng Zhu (Tsinghua Univ.); Shaojun Wei (Tsinghua Univ.); Leibo Liu (Tsinghua Univ.)",
     "authors": [
       "Meng Han",
@@ -6389,6 +7438,17 @@
   },
   {
     "abstract": "3D Gaussian Splatting (3DGS) has emerged as a promising approach for high-fidelity scene reconstruction and has been widely adopted in Simultaneous Localization and Mapping (SLAM) systems. 3DGS SLAM requires incremental training and rendering of Gaussians in real-time from continuous camera viewpoints. To match the streaming nature of SLAM, 3DGS-based mapping must sustain over 30 frames per second (FPS), which is a widely recognized threshold for maintaining accurate tracking and mapping quality. Existing GPU-based solutions and prior accelerators fall short of this target, primarily due to redundant training computation, unnecessary loss computing, and irregular memory access patterns. To address these challenges, we propose REACT3D, a real-time edge accelerator designed for incremental training in 3DGS SLAM systems. At the algorithmic level, we introduce spatial consistency and convergence aware sparsification, which eliminates redundant computation in both forward and backward rendering by predicting under-optimized regions based on spatial coherence and convergence dynamics. At the architectural level, we design a pixel block-wise fine-grained dataflow to eliminate explicit loss computing, establish a tightly coupled pipeline, and improve hardware utilization. Furthermore, we develop a Content Addressable Memory (CAM)-based Dual-index Gaussian Buffer to resolve discontinuous memory accesses and avoid computation conflicts during gradient merging. Experimental results show that REACT3D achieves 12.10 × performance and 33.69 × energy efficiency improvement over NVIDIA Jetson AGX Orin. To the best of our knowledge, REACT3D is the first hardware design that meets the real-time requirements of 3DGS SLAM on the edge.",
+    "authorIds": [
+      "0009-0008-7095-7963",
+      "0009-0007-9259-7180",
+      "0000-0002-2071-7514",
+      "0000-0003-3699-7503",
+      "0000-0002-5958-9599",
+      "0009-0007-3831-3845",
+      "0000-0003-2421-353X",
+      "0000-0003-2093-1788",
+      "0000-0001-6108-5157"
+    ],
     "authorInstitutions": "Hongyi Wang (Tsinghua Univ.); Zhenhua Zhu (Tsinghua Univ.; HKUST); Tianchen Zhao (Tsinghua Univ.); Yunfei Xiang (Tsinghua Univ.); Zehao Wang (Tsinghua Univ.); Jincheng Yu (Tsinghua Univ.); Huazhong Yang (Tsinghua Univ.); Yuan Xie (HKUST); Yu Wang (Tsinghua Univ.)",
     "authors": [
       "Hongyi Wang",
@@ -6401,6 +7461,7 @@
       "Yuan Xie",
       "Yu Wang"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 10:00 AM KST – 11:20 AM KST"
     ],
@@ -6408,6 +7469,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -6434,7 +7496,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3725843.3756109"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 9C: Emerging Applications - 2"
     ],
@@ -6453,6 +7516,20 @@
   },
   {
     "abstract": "3D Gaussian Splatting (3DGS) based Simultaneous Localization and Mapping (SLAM) systems can largely benefit from 3DGS's state-of-the-art rendering efficiency and accuracy, but have not yet been adopted in resource-constrained edge devices due to insufficient speed. Addressing this, we identify notable redundancies across the SLAM pipeline for acceleration. While conceptually straightforward, practical approaches are required to minimize the overhead associated with identifying and eliminating these redundancies. In response, we propose RTGS, an algorithm-hardware co-design framework that comprehensively reduces the redundancies for real-time 3DGS-SLAM on edge. To minimize the overhead, RTGS fully leverages the characteristics of the 3DGS-SLAM pipeline. On the algorithm side, we introduce (1) an adaptive Gaussian pruning step to remove the redundant Gaussians by reusing gradients computed during backpropagation; and (2) a dynamic downsampling technique that directly reuses the keyframe identification and alpha computing steps to eliminate redundant pixels. On the hardware side, we propose (1) a subtile-level streaming strategy and a pixel-level pairwise scheduling strategy that mitigates workload imbalance via a Workload Scheduling Unit (WSU) guided by previous iteration information; (2) a Rendering and Backpropagation (R&B) Buffer that accelerates the rendering backpropagation by reusing intermediate data computed during rendering; and (3) a Gradient Merging Unit (GMU) to reduce intensive memory accesses caused by atomic operations while enabling pipelined aggregation. Integrated into an edge GPU, RTGS achieves real-time performance (>= 30 FPS) on four datasets and three algorithms, with up to 82.5x energy efficiency over the baseline and negligible quality loss. Code is available at https://github.com/UMN-ZhaoLab/RTGS.",
+    "authorIds": [
+      "0009-0007-0318-0122",
+      "0009-0006-5247-4867",
+      "0000-0003-3805-9326",
+      "0000-0002-2982-5351",
+      "0009-0003-7861-0458",
+      "0009-0003-0060-3127",
+      "0009-0002-6480-9581",
+      "0009-0005-6397-8078",
+      "0000-0001-6968-1180",
+      "0000-0001-7774-8197",
+      "",
+      ""
+    ],
     "authorInstitutions": "Leshu LI (Univ. of Minnesota, Twin Cities); Jiayin Qin (Univ. of Minnesota, Twin Cities); Jie Peng (Univ. of North Carolina at Chapel Hill); Zishen Wan (Georgia Inst. of Technology); Huaizhi Qu (Univ. of North Carolina at Chapel Hill); Ye Han (Vanderbilt Univ.); Pingqing Zheng (Univ. of Minnesota, Twin Cities); Hongsen Zhang (Univ. of Minnesota, Twin Cities); Yu Cao (Univ. of Minnesota Twin Cities); Tianlong Chen (Univ. of North Carolina at Chapel Hill); Yang (Katie); Zhao (Univ. of Minnesota, Twin Cities)",
     "authors": [
       "Leshu LI",

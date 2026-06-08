@@ -1,6 +1,15 @@
 [
   {
     "abstract": "Proof assistants based on dependent type theory, such as Coq, Lean and Agda, use different universes to classify types, typically combining a predicative hierarchy of universes for computationally-relevant types, and an impredicative universe of proof-irrelevant propositions. In general, a universe is characterized by its sort, such as Type or Prop, and its level, in the case of a predicative sort. Recent research has also highlighted the potential of introducing more sorts in the type theory of the proof assistant as a structuring means to address the coexistence of different logical or computational principles, such as univalence, exceptions, or definitional proof irrelevance. This diversity raises concrete and subtle issues from both theoretical and practical perspectives. In particular, in order to avoid duplicating definitions to inhabit all (combinations of) universes, some sort of polymorphism is needed. Universe level polymorphism is well-known and effective to deal with hierarchies, but the handling of polymorphism between sorts is currently ad hoc and limited in all major proof assistants, hampering reuse and extensibility. This work develops sort polymorphism and its metatheory, studying in particular monomorphization, large elimination, and parametricity. We implement sort polymorphism in Coq and present examples from a new sort-polymorphic prelude of basic definitions and automation. Sort polymorphism is a natural solution that effectively addresses the limitations of current approaches and prepares the ground for future multi-sorted type theories.",
+    "authorIds": [
+      "0009-0006-4463-2773",
+      "0009-0008-0626-3078",
+      "0000-0001-5554-3203",
+      "0009-0002-8006-6239",
+      "0000-0001-6452-8806",
+      "0000-0003-3366-2273",
+      "0000-0002-7359-890X"
+    ],
     "authorInstitutions": "Josselin Poiret (Nantes Université, Inria); Gaetan Gilbert; Kenji Maillard (Inria); Pierre-Marie Pédrot (INRIA); Matthieu Sozeau (Inria); Nicolas Tabareau (Inria); Éric Tanter (University of Chile)",
     "authors": [
       "Josselin Poiret",
@@ -75,6 +84,12 @@
   },
   {
     "abstract": "We introduce eRHL, a program logic for reasoning about relational expectation properties of pairs of probabilistic programs. eRHL is quantitative, i.e., its pre- and post-conditions take values in the extended non-negative reals. Thanks to its quantitative assertions, eRHL overcomes randomness alignment restrictions from prior logics, including PRHL, a popular relational program logic used to reason about security of cryptographic constructions, and apRHL, a variant of PRHL for differential privacy. As a result, eRHL is the first relational probabilistic program logic to be supported by non-trivial soundness and completeness results for all \\emph{almost surely terminating} programs. We show that eRHL is sound and complete with respect to program equivalence, statistical distance, and differential privacy. We also show that every PRHL judgment is valid iff it is provable in eRHL. We showcase the practical benefits of eRHL with examples that are beyond reach of PRHL and \\APRHL.",
+    "authorIds": [
+      "0000-0002-6445-8833",
+      "0000-0002-3853-1777",
+      "0009-0009-2981-2962",
+      "0000-0001-6650-9924"
+    ],
     "authorInstitutions": "Martin Avanzini (Inria); Gilles Barthe (MPI-SP; IMDEA Software Institute); Benjamin Gregoire (INRIA); Davide Davoli (Université Côte d’Azur, Inria)",
     "authors": [
       "Martin Avanzini",
@@ -143,6 +158,11 @@
   },
   {
     "abstract": "Program logics have proven a successful strategy for verification of complex programs. By providing local reasoning and means of abstraction and composition, they allow reasoning principles for individual components of a program to be combined to prove guarantees about a whole program. Crucially, these components and their proofs can be \\emph{reused}. However, this reuse is only available once the program logic has been defined. It is a frustrating fact of the status quo that whoever defines a new program logic must establish every part, both semantics and proof rules, from scratch. In spite of programming languages and program logics typically sharing many core features, reuse is generally not available across languages. Even inside one language, if the same underlying operation appears in multiple language primitives, reuse is typically not possible when establishing proof rules for the program logic. To enable reuse across and inside languages when defining complex program logics (and proving them sound), we serve program logics \\emph{à la carte} by combining program logic fragments for the various effects of the language. Among other language features, the menu includes shared state, concurrency, and non-determinism as reusable, composable blocks that can be combined to define a program logic modularly. Our theory builds on ITrees as a framework to express language semantics and Iris as the underlying separation logic; the work has been mechanized in the Coq proof assistant.",
+    "authorIds": [
+      "0009-0000-6739-4890",
+      "0000-0003-4591-743X",
+      "0000-0001-7669-6348"
+    ],
     "authorInstitutions": "Max Vistrup (ETH Zurich); Michael Sammler (Institute of Science and Technology Austria); Ralf Jung (ETH Zurich)",
     "authors": [
       "Max Vistrup",
@@ -203,6 +223,10 @@
   },
   {
     "abstract": "We study Hoare-like logics, including partial and total correctness Hoare logic, incorrectness logic, Lisbon logic, and many others through the lens of predicate transformers à la Dijkstra and through the lens of Kleene algebra with top and tests (TopKAT). Our main goal is to give an overview – a taxonomy – of how these program logics relate, in particular under different assumptions like for example program termination, determinism, and reversibility. As a byproduct, we obtain a TopKAT characterization of Lisbon logic, which – to the best of our knowledge – is a novel result.",
+    "authorIds": [
+      "0000-0001-6823-7918",
+      "0000-0001-5185-2324"
+    ],
     "authorInstitutions": "Lena Verscht (RWTH Aachen University; Saarland University); Benjamin Lucien Kaminski (Saarland University; University College London)",
     "authors": [
       "Lena Verscht",
@@ -270,6 +294,10 @@
   },
   {
     "abstract": "Infinite-state reactive synthesis has attracted significant attention in recent years, which has led to the emergence of novel symbolic techniques for solving infinite-state games. Temporal logics featuring variables over infinite domains offer an expressive high-level specification language for infinite-state reactive systems. Currently, the only way to translate these temporal logics into symbolic games is by naively encoding the specification to use techniques designed for the Boolean case. An inherent limitation of this approach is that it results in games in which the semantic structure of the temporal and first-order constraints present in the formula is lost. There is a clear need for techniques that leverage this information in the translation process to speed up solving the generated games. In this work, we propose the first approach that addresses this gap. Our technique constructs a monitor incorporating first-order and temporal reasoning at the formula level, enriching the constructed game with semantic information that leads to more efficient solving. We demonstrate that thanks to this, our method outperforms the state-of-the-art techniques across a range of benchmarks.",
+    "authorIds": [
+      "0000-0002-5433-8133",
+      "0009-0006-2494-8690"
+    ],
     "authorInstitutions": "Philippe Heim (CISPA Helmholtz Center for Information Security); Rayna Dimitrova (CISPA Helmholtz Center for Information Security)",
     "authors": [
       "Philippe Heim",
@@ -337,6 +365,10 @@
   },
   {
     "abstract": "Imprecise probability is concerned with uncertainty about which probability distributions to use. It has applications in robust statistics and machine learning. We look at programming language models for imprecise probability. Our desiderata are that we would like our model to support all kinds of composition, categorical and monoidal; in other words, guided by dataflow diagrams. Another equivalent perspective is that we would like a model of synthetic probability in the sense of Markov categories. Imprecise probability can be modelled in various ways, with the leading monad-based approach using convex sets of probability distributions. This model is not fully compositional because the monad involved is not commutative, meaning it does not have a proper monoidal structure. In this work, we provide a new fully compositional account. The key idea is to name the non-deterministic choices. To manage the renamings and disjointness of names, we use graded monads. We show that the resulting compositional model is maximal and relate it with the earlier monadic approach, proving that we obtain tighter bounds on the uncertainty.",
+    "authorIds": [
+      "0009-0005-7121-8095",
+      "0000-0002-0141-8922"
+    ],
     "authorInstitutions": "Jack Liell-Cock (University of Oxford); Sam Staton (University of Oxford)",
     "authors": [
       "Jack Liell-Cock",
@@ -398,6 +430,15 @@
   },
   {
     "abstract": "Recently, the rise of code-centric large language models (LLMs) appears to have reshaped the software engineering world with low-barrier tools like Copilot that can generate code easily. However, there is no correctness guarantee for the code generated by LLMs, which suffer from the hallucination problem, and their output is fraught with risks. Besides, the end-to-end process from specification to code through LLMs is a non-transparent and uncontrolled black box. This opacity makes it difficult for users to understand and trust the generated code. Addressing these challenges is both necessary and critical. In contrast, program refinement transforms high-level specification statements into executable code while preserving correctness. Traditional tools for program refinement are primarily designed for formal methods experts and lack automation and extensibility. We apply program refinement to guide LLM and validate the LLM-generated code while transforming refinement into a more accessible and flexible framework. To initiate this vision, we propose Refine4LLM, an approach that aims to: (1) Formally refine the specifications, (2) Automatically prompt and guide the LLM using refinement calculus, (3) Interact with the LLM to generate the code and proof obligations, (4) Verify that the generated code satisfies the constraints, thus guaranteeing its correctness, (5) Learn and build more refinement laws to extend the refinement calculus. We evaluated Refine4LLM against the state-of-the-art baselines on program refinement and LLMs benchmarks. The experiment results show that Refine4LLM can efficiently generate more robust code and reduce the time for refinement and verification.",
+    "authorIds": [
+      "0009-0008-7579-0824",
+      "0000-0001-7164-0580",
+      "0000-0003-2755-3089",
+      "0000-0002-5878-6486",
+      "0000-0001-8255-0118",
+      "0000-0002-3545-1392",
+      "0000-0002-6512-8326"
+    ],
     "authorInstitutions": "Yufan Cai (National University of Singapore); Zhe Hou (Griffith University); David Sanan (Singapore Institute of Technology); Xiaokun Luan (Peking University); Yun Lin (Shanghai Jiao Tong University); Jun Sun (Singapore Management University); Jin Song Dong (National University of Singapore)",
     "authors": [
       "Yufan Cai",
@@ -466,6 +507,11 @@
   },
   {
     "abstract": "We present MoCaml, a new path-based type system for a fully fledged ML-module language that avoids the signature avoidance problem. This is achieved by introducing floating fields, which acts as additional fields of a signature, invisible to the user but still accessible to the typechecker. In practice, they are handled as zippers on module signatures, and can be seen as a lightweight extension on existing signatures. Floating fields allows to delay the resolution of signature avoidance as long as possible or desired. Since they do not exist at runtime, they can be simplified along type equivalence, and dropped once they became unreachable. We give a simple equivalence criterion for the simplification of floating components without loss of type-sharing. We present a principled strategy that implements this criterion and performs much better than OCaml. Remaining floating fields, instead of polluting the code, partially disappear at functor applications and fully disappear at signature ascription, including toplevel interfaces. Residual unavoidable floating fields can be shown to the user as a last resort, either to be explicitly resolved by the user, or kept until link time. The correctness of the type system is proved by elaboration into M𝜔 , which has itself been proved sound by translation to F𝜔 . The language include module type definitions that are kept and returned in inferred types, as long as possible. MoCaml has been designed to be a specification of an improvement over OCaml with transparent ascription, a better solution to signature avoidance, while staying close to the source language and to its implementation.",
+    "authorIds": [
+      "0000-0002-6333-6092",
+      "0000-0002-0693-6278",
+      "0000-0002-2107-7678"
+    ],
     "authorInstitutions": "Clément Blaudeau (Inria); Didier Rémy (Inria); Gabriel Radanne (Inria)",
     "authors": [
       "Clément Blaudeau",
@@ -527,6 +573,12 @@
   },
   {
     "abstract": "Symbolic automata are finite state automata that support potentially infinite alphabets, such as the set of rational numbers, generally applied to regular expressions and languages over finite words. In symbolic automata (or automata modulo $A$), an alphabet is represented by an effective Boolean algebra $A$, supported by a decision procedure for satisfiability. Regular languages over infinite words (so called $\\omega$-regular languages) have a rich history paralleling that of regular languages over finite words, with well known applications to model checking via Buchi automata and temporal logics. We generalize symbolic automata to support $\\omega$-regular languages via \\emph{symbolic transition terms} and \\emph{symbolic derivatives}, bringing together a variety of classic automata and logics in a unified framework that provides all the necessary ingredients to support symbolic model checking modulo $A$. In particular, we define: (1) Alternating Buchi Word automata modulo $A$ ($ABW_A$) as well (non-alternating) Nondeterministic Buchi Word automata modulo $A$ ($NBW_A$); (2) an alternation elimination algorithm that incrementally constructs an $NBW_A$ from an $ABW_A$, and can also be used for constructing the product of two $NBW_A$s; (3) a definition of linear temporal logic modulo $A$, $LTL_A$, that generalizes Vardi’s construction of alternating Buchi automata from LTL, using (2) to go from $LTL_A$ to $NBW_A$ via $ABW_A$. Finally, we present $RLTL_A$, a combination of $LTL_A$ with extended regular expressions modulo $A$ that generalizes the Property Specification Language (PSL). Our combination allows regex \\emph{complement}, that is not supported in PSL but can be supported naturally by using symbolic transition terms. We formalize the semantics of $RLTL_A$ using the \\emph{Lean} proof assistant and formally establish correctness of the main derivation theorem.",
+    "authorIds": [
+      "0009-0008-8427-7977",
+      "0000-0002-9468-5420",
+      "0000-0003-4057-9574",
+      "0009-0004-8818-5042"
+    ],
     "authorInstitutions": "Margus Veanes (Microsoft Research); Thomas Ball (Microsoft Research); Gabriel Ebner (Microsoft Research); Ekaterina Zhuchko (Tallinn University of Technology)",
     "authors": [
       "Margus Veanes",
@@ -597,6 +649,12 @@
   },
   {
     "abstract": "Traditional compilers, designed for optimizing low-level code, fall short when dealing with modern, computation-heavy applications like image processing, machine learning, or numerical simulations. Optimizations should understand the primitive operations of the specific application domain and thus happen on that level. Domain-specific languages (DSLs) fulfill these requirements. However, DSL compilers reinvent the wheel over and over again as standard optimizations, code generators, and general infrastructure & boilerplate code must be reimplemented for each DSL compiler. This paper presents MimIR, an extensible, higher-order intermediate representation. At its core, MimIR is a pure type system and, hence, a form of a typed lambda calculus. Developers can declare the signatures of new (domain-specific) operations, called “axioms”. An axiom can be the declaration of a function, a type operator, or any other entity with a possibly polymorphic, polytypic, and/or dependent type. This way, developers can extend MimIR at any low or high level and bundle them in a plugin. Plugins extend the compiler and take care of optimizing and lowering the plugins’ axioms. We show the expressiveness and effectiveness of MimIR in three case studies: Low-level plugins that operate at the same level of abstraction as LLVM, a regular-expression matching plugin, and plugins for linear algebra and automatic differentiation. We show that in all three studies, MimIR produces code that has state-of-the-art performance.",
+    "authorIds": [
+      "0000-0002-2444-6782",
+      "0009-0006-0127-9623",
+      "0000-0003-2656-9863",
+      "0000-0002-3387-2134"
+    ],
     "authorInstitutions": "Roland Leißa (University of Mannheim, School of Business Informatics and Mathematics); Marcel Ullrich (Saarland University, Saarland Informatics Campus); Joachim Meyer (Saarland University, Saarland Informatics Campus); Sebastian Hack (Saarland University, Saarland Informatics Campus)",
     "authors": [
       "Roland Leißa",
@@ -612,6 +670,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -640,7 +699,7 @@
       "https://doi.org/10.1145/3704840"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Synthesis and Compilation",
       "POPL"
@@ -665,6 +724,13 @@
   },
   {
     "abstract": "Compilers often weaken or even discard software-based countermeasures commonly used to protect programs against side-channel attacks; worse, they may also introduce vulnerabilities that attackers can exploit. The solution to this problem is to develop compilers that preserve such countermeasures. Prior work establishes that (a mildly modified version of) the CompCert and Jasmin formally verified compilers preserve constant-time, an information flow policy that ensures that programs are protected against timing side-channel attacks. However, nothing is known about preservation of speculative constant-time, a strengthening of the constant-time policy that ensures that programs are protected against Spectre v1 attacks. We first show that preservation of speculative constant-time fails in practice by providing examples of secure programs whose compilation is not speculative constant-time using GCC (GCC -O0 and GCC -O1 ) and Jasmin. Then, we define a proof-of-concept compiler that distills some of the critical passes of the Jasmin compiler and use the Coq proof assistant to prove that it preserves speculative constant-time. Finally, we patch the Jasmin speculative constant-time type checker and demonstrate that all cryptographic implementations written in Jasmin can be fixed with minimal impact.",
+    "authorIds": [
+      "0009-0007-7425-570X",
+      "0000-0002-3853-1777",
+      "0000-0001-9058-2005",
+      "0000-0001-6650-9924",
+      "0000-0002-3468-352X"
+    ],
     "authorInstitutions": "Santiago Arranz Olmos (Max Planck Institute for Security and Privacy); Gilles Barthe (MPI-SP; IMDEA Software Institute); Lionel Blatter (Max Planck Institute for Security and Privacy); Benjamin Gregoire (INRIA); Vincent Laporte (Inria)",
     "authors": [
       "Santiago Arranz Olmos",
@@ -732,6 +798,10 @@
   },
   {
     "abstract": "In this paper, we develop and study the following perspective – just as higher-order functions give exponentials, higher-order continuations give coexponentials. From this, we design a language that combines exponentials and coexponentials, producing a duality of abstraction. We formalise this language by giving an extension of a call-by-value simply-typed lambda-calculus with covalues, coabstraction and coapplication. We develop the semantics of this language using the axiomatic structure of continuations, which we use to produce an equational theory, that gives a complete axiomatisation of control effects. We give a computational interpretation to this language using speculative execution and backtracking, and use this to derive the classical control operators and computational interpretation of classical logic, and encode common patterns of control flow using continuations. By dualising functional completeness, we further develop duals of first-order arrow languages using coexponentials, Finally, we discuss the implementation of this duality as control operators in programming, and develop some applications.",
+    "authorIds": [
+      "0000-0003-2030-8056",
+      "0000-0003-3033-9091"
+    ],
     "authorInstitutions": "Vikraman Choudhury (Università di Bologna & Inria OLAS); Simon J. Gay (University of Glasgow, UK)",
     "authors": [
       "Vikraman Choudhury",
@@ -798,6 +868,11 @@
   },
   {
     "abstract": "We present Bluebell, a program logic for reasoning about probabilistic programs where unary and relational styles of reasoning come together to create new reasoning tools. Unary-style reasoning is very expressive and is powered by foundational mechanisms to reason about probabilistic behaviour like independence and conditioning . The relational style of reasoning, on the other hand, naturally shines when the properties of interest compare the behaviour of similar programs (e.g. when proving differential privacy) managing to avoid having to characterize the output distributions of the individual programs. So far, the two styles of reasoning have largely remained separate in the many program logics designed for the deductive verification of probabilistic programs. In Bluebell, we unify these styles of reasoning through the introduction of a new modality we call “joint conditioning” that can encode and illuminate the rich interaction between conditional independence and relational liftings ; the two powerhouses from the two styles of reasoning.",
+    "authorIds": [
+      "0000-0002-2353-350X",
+      "0000-0002-9179-5827",
+      "0000-0001-9005-2653"
+    ],
     "authorInstitutions": "Jialu Bao (Cornell University); Emanuele D'Osualdo (University of Konstanz); Azadeh Farzan (University of Toronto)",
     "authors": [
       "Jialu Bao",
@@ -869,6 +944,12 @@
   },
   {
     "abstract": "\\emph{Context-free language (CFL)} reachability is a standard approach in static analyses, where the analysis question (e.g., is there a dataflow from $x$ to $y$?) is phrased as a language reachability problem on a graph $G$ wrt a CFL $\\mathcal{L}$. However, CFLs lack the expressiveness needed for high analysis precision. On the other hand, common formalisms for \\emph{context-sensitive} languages are too expressive, in the sense that the corresponding reachability problem becomes undecidable. \\emph{Are there useful context-sensitive language-reachability models for static analysis?} In this paper, we introduce \\emph{Multiple Context-Free Language (MCFL)} reachability as an \\emph{expressive} yet \\emph{tractable} model for static program analysis. MCFLs form an infinite hierarchy of mildly context sensitive languages parameterized by a \\emph{dimension} $d$ and a \\emph{rank} $r$. Larger $d$ and $r$ yield progressively more expressive MCFLs, offering \\emph{tunable} analysis precision. We showcase the utility of MCFL reachability by developing a family of MCFLs that approximate interleaved Dyck reachability, a common but undecidable static analysis problem. Given the increased expressiveness of MCFLs, one natural question pertains to their algorithmic complexity, i.e., \\emph{how fast can MCFL reachability be computed?} We show that the problem takes $O(n^{2d+1})$ time on a graph of $n$ nodes when $r=1$, and in $O(n^{d(r+1)})$ time when $r>1$. Moreover, we show that when $r=1$, even the simpler membership problem has a lower bound of $n^{2d}$ based on the Strong Exponential Time Hypothesis, while reachability for $d=1$ has a lower bound of $n^{3}$ based on the combinatorial Boolean Matrix Multiplication Hypothesis. Thus, for $r=1$, our algorithm is optimal within a factor $n$ for all levels of the hierarchy based on the dimension $d$ (and fully optimal for $d=1$). We implement our MCFL reachability algorithm and evaluate it on underapproximating interleaved Dyck reachability for a standard taint analysis for Android. When combined with existing overapproximate methods, MCFL reachability discovers \\emph{all} tainted information on 8 out of 11 benchmarks, while it has remarkable coverage (confirming $94.3%$ of the reachable pairs reported by the overapproximation) on the remaining 3. To our knowledge, this is the first report of high and provable coverage for this challenging benchmark set.",
+    "authorIds": [
+      "0000-0001-9474-6505",
+      "0000-0002-1275-9933",
+      "0000-0003-4305-0625",
+      "0000-0002-8943-0722"
+    ],
     "authorInstitutions": "Giovanna Kobus Conrado (Hong Kong University of Science and Technology); Adam Husted Kjelstrøm (Aarhus University); Jaco van de Pol (Aarhus University); Andreas Pavlogiannis (Aarhus University)",
     "authors": [
       "Giovanna Kobus Conrado",
@@ -884,6 +965,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -910,7 +992,7 @@
       "https://doi.org/10.1145/3704854"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Program Analysis",
       "POPL"
@@ -933,19 +1015,50 @@
   },
   {
     "abstract": "Multiparty session types (MPST) provide a type discipline for ensuring communication safety, deadlock-freedom and liveness for multiple concurrently running participants. The original formulation of MPST takes the \\emph{top-down} approach, where a \\emph{global type} specifies a bird’s eye view of the intended interactions between participants, and each distributed process is locally type-checked against its end-point projection. A more recent one takes the \\emph{bottom-up} approach, where a desired property $\\varphi$ of a set of participants is ensured if the same property $\\varphi$ is true for an ensemble of end-point types (a typing context) inferred from each participant. This paper compares these two main procedures of MPST, giving their detailed complexity analyses. To this aim, we build several new algorithms missing from the bottom-up or top-down workflows by using graph representation of session types (\\emph{type graphs}). We first propose a subtyping system based on type graphs, offering more efficient (quadratic) subtype-checking than the existing (exponential) inductive algorithm. Next for the top-down, we measure complexity of the four end-point projections from the literature. For the coinductive projection, we build a new sound and complete algorithm using type graphs. For bottom-up, we develop a novel \\emph{type inference system} from MPST processes which generates \\emph{minimum type graphs}, succinctly capturing covariance of internal choice and contravariance of external choice. For property-checking of typing contexts, we achieve PSPACE-hardness by reducing it from the quantified Boolean formula (QBF) problem, and build nondeterministic algorithms that search for counterexamples to prove membership in PSPACE. We also present deterministic analogues of these algorithms that run in exponential time. Finally, we calculate the total complexity of the top-down and the bottom-up approaches. Our analyses reveal that the top-down based on global types is more efficient than the bottom-up in many realistic cases; liveness checking for typing contexts in the bottom-up has the highest complexity; and the type inference costs exponential against the size of a process, which impacts the total complexity.",
+    "authorIds": [
+      "0009-0005-2320-9178",
+      "0000-0002-3925-8557"
+    ],
     "authorInstitutions": "Thien Udomsrirungruang (University of Oxford); Nobuko Yoshida (University of Oxford)",
     "authors": [
       "Thien Udomsrirungruang",
       "Nobuko Yoshida"
     ],
+    "container": "Proceedings of the ACM on Programming Languages",
     "dates": [
       "Fri 24 Jan 2025 15:20 - 15:40"
     ],
+    "doi": "10.1145/3704872",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "diamond",
+        "oa_url": "https://doi.org/10.1145/3704872"
+      }
+    },
     "id": "1d23269a-bf34-4c3e-a3c2-1430a0b77d5e",
+    "issue": "POPL",
+    "keywords": [
+      "Session (web analytics)",
+      "Computer science",
+      "Top-down and bottom-up design",
+      "Programming language",
+      "World Wide Web"
+    ],
     "locations": [
       "Marco Polo"
     ],
+    "pages": "1040-1071",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3704872"
+    ],
+    "publicationDate": "2025-01-07",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Concurrency 2",
       "POPL"
@@ -959,13 +1072,20 @@
       "POPL"
     ],
     "urls": [
+      "https://doi.org/10.1145/3704872",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/36/Top-Down-or-Bottom-Up-Complexity-Analyses-of-Synchronous-Multiparty-Session-Types",
       "https://www.arxiv.org/abs/2411.07452",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
-    ]
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://openalex.org/W4406221659"
+    ],
+    "volume": "9"
   },
   {
     "abstract": "Many programming languages need to check whether two recursive types are in a subtyping relation. Traditionally recursive types are modelled in two different ways: equi- or iso- recursive types. While efficient algorithms for subtyping equi-recursive types are well studied for simple type systems, efficient algorithms for iso-recursive subtyping remain understudied. In this paper we present QuickSub: an efficient and simple to implement algorithm for iso-recursive subtyping. QuickSub has the same expressive power as the well-known iso-recursive Amber rules. The worst case complexity of QuickSub is $O(nm)$, where $m$ is the size of the type and $n$ is the number of recursive binders. However, in practice, the algorithm is nearly linear with the worst case being hard to reach. Consequently, in many common cases, QuickSub can be several times faster than alternative algorithms. We validate the efficiency of QuickSub with an empirical evaluation comparing it to existing equi-recursive and iso-recursive subtyping algorithms. We prove the correctness of the algorithm and formalize a simple calculus with recursive subtyping and records. For this calculus we also show how type soundness can be proved using QuickSub. All the results have been formalized and proved in the Coq proof assistant.",
+    "authorIds": [
+      "0000-0003-3046-7085",
+      "0000-0002-1846-7210"
+    ],
     "authorInstitutions": "Litao Zhou (University of Hong Kong); Bruno C. d. S. Oliveira (University of Hong Kong)",
     "authors": [
       "Litao Zhou",
@@ -979,6 +1099,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1002,7 +1123,7 @@
       "https://doi.org/10.1145/3704869"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Types 2",
       "POPL"
@@ -1025,6 +1146,11 @@
   },
   {
     "abstract": "Gradually typed programming languages, which allow for soundly mixing static and dynamically typed programming styles, present a strong challenge for metatheorists. Even the simplest sound gradually typed languages feature at least recursion and errors, with realistic languages featuring furthermore runtime allocation of memory locations and dynamic type tags. Further, the desired metatheoretic properties of gradually typed languages have become increasingly sophisticated: validity of type-based equational reasoning as well as the relational property known as graduality. Many recent works have tackled verifying these properties, but the resulting mathematical developments are highly repetitive and tedious, with few reusable theorems persisting across different developments. In this work, we present a new denotational semantics for gradual typing developed using guarded domain theory. Guarded domain theory combines the generality of step-indexed logical relations for modeling advanced programming features with the modularity and reusability of denotational semantics. We demonstrate the feasibility of this approach with a model of a simple gradually typed lambda calculus and prove the validity of beta-eta equality and the graduality theorem for the denotational model. This model should provide the basis for a reusable mathematical theory of gradually typed program semantics. Finally, we have mechanized most of the core theorems of our development in Guarded Cubical Agda, a recent extension of Agda with support for the guarded recursive constructions we use.",
+    "authorIds": [
+      "0009-0003-6871-1714",
+      "0009-0000-5676-1886",
+      "0000-0001-8141-195X"
+    ],
     "authorInstitutions": "Eric Giovannini (University of Michigan); Tingting Ding (University of Michigan); Max S. New (University of Michigan)",
     "authors": [
       "Eric Giovannini",
@@ -1095,6 +1221,12 @@
   },
   {
     "abstract": "Mainstream compilers implement different countermeasures to prevent specific classes of speculative execution attacks. Unfortunately, these countermeasures either lack formal guarantees or come with proofs restricted to speculative semantics capturing only a subset of the speculation mechanisms supported by modern CPUs, thereby limiting their practical applicability. Ideally, these security proofs should target a speculative semantics capturing the effects of all speculation mechanisms implemented in modern CPUs. However, this is impractical and requires new secure compilation proofs to support additional speculation mechanisms. In this paper, we address this problem by proposing a novel secure compilation framework that allows lifting the security guarantees provided by Spectre countermeasures from weaker speculative semantics (ignoring some speculation mechanisms) to stronger ones (accounting for the omitted mechanisms) without requiring new secure compilation proofs. Using our lifting framework, we performed the most comprehensive security analysis of Spectre countermeasures implemented in mainstream compilers to date. Our analysis spans 9 different countermeasures against 5 classes of Spectre attacks, which we proved secure against a speculative semantics accounting for five different speculation mechanisms. Our analysis highlights that fence-based and retpoline-based countermeasures can be securely lifted to the strongest speculative semantics under study. In contrast, countermeasures based on speculative load hardening cannot be securely lifted to semantics supporting indirect jump speculation.",
+    "authorIds": [
+      "0009-0006-6342-4646",
+      "0000-0003-3411-9678",
+      "0000-0001-5767-555X",
+      "0000-0002-7130-9211"
+    ],
     "authorInstitutions": "Xaver Fabian (CISPA); Marco Patrignani (University of Trento); Marco Guarnieri (IMDEA Software Institute); Michael Backes (Cispa Helmholtz Center for Information Security)",
     "authors": [
       "Xaver Fabian",
@@ -1160,6 +1292,11 @@
   },
   {
     "abstract": "Levy’s call-by-push-value is a comprehensive programming paradigm that combines elements from functional and imperative programming, supports computational effects and subsumes both call-by-value and call-byname evaluation strategies. In the present work, we develop modular methods to reason about program equivalence in call-by-push-value, and in fine-grain call-by-value, which is a popular lightweight call-by-value sublanguage of the former. Our approach is based on the fundamental observation that presheaf categories of sorted sets are suitable universes to model call-by-(push)-value languages, and that natural, coalgebraic notions of program equivalence such as applicative similarity and logical relations can be developed within. Starting from this observation, we formalize fine-grain call-by-value and call-by-push-value in the higher-order abstract GSOS framework, reduce their key congruence properties to simple syntactic conditions by leveraging existing theory and argue that introducing changes to either language incurs minimal proof overhead.",
+    "authorIds": [
+      "0000-0001-6924-8766",
+      "0000-0001-8981-2328",
+      "0000-0002-3265-7168"
+    ],
     "authorInstitutions": "Sergey Goncharov (University of Birmingham, School of Comp. Sci.); Stelios Tsampas (FAU Erlangen-Nuremberg, INF 8); Henning Urbat (FAU Erlangen-Nuremberg, INF 8)",
     "authors": [
       "Sergey Goncharov",
@@ -1174,6 +1311,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1196,7 +1334,7 @@
       "https://doi.org/10.1145/3704871"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Semantic models",
       "POPL"
@@ -1219,6 +1357,11 @@
   },
   {
     "abstract": "Dirac notation is widely used in quantum physics and quantum programming languages to define, compute and reason about quantum states. This paper considers Dirac notation from the perspective of automated reasoning. We prove two main results: first, the first-order theory of Dirac notation is decidable, by a reduction to the theory of real closed fields and Tarski’s theorem. Then, we prove that validity of equations can be decided efficiently, using term-rewriting techniques. We implement our equivalence checking algorithm in Mathematica, and showcase its efficiency across more than 100 examples from the literature.",
+    "authorIds": [
+      "0000-0001-9071-7862",
+      "0000-0002-3853-1777",
+      "0000-0002-9868-8477"
+    ],
     "authorInstitutions": "Yingte Xu (MPI-SP and Institute of Software, Chinese Academy of Sciences); Gilles Barthe (MPI-SP; IMDEA Software Institute); Li Zhou (Institute of Software, Chinese Academy of Sciences)",
     "authors": [
       "Yingte Xu",
@@ -1233,6 +1376,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1265,7 +1409,7 @@
       "https://doi.org/10.1145/3704878"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Quantum Computing 1",
       "POPL"
@@ -1288,6 +1432,13 @@
   },
   {
     "abstract": "Advanced probabilistic programming languages (PPLs) using \\emph{hybrid particle filtering} combine symbolic exact inference and Monte Carlo methods to improve inference performance. These systems use heuristics to partition random variables within the program into variables that are encoded symbolically and variables that are encoded with sampled values, and the heuristics are not necessarily aligned with the developer’s performance evaluation metrics. In this work, we present \\emph{inference plans}, a programming interface that enables developers to control the partitioning of random variables during hybrid particle filtering. We further present Siren, a new PPL that enables developers to use annotations to specify inference plans the inference system must implement. To assist developers with statically reasoning about whether an inference plan can be implemented, we present an abstract-interpretation-based static analysis for Siren for determining inference plan \\emph{satisfiability}. We prove the analysis is sound with respect to Siren’s semantics. Our evaluation applies inference plans to three different hybrid particle filtering algorithms on a suite of benchmarks. It shows that the control provided by inference plans enables speed ups of 1.76x on average and up to 206x to reach a target accuracy, compared to the inference plans implemented by default heuristics; the results also show that inference plans improve accuracy by 1.83x on average and up to 595x with less or equal runtime, compared to the default inference plans. We further show that our static analysis is precise in practice, identifying all satisfiable inference plans in 27 out of the 33 benchmark-algorithm evaluation settings.",
+    "authorIds": [
+      "0009-0006-6128-0351",
+      "0000-0002-8396-1258",
+      "0000-0003-2230-1616",
+      "0000-0002-5291-6067",
+      "0000-0002-6928-0456"
+    ],
     "authorInstitutions": "Ellie Y. Cheng (MIT); Eric Atkinson; Guillaume Baudart (Inria); Louis Mandel (IBM Research, USA); Michael Carbin (Massachusetts Institute of Technology)",
     "authors": [
       "Ellie Y. Cheng",
@@ -1360,6 +1511,10 @@
   },
   {
     "abstract": "The phase folding optimization is a circuit optimization used in many quantum compilers as a fast and effective way of reducing the number of high-cost gates in a quantum circuit. However, existing formulations of the optimization rely on an exact, linear algebraic representation of the circuit, restricting the optimization to being performed on straightline quantum circuits or basic blocks in a larger quantum program. We show that the phase folding optimization can be re-cast as an \\emph{affine relation analysis}, which allows the direct application of classical techniques for affine relations to extend phase folding to quantum \\emph{programs} with arbitrarily complicated classical control flow including nested loops and procedure calls. Through the lens of relational analysis, we show that the optimization can be powered-up by substituting other classical relational domains, particularly ones for \\emph{non-linear} relations which are useful in analyzing circuits involving classical arithmetic. To increase the precision of our analysis and infer non-linear relations from gate sets involving only linear operations — such as Clifford+$T$ — we show that the \\emph{sum-over-paths} technique can be used to extract precise symbolic transition relations for straightline circuits. Our experiments show that our methods are able to generate and use non-trivial loop invariants for quantum program optimization, as well as achieve some optimizations of common circuits which were previously attainable only by hand.",
+    "authorIds": [
+      "0000-0003-3514-420X",
+      "0009-0000-0253-9227"
+    ],
     "authorInstitutions": "Matthew Amy (Simon Fraser University); Joseph Lunderville (Simon Fraser University)",
     "authors": [
       "Matthew Amy",
@@ -1429,6 +1584,12 @@
   },
   {
     "abstract": "Mechanisations of programming language specifications are now increasingly common, providing machine-checked modelling of the specification and verification of desired properties such as type safety. However it is challenging to maintain these mechanisations, particularly in the face of an evolving specification. Existing mechanisations of the W3C WebAssembly (Wasm) standard have so far been able to keep pace as the standard evolves, helped enormously by the W3C Wasm standard’s choice to state the language’s semantics in terms of a fully formal specification. However a substantial incoming extension to Wasm, the 2.0 feature set, motivates the investigation of strategies for more efficient production of the core verification artefacts currently associated with the WasmCert-Coq mechanisation of Wasm. In the classic formalisation of a typed operational semantics as followed by the W3C Wasm standard, both the type system and runtime operational semantics are defined as inductive relations, with associated type soundness properties (progress and preservation) and an independent sound interpreter. We investigate two more efficient strategies for producing these artefacts, which are currently all separately defined by WasmCert-Coq. First, the approach of Kokke, Siek, and Wadler for deriving a sound interpreter from a constructive progress proof — we show that this approach scales to the W3C Wasm 1.0 standard, but results in an inefficient interpreter in our setting. Second, inspired by results from intrinsically-typed languages, we define a \\textit{progressful} interpreter which uses Coq’s dependent types to certify not only its own soundness, but also the progress property. We show that this interpreter can implement several performance optimisations while maintaining these certifications, which are fully erasable when the interpreter is extracted from Coq. Using this approach, we extend the WasmCert-Coq mechanisation to the significantly larger Wasm 2.0 feature set, discovering and correcting several errors in the expanded specification’s type system.",
+    "authorIds": [
+      "0009-0008-4391-1214",
+      "0009-0009-1220-9200",
+      "0000-0002-0596-877X",
+      "0000-0002-4187-0585"
+    ],
     "authorInstitutions": "Xiaojia Rao (Imperial College London); Stefan Radziuk (Imperial College London); Conrad Watt (Nanyang Technological University); Philippa Gardner (Imperial College London)",
     "authors": [
       "Xiaojia Rao",
@@ -1492,6 +1653,17 @@
   },
   {
     "abstract": "We present DRFCaml, an extension of OCaml’s type system that guarantees data race freedom for multi-threaded OCaml programs while retaining backward compatibility with existing sequential OCaml code. We build on recent work of Lorenzen et al., who extend OCaml with \\emph{modes} that keep track of locality, uniqueness, and affinity. We introduce two new mode axes, \\emph{contention} and \\emph{portability}, which record whether data has been shared or can be shared between multiple threads. Although this basic type-and-mode system has limited expressive power by itself, it does let us express APIs for \\emph{capsules}, regions of memory whose access is controlled by a unique ghost key, and \\emph{reader-writer locks}, which allow a thread to safely acquire partial or full ownership of a key. We show that this allows complex data structures (which may involve aliasing and mutable state) to be safely shared between threads. We formalize the complete system and establish its soundness by building a semantic model of it in the Iris program logic on top of the Coq proof assistant.",
+    "authorIds": [
+      "0000-0002-5951-4642",
+      "0009-0008-3193-6940",
+      "0009-0005-9514-1360",
+      "0009-0003-7046-3035",
+      "0000-0002-4609-9101",
+      "0000-0002-7669-9781",
+      "0009-0005-6689-9463",
+      "0000-0002-4069-1235",
+      "0000-0002-3884-6867"
+    ],
     "authorInstitutions": "Aina Linn Georges (Max Planck Institute for Software Systems (MPI-SWS)); Benjamin Peters (MPI-SWS); Laila Elbeheiry (MPI-SWS); Leo White (Jane Street); Stephen Dolan (Jane Street); Richard A. Eisenberg (Jane Street); Chris Casinghino (Jane Street); François Pottier (Inria); Derek Dreyer (MPI-SWS)",
     "authors": [
       "Aina Linn Georges",
@@ -1566,6 +1738,16 @@
   },
   {
     "abstract": "We present a new method for the verification of quantum circuits based on a novel symbolic representation of sets of quantum states using \\emph{level-synchronized tree automata} LSTAs. LSTAs extend classical tree automata by labeling each transition with a set of \\emph{choices}, which are then used to synchronize subtrees of an accepted tree. Compared to the traditional tree automata, LSTAs have an incomparable expressive power while maintaining important properties, such as closure under union and intersection and decidable language emptiness and inclusion. We have developed an efficient and fully automated symbolic verification algorithm for quantum circuits based on LSTAs. The complexity of supported gate operations is at most quadratic, dramatically improving the exponential worst-case complexity of an earlier tree automata-based approach. Furthermore, we show that LSTAs are a promising model for \\emph{parameterized verification}, i.e., verifying the correctness of families of circuits with the same structure for any number of qubits involved, which principally lies beyond the capabilities of previous automated approaches. We implemented this method as a C++ tool and compared it with three symbolic quantum circuit verifiers and two simulators on several benchmark examples. The results show that our approach can solve problems with size orders of magnitude larger than the state of the art.",
+    "authorIds": [
+      "0000-0001-6832-6611",
+      "0009-0003-0498-7287",
+      "0000-0003-2872-0336",
+      "0000-0001-6957-1651",
+      "0000-0002-3038-5875",
+      "0000-0001-8560-2147",
+      "0009-0000-4495-6539",
+      "0009-0003-5832-0867"
+    ],
     "authorInstitutions": "Parosh Aziz Abdulla (Uppsala University, Sweden); Yo-Ga Chen (Academia Sinica); Yu-Fang Chen (Academia Sinica); Lukáš Holík (Brno University of Technology); Ondřej Lengál (Brno University of Technology); Jyun-Ao Lin (National Taipei University of Technology); Fang-Yi Lo (Academia Sinica); Wei-Lun Tsai (Academia Sinica)",
     "authors": [
       "Parosh Aziz Abdulla",
@@ -1639,6 +1821,13 @@
   },
   {
     "abstract": "Many of today’s message-passing systems not only require messages to be exchanged in a certain order but also to happen at a certain \\emph{time} or within a certain \\emph{time window}. Such correctness conditions are particularly prominent in Internet of Things (IoT) and real-time systems applications, which interface with hardware devices that come with inherent timing constraints. Verifying compliance of such systems with the intended \\emph{timed protocol} is challenged by their \\emph{heterogeneity}—ruling out any verification method that relies on the system to be implemented in one common language, let alone in a high-level and typed programming language. To address this challenge, this paper contributes a \\emph{logical relation} to verify that its in habitants (the applications and hardware devices to be proved correct) comply with the given timed protocol. To cater to the systems’ heterogeneity, the logical relation is entirely \\emph{semantic}, lifting the requirement that its inhabitants are syntactically well-typed. A semantic approach enables two modes of use of the logical relation for program verification: \\textit{(i)} \\emph{once-and-for-all} verification of an \\emph{arbitrary} well-typed application, given a type system, and \\textit{(ii)} \\emph{per-instance} verification of a specific application / hardware device (\\aka foreign code). To facilitate mode \\textit{(i)}, the paper develops a refinement type system for expressing timed message-passing protocols and proves that any well-typed program inhabits the logical relation (fundamental theorem). A type checker for the refinement type system has been implemented in Rust, using an SMT solver to check satisfiability of timing constraints. Then, the paper demonstrates both modes of use based on a small case study of a smart home system for monitoring air quality, consisting of a controller application and various environment sensors.",
+    "authorIds": [
+      "0000-0001-8523-5156",
+      "0009-0005-4138-5001",
+      "0000-0002-3961-7118",
+      "0000-0002-8347-3529",
+      "0000-0003-4353-1998"
+    ],
     "authorInstitutions": "Yue Yao (Carnegie Mellon University); Grant Iraci (University at Buffalo); Cheng-En Chuang (University at Buffalo); Stephanie Balzer (Carnegie Mellon University); Lukasz Ziarek (University at Buffalo)",
     "authors": [
       "Yue Yao",
@@ -1655,6 +1844,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1681,7 +1871,7 @@
       "https://doi.org/10.1145/3704895"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Concurrency 2",
       "POPL"
@@ -1704,6 +1894,10 @@
   },
   {
     "abstract": "In this paper, we introduce DeLaM, a dependent layered modal type theory which enables meta-programming in Martin-Löf type theory (MLTT) with recursion principles on open code. DeLaM includes three layers: the layer of static syntax objects of MLTT without any computation; the layer of pure MLTT with the computational behaviors; the meta-programming layer extends MLTT with support for quoting an open MLTT code object and composing and analyzing open code using recursion. We can also execute a code object at the meta-programming layer. The expressive power strictly increases as we move up in a given layer. In particular, while code objects only describe static syntax, we allow computation at the MLTT and meta-programming layer. As a result, DeLaM provides a dependently typed foundation for meta-programming that supports both type-safe code generation and code analysis. We prove the weak normalization of DeLaM and the decidability of convertibility using Kripke logical relations.",
+    "authorIds": [
+      "0000-0001-6710-6262",
+      "0000-0002-2549-4276"
+    ],
     "authorInstitutions": "Jason Z. S. Hu (Amazon Web Services, USA); Brigitte Pientka (McGill University)",
     "authors": [
       "Jason Z. S. Hu",
@@ -1717,6 +1911,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1741,7 +1936,7 @@
       "https://doi.org/10.1145/3704851"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Types 1",
       "POPL"
@@ -1764,6 +1959,11 @@
   },
   {
     "abstract": "We study the problem of bounding the posterior distribution of discrete probabilistic programs with unbounded support, loops, and conditioning. Loops pose the main difficulty in this setting: even if exact Bayesian inference is possible, the state of the art requires user-provided loop invariant templates. By contrast, we aim to find guaranteed bounds, which sandwich the true distribution. They are fully automated, applicable to more programs and provide more provable guarantees than approximate sampling-based inference. Since lower bounds can be obtained by unrolling loops, the main challenge is upper bounds, and we attack it in two ways. The first is called residual mass semantics, which is a flat bound based on the residual probability mass of a loop. The approach is simple, efficient, and has provable guarantees. The main novelty of our work is the second approach, called geometric bound semantics. It operates on a novel family of distributions, called eventually geometric distributions (EGDs), and can bound the distribution of loops with a new form of loop invariants called contraction invariants. The invariant synthesis problem reduces to a system of polynomial inequality constraints, which is a decidable problem with automated solvers. If a solution exists, it yields an exponentially decreasing bound on the whole distribution, and can therefore bound moments and tail asymptotics as well, not just probabilities as in the first approach. Both semantics enjoy desirable theoretical properties. In particular, we prove soundness and convergence, i.e. the bounds converge to the exact posterior as loops are unrolled further. We also investigate sufficient and necessary conditions for the existence of geometric bounds. On the practical side, we describe Diabolo, a fully-automated implementation of both semantics, and evaluate them on a variety of benchmarks from the literature, demonstrating their general applicability and the utility of the resulting bounds.",
+    "authorIds": [
+      "0000-0001-5158-2002",
+      "0000-0002-4725-410X",
+      "0000-0001-7509-680X"
+    ],
     "authorInstitutions": "Fabian Zaiser (University of Oxford); Andrzej Murawski (University of Oxford); C.-H. Luke Ong (NTU)",
     "authors": [
       "Fabian Zaiser",
@@ -1831,6 +2031,12 @@
   },
   {
     "abstract": "Formal verification is a gold standard for building reliable computer systems. Certified systems in particular come with a formal specification, and a proof of correctness which can easily be checked by a third party. Unfortunately, verifying large-scale, heterogeneous systems remains out of reach of current techniques. Addressing this challenge will require the use of compositional methods capable of accommodating and interfacing a range of program verification and certified compilation techniques. In principle, compositional semantics could play a role in enabling this kind of flexibility, but in practice existing tools tend to rely on simple and specialized operational models which are difficult to interface with one another. To tackle this issue, we present a compositional semantics framework which can accommodate a broad range of verification techniques. Its core is a three-dimensional algebra of refinement which operates across program modules, levels of abstraction, and components of the system’s state. Our framework is mechanized in the Coq proof assistant and we showcase its capabilities with multiple use cases.",
+    "authorIds": [
+      "0009-0009-1160-9851",
+      "0000-0002-3168-5925",
+      "0000-0001-8184-7649",
+      "0000-0003-3990-2418"
+    ],
     "authorInstitutions": "Yu Zhang; Jérémie Koenig (Yale University); Zhong Shao (Yale University); Yuting Wang (Shanghai Jiao Tong University)",
     "authors": [
       "Yu Zhang",
@@ -1846,6 +2052,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -1871,7 +2078,7 @@
       "https://doi.org/10.1145/3704900"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Proof Assistants",
       "POPL"
@@ -1894,6 +2101,10 @@
   },
   {
     "abstract": "First-order logic has proved to be a versatile and expressive tool as the basis of abstract modeling languages. Used to verify complex systems with unbounded domains, such as heap-manipulating programs and distributed protocols, first-order logic, and specifically uninterpreted functions and quantifiers, strike a balance between expressiveness and amenity to automation. However, first-order logic semantics may differ in important ways from the intended semantics of the modeled system, due to the inability to distinguish between finite and infinite first-order structures, for example, or the undefinability of well-founded relations in first-order logic. This semantic gap may give rise to spurious states and unreal behaviors, which only exist as an artifact of the first-order abstraction and impede the verification process. In this paper we take a step towards bridging this semantic gap. We present an approach for soundly refining the first-order abstraction according to either well-founded semantics or finite-domain semantics, utilizing induction axioms for an abstract order relation, a common primitive in verification. We first formalize sound axiom schemata for each of the aforementioned semantics, based on well-founded induction. Second, we show how to use spurious counter-models, which are necessarily infinite, to guide the instantiation of these axiom schemata. Finally, we present a sound and complete reduction of well-founded semantics and finite-domain semantics to standard semantics in the recently discovered Ordered Self-Cycle (OSC) fragment of first-order logic, and prove that satisfiability under these semantics is decidable in OSC. We implement a prototype tool to evaluate our approach, and test it on various examples where spurious models arise, from the domains of distributed protocols and heap-manipulating programs. Our tool quickly finds the necessary axioms to refine the semantics, and successfully completes the verification process, eliminating the spurious system states that blocked progress.",
+    "authorIds": [
+      "0000-0002-5503-5791",
+      "0000-0002-7226-3526"
+    ],
     "authorInstitutions": "Neta Elad (Tel Aviv University); Sharon Shoham (Tel Aviv University)",
     "authors": [
       "Neta Elad",
@@ -1963,6 +2174,12 @@
   },
   {
     "abstract": "Many algorithms in verification and automated reasoning leverage some form of duality between proofs and refutations or counterexamples. In most cases, duality is only used as an intuition that helps in understanding the algorithms and is not formalized. In other cases, duality is used explicitly, but in a specially tailored way that does not generalize to other problems. In this paper we propose a unified primal-dual framework for designing verification algorithms that leverage duality. To that end, we generalize the concept of a Lagrangian that is commonly used in linear programming and optimization to capture the domains considered in verification problems, which are usually discrete, e.g., powersets of states, predicates, ranking functions, etc. A Lagrangian then induces a primal problem and a dual problem. We devise an abstract primal-dual procedure that simultaneously searches for a primal solution and a dual solution, where the two searches guide each other. We provide sufficient conditions that ensure that the procedure makes progress under certain monotonicity assumptions on the Lagrangian. We show that many existing algorithms in program analysis, verification, and automated reasoning can be derived from our algorithmic framework with a suitable choice of Lagrangian. The Lagrangian-based formulation sheds new light on various characteristics of these algorithms, such as the ingredients they use to ensure monotonicity and guarantee progress. We further use our framework to develop a new validity checking algorithm for fixpoint logic over quantified linear arithmetic. Our prototype achieves promising results and in some cases solves instances that are not solved by state-of-the-art techniques.",
+    "authorIds": [
+      "0000-0002-2824-8708",
+      "0000-0002-4225-8195",
+      "0009-0006-4209-1635",
+      "0000-0002-7226-3526"
+    ],
     "authorInstitutions": "Takeshi Tsukada (Chiba University); Hiroshi Unno (Tohoku University); Oded Padon (Weizmann Institute of Science); Sharon Shoham (Tel Aviv University)",
     "authors": [
       "Takeshi Tsukada",
@@ -2028,6 +2245,20 @@
   },
   {
     "abstract": "Tensor compilers, essential for generating efficient code for deep learning models across various applications, employ tensor graph rewrites as one of the key optimizations. These rewrites optimize tensor computational graphs, with the expectation of preserving semantics for tensors of arbitrary rank and size. Despite this expectation, to the best of our knowledge, there does not exist a fully automated verification system to prove the soundness of these rewrites, for tensors of arbitrary rank and size. Previous works, while successful in verifying rewrites with tensors of concrete rank, do not provide guarantees in the unbounded setting. To fill this gap, we introduce TensorRight, the first automatic verification system that can verify the correctness of tensor graph rewrites for input tensors of arbitrary rank and size. We introduce a core language, TensorRight DSL, to represent tensor rewrite rules using a novel axis definition, called aggregated-axis, which allows us to reason about an unbounded number of axes. We achieve unbounded verification by proving that there exists a bound on tensor ranks, under which bounded verification of all instances implies the correctness of the rule in the unbounded setting. We derive an algorithm to compute this rank using the denotational semantics of TensorRight DSL. TensorRight employs this algorithm to generate a finite number of bounded proof obligations, which are then dispatched to an SMT solver using symbolic execution to automatically verify the correctness of the rewrite rules. We evaluate TensorRight’s verification capabilities by implementing tensor rewrite rules present in XLA’s algebraic simplifier. The results demonstrate that TensorRight can prove the correctness of 115 out of 175 rules in their full generality, while the closest automatic, bounded verification system can express only 18 of these rules.",
+    "authorIds": [
+      "0009-0004-7759-481X",
+      "0000-0003-2757-7603",
+      "0009-0006-1442-1502",
+      "0000-0003-2528-0507",
+      "0000-0001-8516-2401",
+      "0000-0003-3492-3690",
+      "0000-0002-3165-2322",
+      "0000-0003-3331-9627",
+      "0000-0002-6063-9653",
+      "0000-0001-6639-1647",
+      "0000-0002-2179-0078",
+      "0000-0002-8140-2321"
+    ],
     "authorInstitutions": "Jai Arora (University of Illinois at Urbana-Champaign); Sirui Lu (University of Washington); Devansh Jain (University of Illinois at Urbana-Champaign); Tianfan Xu (University of Illinois at Urbana-Champaign); Farzin Houshmand (Google); Phitchaya Mangpo Phothilimthana (Google); Mohsen Lesani (University of California at Santa Cruz); Praveen Narayanan (Google); Karthik Srinivasa Murthy (Google); Rastislav Bodík (Google Research, Brain Team); Amit Sabne (Google); Charith Mendis (University of Illinois at Urbana-Champaign)",
     "authors": [
       "Jai Arora",
@@ -2101,6 +2332,11 @@
   },
   {
     "abstract": "Parsers and printers are vital for data synchronisation between different serialisation formats. As they are tightly related, much research has been devoted to showing that both can be derived from a single definition. It, however, turns out to be challenging to extend this work with exact-printing , which recovers the original source text for the parsed data. In this paper, we propose a new approach to tackling the challenge that considers a parser-printer pair as a mechanism to synchronize the input text string with the data, and formalizes them as a bidirectional program (lens). We propose the first biparser framework to support exact-printing with non-injective parsers, provide a library of combinators for common patterns, and demonstrate its usefulness with biparsers for subsets of JSON and YAML.",
+    "authorIds": [
+      "0000-0001-7201-1954",
+      "0000-0001-8771-5559",
+      "0000-0002-9034-205X"
+    ],
     "authorInstitutions": "Ruifeng Xie (Peking University); Tom Schrijvers (KU Leuven); Zhenjiang Hu (Peking University)",
     "authors": [
       "Ruifeng Xie",
@@ -2160,6 +2396,11 @@
   },
   {
     "abstract": "The Dependent Calculus of Indistinguishability (DCOI) uses dependency tracking to identify irrelevant arguments and uses indistinguishability during type conversion to enable proof irrelevance, supporting run-time and compile-time irrelevance with the same uniform mechanism. DCOI also internalizes reasoning about indistinguishability through the use of a propositional equality type indexed by an observer level. As DCOI is a pure type system, prior work establishes only its syntactic type safety, justifying its use as the basis for a programming language with dependent types. However, it was not clear whether any instance of this system would be suitable for use as a type theory for theorem proving. Here, we identify a suitable instance DCOI ω , which has an infinite predicative universe hierarchy. We show that DCOI ω is logically consistent, normalizing, and that type conversion is decidable. We have mechanized all results using the Coq proof assistant.",
+    "authorIds": [
+      "0009-0006-8717-2498",
+      "0000-0003-0830-3180",
+      "0000-0002-6756-9168"
+    ],
     "authorInstitutions": "Yiyun Liu (University of Pennsylvania); Jonathan Chan (University of Pennsylvania); Stephanie Weirich (University of Pennsylvania)",
     "authors": [
       "Yiyun Liu",
@@ -2226,6 +2467,10 @@
   },
   {
     "abstract": "Kleene Algebra with Tests (KAT) provides an elegant algebraic framework for describing non-deterministic finite-state computations. Using a small finite set of non-deterministic programming constructs (sequencing, non-deterministic choice, and iteration) it is able to express all non-deterministic finite state control-flow over a finite set of primitives. It is natural to ask whether there exists a similar finite set of constructs that can capture all deterministic computation. We show that this is not the case. More precisely, the deterministic fragment of KAT is not generated by any finite set of regular control-flow operations. This generalizes earlier results about the expressivity of the traditional control-flow operations, i.e., sequential composition, if-then-else and while.",
+    "authorIds": [
+      "0000-0002-2538-5846",
+      "0000-0002-6068-880X"
+    ],
     "authorInstitutions": "Balder ten Cate (ILLC, University of Amsterdam); Tobias Kappé (LIACS, Leiden University)",
     "authors": [
       "Balder ten Cate",
@@ -2239,6 +2484,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2271,7 +2517,7 @@
       "https://doi.org/10.1145/3704861"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Kleene Algebra with Tests",
       "POPL"
@@ -2294,6 +2540,9 @@
   },
   {
     "abstract": "The decidability of the reachability problem for finitary PCF has been used as a theoretical basis for fully automated verification tools for functional programs. The reachability problem, however, often becomes undecidable for a slight extension of finitary PCF with side effects, such as exceptions, algebraic effects, and references, which hindered the extension of the above verification tools for supporting functional programs with side effects. In this paper, we first give simple proofs of the undecidability of four extensions of finitary PCF, which would help us understand and analyze the source of undecidability. We then focus on an extension with references, and give a decidable fragment using a type system. To our knowledge, this is the first non-trivial decidable fragment that features higher-order recursive functions containing reference cells.",
+    "authorIds": [
+      "0000-0002-0537-0604"
+    ],
     "authorInstitutions": "Naoki Kobayashi (University of Tokyo)",
     "authors": [
       "Naoki Kobayashi"
@@ -2306,6 +2555,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2338,7 +2588,7 @@
       "https://doi.org/10.1145/3704875"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Theory",
       "POPL"
@@ -2361,6 +2611,11 @@
   },
   {
     "abstract": "Logic programming, as exemplified by datalog, defines the meaning of a program as its unique smallest model: the deductive closure of its inference rules. However, many problems call for an enumeration of models that vary along some set of choices while maintaining structural and logical constraints—there is no single canonical model. The notion of stable models for logic programs with negation has successfully captured programmer intuition about the set of valid solutions for such problems, giving rise to a family of programming languages and associated solvers known as answer set programming. Unfortunately, the definition of a stable model is frustratingly indirect, especially in the presence of rules containing free variables. We propose a new formalism, finite-choice logic programming, that uses choice, not negation, to admit multiple solutions. Finite-choice logic programming contains all the expressive power of the stable model semantics, gives meaning to a new and useful class of programs, and enjoys a least-fixed-point interpretation over a novel domain. We present an algorithm for exploring the solution space and prove it correct with respect to our semantics. Our implementation, the Dusa logic programming language , has performance that compares favorably with state-of-the-art answer set solvers and exhibits more predictable scaling with problem size.",
+    "authorIds": [
+      "0000-0002-7026-0348",
+      "0000-0003-2420-3067",
+      "0009-0002-0417-5636"
+    ],
     "authorInstitutions": "Chris Martens (Northeastern University); Robert Simmons (Independent); Michael Arntzenius (None)",
     "authors": [
       "Chris Martens",
@@ -2425,6 +2680,11 @@
   },
   {
     "abstract": "Structure editors operate directly on a program’s syntactic tree structure. At first glance, this allows for the exciting possibility that such an editor could enforce correctness properties: programs could be well-formed and sometimes even well-typed by construction. Unfortunately, traditional approaches to structure editing that attempt to rigidly enforce these properties face a seemingly fundamental problem, known in the literature as viscosity. Making changes to existing programs often requires temporarily breaking program structure—but disallowing such changes makes it difficult to edit programs! In this paper, we present a scheme for structure editing which always maintains a valid program structure without sacrificing the fluidity necessary to freely edit programs. Two key pieces help solve this puzzle: first, we develop a novel generalization of selection for tree-based structures that properly generalizes text-based selection and editing, allowing users to freely rearrange pieces of code by cutting and pasting one-hole contexts; second, we type these one-hole contexts with a category of type diffs and explore the metatheory of the system that arises for maintaining well-typedness systematically. We implement our approach as an editor called Pantograph, and we conduct a study in which we successfully taught students to program with Pantograph and compare their performance against a traditional text editor.",
+    "authorIds": [
+      "0000-0002-2702-9319",
+      "0000-0002-9415-0944",
+      "0000-0003-0269-9815"
+    ],
     "authorInstitutions": "Jacob Prinz (University of Maryland, College Park); Henry Blanchette; Leonidas Lampropoulos (University of Maryland, College Park)",
     "authors": [
       "Jacob Prinz",
@@ -2496,6 +2756,10 @@
   },
   {
     "abstract": "We address the problem of preserving non-interference across compiler transformations under speculative semantics. We develop a proof method that ensures the preservation uniformly across all source programs. The basis of our proof method is a new form of simulation relation. It operates over directives that model the attacker’s control over the micro-architectural state, and it accounts for the fact that the compiler transforma- tion may change the influence of the micro-architectural state on the execution (and hence the directives). Using our proof method, we show the correctness of dead code elimination. When we tried to prove register allocation correct, we identified a previously unknown weakness that introduces violations to non-interference. We have confirmed the weakness for a mainstream compiler on code from the libsodium cryptographic library. To reclaim security once more, we develop a novel static analysis that operates on a product of source program and register-allocated program. Using the analysis, we present an automated fix to existing register allocation implementations. We prove the correctness of the fixed register allocations with our proof method.",
+    "authorIds": [
+      "0009-0009-4781-8583",
+      "0000-0001-8495-671X"
+    ],
     "authorInstitutions": "Sören van der Wall (TU Braunschweig); Roland Meyer (TU Braunschweig)",
     "authors": [
       "Sören van der Wall",
@@ -2561,6 +2825,11 @@
   },
   {
     "abstract": "Embedding Multimode Type Theory (MTT) as a library enables the usage of additional reasoning principles in off-the-shelf proof assistants without risking soundness or compatibility. Moreover, by interpreting embedded MTT terms in an internally constructed model of MTT, we can extract programs and proofs to the metalanguage and obtain interoperability between the embedded language and the metalanguage. The existing Sikkel library for Agda achieves this for Multimode Simple Type Theory (MSTT) with an internal presheaf model of dependent MTT. In this work, we add, on top of the simply-typed layer, a logical framework in which users can write multimode proofs about multimode Sikkel programs, still in an off-the-shelf proof assistant. To this end, we carve out of MTT a new multimode logical framework µLF over MSTT and implement it on top of Sikkel, interpreting both in the existing internal model. In the process, we further extend and improve the original codebase for each of the three layers (syntax, semantics and extraction) of Sikkel. We demonstrate the use of µLF by proving some properties about functions manipulating guarded streams and by implementing an example involving parametricity predicates.",
+    "authorIds": [
+      "0000-0001-9582-0789",
+      "0000-0002-1571-5063",
+      "0000-0002-3862-6856"
+    ],
     "authorInstitutions": "Joris Ceulemans (KU Leuven); Andreas Nuyts (KU Leuven, Belgium); Dominique Devriese (KU Leuven)",
     "authors": [
       "Joris Ceulemans",
@@ -2575,6 +2844,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2604,7 +2874,7 @@
       "https://doi.org/10.1145/3704844"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Program Logics 2",
       "POPL"
@@ -2627,6 +2897,12 @@
   },
   {
     "abstract": "Safety-critical systems are often designed as real-time distributed systems. Despite the need for strong guarantees of safety and reliability in these systems, applying formal verification methods to real-time distributed systems at the implementation level has faced significant technical challenges. In this paper, we present VeriRT, an end-to-end formal verification framework that closes the formal gap between high-level abstract timed specifications and low-level implementations for real-time distributed systems. Within the framework, we establish a theoretical foundation for constructing formal timed operational semantics by integrating conventional operational semantics and low-level timing assumptions, along with principles for reasoning about their timed behaviors against abstract specifications. We leverage CompCert’s correctness proofs to guarantee the correctness of the assembly implementation of real-time distributed systems. We provide two case studies on realistic real-time systems. All the results are formalized in Coq.",
+    "authorIds": [
+      "0000-0001-5294-1046",
+      "0000-0003-0783-7033",
+      "0009-0008-9834-5352",
+      "0000-0002-1656-0913"
+    ],
     "authorInstitutions": "Yoonseung Kim (Yale University); Sung-Hwan Lee (Seoul National University); Yonghyun Kim (Seoul National University, South Korea); Chung-Kil Hur (Seoul National University)",
     "authors": [
       "Yoonseung Kim",
@@ -2696,6 +2972,11 @@
   },
   {
     "abstract": "The classical `decision problem’ asks whether a given formula of first-order logic is satisfiable. In this work we consider an extension of this problem to regular first-order \\emph{theories}, i.e. (infinite) regular sets of formulae. Building on the beautiful classification of syntactic classes as decidable or undecidable for the classical decision problem, we show that some classes (the EPR and Gurevich classes) which are decidable in the classical setting are undecidable for regular theories; on the other hand for each we show a subclass which remains decidable in our setting, leaving a complete classification as a challenge for future work. Finally, we observe that our problem generalises prior work on verification of uninterpreted programs, and give a semantic class of existential formulae for which the problem is decidable.",
+    "authorIds": [
+      "0000-0002-7610-0660",
+      "0000-0003-3186-8307",
+      "0000-0001-7977-0080"
+    ],
     "authorInstitutions": "Umang Mathur (National University of Singapore); David Mestel (Maastricht University); Mahesh Viswanathan (University of Illinois at Urbana-Champaign)",
     "authors": [
       "Umang Mathur",
@@ -2768,6 +3049,12 @@
   },
   {
     "abstract": "We consider the formulation of a symbolic execution (SE) procedure for functional programs that interact with effectful, opaque libraries. Our procedure allows specifications of libraries and abstract data type (ADT) methods that are expressed in \\emph{Linear Temporal Logic over Finite Traces} ($\\textrm{LTL}_f$), interpreting them as \\emph{symbolic finite automata} (SFAs) to enable intelligent specification-guided path exploration in this setting. We apply our technique to facilitate the falsification of complex data structure safety properties in terms of effectful operations made by ADT methods on underlying opaque representation type(s). Specifications naturally characterize admissible traces of temporally-ordered events that ADT methods (and the library methods they depend upon) are allowed to perform. We show how to use these specifications to construct feasible symbolic input states for the corresponding methods, as well as how to encode safety properties in terms of this formalism. More importantly, we incorporate the notion of \\emph{symbolic derivatives}, a mechanism that allows the SE procedure to intelligently underapproximate the set of precondition states it needs to explore, based on the automata structures implicit in the provided specifications and the safety property that is to be falsified. Intuitively, derivatives enable symbolic execution to exploit temporal constraints defined by trace-based specifications to quickly prune unproductive paths and discover feasible error states. Experimental results on a wide-range of challenging ADT implementations demonstrate the effectiveness of our approach.",
+    "authorIds": [
+      "0000-0002-2619-2288",
+      "0000-0003-3900-7501",
+      "0000-0002-7490-8500",
+      "0000-0001-6871-2424"
+    ],
     "authorInstitutions": "Yongwei Yuan (Purdue University); Zhe Zhou (Purdue University); Julia Belyakova (Purdue University); Suresh Jagannathan (Purdue University)",
     "authors": [
       "Yongwei Yuan",
@@ -2838,6 +3125,11 @@
   },
   {
     "abstract": "Modern mainstream programming languages, such as TypeScript, Flow, and Scala, have polymorphic type systems enriched with intersection and union types. These languages implement variants of \\emph{bidirectional higher-rank polymorphic} type inference, which was previously studied mostly in the context of functional programming. However, existing type inference implementations lack solid theoretical foundations when dealing with non-structural subtyping and intersection and union types, which were not studied before. In this paper, we study bidirectional higher-rank polymorphic type inference algorithms with intersection and union types. We introduce both a bidirectional specification and algorithmic versions of the type system. We first study a type inference algorithm that has good theoretical properties: it is sound, complete, and decidable with respect to the corresponding bidirectional specification. This is helpful to identify a class of types that can always be inferred. We also explore algorithmic variants that are sound but not necessarily complete. These variants incorporate practical features, such as handling records, which align with real-world implementations. These variants enable inference for a broader range of types, enhancing the expressiveness of the type systems. Our findings provide insights for improving current implementations and inspire the design of novel type inference algorithms. To ensure rigor, all results are formalized in the Coq proof assistant.",
+    "authorIds": [
+      "0000-0002-4443-0753",
+      "0009-0002-8351-2679",
+      "0000-0002-1846-7210"
+    ],
     "authorInstitutions": "Shengyi Jiang (The University of Hong Kong); Chen Cui (University of Hong Kong); Bruno C. d. S. Oliveira (University of Hong Kong)",
     "authors": [
       "Shengyi Jiang",
@@ -2852,6 +3144,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2883,7 +3176,7 @@
       "https://doi.org/10.1145/3704907"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Types 1",
       "POPL"
@@ -2906,6 +3199,13 @@
   },
   {
     "abstract": "Common functional languages incentivize tail-recursive functions, as opposed to general recursive functions that consume stack space and may not scale to large inputs. This distinction occasionally requires writing functions in a tail-recursive style that may be more complex and slower than the natural, non-tail-recursive definition. This work describes our implementation of the tail modulo constructor (TMC) transformation in the OCaml compiler, an optimization that provides stack-efficiency for a larger class of functions — tail-recursive modulo constructors — which includes in particular the natural definition of List.map and many similar recursive data-constructing functions. We prove the correctness of this program transformation in a simplified setting — a small untyped calculus — that captures the salient aspects of the OCaml implementation. Our proof is mechanized in the Coq proof assistant, using the Iris base logic. An independent contribution of our work is an extension of the Simuliris approach to define simulation relations that support different calling conventions. To our knowledge, this is the first use of Simuliris to prove the correctness of a compiler transformation.",
+    "authorIds": [
+      "0009-0005-2972-5181",
+      "0009-0007-5268-5784",
+      "0000-0002-9126-0937",
+      "0000-0002-4069-1235",
+      "0000-0003-1758-3938"
+    ],
     "authorInstitutions": "Clément Allain (INRIA); Frédéric Bour (Tarides); Basile Clément (OCamlPro); François Pottier (Inria); Gabriel Scherer (Université Paris Cité - Inria - CNRS)",
     "authors": [
       "Clément Allain",
@@ -2922,6 +3222,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2954,7 +3255,7 @@
       "https://doi.org/10.1145/3704915"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Synthesis and Compilation",
       "POPL"
@@ -2977,6 +3278,12 @@
   },
   {
     "abstract": "Streaming systems are present throughout modern applications, enabling real-time processing of continuous data. Existing languages have a variety of semantic models and guarantees that are not composable. Yet all these languages are considered “streaming”—what do they have in common? In this paper, we identify two general yet precise semantic properties: streaming progress and eager execution. Together, they ensure that streaming outputs are deterministic and kept fresh with respect to streaming inputs. We formally define these properties in the context of Flo, a parameterized streaming language that abstracts over dataflow operators and the underlying structure of streams. It leverages a lightweight type system to distinguish bounded streams, which allow operators to block on termination, from unbounded ones. Furthermore, Flo provides constructs for dataflow composition and nested graphs with cycles. To demonstrate the generality of our properties, we show how key ideas from representative streaming and incremental computation systems—Flink, LVars, and DBSP—have semantics that can be modeled in Flo and guarantees that map to our properties.",
+    "authorIds": [
+      "0000-0002-6658-6548",
+      "0000-0001-6261-6263",
+      "0000-0002-7712-4306",
+      "0000-0003-3126-7771"
+    ],
     "authorInstitutions": "Shadaj Laddad (University of California at Berkeley); Alvin Cheung (University of California at Berkeley); Joseph M. Hellerstein (UC Berkeley); Mae Milano (Princeton University)",
     "authors": [
       "Shadaj Laddad",
@@ -2992,6 +3299,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3019,7 +3327,7 @@
       "https://doi.org/10.1145/3704845"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Concurrency 2",
       "POPL"
@@ -3043,6 +3351,11 @@
   },
   {
     "abstract": "Reductions combine collections of input values with an associative and often commutative operator to produce collections of results. When the same input value contributes to multiple outputs, there is an opportunity to reuse partial results, enabling reduction simplification . Simplification often produces a program with lower asymptotic complexity. Typical compiler optimizations yield, at best, a constant fold speedup, but complexity improvement from, say, cubic to quadratic complexity yields unbounded speedup for sufficiently large problems. It is well known that reductions in polyhedral programs may be simplified automatically , but previous methods cannot exploit all available reuse. This paper resolves this long-standing open problem, thereby attaining minimal asymptotic complexity in the simplified program. We propose extensions to prior work on simplification to support any independent commutative reduction. At the heart of our approach is piece-wise simplification, the notion that we can split an arbitrary reduction into pieces and then independently simplify each piece. However, the difficulty of using such piece-wise transformations is that they typically involve an infinite number of choices. We give constructive proofs to deal with this and select a finite number of pieces for simplification.",
+    "authorIds": [
+      "0009-0009-3298-5282",
+      "0000-0002-5737-6178",
+      "0000-0002-4246-6066"
+    ],
     "authorInstitutions": "Louis Narmour (Colorado State University, University of Rennes, Inria, CNRS, IRISA); Tomofumi Yuki; Sanjay Rajopadhye (Colorado State University)",
     "authors": [
       "Louis Narmour",
@@ -3102,6 +3415,14 @@
   },
   {
     "abstract": "Separation logic has become an important tool for formally capturing and reasoning about the ownership patterns of imperative programs, originally for paper proof, and now the foundation for industrial static analyses and multiple proof tools. However, there has been very little work on program \\emph{testing} of separation-logic specifications in concrete execution. At first sight, separation-logic formulas are hard to evaluate in reasonable time, with their implicit quantification over heap splittings, and other explicit existentials. In this paper we observe that a restricted fragment of separation logic, adopted in the CN proof tool to enable predictable proof automation, also has a natural and readable \\emph{computational} interpretation, that makes it practically usable in runtime testing. We discuss various design issues and develop this as a C+CN to C source-to-source translation, Fulminate. This adds checks – including ownership checks and ownership transfer – for C code annotated with CN pre- and post-conditions; we demonstrate this on nontrivial examples, including the allocator from a production hypervisor. We formalise our runtime ownership testing scheme, showing (and proving) how its reified ghost state correctly captures ownership passing, in a semantics for a small C-like language.",
+    "authorIds": [
+      "0009-0008-6360-3972",
+      "0000-0003-3723-636X",
+      "0000-0001-7220-4991",
+      "0000-0002-7369-183X",
+      "0000-0003-2838-5865",
+      "0000-0001-9352-1013"
+    ],
     "authorInstitutions": "Rini Banerjee (University of Cambridge); Kayvan Memarian (University of Cambridge); Dhruv Makwana (University of Cambridge); Christopher Pulte (University of Cambridge); Neel Krishnaswami (University of Cambridge); Peter Sewell (University of Cambridge)",
     "authors": [
       "Rini Banerjee",
@@ -3166,6 +3487,14 @@
   },
   {
     "abstract": "Defining a formal model for concurrency in programming languages that addresses conflicting requirements from programmers, compilers, and architectures has been a long-standing research question. It is widely believed that traditional axiomatic per-execution models that reason about individual executions do not suffice to address these conflicting requirements. Consequently, several multi-execution models were proposed that reason about multiple executions together. Although multi-execution models were major breakthrough in satisfying several desired properties, these models are complicated, challenging to adapt for existing language specifications given in per-execution style, and they are typically not friendly to automated reasoning tools. In response, we propose a re-eXecution based Memory Model (XMM). Debunking the beliefs around per- execution and multi-execution models, XMM is (almost) a per-execution model. XMM reasons about individual executions, but unlike traditional per-execution models, it relates executions by a re-execution principle. As such, the memory consistency axioms and the out-of-order re-execution mechanics are orthogonal in XMM, allowing to use it as a semantic framework parameterized by a given axiomatic memory model. We instantiated the XMM framework for the RC20 language model, and proved that the resulting model XC20 provides DRF guarantees and allows standard hardware mappings and compiler optimizations. Note- worthy, XC20 is the first model of its kind that also supports thread sequentialization optimization. Moreover, XC20 is also amenable to automated reasoning. To demonstrate this, we developed a sound model checker XMC and evaluated it on several concurrency benchmarks.",
+    "authorIds": [
+      "0000-0003-2715-1143",
+      "0009-0005-4329-1025",
+      "0009-0004-2539-7160",
+      "0009-0003-5044-4953",
+      "0000-0002-9448-6587",
+      "0000-0002-4454-2050"
+    ],
     "authorInstitutions": "Evgeniy Moiseenko (JetBrains Research); Matteo Meluzzi (TU Delft, the Netherlands); Innokentii Meleshchenko (JetBrains Research, Neapolis University Pafos, Cyprus); Ivan Kabashnyi (JetBrains Research, Constructor University Bremen, Germany); Anton Podkopaev (JetBrains Research, Constructor University); Soham Chakraborty (TU Delft)",
     "authors": [
       "Evgeniy Moiseenko",
@@ -3234,6 +3563,13 @@
   },
   {
     "abstract": "Constructive type theory combines logic and programming in one language. This is useful both for reasoning about programs written in type theory, as well as for reasoning about other programming languages inside type theory. It is well-known that it is challenging to extend these applications to languages with recursion and computational effects such as probabilistic choice, because these features are not easily represented in constructive type theory. We show how to define and reason about a programming language with probabilistic choice and recursive types, in guarded type theory. We use higher inductive types to represent finite distributions and guarded recursion to model recursion. We define both operational and denotational semantics, as well as a relation between the two. The relation can be used to prove adequacy, but we also show how to use it to reason about programs up to contextual equivalence.",
+    "authorIds": [
+      "0000-0003-4600-777X",
+      "0000-0003-0386-4376",
+      "0000-0002-0257-1574",
+      "0000-0001-6746-2734",
+      "0000-0003-1320-0098"
+    ],
     "authorInstitutions": "Philipp Stassen (Aarhus University); Rasmus Ejlers Møgelberg (IT University of Copenhagen); Maaike Annebet Zwart (IT University of Copenhagen); Alejandro Aguirre (Aarhus University); Lars Birkedal (Aarhus University)",
     "authors": [
       "Philipp Stassen",
@@ -3250,6 +3586,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3282,7 +3619,7 @@
       "https://doi.org/10.1145/3704884"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Probabilistic Programming 2",
       "POPL"
@@ -3305,6 +3642,11 @@
   },
   {
     "abstract": "We present a tool and theory RE# for regular expression matching that is built on derivatives, does not use backtracking, and, in addition to the classical operators, also supports complement, intersection and restricted lookarounds. We develop the theory formally and show that the main matching algorithm has input-linear complexity both in theory as well as experimentally. We apply thorough evaluation on popular benchmarks that show that RE# is over 71% faster than the next fastest regex engine in Rust on the baseline, and outperforms all state-of-the-art engines on extensions of the benchmarks often by several orders of magnitude.",
+    "authorIds": [
+      "0000-0003-1267-2712",
+      "0009-0008-8427-7977",
+      "0000-0002-4591-0425"
+    ],
     "authorInstitutions": "Ian Erik Varatalu (Tallinn University of Technology, Estonia); Margus Veanes (Microsoft Research); Juhan Ernits (Tallinn University of Technology)",
     "authors": [
       "Ian Erik Varatalu",
@@ -3405,6 +3747,15 @@
   },
   {
     "abstract": "Although there have been many approaches for developing formal memory models that support integer-pointer casts, previous approaches share the drawback that they are not designed for end-to-end verification, failing to support some important source-level coding patterns, justify some backend optimizations, or lack a source-level logic for program verification. This paper presents Archmage, a framework for integer-pointer casting designed for end-to-end verification, supporting a wide range of source-level coding patterns, backend optimizations, and a formal notion of out-of-memory. To facilitate end-to-end verification via Archmage, we also present two systems based on Archmage: CompCertCast, an extension of CompCert with Archmage to bring a full verified compilation chain to integer-pointer casting programs, and Archmage logic, a source-level logic for reasoning about integer-pointer casts. We design CompCertCast almost no performance overhead such that the overhead from formally supporting integer-pointer casts is mitigated, and illustrate the effectiveness of Archmage logic by verifying an xor-based linked-list implementation, Together, our paper presents the first practical end-to-end verification chain for programs containing integer-pointer casts.",
+    "authorIds": [
+      "0009-0008-9834-5352",
+      "0000-0002-6684-0921",
+      "0009-0000-6423-9561",
+      "0000-0002-3897-1828",
+      "0009-0000-0035-4077",
+      "0000-0001-7093-3824",
+      "0000-0002-1656-0913"
+    ],
     "authorInstitutions": "Yonghyun Kim (Seoul National University, South Korea); Minki Cho (Seoul National University); Jaehyung Lee (Seoul National University); Jinwoo Kim (Seoul National University); Taeyoung Yoon (Seoul National University); Youngju Song (MPI-SWS); Chung-Kil Hur (Seoul National University)",
     "authors": [
       "Yonghyun Kim",
@@ -3472,6 +3823,14 @@
   },
   {
     "abstract": "Properties such as provable security and correctness for randomized programs are naturally expressed relationally as approximate equivalences. As a result, a number of relational program logics have been developed to reason about such approximate equivalences of probabilistic programs. However, existing approximate relational logics are mostly restricted to first-order programs without general state. In this paper we develop Approxis, a higher-order approximate relational separation logic for reasoning about approximate equivalence of programs written in an expressive ML-like language with discrete probabilistic sampling, higher-order functions, and higher-order state. The Approxis logic recasts the concept of error credits in the relational setting to reason about relational approximation, which allows for expressive notions of modularity and composition, a range of new approximate relational rules, and an internalization of a standard limiting argument for showing exact probabilistic equivalences by approximation. We also use Approxis to develop a logical relation model that quantifies over error credits, which can be used to prove exact contextual equivalence . We demonstrate the flexibility of our approach on a range of examples, including the PRP/PRF switching lemma, IND$-CPA security of an encryption scheme, and a collection of rejection samplers. All of the results have been mechanized in the Coq proof assistant and the Iris separation logic framework.",
+    "authorIds": [
+      "0000-0003-0198-7751",
+      "0000-0002-4124-5720",
+      "0000-0001-6746-2734",
+      "0000-0001-6045-5232",
+      "0000-0001-5692-3347",
+      "0000-0003-1320-0098"
+    ],
     "authorInstitutions": "Philipp G. Haselwarter (Aarhus University); Kwing Hei Li (Aarhus University); Alejandro Aguirre (Aarhus University); Simon Oddershede Gregersen (New York University); Joseph Tassarotti (New York University); Lars Birkedal (Aarhus University)",
     "authors": [
       "Philipp G. Haselwarter",
@@ -3489,6 +3848,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3515,7 +3875,7 @@
       "https://doi.org/10.1145/3704877"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Probabilistic Programming 1",
       "POPL"
@@ -3539,6 +3899,18 @@
   },
   {
     "abstract": "Current static verification techniques such as separation logic support a wide range of programs. However, such techniques only support complete and detailed specifications, which places an undue burden on users. To solve this problem, prior work proposed gradual verification, which handles complete, partial, or missing specifications by soundly combining static and dynamic checking. Gradual verification has also been extended to programs that manipulate recursive, mutable data structures on the heap. Unfortunately, this extension does not reward users with decreased dynamic checking as more specifications are written and more static guarantees are made. In fact, all properties are checked dynamically regardless of any static guarantees. Additionally, no full-fledged implementation of gradual verification exists so far, which prevents studying its performance and applicability in practice. We present Gradual C0, the first practicable gradual verifier for recursive heap data structures, which targets C0, a safe subset of C designed for education. Static verifiers supporting separation logic or implicit dynamic frames use symbolic execution for reasoning; so Gradual C0, which extends one such verifier, adopts symbolic execution at its core instead of the weakest liberal precondition approach used in prior work. Our approach addresses technical challenges related to symbolic execution with imprecise specifications, heap ownership, and branching in both program statements and specification formulas. We also deal with challenges related to minimizing insertion of dynamic checks and extensibility to other programming languages beyond C0. Finally, we provide the first empirical performance evaluation of a gradual verifier, and found that on average, Gradual C0 decreases run-time overhead between 7.1 and 40.2% compared to the fully dynamic approach used in prior work (for context, the worst cases for the approach by Wise et al. [2020] range from 0.1 to 4.5 seconds depending on the benchmark). Further, the worst-case scenarios for performance are predictable and avoidable. This work paves the way towards evaluating gradual verification at scale.",
+    "authorIds": [
+      "0000-0003-3029-2617",
+      "0000-0001-6349-3402",
+      "0009-0009-3961-3043",
+      "A5016627385",
+      "A5040992036",
+      "0000-0003-1055-6785",
+      "A5039379396",
+      "0000-0002-9672-5297",
+      "0000-0002-7359-890X",
+      "0000-0003-0631-5591"
+    ],
     "authorInstitutions": "Jenna DiVincenzo (Wise) (Purdue University); Ian McCormack (Carnegie Mellon University); Hemant Gouni (Carnegie Mellon University, Pittsburgh, Pennsylvania, United States); Jacob Gorenburg; Jan-Paul Ramos-Davila (Cornell University); Mona Zhang (Columbia University); Conrad Zimmerman (Northeastern University); Joshua Sunshine (Carnegie Mellon University); Éric Tanter (University of Chile); Jonathan Aldrich (Carnegie Mellon University)",
     "authors": [
       "Jenna DiVincenzo (Wise)",
@@ -3606,6 +3978,12 @@
   },
   {
     "abstract": "Automatic generation of loop invariants is a fundamental challenge in software verification. While this task is undecidable in general, it is decidable for certain restricted classes of programs. This work focuses on invariant generation for (branching-free) loops with a single linear update. Our primary contribution is a polynomial-space algorithm that computes the strongest algebraic invariant for simple linear loops, generating all polynomial equations that hold among program variables across all reachable states. The key to achieving our complexity bounds lies in mitigating the blowup associated with variable elimination and Gröbner basis computation, as seen in prior works. Our procedure runs in polynomial time when the dimension is fixed. We examine various applications of our results on invariant generation, focusing on invariant verification and loop synthesis. The invariant verification problem investigates whether a polynomial ideal defining an algebraic set serves as an invariant for a given linear loop. We show that this problem is coNP-complete and lies in PSPACE when the input ideal is given in dense or sparse representations, respectively. In the context of loop synthesis, we aim to construct a loop with an infinite set of reachable states that upholds a specified algebraic property as an invariant. The strong synthesis variant of this problem requires the construction of loops for which the given property is the strongest invariant. In terms of hardness, synthesising loops over integers (or rationals) is as hard as Hilbert’s Tenth problem (or its analogue over the rationals). When loop constants are constrained to bit-bounded rational numbers, we demonstrate that loop synthesis and its strong variant are both achievable in PSPACE, and in NP when the dimension is fixed.",
+    "authorIds": [
+      "0000-0001-6228-9071",
+      "0000-0002-7661-7061",
+      "0000-0002-7779-2339",
+      "0000-0001-5758-0657"
+    ],
     "authorInstitutions": "Rida Ait El Manssour (CNRS & IRIF, Paris); George Kenison (Liverpool John Moores University); Mahsa Shirmohammadi (CNRS & IRIF, Paris); Anton Varonka (TU Wien)",
     "authors": [
       "Rida Ait El Manssour",
@@ -3675,6 +4053,10 @@
   },
   {
     "abstract": "We define a structural fixpoint algebraic semantics for iterative programs (in the form of an abstract interpreter that can be instantiated to various operational, denotational, or relational semantics). Defining program properties as programs, we design, by calculus, a structural fixpoint calculus of program algebraic execution properties'' transformers (e.g. sets of traces), that is a collecting semantics for classic transformational logics to prove under or over approximating execution properties of programs. We then design, again by calculus, a structural fixpoint calculus of program algebraic semantic properties'' transformer (e.g. sets of sets of traces). This is the hypercollecting semantics suitable for the calculational design of hyperlogics to prove under or over approximating semantic properties of programs. Over and under approximation proof systems are designed by calculus so are sound and complete by construction. We show that an abstraction of the algebraic collecting semantics, hypercollecting semantics, or logic is a algebraic collecting semantics, hypercollecting semantics, or logic of the same form, which yields a hierarchy of semantics, property transformers, hyperproperty transformers, and hyperlogics. However, proving that a program satisfies an abstract semantic property means, in full generality, that the abstract semantics property must contain the abstract program semantics exactly (e.g. the strongest invariants not only an inductive invariant as in classic program logics). This exact characterization of the abstract program semantics necessary for proving general abstract semantic properties is a great difficulty in practice. This yields to consider less general abstract program semantic properties, which are less precise, but otherwise offer adequate representations of semantic properties or allow for much simplified proof rules, closer to the tradition of classic program execution logics, and complete for well identified classes of abstract semantic properties. This leads to sound and complete proof rules for generalized forall-forall, forall-exists, and exists-forall hyperproperties.",
+    "authorIds": [
+      "0000-0003-0101-9953",
+      "0009-0003-4885-8268"
+    ],
     "authorInstitutions": "Patrick Cousot; Jeffery Wang (CIMS, New York University)",
     "authors": [
       "Patrick Cousot",
@@ -3736,6 +4118,10 @@
   },
   {
     "abstract": "Deciding termination is a fundamental problem in the analysis of probabilistic imperative programs. We consider the qualitative and quantitative probabilistic termination problems for an imperative programming model with discrete probabilistic choice and demonic bounded nondeterminism. The qualitative question asks if the program terminates almost-surely, no matter how nondeterminism is resolved. The quantitative question asks for a bound on the probability of termination. Despite a long and rich literature on the topic, no sound and relatively complete proof systems were known for these problems. In this paper, we provide sound and relatively complete proof rules for proving qualitative and quantitative termination in the assertion language of arithmetic. Our rules use variant functions as measures of distances to termination as well as supermartingales that restrain the growth of these variants almost surely. Our completeness result shows how to construct suitable supermartingale and variant functions from an almost-surely terminating program. We also show that proofs of termination in many existing proof systems can be transformed to proofs in our system, pointing to its applicability in practice. As an application of our proof rule, we show an explicit proof of almost-sure termination for the two-dimensional random walker.",
+    "authorIds": [
+      "0000-0003-2136-0542",
+      "0009-0006-5187-5415"
+    ],
     "authorInstitutions": "Rupak Majumdar (MPI-SWS); V.R. Sathiyanarayana (MPI-SWS)",
     "authors": [
       "Rupak Majumdar",
@@ -3799,6 +4185,13 @@
   },
   {
     "abstract": "We present \\emph{Generic Refinement Types}: a way to write modular higher-order specifications that abstract invariants over function contracts, while preserving automatic SMT-decidable verification. We show how generic refinements let us write a variety of modular higher-order specifications, including specifications for Rust’s traits which abstract over the concrete refinements that hold for different trait implementations. We formalize generic refinements in a core calculus and show how to synthesize the generic instantiations algorithmically at usage sites via a combination of syntactic unification and constraint solving. We give semantics to generic refinements via the intuition that they correspond to \\emph{ghost parameters}, and we formalize this intuition via a type-preserving translation into the polymorphic contract calculus to establish the soundness of generic refinements. Finally, we evaluate generic refinements by implementing them in Flux and using it for two case studies. First, we show how generic refinements let us write modular specifications for Rust’s vector indexing API that lets us statically verify the bounds safety of a variety of vector-manipulating benchmarks from the literature. Second, we use generic refinements to refine Rust’s DIesel ORM library to track the semantics of the database queries issued by client applications, and hence, statically enforce data-dependent access-control policies in several database-backed web applications.",
+    "authorIds": [
+      "0009-0003-6838-3714",
+      "A5106525362",
+      "A5115826568",
+      "0009-0001-8638-6201",
+      "0000-0002-1802-9421"
+    ],
     "authorInstitutions": "Nico Lehmann (UCSD); Cole Kurashige (UCSD); Nikhil Akiti (UCSD); Niroop Krishnakumar (UCSD); Ranjit Jhala (UCSD)",
     "authors": [
       "Nico Lehmann",
@@ -3860,6 +4253,12 @@
   },
   {
     "abstract": "This paper studies an extension of O’Hearns’ incorrectness logic (IL) that allows backwards reasoning. IL in its current form does not generically permit backwards reasoning. We show that this can be mitigated by extending IL with underspecification. The resulting logic thus combines underspecification (a result only needs to formulate constraints over relevant variables) with underapproximation (it allows to focus on fewer than all the paths). We prove soundness of the proof system, as well as completeness for a defined subset of presumptions. We discuss proof strategies that allow one to derive a presumption from a given result. Most notably, we show that the existing concept of loop summaries – closed-form symbolic representations that summarize the effects of executing an entire loop at once – is highly useful. The logic, the proof system and all theorems have been formalized in the Isabelle/HOL theorem prover.",
+    "authorIds": [
+      "0000-0002-6625-1123",
+      "0000-0003-4318-4850",
+      "0000-0003-2073-0564",
+      "0000-0002-8663-739X"
+    ],
     "authorInstitutions": "Freek Verbeek (Open Universiteit & Virginia Tech); Md Syadus Sefat (Virginia Tech); Zhoulai Fu (State University of New York, Korea); Binoy Ravindran (Virginia Tech)",
     "authors": [
       "Freek Verbeek",
@@ -3924,6 +4323,12 @@
   },
   {
     "abstract": "Guarded Kleene Algebra with Tests (GKAT) provides a sound and complete framework to reason about trace equivalence between simple imperative programs. However, there are still several notable limitations of GKAT: First, it is completely agnostic with respect to the meaning of primitives, to keep equivalence decidable. Second, GKAT excludes non-local control flow such as goto, break and return. To overcome these limitations, we introduce control flow GKAT (CF-GKAT), a system that allows reasoning about programs that include non-local control flow as well as hardcoded values. CF-GKAT is able to soundly and completely verify trace equivalence of a larger class of programs, while preserving the nearly linear efficiency of GKAT. This makes CF-GKAT suitable for the verification of control-flow manipulating procedures, such as decompilation and goto-elimination. To demonstrate CF-GKAT’s abilities, we validated the output of several highly non-trivial program transformations, such as Böhm-Jacopini conversion, and Erosa and Hendren’s goto-elimination procedure. CF-GKAT opens up the application of Kleene Algebra to a wider set of challenges, and provides an important verification tool that can be applied to the field of decompilation and control-flow transformation.",
+    "authorIds": [
+      "0000-0002-8197-6181",
+      "0000-0002-6068-880X",
+      "0000-0003-3704-1060",
+      "0000-0003-3442-1543"
+    ],
     "authorInstitutions": "Cheng Zhang (University College London (UCL)); Tobias Kappé (LIACS, Leiden University); David E. Narváez (Virginia Tech); Nico Naus (Open University of The Netherlands & Virginia Tech)",
     "authors": [
       "Cheng Zhang",
@@ -4013,6 +4418,11 @@
   },
   {
     "abstract": "One can write dependently typed functional programs in Coq, and prove them correct in Coq; one can write low-level programs in C, and prove them correct with a C verification tool. We demonstrate how to write programs partly in Coq and partly in C, and interface the proofs together. The Verified Foreign Function Interface (VeriFFI) guarantees type safety and correctness of the combined program. It works by translating Coq function types (and constructor types) along with Coq functional models into VST function-specifications; if the user can prove in VST that the C functions satisfy those specs, then the C functions behave according to the user-specified functional models (even though the C implementation might be very different) and the proofs of Coq functions that call the C code can rely on that behavior. To achieve this translation, we employ a novel, hybrid deep/shallow description of Coq dependent types.",
+    "authorIds": [
+      "0000-0001-6784-7108",
+      "0000-0002-7086-6518",
+      "0000-0001-6009-0325"
+    ],
     "authorInstitutions": "Joomy Korkut (Bloomberg LP); Kathrin Stark (Heriot-Watt University); Andrew W. Appel (Princeton University)",
     "authors": [
       "Joomy Korkut",
@@ -4076,6 +4486,13 @@
   },
   {
     "abstract": "Program verification tools are often implemented as front-end translations of an input program into an intermediate verification language (IVL) such as Boogie, Gil, Viper, or Why3. The resulting IVL program is then verified using an existing back-end verifier. A soundness proof for such a translational verifier needs to relate the input program and verification logic to the semantics of the IVL, which in turn needs to be connected with the verification logic implemented in the back-end verifiers. Performing such proofs is challenging due to the large semantic gap between the input and output programs and logics, especially for complex verification logics such as separation logic. This paper presents a formal framework for reasoning about translational separation logic verifiers. At its center is a generic core IVL that captures the essence of different separation logics. We define its operational semantics and formally connect it to two different back-end verifiers, which use symbolic execution and verification condition generation, resp. Crucially, this semantics uses angelic non-determinism to enable the application of different proof search algorithms and heuristics in the back-end verifiers. An axiomatic semantics for the core IVL simplifies reasoning about the front-end translation by performing essential proof steps once and for all in the equivalence proof with the operational semantics rather than for each concrete front-end translation. We illustrate the usefulness of our formal framework by instantiating our core IVL with elements of Viper and connecting it to two Viper back-ends as well as a front-end for concurrent separation logic. The supplementary material contains a complete formalization in Isabelle, including the core IVL and its semantics, the semantics of two back-ends for a subset of Viper, and all proofs.",
+    "authorIds": [
+      "0000-0003-2719-4856",
+      "0000-0003-4591-743X",
+      "0000-0002-1816-9256",
+      "0000-0001-5554-9381",
+      "0000-0001-7001-2566"
+    ],
     "authorInstitutions": "Thibault Dardinier (ETH Zurich); Michael Sammler (Institute of Science and Technology Austria); Gaurav Parthasarathy (ETH Zurich); Alexander J. Summers (University of British Columbia); Peter Müller (ETH Zurich)",
     "authors": [
       "Thibault Dardinier",
@@ -4148,6 +4565,9 @@
   },
   {
     "abstract": "We present a novel analysis of the fundamental L{\"o}b induction principle from guarded recursion. Taking advantage of recent work in modal type theory and univalent foundations, we derive L{\"o}b induction from a simpler and more conceptual set of primitives. We then capitalize on these insights to present Gatsby, the first guarded type theory capturing the rich modal structure of the topos of trees alongside L{\"o}b induction without immediately precluding canonicity or normalization. We show that Gatsby can recover many prior approaches to guarded recursion and use its additional power to improve on prior examples. We crucially rely on homotopical insights and Gatsby constitutes a new application of univalent foundations to the theory of programming languages.",
+    "authorIds": [
+      "0000-0003-1944-0789"
+    ],
     "authorInstitutions": "Daniel Gratzer (Aarhus University)",
     "authors": [
       "Daniel Gratzer"
@@ -4216,6 +4636,11 @@
   },
   {
     "abstract": "State-of-the-art model checkers employing dynamic partial order reduction (DPOR) can verify concurrent programs under a wide range of memory models such as sequential consistency (SC), total store order (TSO), release-acquire (RA), and the repaired C11 memory model (RC11) in an optimal and memory-efficient fashion. Unfortunately, these DPOR techniques cannot be applied in an optimal fashion to programs with mixed-sized accesses (MSA), where atomic instructions access different (sets of) bytes belonging to the same word. Such patterns naturally arise in real life code with C/C++ union types, and are even used in a concurrent setting. In this paper, we introduce Mixer, an optimal DPOR algorithm for MSA programs that allows (multi-byte) reads to be revisited by multiple writes together. We have implemented Mixer in the GenMC model checker, enabling (for the first time) the automatic verification of C/C++ code with mixed-size accesses. Our results also extend to the more general case of transactional programs provided that the set of read accesses performed by a transaction can be dynamically overapproximated at the beginning of the transaction.",
+    "authorIds": [
+      "0000-0001-5077-5275",
+      "0000-0002-7905-9739",
+      "0000-0001-8436-0334"
+    ],
     "authorInstitutions": "Iason Marmanis (MPI-SWS); Michalis Kokologiannakis (ETH Zurich); Viktor Vafeiadis (MPI-SWS)",
     "authors": [
       "Iason Marmanis",
@@ -4276,6 +4701,12 @@
   },
   {
     "abstract": "We propose a method for conducting algebraic program analysis (APA) incrementally in response to changes of the program under analysis. APA is a program analysis paradigm that consists of two distinct steps: computing a path expression that succinctly summarizes the set of program paths of interest, and interpreting the path expression using a properly-defined semantic algebra to obtain program properties of interest. In this context, the goal of an incremental algorithm is to reduce the analysis time by leveraging the intermediate results that have been computed before the program changes. We have made two main contributions. First, we propose a data structure for efficiently representing path expression as a tree together with tree-based interpreting method. Second, we propose techniques for efficiently updating the program properties in response to changes of the path expression. We have implemented our method and evaluated it on thirteen Java applications from the well-known DaCapo benchmark suite. The experimental results show that both our method for incrementally computing path expression and our method for incrementally interpreting path expression are effective in speeding up the analysis. Compared to the baseline APA and two state-of-the-art APA methods, the speedup of our method is more than 160× to 4761× depending on the actual types of program analyses performed.",
+    "authorIds": [
+      "0009-0006-8493-6886",
+      "0000-0002-4933-7443",
+      "0000-0001-5877-2677",
+      "0009-0003-4684-3943"
+    ],
     "authorInstitutions": "Chenyu Zhou (University of Southern California); Yuzhou Fang (University of Southern California); Jingbo Wang (Purdue University); Chao Wang (University of Southern California)",
     "authors": [
       "Chenyu Zhou",
@@ -4339,6 +4770,10 @@
   },
   {
     "abstract": "We present a general form of temporal effects for recursive types. Temporal effects have been adopted by effect systems to verify both linear-time temporal safety and liveness properties of higher-order programs with recursive functions. A challenge in a generalization to recursive types is that recursive types can easily cause unstructured loops, which obscure the regularity of the infinite behavior of computation and make it harder to statically verify liveness properties. To solve this problem, we introduce temporal effects with a later modality, which enable us to capture the behavior of non-terminating programs by stratifying obscure loops caused by recursive types. While temporal effects in the prior work are based on certain concrete formal forms, such as logical formulas and automata-based lattices, our temporal effects, which we call \\emph{algebraic temporal effects}, are more abstract, axiomatizing temporal effects in an algebraic manner and clarifying the requirements for temporal effects that can reason about programs soundly. We formulate algebraic temporal effects, formalize an effect system built on top of them, and prove two kinds of soundness of the effect system: safety and liveness soundness. We also introduce two instances of algebraic temporal effects: one is \\emph{temporal regular effects}, which are based on $\\omega$-regular expressions, and the other is \\emph{temporal fixpoint effects}, which are based on a first-order fixpoint logic. Their usefulness is demonstrated via examples including concurrent and object-oriented programs.",
+    "authorIds": [
+      "0000-0001-9286-230X",
+      "0000-0002-4225-8195"
+    ],
     "authorInstitutions": "Taro Sekiyama (National Institute of Informatics; SOKENDAI); Hiroshi Unno (Tohoku University)",
     "authors": [
       "Taro Sekiyama",
@@ -4466,6 +4901,10 @@
   },
   {
     "abstract": "Effect handlers form a powerful construct that can express complex programming abstractions. They are a generalization of exception handlers, but allow resumption of the continuation from where the effect was raised. Allowing continuations to be resumed at most once (one-shot) or an arbitrary number of times (multi-shot) has far-reaching consequences. In addition to performance considerations, multi-shot effects break key rules of reasoning and thus render certain standard transformation/optimizations unsound, especially in languages with mutable references (such as OCaml 5). It is therefore desirable to statically track whether continuations are used in a one-shot or multi-shot discipline, so that a compiler could use this information to efficiently implement effect handlers and to determine what optimizations it may perform. We address this problem by developing a type and effect system–called Affect–which uses affine types to track the usage of continuations. A challenge is to soundly deal with advanced programming features—such as references that store continuations and nested continuations—which are crucial to support challenging examples from the effects literature (such as control inversion and cooperative concurrency). Another challenge is to support generic type signatures of polymorphic effectful functions. We address these challenges by using and extending Rust’s Cell type and Wadler’s use types. To prove soundness of Affect we model types and judgements semantically via a logical relation in the Iris separation logic framework in Coq.",
+    "authorIds": [
+      "0009-0009-7780-4772",
+      "0000-0002-1185-5237"
+    ],
     "authorInstitutions": "Orpheas van Rooij (University of Edinburgh); Robbert Krebbers (Radboud University Nijmegen)",
     "authors": [
       "Orpheas van Rooij",
@@ -4533,6 +4972,12 @@
   },
   {
     "abstract": "This paper is a contribution to the meta-theory of systems featuring syntax with bindings, such as 𝜆-calculi and logics. It provides a general criterion that targets inductively defined rule-based systems, enabling for them inductive proofs that leverage Barendregt’s variable convention of keeping the bound and free variables disjoint. It improves on the state of the art by (1) achieving high generality in the style of Knaster–Tarski fixed point definitions (as opposed to imposing syntactic formats), (2) capturing systems of interest without modifications, and (3) accommodating infinitary syntax and non-equivariant predicates.",
+    "authorIds": [
+      "0000-0003-1560-7326",
+      "0000-0001-6745-2560",
+      "0000-0001-8747-0619",
+      "0000-0001-7982-2768"
+    ],
     "authorInstitutions": "Jan van Brügge (Heriot-Watt University); James McKinna (Heriot-Watt University); Andrei Popescu (University of Sheffield); Dmitriy Traytel (University of Copenhagen)",
     "authors": [
       "Jan van Brügge",
@@ -4548,6 +4993,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -4572,7 +5018,7 @@
       "https://doi.org/10.1145/3704893"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Theory",
       "POPL"
@@ -4597,6 +5043,12 @@
   },
   {
     "abstract": "Contextual equivalence is the \\emph{de facto} standard notion of program equivalence. A key theorem is that contextual equivalence is an \\emph{equational theory}. Making contextual equivalence more intensional, for example taking into account the time cost of the computation, seems a natural refinement. Such a change, however, does \\emph{not} induce an equational theory, for an apparently essential reason: cost is not invariant under reduction. In the paradigmatic case of the untyped $\\lambda$-calculus, we introduce \\emph{interaction equivalence}. Inspired by game semantics, we observe the number of interaction steps between terms and contexts but—crucially—ignore their own internal steps. We prove that interaction equivalence is an equational theory and we characterize it as $\\mathcal{B}$, the well-known theory induced by Böhm tree equality. Ours is the first observational characterization of $\\mathcal{B}$ obtained \\emph{without} enriching the discriminating power of contexts with extra features such as non-determinism. To prove our results, we develop interaction-based refinements of the Böhm-out technique and of intersection types.",
+    "authorIds": [
+      "0000-0003-4944-9944",
+      "0009-0009-5481-5719",
+      "0000-0003-1448-9014",
+      "0000-0001-8762-8674"
+    ],
     "authorInstitutions": "Beniamino Accattoli (Inria & Ecole Polytechnique); Adrienne Lancelot (Inria, LIX Ecole Polytechnique, IRIF Université Paris Cité); Giulio Manzonetto (Université Paris Cité); Gabriele Vanoni (IRIF, Université Paris Cité)",
     "authors": [
       "Beniamino Accattoli",
@@ -4663,6 +5115,10 @@
   },
   {
     "abstract": "Graphs and their algorithms are fundamental to computer science, but they can be difficult to formalise, especially in dependently-typed proof assistants. Part of the problem is that graphs aren’t as well-behaved as inductive data types like trees or lists; another problem is that graph algorithms (at least in standard presentations) often aren’t structurally recursive. Instead of trying to find a way to make graphs behave like other familiar inductive types, this paper builds a formal theory of graphs and their algorithms where graphs are treated as coinductive structures from the beginning. We formalise our theory in Agda. This approach has its own unique challenges: Agda is more comfortable with induction than coinduction. Additionally, our formalisation relies on quotient types, which tend to make coinduction even harder to deal with. Nonetheless, we develop reusable techniques to deal with these difficulties, and the simple graph representation at the heart of our work turns out to be flexible, powerful, and formalisable.",
+    "authorIds": [
+      "0000-0003-4952-7359",
+      "0000-0002-4161-985X"
+    ],
     "authorInstitutions": "Donnacha Oisín Kidney; Nicolas Wu",
     "authors": [
       "Donnacha Oisín Kidney",
@@ -4725,6 +5181,12 @@
   },
   {
     "abstract": "E-graphs are a data structure to compactly represent a program space and reason about equality of program terms. E-graphs have been successfully applied to a number of domains, including program optimization and automated theorem proving. In many applications, however, it necessary to reason about disequality of terms, not only about equality. While disequality reasoning can be encoded, direct support for disequalities increases performance and simplifies the metatheory. In this paper, we develop a framework independent of a specific implementation to formally reason about e-graphs. For the first time, we prove the equivalence of e-graphs to the reflexive, symmetric, transitive, and congruent closure of the equivalence relation they are expected to encode. We use these results to present the first formalization of an extension of e-graphs that directly supports disequalities and prove an analytical result about their superior efficiency compared to embedding techniques that are commonly used in SMT solvers and automated verifiers. We implement our approach in an extension to egg, a popular e-graph Rust library. We evaluate our solution in an SMT solver and an automated theorem prover using standard benchmarks. The results indicate that direct support for disequalities significantly outperforms other encodings based on disequality embedding confirming the results obtained analitically.",
+    "authorIds": [
+      "0009-0000-5042-1207",
+      "0000-0003-1288-1485",
+      "0009-0000-1448-5676",
+      "0000-0002-9324-8894"
+    ],
     "authorInstitutions": "George Zakhour (University of St. Gallen); Pascal Weisenburger (University of St. Gallen); Jahrim Gabriele Cesario (University of St. Gallen); Guido Salvaneschi (University of St. Gallen)",
     "authors": [
       "George Zakhour",
@@ -4740,6 +5202,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -4764,7 +5227,7 @@
       "https://doi.org/10.1145/3704913"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Decision Procedures",
       "POPL"
@@ -4788,6 +5251,10 @@
   },
   {
     "abstract": "We introduce a type system for the Quipper language designed to derive upper bounds on the size of the circuits produced by the typed program. This size can be measured according to various metrics, including width, depth and gate count, but also variations thereof obtained by considering only some wire types or some gate kinds. The key ingredients for achieving this level of flexibility are effects and refinement types, both relying on indices, that is, generic arithmetic expressions whose operators are interpreted differently depending on the target metric. The approach is shown to be correct through logical predicates, under reasonable assumptions about the chosen resource metric. This approach is empirically evaluated through the QuRA tool, showing that, in many cases, inferring tight bounds is possible in a fully automatic way.",
+    "authorIds": [
+      "0000-0002-0049-0391",
+      "0000-0001-9200-070X"
+    ],
     "authorInstitutions": "Andrea Colledan (University of Bologna & INRIA Sophia Antipolis); Ugo Dal Lago (University of Bologna & INRIA Sophia Antipolis)",
     "authors": [
       "Andrea Colledan",
@@ -4857,6 +5324,14 @@
   },
   {
     "abstract": "Version control systems typically rely on a \\emph{patch language}, heuristic \\emph{patch synthesis algorithms} like diff, and \\emph{three-way merge algorithms}. Standard patch languages and merge algorithms often fail to identify conflicts correctly when there are multiple edits to one line of code or code is relocated. This paper introduces Grove, a collaborative structure editor calculus that eliminates patch synthesis and three-way merge algorithms entirely. Instead, patches are derived directly from the log of the developer’s edit actions and all edits commute, i.e. the repository state forms a commutative replicated data type (CmRDT). To handle conflicts that can arise due to code relocation, the core datatype in Grove is a labeled directed multi-graph with uniquely identified vertices and edges. All edits amount to edge insertion and deletion, with deletion being permanent. To support tree-based editing, we define a decomposition from graphs into \\emph{groves}, which are a set of syntax trees with conflicts—including local, relocation, and unicyclic relocation conflicts— represented explicitly using holes and references between trees. Finally, we define a type error localization system for groves that enjoys a \\emph{totality} property, i.e. all editor states in Grove are statically meaningful, so developers can use standard editor services while working to resolve these explicitly represented conflicts. The static semantics is defined as a bidirectional marking system in line with recent work, with gradual typing employed to handle situations where errors and conflicts prevent type determination. We then layer on a unification-based type inference system to opportunistically fill type holes and fail gracefully when no solution exists. We mechanize the metatheory of Grove using the Agda theorem prover. We implement these ideas as the \\emph{Grove Workbench}, which generates the necessary data structures and algorithms in OCaml given a syntax tree specification.",
+    "authorIds": [
+      "0000-0003-3160-6972",
+      "0000-0003-1693-6172",
+      "0009-0000-1809-8382",
+      "0009-0002-8685-1342",
+      "0009-0000-4969-2376",
+      "0000-0003-4502-7971"
+    ],
     "authorInstitutions": "Michael D. Adams (National University of Singapore); Eric Griffis (University of Michigan); Thomas J. Porter (University of Michigan); Sundara Vishnu Satish (University of Michigan - Ann Arbor); Eric Zhao (Brown University); Cyrus Omar (University of Michigan)",
     "authors": [
       "Michael D. Adams",
@@ -4924,6 +5399,14 @@
   },
   {
     "abstract": "Foundational verification considers the functional correctness of real programming languages with formalized semantics and uses proof assistants (e.g., Coq, Isabelle) to certify proofs. The need for verifying real languages compels it to involve expressive Separation Logics (SLs) that exceed the scopes of well-studied automated proof theories, e.g., symbolic heap. Consequently, automation of SL in foundational verification relies heavily on ad-hoc heuristics that lack a systematic meta-theory and face scalability issues. To mitigate the gap, we propose a theory to specify SL predicates using abstract algebras including functors, homomorphisms, and modules over rings. Based on this theory, we develop a generic SL automation algorithm to reason about any data structures that can be characterized by these algebras. In addition, we also present algorithms for automatically instantiating the algebraic models to real data structures. The instantiation reuses the algebraic models of component structures and preserves their data abstractions. Case studies on formalized C semantics show our algorithm can instantiate the algebraic models automatically for a variety of complex data structures. Our algorithm is able to automate the verification of complex programs in Isabelle/HOL with minimal manual effort. This indicates the automatically instantiated reasoners from our generic theory show similar results to the state-of-the-art systems made of specifically crafted reasoning rules. The presented theories, proofs and the verification framework are formalized in Isabelle/HOL.",
+    "authorIds": [
+      "0000-0002-9196-3237",
+      "0000-0003-2755-3089",
+      "0000-0001-7164-0580",
+      "0000-0002-5878-6486",
+      "0000-0002-0596-877X",
+      "0000-0001-7300-9215"
+    ],
     "authorInstitutions": "Qiyuan Xu (Nanyang Technological University); David Sanan (Singapore Institute of Technology); Zhe Hou (Griffith University); Xiaokun Luan (Peking University); Conrad Watt (Nanyang Technological University); Yang Liu (Nanyang Technological University)",
     "authors": [
       "Qiyuan Xu",
@@ -4992,6 +5475,11 @@
   },
   {
     "abstract": "The intrinsic complexity of DNS poses unique challenges for ensuring its security and reliability. Despite continuous advances in DNS testing, monitoring, and verification, protocol-level defects still give rise to numerous bugs and attacks. In this paper, we establish the first sound and complete decision procedure for the DNS verification problem. Additionally, we establish the upper bound of $\\mathsf{2ExpTime}$ on the complexity of this problem, which was previously unknown. We further apply our framework to two of the most prominent attack vectors on DNS, namely amplification attacks and rewrite blackholing.",
+    "authorIds": [
+      "0009-0008-0845-6754",
+      "0000-0003-3578-7432",
+      "0000-0003-2952-939X"
+    ],
     "authorInstitutions": "Dhruv Nevatia (ETH Zurich); Si Liu (ETH Zurich); David Basin (ETH Zurich)",
     "authors": [
       "Dhruv Nevatia",
@@ -5056,6 +5544,10 @@
   },
   {
     "abstract": "We study “the best of abstract interpretations”, namely, the best possible abstract interpretations of programs. Abstract interpretations of programs on a given abstract domain A are inductively defined by composing abstract transfer functions for the basic commands, such as assignments and Boolean guards. However, abstract interpretation is not compositional: even if the abstract transfer functions of the basic commands are the best possible in A this does not imply that the whole inductive abstract interpretation of a program P is still the best in A. When this happens we are in the optimal scenario where the abstract interpretation of P coincides with the abstraction of the concrete interpretation of P. Our main contributions are threefold. Firstly, we investigate the computability properties of the class of programs having the best possible abstract interpretation on a fixed abstract domain A. We show that this class is, in general, not straightforward and not recursive. We also prove the impossibility of achieving the best possible abstract interpretation of any program by an effective compilation. Secondly, we show that given an abstract interpretation of a program P on an abstract domain A, this domain cannot be minimally refined or simplified to attain the best possible abstract interpretation of P. These results show that the program property of having the best possible abstract interpretation is not trivial and, in general, hard to achieve. We then show how to prove that the abstract interpretation of a program is indeed the best possible one. This is achieved using a program logic parameterized on A which infers triples [pre]_A P [post]_A. These triples encode that the inductive abstract interpretation of P on A with abstract input pre ∈ A gives post ∈ A as abstract output and this is the best possible in A.",
+    "authorIds": [
+      "0000-0002-9582-3960",
+      "0000-0003-0159-0068"
+    ],
     "authorInstitutions": "Roberto Giacobazzi (University of Arizona); Francesco Ranzato (University of Padova)",
     "authors": [
       "Roberto Giacobazzi",
@@ -5115,6 +5607,10 @@
   },
   {
     "abstract": "Uncomputation is a feature in quantum programming that allows the programmer to discard a value without losing quantum information, and that allows the compiler to reuse resources. Whereas quantum information has to be treated as a linear type, automatic uncomputation enables the programmer to treat it as an affine type to some extent. Automatic uncomputation requires a substructural type system between linear and affine, a subtlety that has only been captured by existing languages in an ad hoc way. We extend the Rust type system to the quantum setting to give a uniform framework for automatic uncomputation called Qurts. Specifically, we parameterise types by lifetimes, permitting them to be affine during their lifetime, while being restricted to linear use outside their lifetime. We also provide two operational semantics: one based on classical simulation, and one that does not depend on any specific uncomputation strategy.",
+    "authorIds": [
+      "0009-0005-4416-2655",
+      "0000-0001-7393-2640"
+    ],
     "authorInstitutions": "Kengo Hirata (University of Edinburgh); Chris Heunen (University of Edinburgh)",
     "authors": [
       "Kengo Hirata",
@@ -5128,6 +5624,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -5155,7 +5652,7 @@
       "https://doi.org/10.1145/3704842"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Quantum Computing 2",
       "POPL"
@@ -5179,6 +5676,10 @@
   },
   {
     "abstract": "Temporal logics for hyperproperties have recently emerged as an expressive specification technique for relational properties of reactive systems. While the model checking problem for such logics has been widely studied, there is a scarcity of deductive proof systems for temporal hyperproperties. In particular, hyperproperties with an alternation of universal and existential quantification over system executions are rarely supported. In this paper, we focus on the difficult class of hyperproperties of the form $\\forall^ \\exists^ \\psi$, where $\\psi$ is a safety relation. We show that hyperproperties of this class – which includes many hyperliveness properties of interest – can always be approximated by coinductive relations. This enables intuitive proofs by coinduction. Based on this observation, we define HyCo (\\textbf{Hy}perproperties, \\textbf{Co}inductively), a mechanized framework to reason about temporal hyperproperties within the Coq proof assistant. We detail the construction of HyCo, provide a proof of its soundness, and exemplify its use by applying it to the verification of reactive systems modeled as imperative programs with nondeterminism and I/O.",
+    "authorIds": [
+      "0000-0003-2307-2296",
+      "0000-0002-4280-8441"
+    ],
     "authorInstitutions": "Arthur Correnson (CISPA Helmholtz Center for Information Security); Bernd Finkbeiner (CISPA Helmholtz Center for Information Security)",
     "authors": [
       "Arthur Correnson",
@@ -5245,6 +5746,12 @@
   },
   {
     "abstract": "Programs increasingly rely on randomization in applications such as cryptography and machine learning. Analyzing randomized programs has been a fruitful research direction, but there is a gap when programs also exploit nondeterminism (for concurrency, efficiency, or algorithmic design). In this paper, we introduce \\emph{Demonic Outcome Logic} for reasoning about programs that exploit {\\em both} randomization and nondeterminism. The logic includes several novel features, such as reasoning about multiple executions in tandem and manipulating pre- and postconditions using familiar equational laws—including the distributive law of probabilistic choices over nondeterministic ones. We also give rules for loops that both establish termination and quantify the distribution of final outcomes from a single premise. We illustrate the reasoning capabilities of Demonic Outcome Logic through several case studies, including the Monty Hall problem, an adversarial protocol for simulating fair coins, and a heuristic based probabilistic SAT solver.",
+    "authorIds": [
+      "0000-0001-6388-063X",
+      "0000-0002-8007-4725",
+      "0000-0001-5014-9784",
+      "0000-0001-5692-3347"
+    ],
     "authorInstitutions": "Noam Zilberstein (Cornell University); Dexter Kozen (Cornell University); Alexandra Silva (Cornell University); Joseph Tassarotti (New York University)",
     "authors": [
       "Noam Zilberstein",
@@ -5260,6 +5767,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -5285,7 +5793,7 @@
       "https://doi.org/10.1145/3704855"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Program Logics 1",
       "POPL"
@@ -5308,6 +5816,11 @@
   },
   {
     "abstract": "Concurrent libraries implement standard data structures, such as stacks and queues, in a thread-safe manner, typically providing an atomic interface to the data structure. They serve as building blocks for concurrent programs, and incorporate advanced synchronization mechanisms to achieve good performance. In this paper, we are concerned with the problem of verifying correctness of such libraries under weak memory consistency in a fully automated fashion. To this end, we develop a model checker, RELINCHE, that verifies atomicity and functional correctness of a concurrent library implementation in any client program that invokes the library methods up to some bounded number of times. Our tool establishes refinement between the concurrent library implementation and its atomic specification in a fully parallel client, which it then strengthens to capture all possible other more constrained clients of the library. RELINCHE scales sufficiently to verify correctness of standard concurrent library benchmarks for all client programs with up to 9 library method invocations, and finds minimal counterexamples with 4–7 method calls of non-trivial linearizability bugs due to weak memory consistency.",
+    "authorIds": [
+      "0009-0009-3990-1651",
+      "0000-0002-7905-9739",
+      "0000-0001-8436-0334"
+    ],
     "authorInstitutions": "Pavel Golovin (MPI-SWS); Michalis Kokologiannakis (ETH Zurich); Viktor Vafeiadis (MPI-SWS)",
     "authors": [
       "Pavel Golovin",

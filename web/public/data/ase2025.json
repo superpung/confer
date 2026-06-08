@@ -760,14 +760,24 @@
       "Liwei Tan",
       "Yang Liu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 11:00 - 11:10"
     ],
+    "doi": "10.1109/ase63991.2025.00017",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0930ecfe-a6f2-4d3d-a06c-e45b137e84b6",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "104-116",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Fault Localization"
     ],
@@ -779,6 +789,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00017",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/119/FaultSeeker-LLM-Empowered-Framework-for-Blockchain-Transaction-Fault-Localization",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -792,14 +803,24 @@
       "Hsin-Wei Hung",
       "Ardalan Amiri Sani"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 14:10 - 14:20"
     ],
+    "doi": "10.1109/ase63991.2025.00180",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "09c3cbac-e2e5-4d78-89b0-9f1bf9e1b000",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "2171-2183",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Analysis 2"
     ],
@@ -811,6 +832,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00180",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/202/Spinner-Detecting-Locking-Violations-in-the-eBPF-Runtime",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -1128,14 +1150,24 @@
       "Dan O'Keeffe",
       "Santanu Dash"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 16:00 - 16:10"
     ],
+    "doi": "10.1109/ase63991.2025.00318",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0c87eddb-b1a7-4e85-b04a-a19e505759a5",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "3794-3798",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security 3"
     ],
@@ -1147,6 +1179,7 @@
       "NIER"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00318",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/3/Measuring-Software-Resilience-Using-Socially-Aware-Truck-Factor-Estimation",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -1240,6 +1273,12 @@
   },
   {
     "abstract": "Performance regressions have a tremendous impact on the quality of software. One way to catch regressions before they reach production is executing performance tests before deployment, e.g., using microbenchmarks, which measure performance at subroutine level. In projects with many microbenchmarks, this may take several hours due to repeated execution to get accurate results, disqualifying them from frequent use in CI/CD pipelines. We propose µOpTime, a static approach to reduce the execution time of microbenchmark suites by configuring the number of repetitions for each microbenchmark. Based on the results of a full, previous microbenchmark suite run, µOpTime determines the minimal number of (measurement) repetitions with statistical stability metrics that still lead to accurate results. We evaluate µOpTime with an experimental study on 14 open-source projects written in two programming languages and five stability metrics. Our results show that (i) µOpTime reduces the total suite execution time (measurement phase) by up to 95.83% (Go) and 94.17% (Java), (ii) the choice of stability metric depends on the project and programming language, (iii) microbenchmark warmup phases have to be considered for Java projects (potentially leading to higher reductions), and (iv) µOpTime can be used to reliably detect performance regressions in CI/CD pipelines.",
+    "authorIds": [
+      "0000-0002-2412-4513",
+      "0000-0001-6866-5461",
+      "0000-0001-6817-331X",
+      "0000-0002-7524-3256"
+    ],
     "authorInstitutions": "Nils Japke (TU Berlin & ECDF); Martin Grambow (TU Berlin & ECDF); Christoph Laaber (Simula Research Laboratory); David Bermbach (TU Berlin)",
     "authors": [
       "Nils Japke",
@@ -1548,6 +1587,12 @@
   },
   {
     "abstract": "It is essential to detect functional differences between programs in various software engineering tasks, such as automated program repair, mutation testing, and code refactoring. The problem of detecting functional differences between two programs can be reduced to searching for a difference exposing test (DET): a test input that results in different outputs on the subject programs. In this paper, we propose Mokav, a novel execution-driven tool that leverages LLMs to generate DETs. Mokav takes two versions of a program (P and Q) and an example test input. When successful, Mokav generates a valid DET, a test input that leads to provably different outputs on P and Q. Mokav iteratively prompts an LLM with a specialized prompt to generate new test inputs. At each iteration, Mokav provides execution-based feedback from previously generated tests until the LLM produces a DET. We evaluate Mokav on 1535 pairs of Python programs collected from the Codeforces competition platform and 32 pairs of programs from the QuixBugs dataset. Our experiments show that Mokav outperforms the state-of-the-art, Pynguin and Differential Prompting, by a large margin. Mokav can generate DETs for 81.7% (1,255/1535) of the program pairs in our benchmark (versus 4.9% for Pynguin and 37.3% for Differential Prompting). We demonstrate that the iterative and execution-driven feedback components of the system contribute to its high effectiveness.",
+    "authorIds": [
+      "0000-0003-2183-9633",
+      "",
+      "",
+      "0000-0003-3505-3383"
+    ],
     "authorInstitutions": "Khashayar Etemadi (ETH Zurich); Bardia Mohammadi (Sharif University of Technology); Zhendong Su (ETH Zurich); Martin Monperrus (KTH Royal Institute of Technology)",
     "authors": [
       "Khashayar Etemadi",
@@ -1730,6 +1775,15 @@
   },
   {
     "abstract": "Reducing test inputs that trigger bugs is crucial for efficient debugging. Delta debugging is the most popular approach for this purpose. When test inputs need to conform to certain specifications, existing delta debugging practice encounters a validity problem: it blindly applies reduction rules, producing a large number of invalid test inputs that do not satisfy the required specifications. This overall diminishing effectiveness and efficiency becomes even more pronounced when the specifications extend beyond syntactical structures. Our key insight is that we should leverage input generators, which are aware of these specifications, to generate valid reduced inputs, rather than straightforwardly performing reduction on test inputs. In this paper, we propose a generator-based delta debugging method, namely GReduce, which derives validity-preserving reducers. Specifically, given a generator and its execution, demonstrating how the bug-inducing test input is generated, GReduce searches for other executions on the generator that yield reduced, valid test inputs. The evaluation results on five benchmarks (i.e., graphs, DL models, JavaScript programs, SymPy, and algebraic data types) show that GReduce substantially outperforms state-of-the-art syntax-based reducers including Perses and T-PDD, and also outperforms QuickCheck, SmartCheck, as well as the state-of-the-art choice-sequence-based reducer Hypothesis, demonstrating the effectiveness, efficiency, and versatility of GReduce.",
+    "authorIds": [
+      "0009-0007-5291-7880",
+      "0009-0008-2565-7769",
+      "0009-0007-8348-5232",
+      "0000-0001-7651-9560",
+      "0000-0002-3000-0795",
+      "0000-0001-8991-747X",
+      "0000-0002-6731-216X"
+    ],
     "authorInstitutions": "Luyao Ren (Peking University); Xing Zhang (Peking University); Ziyue Hua (Peking University); Yanyan Jiang (Nanjing University); Xiao He (Bytedance); Yingfei Xiong (Peking University); Tao Xie (Peking University)",
     "authors": [
       "Luyao Ren",
@@ -2073,14 +2127,24 @@
       "Ziming Zhao",
       "Jianwei Yin"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 11:00 - 11:10"
     ],
+    "doi": "10.1109/ase63991.2025.00216",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1f99e8ce-730e-4c5e-8b01-ddd67591d396",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "2631-2643",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Efficiency & Fairness 1"
     ],
@@ -2092,6 +2156,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00216",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/223/AutoFid-Adaptive-and-Noise-Aware-Fidelity-Measurement-for-Quantum-Programs-via-Circu",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -2196,14 +2261,24 @@
       "Gengyi Sun",
       "Shane McIntosh"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 14:10 - 14:20"
     ],
+    "doi": "10.1109/ase63991.2025.00241",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "20f4a31d-96e8-43f1-8efa-4dda4ec32ea3",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "2932-2944",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human & Social Aspects 1"
     ],
@@ -2215,6 +2290,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00241",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/239/The-Cost-of-Downgrading-Build-Systems-A-Case-Study-of-Kubernetes",
       "https://rebels.cs.uwaterloo.ca/papers/ase2025_ranjan.pdf",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -2271,14 +2347,24 @@
       "Kai Gao",
       "Huai Liu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 14:40 - 14:50"
     ],
+    "doi": "10.1109/ase63991.2025.00237",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "22ffef73-28d7-4c35-8ed7-301885613dc8",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "2882-2893",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Analysis 2"
     ],
@@ -2290,6 +2376,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00237",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/104/DIFFFIX-Incrementally-Fixing-AST-Diffs-via-Context-and-Type-Information",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -2576,6 +2663,12 @@
   },
   {
     "abstract": "Quantum software testing is an emerging research area that currently lacks systematic benchmarks to assess the effectiveness of testing techniques. Recently, some open-source benchmarks for quantum circuits and quantum software bugs have been introduced, along with some mutation analysis tools. Despite these advances, there is still little understanding of how factors such as quantum circuit characteristics (e.g., number of qubits, circuit depth), algorithms (e.g., Quantum Phase Estimation), and mutation characteristics (e.g., mutation operators) influence mutant detection in quantum circuits. Gaining a better understanding of these relations would enable the design of faulty benchmarks with diverse attributes, such as different levels of fault detection difficulty, which would help evaluate the cost-effectiveness of quantum software testing techniques more effectively. In this study, we conduct the largest empirical study to date on quantum circuit mutants, analyzing over 700,000 faulty benchmarks produced by mutating 382 real-world quantum circuits. To evaluate how easy it is to detect a mutant with certain characteristics, we defined the survival rate, a new metric that quantifies the proportion of undetected mutants in the set of mutants with those same characteristics. This empirical study provides essential insights into mutants of quantum circuits, aiming to enhance the knowledge of developers and researchers in the field. We also present a tool that recommends mutants to users based on selected characteristics, such as a specific type of quantum algorithm and the desired survival rates, along with faulty benchmarks to evaluate the cost-effectiveness of testing techniques for quantum software.",
+    "authorIds": [
+      "0009-0007-3315-1664",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Eñaut Mendiluze Usandizaga (Simula Research Laboratory, Norway); Shaukat Ali (Simula Research Laboratory and Oslo Metropolitan University); Tao Yue (Beihang University); Paolo Arcaini (National Institute of Informatics)",
     "authors": [
       "Eñaut Mendiluze Usandizaga",
@@ -3321,14 +3414,24 @@
       "Marco Autili",
       "Paola Inverardi"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 14:30 - 14:40"
     ],
+    "doi": "10.1109/ase63991.2025.00202",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "31edb8e2-51c8-415b-bea6-8c92894aa859",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "2452-2464",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human & Social Aspects 1"
     ],
@@ -3340,6 +3443,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00202",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/214/Advancing-Automated-Ethical-Profiling-in-SE-a-Zero-Shot-Evaluation-of-LLM-Reasoning",
       "https://arxiv.org/pdf/2510.00881",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -3879,14 +3983,24 @@
       "Bowen Deng",
       "Dan Pei"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 16:00 - 16:10"
     ],
+    "doi": "10.1109/ase63991.2025.00289",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "36b0de7f-e7bd-4633-af42-4f8b9aa1efbc",
     "locations": [
       "Grand Hall 6"
     ],
+    "pages": "3498-3509",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Efficiency & Fairness 2"
     ],
@@ -3898,6 +4012,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00289",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/34/Adaptive-Performance-Regression-Detection-via-Semi-Supervised-Siamese-Learning",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -3957,14 +4072,24 @@
       "Meng Xu",
       "Engin Kirda"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 14:40 - 14:50"
     ],
+    "doi": "10.1109/ase63991.2025.00211",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3753decd-6104-4d4f-98a0-b9889188331d",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "2568-2579",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing & Analysis 1"
     ],
@@ -3976,6 +4101,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00211",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/220/DRIFT-Debug-based-Trace-Inference-for-Firmware-Testing",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -4624,14 +4750,24 @@
       "Kun Xia",
       "Luchuan Guo"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 16:20 - 16:30"
     ],
+    "doi": "10.1109/ase63991.2025.00256",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3ecf05f5-26f2-47a6-bf8b-62e5153cf03e",
     "locations": [
       "Grand Hall 6"
     ],
+    "pages": "3121-3132",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Efficiency & Fairness 2"
     ],
@@ -4643,6 +4779,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00256",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/1/How-Can-Infrastructure-as-Code-Accelerate-Data-Center-Bring-ups-A-Case-Study-at-Byte",
       "https://jxianhao.github.io/files/Rollout.pdf",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -4825,14 +4962,24 @@
       "Benjamin Selwyn-Smith",
       "Nicholas Allen"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 16:10 - 16:20"
     ],
+    "doi": "10.1109/ase63991.2025.00280",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4104bfed-cce2-41c3-9277-698862092ae9",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "3392-3402",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security 7"
     ],
@@ -4844,6 +4991,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00280",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/25/Unlocking-Reproducibility-Automating-re-Build-Process-for-Open-Source-Software",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -4981,6 +5129,9 @@
   },
   {
     "abstract": "Relational Operator Replacement (ROR) is one of the most essential types of mutation testing faults. On the other hand, Dynamic Symbolic Execution has proved its capability and importance for test generation in the past few decades. This work proposes a guided approach to generate ROR-adequate test cases. We position our proposed technique as a fault-based predicate testing approach because a condition is part of the predicate of the boolean expression. We run a meta-program with ROR constraints using state-of-the-art DSE (Dynamic Symbolic Execution) tools, viz. KLEE, TracerX, BMC. We plug a component, i.e. RMPG (ROR Meta Program Generator) with DSE to generate ROR-adequate test cases. To validate the adequacy of test cases as per ROR, we developed RMA (ROR Mutant Analyser). Also, we considered the KLEE, TracerX, and BMC themselves as baselines for comparison. We have shown that the ROR-DSE-KLEE killed 2950 extra ROR mutants as compared to KLEE, ROR-DSE-TracerX killed 3368 extra ROR mutants as compared to TracerX, and ROR-DSE-BMC killed 3345 extra ROR mutants as compared to BMC.",
+    "authorIds": [
+      "0000-0002-6169-6334"
+    ],
     "authorInstitutions": "Sangharatna Godboley (NIT Warangal)",
     "authors": [
       "Sangharatna Godboley"
@@ -5106,14 +5257,24 @@
       "Zichen Liu",
       "Xusheng Xiao"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 14:10 - 14:20"
     ],
+    "doi": "10.1109/ase63991.2025.00078",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "441682c0-e0d5-442d-9f1f-db5bb2be1b06",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "880-892",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Web & Mobile Systems 2"
     ],
@@ -5125,6 +5286,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00078",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/153/AppBDS-LLM-Powered-Description-Synthesis-for-Sensitive-Behaviors-in-Mobile-Apps",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -5205,6 +5367,14 @@
   },
   {
     "abstract": "Fault localization (FL) targets identifying bug locations within a software system, which can enhance debugging efficiency and improve software quality. Due to the impressive code comprehension ability of Large Language Models (LLMs), a few studies have proposed to leverage LLMs to locate bugs, i.e., LLM-based FL, and demonstrated promising performance. However, first, these methods are limited in flexibility. They rely on bug-triggering test cases to perform FL and cannot make use of other available bug-related information, e.g., bug reports. Second, they are built upon proprietary LLMs, which are, although powerful, confronted with risks in data privacy. To address these limitations, we propose a novel LLM-based FL framework named FlexFL, which can flexibly leverage different types of bug-related information and effectively work with open-source LLMs. FlexFL is composed of two stages. In the first stage, FlexFL reduces the search space of buggy code using state-of-the-art FL techniques of different families and provides a candidate list of bug-related methods. In the second stage, FlexFL leverages LLMs to delve deeper to double-check the code snippets of methods suggested by the first stage and refine fault localization results. In each stage, FlexFL constructs agents based on open-source LLMs, which share the same pipeline that does not postulate any type of bug-related information and can interact with function calls without the out-of-the-box capability. Extensive experimental results on Defects4J demonstrate that FlexFL outperforms the baselines and can work with different open-source LLMs. Specifically, FlexFL with a lightweight open-source LLM Llama3-8B can locate 42 and 63 more bugs than two state-of-the-art LLM-based FL approaches AutoFL and AgentFL that both use GPT-3.5. In addition, FlexFL can localize 93 bugs that cannot be localized by non-LLM-based FL techniques at the top 1. Furthermore, to mitigate potential data contamination, we conduct experiments on a dataset which Llama3-8B has not seen before, and the evaluation results show that FlexFL can also achieve good performance.",
+    "authorIds": [
+      "0009-0008-7763-6425",
+      "0000-0002-1981-1626",
+      "0000-0002-5526-1617",
+      "0009-0002-8036-5749",
+      "0000-0003-3622-1510",
+      "0000-0002-4367-7201"
+    ],
     "authorInstitutions": "Chuyang Xu (Zhejiang University); Zhongxin Liu (Zhejiang University); Xiaoxue Ren (Zhejiang University); Gehao Zhang (Ant Group); Ming Liang (Ant Group); David Lo (Singapore Management University)",
     "authors": [
       "Chuyang Xu",
@@ -5423,6 +5593,14 @@
   },
   {
     "abstract": "Developers write logging statements to monitor software runtime behaviors and system state. However, poorly constructed or misleading log messages can inadvertently obfuscate actual program execution patterns, thereby impeding effective software maintenance. Existing research on analyzing issues within logging statements is limited, primarily focusing on detecting a singular type of defect and relying on manual intervention for fixes rather than automated solutions. To address the limitation, we initiate a systematic study that pinpoints four specific types of defects in logging statements (i.e., statement code inconsistency, static dynamic inconsistency, temporal relation inconsistency, and readability issues) through the analysis of real-world log-centric changes. We then propose LogUpdater, a two-stage framework for automatically detecting and updating logging statements for these specific defects. In the offline stage, LogUpdater constructs a similarity-based classifier on a set of synthetic defective logging statements to identify specific defect types. During the online testing phase, this classifier first evaluates logging statements in a given code snippet to determine the necessity and type of improvements required. Then, LogUpdater constructs type-aware prompts from historical logging update changes for an LLM-based recommendation framework to suggest updates addressing these specific defects. We evaluate the effectiveness of LogUpdater on a dataset containing real-world logging changes, a synthetic dataset, and a new real-world project dataset. The results indicate that our approach is highly effective in detecting logging defects, achieving an F1 score of 0.625. Additionally, it exhibits significant improvements in suggesting precise static text and dynamic variables, with enhancements of 48.12% and 24.90%, respectively. Furthermore, LogUpdater achieves a 61.49% success rate in recommending correct updates on new real-world projects. We reported 40 problematic logging statements and their fixes to GitHub via pull requests, resulting in 25 changes confirmed and merged across 11 different projects.",
+    "authorIds": [
+      "0000-0001-6626-4437",
+      "0009-0009-8370-644X",
+      "0000-0002-1987-2533",
+      "0000-0003-1096-2732",
+      "0009-0006-8798-5667",
+      "0000-0002-3666-5798"
+    ],
     "authorInstitutions": "Renyi Zhong (The Chinese University of Hong Kong); Yichen LI (ByteDance); Jinxi Kuang (The Chinese University of Hong Kong); Wenwei Gu (The Chinese University of Hong Kong); Yintong Huo (Singapore Management University, Singapore); Michael Lyu (The Chinese University of Hong Kong)",
     "authors": [
       "Renyi Zhong",
@@ -5604,14 +5782,24 @@
       "Houxiang Zhang",
       "Thomas Peyrucain"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 16:20 - 16:30"
     ],
+    "doi": "10.1109/ase63991.2025.00281",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4a6a0a5e-1bb9-49ad-aad6-30681091617d",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "3403-3414",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Autonomous Systems"
     ],
@@ -5623,6 +5811,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00281",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/26/Out-of-Distribution-Detection-in-Self-adaptive-Robots-with-AI-powered-Digital-Twins",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -6289,14 +6478,24 @@
       "Lihan Zhan",
       "Sebastian Echeverria"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 16:20 - 16:30"
     ],
+    "doi": "10.1109/ase63991.2025.00348",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "51011707-f2c4-41f6-a587-4ddf363085de",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "3948-3952",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Code Review & Process"
     ],
@@ -6308,6 +6507,7 @@
       "NIER"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00348",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/33/Vessel-A-Taxonomy-of-Reproducibility-Issues-for-Container-Images",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -6448,6 +6648,16 @@
   },
   {
     "abstract": "Program repair requires reasoning about why a change is correct, not only recognizing edit patterns. Fine-tuning approaches proposed in the literature for LLMs on program repair tasks generally overlook the need to reason about the logic behind code changes, beyond syntactic patterns in the data. High-performing fine-tuning experiments also typically incur very high computational costs. With MORepair, we propose a novel perspective on the learning focus of LLM fine-tuning for program repair: we not only adapt the LLM parameters to the syntactic nuances of the task of code transformation (objective ①), but we also specifically fine-tune the LLM with respect to the logical reason behind the code change in the training data (objective ②). Such a multi-objective fine-tuning will instruct LLMs to generate high-quality patches. The workflow of MORepair consists of three phases: preparing guidance from paired buggy and fixed code, fine-tuning lightweight adapters with QLoRA under a joint loss, and inference that produces candidate patches verified by tests. We apply MORepair to fine-tune four open-source LLMs with different sizes and architectures. Experimental results on function-level and repository-level repair benchmarks demonstrate that the implemented fine-tuning effectively enhances LLM repair performance by 11.4% to 56.0%. We further demonstrate that our fine-tuning strategy achieves superior performance compared to state-of-the-art approaches, including standard fine-tuning, Fine-tune-CoT, and RepairLLaMA. Overall, this paper makes the following contributions: [Approach]: MORepair uses multi-objective fine-tuning to couple patch generation with guidance that captures the repair rationale, enabling higher quality patches. [Benchmarks]: We build EvalRepair-C++ and EvalRepair-Java with 164 and 163 items, derived from HumanEval-X and HumanEval-Java, plus augmented tests to reduce patch overfitting. We also provide D4J-Repair (371 Java bugs derived from Defects4J) and SWE-Repair (204 Python bugs derived from SWE-bench). [Experiments and insights]: Across models and languages, MORepair consistently exceeds prior methods. Ablations show each single objective is suboptimal; the joint objective yields the best accuracy and more logically consistent fixes. [Artifacts]: Our research artifacts, including code and the reproduction data, are publicly available at: https://github.com/buaabarty/morepair .",
+    "authorIds": [
+      "0000-0001-9270-730X",
+      "0000-0002-8049-3997",
+      "0000-0002-2245-9133",
+      "0000-0002-3063-9425",
+      "0000-0003-4052-475X",
+      "0000-0001-7270-9869",
+      "0000-0002-3931-060X",
+      "0000-0002-5845-5601"
+    ],
     "authorInstitutions": "Boyang Yang (Yanshan University); Haoye Tian (Aalto University); Jiadong Ren (Yanshan University); Hongyu Zhang (Chongqing University); Jacques Klein (University of Luxembourg); Tegawendé F. Bissyandé (University of Luxembourg); Claire Le Goues (Carnegie Mellon University); Shunfu Jin (Yanshan University)",
     "authors": [
       "Boyang Yang",
@@ -6459,15 +6669,25 @@
       "Claire Le Goues",
       "Shunfu Jin"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Mon 17 Nov 2025 11:10 - 11:20"
     ],
     "doi": "10.1145/3735129",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "51cfee08-a59c-4ba6-a9de-bb1af1eba136",
+    "issue": "2",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "1-38",
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Program Repair 1"
     ],
@@ -6479,13 +6699,14 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3735129",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/27/MORepair-Teaching-LLMs-to-Repair-Code-via-Multi-Objective-Fine-Tuning",
       "https://dl.acm.org/doi/10.1145/3735129",
-      "https://doi.org/10.1145/3735129",
       "https://arxiv.org/abs/2404.12636",
       "https://github.com/buaabarty/morepair",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Extended Reality (XR) technologies offer immersive user experiences across diverse application domains, presenting unique testing challenges due to their spatial interaction paradigms. While existing works test XR applications through scene navigation and interaction triggering, they fail to synthesise realistic spatial input via specialised XR devices, such as 6 degrees of freedom controller gestures, that are essential for modern XR user experiences. To address this gap, we present XRintTest, an automated testing framework for Unity-based XR applications. XRintTest starts by constructing an XR User Interaction Graph that models interaction targets and required events. Leveraging this graph, it then automatically explores the XR scene under test and generates user interactions. We evaluated XRintTest on XRBench3D, a novel benchmark comprising seven XR scenes containing 367 distinct 3D user interactions. XRintTest shows great effectiveness, achieving 97% coverage of trigger and grab interactions across all scenes, 9x more effective and 5x more efficient than random exploration, while detecting runtime exceptions and functional defects. We open-sourced our tool and dataset at https://github.com/ruizhengu/XRintTest and https://github.com/ruizhengu/XRBench3D , respectively. A video demo is available on YouTube at https://youtu.be/K0Q6waE47Us .",
@@ -6577,6 +6798,11 @@
   },
   {
     "abstract": "This paper reports an industrial experience of managing the variability of a logistics robotic system. Logistics centers need to dispatch products rapidly and accurately from huge inventories in accordance with the daily flow of orders, and autonomous logistics robotic systems provide a solution that can handle a wide variety of products without relying on manual tasks. However, the development of such systems can be challenging due to the many different operating and product characteristics that must be considered. We have therefore developed a variability management approach that models the variability of robotic systems and the items to be handled in such a way that the software components can be reused and expanded across different products and environments. This paper presents the motivation, challenges, and benefits of applying the variability management approach to a logistics robotic system.",
+    "authorIds": [
+      "0009-0003-0827-3441",
+      "0000-0003-0289-8398",
+      "0009-0004-8948-9451"
+    ],
     "authorInstitutions": "Kentaro Yoshimura (Hitachi, Ltd.); Yuta Yamauchi (Hitachi, Ltd.); Hideo Takahashi (Hitachi, Ltd.)",
     "authors": [
       "Kentaro Yoshimura",
@@ -6758,14 +6984,24 @@
       "Thanwadee Sunetnanta",
       "Kenichi Matsumoto"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 15:30 - 18:00"
     ],
+    "doi": "10.1109/ase63991.2025.00359",
     "eventType": "Demonstration",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "54174da2-dfe7-42c3-b4aa-73ed690fec8c",
     "locations": [
       "Walker Hall (Demo)"
     ],
+    "pages": "3997-4000",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Tools - Code and Model"
     ],
@@ -6777,6 +7013,7 @@
       "Tool Demonstration Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00359",
       "https://conf.researchr.org/details/ase-2025/ase-2025-tool-demonstration-track/7/PyGress-Tool-for-Analyzing-Progression-of-Code-Proficiency-in-Python-OSS-Projects",
       "https://arxiv.org/abs/2511.05821",
       "https://youtu.be/hxoeK-ggcWk",
@@ -6836,14 +7073,24 @@
       "Marco Castelluccio",
       "Alberto Bacchelli"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 15:00 - 15:10"
     ],
+    "doi": "10.1109/ase63991.2025.00165",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "544c99a5-a749-463e-b7bd-7bd922684646",
     "locations": [
       "Vista"
     ],
+    "pages": "1982-1994",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Test Generation, Selection & Prioritization 2"
     ],
@@ -6855,6 +7102,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00165",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/76/Automated-Generation-of-Issue-Reproducing-Tests-by-Combining-LLMs-and-Search-Based-Te",
       "https://arxiv.org/abs/2509.01616",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -6862,6 +7110,14 @@
   },
   {
     "abstract": "Testing autonomous driving systems (ADSs) at scale requires systematic generation of diverse scenarios. Current practice depends on verbose DSLs such as OpenSCENARIO, where hundreds of lines of code are required to describe even simple manoeuvres. This process is error-prone, labor-intensive, and hinders large-scale testing. TARGET addresses this challenge with an end-to-end framework that automatically generates ADS test scenarios directly from traffic rules. It introduces (i) a simplified compositional DSL for functional scenarios, (ii) an LLM-guided knowledge extraction pipeline with validation and syntax alignment to mitigate hallucination, and (iii) automated synthesis of simulator-executable test scripts. We evaluated TARGET on 284 scenarios derived from 54 traffic rules across seven ADSs (including Autoware, Apollo, LAV, and MMFN) in CARLA, LGSVL, and MetaDrive. TARGET uncovered 610 violations, collisions, and timeouts, two of which were confirmed by ADS developers as genuine issues. The framework is fully open-sourced and has already solicited citations since publication. Its influence is evident: the DSL and LLM-based knowledge extraction pipeline has been extended by the Purdue team in their FSE 2025 paper “Multi-modal Traffic Scenario Generation for Autonomous Driving System Testing”. In addition, formal methods researchers (e.g., the formal methods group at East China Normal University) are exploring DSL extensions as syntactic sugar for specification-driven verification of autonomous driving, while system security researchers (e.g., the Institute for Cybersecurity and Digital Trust at Ohio State University) are investigating its use for identifying vulnerabilities in autonomous driving systems. Presenting this paper in the Journal-First track at ASE 2025 will ensure the work reaches a broad audience, consolidates community uptake, and stimulates discussion across ASE’s core themes of software testing, program synthesis, DSLs, and AI/LLMs in SE, while further promoting its adoption in both academia and industry.",
+    "authorIds": [
+      "0000-0002-9762-7058",
+      "0000-0001-6175-164X",
+      "0009-0002-7959-494X",
+      "0000-0002-0025-6837",
+      "0000-0002-5468-9347",
+      "0000-0002-2572-2355"
+    ],
     "authorInstitutions": "Yao Deng (Macquarie University); Zhi Tu (Purdue University); Jiaohong Yao (Macquarie University); Mengshi Zhang (TensorBlock); Tianyi Zhang (Purdue University); Xi Zheng (Macquarie University)",
     "authors": [
       "Yao Deng",
@@ -6871,14 +7127,25 @@
       "Tianyi Zhang",
       "Xi Zheng"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Mon 17 Nov 2025 11:40 - 11:50"
     ],
+    "doi": "10.1109/tse.2025.3569086",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "54870315-ecbc-4f59-a665-0e9e493ca23c",
+    "issue": "7",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "1950-1968",
+    "publicationDate": "2025-07-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Autonomous Driving & VR"
     ],
@@ -6890,9 +7157,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3569086",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/18/TARGET-Traffic-Rule-Based-Test-Generation-for-Autonomous-Driving-via-Validated-LLM-G",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "For a vulnerability reported as an item of platforms such as CVE or NVD, software maintainers need to submit patches (in the form of \\emph{code commit}) to fix it, which is often performed silently for the sake of keeping products’ reputation or avoiding malicious attacks. But such a silent practice keeps patches hidden from affected downstream software maintainers, thus they have to identify patches in a large corpus of code commits manually, i.e., silent vulnerability patch identification (SVPI). Existing techniques in this field were often developed under the assumption that a vulnerability is matched to one patch, thus output a ranking list that simply reflects the similarity between one individual patch and the vulnerability. However, previous research has demonstrated that many vulnerabilities correspond to more than one patch in practice, this phenomenon largely threatens the effectiveness of existing SVPI techniques because they typically ignore the correlation between patches. In this paper, we propose \\textbf{SHIP}, a \\textbf{S}ilent vulnerability patc\\textbf{H} \\textbf{I}dentification approach suited for multi\\textbf{P}le-patch scenarios, to make patches corresponding to a vulnerability no longer isolated islands. For a vulnerability item, we first obtain several highly-relevant code commits by measuring heuristic features, and then employ a large language model (i.e., DeepSeek-V3) to predict both the link between a code commit and the vulnerability as well as the link between a pair of code commits, and thus deliver candidate groups each containing one or more code commits that could be patches of the vulnerability. Finally, we perform the max-pooling strategy on the features of code commit(s) contained in each candidate group to determine the ranking of groups, the Top-1 group will be output. The experimental results demonstrate the promise of SHIP: on the benchmark consisting of 4,631 vulnerability items, it can achieve 84.30%, 59.14%, and 69.51% of Recall, Precision, and F1-Score, respectively, outperforming the state-of-the-art SVPI techniques by 37.54%, 28.71%, and 32.35%, respectively.",
@@ -7014,6 +7283,14 @@
   },
   {
     "abstract": "Iterative approaches like Agile Scrum are commonly adopted to enhance the software development process. However, challenges such as schedule and budget overruns still persist in many software projects. Several approaches employ machine learning techniques, particularly classification, to facilitate decision-making in iterative software development. Existing approaches often concentrate on characterizing a sprint to predict solely productivity. We introduce Sprint2Vec, which leverages three aspects of sprint information - sprint attributes, issue attributes, and the developers involved in a sprint, to comprehensively characterize it for predicting both productivity and quality outcomes of the sprints. Our approach combines traditional feature extraction techniques with automated deep learning-based unsupervised feature learning techniques. We utilize methods like Long Short-Term Memory (LSTM) to enhance our feature learning process. This enables us to learn features from unstructured data, such as textual descriptions of issues and sequences of developer activities. We conducted an evaluation of our approach on two regression tasks: predicting the deliverability (i.e., the amount of work delivered from a sprint) and quality of a sprint (i.e., the amount of delivered work that requires rework). The evaluation results on five well-known open-source projects (Apache, Atlassian, Jenkins, Spring, and Talendforge) demonstrate our approach’s superior performance compared to baseline and alternative approaches.",
+    "authorIds": [
+      "0000-0001-8188-4749",
+      "0009-0008-5396-2648",
+      "0009-0001-8386-9558",
+      "0000-0002-5201-5699",
+      "0000-0003-4246-0526",
+      "0000-0002-1436-0352"
+    ],
     "authorInstitutions": "Morakot Choetkiertikul (Mahidol University, Thailand); Peerachai Banyongrakkul (Mahidol University); Chaiyong Rakhitwetsagul (Mahidol University, Thailand); Suppawong Tuarob (Mahidol University); Hoa Khanh Dam (University of Wollongong); Thanwadee Sunetnanta (Mahidol University)",
     "authors": [
       "Morakot Choetkiertikul",
@@ -7072,14 +7349,24 @@
       "Sheng Wen",
       "Yang Xiang"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 11:30 - 11:40"
     ],
+    "doi": "10.1109/ase63991.2025.00197",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "57e7c73c-1185-4cf6-9b7d-a5bfa36f1e8f",
     "locations": [
       "Vista"
     ],
+    "pages": "2388-2400",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Test Generation, Selection & Prioritization 1"
     ],
@@ -7091,6 +7378,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00197",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/212/FailMapper-Automated-Generation-of-Unit-Tests-Guided-by-Failure-Scenarios",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -7101,14 +7389,24 @@
     "authors": [
       "Colin Gordon"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 16:40 - 16:50"
     ],
+    "doi": "10.1109/ase63991.2025.00329",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "581ee1e2-aa94-4957-ade5-87bfa3010e42",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "3850-3855",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Requirement Engineering"
     ],
@@ -7120,12 +7418,21 @@
       "NIER"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00329",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/14/Linguistic-Theories-Coincide-with-Misformalization-in-Temporal-Logic",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
   },
   {
     "abstract": "A code context model comprises source code elements and their relations relevant to a programming task. The capture and use of code context models in software tools can benefit software development practices, such as code navigation and search. Prior research has explored approaches that leverage either the structural information of code or interaction histories of developers with integrated development environments to automate the construction of code context models. However, these approaches primarily capture shallow syntactic and lexical features of code elements, with limited ability to capture contextual and structural dependencies among neighboring code elements. In this paper, we propose GNNContext, a novel approach for predicting code context models based on Graph Neural Networks. Our approach leverages code representation learning models to capture both the syntactic and semantic features of code elements, while employing Graph Neural Networks to learn the structural and contextual information among neighboring code elements in the code context models. To evaluate the effectiveness of our approach, we apply it to a dataset comprising 3,879 code context models that we derive from three Eclipse open-source projects. The evaluation results demonstrate that our proposed approach GNNContext can significantly outperform the state-of-the-art baseline for code context prediction, achieving average improvements of 62.79%, 56.60%, 73.50% and 81.89% in mean reciprocal rank, top-1, top-3, and top-5 recall rates, respectively, across predictions of varying steps. Moreover, our approach demonstrates robust performance in a cross-project evaluation setting. Our code is publicly available at https://github.com/ZXXYy/CodeContextModel .",
+    "authorIds": [
+      "0009-0001-9048-1930",
+      "0000-0001-7657-6653",
+      "0009-0002-2243-2077",
+      "0000-0002-5039-4082",
+      "0000-0002-4367-7201",
+      "0000-0003-4111-4189"
+    ],
     "authorInstitutions": "Xiaoye Zheng (Zhejiang University); Zhiyuan Wan (Zhejiang University); Shun Liu (Zhejiang University); Kaiwen Yang (Zhejiang University); David Lo (Singapore Management University); Xiaohu Yang (Zhejiang University)",
     "authors": [
       "Xiaoye Zheng",
@@ -7802,14 +8109,24 @@
       "Yueming Wu",
       "Yinxing Xue"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 14:40 - 14:50"
     ],
+    "doi": "10.1109/ase63991.2025.00170",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "62a688a3-5ac7-4902-849e-137c1aef876c",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "2046-2057",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Maintenance & Evolution 1"
     ],
@@ -7821,6 +8138,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00170",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/80/Demystifying-the-Evolution-of-Neural-Networks-with-BOM-Analysis-Insights-from-a-Larg",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -7833,14 +8151,24 @@
       "Agnia Sergeyuk",
       "Mali Izadi"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 16:20 - 16:30"
     ],
+    "doi": "10.1109/ase63991.2025.00276",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6339f72b-d7cc-4d6e-a699-6e3e5115545e",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "3346-3356",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Maintenance & Evolution 2"
     ],
@@ -7852,6 +8180,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00276",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/21/Prompt-with-Me-in-IDE-Structured-Prompt-Management-for-LLM-Driven-Software-Engineeri",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -8392,6 +8721,9 @@
   },
   {
     "abstract": "The translation of high-level abstract features into clear, and testable functional requirements (FRs) is a crucial step in software development, bridging the gap between user needs and technical specifications. In engineering practice, significant expert effort is needed for this translation. Our approach, EasyFR, streamlines the process by recommending Semantic Role Labeling (SRL) sequences for the given abstract features to guide Pre-trained Language Models (PLMs) in producing cohesive FR statements. By analyzing ten diverse datasets, we induce two variable SRL templates, each including two configurable parts. For concrete features, our proposed Key2Temp model can construct the appropriate variant of the SRL template by identifying a variable SRL template and placing the feature tokens in the appropriate slots. In this way, our approach reframes the process of requirement generation into a structured slot-filling activity. Experimental validation on four open datasets demonstrates that EasyFR outperforms three advanced Natural language generation (NLG) approaches, including GPT-4, particularly when existing FRs are available for training. The positive influence of our SRL template variant recommendations is further confirmed through an ablation study. We believe that our results indicate a notable step forward in the realm of automated requirements synthesis, holding potential to improve the process of requirements specification in future software projects.",
+    "authorIds": [
+      "0000-0002-6100-7068"
+    ],
     "authorInstitutions": "Xiaoli Lian (Beihang University, China)",
     "authors": [
       "Xiaoli Lian"
@@ -8551,14 +8883,24 @@
       "Hiroki Ikeuchi",
       "Kengo Tajiri"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 16:10 - 16:20"
     ],
+    "doi": "10.1109/ase63991.2025.00331",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "70a70548-ae60-4a03-a155-a9844962eae9",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "3861-3865",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing & Analysis 3"
     ],
@@ -8570,6 +8912,7 @@
       "NIER"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00331",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/16/LLM-Powered-Fully-Automated-Chaos-Engineering-Towards-Enabling-Anyone-to-Build-Resil",
       "https://arxiv.org/abs/2501.11107",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -8622,6 +8965,15 @@
   },
   {
     "abstract": "Context and Problem Statement. Given the increasing adoption of modern AI-enabled control systems (e.g., autonomous vehicles, drones), ensuring their safety and reliability has become a critical task in software testing. One prevalent approach to testing control systems is falsification, which aims to find an input signal that causes the control system to violate a formal safety specification using optimization algorithms. However, applying falsification to AI-enabled control systems poses two significant challenges: (1) it requires the system to execute numerous candidate test inputs, which can be time-consuming, particularly for systems with AI models that have many parameters, and (2) multiple safety requirements are typically defined as a conjunctive specification, which existing falsification methods struggle to cover comprehensively. In such contexts, developing a falsification framework tailored for AI-enabled control systems is of paramount importance. Methodology. This paper introduces Synthify, a falsification framework tailored for AI-enabled control systems, i.e., control systems equipped with AI controllers. Our approach performs falsification in a two-phase process. At the start, Synthify synthesizes a program that implements one or a few linear controllers to serve as a proxy for the AI controller. This proxy program mimics the AI controller’s functionality but is computationally more efficient. Then, Synthify employs the 𝜖-greedy strategy to sample a promising sub-specification from the conjunctive safety specification. It then uses a Simulated Annealing-based falsification algorithm to find violations of the sampled sub-specification for the control system. If a violation is spurious, Synthify refines the proxy program to perform more similarly to the original AI controller. Otherwise, it terminates the falsification process and report the found violations. Evaluation. We compare Synthify to PSY-TaLiRo, a state-of-the-art and industrial-strength falsification tool, on 8 publicly available control systems. On average, Synthify achieves a 83.5% higher success rate in falsification compared to PSY-TaLiRo with the same budget of falsification trial, and reveals 7.8× more safety violations than PSY-TaLiRo within the same time budget. Additionally, our method is 12.8× faster in finding a single safety violation than the baseline. The safety violations found by Synthify are also more diverse than those found by PSY-TaLiRo, covering 137.7% more sub-specifications. The implementation of Synthify, along with datasets and raw results, has been made available at https://github.com/soarsmu/Synthify . Future Work. Our work highlights several promising directions for future research, such as extending Synthify to AI-enabled control systems that handle more complex inputs like images. Another promising avenue is to integrate Synthify with other safety analysis techniques, such as runtime shields, to further enhance the reliability of AI-enabled control systems. This paper has been accepted for publication in ACM Transactions on Software Engineering and Methodology (TOSEM) on January 14, 2025, and is available at https://doi.org/10.1145/3715105 . Jieke Shi will be the presenting author.",
+    "authorIds": [
+      "0000-0002-0799-5018",
+      "0000-0001-5938-1918",
+      "0000-0003-3370-8585",
+      "0000-0002-1006-8493",
+      "0000-0003-0272-6860",
+      "0000-0002-8599-2197",
+      "0000-0002-4367-7201"
+    ],
     "authorInstitutions": "Jieke Shi (Singapore Management University); Zhou Yang (University of Alberta, Alberta Machine Intelligence Institute); Junda He (Singapore Management University); Bowen Xu (North Carolina State University); Dongsun Kim (Korea University); DongGyun Han (Royal Holloway, University of London); David Lo (Singapore Management University)",
     "authors": [
       "Jieke Shi",
@@ -9339,6 +9691,15 @@
   },
   {
     "abstract": "Code smells are anti-patterns that violate code understandability, re-usability, changeability, and maintainability. It is important to identify code smells and locate them in the code. For this purpose, automated detection of code smells is a sought-after feature for development tools; however, the design and evaluation of such tools depends on the quality of oracle datasets. The typical approach for creating an oracle dataset involves multiple developers independently inspecting and annotating code examples for their existing code smells. Since multiple inspectors cast votes about each code example, it is possible for the inspectors to disagree about the presence of smells. Such disagreements introduce ambiguity into how smells should be interpreted. Prior work has studied developer perceptions of code smells in traditional source code; however, smells in Infrastructure-as-Code (IaC) have not been investigated. To understand the real-world impact of disagreements among developers and their perceptions of IaC code smells, we conduct an empirical study on the oracle dataset of GLITCH—a state-of-the-art detection tool for security code smells in IaC. We analyze GLITCH’s oracle dataset for code smell issues, their types, and individual annotations of the inspectors. Furthermore, we investigate possible confounding factors associated with the incidences of developer misaligned perceptions of IaC code smells. Finally, we triangulate developer perceptions of code smells in traditional source code with our results on IaC. Our study reveals that unlike developer perceptions of smells in traditional source code, their perceptions of smells in IaC are more substantially impacted by subjective interpretation of smell types and their co-occurrence relationships. For instance, the interpretation of admins by default, empty passwords, and hard-coded secrets varies considerably among raters and are more susceptible to misidentification than other IaC code smells. Consequently, the manual identification of IaC code smells involves annotation disagreements among developers—46.3% of studied IaC code smell incidences have at least one dissenting vote among three inspectors. Meanwhile, only 1.6% of code smell incidences in traditional source code are affected by inspector bias stemming from these disagreements. Hence, relying solely on the majority voting, would not fully represent the breadth of interpretation of the IaC under scrutiny.",
+    "authorIds": [
+      "0009-0002-6626-1919",
+      "0000-0003-4148-5991",
+      "0000-0003-4286-9807",
+      "0000-0002-2428-4111",
+      "0000-0002-6612-9013",
+      "0000-0002-8790-252X",
+      "0000-0002-0193-3975"
+    ],
     "authorInstitutions": "Sogol Masoumzadeh (Mcgill University); Nuno Saavedra (INESC-ID and IST, University of Lisbon); Rungroj Maipradit (University of Waterloo); Lili Wei (McGill University); João F. Ferreira (Faculty of Engineering, University of Porto & INESC-ID); Daniel Varro (Linköping University / McGill University); Shane McIntosh (University of Waterloo)",
     "authors": [
       "Sogol Masoumzadeh",
@@ -10068,15 +10429,24 @@
       "Jiarong Wu",
       "Shing-Chi Cheung"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 14:40 - 14:50"
     ],
     "doi": "10.1109/ASE63991.2025.00183",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "85eb3406-6b34-437f-be4e-e6abb1be1ff5",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "2209-2221",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Fuzzing 2"
     ],
@@ -10088,10 +10458,11 @@
       "Research Papers"
     ],
     "urls": [
-      "https://conf.researchr.org/details/ase-2025/ase-2025-papers/203/LSPFuzz-Hunting-Bugs-in-Language-Servers",
       "https://doi.org/10.1109/ASE63991.2025.00183",
+      "https://conf.researchr.org/details/ase-2025/ase-2025-papers/203/LSPFuzz-Hunting-Bugs-in-Language-Servers",
       "https://scholar.henryhc.net/files/publications/2025/ASE2025-LSPFuzz.pdf",
-      "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
+      "https://conf.researchr.org/program/ase-2025/program-ase-2025/",
+      "https://doi.org/10.1109/ase63991.2025.00183"
     ]
   },
   {
@@ -10127,6 +10498,13 @@
   },
   {
     "abstract": "Jupyter notebooks have become central in data science, integrating code, text and output in a flexible environment. With the rise of machine learning (ML), notebooks are increasingly used for prototyping and data analysis. However, due to their dependence on complex ML libraries and the flexible notebook semantics that allow cells to be run in any order, notebooks are susceptible to software bugs that may lead to program crashes. This paper presents a comprehensive empirical study focusing on crashes in publicly available Python ML notebooks. We collect 64,031 notebooks containing 92,542 crashes from GitHub and Kaggle, and manually analyze a sample of 746 crashes across various aspects, including crash types and root causes. Our analysis identifies unique ML-specific crash types, such as tensor shape mismatches and dataset value errors that violate API constraints. Additionally, we highlight unique root causes tied to notebook semantics, including out-of-order execution and residual errors from previous cells, which have been largely overlooked in prior research. Furthermore, we identify the most error-prone ML libraries, and analyze crash distribution across ML pipeline stages. We find that over 40% of crashes stem from API misuse and notebook-specific issues. Crashes frequently occur when using ML libraries like TensorFlow/Keras and Torch. Additionally, over 70% of the crashes occur during data preparation, model training, and evaluation or prediction stages of the ML pipeline, while data visualization errors tend to be unique to ML notebooks.",
+    "authorIds": [
+      "0009-0007-4613-8960",
+      "0000-0001-8482-3917",
+      "0000-0003-2439-2136",
+      "0000-0003-0269-9268",
+      "0000-0002-8790-252X"
+    ],
     "authorInstitutions": "Yiran Wang (Linköping University); Willem Meijer (Linköping University); José Antonio Hernández López (Universidad de Murcia); Ulf Nilsson (Linköping University); Daniel Varro (Linköping University / McGill University)",
     "authors": [
       "Yiran Wang",
@@ -10221,14 +10599,24 @@
       "Samuel Tardieu",
       "Stefano Zacchiroli"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 14:30 - 14:40"
     ],
+    "doi": "10.1109/ase63991.2025.00181",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8a36b5ab-8302-49e0-bc0b-cf215a709005",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "2184-2195",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security 2"
     ],
@@ -10240,6 +10628,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00181",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/84/Altered-Histories-in-Version-Control-System-Repositories-Evidence-from-the-Trenches",
       "https://arxiv.org/pdf/2509.09294",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -10587,6 +10976,14 @@
   },
   {
     "abstract": "Cyber-physical systems (CPSs) are increasingly adopting deep neural networks (DNNs) as controllers, giving birth to AI-enabled CPSs. Despite their advantages, many concerns arise about the safety of DNN controllers. Numerous efforts have been made to detect system executions that violate safety specifications; however, once a violation is detected, to fix the issue, it is necessary to localise the parameters of the DNN controller responsible for the wrong decisions leading to the violation. This is particularly challenging, as it requires to consider a sequence of control decisions, rather than a single one, preceding the violation. To tackle this problem, we propose SpectAcle, that can localise the faulty parameters in DNN controllers. SpectAcle considers the DNN inferences preceding the specification violation and uses forward impact to determine the DNN parameters that are more relevant to the DNN outputs. Then, it identifies which of these parameters are responsible for the specification violation, by adapting classic suspiciousness metrics. Moreover, we propose two versions of SpectAcle, that consider differently the timestamps that precede the specification violation. We experimentally evaluate the effectiveness of SpectAcle on 6,067 faulty benchmarks, spanning over different application domains. The results show that SpectAcle can detect most of the faults.",
+    "authorIds": [
+      "0000-0003-3017-7977",
+      "0000-0002-3854-9846",
+      "0000-0002-6253-4062",
+      "0000-0001-7414-8057",
+      "0000-0001-7725-2618",
+      "0000-0001-8083-4352"
+    ],
     "authorInstitutions": "Deyun Lyu (National Institute of Informatics); Zhenya Zhang (Kyushu University); Paolo Arcaini (National Institute of Informatics); Xiao-Yi Zhang (University of Science and Technology Beijing); Fuyuki Ishikawa (National Institute of Informatics); Jianjun Zhao (Kyushu University)",
     "authors": [
       "Deyun Lyu",
@@ -10832,14 +11229,24 @@
       "Tong Liu",
       "Xi Luo"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 16:50 - 17:00"
     ],
+    "doi": "10.1109/ase63991.2025.00267",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "963c65b2-2ae8-4a04-83c2-b49c5654ac8f",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "3239-3250",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Repair 2"
     ],
@@ -10851,6 +11258,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00267",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/12/TrioXpert-An-automated-incident-management-framework-for-microservice-system",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -13009,14 +13417,24 @@
       "Mayasah Lami",
       "Anil Koyuncu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 16:30 - 16:40"
     ],
+    "doi": "10.1109/ase63991.2025.00350",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ad1f7b76-4255-4dca-a4fd-e0615dad5d3d",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "3958-3962",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Maintenance & Evolution 2"
     ],
@@ -13028,6 +13446,7 @@
       "NIER"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00350",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/35/Are-We-SOLID-Yet-An-Empirical-Study-on-Prompting-LLMs-to-Detect-Design-Principle-Vio",
       "https://arxiv.org/abs/2509.03093",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -13087,14 +13506,24 @@
       "Sadia Jahan",
       "Xiaoyin Wang"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 16:40 - 16:50"
     ],
+    "doi": "10.1109/ase63991.2025.00321",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ae76cf93-c53d-43e9-bb8c-648f477d4e1c",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "3809-3813",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Bug Understanding 2"
     ],
@@ -13106,6 +13535,7 @@
       "NIER"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00321",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/6/How-Does-ChatGPT-Make-Assumptions-When-Creating-Erroneous-Programs-",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -13300,14 +13730,24 @@
       "Chengyu Zhang",
       "Geguang Pu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 14:30 - 14:40"
     ],
+    "doi": "10.1109/ase63991.2025.00019",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b14f2058-f8b7-4adb-ad36-db7bff307b5f",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "129-140",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Formal Method & Verification 1"
     ],
@@ -13319,6 +13759,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00019",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/120/Diagnosing-Performance-Differences-in-Model-Checkers-via-Runtime-Guided-Problem-Gener",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -13418,14 +13859,24 @@
       "Minxue Pan",
       "Yu Zhou"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 14:50 - 15:00"
     ],
+    "doi": "10.1109/ase63991.2025.00228",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b1c4108b-4d2f-46f9-b5e8-2898c6a9c630",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "2783-2794",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Human & Social Aspects 1"
     ],
@@ -13437,6 +13888,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00228",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/236/Understanding-Feature-Request-Practice-on-GitHub-via-a-Large-Scale-Empirical-Study",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -13717,14 +14169,24 @@
       "Xing Hu",
       "Xin Xia"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 12:00 - 12:10"
     ],
+    "doi": "10.1109/ase63991.2025.00225",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b2d060b8-567d-47d8-a301-bc3e106dc719",
     "locations": [
       "Vista"
     ],
+    "pages": "2746-2758",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE4AI & AI4SE 1"
     ],
@@ -13736,6 +14198,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00225",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/230/HFUZZER-Testing-Large-Language-Models-for-Package-Hallucinations-via-Phrase-based-Fu",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -14048,14 +14511,24 @@
       "William Enck",
       "Laurie Williams"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 11:50 - 12:00"
     ],
+    "doi": "10.1109/ase63991.2025.00229",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ba53212c-4b62-431b-a627-c204c4dc7b26",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "2795-2807",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Log & Dependency 1"
     ],
@@ -14067,6 +14540,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00229",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/232/Which-Is-Better-For-Reducing-Outdated-And-Vulnerable-Dependencies-Pinning-Or-Floatin",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -14114,6 +14588,19 @@
   },
   {
     "abstract": "This article proposes LATTE, the first static binary taint analysis that is powered by a large language model (LLM). LATTE is superior to the state of the art (e.g., Emtaint, Arbiter, Karonte) in three aspects. First, LATTE is fully automated while prior static binary taint analyzers need rely on human expertise to manually customize taint propagation rules and vulnerability inspection rules. Second, LATTE is significantly effective in vulnerability detection, demonstrated by our comprehensive evaluations. For example, LATTE has found 37 new bugs in real-world firmware, which the baselines failed to find. Moreover, 10 of them have been assigned CVE numbers. Lastly, LATTE incurs remarkably low engineering cost, making it a cost-efficient and scalable solution for security researchers and practitioners. We strongly believe that LATTE opens up a new direction to harness the recent advance in LLMs to improve vulnerability analysis for binary programs.",
+    "authorIds": [
+      "0000-0002-8995-5924",
+      "0000-0002-0862-2491",
+      "0000-0002-8953-0782",
+      "0000-0002-0338-3145",
+      "0009-0006-7867-957X",
+      "0009-0001-5687-1265",
+      "0000-0002-9451-4031",
+      "0000-0001-7071-2976",
+      "0000-0002-5799-5876",
+      "0000-0003-0955-503X",
+      "0000-0002-6578-0680"
+    ],
     "authorInstitutions": "Puzhuo Liu (Ant Group & Tsinghua University); Chengnian Sun (University of Waterloo); Yaowen Zheng (Institute of Information Engineering at Chinese Academy of Sciences); Xuan Feng (Independent Researcher); Chuan Qin (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences); Yuncheng Wang (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, UCAS Beijing, China); Zhenyang Xu (University of Waterloo); Zhi Li (Institute of Information Engineering, Chinese Academy of Sciences, China); Peng Di (Ant Group & UNSW Sydney); Yu Jiang (Tsinghua university); Limin Sun (Institute of Information Engineering at Chinese Academy of Sciences; University of Chinese Academy of Sciences)",
     "authors": [
       "Puzhuo Liu",
@@ -14128,14 +14615,25 @@
       "Yu Jiang",
       "Limin Sun"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 18 Nov 2025 15:10 - 15:20"
     ],
+    "doi": "10.1145/3711816",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "bca0a6e1-b3d8-4b86-8cee-6b5778f10466",
+    "issue": "3",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "1-36",
+    "publicationDate": "2025-03-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Security 2"
     ],
@@ -14147,9 +14645,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3711816",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/35/LLM-Powered-Static-Binary-Taint-Analysis",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "34"
   },
   {
     "abstract": "Rust is a programming language that combines memory safety and low-level control, providing C-like performance while guaranteeing the absence of undefined behaviors by default. Rust’s growing popularity has prompted research on correct and idiomatic transpiling of existing code-bases to Rust. Existing work falls into two categories: rule-based and large language model (LLM)-based. While rule-based approaches are theoretically sound, they often yield unidiomatic and unsafe Rust code while targeting a few source languages, hindering maintainability and industrial application. In contrast, LLM-based approaches, while providing no guarantees, are polyglot and typically produce more idiomatic and safe Rust code. In this work, we present VERT, a formally correct, polyglot Rust translator with more idiomatic outputs. VERT supports any language that compiles to Web Assembly. Using the Web Assembly compiler, VERT obtains an oracle Rust program. Leveraging the LLM, VERT generates an idiomatic candidate Rust program. This candidate is verified against the oracle with model-checking to ensure equivalence.",
@@ -14161,14 +14661,24 @@
       "Joey Dodds",
       "Daniel Kroening"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 14:40 - 14:50"
     ],
+    "doi": "10.1109/ase63991.2025.00123",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "bf10f301-0f49-4ec4-bbb7-c296ab3a75d7",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "1453-1463",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Formal Method & Verification 1"
     ],
@@ -14180,6 +14690,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00123",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/57/VERT-Polyglot-Verified-Equivalent-Rust-Transpilation-with-Large-Language-Models",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -14624,6 +15135,11 @@
   },
   {
     "abstract": "Recent advancements in source code summarization have leveraged transformer-based pre-trained models, including Large Language Models of Code (LLMCs), to automate and improve the generation of code summaries. However, existing methods often focus on generating a single high-quality summary for a given source code, neglecting scenarios where the generated summary might be inadequate and alternative options are needed. In this paper, we introduce Variational Prefix Tuning (VPT), a novel approach that enhances pre-trained models’ ability to generate diverse yet accurate sets of summaries, allowing the user to choose the most suitable one for the given source code. Our method integrates a Conditional Variational Autoencoder (CVAE) framework as a modular component into pre-trained models, enabling us to model the distribution of observed target summaries and sample continuous embeddings to be used as prefixes to steer the generation of diverse outputs during decoding. Importantly, we construct our method in a parameter-efficient manner, eliminating the need for expensive model retraining, especially when using LLMCs. Furthermore, we employ a bi-criteria reranking method to select a subset of generated summaries, optimizing both the diversity and the accuracy of the options presented to users. We present extensive experimental evaluations using widely used datasets and current state-of-the-art pre-trained code summarization models to demonstrate the effectiveness of our approach and its adaptability across models.",
+    "authorIds": [
+      "0000-0003-4978-4128",
+      "0009-0001-9415-6887",
+      "0000-0001-5767-6683"
+    ],
     "authorInstitutions": "Junda Zhao (Department of Mechanical and Industrial Engineering, University of Toronto); Yuliang Song (Department of Mechanical and Industrial Engineering, University of Toronto); Eldan Cohen (Department of Mechanical and Industrial Engineering, University of Toronto)",
     "authors": [
       "Junda Zhao",
@@ -15189,14 +15705,24 @@
       "Mohammad Hamdaqa",
       "Björn Þór Jónsson"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 15:30 - 18:00"
     ],
+    "doi": "10.1109/ase63991.2025.00388",
     "eventType": "Demonstration",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cf8a9303-7727-4ae9-bc81-10599027263d",
     "locations": [
       "Walker Hall (Demo)"
     ],
+    "pages": "4114-4117",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Tools - LLMs and Agents"
     ],
@@ -15208,6 +15734,7 @@
       "Tool Demonstration Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00388",
       "https://conf.researchr.org/details/ase-2025/ase-2025-tool-demonstration-track/37/PROXiFY-A-Bytecode-Analysis-Tool-for-Detecting-and-Classifying-Proxy-Contracts-in-Et",
       "https://youtu.be/FuYs22_vosk",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -15565,14 +16092,24 @@
       "David Markvica",
       "Stefan Brunthaler"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 14:50 - 15:00"
     ],
+    "doi": "10.1109/ase63991.2025.00224",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d6e6417b-a723-4ce1-a92a-cc8e9e12208f",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "2733-2745",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Fuzzing 2"
     ],
@@ -15584,6 +16121,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00224",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/229/TEPHRA-Principled-Discovery-of-Fuzzer-Limitations",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -15675,14 +16213,24 @@
       "Michael D. Ernst",
       "Manu Sridharan"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 12:10 - 12:20"
     ],
+    "doi": "10.1109/ase63991.2025.00074",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d7f51949-039e-41e8-8c8e-e4ef7abaa684",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "828-840",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Repair 3"
     ],
@@ -15694,6 +16242,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00074",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/151/Repairing-Leaks-in-Resource-Wrappers",
       "https://arxiv.org/pdf/2510.03461",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -16153,6 +16702,14 @@
   },
   {
     "abstract": "As the adoption of LLMs becomes more widespread in software coding ecosystems, a pressing issue has emerged: Does the generated code contain social bias and unfairness, such as those related to age, gender, and race? This issue concerns the integrity, fairness, and ethical foundation of software applications that depend on the code generated by these models but are underexplored in the literature. This paper presents a novel bias testing framework that is specifically designed for code generation tasks. Based on this framework, we conduct an extensive empirical study on the biases in code generated by five widely studied LLMs (i.e., PALM-2-CodeChat-bison, Claude-instant-1, GPT-3.5-turbo, GPT-4-turbo, and GPT-4). Our findings reveal that biases are prevalent. For example, 13.47% to 49.10% of the codes generated by these LLMs have biased behaviors towards gender. Moreover, we study five bias mitigation prompt strategies that are commonly used in current code generation scenarios, i.e., zero-shot, one-shot, few-shot, and two Chain-of-Thought (CoT) prompts, with and without provided feedback-driven refinement. Our evaluation results illustrate that using direct prompt engineering strategies has limited effectiveness in mitigating bias, but our test execution feedback can help to reduce the ratio of code biases to a large extent (e.g., from 59.88% to 4.79% for GPT-4)\\footnote{This paper potentially contains offensive information for some groups.}.",
+    "authorIds": [
+      "0000-0002-4275-3006",
+      "0000-0003-0481-7264",
+      "0009-0001-0270-3004",
+      "0000-0002-1288-6502",
+      "0000-0003-3056-9962",
+      "0000-0001-7746-440X"
+    ],
     "authorInstitutions": "Dong Huang (The University of Hong Kong); Jie M. Zhang (King's College London); Qingwen Bu (Shanghai Jiao Tong University); Xiaofei Xie (Singapore Management University); Junjie Chen (Tianjin University); Heming Cui (University of Hong Kong)",
     "authors": [
       "Dong Huang",
@@ -16240,6 +16797,11 @@
   },
   {
     "abstract": "The performance of machine learned-based software defect prediction systems (SDPSs) is crucial in software development. Therefore, ensuring that the prediction outcomes are accurate and reliable is important. However, identifying inconsistencies in the software defect predictions made by these SDPSs remains a significant challenge. To address this issue, we propose the utilisation of Metamorphic Testing (MT) incorporating the “symmetry” metamorphic relation pattern (MRP) to transform the training datasets for training the follow-up systems. In contrast, original datasets are employed to train the source systems. By comparing the occurrence of inconsistent predictions between the source and follow-up systems and analysing the efficacy of this approach, we aim to shed light on its effectiveness. Additionally, Explainable Artificial Intelligence (XAI) is employed to explain the inconsistencies observed. The results demonstrate that the “symmetry” MRP can induce inconsistent predictions, and XAI techniques can effectively elucidate such inconsistencies. Furthermore, our research suggests that the MRs proposed in this study could serve as a valuable validation tool for SDPSs that use Support Vector Machine, Logistic Regression, and K-Nearest-Neighbors algorithms. Additionally, our approach proves to be effective for SDPSs utilising KMeans, Random Forests, and Convolutional Neural Networks, as it facilitates the identification of inconsistent predictions and explains these inconsistencies by highlighting the contributions of various features that require further investigation. Lastly, we discovered that the ordering of small-sized and imbalanced datasets can contribute to inconsistencies when employing the KMeans, Random Forests or Convolutional Neural Networks algorithm for SDPS. To further advance this research, future studies should consider expanding the proposed approach by incorporating additional MRPs in domains that utilise machine learning algorithms to identify and explain inconsistencies. Another promising research avenue involves investigating the relationship between data imbalance, dataset size, and MRPs. This direction could improve the identification of inconsistencies and lead to the development of more robust MRs.",
+    "authorIds": [
+      "0000-0002-4210-6183",
+      "",
+      ""
+    ],
     "authorInstitutions": "Chan Pak Yuen (Department of Computer Science, City University of Hong Kong, Kowloon, Hong Kong, China); Jacky Keung (City University of Hong Kong); Zhen Yang (Shandong University)",
     "authors": [
       "Chan Pak Yuen",
@@ -16474,15 +17036,24 @@
       "Gang (Gary) Tan",
       "Saeid Tizpaz-Niari"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 12:20 - 12:30"
     ],
     "doi": "10.1109/ASE63991.2025.00141",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e5c0cad9-33f0-48d3-9841-b65ba1ed1bc1",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "1680-1692",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Formal Method & Verification 2"
     ],
@@ -16494,11 +17065,12 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ASE63991.2025.00141",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/66/Uncovering-Discrimination-Clusters-Quantifying-and-Explaining-Systematic-Fairness-Vi",
       "https://ieeexplore.ieee.org/abstract/document/11334575",
-      "https://doi.org/10.1109/ASE63991.2025.00141",
       "https://arxiv.org/abs/2512.23769",
-      "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
+      "https://conf.researchr.org/program/ase-2025/program-ase-2025/",
+      "https://doi.org/10.1109/ase63991.2025.00141"
     ]
   },
   {
@@ -16609,14 +17181,24 @@
       "Xin Peng",
       "Zibin Zheng"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 15:10 - 15:20"
     ],
+    "doi": "10.1109/ase63991.2025.00057",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e7f08c9c-ea74-4a63-bb69-08254c418249",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "610-622",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Translation"
     ],
@@ -16628,6 +17210,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00057",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/143/RustRepoTrans-Repository-level-Context-Code-Translation-Benchmark-Targeting-Rust",
       "https://arxiv.org/abs/2411.13990",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -16993,14 +17576,24 @@
       "Islem BOUZENIA",
       "Michael Pradel"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 12:10 - 12:20"
     ],
+    "doi": "10.1109/ase63991.2025.00234",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "eb127353-1d7b-48e8-a8db-15c801b17c0c",
     "locations": [
       "Vista"
     ],
+    "pages": "2846-2857",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "SE4AI & AI4SE 2"
     ],
@@ -17012,6 +17605,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00234",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/40/Understanding-Software-Engineering-Agents-A-Study-of-Thought-Action-Result-Trajector",
       "https://arxiv.org/pdf/2506.18824",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -17069,6 +17663,12 @@
   },
   {
     "abstract": "As testified by new regulations like the European AI Act, worries about the human and societal impact of (autonomous) software technologies are becoming of public concern. Human, societal, and environmental values, alongside traditional software quality, are increasingly recognized as essential for sustainability and long-term well-being. Traditionally, systems are engineered taking into account business goals and technology drivers. Considering the growing awareness in the community, in this paper, we argue that engineering of systems should also consider human, societal, and environmental drivers. Then, we identify the macro and technological challenges by focusing on humans and their role while co-existing with digital systems. The first challenge considers humans in a proactive role when interacting with digital systems, i.e., taking initiative in making things happen instead of reacting to events. The second concerns humans having a reactive role in interacting with digital systems, i.e., humans interacting with digital systems as a reaction to events. The third challenge focuses on humans with a passive role, i.e., they experience, enjoy or even suffer the decisions and/or actions of digital systems. The fourth challenge concerns the duality of trust and trustworthiness, with humans playing any role. Building on the new human, societal, and environmental drivers and the macro and technological challenges, we identify a research roadmap of digital systems for humanity. The research roadmap is concretized in a number of research directions organized into four groups: development process, requirements engineering, software architecture and design, and verification and validation.",
+    "authorIds": [
+      "0000-0001-5951-1567",
+      "0000-0002-9417-660X",
+      "0000-0001-6734-1318",
+      "0000-0002-5438-2281"
+    ],
     "authorInstitutions": "Marco Autili (University of L'Aquila, Italy); Martina De Sanctis (Gran Sasso Science Institute); Paola Inverardi (Gran Sasso Science Institute); Patrizio Pelliccione (Gran Sasso Science Institute, L'Aquila, Italy)",
     "authors": [
       "Marco Autili",
@@ -17114,6 +17714,13 @@
   },
   {
     "abstract": "Robots often need to be reconfigurable—to customize, calibrate, or optimize robots operating in varying environments with different hardware. A particular challenge in robotics is the automated and dynamic reconfiguration to load and unload software components, as well as parameterizing them. Over the last decades, a large variety of software reconfiguration techniques has been presented in the literature, many specifically for robotics systems. Also many robotics frameworks support reconfiguration. Unfortunately, there is a lack of empirical data on the actual use of reconfiguration techniques in real robotics projects and on their realization in robotics frameworks. To advance reconfiguration techniques and support their adoption, we need to improve our empirical understanding of them in practice. We present a study of automated reconfiguration at runtime in the robotics domain. We determine the state-of-the art by reviewing 78 relevant publications on reconfiguration. We determine the state-of-practice by analyzing how four major robotics frameworks support reconfiguration, and how reconfiguration is realized in 48 robotics (sub-)systems. We contribute a detailed analysis of the design space of reconfiguration techniques. We identify trends and research gaps. Our results show a significant discrepancy between the state-of-the-art and the state-of-practice. While the scientific community focuses on complex structural reconfiguration, only parameter reconfiguration is widely used in practice. Our results support practitioners to realize reconfiguration in robotics systems, as well as they support researchers and tool builders to create more effective reconfiguration techniques that are adopted in practice.",
+    "authorIds": [
+      "0000-0002-2604-0487",
+      "0000-0002-1024-3941",
+      "0000-0002-5969-3521",
+      "0000-0002-5438-2281",
+      "0000-0002-3870-5167"
+    ],
     "authorInstitutions": "Patrizio Pelliccione (Gran Sasso Science Institute, L'Aquila, Italy); Sven Peldszus (IT University of Copenhagen); Davide Brugali (University of Bergamo, Italy); Daniel Strüber (Chalmers | University of Gothenburg / Radboud University); Thorsten Berger (Ruhr University Bochum)",
     "authors": [
       "Patrizio Pelliccione",
@@ -18412,14 +19019,24 @@
       "Lei Xu",
       "Weifeng Zhang"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 15:10 - 15:20"
     ],
+    "doi": "10.1109/ase63991.2025.00055",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "fcacf55c-b3cf-4cae-a1c0-fa27b1ef1f6d",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "584-596",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Analysis 1"
     ],
@@ -18431,6 +19048,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00055",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/141/EditFusion-Resolving-Code-Merge-Conflicts-via-Edit-Selection",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
