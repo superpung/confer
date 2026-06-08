@@ -24,7 +24,7 @@ const updatedLabel = generatedAt
 const year = new Date().getFullYear();
 ---
 
-<Layout title="confer — paper browser">
+<Layout title="confer — accepted conference & journal papers">
   <div class="app" id="app">
     <!-- Embedded manifest for the client app. -->
     <script type="application/json" id="venues-data" set:html={JSON.stringify(venues)} />
@@ -34,9 +34,9 @@ const year = new Date().getFullYear();
         <a class="brand" href="/">confer</a>
         <div class="sidebar-head-actions">
           <button class="icon-btn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme">
-            <span data-theme-icon>🌙</span>
+            <span data-theme-icon><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
           </button>
-          <button class="icon-btn sidebar-collapse-btn" data-sidebar-collapse title="Collapse sidebar" aria-label="Collapse sidebar">«</button>
+          <button class="icon-btn sidebar-collapse-btn" data-sidebar-collapse title="Collapse sidebar" aria-label="Collapse sidebar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
         </div>
       </div>
 
@@ -113,13 +113,13 @@ const year = new Date().getFullYear();
 
     <main class="content" id="content">
       <header class="topbar">
-        <button class="icon-btn sidebar-toggle" data-sidebar-toggle aria-label="Show venues">☰</button>
+        <button class="icon-btn sidebar-toggle" data-sidebar-toggle aria-label="Show venues"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
         <div class="search-wrap">
-          <span class="search-icon" aria-hidden="true">🔍</span>
+          <span class="search-icon" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
           <input id="searchInput" class="global-search" type="search"
             placeholder="Search… try author: title: inst:" aria-label="Search papers" />
           <kbd class="search-kbd">⌘K</kbd>
-          <button class="search-clear" data-search-clear aria-label="Clear search" hidden>×</button>
+          <button class="search-clear" data-search-clear aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
         <select id="sortSelect" class="topbar-select" aria-label="Sort">
           <option value="venue">Sort: Venue</option>
@@ -127,8 +127,8 @@ const year = new Date().getFullYear();
           <option value="title">Sort: Title</option>
           <option value="authors">Sort: Authors</option>
         </select>
-        <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts">⌘</button>
-        <button class="icon-btn rail-toggle" data-rail-toggle title="Show insights" aria-label="Show insights">📊</button>
+        <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></button>
+        <button class="icon-btn rail-toggle" data-rail-toggle title="Show insights" aria-label="Show insights"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="9"/><line x1="18" y1="20" x2="18" y2="4"/></svg></button>
       </header>
 
       <div class="controls">
@@ -137,9 +137,9 @@ const year = new Date().getFullYear();
         </button>
         <label class="fav-toggle">
           <input type="checkbox" id="favOnly" />
-          <span>★ Only favorites</span>
+          <span class="favlabel"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Only favorites</span>
         </label>
-        <button class="chip-btn" data-open-saved type="button">☆ Saved</button>
+        <button class="chip-btn" data-open-saved type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Saved</button>
         <div class="result-summary" id="resultSummary">Select a venue to begin.</div>
       </div>
 
@@ -166,18 +166,18 @@ const year = new Date().getFullYear();
     <aside class="rail" id="rail" aria-label="Insights">
       <div class="rail-head">
         <span class="rail-title">Insights</span>
-        <button class="icon-btn rail-collapse-btn" data-rail-collapse title="Hide insights" aria-label="Hide insights">»</button>
+        <button class="icon-btn rail-collapse-btn" data-rail-collapse title="Hide insights" aria-label="Hide insights"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
       </div>
       <p class="rail-note">Live stats for the papers in view. Click a bar to filter.</p>
       <div class="rail-body" id="railBody"></div>
     </aside>
 
-    <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>↑</button>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
     <div class="toast" id="toast" role="status" hidden></div>
 
     <div class="modal" id="helpModal" hidden>
       <div class="modal-card" role="dialog" aria-modal="true" aria-label="Help">
-        <div class="modal-head"><h2>Search &amp; shortcuts</h2><button class="icon-btn" data-modal-close aria-label="Close">×</button></div>
+        <div class="modal-head"><h2>Search &amp; shortcuts</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
         <h3 class="modal-subhead">Search fields</h3>
         <p class="modal-hint">Prefix a term to scope it; combine terms (all must match); quote phrases.</p>
         <dl class="shortcuts">
@@ -200,8 +200,8 @@ const year = new Date().getFullYear();
 
     <div class="modal" id="savedModal" hidden>
       <div class="modal-card" role="dialog" aria-modal="true" aria-label="Saved searches">
-        <div class="modal-head"><h2>Saved searches</h2><button class="icon-btn" data-modal-close aria-label="Close">×</button></div>
-        <div class="modal-actions"><button class="text-btn" data-save-current type="button">＋ Save current view</button></div>
+        <div class="modal-head"><h2>Saved searches</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+        <div class="modal-actions"><button class="text-btn btn-ico" data-save-current type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Save current view</button></div>
         <div id="savedList" class="saved-list"></div>
       </div>
     </div>

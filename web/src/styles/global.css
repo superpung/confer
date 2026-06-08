@@ -67,6 +67,19 @@ body {
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-dark); }
+
+/* Icons: inline SVGs that inherit the current text color. */
+.ic {
+  width: 18px; height: 18px; display: block; flex: 0 0 auto;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ic--fill { fill: currentColor; stroke: none; }
+.ic--sm { width: 14px; height: 14px; }
+.favlabel { display: inline-flex; align-items: center; gap: 6px; }
+.btn-ico { display: inline-flex; align-items: center; gap: 6px; }
+.search-icon .ic { width: 16px; height: 16px; }
+
 kbd {
   font-family: var(--sans);
   font-size: 11px;

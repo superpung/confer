@@ -16,6 +16,15 @@ const $ = <T extends HTMLElement = HTMLElement>(sel: string) => document.querySe
 const ESC: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
 const esc = (s: string) => String(s).replace(/[&<>"']/g, (c) => ESC[c]);
 
+// Inline SVG icons (Lucide-style, inherit currentColor via the .ic class).
+const ICONS = {
+  moon: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+  sun: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>',
+  star: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+  starFilled: '<svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+  externalLink: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+};
+
 function readJson<T>(key: string, fallback: T): T {
   try {
     const raw = localStorage.getItem(key);
@@ -293,10 +302,10 @@ function cardHtml(p: Paper, v: string): string {
     </div>
     <h2 class="paper-title">${esc(p.title)}</h2>
     <p class="paper-authors">${authors}</p>
-    <button class="icon-btn favorite-button" data-fav aria-pressed="${fav}" title="${fav ? 'Remove from favorites' : 'Save to favorites'}">${fav ? '★' : '☆'}</button>
+    <button class="icon-btn favorite-button" data-fav aria-pressed="${fav}" title="${fav ? 'Remove from favorites' : 'Save to favorites'}">${fav ? ICONS.starFilled : ICONS.star}</button>
     ${disc}
     ${tracks || extra ? `<div class="chips">${tracks}${extra}</div>` : ''}
-    ${p.urls[0] ? `<a class="icon-btn program-link" href="${esc(p.urls[0])}" target="_blank" rel="noreferrer" title="Open program page" aria-label="Open program page">↗</a>` : ''}
+    ${p.urls[0] ? `<a class="icon-btn program-link" href="${esc(p.urls[0])}" target="_blank" rel="noreferrer" title="Open program page" aria-label="Open program page">${ICONS.externalLink}</a>` : ''}
   </article>`;
 }
 
@@ -535,7 +544,7 @@ function closeModals() { document.querySelectorAll<HTMLElement>('.modal').forEac
 // --- theme -------------------------------------------------------------
 function reflectTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';
-  document.querySelectorAll('[data-theme-icon]').forEach((el) => { el.textContent = dark ? '☀️' : '🌙'; });
+  document.querySelectorAll('[data-theme-icon]').forEach((el) => { el.innerHTML = dark ? ICONS.sun : ICONS.moon; });
 }
 function toggleTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';

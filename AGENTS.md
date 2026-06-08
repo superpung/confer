@@ -214,3 +214,17 @@ npm run build                     # static build → web/dist/ (what Netlify pub
   pre-rendered page with interactivity in a client island (`scripts/app.ts`).
 - **Tests:** `pytest` in `scraper/`, driven by cached HTML in `tests/fixtures/` so they
   run offline.
+
+## Known issues
+
+- **iOS Safari ghost layer (unsolved).** Toggling the theme, opening/closing the
+  mobile sidebar drawer, or opening a modal can leave a stale color/shadow band at
+  the **bottom** of the screen until a reload. It's a Safari compositor bug: it fails
+  to repaint fixed full-screen layers / the safe-area canvas when colors change or a
+  layer is created/destroyed. Things tried that did **not** fully fix it: `viewport-fit=cover`
+  + `env()` safe-area insets, a `theme-color` meta, JS repaint nudges (background /
+  `color-scheme` / `backdrop-filter` off-for-a-frame), a real fixed `.app-bg` element,
+  and switching scrim/modals from `display` toggling to `opacity`/`visibility`. We
+  mirrored the Astro docs setup (no `viewport-fit=cover`; `color-scheme` keyed by
+  `data-theme`) which is the cleanest baseline, but the band can still appear. Treat as
+  a known Safari limitation; revisit if Safari fixes the underlying repaint behavior.
