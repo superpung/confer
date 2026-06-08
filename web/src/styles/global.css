@@ -212,7 +212,9 @@ html.is-rail-collapsed { --col-right: 0; }
 .series-check { flex: 0 0 auto; width: auto; min-height: 0; margin-right: 4px; accent-color: var(--accent); cursor: pointer; }
 .venue-series-body { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.22s ease; }
 .venue-series.is-collapsed .venue-series-body { grid-template-rows: 0fr; }
-.venue-series-inner { display: flex; flex-direction: column; gap: 2px; min-height: 0; overflow: hidden; padding-left: 18px; }
+/* padding-top matches the inter-row gap so the series head and the first year
+   row don't have touching hover/selected backgrounds (clipped when collapsed). */
+.venue-series-inner { display: flex; flex-direction: column; gap: 2px; min-height: 0; overflow: hidden; padding: 2px 0 0 18px; }
 .year-row { font-size: 12.5px; }
 .year-row .venue-row-name { color: var(--text-soft); }
 
@@ -318,6 +320,8 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .filter-chip button { border: none; background: none; color: inherit; cursor: pointer; font-size: 14px; line-height: 1; padding: 0 2px; }
 .filter-chip button:hover { color: var(--text); }
+.filter-clear { border: none; background: none; cursor: pointer; font: inherit; font-size: 12px; font-weight: 500; color: var(--muted); padding: 4px 6px; }
+.filter-clear:hover { color: var(--accent); }
 
 /* Facets --------------------------------------------------------------- */
 /* Animated collapse: the clip wrapper hides the panel (incl. its margin) at 0fr. */
@@ -377,6 +381,7 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .paper-card:hover { border-color: var(--line-strong); box-shadow: var(--shadow); }
 .paper-card.is-selected { border-color: var(--accent); }
+.paper-card.is-focused { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
 
 .card-select { position: absolute; top: 20px; left: 18px; }
 .card-select input { width: auto; min-height: 0; accent-color: var(--accent); cursor: pointer; }

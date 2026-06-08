@@ -92,7 +92,7 @@ function instList(p: Paper): string[] {
 }
 
 // --- field-prefixed search ("author:", "title:", "inst:", …) ----------
-type Term = { field: string; value: string };
+type Term = { field: string; value: string; neg: boolean };
 const FIELD_ALIASES: Record<string, string> = {
   title: 'title', t: 'title',
   author: 'author', authors: 'author', au: 'author', a: 'author',
@@ -108,17 +108,23 @@ const FIELD_ALIASES: Record<string, string> = {
   publisher: 'publisher',
   id: 'id', year: 'year',
 };
-/** Tokenize into AND terms; supports field:"quoted phrase", field:bare, "quoted", bare. */
+/** Tokenize into AND terms; supports field:"quoted phrase", field:bare, "quoted",
+ *  bare, and a leading "-" to exclude (e.g. -author:doe, -"tool demo"). */
 function parseQuery(q: string): Term[] {
   const terms: Term[] = [];
-  const re = /(\w+):"([^"]*)"|(\w+):(\S+)|"([^"]*)"|(\S+)/g;
+  const re = /(-?)(?:(\w+):"([^"]*)"|(\w+):(\S+)|"([^"]*)"|(\S+))/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(q))) {
-    if (m[1] !== undefined) terms.push({ field: FIELD_ALIASES[m[1].toLowerCase()] ?? 'any', value: m[2] });
-    else if (m[3] !== undefined) terms.push({ field: FIELD_ALIASES[m[3].toLowerCase()] ?? 'any', value: m[4] });
-    else terms.push({ field: 'any', value: (m[5] ?? m[6]) as string });
+    const neg = m[1] === '-';
+    let field = 'any';
+    let value = '';
+    if (m[2] !== undefined) { field = FIELD_ALIASES[m[2].toLowerCase()] ?? 'any'; value = m[3]; }
+    else if (m[4] !== undefined) { field = FIELD_ALIASES[m[4].toLowerCase()] ?? 'any'; value = m[5]; }
+    else value = (m[6] ?? m[7]) as string;
+    value = value.toLowerCase();
+    if (value) terms.push({ field, value, neg });
   }
-  return terms.map((t) => ({ field: t.field, value: t.value.toLowerCase() })).filter((t) => t.value !== '');
+  return terms;
 }
 function fieldText(p: Paper, field: string): string {
   switch (field) {
@@ -147,7 +153,8 @@ function matchQuery(row: { p: Paper; v: string }, terms: Term[]): boolean {
     else if (t.field === 'venue') hay = `${venue?.name ?? ''} ${venue?.series ?? ''} ${v}`.toLowerCase();
     else if (t.field === 'year') hay = String(venue?.year ?? '');
     else hay = fieldText(p, t.field);
-    if (!hay.includes(t.value)) return false;
+    const hit = hay.includes(t.value);
+    if (t.neg ? hit : !hit) return false;
   }
   return true;
 }
@@ -249,10 +256,18 @@ function matches(row: { p: Paper; v: string }): boolean {
 }
 function sortRows(rows: { p: Paper; v: string }[]) {
   const s = state.sort;
+  const dateKey = (r: { p: Paper; v: string }) =>
+    r.p.publicationDate || (venueById.get(r.v)?.year ? String(venueById.get(r.v)!.year) : '');
   return rows.sort((a, b) => {
     if (s === 'title') return a.p.title.localeCompare(b.p.title);
     if (s === 'authors') return (a.p.authors[0] ?? '').localeCompare(b.p.authors[0] ?? '');
     if (s === 'id') return a.p.id.localeCompare(b.p.id, undefined, { numeric: true });
+    if (s === 'date') {
+      const da = dateKey(a); const db = dateKey(b);
+      if (da && db && da !== db) return db.localeCompare(da); // newest first
+      if (!da !== !db) return da ? -1 : 1;                    // undated last
+      return a.p.id.localeCompare(b.p.id, undefined, { numeric: true });
+    }
     // venue: group by manifest order, then id
     if (a.v !== b.v) return manifest.findIndex((m) => m.id === a.v) - manifest.findIndex((m) => m.id === b.v);
     return a.p.id.localeCompare(b.p.id, undefined, { numeric: true });
@@ -385,10 +400,24 @@ function renderActiveFilters() {
   const chips: string[] = [];
   const add = (kind: string, val: string, label: string) =>
     chips.push(`<span class="filter-chip">${esc(label)}<button data-remove-filter data-kind="${kind}" data-val="${esc(val)}" aria-label="Remove">×</button></span>`);
+  if (state.query) add('query', '', `“${state.query}”`);
   state.tracks.forEach((t) => add('track', t, t));
   state.events.forEach((e) => add('event', e, e));
   state.venuesFacet.forEach((v) => add('venue', v, venueById.get(v)?.name ?? v));
+  if (chips.length > 1) {
+    chips.push('<button class="filter-clear" data-clear-filters type="button">Clear all</button>');
+  }
   els.active.innerHTML = chips.join('');
+}
+
+function clearFilters() {
+  state.query = '';
+  state.tracks.clear();
+  state.events.clear();
+  state.venuesFacet.clear();
+  state.shown = PAGE;
+  writeUrl();
+  render();
 }
 
 // --- right rail: insights for the current view ------------------------
@@ -700,11 +729,17 @@ function wire() {
     groupEl?.classList.toggle('is-collapsed', open);
   });
   els.active.addEventListener('click', (e) => {
-    const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-remove-filter]');
+    const target = e.target as HTMLElement;
+    if (target.closest('[data-clear-filters]')) { clearFilters(); return; }
+    const btn = target.closest<HTMLElement>('[data-remove-filter]');
     if (!btn) return;
-    const set = btn.dataset.kind === 'track' ? state.tracks : btn.dataset.kind === 'event' ? state.events : state.venuesFacet;
-    set.delete(btn.dataset.val ?? '');
-    writeUrl(); render();
+    const kind = btn.dataset.kind;
+    if (kind === 'query') { state.query = ''; }
+    else {
+      const set = kind === 'track' ? state.tracks : kind === 'event' ? state.events : state.venuesFacet;
+      set.delete(btn.dataset.val ?? '');
+    }
+    state.shown = PAGE; writeUrl(); render();
   });
 
   // paper list delegation
@@ -803,14 +838,59 @@ function wire() {
   window.addEventListener('scroll', () => { back.hidden = window.scrollY < 400; }, { passive: true });
 
   // keyboard shortcuts
+  const cards = () => [...els.list.querySelectorAll<HTMLElement>('.paper-card')];
+  const focusedCard = () => els.list.querySelector<HTMLElement>('.paper-card.is-focused');
+  const moveFocus = (delta: number) => {
+    const list = cards();
+    if (!list.length) return;
+    const cur = list.findIndex((c) => c.classList.contains('is-focused'));
+    const i = Math.max(0, Math.min(cur < 0 ? (delta > 0 ? 0 : list.length - 1) : cur + delta, list.length - 1));
+    list.forEach((c, j) => c.classList.toggle('is-focused', j === i));
+    list[i].scrollIntoView({ block: 'nearest' });
+  };
+  const toggleHelp = () => { const m = $('#helpModal'); m.hidden = !m.hidden; };
+  let lastG = 0;
   window.addEventListener('keydown', (e) => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test((e.target as HTMLElement).tagName);
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); els.search.focus(); }
-    else if ((e.metaKey || e.ctrlKey) && e.key === '/') { e.preventDefault(); const m = $('#helpModal'); m.hidden = !m.hidden; }
-    else if (e.key === 'Escape') {
-      if (document.activeElement === els.search && state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }
-      else { closeModals(); $('#app').classList.remove('sidebar-open'); }
-    } else if (e.key === 'f' && !typing) { const open = els.facetsWrap.classList.toggle('is-open'); $('[data-facets-toggle]').setAttribute('aria-expanded', String(open)); }
+    // Available even while typing:
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); els.search.focus(); return; }
+    if ((e.metaKey || e.ctrlKey) && e.key === '/') { e.preventDefault(); toggleHelp(); return; }
+    if (e.key === 'Escape') {
+      if (document.activeElement === els.search) {
+        if (state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }
+        els.search.blur();
+      } else { closeModals(); $('#app').classList.remove('sidebar-open'); }
+      return;
+    }
+    // Single-key shortcuts: only when not typing and unmodified.
+    if (typing || e.metaKey || e.ctrlKey || e.altKey) return;
+    switch (e.key) {
+      case '/': e.preventDefault(); els.search.focus(); break;
+      case '?': toggleHelp(); break;
+      case 'f': { const open = els.facetsWrap.classList.toggle('is-open'); $('[data-facets-toggle]').setAttribute('aria-expanded', String(open)); break; }
+      case 't': toggleTheme(); break;
+      case '[': setSidebarCollapsed(!document.documentElement.classList.contains('is-sidebar-collapsed')); break;
+      case ']': setRailCollapsed(!document.documentElement.classList.contains('is-rail-collapsed')); break;
+      case 'j': e.preventDefault(); moveFocus(1); break;
+      case 'k': e.preventDefault(); moveFocus(-1); break;
+      case 'o': focusedCard()?.querySelector<HTMLButtonElement>('[data-card-toggle]')?.click(); break;
+      case 's': {
+        const card = focusedCard();
+        if (!card) break;
+        const k = card.dataset.key ?? '';
+        if (state.favs.has(k)) state.favs.delete(k); else state.favs.add(k);
+        writeJson(K_FAVS, [...state.favs].sort());
+        render();
+        els.list.querySelector<HTMLElement>(`.paper-card[data-key="${CSS.escape(k)}"]`)?.classList.add('is-focused');
+        break;
+      }
+      case 'G': window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); break;
+      case 'g': {
+        const now = Date.now();
+        if (now - lastG < 500) { window.scrollTo({ top: 0, behavior: 'smooth' }); lastG = 0; } else lastG = now;
+        break;
+      }
+    }
   });
 }
 

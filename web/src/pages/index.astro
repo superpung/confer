@@ -137,6 +137,7 @@ const year = new Date().getFullYear();
         </div>
         <select id="sortSelect" class="topbar-select" aria-label="Sort">
           <option value="venue">Sort: Venue</option>
+          <option value="date">Sort: Date</option>
           <option value="id">Sort: Paper ID</option>
           <option value="title">Sort: Title</option>
           <option value="authors">Sort: Authors</option>
@@ -203,14 +204,21 @@ const year = new Date().getFullYear();
           <div><dt><code>doi:</code></dt><dd>Match DOI metadata</dd></div>
           <div><dt><code>keyword:</code></dt><dd>Match indexed keywords / concepts</dd></div>
           <div><dt><code>container:</code></dt><dd>Match journal or proceedings metadata</dd></div>
+          <div><dt><code>-term</code></dt><dd>Exclude — e.g. <code>-track:demo</code></dd></div>
           <div><dt>plain text</dt><dd>Matches anything</dd></div>
         </dl>
         <h3 class="modal-subhead">Keyboard</h3>
         <dl class="shortcuts">
-          <div><dt><kbd>⌘</kbd><kbd>K</kbd></dt><dd>Focus search</dd></div>
-          <div><dt><kbd>Esc</kbd></dt><dd>Clear search / close</dd></div>
-          <div><dt><kbd>⌘</kbd><kbd>/</kbd></dt><dd>Toggle this panel</dd></div>
+          <div><dt><kbd>⌘</kbd><kbd>K</kbd> / <kbd>/</kbd></dt><dd>Focus search</dd></div>
+          <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>Move between papers</dd></div>
+          <div><dt><kbd>o</kbd></dt><dd>Expand / collapse the focused paper</dd></div>
+          <div><dt><kbd>s</kbd></dt><dd>Star the focused paper</dd></div>
           <div><dt><kbd>f</kbd></dt><dd>Toggle filters</dd></div>
+          <div><dt><kbd>t</kbd></dt><dd>Toggle theme</dd></div>
+          <div><dt><kbd>[</kbd> / <kbd>]</kbd></dt><dd>Collapse sidebar / insights</dd></div>
+          <div><dt><kbd>g</kbd><kbd>g</kbd> / <kbd>G</kbd></dt><dd>Jump to top / bottom</dd></div>
+          <div><dt><kbd>?</kbd> / <kbd>⌘</kbd><kbd>/</kbd></dt><dd>Toggle this panel</dd></div>
+          <div><dt><kbd>Esc</kbd></dt><dd>Clear search / close</dd></div>
         </dl>
       </div>
     </div>
