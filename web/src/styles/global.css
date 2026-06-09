@@ -17,6 +17,8 @@
   --favorite-soft: #fdf3ec;
   --shadow: 0 1px 2px rgba(26, 26, 24, 0.04), 0 8px 24px rgba(26, 26, 24, 0.06);
   --radius: 12px;
+  /* Unified hover/active transition for all interactive controls. */
+  --hover-tr: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   --sidebar-w: 280px;
   --rail-w: 300px;
   --topbar-height: 67px;
@@ -66,8 +68,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
 a:hover { color: var(--accent-dark); }
+
+/* Unified hover animation: every interactive control eases its highlight. */
+button, select, .chip, .group-chip-main, .group-chip-x, .pop-row, .pop-action,
+.set-mini, .set-add, .tag-x, .saved-load, .saved-del, .filter-chip button {
+  transition: var(--hover-tr);
+}
 
 /* Icons: inline SVGs that inherit the current text color. */
 .ic {
@@ -333,9 +341,13 @@ html.is-rail-collapsed { --col-right: 0; }
 .chip-btn:hover, .chip-btn[aria-expanded="true"] { background: var(--panel-hover); color: var(--text); border-color: var(--accent); }
 .chip-btn-count { min-width: 17px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 600; padding: 1px 6px; text-align: center; }
 .collection-filter {
+  -webkit-appearance: none; appearance: none;
   border: 1px solid var(--line-strong); border-radius: 999px;
   background: var(--panel); color: var(--muted);
-  font: inherit; font-size: 13px; font-weight: 500; padding: 6px 12px; cursor: pointer; max-width: 220px;
+  /* custom caret with comfortable breathing room from the right edge */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23878172' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center;
+  font: inherit; font-size: 13px; font-weight: 500; padding: 6px 32px 6px 14px; cursor: pointer; max-width: 240px;
 }
 .collection-filter[hidden] { display: none; }
 .collection-filter:hover { border-color: var(--accent); color: var(--text); }
@@ -442,8 +454,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .collect-btn:hover { border-color: var(--accent); color: var(--accent); }
 .collect-btn.is-on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
 
-/* User tags on a card */
-.card-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; }
+/* User tags ride in the chips row (no dedicated line). */
 .chip-tag {
   display: inline-flex; align-items: center; gap: 4px; cursor: pointer;
   border-color: var(--line-strong); background: var(--panel);
@@ -451,12 +462,17 @@ html.is-rail-collapsed { --col-right: 0; }
 .chip-tag:hover { border-color: var(--accent); color: var(--accent-dark); }
 .tag-x { display: inline-grid; place-items: center; cursor: pointer; color: var(--faint); font-size: 13px; line-height: 1; }
 .tag-x:hover { color: var(--favorite); }
-.tag-add {
+/* "+ tag" affordance — hidden until the card is hovered/focused so it doesn't
+   take permanent space; always shown on touch (no hover) when tags exist. */
+.chip-add {
+  display: none; align-items: center;
   border: 1px dashed var(--line-strong); border-radius: 999px;
   background: none; color: var(--faint); cursor: pointer;
   font: inherit; font-size: 11.5px; font-weight: 500; padding: 3px 10px;
+  transition: var(--hover-tr);
 }
-.tag-add:hover { border-color: var(--accent); color: var(--accent); }
+.chip-add:hover { border-color: var(--accent); color: var(--accent); }
+.paper-card:hover .chip-add, .paper-card:focus-within .chip-add { display: inline-flex; }
 
 .compact-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 13px 0 0; color: var(--muted); font-size: 12.5px; }
 .meta-item { max-width: min(100%, 340px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -593,8 +609,10 @@ html.is-rail-collapsed { --col-right: 0; }
 .settings-body { overflow-y: auto; margin: 8px -4px 0; padding: 0 4px; }
 .set-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .set-section { margin-bottom: 18px; }
-.set-title { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; color: var(--text); font-size: 13px; font-weight: 600; }
-.set-title .set-item-meta { font-weight: 500; }
+/* Section labels reuse the app-wide "quiet uppercase" treatment shared by the
+   sidebar category heads, facet titles and rail section titles. */
+.set-title { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.set-title .set-item-meta { font-weight: 600; }
 .set-note { margin: 0 0 8px; color: var(--faint); font-size: 12px; }
 .set-empty { color: var(--muted); font-size: 13px; }
 .set-item { border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; margin-bottom: 8px; }
@@ -607,11 +625,13 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-mini-del { color: var(--faint); }
 .set-mini-del:hover { color: var(--favorite); }
 .set-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 9px; }
-.set-add-series {
+.set-add {
+  display: inline-grid; place-items: center; width: 22px; height: 22px;
   border: 1px dashed var(--line-strong); border-radius: 999px;
   background: none; color: var(--faint); cursor: pointer;
-  font: inherit; font-size: 11.5px; padding: 3px 8px;
+  font: inherit; font-size: 15px; line-height: 1; padding: 0;
 }
+.set-add:hover { border-color: var(--accent); color: var(--accent); }
 .set-raw {
   margin: 0; max-height: 200px; overflow: auto;
   border: 1px solid var(--line); border-radius: 9px; background: var(--panel-soft);
@@ -619,6 +639,26 @@ html.is-rail-collapsed { --col-right: 0; }
   font-family: var(--mono, ui-monospace, monospace); font-size: 11.5px; line-height: 1.5;
   white-space: pre-wrap; word-break: break-word;
 }
+
+/* Text prompt modal (replaces window.prompt) --------------------------- */
+.modal-card--prompt { width: min(380px, 100%); }
+.prompt-input {
+  width: 100%; min-height: 40px; box-sizing: border-box;
+  border: 1px solid var(--line-strong); border-radius: 9px;
+  background: var(--panel); color: var(--text);
+  font: inherit; font-size: 14px; padding: 8px 12px; outline: none;
+  transition: var(--hover-tr);
+}
+.prompt-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.14); }
+.prompt-hint { margin: 6px 2px 0; color: var(--faint); font-size: 12px; }
+.prompt-hint[hidden] { display: none; }
+.prompt-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
+.text-btn--primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.text-btn--primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+
+/* Click feedback for toggle buttons (collection bookmark, series group). */
+@keyframes btn-pop { 0% { transform: scale(1); } 40% { transform: scale(1.22); } 100% { transform: scale(1); } }
+.is-pop { animation: btn-pop 0.26s ease; }
 
 /* Right rail (insights) ------------------------------------------------ */
 .rail {
@@ -803,7 +843,11 @@ html.is-rail-collapsed { --col-right: 0; }
   .paper-id { font-size: 11px; }
   .paper-title { font-size: 15.5px; margin: 6px 0 4px; line-height: 1.28; }
   .paper-authors { font-size: 12.5px; line-height: 1.45; }
-  .chips { display: none; }                  /* track shortcuts: desktop-only */
+  /* Track chips are a desktop affordance; tags (user data) stay visible. */
+  .chips { display: none; }
+  .chips.has-tags { display: flex; }
+  .chips.has-tags .chip-track, .chips.has-tags .chip:not(.chip-tag) { display: none; }
+  .chips.has-tags .chip-add { display: inline-flex; }
   .paper-disc { font-size: 13px; }
   .disc-text { font-size: 13px; line-height: 1.55; }
   .collect-btn { top: 10px; right: 10px; width: 30px; height: 30px; font-size: 15px; }

@@ -17,6 +17,16 @@ const PAGE = 200;
 
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 
+// Sanitize free-text the user types for names/tags: strip control chars, collapse
+// whitespace, trim, and cap length so it can't break the layout. (Output is also
+// HTML-escaped via esc() at render time, so this is about tidiness, not safety.)
+const NAME_MAX = 40;
+const TAG_MAX = 24;
+function cleanInput(s: string, max = NAME_MAX): string {
+  // eslint-disable-next-line no-control-regex
+  return s.replace(/[\x00-\x1f\x7f]+/g, '').replace(/\s+/g, ' ').trim().slice(0, max);
+}
+
 // --- helpers -----------------------------------------------------------
 const $ = <T extends HTMLElement = HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
 const ESC: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -396,7 +406,9 @@ function cardHtml(p: Paper, v: string): string {
   const extra = p.tracks.length > 5 ? `<span class="chip">+${p.tracks.length - 5} more</span>` : '';
   const tagChips = tags.map((t) =>
     `<button class="chip chip-tag" data-tag="${esc(t)}" title="Filter by tag “${esc(t)}”">${esc(t)}<span class="tag-x" data-tag-del="${esc(t)}" role="button" aria-label="Remove tag" title="Remove tag">×</span></button>`).join('');
-  const tagsHtml = `<div class="card-tags">${tagChips}<button class="tag-add" data-tag-add type="button" title="Add a tag">+ tag</button></div>`;
+  // Tags share the chips row with tracks (no dedicated line). The "+ tag" affordance
+  // is revealed on hover (desktop) / when the card already has tags (mobile).
+  const addTagBtn = `<button class="chip-add" data-tag-add type="button" title="Add a tag" aria-label="Add a tag">+ tag</button>`;
   // Date / location / session are hidden by default; they live inside the
   // disclosure so they appear together with the abstract when expanded.
   const publicationBits = [
@@ -446,8 +458,7 @@ function cardHtml(p: Paper, v: string): string {
     <p class="paper-authors">${authors}</p>
     <button class="icon-btn collect-btn${collected ? ' is-on' : ''}" data-collect data-pop-anchor aria-pressed="${collected}" title="${collected ? 'In a collection — edit' : 'Add to a collection'}">${collected ? ICONS.bookmarkFilled : ICONS.bookmark}</button>
     ${disc}
-    ${tracks || extra ? `<div class="chips">${tracks}${extra}</div>` : ''}
-    ${tagsHtml}
+    <div class="chips${tags.length ? ' has-tags' : ''}">${tracks}${extra}${tagChips}${addTagBtn}</div>
     ${p.urls[0] ? `<a class="icon-btn program-link" href="${esc(p.urls[0])}" target="_blank" rel="noreferrer" title="Open program page" aria-label="Open program page">${ICONS.externalLink}</a>` : ''}
   </article>`;
 }
@@ -808,6 +819,15 @@ function setVenues(ids: string[], on: boolean) {
   ensureLoaded([...state.selected]).then(render);
 }
 
+// Make the selection exactly `ids` (deselects everything else). Used by group chips.
+function setVenuesExclusive(ids: string[]) {
+  state.selected = new Set(ids);
+  state.shown = PAGE;
+  reflectSidebar();
+  writeUrl();
+  ensureLoaded([...state.selected]).then(render);
+}
+
 // Filter the sidebar by the venue-search text. Expands matching series.
 function applyVenueFilter() {
   const q = $<HTMLInputElement>('[data-venue-search]').value.trim().toLowerCase();
@@ -837,7 +857,8 @@ function renderVenueGroups() {
   el.hidden = false;
   el.innerHTML = state.groups.map((g) => {
     const ids = venuesOfGroup(g);
-    const active = ids.length > 0 && ids.every((id) => state.selected.has(id));
+    // "active" = the selection is exactly this group (matches the click behavior).
+    const active = ids.length > 0 && state.selected.size === ids.length && ids.every((id) => state.selected.has(id));
     return `<span class="group-chip${active ? ' is-active' : ''}" data-group="${g.id}">
       <button class="group-chip-main" data-group-select="${g.id}" title="${active ? 'Deselect' : 'Select'} ${esc(g.name)}">${ICONS.layers}<span class="group-chip-name">${esc(g.name)}</span><span class="group-chip-n">${ids.length}</span></button>
       <button class="group-chip-x" data-group-del="${g.id}" aria-label="Delete group" title="Delete group">×</button>
@@ -919,6 +940,41 @@ document.addEventListener('click', (e) => {
   closePop();
 });
 
+// --- custom text prompt (replaces window.prompt) ----------------------
+// A small styled modal that resolves to the entered (sanitized) string, or null
+// if cancelled. Only one is ever open; opening another resolves the previous.
+let promptResolver: ((value: string | null) => void) | null = null;
+function askText(opts: { title: string; value?: string; placeholder?: string; max?: number; ok?: string }): Promise<string | null> {
+  closePop();
+  if (promptResolver) settlePrompt(null);
+  return new Promise((resolve) => {
+    promptResolver = resolve;
+    $('#promptTitle').textContent = opts.title;
+    const input = $<HTMLInputElement>('#promptInput');
+    input.maxLength = opts.max ?? NAME_MAX;
+    input.value = opts.value ?? '';
+    input.placeholder = opts.placeholder ?? '';
+    $('#promptOk').textContent = opts.ok ?? 'OK';
+    $('#promptModal').hidden = false;
+    setTimeout(() => { input.focus(); input.select(); }, 20);
+  });
+}
+function settlePrompt(value: string | null) {
+  if (!promptResolver) return;
+  const resolve = promptResolver;
+  promptResolver = null;
+  $('#promptModal').hidden = true;
+  resolve(value);
+}
+
+// Brief "pop" feedback when a toggle button is clicked.
+function animatePop(el: HTMLElement) {
+  el.classList.remove('is-pop');
+  void el.offsetWidth; // restart the animation
+  el.classList.add('is-pop');
+  el.addEventListener('animationend', () => el.classList.remove('is-pop'), { once: true });
+}
+
 // Collection picker for a paper key.
 function openCollectPop(anchor: HTMLElement, k: string) {
   const render = () => {
@@ -940,13 +996,13 @@ function openCollectPop(anchor: HTMLElement, k: string) {
       return;
     }
     if (t.closest('[data-col-new]')) {
-      const name = window.prompt('New collection name:', 'Reading list');
-      if (name && name.trim()) {
-        state.collections.push({ id: uid(), name: name.trim(), keys: [k] });
+      askText({ title: 'New collection', placeholder: 'Collection name', max: NAME_MAX }).then((name) => {
+        const clean = cleanInput(name ?? '');
+        if (!clean) return;
+        state.collections.push({ id: uid(), name: clean, keys: [k] });
         saveCollections();
         afterCollectionsChange(k);
-        paintPop();
-      }
+      });
     }
   });
 }
@@ -972,13 +1028,13 @@ function openGroupPop(anchor: HTMLElement, series: string) {
       return;
     }
     if (t.closest('[data-group-new]')) {
-      const name = window.prompt('New group name:', series);
-      if (name && name.trim()) {
-        state.groups.push({ id: uid(), name: name.trim(), series: [series] });
+      askText({ title: 'New group', value: series, placeholder: 'Group name', max: NAME_MAX }).then((name) => {
+        const clean = cleanInput(name ?? '');
+        if (!clean) return;
+        state.groups.push({ id: uid(), name: clean, series: [series] });
         saveGroups();
         renderVenueGroups(); reflectSeriesGroup(); renderSettings();
-        paintPop();
-      }
+      });
     }
   });
 }
@@ -997,19 +1053,21 @@ function afterCollectionsChange(touchedKey?: string) {
       btn.innerHTML = on ? ICONS.bookmarkFilled : ICONS.bookmark;
     }
   }
-  // a collection filter in effect may now include/exclude this paper
-  if (state.collection) render();
+  // A collection filter in effect may now include/exclude this paper; re-render
+  // the list (which detaches the popover's anchor, so close it first).
+  if (state.colSet) { closePop(); render(); }
 }
 
 // --- tags --------------------------------------------------------------
 function addTag(k: string) {
-  const raw = window.prompt('Add a tag (comma-separated for several):', '');
-  if (!raw) return;
-  const cur = new Set(tagsOf(k));
-  raw.split(',').map((s) => s.trim()).filter(Boolean).forEach((t) => cur.add(t));
-  state.tags.set(k, [...cur]);
-  saveTags();
-  render();
+  askText({ title: 'Add tags', placeholder: 'tag, another tag', max: TAG_MAX * 4, ok: 'Add' }).then((raw) => {
+    if (!raw) return;
+    const cur = new Set(tagsOf(k));
+    raw.split(',').map((s) => cleanInput(s, TAG_MAX)).filter(Boolean).forEach((t) => cur.add(t));
+    state.tags.set(k, [...cur]);
+    saveTags();
+    render();
+  });
 }
 function removeTag(k: string, tag: string) {
   const next = tagsOf(k).filter((t) => t !== tag);
@@ -1062,15 +1120,18 @@ function renderSaved() {
     `<div class="saved-item"><button class="saved-load" data-saved-load="${i}">${esc(s.name)}</button><button class="saved-del" data-saved-del="${i}" aria-label="Delete">×</button></div>`).join('');
 }
 function saveCurrentSearch() {
-  const name = window.prompt('Name this search:', state.query || 'My search');
-  if (!name) return;
-  state.saved.push({
-    name, query: state.query, sort: state.sort, collection: state.collection,
-    tracks: [...state.tracks], events: [...state.events], venues: [...state.selected],
+  askText({ title: 'Save search', value: state.query || 'My search', placeholder: 'Search name', max: NAME_MAX, ok: 'Save' }).then((name) => {
+    const clean = cleanInput(name ?? '');
+    if (!clean) return;
+    state.saved.push({
+      name: clean, query: state.query, sort: state.sort, collection: state.collection,
+      tracks: [...state.tracks], events: [...state.events], venues: [...state.selected],
+    });
+    writeJson(K_SAVED, state.saved);
+    toast('Search saved');
+    renderSaved();
+    renderSettings();
   });
-  writeJson(K_SAVED, state.saved);
-  toast('Search saved');
-  renderSettings();
 }
 function loadSaved(i: number) {
   const s = state.saved[i];
@@ -1096,7 +1157,7 @@ function renderSettings() {
             <button class="set-mini set-mini-del" data-group-del="${g.id}" type="button">Delete</button>
           </div>
           <div class="set-chips">${g.series.map((s) => `<span class="chip">${esc(s)}<span class="tag-x" data-group-series-del="${g.id}|${esc(s)}" role="button" aria-label="Remove">×</span></span>`).join('') || '<span class="set-empty">no series</span>'}
-            ${seriesAddSelect(g)}</div>
+            <button class="set-add" data-group-series-add="${g.id}" data-pop-anchor type="button" aria-label="Add series" title="Add series">+</button></div>
         </div>`).join('')
     : '<p class="set-empty">No venue groups yet. Use the ＋ button next to a series in the sidebar.</p>';
   const colsHtml = state.collections.length
@@ -1135,12 +1196,27 @@ function renderSettings() {
       <pre class="set-raw">${esc(JSON.stringify(raw, null, 2))}</pre>
     </section>`;
 }
-function seriesAddSelect(g: VenueGroup): string {
-  const all = [...new Set(manifest.map((v) => v.series))].sort();
-  const opts = all.filter((s) => !g.series.includes(s));
-  if (!opts.length) return '';
-  return `<select class="set-add-series" data-group-series-add="${g.id}" aria-label="Add series">
-    <option value="">＋ add series…</option>${opts.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join('')}</select>`;
+// Picker (popover) to add a series to a group, opened from the "+" in Settings.
+function openSeriesAddPop(anchor: HTMLElement, groupId: string) {
+  const render = () => {
+    const g = state.groups.find((x) => x.id === groupId);
+    if (!g) return '';
+    const opts = [...new Set(manifest.map((v) => v.series))].sort().filter((s) => !g.series.includes(s));
+    const rows = opts.map((s) => `<div class="pop-row" data-series-pick="${esc(s)}" role="button"><span class="pop-row-label">${esc(s)}</span></div>`).join('');
+    return `<div class="pop-title">Add series</div>${rows || '<p class="pop-empty">All series added.</p>'}`;
+  };
+  openPop(anchor, render, (t) => {
+    const pick = t.closest<HTMLElement>('[data-series-pick]');
+    if (!pick) return;
+    const g = state.groups.find((x) => x.id === groupId);
+    const s = pick.dataset.seriesPick ?? '';
+    if (g && s && !g.series.includes(s)) {
+      g.series.push(s);
+      saveGroups();
+      renderVenueGroups(); reflectSeriesGroup(); renderSettings();
+    }
+    closePop();
+  });
 }
 
 function exportSettings() {
@@ -1199,6 +1275,7 @@ function setQuery(q: string) {
 
 // --- modals ------------------------------------------------------------
 function closeModals() {
+  if (promptResolver) settlePrompt(null);
   document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; });
   closePop();
   stopNetwork();
@@ -1253,6 +1330,7 @@ function wire() {
     const target = e.target as HTMLElement;
     const groupBtn = target.closest<HTMLElement>('[data-series-group]');
     if (groupBtn) {
+      animatePop(groupBtn);
       if (popAnchor === groupBtn && !popEl.hidden) closePop();
       else openGroupPop(groupBtn, groupBtn.dataset.seriesGroup ?? '');
       return;
@@ -1260,7 +1338,13 @@ function wire() {
     const selBtn = target.closest<HTMLElement>('[data-group-select]');
     if (selBtn) {
       const g = state.groups.find((x) => x.id === selBtn.dataset.groupSelect);
-      if (g) { const ids = venuesOfGroup(g); const active = ids.length > 0 && ids.every((id) => state.selected.has(id)); setVenues(ids, !active); }
+      if (g) {
+        const ids = venuesOfGroup(g);
+        // Exact match → clicking again clears the selection; otherwise select
+        // exactly this group's venues (deselecting anything outside it).
+        const exact = ids.length > 0 && state.selected.size === ids.length && ids.every((id) => state.selected.has(id));
+        if (exact) setVenuesExclusive([]); else setVenuesExclusive(ids);
+      }
       return;
     }
     const delBtn = target.closest<HTMLElement>('[data-group-del]');
@@ -1343,6 +1427,7 @@ function wire() {
     const collectBtn = target.closest<HTMLElement>('[data-collect]');
     const tagDel = target.closest<HTMLElement>('[data-tag-del]');
     if (collectBtn) {
+      animatePop(collectBtn);
       if (popAnchor === collectBtn && !popEl.hidden) closePop();
       else openCollectPop(collectBtn, k);
     } else if (tagDel) {
@@ -1384,16 +1469,17 @@ function wire() {
   });
 
   // saved searches (the toolbar button; a second opener lives in Settings)
-  $('[data-save-current]').addEventListener('click', () => { saveCurrentSearch(); renderSaved(); });
+  $('[data-save-current]').addEventListener('click', () => saveCurrentSearch());
 
   // theme, help, modals
   document.querySelectorAll('[data-theme-toggle]').forEach((b) => b.addEventListener('click', toggleTheme));
   $('[data-help]').addEventListener('click', () => { $('#helpModal').hidden = false; });
   document.querySelectorAll('[data-modal-close]').forEach((b) => b.addEventListener('click', closeModals));
   document.querySelectorAll('.modal').forEach((m) => m.addEventListener('click', (e) => { if (e.target === m) closeModals(); }));
-  // [data-open-saved] appears both in the toolbar and inside the settings modal
+  // [data-open-saved] appears both in the toolbar and inside Settings — closing any
+  // open modal first prevents Settings from sitting on top of the Saved dialog.
   document.body.addEventListener('click', (e) => {
-    if ((e.target as HTMLElement).closest('[data-open-saved]')) { renderSaved(); $('#savedModal').hidden = false; }
+    if ((e.target as HTMLElement).closest('[data-open-saved]')) { closeModals(); renderSaved(); $('#savedModal').hidden = false; }
   });
   $('#savedList').addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
@@ -1403,6 +1489,10 @@ function wire() {
     if (del) { state.saved.splice(Number(del.dataset.savedDel), 1); writeJson(K_SAVED, state.saved); renderSaved(); renderSettings(); }
   });
 
+  // custom text prompt (replaces window.prompt)
+  $('#promptForm').addEventListener('submit', (e) => { e.preventDefault(); settlePrompt($<HTMLInputElement>('#promptInput').value); });
+  document.querySelectorAll('[data-prompt-cancel]').forEach((b) => b.addEventListener('click', () => settlePrompt(null)));
+
   // settings modal: open + delegated actions + import file picker
   const importInput = $<HTMLInputElement>('#importFile');
   $('[data-settings]').addEventListener('click', () => { renderSettings(); $('#settingsModal').hidden = false; });
@@ -1411,23 +1501,20 @@ function wire() {
     const t = e.target as HTMLElement;
     if (t.closest('[data-settings-export]')) { exportSettings(); return; }
     if (t.closest('[data-settings-import]')) { importInput.click(); return; }
+    const gAdd = t.closest<HTMLElement>('[data-group-series-add]');
+    if (gAdd) { openSeriesAddPop(gAdd, gAdd.dataset.groupSeriesAdd ?? ''); return; }
     const gRen = t.closest<HTMLElement>('[data-group-rename]');
-    if (gRen) { const g = state.groups.find((x) => x.id === gRen.dataset.groupRename); if (g) { const n = window.prompt('Rename group:', g.name); if (n && n.trim()) { g.name = n.trim(); saveGroups(); renderVenueGroups(); renderSettings(); } } return; }
+    if (gRen) { const g = state.groups.find((x) => x.id === gRen.dataset.groupRename); if (g) askText({ title: 'Rename group', value: g.name, max: NAME_MAX, ok: 'Rename' }).then((n) => { const c = cleanInput(n ?? ''); if (c) { g.name = c; saveGroups(); renderVenueGroups(); renderSettings(); } }); return; }
     const gDel = t.closest<HTMLElement>('[data-group-del]');
     if (gDel) { deleteGroup(gDel.dataset.groupDel ?? ''); return; }
     const gsDel = t.closest<HTMLElement>('[data-group-series-del]');
     if (gsDel) { const [id, ...rest] = (gsDel.dataset.groupSeriesDel ?? '').split('|'); const s = rest.join('|'); const g = state.groups.find((x) => x.id === id); if (g) { g.series = g.series.filter((x) => x !== s); saveGroups(); renderVenueGroups(); reflectSeriesGroup(); renderSettings(); } return; }
     const cRen = t.closest<HTMLElement>('[data-col-rename]');
-    if (cRen) { const c = collectionById(cRen.dataset.colRename ?? ''); if (c) { const n = window.prompt('Rename collection:', c.name); if (n && n.trim()) { c.name = n.trim(); saveCollections(); afterCollectionsChange(); } } return; }
+    if (cRen) { const c = collectionById(cRen.dataset.colRename ?? ''); if (c) askText({ title: 'Rename collection', value: c.name, max: NAME_MAX, ok: 'Rename' }).then((n) => { const cl = cleanInput(n ?? ''); if (cl) { c.name = cl; saveCollections(); afterCollectionsChange(); } }); return; }
     const cDel = t.closest<HTMLElement>('[data-col-del]');
     if (cDel) { const c = collectionById(cDel.dataset.colDel ?? ''); if (c && window.confirm(`Delete collection “${c.name}”?`)) { state.collections = state.collections.filter((x) => x.id !== c.id); if (state.collection === c.id) state.collection = ''; saveCollections(); afterCollectionsChange(); render(); } return; }
     const tagPurge = t.closest<HTMLElement>('[data-tag-purge]');
     if (tagPurge) { const tag = tagPurge.dataset.tagPurge ?? ''; for (const [k, tags] of [...state.tags]) { const next = tags.filter((x) => x !== tag); if (next.length) state.tags.set(k, next); else state.tags.delete(k); } saveTags(); renderSettings(); render(); return; }
-  });
-  $('#settingsBody').addEventListener('change', (e) => {
-    const sel = e.target as HTMLSelectElement;
-    const add = sel.closest<HTMLElement>('[data-group-series-add]');
-    if (add && sel.value) { const g = state.groups.find((x) => x.id === add.dataset.groupSeriesAdd); if (g && !g.series.includes(sel.value)) { g.series.push(sel.value); saveGroups(); renderVenueGroups(); reflectSeriesGroup(); renderSettings(); } }
   });
 
   // sidebar: mobile drawer toggle + desktop collapse
@@ -1489,6 +1576,7 @@ function wire() {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); els.search.focus(); return; }
     if ((e.metaKey || e.ctrlKey) && e.key === '/') { e.preventDefault(); toggleHelp(); return; }
     if (e.key === 'Escape') {
+      if (promptResolver) { settlePrompt(null); return; }
       if (!popEl.hidden) { closePop(); return; }
       if (document.activeElement === els.search) {
         if (state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }

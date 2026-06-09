@@ -40,9 +40,6 @@ const year = new Date().getFullYear();
           <span>confer</span>
         </a>
         <div class="sidebar-head-actions">
-          <button class="icon-btn" data-settings title="Settings & personal data" aria-label="Settings & personal data">
-            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </button>
           <button class="icon-btn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme">
             <span data-theme-icon><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
           </button>
@@ -142,6 +139,9 @@ const year = new Date().getFullYear();
           <kbd class="search-kbd">⌘K</kbd>
           <button class="search-clear" data-search-clear aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
+        <button class="icon-btn" data-settings title="Settings" aria-label="Settings">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
         <select id="sortSelect" class="topbar-select" aria-label="Sort">
           <option value="venue">Sort: Venue</option>
           <option value="date">Sort: Date</option>
@@ -241,7 +241,7 @@ const year = new Date().getFullYear();
 
     <div class="modal" id="settingsModal" hidden>
       <div class="modal-card modal-card--tall" role="dialog" aria-modal="true" aria-label="Settings">
-        <div class="modal-head"><h2>Settings &amp; personal data</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+        <div class="modal-head"><h2>Settings</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
         <p class="modal-hint">Venue groups, collections, tags and saved searches — all stored only in this browser. Export to back them up or move them to another device.</p>
         <div id="settingsBody" class="settings-body"></div>
         <input type="file" id="importFile" accept="application/json,.json" hidden />
@@ -257,6 +257,18 @@ const year = new Date().getFullYear();
           <p class="net-empty" id="networkEmpty" hidden>Not enough co-authorship in this view.</p>
         </div>
       </div>
+    </div>
+
+    <div class="modal" id="promptModal" hidden>
+      <form class="modal-card modal-card--prompt" id="promptForm" role="dialog" aria-modal="true" aria-label="Input">
+        <div class="modal-head"><h2 id="promptTitle">Input</h2><button class="icon-btn" type="button" data-prompt-cancel aria-label="Cancel"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+        <input id="promptInput" class="prompt-input" type="text" autocomplete="off" spellcheck="false" />
+        <p class="prompt-hint" id="promptHint" hidden></p>
+        <div class="prompt-actions">
+          <button type="button" class="text-btn" data-prompt-cancel>Cancel</button>
+          <button type="submit" class="text-btn text-btn--primary" id="promptOk">OK</button>
+        </div>
+      </form>
     </div>
   </div>
 
