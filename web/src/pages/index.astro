@@ -40,6 +40,9 @@ const year = new Date().getFullYear();
           <span>confer</span>
         </a>
         <div class="sidebar-head-actions">
+          <button class="icon-btn" data-settings title="Settings & personal data" aria-label="Settings & personal data">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </button>
           <button class="icon-btn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme">
             <span data-theme-icon><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
           </button>
@@ -56,15 +59,12 @@ const year = new Date().getFullYear();
         <div class="venue-tool-buttons">
           <button class="text-btn" data-select-all type="button">All</button>
           <button class="text-btn" data-select-none type="button">None</button>
-          <button class="text-btn venue-fav-toggle" data-fav-series-toggle type="button" aria-pressed="false" title="Show favorite series only" aria-label="Show favorite series only">
-            <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </button>
         </div>
       </div>
 
       <nav class="venue-nav" aria-label="Venues">
         {groups.length === 0 && <p class="venue-empty">No venues yet.</p>}
-        <p class="venue-empty" id="favEmpty" hidden>No favorite series yet — tap ☆ on a series to pin it.</p>
+        <div class="venue-groups" id="venueGroups" hidden></div>
         {groups.map((group) => (
           <section class="venue-cat" data-cat={group.category}>
             <button class="venue-cat-head" type="button" data-cat-toggle aria-expanded="true">
@@ -83,8 +83,8 @@ const year = new Date().getFullYear();
                         {s.kind === 'journal' && <span class="venue-kind kind-journal">J</span>}
                         <span class="series-count">{s.count.toLocaleString()}</span>
                       </button>
-                      <button class="series-fav" type="button" data-series-fav={s.series} aria-pressed="false" aria-label={`Favorite ${s.series}`} title={`Favorite ${s.series}`}>
-                        <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <button class="series-group" type="button" data-series-group={s.series} data-pop-anchor aria-pressed="false" aria-label={`Add ${s.series} to a group`} title={`Add ${s.series} to a group`}>
+                        <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                       </button>
                       <input class="series-check" type="checkbox" data-series-check aria-label={`Select all ${s.series}`} />
                     </div>
@@ -157,10 +157,9 @@ const year = new Date().getFullYear();
         <button class="chip-btn" data-facets-toggle type="button" aria-expanded="false">
           <span>Filters</span><span class="chip-btn-count" id="facetActiveCount" hidden>0</span>
         </button>
-        <label class="fav-toggle">
-          <input type="checkbox" id="favOnly" />
-          <span class="favlabel"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Only favorites</span>
-        </label>
+        <select id="collectionFilter" class="collection-filter" aria-label="Filter by collection" hidden>
+          <option value="">All papers</option>
+        </select>
         <button class="chip-btn" data-open-saved type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Saved</button>
         <div class="result-summary" id="resultSummary">Select a venue to begin.</div>
       </div>
@@ -211,6 +210,7 @@ const year = new Date().getFullYear();
           <div><dt><code>abstract:</code></dt><dd>Match abstract text</dd></div>
           <div><dt><code>doi:</code></dt><dd>Match DOI metadata</dd></div>
           <div><dt><code>keyword:</code></dt><dd>Match indexed keywords / concepts</dd></div>
+          <div><dt><code>tag:</code></dt><dd>Match your own tags — <code>tag:to-read</code></dd></div>
           <div><dt><code>container:</code></dt><dd>Match journal or proceedings metadata</dd></div>
           <div><dt><code>-term</code></dt><dd>Exclude — e.g. <code>-track:demo</code></dd></div>
           <div><dt>plain text</dt><dd>Matches anything</dd></div>
@@ -220,7 +220,7 @@ const year = new Date().getFullYear();
           <div><dt><kbd>⌘</kbd><kbd>K</kbd> / <kbd>/</kbd></dt><dd>Focus search</dd></div>
           <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>Move between papers</dd></div>
           <div><dt><kbd>o</kbd></dt><dd>Expand / collapse the focused paper</dd></div>
-          <div><dt><kbd>s</kbd></dt><dd>Star the focused paper</dd></div>
+          <div><dt><kbd>s</kbd></dt><dd>Save the focused paper to a collection</dd></div>
           <div><dt><kbd>f</kbd></dt><dd>Toggle filters</dd></div>
           <div><dt><kbd>t</kbd></dt><dd>Toggle theme</dd></div>
           <div><dt><kbd>[</kbd> / <kbd>]</kbd></dt><dd>Collapse sidebar / insights</dd></div>
@@ -236,6 +236,15 @@ const year = new Date().getFullYear();
         <div class="modal-head"><h2>Saved searches</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
         <div class="modal-actions"><button class="text-btn btn-ico" data-save-current type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Save current view</button></div>
         <div id="savedList" class="saved-list"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="settingsModal" hidden>
+      <div class="modal-card modal-card--tall" role="dialog" aria-modal="true" aria-label="Settings">
+        <div class="modal-head"><h2>Settings &amp; personal data</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+        <p class="modal-hint">Venue groups, collections, tags and saved searches — all stored only in this browser. Export to back them up or move them to another device.</p>
+        <div id="settingsBody" class="settings-body"></div>
+        <input type="file" id="importFile" accept="application/json,.json" hidden />
       </div>
     </div>
 

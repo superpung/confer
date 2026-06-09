@@ -1,16 +1,21 @@
-import type { Paper, Venue, SavedSearch } from './types';
+import type { Paper, Venue, SavedSearch, VenueGroup, Collection } from './types';
 import { toBibtex, toCsv, type ExportRow } from './export';
 
 // --- constants & storage keys ------------------------------------------
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const K_SELECTED = 'confer.selected';
-const K_FAVS = 'confer.favorites';
 const K_THEME = 'confer.theme';
 const K_SAVED = 'confer.savedSearches';
 const K_SIDEBAR = 'confer.sidebarCollapsed';
 const K_RAIL = 'confer.railCollapsed';
-const K_FAVSERIES = 'confer.favSeries';
+const K_VGROUPS = 'confer.venueGroups';      // VenueGroup[] (series-level groups)
+const K_COLLECTIONS = 'confer.collections';  // Collection[] (paper collections)
+const K_TAGS = 'confer.paperTags';           // Record<paperKey, string[]>
+// Keys bundled by the settings export/import.
+const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_SELECTED, K_THEME];
 const PAGE = 200;
+
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 
 // --- helpers -----------------------------------------------------------
 const $ = <T extends HTMLElement = HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
@@ -23,6 +28,10 @@ const ICONS = {
   sun: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>',
   star: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
   starFilled: '<svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+  bookmark: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
+  bookmarkFilled: '<svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
+  layers: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
+  settings: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
   externalLink: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   network: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><line x1="6.8" y1="6.8" x2="10.4" y2="16.2"/><line x1="17.3" y1="8.4" x2="13.3" y2="16.4"/><line x1="6.9" y1="6.2" x2="17" y2="6.8"/></svg>',
 };
@@ -142,6 +151,7 @@ const FIELD_ALIASES: Record<string, string> = {
   container: 'container', journal: 'container', booktitle: 'container',
   publisher: 'publisher',
   id: 'id', year: 'year',
+  tag: 'tag', tags: 'tag', label: 'tag',
 };
 /** Tokenize into AND terms; supports field:"quoted phrase", field:bare, "quoted",
  *  bare, and a leading "-" to exclude (e.g. -author:doe, -"tool demo"). */
@@ -187,6 +197,7 @@ function matchQuery(row: { p: Paper; v: string }, terms: Term[]): boolean {
     if (t.field === 'any') hay = `${searchBlob(p)} ${(venue?.name ?? '').toLowerCase()}`;
     else if (t.field === 'venue') hay = `${venue?.name ?? ''} ${venue?.series ?? ''} ${v}`.toLowerCase();
     else if (t.field === 'year') hay = String(venue?.year ?? '');
+    else if (t.field === 'tag') hay = tagsOf(key(v, p.id)).join(' | ').toLowerCase();
     else hay = fieldText(p, t.field);
     const hit = hay.includes(t.value);
     if (t.neg ? hit : !hit) return false;
@@ -209,16 +220,32 @@ const state = {
   venuesFacet: new Set<string>(),
   facetCollapsed: new Set<string>(),
   sort: 'venue',
-  favOnly: false,
-  favs: new Set<string>(readJson<string[]>(K_FAVS, [])),
-  favSeries: new Set<string>(readJson<string[]>(K_FAVSERIES, [])),
-  showFavSeriesOnly: false,
+  collection: '',                                       // active collection-filter id ('' = all)
+  colSet: null as Set<string> | null,                   // memoized keys of the active collection
+  groups: readJson<VenueGroup[]>(K_VGROUPS, []),
+  collections: readJson<Collection[]>(K_COLLECTIONS, []),
+  tags: new Map<string, string[]>(Object.entries(readJson<Record<string, string[]>>(K_TAGS, {}))),
   sel: new Set<string>(),
   saved: readJson<SavedSearch[]>(K_SAVED, []),
   shown: PAGE,
 };
 
 const key = (v: string, id: string) => `${v}:${id}`;
+
+// --- personal data: groups, collections, tags -------------------------
+function saveGroups() { writeJson(K_VGROUPS, state.groups); }
+function saveCollections() { writeJson(K_COLLECTIONS, state.collections); }
+function saveTags() {
+  writeJson(K_TAGS, Object.fromEntries([...state.tags].filter(([, v]) => v.length)));
+}
+const collectionById = (id: string) => state.collections.find((c) => c.id === id);
+const collectionsOf = (k: string) => state.collections.filter((c) => c.keys.includes(k));
+function tagsOf(k: string): string[] { return state.tags.get(k) ?? []; }
+/** Venue ids whose series belongs to the group (across all years). */
+function venuesOfGroup(g: VenueGroup): string[] {
+  const series = new Set(g.series);
+  return manifest.filter((v) => series.has(v.series)).map((v) => v.id);
+}
 
 // --- URL state ---------------------------------------------------------
 function readUrl() {
@@ -227,7 +254,7 @@ function readUrl() {
   if (v) v.split(',').filter(Boolean).forEach((id) => state.selected.add(id));
   state.query = q.get('q') ?? '';
   state.sort = q.get('sort') ?? 'venue';
-  state.favOnly = q.get('fav') === '1';
+  state.collection = q.get('col') ?? '';
   (q.get('track') ?? '').split(',').filter(Boolean).forEach((t) => state.tracks.add(t));
   (q.get('event') ?? '').split(',').filter(Boolean).forEach((e) => state.events.add(e));
   return !!v || q.has('q') || q.has('track');
@@ -237,7 +264,7 @@ function writeUrl() {
   if (state.selected.size) q.set('v', [...state.selected].join(','));
   if (state.query) q.set('q', state.query);
   if (state.sort !== 'venue') q.set('sort', state.sort);
-  if (state.favOnly) q.set('fav', '1');
+  if (state.collection) q.set('col', state.collection);
   if (state.tracks.size) q.set('track', [...state.tracks].join(','));
   if (state.events.size) q.set('event', [...state.events].join(','));
   const qs = q.toString();
@@ -284,7 +311,7 @@ function rebuildRows() {
 // --- filtering & sorting ----------------------------------------------
 function matches(row: { p: Paper; v: string }): boolean {
   const { p, v } = row;
-  if (state.favOnly && !state.favs.has(key(v, p.id))) return false;
+  if (state.colSet && !state.colSet.has(key(v, p.id))) return false;
   if (state.venuesFacet.size && !state.venuesFacet.has(v)) return false;
   if (state.tracks.size && !p.tracks.some((t) => state.tracks.has(t))) return false;
   if (state.events.size && !eventList(p).some((e) => state.events.has(e))) return false;
@@ -327,7 +354,7 @@ const els = {
   search: $<HTMLInputElement>('#searchInput'),
   searchClear: $<HTMLButtonElement>('[data-search-clear]'),
   sort: $<HTMLSelectElement>('#sortSelect'),
-  favOnly: $<HTMLInputElement>('#favOnly'),
+  collectionFilter: $<HTMLSelectElement>('#collectionFilter'),
 };
 
 let topbarResizeObserver: ResizeObserver | undefined;
@@ -353,7 +380,8 @@ function observeTopbarHeight() {
 function cardHtml(p: Paper, v: string): string {
   const venue = venueById.get(v)!;
   const k = key(v, p.id);
-  const fav = state.favs.has(k);
+  const collected = collectionsOf(k).length > 0;
+  const tags = tagsOf(k);
   const sel = state.sel.has(k);
   const authors = p.authors.length
     ? authorAff(p).map(({ author, inst }) =>
@@ -366,6 +394,9 @@ function cardHtml(p: Paper, v: string): string {
     : 'Not listed';
   const tracks = p.tracks.slice(0, 5).map((t) => `<button class="chip chip-track" data-track="${esc(t)}">${esc(t)}</button>`).join('');
   const extra = p.tracks.length > 5 ? `<span class="chip">+${p.tracks.length - 5} more</span>` : '';
+  const tagChips = tags.map((t) =>
+    `<button class="chip chip-tag" data-tag="${esc(t)}" title="Filter by tag “${esc(t)}”">${esc(t)}<span class="tag-x" data-tag-del="${esc(t)}" role="button" aria-label="Remove tag" title="Remove tag">×</span></button>`).join('');
+  const tagsHtml = `<div class="card-tags">${tagChips}<button class="tag-add" data-tag-add type="button" title="Add a tag">+ tag</button></div>`;
   // Date / location / session are hidden by default; they live inside the
   // disclosure so they appear together with the abstract when expanded.
   const publicationBits = [
@@ -413,9 +444,10 @@ function cardHtml(p: Paper, v: string): string {
     </div>
     ${titleHtml}
     <p class="paper-authors">${authors}</p>
-    <button class="icon-btn favorite-button" data-fav aria-pressed="${fav}" title="${fav ? 'Remove from favorites' : 'Save to favorites'}">${fav ? ICONS.starFilled : ICONS.star}</button>
+    <button class="icon-btn collect-btn${collected ? ' is-on' : ''}" data-collect data-pop-anchor aria-pressed="${collected}" title="${collected ? 'In a collection — edit' : 'Add to a collection'}">${collected ? ICONS.bookmarkFilled : ICONS.bookmark}</button>
     ${disc}
     ${tracks || extra ? `<div class="chips">${tracks}${extra}</div>` : ''}
+    ${tagsHtml}
     ${p.urls[0] ? `<a class="icon-btn program-link" href="${esc(p.urls[0])}" target="_blank" rel="noreferrer" title="Open program page" aria-label="Open program page">${ICONS.externalLink}</a>` : ''}
   </article>`;
 }
@@ -693,11 +725,14 @@ function stopNetwork() {
 
 function render() {
   state.terms = parseQuery(state.query);
+  // a stale collection id (e.g. deleted) falls back to "all"
+  if (state.collection && !collectionById(state.collection)) state.collection = '';
+  state.colSet = state.collection ? new Set(collectionById(state.collection)!.keys) : null;
   // reflect simple controls
   els.search.value = state.query;
   els.searchClear.hidden = !state.query;
   els.sort.value = state.sort;
-  els.favOnly.checked = state.favOnly;
+  reflectCollectionFilter();
 
   if (!state.selected.size) {
     els.list.innerHTML = `<div class="empty-state"><h2>No venues selected</h2><p>Pick one or more venues from the left to browse their papers.</p></div>`;
@@ -710,12 +745,12 @@ function render() {
     return;
   }
 
-  const queryFavBase = state.rows.filter((r) => {
-    if (state.favOnly && !state.favs.has(key(r.v, r.p.id))) return false;
+  const facetBase = state.rows.filter((r) => {
+    if (state.colSet && !state.colSet.has(key(r.v, r.p.id))) return false;
     if (!matchQuery(r, state.terms)) return false;
     return true;
   });
-  renderFacets(queryFavBase);
+  renderFacets(facetBase);
 
   const filtered = sortRows(state.rows.filter(matches));
   renderRail(filtered);
@@ -758,6 +793,7 @@ function reflectSidebar() {
     master.checked = sel > 0 && sel === checks.length;
     master.indeterminate = sel > 0 && sel < checks.length;
   });
+  renderVenueGroups();
 }
 
 function setVenue(id: string, on: boolean) {
@@ -772,20 +808,17 @@ function setVenues(ids: string[], on: boolean) {
   ensureLoaded([...state.selected]).then(render);
 }
 
-// Filter the sidebar by the venue-search text and/or the "favorite series only"
-// toggle (both compose). Expands matching series while searching.
+// Filter the sidebar by the venue-search text. Expands matching series.
 function applyVenueFilter() {
   const q = $<HTMLInputElement>('[data-venue-search]').value.trim().toLowerCase();
-  const favOnly = state.showFavSeriesOnly;
   document.querySelectorAll<HTMLElement>('.venue-series').forEach((series) => {
-    const favOk = !favOnly || state.favSeries.has(series.dataset.series ?? '');
     let anyRow = false;
     series.querySelectorAll<HTMLElement>('[data-venue-row]').forEach((row) => {
       const match = q.length === 0 || (row.dataset.venueName ?? '').includes(q);
       row.hidden = !match;
       if (match) anyRow = true;
     });
-    series.hidden = !(favOk && anyRow);
+    series.hidden = !anyRow;
     const collapsed = q.length === 0 ? true : !anyRow;
     series.classList.toggle('is-collapsed', collapsed);
     series.querySelector('[data-series-toggle]')?.setAttribute('aria-expanded', String(!collapsed));
@@ -793,15 +826,201 @@ function applyVenueFilter() {
   document.querySelectorAll<HTMLElement>('.venue-cat').forEach((cat) => {
     cat.hidden = !cat.querySelector('.venue-series:not([hidden])');
   });
-  $('#favEmpty').hidden = !(favOnly && !document.querySelector('.venue-series:not([hidden])'));
 }
 
-function reflectSeriesFav() {
-  document.querySelectorAll<HTMLElement>('[data-series-fav]').forEach((btn) => {
-    const on = state.favSeries.has(btn.dataset.seriesFav ?? '');
-    btn.classList.toggle('is-fav', on);
+// --- venue groups (series-level) --------------------------------------
+// "My groups" chips above the categories. Clicking a chip toggles selection of
+// all venues whose series belongs to the group; ✕ deletes the group.
+function renderVenueGroups() {
+  const el = $('#venueGroups');
+  if (!state.groups.length) { el.innerHTML = ''; el.hidden = true; return; }
+  el.hidden = false;
+  el.innerHTML = state.groups.map((g) => {
+    const ids = venuesOfGroup(g);
+    const active = ids.length > 0 && ids.every((id) => state.selected.has(id));
+    return `<span class="group-chip${active ? ' is-active' : ''}" data-group="${g.id}">
+      <button class="group-chip-main" data-group-select="${g.id}" title="${active ? 'Deselect' : 'Select'} ${esc(g.name)}">${ICONS.layers}<span class="group-chip-name">${esc(g.name)}</span><span class="group-chip-n">${ids.length}</span></button>
+      <button class="group-chip-x" data-group-del="${g.id}" aria-label="Delete group" title="Delete group">×</button>
+    </span>`;
+  }).join('');
+}
+
+// Mark each per-series group button as "on" when that series is in ≥1 group.
+function reflectSeriesGroup() {
+  const inAny = new Set<string>();
+  state.groups.forEach((g) => g.series.forEach((s) => inAny.add(s)));
+  document.querySelectorAll<HTMLElement>('[data-series-group]').forEach((btn) => {
+    const on = inAny.has(btn.dataset.seriesGroup ?? '');
+    btn.classList.toggle('is-on', on);
     btn.setAttribute('aria-pressed', String(on));
   });
+}
+
+function deleteGroup(id: string) {
+  const g = state.groups.find((x) => x.id === id);
+  if (!g) return;
+  if (!window.confirm(`Delete group “${g.name}”?`)) return;
+  state.groups = state.groups.filter((x) => x.id !== id);
+  saveGroups();
+  renderVenueGroups();
+  reflectSeriesGroup();
+  renderSettings();
+}
+
+// --- collection filter (controls) -------------------------------------
+function reflectCollectionFilter() {
+  const sel = els.collectionFilter;
+  sel.innerHTML = `<option value="">All papers</option>` +
+    state.collections.map((c) => `<option value="${c.id}">${esc(c.name)} (${c.keys.length})</option>`).join('');
+  sel.value = state.collection;
+  sel.hidden = state.collections.length === 0;
+}
+
+// --- popover menu (shared by collection + group pickers) --------------
+// One floating menu reused for the card "add to collection" and per-series
+// "add to group" pickers. The opener supplies the body HTML and a click
+// handler; the menu re-renders in place so multiple toggles stay open.
+const popEl = Object.assign(document.createElement('div'), { className: 'popmenu' });
+popEl.hidden = true;
+document.body.appendChild(popEl);
+let popAnchor: HTMLElement | null = null;
+let popRender: (() => string) | null = null;
+let popOnPick: ((target: HTMLElement) => void) | null = null;
+
+function paintPop() { if (popRender) popEl.innerHTML = popRender(); }
+function positionPop(anchor: HTMLElement) {
+  const r = anchor.getBoundingClientRect();
+  popEl.style.visibility = 'hidden';
+  popEl.hidden = false;
+  const pw = popEl.offsetWidth || 220;
+  const ph = popEl.offsetHeight || 120;
+  let left = r.left;
+  if (left + pw > window.innerWidth - 8) left = Math.max(8, window.innerWidth - pw - 8);
+  let top = r.bottom + 6;
+  if (top + ph > window.innerHeight - 8) top = Math.max(8, r.top - ph - 6);
+  popEl.style.left = `${left + window.scrollX}px`;
+  popEl.style.top = `${top + window.scrollY}px`;
+  popEl.style.visibility = '';
+}
+function openPop(anchor: HTMLElement, render: () => string, onPick: (t: HTMLElement) => void) {
+  popAnchor = anchor; popRender = render; popOnPick = onPick;
+  paintPop();
+  positionPop(anchor);
+}
+function closePop() {
+  popEl.hidden = true; popEl.innerHTML = '';
+  popAnchor = null; popRender = null; popOnPick = null;
+}
+popEl.addEventListener('click', (e) => { if (popOnPick) popOnPick(e.target as HTMLElement); });
+document.addEventListener('click', (e) => {
+  if (popEl.hidden) return;
+  const t = e.target as HTMLElement;
+  if (popEl.contains(t) || (popAnchor && popAnchor.contains(t))) return;
+  closePop();
+});
+
+// Collection picker for a paper key.
+function openCollectPop(anchor: HTMLElement, k: string) {
+  const render = () => {
+    const rows = state.collections.map((c) =>
+      `<div class="pop-row" data-col-toggle="${c.id}" role="button"><input type="checkbox" tabindex="-1" ${c.keys.includes(k) ? 'checked' : ''}><span class="pop-row-label">${esc(c.name)}</span><span class="pop-row-n">${c.keys.length}</span></div>`).join('');
+    return `<div class="pop-title">Save to collection</div>${rows || '<p class="pop-empty">No collections yet.</p>'}<button class="pop-action" data-col-new type="button">＋ New collection…</button>`;
+  };
+  openPop(anchor, render, (t) => {
+    const toggle = t.closest<HTMLElement>('[data-col-toggle]');
+    if (toggle) {
+      const c = collectionById(toggle.dataset.colToggle ?? '');
+      if (c) {
+        const i = c.keys.indexOf(k);
+        if (i >= 0) c.keys.splice(i, 1); else c.keys.push(k);
+        saveCollections();
+        afterCollectionsChange(k);
+        paintPop();
+      }
+      return;
+    }
+    if (t.closest('[data-col-new]')) {
+      const name = window.prompt('New collection name:', 'Reading list');
+      if (name && name.trim()) {
+        state.collections.push({ id: uid(), name: name.trim(), keys: [k] });
+        saveCollections();
+        afterCollectionsChange(k);
+        paintPop();
+      }
+    }
+  });
+}
+
+// Group picker for a series name.
+function openGroupPop(anchor: HTMLElement, series: string) {
+  const render = () => {
+    const rows = state.groups.map((g) =>
+      `<div class="pop-row" data-group-toggle="${g.id}" role="button"><input type="checkbox" tabindex="-1" ${g.series.includes(series) ? 'checked' : ''}><span class="pop-row-label">${esc(g.name)}</span><span class="pop-row-n">${g.series.length}</span></div>`).join('');
+    return `<div class="pop-title">Add “${esc(series)}” to group</div>${rows || '<p class="pop-empty">No groups yet.</p>'}<button class="pop-action" data-group-new type="button">＋ New group…</button>`;
+  };
+  openPop(anchor, render, (t) => {
+    const toggle = t.closest<HTMLElement>('[data-group-toggle]');
+    if (toggle) {
+      const g = state.groups.find((x) => x.id === toggle.dataset.groupToggle);
+      if (g) {
+        const i = g.series.indexOf(series);
+        if (i >= 0) g.series.splice(i, 1); else g.series.push(series);
+        saveGroups();
+        renderVenueGroups(); reflectSeriesGroup(); renderSettings();
+        paintPop();
+      }
+      return;
+    }
+    if (t.closest('[data-group-new]')) {
+      const name = window.prompt('New group name:', series);
+      if (name && name.trim()) {
+        state.groups.push({ id: uid(), name: name.trim(), series: [series] });
+        saveGroups();
+        renderVenueGroups(); reflectSeriesGroup(); renderSettings();
+        paintPop();
+      }
+    }
+  });
+}
+
+// Refresh everything that depends on collection membership after an edit.
+function afterCollectionsChange(touchedKey?: string) {
+  reflectCollectionFilter();
+  renderSettings();
+  if (touchedKey) {
+    const card = els.list.querySelector<HTMLElement>(`.paper-card[data-key="${CSS.escape(touchedKey)}"]`);
+    const btn = card?.querySelector<HTMLButtonElement>('[data-collect]');
+    if (btn) {
+      const on = collectionsOf(touchedKey).length > 0;
+      btn.classList.toggle('is-on', on);
+      btn.setAttribute('aria-pressed', String(on));
+      btn.innerHTML = on ? ICONS.bookmarkFilled : ICONS.bookmark;
+    }
+  }
+  // a collection filter in effect may now include/exclude this paper
+  if (state.collection) render();
+}
+
+// --- tags --------------------------------------------------------------
+function addTag(k: string) {
+  const raw = window.prompt('Add a tag (comma-separated for several):', '');
+  if (!raw) return;
+  const cur = new Set(tagsOf(k));
+  raw.split(',').map((s) => s.trim()).filter(Boolean).forEach((t) => cur.add(t));
+  state.tags.set(k, [...cur]);
+  saveTags();
+  render();
+}
+function removeTag(k: string, tag: string) {
+  const next = tagsOf(k).filter((t) => t !== tag);
+  if (next.length) state.tags.set(k, next); else state.tags.delete(k);
+  saveTags();
+  render();
+}
+function tagCounts(): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const tags of state.tags.values()) for (const t of tags) m.set(t, (m.get(t) ?? 0) + 1);
+  return m;
 }
 
 // --- toast -------------------------------------------------------------
@@ -846,20 +1065,117 @@ function saveCurrentSearch() {
   const name = window.prompt('Name this search:', state.query || 'My search');
   if (!name) return;
   state.saved.push({
-    name, query: state.query, sort: state.sort, favOnly: state.favOnly,
+    name, query: state.query, sort: state.sort, collection: state.collection,
     tracks: [...state.tracks], events: [...state.events], venues: [...state.selected],
   });
   writeJson(K_SAVED, state.saved);
   toast('Search saved');
+  renderSettings();
 }
 function loadSaved(i: number) {
   const s = state.saved[i];
   if (!s) return;
-  state.query = s.query; state.sort = s.sort; state.favOnly = s.favOnly;
+  state.query = s.query; state.sort = s.sort; state.collection = s.collection ?? '';
   state.tracks = new Set(s.tracks); state.events = new Set(s.events);
   state.selected = new Set(s.venues); state.venuesFacet.clear(); state.shown = PAGE;
   reflectSidebar(); writeUrl(); closeModals();
   ensureLoaded([...state.selected]).then(render);
+}
+
+// --- settings modal: view stored data, export / import ----------------
+function renderSettings() {
+  const body = document.querySelector<HTMLElement>('#settingsBody');
+  if (!body) return;
+  const groupsHtml = state.groups.length
+    ? state.groups.map((g) =>
+        `<div class="set-item" data-set-group="${g.id}">
+          <div class="set-item-head">
+            <span class="set-item-name">${esc(g.name)}</span>
+            <span class="set-item-meta">${venuesOfGroup(g).length} venues</span>
+            <button class="set-mini" data-group-rename="${g.id}" type="button">Rename</button>
+            <button class="set-mini set-mini-del" data-group-del="${g.id}" type="button">Delete</button>
+          </div>
+          <div class="set-chips">${g.series.map((s) => `<span class="chip">${esc(s)}<span class="tag-x" data-group-series-del="${g.id}|${esc(s)}" role="button" aria-label="Remove">×</span></span>`).join('') || '<span class="set-empty">no series</span>'}
+            ${seriesAddSelect(g)}</div>
+        </div>`).join('')
+    : '<p class="set-empty">No venue groups yet. Use the ＋ button next to a series in the sidebar.</p>';
+  const colsHtml = state.collections.length
+    ? state.collections.map((c) =>
+        `<div class="set-item" data-set-col="${c.id}">
+          <div class="set-item-head">
+            <span class="set-item-name">${esc(c.name)}</span>
+            <span class="set-item-meta">${c.keys.length} papers</span>
+            <button class="set-mini" data-col-rename="${c.id}" type="button">Rename</button>
+            <button class="set-mini set-mini-del" data-col-del="${c.id}" type="button">Delete</button>
+          </div>
+        </div>`).join('')
+    : '<p class="set-empty">No collections yet. Use the bookmark on a paper to add one.</p>';
+  const tags = [...tagCounts().entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const tagsHtml = tags.length
+    ? `<div class="set-chips">${tags.map(([t, n]) => `<span class="chip">${esc(t)} ${n}<span class="tag-x" data-tag-purge="${esc(t)}" role="button" aria-label="Remove from all">×</span></span>`).join('')}</div>`
+    : '<p class="set-empty">No tags yet. Add tags on a paper card.</p>';
+  const raw: Record<string, unknown> = {};
+  for (const k of PERSONAL_KEYS) { try { const v = localStorage.getItem(k); if (v) raw[k] = JSON.parse(v); } catch { /* skip */ } }
+
+  body.innerHTML = `
+    <div class="set-actions">
+      <button class="text-btn" data-settings-export type="button">⬇ Export all (JSON)</button>
+      <button class="text-btn" data-settings-import type="button">⬆ Import…</button>
+    </div>
+    <section class="set-section"><h3 class="set-title">Venue groups</h3>${groupsHtml}</section>
+    <section class="set-section"><h3 class="set-title">Collections</h3>${colsHtml}</section>
+    <section class="set-section"><h3 class="set-title">Tags</h3>${tagsHtml}</section>
+    <section class="set-section">
+      <h3 class="set-title">Saved searches <span class="set-item-meta">${state.saved.length}</span></h3>
+      <button class="text-btn" data-open-saved type="button">Open saved searches</button>
+    </section>
+    <section class="set-section">
+      <h3 class="set-title">Stored data</h3>
+      <p class="set-note">Everything below lives only in this browser (localStorage).</p>
+      <pre class="set-raw">${esc(JSON.stringify(raw, null, 2))}</pre>
+    </section>`;
+}
+function seriesAddSelect(g: VenueGroup): string {
+  const all = [...new Set(manifest.map((v) => v.series))].sort();
+  const opts = all.filter((s) => !g.series.includes(s));
+  if (!opts.length) return '';
+  return `<select class="set-add-series" data-group-series-add="${g.id}" aria-label="Add series">
+    <option value="">＋ add series…</option>${opts.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join('')}</select>`;
+}
+
+function exportSettings() {
+  const data = {
+    app: 'confer', version: 1, exportedAt: new Date().toISOString(),
+    venueGroups: state.groups,
+    collections: state.collections,
+    paperTags: Object.fromEntries([...state.tags].filter(([, v]) => v.length)),
+    savedSearches: state.saved,
+    selected: [...state.selected],
+    theme: localStorage.getItem(K_THEME) ?? '',
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'confer-settings.json' });
+  a.click(); URL.revokeObjectURL(a.href);
+  toast('Exported settings');
+}
+function importSettings(file: File) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const d = JSON.parse(String(reader.result));
+      if (Array.isArray(d.venueGroups)) { state.groups = d.venueGroups; saveGroups(); }
+      if (Array.isArray(d.collections)) { state.collections = d.collections; saveCollections(); }
+      if (d.paperTags && typeof d.paperTags === 'object') { state.tags = new Map(Object.entries(d.paperTags as Record<string, string[]>)); saveTags(); }
+      if (Array.isArray(d.savedSearches)) { state.saved = d.savedSearches; writeJson(K_SAVED, state.saved); }
+      if (typeof d.theme === 'string' && d.theme) { document.documentElement.dataset.theme = d.theme; try { localStorage.setItem(K_THEME, d.theme); } catch { /* ignore */ } reflectTheme(); }
+      if (Array.isArray(d.selected)) { state.selected = new Set((d.selected as string[]).filter((id) => venueById.has(id))); }
+      reflectSidebar(); renderVenueGroups(); reflectSeriesGroup(); renderSaved(); renderSettings();
+      writeUrl();
+      ensureLoaded([...state.selected]).then(render);
+      toast('Imported settings');
+    } catch { toast('Invalid settings file'); }
+  };
+  reader.readAsText(file);
 }
 
 // --- sidebar (desktop collapse) ---------------------------------------
@@ -884,6 +1200,7 @@ function setQuery(q: string) {
 // --- modals ------------------------------------------------------------
 function closeModals() {
   document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; });
+  closePop();
   stopNetwork();
 }
 
@@ -929,22 +1246,25 @@ function wire() {
       setVenues(ids, master.checked);
     });
   });
-  // venue filter in sidebar (text + favorite-series toggle compose)
+  // venue filter in sidebar (text)
   $<HTMLInputElement>('[data-venue-search]').addEventListener('input', applyVenueFilter);
-  $('[data-fav-series-toggle]').addEventListener('click', (e) => {
-    state.showFavSeriesOnly = !state.showFavSeriesOnly;
-    (e.currentTarget as HTMLElement).setAttribute('aria-pressed', String(state.showFavSeriesOnly));
-    applyVenueFilter();
-  });
-  // star a series (delegated) — toggles favorite, persists, re-applies filter
+  // group chips + per-series group button (delegated within the nav)
   $('.venue-nav').addEventListener('click', (e) => {
-    const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-series-fav]');
-    if (!btn) return;
-    const s = btn.dataset.seriesFav ?? '';
-    if (state.favSeries.has(s)) state.favSeries.delete(s); else state.favSeries.add(s);
-    writeJson(K_FAVSERIES, [...state.favSeries].sort());
-    reflectSeriesFav();
-    if (state.showFavSeriesOnly) applyVenueFilter();
+    const target = e.target as HTMLElement;
+    const groupBtn = target.closest<HTMLElement>('[data-series-group]');
+    if (groupBtn) {
+      if (popAnchor === groupBtn && !popEl.hidden) closePop();
+      else openGroupPop(groupBtn, groupBtn.dataset.seriesGroup ?? '');
+      return;
+    }
+    const selBtn = target.closest<HTMLElement>('[data-group-select]');
+    if (selBtn) {
+      const g = state.groups.find((x) => x.id === selBtn.dataset.groupSelect);
+      if (g) { const ids = venuesOfGroup(g); const active = ids.length > 0 && ids.every((id) => state.selected.has(id)); setVenues(ids, !active); }
+      return;
+    }
+    const delBtn = target.closest<HTMLElement>('[data-group-del]');
+    if (delBtn) { deleteGroup(delBtn.dataset.groupDel ?? ''); return; }
   });
   $('[data-select-all]').addEventListener('click', () => { manifest.forEach((v) => state.selected.add(v.id)); state.shown = PAGE; reflectSidebar(); writeUrl(); ensureLoaded([...state.selected]).then(render); });
   $('[data-select-none]').addEventListener('click', () => { state.selected.clear(); reflectSidebar(); writeUrl(); rebuildRows(); render(); });
@@ -957,11 +1277,12 @@ function wire() {
   });
   els.searchClear.addEventListener('click', () => { state.query = ''; els.search.value = ''; writeUrl(); render(); els.search.focus(); });
   els.sort.addEventListener('change', () => { state.sort = els.sort.value; writeUrl(); render(); });
-  els.favOnly.addEventListener('change', () => {
-    state.favOnly = els.favOnly.checked; state.shown = PAGE;
-    // ensure venues with favorites are loaded
-    if (state.favOnly) {
-      const need = [...state.favs].map((k) => k.split(':')[0]).filter((id) => venueById.has(id) && !state.selected.has(id));
+  // collection filter — narrows the list to a collection (loads its venues)
+  els.collectionFilter.addEventListener('change', () => {
+    state.collection = els.collectionFilter.value; state.shown = PAGE;
+    const c = state.collection ? collectionById(state.collection) : undefined;
+    if (c) {
+      const need = [...new Set(c.keys.map((k) => k.split(':')[0]))].filter((id) => venueById.has(id) && !state.selected.has(id));
       need.forEach((id) => state.selected.add(id));
       reflectSidebar();
       ensureLoaded([...state.selected]).then(() => { writeUrl(); render(); });
@@ -1019,10 +1340,17 @@ function wire() {
       return;
     }
     const k = card.dataset.key ?? '';
-    if (target.closest('[data-fav]')) {
-      if (state.favs.has(k)) state.favs.delete(k); else state.favs.add(k);
-      writeJson(K_FAVS, [...state.favs].sort());
-      render();
+    const collectBtn = target.closest<HTMLElement>('[data-collect]');
+    const tagDel = target.closest<HTMLElement>('[data-tag-del]');
+    if (collectBtn) {
+      if (popAnchor === collectBtn && !popEl.hidden) closePop();
+      else openCollectPop(collectBtn, k);
+    } else if (tagDel) {
+      removeTag(k, tagDel.dataset.tagDel ?? '');
+    } else if (target.closest('[data-tag-add]')) {
+      addTag(k);
+    } else if (target.closest('[data-tag]')) {
+      setQuery(`tag:"${(target.closest('[data-tag]') as HTMLElement).dataset.tag!}"`);
     } else if (target.closest('[data-venue-badge]')) {
       const v = k.split(':')[0];
       state.venuesFacet.has(v) ? state.venuesFacet.delete(v) : state.venuesFacet.add(v);
@@ -1055,8 +1383,7 @@ function wire() {
     if (btn) doExport(btn.dataset.export!);
   });
 
-  // saved searches
-  $('[data-open-saved]').addEventListener('click', () => { renderSaved(); $('#savedModal').hidden = false; });
+  // saved searches (the toolbar button; a second opener lives in Settings)
   $('[data-save-current]').addEventListener('click', () => { saveCurrentSearch(); renderSaved(); });
 
   // theme, help, modals
@@ -1064,12 +1391,43 @@ function wire() {
   $('[data-help]').addEventListener('click', () => { $('#helpModal').hidden = false; });
   document.querySelectorAll('[data-modal-close]').forEach((b) => b.addEventListener('click', closeModals));
   document.querySelectorAll('.modal').forEach((m) => m.addEventListener('click', (e) => { if (e.target === m) closeModals(); }));
+  // [data-open-saved] appears both in the toolbar and inside the settings modal
+  document.body.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('[data-open-saved]')) { renderSaved(); $('#savedModal').hidden = false; }
+  });
   $('#savedList').addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
     const load = target.closest<HTMLElement>('[data-saved-load]');
     const del = target.closest<HTMLElement>('[data-saved-del]');
     if (load) loadSaved(Number(load.dataset.savedLoad));
-    if (del) { state.saved.splice(Number(del.dataset.savedDel), 1); writeJson(K_SAVED, state.saved); renderSaved(); }
+    if (del) { state.saved.splice(Number(del.dataset.savedDel), 1); writeJson(K_SAVED, state.saved); renderSaved(); renderSettings(); }
+  });
+
+  // settings modal: open + delegated actions + import file picker
+  const importInput = $<HTMLInputElement>('#importFile');
+  $('[data-settings]').addEventListener('click', () => { renderSettings(); $('#settingsModal').hidden = false; });
+  importInput.addEventListener('change', () => { const f = importInput.files?.[0]; if (f) importSettings(f); importInput.value = ''; });
+  $('#settingsBody').addEventListener('click', (e) => {
+    const t = e.target as HTMLElement;
+    if (t.closest('[data-settings-export]')) { exportSettings(); return; }
+    if (t.closest('[data-settings-import]')) { importInput.click(); return; }
+    const gRen = t.closest<HTMLElement>('[data-group-rename]');
+    if (gRen) { const g = state.groups.find((x) => x.id === gRen.dataset.groupRename); if (g) { const n = window.prompt('Rename group:', g.name); if (n && n.trim()) { g.name = n.trim(); saveGroups(); renderVenueGroups(); renderSettings(); } } return; }
+    const gDel = t.closest<HTMLElement>('[data-group-del]');
+    if (gDel) { deleteGroup(gDel.dataset.groupDel ?? ''); return; }
+    const gsDel = t.closest<HTMLElement>('[data-group-series-del]');
+    if (gsDel) { const [id, ...rest] = (gsDel.dataset.groupSeriesDel ?? '').split('|'); const s = rest.join('|'); const g = state.groups.find((x) => x.id === id); if (g) { g.series = g.series.filter((x) => x !== s); saveGroups(); renderVenueGroups(); reflectSeriesGroup(); renderSettings(); } return; }
+    const cRen = t.closest<HTMLElement>('[data-col-rename]');
+    if (cRen) { const c = collectionById(cRen.dataset.colRename ?? ''); if (c) { const n = window.prompt('Rename collection:', c.name); if (n && n.trim()) { c.name = n.trim(); saveCollections(); afterCollectionsChange(); } } return; }
+    const cDel = t.closest<HTMLElement>('[data-col-del]');
+    if (cDel) { const c = collectionById(cDel.dataset.colDel ?? ''); if (c && window.confirm(`Delete collection “${c.name}”?`)) { state.collections = state.collections.filter((x) => x.id !== c.id); if (state.collection === c.id) state.collection = ''; saveCollections(); afterCollectionsChange(); render(); } return; }
+    const tagPurge = t.closest<HTMLElement>('[data-tag-purge]');
+    if (tagPurge) { const tag = tagPurge.dataset.tagPurge ?? ''; for (const [k, tags] of [...state.tags]) { const next = tags.filter((x) => x !== tag); if (next.length) state.tags.set(k, next); else state.tags.delete(k); } saveTags(); renderSettings(); render(); return; }
+  });
+  $('#settingsBody').addEventListener('change', (e) => {
+    const sel = e.target as HTMLSelectElement;
+    const add = sel.closest<HTMLElement>('[data-group-series-add]');
+    if (add && sel.value) { const g = state.groups.find((x) => x.id === add.dataset.groupSeriesAdd); if (g && !g.series.includes(sel.value)) { g.series.push(sel.value); saveGroups(); renderVenueGroups(); reflectSeriesGroup(); renderSettings(); } }
   });
 
   // sidebar: mobile drawer toggle + desktop collapse
@@ -1131,6 +1489,7 @@ function wire() {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); els.search.focus(); return; }
     if ((e.metaKey || e.ctrlKey) && e.key === '/') { e.preventDefault(); toggleHelp(); return; }
     if (e.key === 'Escape') {
+      if (!popEl.hidden) { closePop(); return; }
       if (document.activeElement === els.search) {
         if (state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }
         els.search.blur();
@@ -1149,16 +1508,7 @@ function wire() {
       case 'j': e.preventDefault(); moveFocus(1); break;
       case 'k': e.preventDefault(); moveFocus(-1); break;
       case 'o': focusedCard()?.querySelector<HTMLButtonElement>('[data-card-toggle]')?.click(); break;
-      case 's': {
-        const card = focusedCard();
-        if (!card) break;
-        const k = card.dataset.key ?? '';
-        if (state.favs.has(k)) state.favs.delete(k); else state.favs.add(k);
-        writeJson(K_FAVS, [...state.favs].sort());
-        render();
-        els.list.querySelector<HTMLElement>(`.paper-card[data-key="${CSS.escape(k)}"]`)?.classList.add('is-focused');
-        break;
-      }
+      case 's': focusedCard()?.querySelector<HTMLButtonElement>('[data-collect]')?.click(); break;
       case 'G': window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); break;
       case 'g': {
         const now = Date.now();
@@ -1207,8 +1557,9 @@ function init() {
   renderSaved();
   wire();
   reflectSidebar();
-  reflectSeriesFav();
-  if (state.favOnly) els.favOnly.checked = true;
+  reflectSeriesGroup();
+  reflectCollectionFilter();
+  renderSettings();
   ensureLoaded([...state.selected]).then(render);
 }
 

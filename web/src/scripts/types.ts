@@ -48,5 +48,20 @@ export interface SavedSearch {
   events: string[];
   venues: string[];
   sort: string;
-  favOnly: boolean;
+  /** id of the collection the view was scoped to, '' for none */
+  collection?: string;
+}
+
+/** A user-named group of venue *series* (e.g. "My SE list" = ICSE, FSE, ASE). */
+export interface VenueGroup {
+  id: string;
+  name: string;
+  series: string[];
+}
+
+/** A user-named collection of papers, identified by "venueId:paperId" keys. */
+export interface Collection {
+  id: string;
+  name: string;
+  keys: string[];
 }

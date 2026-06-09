@@ -27,7 +27,8 @@ dozen program pages.
 It's a static website backed by a small scraping pipeline: each venue is normalized
 to one shared `Paper` shape, then enriched from bibliographic/open metadata sources
 for DOI, abstracts, publication details, and open-access links where available. No
-accounts, no backend — your favorites and saved searches live in your browser.
+accounts, no backend — your groups, collections, tags and saved searches live in your
+browser, and can be exported to a single file.
 
 ## Highlights
 
@@ -40,8 +41,9 @@ accounts, no backend — your favorites and saved searches live in your browser.
   whatever is currently in view — click any bar to drill in.
 - 🕸 **Relationship networks.** Explore co-author and institution networks for the
   current result set.
-- ⭐ **Favorites & saved searches.** Star papers across venues; save a filter set to
-  return to later.
+- ⭐ **Groups, collections & tags.** Build custom venue groups (series-level), file
+  papers into named collections, tag papers freely, and save filter sets to return to
+  later. Everything is local and exportable from a settings panel.
 - 📤 **Selection & export.** Select papers from the list, then copy BibTeX or download
   CSV with DOI and publication metadata.
 - ⚡ **Fast & private.** A single pre-rendered page; all filtering happens client-side.
@@ -61,7 +63,7 @@ grouped by area, series, and year.
 config/venues.yaml ─▶ scraper + enrichers ─▶ unified JSON per venue ─▶ Astro site ─▶ static host
 ```
 
-- **Config** lists venues, their primary scraper, and optional metadata enrichers.
+- **Config** lists venues, their primary scraper, and the minimum source URL.
 - **Adapters** each understand one source platform and emit the *same* `Paper` shape.
 - **Enrichers** merge Crossref/OpenAlex metadata such as DOI, abstract, publication
   date, volume/issue/pages, keywords, author metadata, and open-access/PDF links.
@@ -104,8 +106,9 @@ build — no Python at deploy time.
 1. Add an entry to `config/venues.yaml` (fields are documented inline).
 2. Point its `scraper:` at a registered adapter (`dateconf`, `dblp`, `linklings`,
    `researchr`, `sigarch`).
-3. Add `source.enrichers` (`crossref`, `openalex`) when the primary source lacks
-   publication metadata.
+3. Provide only the adapter's source locator (`program_url`, `base_url`, or
+   `toc_url`). Tracks, event types, default labels, and Crossref/OpenAlex
+   enrichment are inferred by the pipeline.
 4. `uv run confer build --venue <id>` and check `web/public/data/<id>.json`.
 
 To support a new platform, add an adapter under `scraper/src/confer/scrapers/` and
