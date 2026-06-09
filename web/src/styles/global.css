@@ -454,23 +454,6 @@ html.is-rail-collapsed { --col-right: 0; }
 .collect-btn:hover { border-color: var(--accent); color: var(--accent); }
 .collect-btn.is-on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
 
-/* User tags ride in the chips row (no dedicated line). */
-.chip-tag { cursor: pointer; border-color: var(--line-strong); background: var(--panel); }
-.chip-tag:hover { border-color: var(--accent); color: var(--accent-dark); }
-/* A little breathing room between the label and its remove "×". */
-.tag-x { display: inline-grid; place-items: center; cursor: pointer; color: var(--faint); font-size: 12px; line-height: 1; margin-left: 5px; }
-.tag-x:hover { color: var(--favorite); }
-/* "+ tag" affordance — reuses the .chip box (identical height, so revealing it
-   on hover never changes the row height / jitters the card); hidden until the
-   card is hovered or focused so it takes no permanent space. */
-.chip-add {
-  display: none; cursor: pointer;
-  border-style: dashed; border-color: var(--line-strong);
-  background: none; color: var(--faint);
-}
-.chip-add:hover { border-color: var(--accent); color: var(--accent); }
-.paper-card:hover .chip-add, .paper-card:focus-within .chip-add { display: inline-flex; }
-
 .compact-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 13px 0 0; color: var(--muted); font-size: 12.5px; }
 .meta-item { max-width: min(100%, 340px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .meta-item strong { margin-right: 5px; color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
@@ -509,6 +492,24 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .chip-track { cursor: pointer; }
 .chip-track:hover { border-color: var(--accent); color: var(--accent-dark); }
+
+/* User tags ride in the chips row (no dedicated line). Defined after .chip so
+   these overrides win (same specificity, later source order). */
+.chip-tag { cursor: pointer; border-color: var(--line-strong); background: var(--panel); }
+.chip-tag:hover { border-color: var(--accent); color: var(--accent-dark); }
+/* A little breathing room between the label and its remove "×". */
+.tag-x { display: inline-grid; place-items: center; cursor: pointer; color: var(--faint); font-size: 12px; line-height: 1; margin-left: 5px; }
+.tag-x:hover { color: var(--favorite); }
+/* "+ tag" — same dashed style as the other "+" add buttons, just with a label.
+   Reuses the .chip box so its height matches the chips (no hover jitter), and
+   is hidden until the card is hovered/focused so it takes no permanent space. */
+.chip-add {
+  display: none; cursor: pointer;
+  border-style: dashed; border-color: var(--line-strong);
+  background: none; color: var(--faint);
+}
+.chip-add:hover { border-color: var(--accent); color: var(--accent); }
+.paper-card:hover .chip-add, .paper-card:focus-within .chip-add { display: inline-flex; }
 
 .program-link {
   position: absolute; right: 16px; bottom: 16px;
