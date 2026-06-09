@@ -201,6 +201,39 @@ venues:
       enrichers:
         - crossref
 
+  - id: icse2024
+    name: ICSE 2024
+    series: ICSE
+    category: Software Engineering
+    kind: conference
+    year: 2024
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://conf.researchr.org/program/icse-2024/program-icse-2024/
+      context: icse-2024
+      require_authors: true
+      include_event_types:
+        - Paper
+        - Poster
+        - Research paper
+        - Talk
+      include_tracks:
+        - Demonstrations
+        - Doctoral Symposium
+        - Future of Software Engineering
+        - Industry Challenge Track
+        - Journal-first Papers
+        - New Ideas and Emerging Results (NIER)
+        - Posters
+        - Research Track
+        - SE In Practice (SEIP)
+        - SE in Society (SEIS)
+        - SRC - ACM Student Research Competition
+        - Software Engineering Education and Training (SEET)
+      enrichers:
+        - crossref
+
   - id: fse2026
     name: FSE 2026
     series: FSE
@@ -253,6 +286,32 @@ venues:
       enrichers:
         - crossref
 
+  - id: fse2024
+    name: FSE 2024
+    series: FSE
+    category: Software Engineering
+    kind: conference
+    year: 2024
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://conf.researchr.org/program/fse-2024/program-fse-2024/Detailed-Timeline
+      context: fse-2024
+      default_event_type: Paper
+      require_authors: true
+      include_tracks:
+        - Doctoral Symposium
+        - Ideas, Visions and Reflections
+        - Industry Papers
+        - Journal First
+        - Posters
+        - Research Papers
+        - Software Engineering Education
+        - Student Research Competition
+        - Tool Demonstrations
+      enrichers:
+        - crossref
+
   - id: ase2025
     name: ASE 2025
     series: ASE
@@ -264,6 +323,38 @@ venues:
     source:
       program_url: https://conf.researchr.org/program/ase-2025/program-ase-2025/
       context: ase-2025
+      require_authors: true
+      include_event_types:
+        - Demonstration
+        - Full-paper
+        - Long-paper
+        - Poster
+        - Research paper
+        - Short-paper
+        - Talk
+      include_tracks:
+        - Doctoral Symposium
+        - Industry Showcase
+        - Journal-First
+        - NIER
+        - Posters
+        - Research Papers
+        - Student Research Competition
+        - Tool Demonstration Track
+      enrichers:
+        - crossref
+
+  - id: ase2024
+    name: ASE 2024
+    series: ASE
+    category: Software Engineering
+    kind: conference
+    year: 2024
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://conf.researchr.org/program/ase-2024/program-ase-2024/
+      context: ase-2024
       require_authors: true
       include_event_types:
         - Demonstration
@@ -302,6 +393,27 @@ venues:
         - Doctoral Symposium
         - Research Papers
         - Tool Demonstrations
+      enrichers:
+        - crossref
+
+  - id: issta2024
+    name: ISSTA 2024
+    series: ISSTA
+    category: Software Testing & Analysis
+    kind: conference
+    year: 2024
+    scraper: researchr
+    enabled: true
+    source:
+      program_url: https://2024.issta.org/program/program-issta-2024/Detailed-Timeline
+      context: issta-2024
+      default_event_type: Paper
+      include_tracks:
+        # track_prefix defaults to the series ("ISSTA"), so _normalize_track
+        # strips a leading "ISSTA " -> match the post-normalization names.
+        - Technical Papers
+        - ISSTA/ECOOP Doctoral Symposium
+        - ISSTA/ECOOP Tool Demonstrations
       enrichers:
         - crossref
 
