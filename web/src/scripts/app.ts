@@ -1187,7 +1187,7 @@ function renderSettings() {
     ? `<div class="set-chips">${tags.map(([t, n]) => `<span class="chip">${esc(t)} ${n}<span class="tag-x" data-tag-purge="${esc(t)}" role="button" aria-label="Remove from all">×</span></span>`).join('')}</div>`
     : '<p class="set-empty">No tags yet. Add tags on a paper card.</p>';
   const raw: Record<string, unknown> = {};
-  for (const k of PERSONAL_KEYS) { try { const v = localStorage.getItem(k); if (v) raw[k] = JSON.parse(v); } catch { /* skip */ } }
+  for (const k of PERSONAL_KEYS) { const v = localStorage.getItem(k); if (!v) continue; try { raw[k] = JSON.parse(v); } catch { raw[k] = v; } }
   const currentAccent = document.documentElement.dataset.accent || 'clay';
   const swatchesHtml = Object.entries(ACCENTS).map(([key, { label, light }]) =>
     `<button class="accent-sw${currentAccent === key ? ' is-on' : ''}" data-accent-pick="${key}" title="${label}" type="button" style="background:${light}"></button>`
@@ -1339,24 +1339,11 @@ function toggleTheme() {
   try { localStorage.setItem(K_THEME, dark ? 'light' : 'dark'); } catch { /* ignore */ }
   reflectTheme();
 }
-function applyAccent(name: string, animate = false) {
+function applyAccent(name: string) {
   const key = name in ACCENTS ? name : 'clay';
-  const apply = () => {
-    if (key === 'clay') delete document.documentElement.dataset.accent;
-    else document.documentElement.dataset.accent = key;
-    try { localStorage.setItem(K_ACCENT, key); } catch { /* ignore */ }
-  };
-  if (!animate) { apply(); return; }
-  const flash = document.createElement('div');
-  flash.className = 'accent-flash';
-  document.body.appendChild(flash);
-  requestAnimationFrame(() => {
-    apply();
-    requestAnimationFrame(() => {
-      flash.classList.add('is-out');
-      flash.addEventListener('transitionend', () => flash.remove(), { once: true });
-    });
-  });
+  if (key === 'clay') delete document.documentElement.dataset.accent;
+  else document.documentElement.dataset.accent = key;
+  try { localStorage.setItem(K_ACCENT, key); } catch { /* ignore */ }
 }
 
 // --- events ------------------------------------------------------------
@@ -1567,7 +1554,7 @@ function wire() {
     if (t.closest('[data-settings-import]')) { importInput.click(); return; }
     if (t.closest('[data-clear-local]')) { clearLocalData(); return; }
     const accentPick = t.closest<HTMLElement>('[data-accent-pick]');
-    if (accentPick) { applyAccent(accentPick.dataset.accentPick!, true); renderSettings(); return; }
+    if (accentPick) { applyAccent(accentPick.dataset.accentPick!); renderSettings(); return; }
     const gAdd = t.closest<HTMLElement>('[data-group-series-add]');
     if (gAdd) { openSeriesAddPop(gAdd, gAdd.dataset.groupSeriesAdd ?? ''); return; }
     const gRen = t.closest<HTMLElement>('[data-group-rename]');

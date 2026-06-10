@@ -64,12 +64,6 @@
 
 * { box-sizing: border-box; }
 
-/* Accent-switch flash overlay — covers the instant jump while CSS vars repaint. */
-.accent-flash {
-  position: fixed; inset: 0; z-index: 9999; pointer-events: none;
-  background: var(--bg); opacity: 1; transition: opacity 0.18s ease;
-}
-.accent-flash.is-out { opacity: 0; }
 
 /* Theme the root element so the browser tints its own chrome / safe-area via
    color-scheme + this background, and repaints it correctly on a theme switch
