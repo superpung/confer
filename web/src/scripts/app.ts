@@ -1,4 +1,4 @@
-import type { Paper, Venue, SavedSearch, VenueGroup, Collection, SettingsBundle } from './types';
+import type { Paper, Venue, SavedSearch, VenueGroup, Collection, SettingsBundle, GitHubUser, SyncMeta } from './types';
 import { toBibtex, toCsv, type ExportRow } from './export';
 
 // --- constants & storage keys ------------------------------------------
@@ -14,6 +14,8 @@ const K_TAGS = 'confer.paperTags';           // Record<paperKey, string[]>
 const K_ACCENT = 'confer.accent';            // accent color key (e.g. "sage")
 const K_GH_TOKEN = 'confer.ghToken';         // GitHub gist-scoped access token
 const K_GIST_ID = 'confer.gistId';           // id of the user's confer config gist
+const K_GH_USER = 'confer.ghUser';           // cached GitHubUser JSON
+const K_SYNC_META = 'confer.syncMeta';       // SyncMeta JSON (conflict detection)
 // Keys bundled by the settings export/import.
 const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_SELECTED, K_THEME, K_ACCENT];
 // OAuth broker endpoint (Netlify Function — stateless, stores nothing).
@@ -1116,6 +1118,11 @@ function tagCounts(): Map<string, number> {
 
 // --- toast -------------------------------------------------------------
 let toastTimer = 0;
+// Pending conflict resolution state (set when the conflict modal opens)
+let conflictLocal: SettingsBundle | null = null;
+let conflictRemote: SettingsBundle | null = null;
+let conflictToken = '';
+let conflictGistId = '';
 function toast(msg: string) {
   const el = $('#toast');
   el.textContent = msg;
@@ -1178,25 +1185,64 @@ function loadSaved(i: number) {
 
 // --- settings modal: view stored data, export / import ----------------
 function renderSyncSection(): string {
-  if (!GH_CLIENT_ID) return ''; // Sync unavailable when OAuth App not configured
+  const actionBtns = `<div class="set-actions">
+    <button class="text-btn" data-settings-export type="button">${ICONS.download} Export</button>
+    <button class="text-btn" data-settings-import type="button">${ICONS.upload} Import…</button>
+    <button class="text-btn" data-share-full type="button">${ICONS.link} Share all</button>
+  </div>`;
+
+  // No GitHub App configured — just show data actions
+  if (!GH_CLIENT_ID) {
+    return `<section class="set-section">${actionBtns}</section>`;
+  }
+
   const token = localStorage.getItem(K_GH_TOKEN);
   const gistId = localStorage.getItem(K_GIST_ID);
+
+  // Logged out
   if (!token) {
     return `<section class="set-section">
-      <h3 class="set-title">Sync</h3>
-      <p class="set-note">Log in with GitHub to sync your config across devices via a private Gist. Only the <code>gist</code> scope is requested.</p>
-      <button class="text-btn" data-gh-login type="button">${ICONS.github} Login with GitHub</button>
+      ${actionBtns}
+      <div class="set-actions" style="margin-top:4px">
+        <button class="text-btn" data-gh-login type="button">${ICONS.github} Login with GitHub</button>
+      </div>
+      <p class="set-note">Sync your config across devices via a secret GitHub Gist — only accessible with the direct URL.</p>
     </section>`;
   }
-  const gistLink = gistId ? `<a class="set-note" href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer">View Gist ↗</a>` : `<span class="set-note">Gist will be created on first push.</span>`;
+
+  // Logged in — try to render identity
+  const user = readJson<GitHubUser | null>(K_GH_USER, null);
+  const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
+  const initials = user ? (user.name || user.login).slice(0, 2).toUpperCase() : '?';
+  const avatarHtml = user?.avatarUrl
+    ? `<div class="gh-avatar"><img src="${esc(user.avatarUrl)}" alt="" loading="lazy"></div>`
+    : `<div class="gh-avatar">${esc(initials)}</div>`;
+  const displayName = user
+    ? (user.name ? `${esc(user.name)} · ` : '') + `@${esc(user.login)}`
+    : 'GitHub account';
+  const emailHtml = user?.email ? `<span class="gh-meta">${esc(user.email)}</span>` : '';
+  const syncedHtml = meta?.remoteUpdatedAt
+    ? `<span class="gh-meta">Last synced ${relativeTime(meta.remoteUpdatedAt)}</span>`
+    : `<span class="gh-meta">Not yet synced</span>`;
+  const gistHref = gistId
+    ? `href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer"`
+    : '';
+
   return `<section class="set-section">
-    <h3 class="set-title">Sync <span class="set-item-meta">GitHub Gist</span></h3>
-    ${gistLink}
-    <div class="set-actions" style="margin-top:8px">
-      <button class="text-btn" data-gist-push type="button">${ICONS.cloudUp} Push</button>
-      <button class="text-btn" data-gist-pull type="button">${ICONS.cloudDown} Pull</button>
+    <div class="set-account">
+      ${avatarHtml}
+      <div class="gh-identity">
+        <span class="gh-name">${displayName}</span>
+        ${emailHtml}
+        ${syncedHtml}
+      </div>
+    </div>
+    <div class="set-actions">
+      <button class="text-btn text-btn--primary" data-sync-now type="button">${ICONS.cloudUp} Sync now</button>
+      ${gistId ? `<a class="text-btn" ${gistHref}>View Gist ↗</a>` : ''}
       <button class="text-btn" data-gh-signout type="button">Sign out</button>
     </div>
+    ${actionBtns}
   </section>`;
 }
 
@@ -1240,11 +1286,7 @@ function renderSettings() {
   ).join('');
 
   body.innerHTML = `
-    <div class="set-actions">
-      <button class="text-btn" data-settings-export type="button">${ICONS.download} Export</button>
-      <button class="text-btn" data-settings-import type="button">${ICONS.upload} Import…</button>
-      <button class="text-btn" data-share-full type="button">${ICONS.link} Share all</button>
-    </div>
+    ${renderSyncSection()}
     <section class="set-section"><h3 class="set-title">Appearance</h3><div class="accent-swatches">${swatchesHtml}</div></section>
     <section class="set-section"><h3 class="set-title">Venue groups</h3>${groupsHtml}</section>
     <section class="set-section"><h3 class="set-title">Collections</h3>${colsHtml}</section>
@@ -1253,7 +1295,6 @@ function renderSettings() {
       <h3 class="set-title">Saved searches <span class="set-item-meta">${state.saved.length}</span></h3>
       <button class="text-btn" data-open-saved type="button">Open saved searches</button>
     </section>
-    ${renderSyncSection()}
     <section class="set-section">
       <h3 class="set-title"><span>Stored data</span><span class="set-item-meta">${formatBytes(localDataBytes())}</span>
         <button class="set-mini set-mini-del" data-clear-local type="button" aria-label="Clear all local data" title="Clear all local data">${ICONS.trash}</button></h3>
@@ -1438,30 +1479,25 @@ async function handleOAuthCallback() {
     const data = await res.json() as { access_token?: string; error?: string };
     if (!data.access_token) { toast('Login failed: ' + (data.error ?? 'unknown')); return; }
     try { localStorage.setItem(K_GH_TOKEN, data.access_token); } catch { /* ignore */ }
-    toast('Logged in with GitHub');
+    toast('Logged in with GitHub ✓');
+    void fetchGitHubUser(data.access_token); // async — re-renders when identity arrives
     renderSettings();
+    $('#settingsModal').hidden = false; // open settings so user sees the sync section
   } catch { toast('Login failed — network error'); }
 }
 
-/** Find or create the user's confer config gist. */
+/** Find or create the user's confer config gist. Uses ghFetch for 401 handling. */
 async function ensureGist(token: string): Promise<string> {
   const cached = localStorage.getItem(K_GIST_ID);
   if (cached) return cached;
-  // Search existing gists for one with our marker filename
-  const listRes = await fetch('https://api.github.com/gists?per_page=100', {
-    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-  });
+  const listRes = await ghFetch('https://api.github.com/gists?per_page=100', token);
   if (!listRes.ok) throw new Error('Failed to list gists');
   const gists = await listRes.json() as { id: string; files: Record<string, unknown> }[];
   const existing = gists.find((g) => 'confer-config.json' in g.files);
-  if (existing) {
-    try { localStorage.setItem(K_GIST_ID, existing.id); } catch { /* ignore */ }
-    return existing.id;
-  }
-  // Create a new private gist
-  const createRes = await fetch('https://api.github.com/gists', {
+  if (existing) { try { localStorage.setItem(K_GIST_ID, existing.id); } catch { /* ignore */ } return existing.id; }
+  const createRes = await ghFetch('https://api.github.com/gists', token, {
     method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       description: 'confer personal config (auto-managed)',
       public: false,
@@ -1474,46 +1510,232 @@ async function ensureGist(token: string): Promise<string> {
   return gist.id;
 }
 
-/** Push local config to the user's Gist. */
-async function pushToGist() {
-  const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) { toast('Not logged in'); return; }
-  try {
-    const id = await ensureGist(token);
-    const bundle = serializeSettings();
-    await fetch(`https://api.github.com/gists/${id}`, {
-      method: 'PATCH',
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ files: { 'confer-config.json': { content: JSON.stringify(bundle, null, 2) } } }),
-    });
-    toast('Config pushed to Gist');
-    renderSettings();
-  } catch (e) { toast('Push failed'); console.error(e); }
+/** Low-level: write a bundle to the Gist with a fresh updatedAt, then persist SyncMeta. */
+async function pushBundle(token: string, gistId: string, bundle: SettingsBundle): Promise<void> {
+  const now = new Date().toISOString();
+  const withTs: SettingsBundle = { ...bundle, updatedAt: now };
+  const res = await ghFetch(`https://api.github.com/gists/${gistId}`, token, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ files: { 'confer-config.json': { content: JSON.stringify(withTs, null, 2) } } }),
+  });
+  if (!res.ok) throw new Error('Push failed');
+  writeJson(K_SYNC_META, { remoteUpdatedAt: now, localFingerprint: bundleFingerprint(bundle) } satisfies SyncMeta);
 }
 
-/** Pull config from the user's Gist and apply it. */
-async function pullFromGist() {
-  const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) { toast('Not logged in'); return; }
-  try {
-    const id = await ensureGist(token);
-    const res = await fetch(`https://api.github.com/gists/${id}`, {
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-    });
-    if (!res.ok) throw new Error('Failed to fetch gist');
-    const gist = await res.json() as { files: { 'confer-config.json'?: { content?: string } } };
-    const content = gist.files['confer-config.json']?.content;
-    if (!content) throw new Error('Empty gist');
-    applySettingsBundle(JSON.parse(content));
-    toast('Config pulled from Gist');
-  } catch (e) { toast('Pull failed'); console.error(e); }
+/** Low-level: apply a remote bundle as the new local state and record the sync point. */
+function applyRemoteBundle(remote: SettingsBundle): void {
+  applySettingsBundle(remote);
+  writeJson(K_SYNC_META, { remoteUpdatedAt: remote.updatedAt ?? '', localFingerprint: bundleFingerprint(serializeSettings()) } satisfies SyncMeta);
 }
 
-/** Sign out: clear token + gist id. */
+/** Sign out: clear token, identity, gist id, and sync meta. */
 function signOutGitHub() {
-  try { localStorage.removeItem(K_GH_TOKEN); localStorage.removeItem(K_GIST_ID); } catch { /* ignore */ }
+  try {
+    [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k));
+  } catch { /* ignore */ }
+  conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
   toast('Signed out');
   renderSettings();
+}
+
+// --- GitHub API helpers -----------------------------------------------
+
+/** fetch() wrapper that surfaces 401s as an auto-signout + thrown error. */
+async function ghFetch(url: string, token: string, init?: RequestInit): Promise<Response> {
+  const res = await fetch(url, {
+    ...init,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      ...((init?.headers ?? {}) as Record<string, string>),
+    },
+  });
+  if (res.status === 401) {
+    try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
+    toast('GitHub session expired — please log in again');
+    renderSettings();
+    throw new Error('gh_401');
+  }
+  return res;
+}
+
+/** Fetch GitHub identity for the authed user; cache and re-render. */
+async function fetchGitHubUser(token: string): Promise<void> {
+  try {
+    const res = await ghFetch('https://api.github.com/user', token);
+    if (!res.ok) return;
+    const d = await res.json() as { login: string; avatar_url: string; name?: string | null; email?: string | null };
+    const user: GitHubUser = { login: d.login, avatarUrl: d.avatar_url };
+    if (d.name) user.name = d.name;
+    if (d.email) user.email = d.email;
+    writeJson(K_GH_USER, user);
+    renderSettings();
+  } catch { /* non-fatal */ }
+}
+
+/** Human-readable relative time (e.g. "3 min ago", "2 h ago"). */
+function relativeTime(iso: string): string {
+  try {
+    const ms = Date.now() - new Date(iso).getTime();
+    if (ms < 60_000) return 'just now';
+    if (ms < 3_600_000) return `${Math.floor(ms / 60_000)} min ago`;
+    if (ms < 86_400_000) return `${Math.floor(ms / 3_600_000)} h ago`;
+    return `${Math.floor(ms / 86_400_000)} d ago`;
+  } catch { return ''; }
+}
+
+/** Stable content fingerprint for conflict detection (excludes timestamps). */
+function bundleFingerprint(b: Partial<SettingsBundle>): string {
+  return JSON.stringify({
+    venueGroups: b.venueGroups ?? [],
+    collections: b.collections ?? [],
+    paperTags: b.paperTags ?? {},
+    savedSearches: b.savedSearches ?? [],
+    selected: [...(b.selected ?? [])].sort(),
+    theme: b.theme ?? '',
+    accent: b.accent ?? '',
+  });
+}
+
+/** Build HTML showing what's different between two bundles (for the conflict modal). */
+function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
+  function chips(items: string[]) {
+    if (!items.length) return '<span class="conflict-same">—</span>';
+    const shown = items.slice(0, 6);
+    const more = items.length - shown.length;
+    return shown.map((s) => `<span class="chip">${esc(s)}</span>`).join('') + (more > 0 ? `<span class="set-note" style="margin:0"> +${more}</span>` : '');
+  }
+  type Row = { label: string; localItems: string[]; remoteItems: string[] };
+  const rows: Row[] = [];
+
+  const lGIds = new Set((local.venueGroups ?? []).map((g) => g.id));
+  const rGIds = new Set((remote.venueGroups ?? []).map((g) => g.id));
+  const grpLocal = (local.venueGroups ?? []).filter((g) => !rGIds.has(g.id)).map((g) => g.name);
+  const grpRemote = (remote.venueGroups ?? []).filter((g) => !lGIds.has(g.id)).map((g) => g.name);
+  if (grpLocal.length || grpRemote.length) rows.push({ label: 'Groups', localItems: grpLocal, remoteItems: grpRemote });
+
+  const lCIds = new Set((local.collections ?? []).map((c) => c.id));
+  const rCIds = new Set((remote.collections ?? []).map((c) => c.id));
+  const colLocal = (local.collections ?? []).filter((c) => !rCIds.has(c.id)).map((c) => c.name);
+  const colRemote = (remote.collections ?? []).filter((c) => !lCIds.has(c.id)).map((c) => c.name);
+  if (colLocal.length || colRemote.length) rows.push({ label: 'Collections', localItems: colLocal, remoteItems: colRemote });
+
+  const lTags = new Set(Object.keys(local.paperTags ?? {}));
+  const rTags = new Set(Object.keys(remote.paperTags ?? {}));
+  const tagLocal = [...new Set([...lTags].filter((k) => !rTags.has(k)).flatMap((k) => local.paperTags![k] ?? []))];
+  const tagRemote = [...new Set([...rTags].filter((k) => !lTags.has(k)).flatMap((k) => remote.paperTags![k] ?? []))];
+  if (tagLocal.length || tagRemote.length) rows.push({ label: 'Tags', localItems: tagLocal, remoteItems: tagRemote });
+
+  const lSNames = new Set((local.savedSearches ?? []).map((s) => s.name));
+  const rSNames = new Set((remote.savedSearches ?? []).map((s) => s.name));
+  const ssLocal = (local.savedSearches ?? []).filter((s) => !rSNames.has(s.name)).map((s) => s.name);
+  const ssRemote = (remote.savedSearches ?? []).filter((s) => !lSNames.has(s.name)).map((s) => s.name);
+  if (ssLocal.length || ssRemote.length) rows.push({ label: 'Saved searches', localItems: ssLocal, remoteItems: ssRemote });
+
+  const appLocal: string[] = [];
+  const appRemote: string[] = [];
+  if ((local.theme ?? '') !== (remote.theme ?? '')) { appLocal.push(`theme: ${local.theme || 'light'}`); appRemote.push(`theme: ${remote.theme || 'light'}`); }
+  if ((local.accent ?? '') !== (remote.accent ?? '')) { appLocal.push(`accent: ${local.accent || 'clay'}`); appRemote.push(`accent: ${remote.accent || 'clay'}`); }
+  if (appLocal.length) rows.push({ label: 'Appearance', localItems: appLocal, remoteItems: appRemote });
+
+  if (!rows.length) return '<p class="set-note">The content is the same; only timestamps differ.</p>';
+
+  const remoteFmt = remote.updatedAt ? `Cloud · ${relativeTime(remote.updatedAt)}` : 'Cloud';
+  const rowsHtml = rows.map((r) => `
+    <span class="conflict-cat-name">${esc(r.label)}</span>
+    <div class="conflict-cell">${chips(r.localItems)}</div>
+    <div class="conflict-cell">${chips(r.remoteItems)}</div>`).join('');
+
+  return `<div class="conflict-table">
+    <span></span><strong class="conflict-head">This device</strong><strong class="conflict-head">${esc(remoteFmt)}</strong>
+    ${rowsHtml}
+  </div>`;
+}
+
+/** One-click sync: auto-detect direction, or open conflict modal on true conflict. */
+async function syncNow() {
+  const token = localStorage.getItem(K_GH_TOKEN);
+  if (!token) { toast('Not logged in'); return; }
+  toast('Syncing…');
+  try {
+    const gistId = await ensureGist(token);
+    const res = await ghFetch(`https://api.github.com/gists/${gistId}`, token);
+    if (!res.ok) throw new Error('Fetch gist failed');
+    const gist = await res.json() as { files: { 'confer-config.json'?: { content?: string } } };
+    const content = gist.files['confer-config.json']?.content;
+
+    const local = serializeSettings();
+    const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
+
+    // Parse remote; check if it has real content (updatedAt marks a real push)
+    let remote: SettingsBundle | null = null;
+    try { if (content) remote = JSON.parse(content) as SettingsBundle; } catch { /* corrupt gist */ }
+    const hasRealRemote = !!(remote?.updatedAt);
+
+    if (!hasRealRemote) {
+      // Empty or placeholder gist — first push from this device
+      await pushBundle(token, gistId, local);
+      toast('Synced ✓');
+      renderSettings();
+      return;
+    }
+    if (!meta) {
+      // This device has never synced before but remote exists — pull down
+      applyRemoteBundle(remote!);
+      toast('Synced ✓ — pulled cloud config');
+      return;
+    }
+
+    const localChanged = bundleFingerprint(local) !== meta.localFingerprint;
+    const remoteChanged = (remote!.updatedAt ?? '') !== meta.remoteUpdatedAt;
+
+    if (!localChanged && !remoteChanged) { toast('Already up to date'); renderSettings(); return; }
+    if (localChanged && !remoteChanged) { await pushBundle(token, gistId, local); toast('Synced ✓'); renderSettings(); return; }
+    if (!localChanged) { applyRemoteBundle(remote!); toast('Synced ✓'); return; }
+
+    // True conflict — both sides changed
+    renderConflict(local, remote!, token, gistId);
+  } catch (e: unknown) {
+    if ((e as Error).message !== 'gh_401') toast('Sync failed');
+    console.error(e);
+  }
+}
+
+/** Open the conflict resolution modal with a diff of local vs remote. */
+function renderConflict(local: SettingsBundle, remote: SettingsBundle, token: string, gistId: string) {
+  conflictLocal = local; conflictRemote = remote; conflictToken = token; conflictGistId = gistId;
+  const body = document.querySelector<HTMLElement>('#conflictBody');
+  if (body) body.innerHTML = diffBundles(local, remote);
+  $('#conflictModal').hidden = false;
+}
+
+/** Close the conflict modal and clear pending state. */
+function closeConflictModal() {
+  $('#conflictModal').hidden = true;
+  conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
+}
+
+/** Execute the chosen conflict resolution and update sync meta. */
+async function resolveSyncConflict(choice: 'local' | 'cloud' | 'merge') {
+  const local = conflictLocal, remote = conflictRemote;
+  const token = conflictToken, gistId = conflictGistId;
+  closeConflictModal();
+  if (!local || !remote || !token || !gistId) return;
+  try {
+    if (choice === 'local') {
+      await pushBundle(token, gistId, local);
+      toast('Synced ✓ — kept your local changes');
+    } else if (choice === 'cloud') {
+      applyRemoteBundle(remote);
+      toast('Synced ✓ — applied cloud changes');
+    } else {
+      applySettingsBundle(remote, { merge: true });
+      await pushBundle(token, gistId, serializeSettings());
+      toast('Synced ✓ — merged both sides');
+    }
+    renderSettings();
+  } catch { toast('Sync failed after resolution'); }
 }
 
 /** Snapshot all personal data into a portable bundle. */
@@ -1876,6 +2098,15 @@ function wire() {
   $('#promptForm').addEventListener('submit', (e) => { e.preventDefault(); settlePrompt($<HTMLInputElement>('#promptInput').value); });
   document.querySelectorAll('[data-prompt-cancel]').forEach((b) => b.addEventListener('click', () => settlePrompt(null)));
 
+  // conflict resolution modal
+  $('#conflictModal').addEventListener('click', (e) => {
+    const t = e.target as HTMLElement;
+    if (t.closest('[data-conflict-cancel]')) { closeConflictModal(); return; }
+    if (t.closest('[data-conflict-local]')) { void resolveSyncConflict('local'); return; }
+    if (t.closest('[data-conflict-cloud]')) { void resolveSyncConflict('cloud'); return; }
+    if (t.closest('[data-conflict-merge]')) { void resolveSyncConflict('merge'); return; }
+  });
+
   // settings modal: open + delegated actions + import file picker
   const importInput = $<HTMLInputElement>('#importFile');
   $('[data-settings]').addEventListener('click', () => { renderSettings(); $('#settingsModal').hidden = false; });
@@ -1886,8 +2117,7 @@ function wire() {
     if (t.closest('[data-settings-import]')) { importInput.click(); return; }
     if (t.closest('[data-share-full]')) { copyShareLink('full'); return; }
     if (t.closest('[data-gh-login]')) { startGitHubLogin(); return; }
-    if (t.closest('[data-gist-push]')) { pushToGist(); return; }
-    if (t.closest('[data-gist-pull]')) { pullFromGist(); return; }
+    if (t.closest('[data-sync-now]')) { void syncNow(); return; }
     if (t.closest('[data-gh-signout]')) { signOutGitHub(); return; }
     if (t.closest('[data-clear-local]')) { clearLocalData(); return; }
     const colShare = t.closest<HTMLElement>('[data-col-share]');
@@ -2042,6 +2272,9 @@ function init() {
   wire();
   handleShareHash();
   handleOAuthCallback();
+  // If already logged in but identity not cached, fetch it quietly
+  const _initToken = localStorage.getItem(K_GH_TOKEN);
+  if (_initToken && !localStorage.getItem(K_GH_USER)) void fetchGitHubUser(_initToken);
   reflectSidebar();
   reflectSeriesGroup();
   reflectCollectionFilter();

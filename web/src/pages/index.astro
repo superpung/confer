@@ -271,6 +271,24 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
+    <div class="modal" id="conflictModal" hidden>
+      <div class="modal-card modal-card--wide" role="dialog" aria-modal="true" aria-label="Sync conflict">
+        <div class="modal-head">
+          <h2>Sync conflict</h2>
+          <button class="icon-btn" data-conflict-cancel aria-label="Cancel"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+        <p class="modal-hint">Both this device and the cloud have changed since the last sync. Review the differences and choose how to resolve.</p>
+        <div id="conflictBody"></div>
+        <p class="modal-hint" style="margin-top:2px">Merge unions both sides — it cannot remove items deleted on either side.</p>
+        <div class="prompt-actions" style="justify-content:flex-end;gap:8px;margin-top:16px">
+          <button class="text-btn" data-conflict-cancel type="button">Cancel</button>
+          <button class="text-btn" data-conflict-cloud type="button">Use cloud</button>
+          <button class="text-btn" data-conflict-local type="button">Use local</button>
+          <button class="text-btn text-btn--primary" data-conflict-merge type="button">Merge</button>
+        </div>
+      </div>
+    </div>
+
     <div class="modal" id="promptModal" hidden>
       <form class="modal-card modal-card--prompt" id="promptForm" role="dialog" aria-modal="true" aria-label="Input">
         <div class="modal-head"><h2 id="promptTitle">Input</h2><button class="icon-btn" type="button" data-prompt-cancel aria-label="Cancel"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>

@@ -73,6 +73,8 @@ export interface SettingsBundle {
   app: string;
   version: number;
   exportedAt?: string;
+  /** ISO timestamp written by pushBundle; used for conflict detection. */
+  updatedAt?: string;
   venueGroups?: VenueGroup[];
   collections?: Collection[];
   paperTags?: Record<string, string[]>;
@@ -80,4 +82,20 @@ export interface SettingsBundle {
   selected?: string[];
   theme?: string;
   accent?: string;
+}
+
+/** Cached GitHub user info (from GET /user). Stored as K_GH_USER. */
+export interface GitHubUser {
+  login: string;
+  avatarUrl: string;
+  name?: string;
+  email?: string;
+}
+
+/** Persisted after each successful sync; used to detect which side has changed. */
+export interface SyncMeta {
+  /** The remote bundle's updatedAt at the time of last sync. */
+  remoteUpdatedAt: string;
+  /** bundleFingerprint() of the local config at the time of last sync. */
+  localFingerprint: string;
 }

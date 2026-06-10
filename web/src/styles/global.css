@@ -574,7 +574,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .back-to-top:hover { border-color: var(--accent); color: var(--accent); }
 .toast {
   position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%);
-  z-index: 60; padding: 10px 18px; border-radius: 999px;
+  z-index: 90; padding: 10px 18px; border-radius: 999px;
   background: var(--text); color: var(--bg); font-size: 13.5px; font-weight: 500;
   box-shadow: var(--shadow);
 }
@@ -651,6 +651,33 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-title .set-item-meta { font-weight: 600; }
 .set-note { margin: 0 0 8px; color: var(--faint); font-size: 12px; }
 .set-empty { color: var(--muted); font-size: 13px; }
+
+/* GitHub account identity row (Sync section, logged-in state) */
+.set-account { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.gh-avatar {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  background: var(--line-strong); display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; color: var(--muted); overflow: hidden;
+}
+.gh-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.gh-identity { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.gh-name { font-size: 13.5px; font-weight: 500; }
+.gh-meta { font-size: 12px; color: var(--faint); }
+
+/* Sync conflict diff table */
+.conflict-table {
+  display: grid; grid-template-columns: 90px 1fr 1fr;
+  gap: 6px 14px; margin: 10px 0 14px; align-items: start; font-size: 12.5px;
+}
+.conflict-head { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--faint); }
+.conflict-cat-name { color: var(--muted); padding-top: 2px; }
+.conflict-cell { display: flex; flex-wrap: wrap; gap: 4px; }
+.conflict-same { color: var(--faint); font-style: italic; font-size: 12px; }
+@media (max-width: 580px) {
+  .conflict-table { grid-template-columns: 1fr 1fr; }
+  .conflict-table .conflict-head:first-child,
+  .conflict-table .conflict-cat-name { display: none; }
+}
 .set-item { border: 1px solid var(--line); border-radius: 9px; padding: 7px 10px; margin-bottom: 6px; }
 .set-item-head { display: flex; align-items: center; gap: 8px; }
 .set-item-name { font-size: 14.5px; font-weight: 400; color: var(--text); }
