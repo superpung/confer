@@ -8,3 +8,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Stateless OAuth broker — exchanges a GitHub OAuth `code` for a gist-scoped
+# token. Set GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET in the Netlify dashboard.
+# The function stores nothing; the token goes back to the user's browser only.
+[functions]
+  directory = "web/netlify/functions"

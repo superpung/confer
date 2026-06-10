@@ -1,4 +1,4 @@
-import type { Paper, Venue, SavedSearch, VenueGroup, Collection } from './types';
+import type { Paper, Venue, SavedSearch, VenueGroup, Collection, SettingsBundle } from './types';
 import { toBibtex, toCsv, type ExportRow } from './export';
 
 // --- constants & storage keys ------------------------------------------
@@ -12,8 +12,15 @@ const K_VGROUPS = 'confer.venueGroups';      // VenueGroup[] (series-level group
 const K_COLLECTIONS = 'confer.collections';  // Collection[] (paper collections)
 const K_TAGS = 'confer.paperTags';           // Record<paperKey, string[]>
 const K_ACCENT = 'confer.accent';            // accent color key (e.g. "sage")
+const K_GH_TOKEN = 'confer.ghToken';         // GitHub gist-scoped access token
+const K_GIST_ID = 'confer.gistId';           // id of the user's confer config gist
 // Keys bundled by the settings export/import.
 const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_SELECTED, K_THEME, K_ACCENT];
+// OAuth broker endpoint (Netlify Function — stateless, stores nothing).
+const OAUTH_BROKER = '/.netlify/functions/github-oauth';
+// GitHub OAuth App client_id (public; the secret lives only in Netlify env).
+// Fill this in after registering the OAuth App at github.com/settings/developers.
+const GH_CLIENT_ID = import.meta.env.PUBLIC_GH_CLIENT_ID ?? '';
 const PAGE = 200;
 
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -58,6 +65,10 @@ const ICONS = {
   network: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><line x1="6.8" y1="6.8" x2="10.4" y2="16.2"/><line x1="17.3" y1="8.4" x2="13.3" y2="16.4"/><line x1="6.9" y1="6.2" x2="17" y2="6.8"/></svg>',
   download: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>',
   upload: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>',
+  link: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
+  github: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>',
+  cloudUp: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>',
+  cloudDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -1166,6 +1177,29 @@ function loadSaved(i: number) {
 }
 
 // --- settings modal: view stored data, export / import ----------------
+function renderSyncSection(): string {
+  if (!GH_CLIENT_ID) return ''; // Sync unavailable when OAuth App not configured
+  const token = localStorage.getItem(K_GH_TOKEN);
+  const gistId = localStorage.getItem(K_GIST_ID);
+  if (!token) {
+    return `<section class="set-section">
+      <h3 class="set-title">Sync</h3>
+      <p class="set-note">Log in with GitHub to sync your config across devices via a private Gist. Only the <code>gist</code> scope is requested.</p>
+      <button class="text-btn" data-gh-login type="button">${ICONS.github} Login with GitHub</button>
+    </section>`;
+  }
+  const gistLink = gistId ? `<a class="set-note" href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer">View Gist ↗</a>` : `<span class="set-note">Gist will be created on first push.</span>`;
+  return `<section class="set-section">
+    <h3 class="set-title">Sync <span class="set-item-meta">GitHub Gist</span></h3>
+    ${gistLink}
+    <div class="set-actions" style="margin-top:8px">
+      <button class="text-btn" data-gist-push type="button">${ICONS.cloudUp} Push</button>
+      <button class="text-btn" data-gist-pull type="button">${ICONS.cloudDown} Pull</button>
+      <button class="text-btn" data-gh-signout type="button">Sign out</button>
+    </div>
+  </section>`;
+}
+
 function renderSettings() {
   const body = document.querySelector<HTMLElement>('#settingsBody');
   if (!body) return;
@@ -1188,6 +1222,7 @@ function renderSettings() {
           <div class="set-item-head">
             <span class="set-item-name">${esc(c.name)}</span>
             <span class="set-item-meta">${c.keys.length} papers</span>
+            <button class="set-mini" data-col-share="${c.id}" type="button" aria-label="Copy share link" title="Copy share link">${ICONS.link}</button>
             <button class="set-mini" data-col-rename="${c.id}" type="button" aria-label="Rename collection" title="Rename">${ICONS.pencil}</button>
             <button class="set-mini set-mini-del" data-col-del="${c.id}" type="button" aria-label="Delete collection" title="Delete">${ICONS.trash}</button>
           </div>
@@ -1208,6 +1243,7 @@ function renderSettings() {
     <div class="set-actions">
       <button class="text-btn" data-settings-export type="button">${ICONS.download} Export</button>
       <button class="text-btn" data-settings-import type="button">${ICONS.upload} Import…</button>
+      <button class="text-btn" data-share-full type="button">${ICONS.link} Share all</button>
     </div>
     <section class="set-section"><h3 class="set-title">Appearance</h3><div class="accent-swatches">${swatchesHtml}</div></section>
     <section class="set-section"><h3 class="set-title">Venue groups</h3>${groupsHtml}</section>
@@ -1217,6 +1253,7 @@ function renderSettings() {
       <h3 class="set-title">Saved searches <span class="set-item-meta">${state.saved.length}</span></h3>
       <button class="text-btn" data-open-saved type="button">Open saved searches</button>
     </section>
+    ${renderSyncSection()}
     <section class="set-section">
       <h3 class="set-title"><span>Stored data</span><span class="set-item-meta">${formatBytes(localDataBytes())}</span>
         <button class="set-mini set-mini-del" data-clear-local type="button" aria-label="Clear all local data" title="Clear all local data">${ICONS.trash}</button></h3>
@@ -1275,8 +1312,213 @@ function openSeriesAddPop(anchor: HTMLElement, groupId: string) {
   });
 }
 
-function exportSettings() {
-  const data = {
+// --- share-link encode/decode -----------------------------------------
+/** Encode a bundle to a base64url string (gzip when available, else raw). */
+async function encodeBundle(bundle: SettingsBundle): Promise<string> {
+  const json = JSON.stringify(bundle);
+  try {
+    const cs = new CompressionStream('gzip');
+    const writer = cs.writable.getWriter();
+    writer.write(new TextEncoder().encode(json));
+    writer.close();
+    const buf = await new Response(cs.readable).arrayBuffer();
+    return 'z.' + btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  } catch {
+    return 'r.' + btoa(encodeURIComponent(json)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+}
+/** Decode a base64url string back to a bundle (inverse of encodeBundle). */
+async function decodeBundle(raw: string): Promise<SettingsBundle> {
+  const b64 = raw.slice(2).replace(/-/g, '+').replace(/_/g, '/');
+  const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  if (raw.startsWith('z.')) {
+    const ds = new DecompressionStream('gzip');
+    const writer = ds.writable.getWriter();
+    writer.write(bytes); writer.close();
+    const json = await new Response(ds.readable).text();
+    return JSON.parse(json) as SettingsBundle;
+  }
+  return JSON.parse(decodeURIComponent(atob(b64))) as SettingsBundle;
+}
+
+/** Build a share URL for a collection (+ its paper tags) or the full config. */
+async function buildShareUrl(scope: 'collection' | 'full', collectionId?: string): Promise<string> {
+  let bundle: SettingsBundle;
+  if (scope === 'collection' && collectionId) {
+    const col = collectionById(collectionId);
+    if (!col) throw new Error('collection not found');
+    const tags: Record<string, string[]> = {};
+    col.keys.forEach((k) => { const t = state.tags.get(k); if (t?.length) tags[k] = t; });
+    bundle = { app: 'confer', version: 1, exportedAt: new Date().toISOString(), collections: [col], paperTags: tags };
+  } else {
+    bundle = serializeSettings();
+  }
+  const payload = await encodeBundle(bundle);
+  return `${location.origin}${location.pathname}#share=${payload}`;
+}
+
+/** Copy a share link to clipboard and toast. */
+async function copyShareLink(scope: 'collection' | 'full', collectionId?: string) {
+  try {
+    const url = await buildShareUrl(scope, collectionId);
+    await navigator.clipboard.writeText(url);
+    toast('Share link copied');
+  } catch (e) {
+    toast('Could not copy link');
+    console.error(e);
+  }
+}
+
+/** Called on page load: detect #share= hash, prompt, apply if accepted. */
+async function handleShareHash() {
+  const hash = location.hash;
+  if (!hash.startsWith('#share=')) return;
+  const payload = hash.slice('#share='.length);
+  history.replaceState(null, '', location.pathname + location.search);
+  try {
+    const bundle = await decodeBundle(payload);
+    const colCount = bundle.collections?.length ?? 0;
+    const colName = bundle.collections?.[0]?.name ?? '';
+    const paperCount = bundle.collections?.reduce((s, c) => s + c.keys.length, 0) ?? 0;
+    const isFullConfig = (bundle.venueGroups?.length ?? 0) > 0 || (bundle.savedSearches?.length ?? 0) > 0;
+    const desc = isFullConfig
+      ? 'Import full config (groups, collections, saved searches)?'
+      : colCount === 1
+        ? `Import collection "${colName}" (${paperCount} papers)?`
+        : `Import ${colCount} collections (${paperCount} papers)?`;
+    const confirmed = await new Promise<boolean>((resolve) => {
+      const promptEl = document.querySelector<HTMLElement>('#promptModal');
+      const inputEl = document.querySelector<HTMLInputElement>('#promptInput');
+      const hintEl = document.querySelector<HTMLElement>('#promptHint');
+      const okEl = document.querySelector<HTMLElement>('#promptOk');
+      if (!promptEl || !inputEl || !hintEl || !okEl) { resolve(false); return; }
+      // repurpose the text prompt as a confirm dialog
+      hintEl.textContent = desc;
+      inputEl.style.display = 'none';
+      okEl.textContent = 'Import';
+      promptEl.hidden = false;
+      promptResolver = (v) => { inputEl.style.display = ''; okEl.textContent = 'OK'; resolve(v !== null); };
+    });
+    if (confirmed) {
+      applySettingsBundle(bundle, { merge: true });
+      toast('Imported shared data');
+    }
+  } catch { toast('Invalid or corrupted share link'); }
+}
+
+// --- GitHub Gist sync -------------------------------------------------
+/** Start the GitHub OAuth Web Flow (redirects; returns on callback with ?code=). */
+function startGitHubLogin() {
+  if (!GH_CLIENT_ID) { toast('GitHub client ID not configured'); return; }
+  const state = crypto.randomUUID();
+  sessionStorage.setItem('gh_oauth_state', state);
+  const url = new URL('https://github.com/login/oauth/authorize');
+  url.searchParams.set('client_id', GH_CLIENT_ID);
+  url.searchParams.set('state', state);
+  location.href = url.toString();
+}
+
+/** Exchange the ?code= in the URL for a token via the broker; store it. */
+async function handleOAuthCallback() {
+  const params = new URLSearchParams(location.search);
+  const code = params.get('code');
+  const returnedState = params.get('state');
+  if (!code) return;
+  // Remove ?code= and ?state= from the URL immediately
+  const clean = location.pathname + location.hash;
+  history.replaceState(null, '', clean);
+  const expected = sessionStorage.getItem('gh_oauth_state');
+  sessionStorage.removeItem('gh_oauth_state');
+  if (returnedState && expected && returnedState !== expected) { toast('Login failed: state mismatch'); return; }
+  try {
+    const res = await fetch(OAUTH_BROKER, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code }),
+    });
+    const data = await res.json() as { access_token?: string; error?: string };
+    if (!data.access_token) { toast('Login failed: ' + (data.error ?? 'unknown')); return; }
+    try { localStorage.setItem(K_GH_TOKEN, data.access_token); } catch { /* ignore */ }
+    toast('Logged in with GitHub');
+    renderSettings();
+  } catch { toast('Login failed — network error'); }
+}
+
+/** Find or create the user's confer config gist. */
+async function ensureGist(token: string): Promise<string> {
+  const cached = localStorage.getItem(K_GIST_ID);
+  if (cached) return cached;
+  // Search existing gists for one with our marker filename
+  const listRes = await fetch('https://api.github.com/gists?per_page=100', {
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+  });
+  if (!listRes.ok) throw new Error('Failed to list gists');
+  const gists = await listRes.json() as { id: string; files: Record<string, unknown> }[];
+  const existing = gists.find((g) => 'confer-config.json' in g.files);
+  if (existing) {
+    try { localStorage.setItem(K_GIST_ID, existing.id); } catch { /* ignore */ }
+    return existing.id;
+  }
+  // Create a new private gist
+  const createRes = await fetch('https://api.github.com/gists', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      description: 'confer personal config (auto-managed)',
+      public: false,
+      files: { 'confer-config.json': { content: JSON.stringify({ app: 'confer', version: 1 }, null, 2) } },
+    }),
+  });
+  if (!createRes.ok) throw new Error('Failed to create gist');
+  const gist = await createRes.json() as { id: string };
+  try { localStorage.setItem(K_GIST_ID, gist.id); } catch { /* ignore */ }
+  return gist.id;
+}
+
+/** Push local config to the user's Gist. */
+async function pushToGist() {
+  const token = localStorage.getItem(K_GH_TOKEN);
+  if (!token) { toast('Not logged in'); return; }
+  try {
+    const id = await ensureGist(token);
+    const bundle = serializeSettings();
+    await fetch(`https://api.github.com/gists/${id}`, {
+      method: 'PATCH',
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ files: { 'confer-config.json': { content: JSON.stringify(bundle, null, 2) } } }),
+    });
+    toast('Config pushed to Gist');
+    renderSettings();
+  } catch (e) { toast('Push failed'); console.error(e); }
+}
+
+/** Pull config from the user's Gist and apply it. */
+async function pullFromGist() {
+  const token = localStorage.getItem(K_GH_TOKEN);
+  if (!token) { toast('Not logged in'); return; }
+  try {
+    const id = await ensureGist(token);
+    const res = await fetch(`https://api.github.com/gists/${id}`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) throw new Error('Failed to fetch gist');
+    const gist = await res.json() as { files: { 'confer-config.json'?: { content?: string } } };
+    const content = gist.files['confer-config.json']?.content;
+    if (!content) throw new Error('Empty gist');
+    applySettingsBundle(JSON.parse(content));
+    toast('Config pulled from Gist');
+  } catch (e) { toast('Pull failed'); console.error(e); }
+}
+
+/** Sign out: clear token + gist id. */
+function signOutGitHub() {
+  try { localStorage.removeItem(K_GH_TOKEN); localStorage.removeItem(K_GIST_ID); } catch { /* ignore */ }
+  toast('Signed out');
+  renderSettings();
+}
+
+/** Snapshot all personal data into a portable bundle. */
+function serializeSettings(): SettingsBundle {
+  return {
     app: 'confer', version: 1, exportedAt: new Date().toISOString(),
     venueGroups: state.groups,
     collections: state.collections,
@@ -1286,6 +1528,52 @@ function exportSettings() {
     theme: localStorage.getItem(K_THEME) ?? '',
     accent: localStorage.getItem(K_ACCENT) ?? '',
   };
+}
+
+/** Apply a (possibly partial) settings bundle into live state.
+ *  `merge: true` unions arrays/maps instead of replacing them — use for
+ *  importing a *shared* subset without clobbering the recipient's own data. */
+function applySettingsBundle(d: Partial<SettingsBundle>, opts?: { merge?: boolean }) {
+  const merge = opts?.merge ?? false;
+  if (Array.isArray(d.venueGroups)) {
+    state.groups = merge ? [...state.groups, ...d.venueGroups.filter((g) => !state.groups.find((x) => x.id === g.id))] : d.venueGroups;
+    saveGroups();
+  }
+  if (Array.isArray(d.collections)) {
+    state.collections = merge ? [...state.collections, ...d.collections.filter((c) => !state.collections.find((x) => x.id === c.id))] : d.collections;
+    saveCollections();
+  }
+  if (d.paperTags && typeof d.paperTags === 'object') {
+    if (merge) {
+      for (const [k, v] of Object.entries(d.paperTags)) {
+        const existing = state.tags.get(k) ?? [];
+        state.tags.set(k, [...new Set([...existing, ...v])]);
+      }
+    } else {
+      state.tags = new Map(Object.entries(d.paperTags as Record<string, string[]>));
+    }
+    saveTags();
+  }
+  if (Array.isArray(d.savedSearches)) {
+    state.saved = merge ? [...state.saved, ...d.savedSearches.filter((s) => !state.saved.find((x) => x.name === s.name))] : d.savedSearches;
+    writeJson(K_SAVED, state.saved);
+  }
+  if (typeof d.theme === 'string' && d.theme && !merge) {
+    document.documentElement.dataset.theme = d.theme;
+    try { localStorage.setItem(K_THEME, d.theme); } catch { /* ignore */ }
+    reflectTheme();
+  }
+  if (typeof d.accent === 'string' && !merge) applyAccent(d.accent);
+  if (Array.isArray(d.selected) && !merge) {
+    state.selected = new Set((d.selected as string[]).filter((id) => venueById.has(id)));
+  }
+  reflectSidebar(); renderVenueGroups(); reflectSeriesGroup(); renderSaved(); renderSettings();
+  writeUrl();
+  ensureLoaded([...state.selected]).then(render);
+}
+
+function exportSettings() {
+  const data = serializeSettings();
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'confer-settings.json' });
   a.click(); URL.revokeObjectURL(a.href);
@@ -1295,17 +1583,7 @@ function importSettings(file: File) {
   const reader = new FileReader();
   reader.onload = () => {
     try {
-      const d = JSON.parse(String(reader.result));
-      if (Array.isArray(d.venueGroups)) { state.groups = d.venueGroups; saveGroups(); }
-      if (Array.isArray(d.collections)) { state.collections = d.collections; saveCollections(); }
-      if (d.paperTags && typeof d.paperTags === 'object') { state.tags = new Map(Object.entries(d.paperTags as Record<string, string[]>)); saveTags(); }
-      if (Array.isArray(d.savedSearches)) { state.saved = d.savedSearches; writeJson(K_SAVED, state.saved); }
-      if (typeof d.theme === 'string' && d.theme) { document.documentElement.dataset.theme = d.theme; try { localStorage.setItem(K_THEME, d.theme); } catch { /* ignore */ } reflectTheme(); }
-      if (typeof d.accent === 'string') applyAccent(d.accent);
-      if (Array.isArray(d.selected)) { state.selected = new Set((d.selected as string[]).filter((id) => venueById.has(id))); }
-      reflectSidebar(); renderVenueGroups(); reflectSeriesGroup(); renderSaved(); renderSettings();
-      writeUrl();
-      ensureLoaded([...state.selected]).then(render);
+      applySettingsBundle(JSON.parse(String(reader.result)));
       toast('Imported settings');
     } catch { toast('Invalid settings file'); }
   };
@@ -1606,7 +1884,14 @@ function wire() {
     const t = e.target as HTMLElement;
     if (t.closest('[data-settings-export]')) { exportSettings(); return; }
     if (t.closest('[data-settings-import]')) { importInput.click(); return; }
+    if (t.closest('[data-share-full]')) { copyShareLink('full'); return; }
+    if (t.closest('[data-gh-login]')) { startGitHubLogin(); return; }
+    if (t.closest('[data-gist-push]')) { pushToGist(); return; }
+    if (t.closest('[data-gist-pull]')) { pullFromGist(); return; }
+    if (t.closest('[data-gh-signout]')) { signOutGitHub(); return; }
     if (t.closest('[data-clear-local]')) { clearLocalData(); return; }
+    const colShare = t.closest<HTMLElement>('[data-col-share]');
+    if (colShare) { copyShareLink('collection', colShare.dataset.colShare); return; }
     const accentPick = t.closest<HTMLElement>('[data-accent-pick]');
     if (accentPick) { applyAccent(accentPick.dataset.accentPick!); renderSettings(); return; }
     const gAdd = t.closest<HTMLElement>('[data-group-series-add]');
@@ -1755,6 +2040,8 @@ function init() {
   }
   renderSaved();
   wire();
+  handleShareHash();
+  handleOAuthCallback();
   reflectSidebar();
   reflectSeriesGroup();
   reflectCollectionFilter();

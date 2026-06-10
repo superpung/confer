@@ -65,3 +65,19 @@ export interface Collection {
   name: string;
   keys: string[];
 }
+
+/** Serialized snapshot of all personal/preference data; used for export,
+ *  import, URL sharing, and Gist sync. Every field is optional so partial
+ *  bundles (e.g. a single shared collection) are valid. */
+export interface SettingsBundle {
+  app: string;
+  version: number;
+  exportedAt?: string;
+  venueGroups?: VenueGroup[];
+  collections?: Collection[];
+  paperTags?: Record<string, string[]>;
+  savedSearches?: SavedSearch[];
+  selected?: string[];
+  theme?: string;
+  accent?: string;
+}
