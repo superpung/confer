@@ -86,6 +86,9 @@ function readJson<T>(key: string, fallback: T): T {
 }
 function writeJson(key: string, value: unknown) {
   try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* ignore */ }
+  // Trigger auto-sync for personal data writes (theme/accent are set directly and
+  // call markLocalChange() themselves; K_SYNC_META writes should never loop back).
+  if (PERSONAL_KEYS.includes(key)) markLocalChange();
 }
 
 function joinList(values: string[], fallback = 'Not listed') {
@@ -1148,6 +1151,10 @@ let conflictLocal: SettingsBundle | null = null;
 let conflictRemote: SettingsBundle | null = null;
 let conflictToken = '';
 let conflictGistId = '';
+// Auto-sync state
+let autoSyncTimer: number | null = null;   // debounce handle for push
+let syncConflictPending = false;           // true → paused, "Sync conflict — review" shown
+let lastAutoPullAt = 0;                    // throttle focus-pulls (epoch ms)
 function toast(msg: string) {
   const el = $('#toast');
   el.textContent = msg;
@@ -1246,10 +1253,12 @@ function renderSyncSection(): string {
   // Name on top, @login below (only if a real name exists)
   const nameHtml = user?.name ? `<span class="gh-name">${esc(user.name)}</span>` : `<span class="gh-name">@${esc(user?.login ?? '')}</span>`;
   const loginHtml = user?.name ? `<span class="gh-login">@${esc(user.login)}</span>` : '';
-  // Sync time beside the button
-  const syncedHtml = meta?.remoteUpdatedAt
-    ? `<span class="gh-synced" title="${esc(fullTimestamp(meta.remoteUpdatedAt))}">Synced ${relativeTime(meta.remoteUpdatedAt)}</span>`
-    : `<span class="gh-synced">Not yet synced</span>`;
+  // Sync time / conflict indicator beside the button
+  const syncedHtml = syncConflictPending
+    ? `<button class="gh-conflict" type="button" title="Local and cloud both changed — click to review and resolve">⚠ Sync conflict — review</button>`
+    : meta?.remoteUpdatedAt
+      ? `<span class="gh-synced" title="${esc(fullTimestamp(meta.remoteUpdatedAt))}">Synced ${relativeTime(meta.remoteUpdatedAt)}</span>`
+      : `<span class="gh-synced">Not yet synced</span>`;
   // View Gist: dashed-underline inline link styled like paper authors
   const gistLinkHtml = gistId
     ? `<a class="gh-gist-link" href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer">View Gist ${ICONS.extLink}</a>`
@@ -1501,6 +1510,7 @@ async function handleOAuthCallback() {
     try { localStorage.setItem(K_GH_TOKEN, data.access_token); } catch { /* ignore */ }
     toast('Logged in with GitHub ✓');
     void fetchGitHubUser(data.access_token); // async — re-renders when identity arrives
+    void autoSync(); // pull remote state right after login
     renderSettings();
     $('#settingsModal').hidden = false; // open settings so user sees the sync section
   } catch { toast('Login failed — network error'); }
@@ -1555,6 +1565,8 @@ function signOutGitHub() {
     if (!ok) return;
     try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
     conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
+    syncConflictPending = false;
+    if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
     toast('Signed out');
     renderSettings();
   });
@@ -1679,11 +1691,21 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   </div>`;
 }
 
-/** One-click sync: auto-detect direction, or open conflict modal on true conflict. */
-async function syncNow() {
+/** Debounced push trigger: called by writeJson (for PERSONAL_KEYS) and theme/accent changes.
+ *  Coalesces rapid local edits (3s window) before pushing to avoid spamming the Gist API. */
+function markLocalChange() {
+  if (!localStorage.getItem(K_GH_TOKEN)) return;  // not logged in
+  if (syncConflictPending) return;                 // paused until conflict is resolved
+  if (autoSyncTimer !== null) clearTimeout(autoSyncTimer);
+  autoSyncTimer = window.setTimeout(() => { autoSyncTimer = null; void autoSync(); }, 3000);
+}
+
+/** Shared sync core. `auto:false` = manual (toasts + opens conflict modal);
+ *  `auto:true` = silent (no toasts; conflict only marks the pending state). */
+async function runSync({ auto }: { auto: boolean }): Promise<void> {
   const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) { toast('Not logged in'); return; }
-  toast('Syncing…');
+  if (!token) { if (!auto) toast('Not logged in'); return; }
+  if (!auto) toast('Syncing…');
   try {
     const gistId = await ensureGist(token);
     const res = await ghFetch(`https://api.github.com/gists/${gistId}`, token);
@@ -1694,7 +1716,7 @@ async function syncNow() {
     const local = serializeSettings();
     const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
 
-    // Parse remote; check if it has real content (updatedAt marks a real push)
+    // Parse remote; updatedAt presence marks a real push (vs empty placeholder gist)
     let remote: SettingsBundle | null = null;
     try { if (content) remote = JSON.parse(content) as SettingsBundle; } catch { /* corrupt gist */ }
     const hasRealRemote = !!(remote?.updatedAt);
@@ -1702,44 +1724,82 @@ async function syncNow() {
     if (!hasRealRemote) {
       // Empty or placeholder gist — first push from this device
       await pushBundle(token, gistId, local);
-      toast('Synced ✓');
-      renderSettings();
+      if (!auto) { toast('Synced ✓'); renderSettings(); }
+      else renderSettings();
       return;
     }
     if (!meta) {
       // This device has never synced before but remote exists — pull down
       applyRemoteBundle(remote!);
-      toast('Synced ✓ — pulled cloud config');
+      if (!auto) toast('Synced ✓ — pulled cloud config');
       return;
     }
 
     const localChanged = bundleFingerprint(local) !== meta.localFingerprint;
     const remoteChanged = (remote!.updatedAt ?? '') !== meta.remoteUpdatedAt;
 
-    if (!localChanged && !remoteChanged) { toast('Already up to date'); renderSettings(); return; }
-    if (localChanged && !remoteChanged) { await pushBundle(token, gistId, local); toast('Synced ✓'); renderSettings(); return; }
-    if (!localChanged) { applyRemoteBundle(remote!); toast('Synced ✓'); return; }
+    if (!localChanged && !remoteChanged) {
+      if (!auto) { toast('Already up to date'); renderSettings(); }
+      else if (auto) lastAutoPullAt = Date.now(); // update throttle even on no-op
+      return;
+    }
+    if (localChanged && !remoteChanged) {
+      await pushBundle(token, gistId, local);
+      if (!auto) toast('Synced ✓');
+      renderSettings(); return;
+    }
+    if (!localChanged) {
+      applyRemoteBundle(remote!);
+      if (!auto) toast('Synced ✓');
+      return;
+    }
 
     // True conflict — both sides changed
-    renderConflict(local, remote!, token, gistId);
+    if (auto) {
+      // Don't pop modal; stash and show passive indicator
+      stashConflict(local, remote!, token, gistId);
+      syncConflictPending = true;
+      renderSettings();
+    } else {
+      renderConflict(local, remote!, token, gistId);
+    }
   } catch (e: unknown) {
-    if ((e as Error).message !== 'gh_401') toast('Sync failed');
+    if ((e as Error).message !== 'gh_401') { if (!auto) toast('Sync failed'); }
     console.error(e);
   }
 }
 
-/** Open the conflict resolution modal with a diff of local vs remote. */
-function renderConflict(local: SettingsBundle, remote: SettingsBundle, token: string, gistId: string) {
+/** One-click sync: auto-detect direction, or open conflict modal on true conflict. */
+async function syncNow() {
+  return runSync({ auto: false });
+}
+
+/** Silent background sync triggered by local mutations or tab focus. */
+async function autoSync() {
+  return runSync({ auto: true });
+}
+
+/** Stash conflict state and pre-render the diff body (does not open the modal). */
+function stashConflict(local: SettingsBundle, remote: SettingsBundle, token: string, gistId: string) {
   conflictLocal = local; conflictRemote = remote; conflictToken = token; conflictGistId = gistId;
   const body = document.querySelector<HTMLElement>('#conflictBody');
   if (body) body.innerHTML = diffBundles(local, remote);
+}
+
+/** Open the conflict resolution modal with a diff of local vs remote. */
+function renderConflict(local: SettingsBundle, remote: SettingsBundle, token: string, gistId: string) {
+  stashConflict(local, remote, token, gistId);
   $('#conflictModal').hidden = false;
 }
 
 /** Close the conflict modal and clear pending state. */
 function closeConflictModal() {
   $('#conflictModal').hidden = true;
-  conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
+  // Keep conflict state if the user dismissed without resolving (so the ".gh-conflict"
+  // indicator can re-open the modal). Only clear after a resolution or sign-out.
+  if (!syncConflictPending) {
+    conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
+  }
 }
 
 /** Execute the chosen conflict resolution and update sync meta. */
@@ -1760,6 +1820,7 @@ async function resolveSyncConflict(choice: 'local' | 'cloud' | 'merge') {
       await pushBundle(token, gistId, serializeSettings());
       toast('Synced ✓ — merged both sides');
     }
+    syncConflictPending = false; // resume auto-sync after resolution
     renderSettings();
   } catch { toast('Sync failed after resolution'); }
 }
@@ -1904,12 +1965,14 @@ function toggleTheme() {
   document.documentElement.dataset.theme = dark ? 'light' : 'dark';
   try { localStorage.setItem(K_THEME, dark ? 'light' : 'dark'); } catch { /* ignore */ }
   reflectTheme();
+  markLocalChange();
 }
 function applyAccent(name: string) {
   const key = name in ACCENTS ? name : 'clay';
   if (key === 'clay') delete document.documentElement.dataset.accent;
   else document.documentElement.dataset.accent = key;
   try { localStorage.setItem(K_ACCENT, key); } catch { /* ignore */ }
+  markLocalChange();
 }
 
 // --- events ------------------------------------------------------------
@@ -2206,6 +2269,24 @@ function wire() {
     }
   });
 
+  // auto-sync on tab focus: pull remote changes when switching back to this tab
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible') return;
+    if (!localStorage.getItem(K_GH_TOKEN)) return;
+    if (syncConflictPending) return;
+    const now = Date.now();
+    if (now - lastAutoPullAt < 30_000) return; // throttle: at most once per 30 s
+    lastAutoPullAt = now;
+    void autoSync();
+  });
+
+  // clicking the "Sync conflict — review" indicator opens the stashed diff modal
+  $('#settingsBody').addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('.gh-conflict')) {
+      $('#conflictModal').hidden = false;
+    }
+  });
+
   // back to top
   const back = $('#backToTop');
   back.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -2303,9 +2384,13 @@ function init() {
   wire();
   handleShareHash();
   handleOAuthCallback();
-  // If already logged in but identity not cached, fetch it quietly
+  // If already logged in: fetch identity if not cached, then pull latest remote state
   const _initToken = localStorage.getItem(K_GH_TOKEN);
-  if (_initToken && !localStorage.getItem(K_GH_USER)) void fetchGitHubUser(_initToken);
+  if (_initToken) {
+    if (!localStorage.getItem(K_GH_USER)) void fetchGitHubUser(_initToken);
+    lastAutoPullAt = Date.now(); // mark startup pull so focus handler doesn't fire immediately
+    void autoSync(); // pull on startup; no-op if already up to date
+  }
   reflectSidebar();
   reflectSeriesGroup();
   reflectCollectionFilter();

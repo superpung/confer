@@ -678,6 +678,12 @@ html.is-rail-collapsed { --col-right: 0; }
 .gh-sync { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .gh-sync-top { display: flex; align-items: center; gap: 10px; }
 .gh-synced { font-size: 12px; color: var(--faint); cursor: help; white-space: nowrap; }
+.gh-conflict {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; color: var(--favorite); white-space: nowrap;
+  cursor: pointer; background: none; border: none; padding: 0; font-family: inherit;
+}
+.gh-conflict:hover { text-decoration: underline; }
 .gh-gist-link {
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 12.5px; color: var(--muted);
