@@ -13,4 +13,4 @@
 # token. Set GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET in the Netlify dashboard.
 # The function stores nothing; the token goes back to the user's browser only.
 [functions]
-  directory = "web/netlify/functions"
+  directory = "netlify/functions"
