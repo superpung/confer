@@ -75,6 +75,7 @@ const ICONS = {
   signout: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
   extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   refresh: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
+  chevronDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -1239,21 +1240,12 @@ function loadSaved(i: number) {
   ensureLoaded([...state.selected]).then(render);
 }
 
-// --- settings modal: view stored data, export / import ----------------
+// --- settings modal: sync section (GitHub login / account row) --------
 function renderSyncSection(): string {
-  const actionBtns = `<div class="set-actions">
-    <button class="text-btn" data-settings-export type="button">${ICONS.download} Export</button>
-    <button class="text-btn" data-settings-import type="button">${ICONS.upload} Import…</button>
-    <button class="text-btn" data-share-full type="button">${ICONS.link} Share all</button>
-  </div>`;
-
-  // No GitHub App configured — just show data actions
-  if (!GH_CLIENT_ID) {
-    return `<section class="set-section">${actionBtns}</section>`;
-  }
+  // No GitHub App configured — nothing to show here (data actions live in Config)
+  if (!GH_CLIENT_ID) return '';
 
   const token = localStorage.getItem(K_GH_TOKEN);
-  const gistId = localStorage.getItem(K_GIST_ID);
   const SYNC_TIP = 'Sync your config across devices via a secret GitHub Gist — only accessible with the direct URL.';
 
   // Logged out
@@ -1263,7 +1255,6 @@ function renderSyncSection(): string {
         <button class="text-btn" data-gh-login type="button">${ICONS.github} Login with GitHub</button>
         <button class="gh-help" title="${esc(SYNC_TIP)}" type="button" aria-label="About sync">${ICONS.help}</button>
       </div>
-      ${actionBtns}
     </section>`;
   }
 
@@ -1277,17 +1268,13 @@ function renderSyncSection(): string {
   // Name on top, @login below (only if a real name exists)
   const nameHtml = user?.name ? `<span class="gh-name">${esc(user.name)}</span>` : `<span class="gh-name">@${esc(user?.login ?? '')}</span>`;
   const loginHtml = user?.name ? `<span class="gh-login">@${esc(user.login)}</span>` : '';
-  // Sync time / conflict indicator beside the button
+  // Sync time / conflict indicator
   const syncDisplayTs = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
   const syncedHtml = syncConflictPending
     ? `<button class="gh-conflict" type="button" title="Local and cloud both changed — click to review and resolve">⚠ Sync conflict — review</button>`
     : syncDisplayTs
       ? `<span class="gh-synced" title="${esc(fullTimestamp(syncDisplayTs))}">Synced ${relativeTime(syncDisplayTs)}</span>`
       : `<span class="gh-synced">Not yet synced</span>`;
-  // View Gist: dashed-underline inline link styled like paper authors
-  const gistLinkHtml = gistId
-    ? `<a class="gh-gist-link" href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer">View Gist ${ICONS.extLink}</a>`
-    : '';
 
   return `<section class="set-section">
     <div class="set-account">
@@ -1297,14 +1284,13 @@ function renderSyncSection(): string {
           ${nameHtml}
           ${loginHtml}
         </div>
-        <span class="gh-chevron" aria-hidden="true">▾</span>
+        <span class="gh-chevron" aria-hidden="true">${ICONS.chevronDown}</span>
       </button>
       <div class="gh-sync">
         ${syncedHtml}
         <button class="gh-sync-btn" data-sync-now type="button" title="Sync now" aria-label="Sync now">${ICONS.refresh}</button>
       </div>
     </div>
-    ${actionBtns}
   </section>`;
 }
 
@@ -1317,6 +1303,7 @@ function renderSettings() {
           <div class="set-item-head">
             <span class="set-item-name">${esc(g.name)}</span>
             <span class="set-item-meta">${venuesOfGroup(g).length} venues</span>
+            <button class="set-mini" data-group-share="${g.id}" type="button" aria-label="Copy share link" title="Copy share link">${ICONS.link}</button>
             <button class="set-mini" data-group-rename="${g.id}" type="button" aria-label="Rename group" title="Rename">${ICONS.pencil}</button>
             <button class="set-mini set-mini-del" data-group-del="${g.id}" type="button" aria-label="Delete group" title="Delete">${ICONS.trash}</button>
           </div>
@@ -1358,7 +1345,10 @@ function renderSettings() {
       <button class="text-btn" data-open-saved type="button">Open saved searches</button>
     </section>
     <section class="set-section">
-      <h3 class="set-title"><span>Stored data</span><span class="set-item-meta">${formatBytes(localDataBytes())}</span>
+      <h3 class="set-title"><span>Config</span><span class="set-item-meta">${formatBytes(localDataBytes())}</span>
+        <button class="set-mini" data-settings-export type="button" aria-label="Export config" title="Export">${ICONS.download}</button>
+        <button class="set-mini" data-settings-import type="button" aria-label="Import config" title="Import">${ICONS.upload}</button>
+        <button class="set-mini" data-share-full type="button" aria-label="Copy share link" title="Share all">${ICONS.link}</button>
         <button class="set-mini set-mini-del" data-clear-local type="button" aria-label="Clear all local data" title="Clear all local data">${ICONS.trash}</button></h3>
       <p class="set-note">Everything below lives only in this browser (localStorage).</p>
       <pre class="set-raw">${esc(JSON.stringify(raw, null, 2))}</pre>
@@ -1445,15 +1435,19 @@ async function decodeBundle(raw: string): Promise<SettingsBundle> {
   return JSON.parse(decodeURIComponent(atob(b64))) as SettingsBundle;
 }
 
-/** Build a share URL for a collection (+ its paper tags) or the full config. */
-async function buildShareUrl(scope: 'collection' | 'full', collectionId?: string): Promise<string> {
+/** Build a share URL for a collection (+ its paper tags), a venue group, or the full config. */
+async function buildShareUrl(scope: 'collection' | 'group' | 'full', id?: string): Promise<string> {
   let bundle: SettingsBundle;
-  if (scope === 'collection' && collectionId) {
-    const col = collectionById(collectionId);
+  if (scope === 'collection' && id) {
+    const col = collectionById(id);
     if (!col) throw new Error('collection not found');
     const tags: Record<string, string[]> = {};
     col.keys.forEach((k) => { const t = state.tags.get(k); if (t?.length) tags[k] = t; });
     bundle = { app: 'confer', version: 1, exportedAt: new Date().toISOString(), collections: [col], paperTags: tags };
+  } else if (scope === 'group' && id) {
+    const grp = state.groups.find((g) => g.id === id);
+    if (!grp) throw new Error('group not found');
+    bundle = { app: 'confer', version: 1, exportedAt: new Date().toISOString(), venueGroups: [grp] };
   } else {
     bundle = serializeSettings();
   }
@@ -1462,9 +1456,9 @@ async function buildShareUrl(scope: 'collection' | 'full', collectionId?: string
 }
 
 /** Copy a share link to clipboard and toast. */
-async function copyShareLink(scope: 'collection' | 'full', collectionId?: string) {
+async function copyShareLink(scope: 'collection' | 'group' | 'full', id?: string) {
   try {
-    const url = await buildShareUrl(scope, collectionId);
+    const url = await buildShareUrl(scope, id);
     await navigator.clipboard.writeText(url);
     toast('Share link copied');
   } catch (e) {
@@ -1484,12 +1478,19 @@ async function handleShareHash() {
     const colCount = bundle.collections?.length ?? 0;
     const colName = bundle.collections?.[0]?.name ?? '';
     const paperCount = bundle.collections?.reduce((s, c) => s + c.keys.length, 0) ?? 0;
-    const isFullConfig = (bundle.venueGroups?.length ?? 0) > 0 || (bundle.savedSearches?.length ?? 0) > 0;
+    const grpCount = bundle.venueGroups?.length ?? 0;
+    const grpName = bundle.venueGroups?.[0]?.name ?? '';
+    const isGroupOnly = grpCount > 0 && colCount === 0 && !(bundle.savedSearches?.length);
+    const isFullConfig = !isGroupOnly && (grpCount > 0 || (bundle.savedSearches?.length ?? 0) > 0);
     const desc = isFullConfig
       ? 'Import full config (groups, collections, saved searches)?'
-      : colCount === 1
-        ? `Import collection "${colName}" (${paperCount} papers)?`
-        : `Import ${colCount} collections (${paperCount} papers)?`;
+      : isGroupOnly
+        ? grpCount === 1
+          ? `Import venue group "${grpName}"?`
+          : `Import ${grpCount} venue groups?`
+        : colCount === 1
+          ? `Import collection "${colName}" (${paperCount} papers)?`
+          : `Import ${colCount} collections (${paperCount} papers)?`;
     const confirmed = await askConfirm({ title: 'Import shared data', message: desc, ok: 'Import' });
     if (confirmed) {
       applySettingsBundle(bundle, { merge: true });
@@ -2241,6 +2242,8 @@ function wire() {
     const acc = t.closest<HTMLElement>('[data-account-menu]');
     if (acc) { if (popAnchor === acc && !popEl.hidden) closePop(); else openAccountMenu(acc); return; }
     if (t.closest('[data-clear-local]')) { clearLocalData(); return; }
+    const gShare = t.closest<HTMLElement>('[data-group-share]');
+    if (gShare) { copyShareLink('group', gShare.dataset.groupShare); return; }
     const colShare = t.closest<HTMLElement>('[data-col-share]');
     if (colShare) { copyShareLink('collection', colShare.dataset.colShare); return; }
     const accentPick = t.closest<HTMLElement>('[data-accent-pick]');

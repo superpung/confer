@@ -682,7 +682,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .gh-identity { display: flex; flex-direction: column; gap: 1px; min-width: 0; text-align: left; }
 .gh-name { font-size: 13.5px; font-weight: 500; color: var(--text); }
 .gh-login { font-size: 12px; color: var(--faint); }
-.gh-chevron { font-size: 11px; color: var(--faint); flex-shrink: 0; line-height: 1; }
+.gh-chevron { display: inline-flex; color: var(--faint); flex-shrink: 0; }
 /* Right-hand sync cluster: status text + compact icon Sync now button */
 .gh-sync { display: flex; align-items: center; gap: 8px; }
 .gh-synced { font-size: 12px; color: var(--faint); cursor: default; white-space: nowrap; }
