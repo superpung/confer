@@ -168,6 +168,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .venue-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.14); }
 .venue-tool-buttons { display: flex; gap: 6px; }
 .text-btn {
+  display: inline-flex; align-items: center; gap: 6px;
   border: 1px solid var(--line-strong); border-radius: 8px;
   background: var(--panel); color: var(--muted);
   font: inherit; font-size: 12.5px; font-weight: 500;
@@ -335,7 +336,7 @@ html.is-rail-collapsed { --col-right: 0; }
   padding: 0 12px; cursor: pointer; white-space: nowrap;
 }
 .caret-select-btn:hover { border-color: var(--accent); background: var(--panel-hover); }
-.caret-select-arrow { flex-shrink: 0; color: var(--muted); transition: transform 0.2s ease; }
+.caret-select-arrow { flex-shrink: 0; width: 14px; height: 14px; color: var(--faint); transition: transform 0.2s ease; }
 .caret-select-btn[aria-expanded="true"] .caret-select-arrow { transform: rotate(180deg); }
 .caret-menu {
   position: absolute; top: calc(100% + 5px); left: 0; z-index: 200;
@@ -352,7 +353,7 @@ html.is-rail-collapsed { --col-right: 0; }
   transition: var(--hover-tr);
 }
 .caret-option:hover { background: var(--panel-hover); color: var(--text); }
-.caret-option.is-on { color: var(--accent); }
+.caret-option.is-on { color: var(--accent); font-weight: 500; }
 /* Pill variant: matches .chip-btn style (collection filter in controls row) */
 .caret-select--pill .caret-select-btn {
   height: auto; border-radius: 999px; font-size: 13px; font-weight: 500;
@@ -650,9 +651,9 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-title .set-item-meta { font-weight: 600; }
 .set-note { margin: 0 0 8px; color: var(--faint); font-size: 12px; }
 .set-empty { color: var(--muted); font-size: 13px; }
-.set-item { border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; margin-bottom: 8px; }
+.set-item { border: 1px solid var(--line); border-radius: 9px; padding: 7px 10px; margin-bottom: 6px; }
 .set-item-head { display: flex; align-items: center; gap: 8px; }
-.set-item-name { font-weight: 400; color: var(--text); }
+.set-item-name { font-size: 14.5px; font-weight: 400; color: var(--text); }
 .set-item-meta { color: var(--faint); font-size: 12px; font-weight: 600; }
 .set-mini {
   display: inline-grid; place-items: center; width: 28px; height: 28px;
