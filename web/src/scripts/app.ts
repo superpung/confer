@@ -17,7 +17,7 @@ const K_GIST_ID = 'confer.gistId';           // id of the user's confer config g
 const K_GH_USER = 'confer.ghUser';           // cached GitHubUser JSON
 const K_SYNC_META = 'confer.syncMeta';       // SyncMeta JSON (conflict detection)
 // Keys bundled by the settings export/import.
-const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_SELECTED, K_THEME, K_ACCENT];
+const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_THEME, K_ACCENT];
 // OAuth broker endpoint (Netlify Function — stateless, stores nothing).
 const OAUTH_BROKER = '/.netlify/functions/github-oauth';
 // GitHub OAuth App client_id (public; the secret lives only in Netlify env).
@@ -1350,7 +1350,7 @@ function renderSettings() {
         <button class="set-mini" data-settings-import type="button" aria-label="Import config" title="Import">${ICONS.upload}</button>
         <button class="set-mini" data-share-full type="button" aria-label="Copy share link" title="Share all">${ICONS.link}</button>
         <button class="set-mini set-mini-del" data-clear-local type="button" aria-label="Clear all local data" title="Clear all local data">${ICONS.trash}</button></h3>
-      <p class="set-note">Everything below lives only in this browser (localStorage).</p>
+      <p class="set-note">Site config stored in this browser.</p>
       <pre class="set-raw">${esc(JSON.stringify(raw, null, 2))}</pre>
     </section>`;
 }
@@ -1654,7 +1654,6 @@ function bundleFingerprint(b: Partial<SettingsBundle>): string {
     collections: b.collections ?? [],
     paperTags: b.paperTags ?? {},
     savedSearches: b.savedSearches ?? [],
-    selected: [...(b.selected ?? [])].sort(),
     theme: b.theme ?? '',
     accent: b.accent ?? '',
   });
@@ -1860,7 +1859,6 @@ function serializeSettings(): SettingsBundle {
     collections: state.collections,
     paperTags: Object.fromEntries([...state.tags].filter(([, v]) => v.length)),
     savedSearches: state.saved,
-    selected: [...state.selected],
     theme: localStorage.getItem(K_THEME) ?? '',
     accent: localStorage.getItem(K_ACCENT) ?? '',
   };
@@ -1900,9 +1898,6 @@ function applySettingsBundle(d: Partial<SettingsBundle>, opts?: { merge?: boolea
     reflectTheme();
   }
   if (typeof d.accent === 'string' && !merge) applyAccent(d.accent);
-  if (Array.isArray(d.selected) && !merge) {
-    state.selected = new Set((d.selected as string[]).filter((id) => venueById.has(id)));
-  }
   reflectSidebar(); renderVenueGroups(); reflectSeriesGroup(); renderSaved(); renderSettings();
   writeUrl();
   ensureLoaded([...state.selected]).then(render);

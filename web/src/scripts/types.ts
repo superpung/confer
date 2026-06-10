@@ -79,7 +79,6 @@ export interface SettingsBundle {
   collections?: Collection[];
   paperTags?: Record<string, string[]>;
   savedSearches?: SavedSearch[];
-  selected?: string[];
   theme?: string;
   accent?: string;
 }
