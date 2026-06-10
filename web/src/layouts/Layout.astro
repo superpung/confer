@@ -35,6 +35,8 @@ const { title, description = 'Browse accepted papers across conferences and jour
           if (localStorage.getItem('confer.railCollapsed') === '1') {
             document.documentElement.classList.add('is-rail-collapsed');
           }
+          const accent = localStorage.getItem('confer.accent');
+          if (accent && accent !== 'clay') document.documentElement.dataset.accent = accent;
         } catch {
           document.documentElement.dataset.theme = 'light';
         }

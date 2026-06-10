@@ -11,8 +11,9 @@ const K_RAIL = 'confer.railCollapsed';
 const K_VGROUPS = 'confer.venueGroups';      // VenueGroup[] (series-level groups)
 const K_COLLECTIONS = 'confer.collections';  // Collection[] (paper collections)
 const K_TAGS = 'confer.paperTags';           // Record<paperKey, string[]>
+const K_ACCENT = 'confer.accent';            // accent color key (e.g. "sage")
 // Keys bundled by the settings export/import.
-const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_SELECTED, K_THEME];
+const PERSONAL_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_SELECTED, K_THEME, K_ACCENT];
 const PAGE = 200;
 
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -22,6 +23,15 @@ const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 
 // HTML-escaped via esc() at render time, so this is about tidiness, not safety.)
 const NAME_MAX = 40;
 const TAG_MAX = 24;
+// All supported accent colors; light = the representative swatch color.
+const ACCENTS: Record<string, { label: string; light: string }> = {
+  clay:  { label: 'Clay',  light: '#c96442' },
+  sage:  { label: 'Sage',  light: '#5a7c5a' },
+  slate: { label: 'Slate', light: '#4a6e8a' },
+  wine:  { label: 'Wine',  light: '#8c3a52' },
+  amber: { label: 'Amber', light: '#a67a36' },
+  plum:  { label: 'Plum',  light: '#7a5a8c' },
+};
 function cleanInput(s: string, max = NAME_MAX): string {
   // eslint-disable-next-line no-control-regex
   return s.replace(/[\x00-\x1f\x7f]+/g, '').replace(/\s+/g, ' ').trim().slice(0, max);
@@ -1178,12 +1188,17 @@ function renderSettings() {
     : '<p class="set-empty">No tags yet. Add tags on a paper card.</p>';
   const raw: Record<string, unknown> = {};
   for (const k of PERSONAL_KEYS) { try { const v = localStorage.getItem(k); if (v) raw[k] = JSON.parse(v); } catch { /* skip */ } }
+  const currentAccent = document.documentElement.dataset.accent || 'clay';
+  const swatchesHtml = Object.entries(ACCENTS).map(([key, { label, light }]) =>
+    `<button class="accent-sw${currentAccent === key ? ' is-on' : ''}" data-accent-pick="${key}" title="${label}" type="button" style="background:${light}"></button>`
+  ).join('');
 
   body.innerHTML = `
     <div class="set-actions">
       <button class="text-btn" data-settings-export type="button">⬇ Export all (JSON)</button>
       <button class="text-btn" data-settings-import type="button">⬆ Import…</button>
     </div>
+    <section class="set-section"><h3 class="set-title">Appearance</h3><div class="accent-swatches">${swatchesHtml}</div></section>
     <section class="set-section"><h3 class="set-title">Venue groups</h3>${groupsHtml}</section>
     <section class="set-section"><h3 class="set-title">Collections</h3>${colsHtml}</section>
     <section class="set-section"><h3 class="set-title">Tags</h3>${tagsHtml}</section>
@@ -1258,6 +1273,7 @@ function exportSettings() {
     savedSearches: state.saved,
     selected: [...state.selected],
     theme: localStorage.getItem(K_THEME) ?? '',
+    accent: localStorage.getItem(K_ACCENT) ?? '',
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
   const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'confer-settings.json' });
@@ -1274,6 +1290,7 @@ function importSettings(file: File) {
       if (d.paperTags && typeof d.paperTags === 'object') { state.tags = new Map(Object.entries(d.paperTags as Record<string, string[]>)); saveTags(); }
       if (Array.isArray(d.savedSearches)) { state.saved = d.savedSearches; writeJson(K_SAVED, state.saved); }
       if (typeof d.theme === 'string' && d.theme) { document.documentElement.dataset.theme = d.theme; try { localStorage.setItem(K_THEME, d.theme); } catch { /* ignore */ } reflectTheme(); }
+      if (typeof d.accent === 'string') applyAccent(d.accent);
       if (Array.isArray(d.selected)) { state.selected = new Set((d.selected as string[]).filter((id) => venueById.has(id))); }
       reflectSidebar(); renderVenueGroups(); reflectSeriesGroup(); renderSaved(); renderSettings();
       writeUrl();
@@ -1321,6 +1338,25 @@ function toggleTheme() {
   document.documentElement.dataset.theme = dark ? 'light' : 'dark';
   try { localStorage.setItem(K_THEME, dark ? 'light' : 'dark'); } catch { /* ignore */ }
   reflectTheme();
+}
+function applyAccent(name: string, animate = false) {
+  const key = name in ACCENTS ? name : 'clay';
+  const apply = () => {
+    if (key === 'clay') delete document.documentElement.dataset.accent;
+    else document.documentElement.dataset.accent = key;
+    try { localStorage.setItem(K_ACCENT, key); } catch { /* ignore */ }
+  };
+  if (!animate) { apply(); return; }
+  const flash = document.createElement('div');
+  flash.className = 'accent-flash';
+  document.body.appendChild(flash);
+  requestAnimationFrame(() => {
+    apply();
+    requestAnimationFrame(() => {
+      flash.classList.add('is-out');
+      flash.addEventListener('transitionend', () => flash.remove(), { once: true });
+    });
+  });
 }
 
 // --- events ------------------------------------------------------------
@@ -1530,6 +1566,8 @@ function wire() {
     if (t.closest('[data-settings-export]')) { exportSettings(); return; }
     if (t.closest('[data-settings-import]')) { importInput.click(); return; }
     if (t.closest('[data-clear-local]')) { clearLocalData(); return; }
+    const accentPick = t.closest<HTMLElement>('[data-accent-pick]');
+    if (accentPick) { applyAccent(accentPick.dataset.accentPick!, true); renderSettings(); return; }
     const gAdd = t.closest<HTMLElement>('[data-group-series-add]');
     if (gAdd) { openSeriesAddPop(gAdd, gAdd.dataset.groupSeriesAdd ?? ''); return; }
     const gRen = t.closest<HTMLElement>('[data-group-rename]');
@@ -1663,6 +1701,8 @@ function reflectBuilt() {
 
 function init() {
   reflectTheme();
+  const savedAccent = localStorage.getItem(K_ACCENT);
+  if (savedAccent) applyAccent(savedAccent);
   reflectBuilt();
   observeTopbarHeight();
   const fromUrl = readUrl();

@@ -29,6 +29,19 @@
   --sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* Accent color overrides — same "scholarly pigment" family as the default clay.
+   Only the three accent vars change; neutral, panel, and danger colors stay fixed. */
+:root[data-accent="sage"]  { --accent: #5a7c5a; --accent-dark: #497249; --accent-soft: #edf2ed; }
+:root[data-accent="slate"] { --accent: #4a6e8a; --accent-dark: #3a5c75; --accent-soft: #eaeff5; }
+:root[data-accent="wine"]  { --accent: #8c3a52; --accent-dark: #763041; --accent-soft: #f5eaed; }
+:root[data-accent="amber"] { --accent: #a67a36; --accent-dark: #8c6628; --accent-soft: #f5f0e5; }
+:root[data-accent="plum"]  { --accent: #7a5a8c; --accent-dark: #684c78; --accent-soft: #f0ebf4; }
+:root[data-theme="dark"][data-accent="sage"]  { --accent: #7aad7a; --accent-dark: #90bf90; --accent-soft: #1e2e1e; }
+:root[data-theme="dark"][data-accent="slate"] { --accent: #6a98bc; --accent-dark: #7eafd0; --accent-soft: #1a2830; }
+:root[data-theme="dark"][data-accent="wine"]  { --accent: #b85f7f; --accent-dark: #cc7896; --accent-soft: #2e1520; }
+:root[data-theme="dark"][data-accent="amber"] { --accent: #c9a05a; --accent-dark: #d4b070; --accent-soft: #2e2010; }
+:root[data-theme="dark"][data-accent="plum"]  { --accent: #a07ab5; --accent-dark: #b390cc; --accent-soft: #251530; }
+
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #1f1e1d;
@@ -50,6 +63,13 @@
 }
 
 * { box-sizing: border-box; }
+
+/* Accent-switch flash overlay — covers the instant jump while CSS vars repaint. */
+.accent-flash {
+  position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  background: var(--bg); opacity: 1; transition: opacity 0.18s ease;
+}
+.accent-flash.is-out { opacity: 0; }
 
 /* Theme the root element so the browser tints its own chrome / safe-area via
    color-scheme + this background, and repaints it correctly on a theme switch
@@ -622,7 +642,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-empty { color: var(--muted); font-size: 13px; }
 .set-item { border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; margin-bottom: 8px; }
 .set-item-head { display: flex; align-items: center; gap: 8px; }
-.set-item-name { font-weight: 500; color: var(--text); }
+.set-item-name { font-weight: 400; color: var(--text); }
 .set-item-meta { color: var(--faint); font-size: 12px; font-weight: 600; }
 .set-mini {
   display: inline-grid; place-items: center; width: 28px; height: 28px;
@@ -649,6 +669,15 @@ html.is-rail-collapsed { --col-right: 0; }
   font-family: var(--mono, ui-monospace, monospace); font-size: 11.5px; line-height: 1.5;
   white-space: pre-wrap; word-break: break-word;
 }
+.accent-swatches { display: flex; gap: 8px; flex-wrap: wrap; }
+.accent-sw {
+  width: 24px; height: 24px; border-radius: 50%;
+  border: none; outline: 2px solid transparent; outline-offset: 2px;
+  cursor: pointer; padding: 0; flex-shrink: 0;
+  transition: transform 0.15s ease, outline-color 0.15s ease;
+}
+.accent-sw:hover { transform: scale(1.15); }
+.accent-sw.is-on { outline-color: var(--text); }
 
 /* Text prompt modal (replaces window.prompt) --------------------------- */
 .modal-card--prompt { width: min(380px, 100%); }
