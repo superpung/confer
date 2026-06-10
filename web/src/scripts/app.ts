@@ -74,6 +74,7 @@ const ICONS = {
   help: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
   signout: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
   extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+  refresh: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -1102,6 +1103,29 @@ function openGroupPop(anchor: HTMLElement, series: string) {
   });
 }
 
+// Account menu: avatar button opens a dropdown with View Gist + Sign out.
+function openAccountMenu(anchor: HTMLElement) {
+  const gistId = localStorage.getItem(K_GIST_ID);
+  const render = () => {
+    const gistRow = gistId
+      ? `<div class="pop-row" data-account-gist role="button">${ICONS.extLink}<span class="pop-row-label">View Gist</span></div>`
+      : '';
+    return `${gistRow}<div class="pop-row" data-account-signout role="button">${ICONS.signout}<span class="pop-row-label">Sign out</span></div>`;
+  };
+  openPop(anchor, render, (t) => {
+    if (t.closest('[data-account-gist]')) {
+      window.open(`https://gist.github.com/${gistId}`, '_blank', 'noreferrer');
+      closePop();
+      return;
+    }
+    if (t.closest('[data-account-signout]')) {
+      closePop();
+      signOutGitHub();
+      return;
+    }
+  });
+}
+
 // Refresh everything that depends on collection membership after an edit.
 function afterCollectionsChange(touchedKey?: string) {
   reflectCollectionFilter();
@@ -1267,20 +1291,17 @@ function renderSyncSection(): string {
 
   return `<section class="set-section">
     <div class="set-account">
-      <div class="gh-id-group">
+      <button class="gh-account-btn" data-account-menu type="button" aria-label="Account menu">
         ${avatarHtml}
         <div class="gh-identity">
           ${nameHtml}
           ${loginHtml}
         </div>
-        <button class="gh-signout" data-gh-signout type="button" title="Sign out" aria-label="Sign out">${ICONS.signout}</button>
-      </div>
+        <span class="gh-chevron" aria-hidden="true">▾</span>
+      </button>
       <div class="gh-sync">
-        <div class="gh-sync-top">
-          ${syncedHtml}
-          <button class="text-btn text-btn--primary" data-sync-now type="button">${ICONS.cloudUp} Sync now</button>
-        </div>
-        ${gistLinkHtml}
+        ${syncedHtml}
+        <button class="gh-sync-btn" data-sync-now type="button" title="Sync now" aria-label="Sync now">${ICONS.refresh}</button>
       </div>
     </div>
     ${actionBtns}
@@ -2217,7 +2238,8 @@ function wire() {
     if (t.closest('[data-share-full]')) { copyShareLink('full'); return; }
     if (t.closest('[data-gh-login]')) { startGitHubLogin(); return; }
     if (t.closest('[data-sync-now]')) { void syncNow(); return; }
-    if (t.closest('[data-gh-signout]')) { signOutGitHub(); return; }
+    const acc = t.closest<HTMLElement>('[data-account-menu]');
+    if (acc) { if (popAnchor === acc && !popEl.hidden) closePop(); else openAccountMenu(acc); return; }
     if (t.closest('[data-clear-local]')) { clearLocalData(); return; }
     const colShare = t.closest<HTMLElement>('[data-col-share]');
     if (colShare) { copyShareLink('collection', colShare.dataset.colShare); return; }

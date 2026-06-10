@@ -593,6 +593,14 @@ html.is-rail-collapsed { --col-right: 0; }
   opacity: 1; visibility: visible; pointer-events: auto;
   transition: opacity 0.18s ease, visibility 0s;
 }
+/* Secondary dialogs (confirm / prompt / conflict) always open over the settings
+   modal. Remove backdrop-filter so two blur layers never stack — this eliminates
+   the frame-hitch that makes the confirm dialog feel janky. The id selector beats
+   .modal specificity without !important. */
+#confirmModal, #promptModal, #conflictModal {
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  background: rgba(20, 19, 18, 0.32);
+}
 .modal-card {
   width: min(440px, 100%); border: 1px solid var(--line);
   border-radius: 16px; background: var(--panel); box-shadow: var(--shadow);
@@ -654,53 +662,50 @@ html.is-rail-collapsed { --col-right: 0; }
 
 /* GitHub account identity row (Sync section, logged-in state) */
 .set-account {
-  display: flex; align-items: flex-start; justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
   gap: 12px; flex-wrap: wrap; margin-bottom: 12px;
 }
-.gh-id-group { display: flex; align-items: center; gap: 10px; }
+/* Account button: avatar + name + chevron — opens the account dropdown */
+.gh-account-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 4px 8px; border: 1px solid transparent; border-radius: 9px;
+  background: none; cursor: pointer; font: inherit; min-width: 0;
+  transition: var(--hover-tr);
+}
+.gh-account-btn:hover { background: var(--panel-hover); border-color: var(--line); }
 .gh-avatar {
   width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
   background: var(--line-strong); display: flex; align-items: center; justify-content: center;
   font-size: 13px; font-weight: 600; color: var(--muted); overflow: hidden;
 }
 .gh-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.gh-identity { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.gh-identity { display: flex; flex-direction: column; gap: 1px; min-width: 0; text-align: left; }
 .gh-name { font-size: 13.5px; font-weight: 500; color: var(--text); }
 .gh-login { font-size: 12px; color: var(--faint); }
-/* Sign-out icon button — sits inline after the identity text */
-.gh-signout {
-  display: inline-grid; place-items: center; width: 26px; height: 26px;
-  border: 1px solid transparent; border-radius: 7px;
-  background: none; color: var(--faint); cursor: pointer; padding: 0; flex-shrink: 0;
-}
-.gh-signout:hover { color: var(--favorite); border-color: var(--line-strong); background: var(--panel-hover); }
-/* Right-hand sync cluster */
-.gh-sync { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
-.gh-sync-top { display: flex; align-items: center; gap: 10px; }
-.gh-synced { font-size: 12px; color: var(--faint); cursor: help; white-space: nowrap; }
+.gh-chevron { font-size: 11px; color: var(--faint); flex-shrink: 0; line-height: 1; }
+/* Right-hand sync cluster: status text + compact icon Sync now button */
+.gh-sync { display: flex; align-items: center; gap: 8px; }
+.gh-synced { font-size: 12px; color: var(--faint); cursor: default; white-space: nowrap; }
 .gh-conflict {
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 12px; color: var(--favorite); white-space: nowrap;
   cursor: pointer; background: none; border: none; padding: 0; font-family: inherit;
 }
 .gh-conflict:hover { text-decoration: underline; }
-.gh-gist-link {
-  display: inline-flex; align-items: center; gap: 4px;
-  font-size: 12.5px; color: var(--muted);
-  text-decoration: underline dashed; text-decoration-color: var(--line-strong);
-  text-underline-offset: 3px; cursor: pointer; background: none; border: none; padding: 0;
+/* Icon-only Sync now button (replaces the heavy filled Sync now) */
+.gh-sync-btn {
+  display: inline-grid; place-items: center; width: 28px; height: 28px;
+  border: 1px solid transparent; border-radius: 7px;
+  background: none; color: var(--muted); cursor: pointer; padding: 0; flex-shrink: 0;
+  transition: var(--hover-tr);
 }
-.gh-gist-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
-.gh-gist-link svg { flex-shrink: 0; }
+.gh-sync-btn:hover { color: var(--accent); border-color: var(--line-strong); background: var(--panel-hover); }
 /* Help tooltip trigger in logged-out row */
 .gh-help {
   display: inline-grid; place-items: center; color: var(--faint);
   cursor: help; padding: 0; background: none; border: none;
 }
 .gh-help:hover { color: var(--accent); }
-@media (max-width: 580px) {
-  .gh-sync { align-items: flex-start; }
-}
 
 /* Sync conflict diff table */
 .conflict-table {
@@ -745,7 +750,7 @@ html.is-rail-collapsed { --col-right: 0; }
   font-family: var(--mono, ui-monospace, monospace); font-size: 11.5px; line-height: 1.5;
   white-space: pre-wrap; word-break: break-word;
 }
-.accent-swatches { display: flex; gap: 8px; flex-wrap: wrap; }
+.accent-swatches { display: flex; gap: 8px; flex-wrap: wrap; padding: 4px; }
 .accent-sw {
   width: 24px; height: 24px; border-radius: 50%;
   border: none; outline: 2px solid transparent; outline-offset: 2px;
