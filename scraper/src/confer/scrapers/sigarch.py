@@ -48,8 +48,7 @@ class SigarchScraper(Scraper):
         if not program_url:
             raise ValueError(f"Venue {venue.id!r}: sigarch requires source.program_url")
         self.program_url = str(program_url)
-        self.default_track = str(venue.source.get("default_track") or "Main Conference")
-        self.default_event_type = str(venue.source.get("default_event_type") or "Paper")
+        self.default_track = venue.name
 
     def scrape(self) -> list[Paper]:
         html = self.fetcher.get_text(self.program_url, "program.html")
@@ -135,8 +134,8 @@ class SigarchScraper(Scraper):
             abstract="",
             authors=authors,
             author_institutions=author_institutions or authors_text,
-            tracks=[self.default_track],
-            event_type=self.default_event_type,
+            tracks=[session.track or self.default_track],
+            event_type="Paper",
             session_titles=[session.title],
             sessions=[safe_slug(session.session_id)],
             dates=[date] if date else [],

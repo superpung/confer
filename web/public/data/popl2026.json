@@ -63,7 +63,8 @@
     ],
     "title": "Towards Pen-and-Paper-Style Equational Reasoning in Interactive Theorem Provers by Equality Saturation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776667",
@@ -116,7 +117,8 @@
     ],
     "title": "Classical Notions of Computation and the Hasegawa-Thielecke Theorem",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776715",
@@ -124,6 +126,35 @@
       "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Mathias Rabing (Copenhagen University)",
+    "authors": [
+      "Mathias Rabing"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "050d9666-def8-4a90-b913-58890a19f7c3",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "A Verified Distributed Stream Processing Framework",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/16/A-Verified-Distributed-Stream-Processing-Framework",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "This paper introduces a novel abstraction for programming quantum operations, specifically projective Cliffords, as functions over the qudit Pauli group. Generalizing the idea behind Pauli tableaux, we introduce a type system and lambda calculus for projective Cliffords called LambdaPC that captures well-formed Clifford operations via a Curry-Howard correspondence with a particular encoding of the Clifford and Pauli groups. In LambdaPC, users write functions that encode projective Cliffords $P \\mapsto U P U^\\dagger$, and such functions are compiled to circuits executable on modern quantum computers that transform quantum states $\\ket{\\varphi}$ into $U \\ket{\\varphi}$, up to a global phase. Importantly, the language captures not just qubit operations, but qudit operations for any dimension $d$. Throughout the paper we explore what it means to program with projective Cliffords through a number of examples and a case study focusing on stabilizer error correcting codes.",
@@ -185,7 +216,8 @@
     ],
     "title": "Qudit Quantum Programming with Projective Cliffords",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776646",
@@ -194,6 +226,39 @@
       "https://openalex.org/W7109812417"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Shivanandan Tamil Kumaran (Imperial College London)",
+    "authors": [
+      "Shivanandan Tamil Kumaran"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30",
+      "Thu 15 Jan 2026 11:43 - 11:59"
+    ],
+    "eventType": "Poster",
+    "id": "0b747064-5ad6-4bd9-b995-d63f90578d82",
+    "locations": [
+      "Halle 0",
+      "Dortoirs"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session",
+      "SRC Talks"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session",
+      "Thu_15_Jan_2026-Dortoirs-10_20_-_12_00-SRC_Talks"
+    ],
+    "title": "An End-to-end Theory for Compositional Symbolic Execution: From Expressive Specifications to SMT",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/33/An-End-to-end-Theory-for-Compositional-Symbolic-Execution-From-Expressive-Specificat",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Counters that hold natural numbers are ubiquitous in modeling and verifying software systems; for example, they model dynamic creation and use of resources in concurrent programs. Unfortunately, such discrete counters often lead to extremely high complexity. Continuous counters are an efficient over-approximation of discrete counters. They are obtained by relaxing the original counters to hold values over the non-negative rational numbers. This work shows that continuous counters are extraordinarily well-behaved in terms of decidability. Our main result is that, despite continuous counters being infinite-state, the language of sequences of counter instructions that can arrive in a given target configuration, is regular. Moreover, a finite automaton for this language can be computed effectively. This implies that a wide variety of transition systems can be equipped with continuous counters, while maintaining decidability of reachability properties. Examples include higher-order recursion schemes, well-structured transition systems, and decidable extensions of discrete counter systems. We also prove a non-elementary lower bound for the size of the resulting finite automaton.",
@@ -262,7 +327,8 @@
     ],
     "title": "General Decidability Results for Systems with Continuous Counters",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776661",
@@ -333,7 +399,8 @@
     ],
     "title": "Big-Stop Semantics: Small-Step Semantics in a Big-Step Judgment",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776718",
@@ -407,7 +474,8 @@
     ],
     "title": "Nice to Meet You: Synthesizing Practical MLIR Abstract Transformers",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776722",
@@ -482,7 +550,8 @@
     ],
     "title": "Determination Problems for Orbit Closures and Matrix Groups",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776698",
@@ -551,7 +620,8 @@
     ],
     "title": "Hyperfunctions: Communicating Continuations",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776649",
@@ -624,7 +694,8 @@
     ],
     "title": "Typing Strictness",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776657",
@@ -707,7 +778,8 @@
     ],
     "title": "A Verified High-Performance Composable Object Library for Remote Direct Memory Access",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776713",
@@ -783,7 +855,8 @@
     ],
     "title": "Bounded Sort Polymorphism with Elimination Constraints",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776732",
@@ -850,7 +923,8 @@
     ],
     "title": "Let Generalization, Polymorphic Recursion, and Variable Minimization in Boolean-Kinded Type Systems",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776644",
@@ -922,7 +996,8 @@
     ],
     "title": "All for One and One for All: Program Logics for Exploiting Internal Determinism in Parallel Programs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776668",
@@ -991,7 +1066,8 @@
     ],
     "title": "Algorithmic Conversion with Surjective Pairing: A Syntactic and Untyped Approach",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776672",
@@ -1064,7 +1140,8 @@
     ],
     "title": "Endangered by the Language But Saved by the Compiler: Robust Safety via Semantic Back-Translation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776682",
@@ -1133,7 +1210,8 @@
     ],
     "title": "Tropical Mathematics and the Lambda-Calculus II: Tropical Geometry of Probabilistic Programming Languages",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776675",
@@ -1202,7 +1280,8 @@
     ],
     "title": "Lazy Linearity for a Core Functional Language",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776711",
@@ -1272,7 +1351,8 @@
     ],
     "title": "The Simple Essence of Boolean-Algebraic Subtyping: Semantic Soundness for Algebraic Union, Intersection, Negation, and Equi-recursive Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776689",
@@ -1347,7 +1427,8 @@
     ],
     "title": "Optimising Density Computations in Probabilistic Programs via Automatic Loop Vectorisation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776663",
@@ -1422,7 +1503,8 @@
     ],
     "title": "Parametrised Verification of Intel-x86 Programs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776680",
@@ -1431,6 +1513,70 @@
       "https://openalex.org/W7119539407"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Mason Lary (University at Buffalo, SUNY); Andrew K. Hirsch (University at Buffalo, SUNY)",
+    "authors": [
+      "Mason Lary",
+      "Andrew K. Hirsch"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "28e0f8dc-9bc4-4c89-ab29-203c4617e68f",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "AgdaGDL: A Geometric Deep Learning Framework for Property Certification",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/5/AgdaGDL-A-Geometric-Deep-Learning-Framework-for-Property-Certification",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Keith Allen (University at Buffalo, SUNY); Andrew K. Hirsch (University at Buffalo, SUNY)",
+    "authors": [
+      "Keith Allen",
+      "Andrew K. Hirsch"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30",
+      "Thu 15 Jan 2026 11:10 - 11:26"
+    ],
+    "eventType": "Poster",
+    "id": "2adf745a-dd82-408e-ae0b-5ec1720e904d",
+    "locations": [
+      "Halle 0",
+      "Dortoirs"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session",
+      "SRC Talks"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session",
+      "Thu_15_Jan_2026-Dortoirs-10_20_-_12_00-SRC_Talks"
+    ],
+    "title": "Language Model for MPI",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/6/Language-Model-for-MPI",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Online services are commonly implemented with a scalable microservice architecture, where isomorphic workers process client requests, recording persistent state in a backend data store. To maintain service, modifications to service functionality must be made on the fly – i.e., as the service continues to process client requests – but doing so is challenging. The central difficulty is that of avoiding inconsistencies from mixed-mode operation, caused by workers of current and new versions interacting via the data store. Some update methods avoid mixed-mode altogether, but only at the cost of substantial inefficiency – by doubling resources (memory and compute), or by halving throughput. The alternative is an uncontrolled ``rolling'' update, which runs the risk of serious service failures arising from inconsistent mixed-mode behavior. Ideally, it should appear to every client that a service update takes effect atomically; this ensures that a client is not exposed to inconsistent mixed-mode behavior. In this paper, we introduce a framework that formalizes this intuition and develop foundational theory for reasoning about update consistency. We apply this theory to derive the first algorithms that guarantee consistency for mixed-mode updates. The algorithms rely on semantic properties of service actions, such as commutativity. We show that this is unavoidable, by proving that any semantically oblivious mixed-mode update method must allow inconsistencies.",
@@ -1494,7 +1640,8 @@
     ],
     "title": "Consistent Updates for Scalable Microservices",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776700",
@@ -1503,6 +1650,36 @@
       "https://openalex.org/W7111115746"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Pierre Goutagny (Inria and University of Lille)",
+    "authors": [
+      "Pierre Goutagny"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "3163545d-3add-4f7a-b2cf-c83e5b3cfbca",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "A theory of lists with combinators for SMT solvers",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/23/A-theory-of-lists-with-combinators-for-SMT-solvers",
+      "https://pierregoutagny.fr/static/popl26_src_ea.pdf",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Convertibility checking — determining whether two lambda-terms are equal up to reductions — is a crucial component of proof assistants and dependently-typed languages. Practical implementations often use heuristics to quickly conclude that two terms are convertible, or are not convertible, without reducing them to normal form. However, these heuristics can backfire, triggering huge amounts of unnecessary computation. This paper presents a novel convertibility-checking algorithm that relies crucially on laziness and concurrency. Laziness is used to share computations, while concurrency is used to explore multiple convertibility subproblems in parallel or via fair interleaving. Unlike heuristics-based approaches, our algorithm always finds an easy solution to the convertibility problem, if one exists. The paper describes the algorithm in process calculus style, discusses its complexity, and reports on its mechanized proof of partial correctness and its lightweight experimental evaluation.",
@@ -1563,7 +1740,8 @@
     ],
     "title": "A Lazy, Concurrent Convertibility Checker",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776695",
@@ -1637,7 +1815,8 @@
     ],
     "title": "Verifying Almost-Sure Termination for Randomized Distributed Algorithms",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776691",
@@ -1646,6 +1825,35 @@
       "https://openalex.org/W7119500610"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Alexander Phidias Goetz (University of Tübingen)",
+    "authors": [
+      "Alexander Phidias Goetz"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "3bae12df-bcd9-432e-a172-b2b9b6bcaf56",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Region Type System with Bidirectional Multiprompt Delimited Control",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/10/Region-Type-System-with-Bidirectional-Multiprompt-Delimited-Control",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "We propose a method to synthesize a parameterized infinite-state system that can be instantiated for different parameter values. The specification is given in a parameterized temporal logic that allows for data variables as well as parameters that encode properties of the environment. Our synthesis method runs in a counterexample-guided loop consisting of four steps: (1) we synthesize concrete systems for some small parameter instantiations using existing techniques. (2) We generalize the concrete systems into a parameterized program. (3) We create a proof candidate consisting of an invariant and a ranking function. (4) We check the proof candidate for consistency with the program. If the proof succeeds, the parameterized program is valid. Otherwise, we identify a parameter value for which it fails and add a new concrete instance to step one. To generalize programs and create proof candidates, we use a combination of anti-unification and syntax-guided synthesis to express the differences between the programs as a function of the parameters. We evaluate our approach on new examples and examples from the literature that are manually parameterized.",
@@ -1704,7 +1912,8 @@
     ],
     "title": "Parameterized Infinite-State Reactive Synthesis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776726",
@@ -1777,7 +1986,8 @@
     ],
     "title": "Compiling to Linear Neurons",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776677",
@@ -1847,7 +2057,8 @@
     ],
     "title": "Cryptis: Cryptographic Reasoning in Separation Logic",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776730",
@@ -1921,7 +2132,8 @@
     ],
     "title": "TypeDis: A Type System for Disentanglement",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776655",
@@ -1992,7 +2204,8 @@
     ],
     "title": "On Circuit Description Languages, Indexed Monads, and Resource Analysis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776666",
@@ -2061,7 +2274,8 @@
     ],
     "title": "Encode the Cake and Eat It Too: Controlling Computation in Type Theory, Locally",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776704",
@@ -2133,7 +2347,8 @@
     ],
     "title": "(TOPLAS) Will it Fit? Verifying Heap Space Bounds of Concurrent Programs under Garbage Collection",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3716312",
@@ -2205,7 +2420,8 @@
     ],
     "title": "Recurrence Sets for Proving Fair Non-termination under Axiomatic Memory Consistency Models",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776687",
@@ -2280,7 +2496,8 @@
     ],
     "title": "A Modular Static Cost Analysis for GPU Warp-Level Parallelism",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776693",
@@ -2354,7 +2571,8 @@
     ],
     "title": "RapunSL: Untangling Quantum Computing with Separation, Linear Combination and Mixing",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776648",
@@ -2426,7 +2644,8 @@
     ],
     "title": "Probabilistic Concurrent Reasoning in Outcome Logic: Independence, Conditioning, and Invariants",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776651",
@@ -2500,7 +2719,8 @@
     ],
     "title": "Generating Compilers for Qubit Mapping and Routing",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776720",
@@ -2577,7 +2797,8 @@
     ],
     "title": "Welterweight Go: Boxing, Structural Subtyping, and Generics",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776721",
@@ -2644,7 +2865,8 @@
     ],
     "title": "Dependent Coeffects for Local Sensitivity Analysis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776670",
@@ -2653,6 +2875,35 @@
       "https://openalex.org/W4415032242"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Doruk Alp Mutlu (Michigan State University)",
+    "authors": [
+      "Doruk Alp Mutlu"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "603dd41f-11d6-48bb-b3f5-628ed17ed81e",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Expanding Specification Capabilities of a Gradual Verifier with Pure Functions",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/26/Expanding-Specification-Capabilities-of-a-Gradual-Verifier-with-Pure-Functions",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "The specifications of mainstream processor architectures, such as Arm, x86, and RISC-V, underlie modern computing, as the targets of compilers, operating systems, and hypervisors. However, despite extensive research and tooling for instruction-set architecture (ISA) and relaxed-memory semantics, recently including systems features, there still do not exist integrated mathematical models that suffice for foundational formal verification, of concurrent architecture properties or of systems software. Previous proof-assistant work has had to substantially simplify the ISA semantics, the concurrency model, or both. We present ArchSem, an architecture-generic framework for architecture semantics, modularly combining ISA and concurrency models along a tractable interface of instruction-semantics effects, that covers a range of systems aspects. To do so, one has to handle many issues that were previously unclear, about the architectures themselves, the interface, the proper definition of reusable models, and the Rocq and Isabelle idioms required to make it usable. We instantiate it to the Arm-A and RISC-V instruction-set architectures and multiple concurrency models. We demonstrate usability for proof, despite the scale, by establishing that the Arm architecture (in a particular configuration) provides a provable virtual memory abstraction, with a combination of Rocq, Isabelle, and paper proof. Previous work provides further confirmation of usability: the AxSL program logic for Arm relaxed concurrency was proved sound above an earlier version of ArchSem. This establishes a basis for future proofs of architecture properties and systems software, above production architecture specifications.",
@@ -2723,7 +2974,8 @@
     ],
     "title": "ArchSem: Reusable Rigorous Semantics of Relaxed Architectures",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776650",
@@ -2798,7 +3050,8 @@
     ],
     "title": "Miri: Practical Undefined Behavior Detection for Rust",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776690",
@@ -2807,6 +3060,35 @@
       "https://openalex.org/W7119488436"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Francille Zhuang (Purdue University)",
+    "authors": [
+      "Francille Zhuang"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "63a7a9a4-b4d6-4311-a113-0eaf47c665b1",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Ariadne: Automatically Tuning Generator Weights Using Dynamic Sampling",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/14/Ariadne-Automatically-Tuning-Generator-Weights-Using-Dynamic-Sampling",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Multi-modal program verification is a process of validating code against its specification using both dynamic and symbolic techniques, and proving its correctness by a combination of automated and interactive machine-assisted tools. In order to be trustworthy, such verification tools must themselves come with formal soundness proofs, establishing that any program verified in them against a certain specification does not violate the specification's statement when executed. Verification tools that are proven sound in a general-purpose proof assistant with a small trusted core are commonly referred to as foundational. We present a framework that facilitates and streamlines construction of program verifiers that are both foundational and multi-modal. Our approach adopts the well-known idea of monadic shallow embedding of an executable program semantics into the programming language of a theorem prover based on higher-order logic, in our case, the Lean proof assistant. We provide a library of monad transformers for such semantics, encoding a variety of computational effects, including state, divergence, exceptions, and non-determinism. The key theoretical innovation of our work are monad transformer algebras that enable automated derivation of the respective sound verification condition generators. We show that proofs of the resulting verification conditions enjoy automation using off-the-shelf SMT solvers and allow for an interactive proof mode when automation fails. To demonstrate versatility of our framework, we instantiated it to embed two foundational multi-modal verifiers into Lean for reasoning about (1) distributed protocol safety and (2) Dafny-style specifications of imperative programs, and used them to mechanically verify a number of non-trivial case studies.",
@@ -2875,7 +3157,8 @@
     ],
     "title": "Foundational Multi-Modal Program Verifiers",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776719",
@@ -2949,7 +3232,8 @@
     ],
     "title": "ChiSA: Static Analysis for Lightweight Chisel Verification",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776660",
@@ -3021,7 +3305,8 @@
     ],
     "title": "Local Contextual Type Inference",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776653",
@@ -3030,6 +3315,100 @@
       "https://openalex.org/W7119535736"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "We formalize the leading-order asymptotic analysis as an elementary example of abstract interpretation. The formalism omits complete partial orders and fixed-point iteration while retaining the Galois connection and assertion checking. This isolates the notion of semantic approximation from the heavier mathematical machinery to handle loops and recursion. We implement and partially mechanize the formalism in Lean. We also implement an interactive shell and fuzzer for experimentation with the key ideas of abstraction, soundness, and overapproximation, making abstract interpretation more approachable. This suggests a pathway toward lightweight pedagogical frameworks for teaching core ideas in program analysis.",
+    "authorInstitutions": "Heewon Lee (KAIST, Korea, South (The Republic of))",
+    "authors": [
+      "Heewon Lee"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "71f67543-c9cc-41ff-b64d-d60ed7cb40aa",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Asymptotic Analysis as an Abstract Interpretation",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/13/Asymptotic-Analysis-as-an-Abstract-Interpretation",
+      "https://github.com/pingpingy1/asymp_as_absi/blob/main/Extended%20Abstract.pdf",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Puming Liu (New York University Shanghai)",
+    "authors": [
+      "Puming Liu"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30",
+      "Thu 15 Jan 2026 10:53 - 11:09"
+    ],
+    "eventType": "Poster",
+    "id": "72a58070-1e06-4295-b264-c2e73e922658",
+    "locations": [
+      "Halle 0",
+      "Dortoirs"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session",
+      "SRC Talks"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session",
+      "Thu_15_Jan_2026-Dortoirs-10_20_-_12_00-SRC_Talks"
+    ],
+    "title": "Semantic Completeness of Higher-Order Probabilistic Separation Logics",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/4/Semantic-Completeness-of-Higher-Order-Probabilistic-Separation-Logics",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Pedro Carrott (Imperial College London); Sacha-Élie Ayoun (Imperial College London); Azalea Raad (Imperial College London)",
+    "authors": [
+      "Pedro Carrott",
+      "Sacha-Élie Ayoun",
+      "Azalea Raad"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "73603318-caab-47cc-911b-2a286dd27ceb",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "RUXt: Automatic Compositional Type Safety Refutation",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/25/RUXt-Automatic-Compositional-Type-Safety-Refutation",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "JAX Autodiff refers to the core of the automatic differentiation (AD) systems developed in projects like JAX and Dex. JAX Autodiff has recently been formalised in a linear typed calculus by Radul et al in POPL 2023. Although this formalisation suffices to express the main program transformations of AD, the calculus is very specific to this task, and it is not clear whether the type system yields a substructural logic that has interest on its own. We propose an encoding of JAX Autodiff into a linear $\\lambda$-calculus that enjoys a Curry-Howard correspondence with Girard's linear logic. We prove that the encoding is sound both qualitatively (the encoded terms are extensionally equivalent to the original ones) and quantitatively (the encoding preserves the original work cost as described in Radul et al). As a byproduct, we show that unzipping, one of the transformations used to implement backpropagation in JAX Autodiff, is, in fact, optional.",
@@ -3088,7 +3467,8 @@
     ],
     "title": "JAX Autodiff from a Linear Logic Perspective",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776654",
@@ -3159,7 +3539,8 @@
     ],
     "title": "A Synthetic Reconstruction of Multiparty Session Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776692",
@@ -3168,6 +3549,66 @@
       "https://openalex.org/W7119523512"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Shivanandan Tamil Kumaran (Imperial College London); Andreas Lööw (Royal Holloway, University of London); Philippa Gardner (Imperial College London)",
+    "authors": [
+      "Shivanandan Tamil Kumaran",
+      "Andreas Lööw",
+      "Philippa Gardner"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "7bf8df84-ff05-4adf-971f-d006bf812321",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Towards a Mechanised Theory of Fully Featured Compositional Symbolic Execution",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/18/Towards-a-Mechanised-Theory-of-Fully-Featured-Compositional-Symbolic-Execution",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Minh Do (University of New South Wales)",
+    "authors": [
+      "Minh Do"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "7d82a400-32fd-46ed-8fc2-099a98a7fbf7",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Formally Verified Optimisations for the Pancake Compiler",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/22/Formally-Verified-Optimisations-for-the-Pancake-Compiler",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "In this work, we study the fundamental problems of counting and sampling traces that a regular language touches. Formally, one fixes the alphabet $\\Sigma$ and an independence relation $\\mathbb{I} \\subseteq \\Sigma \\times \\Sigma$. The computational problems we address take as input a regular language $L$ over $\\Sigma$, presented as a finite automaton with $m$ states, together with a natural number $n$ (presented in unary). For the counting problem, the output is the number of Mazurkiewicz \\emph{traces} (induced by $\\mathbb{I}$) that intersect the $n^\\text{th}$ slice $L_n = L \\cap \\Sigma^n$ of $L$, i.e., traces that have at least one linearization in $L_n$. For the sampling problem, the output is a trace drawn from a distribution that is approximately uniform over all such traces. These problems are motivated by applications such as bounded model checking based on partial-order reduction, where an \\emph{a priori} estimate of the size of the state space can significantly improve usability, as well as testing approaches for concurrent programs that use partial-order-aware random sampling, where uniform exploration is desirable for effective bug detection. We first show that the counting problem is #P-hard even when the automaton accepting the language $L$ is deterministic, which is in sharp contrast to the corresponding problem for counting the words of a DFA, which is solvable in polynomial time. We then show that the counting problem remains in the class #P for both NFAs and DFAs, independent of whether $L$ is trace-closed. Finally, our main contributions are a \\emph{fully polynomial-time randomized approximation scheme} (FPRAS) that, with high probability, estimates the desired count within a specified accuracy parameter, and a \\emph{fully polynomial-time almost uniform sampler} (FPAUS) that generates traces while ensuring that the distribution induced on them is approximately uniform with high probability.",
@@ -3232,7 +3673,8 @@
     ],
     "title": "Counting and Sampling Traces in Regular Languages",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776723",
@@ -3242,6 +3684,35 @@
       "https://openalex.org/W4416933462"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Alexandre Pinazza (EPFL)",
+    "authors": [
+      "Alexandre Pinazza"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "82578bbc-cccd-4a52-937e-ec772d0decf6",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Interactive symbolic execution of concurrent programs in a theorem prover",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/15/Interactive-symbolic-execution-of-concurrent-programs-in-a-theorem-prover",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Effect handlers offer a powerful and relatively simple mechanism for controlling a program's flow of execution. Since their introduction, an impressive array of verification tools for effect handlers has been developed. However, to this day, no framework can express and prove relational properties about programs that use effect handlers in languages such as OCaml and Links, where programming features like mutable state and concurrency are readily available. To this end, we introduce blaze, the first relational separation logic for effect handlers. We build blaze on top of the Rocq implementation of the Iris separation logic, thereby enjoying the rigour of a mechanised theory and all the reasoning properties of a modern fully-fledged concurrent separation logic, such as modular reasoning about stateful concurrent programs and the ability to introduce user-defined ghost state. In addition to familiar reasoning rules, such as the bind rule and the frame rule, blaze offers rules to reason modularly about programs that perform and handle effects. Significantly, when verifying that two programs are related, blaze does not require that effects and handlers from one program be in correspondence with effects and handlers from the other. To assess this flexibility, we conduct a number of case studies: most noticeably, we show how different implementations of an asynchronous-programming library using effects are related to truly concurrent implementations. As side contributions, we introduce two new, simple, and general reasoning rules for concurrent relational separation logic that are independent of effects: a logical-fork rule that allows one to reason about an arbitrary program phrase as if it had been spawned as a thread and a thread-swap rule that allows one to reason about how threads are scheduled.",
@@ -3306,7 +3777,8 @@
     ],
     "title": "A Relational Separation Logic for Effect Handlers",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776676",
@@ -3377,7 +3849,8 @@
     ],
     "title": "Handling Scope Checks: A Comparative Framework for Dynamic Scope Extrusion Checks",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776681",
@@ -3457,7 +3930,8 @@
     ],
     "title": "Parameterized Verification of Quantum Circuits",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776712",
@@ -3466,6 +3940,72 @@
       "https://openalex.org/W7119465836"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Raquel Fernandes da Silva (Imperial College London); Sacha-Élie Ayoun (Imperial College London); Azalea Raad (Imperial College London); David Pichardie (Meta)",
+    "authors": [
+      "Raquel Fernandes da Silva",
+      "Sacha-Élie Ayoun",
+      "Azalea Raad",
+      "David Pichardie"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "95ddae65-8504-4f88-b589-a6e1e02bc8a7",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Specialisation: Context-Dependent Reasoning in Incorrectness Separation Logic",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/21/Specialisation-Context-Dependent-Reasoning-in-Incorrectness-Separation-Logic",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Lukas Kebuladze (Carnegie Mellon University)",
+    "authors": [
+      "Lukas Kebuladze"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30",
+      "Thu 15 Jan 2026 10:36 - 10:52"
+    ],
+    "eventType": "Poster",
+    "id": "96bdb694-738e-42e9-9436-8fe0c81ec6fb",
+    "locations": [
+      "Halle 0",
+      "Dortoirs"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session",
+      "SRC Talks"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session",
+      "Thu_15_Jan_2026-Dortoirs-10_20_-_12_00-SRC_Talks"
+    ],
+    "title": "Amortized Analysis of Splay Trees via a Lax Homomorphism",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/7/Amortized-Analysis-of-Splay-Trees-via-a-Lax-Homomorphism",
+      "https://lk672.github.io/popl26-src/extended-abstract.pdf",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "The fundamental tension between availability and consistency shapes the design of distributed storage systems. Classical results capture extreme points of this trade-off: the CAP theorem shows that strong models like linearizability preclude availability under partitions, while weak models like causal consistency remain implementable without coordination. These theorems apply to simple read-write interfaces, leaving open a precise explanation of the combinations of object semantics and consistency models that admit available implementations. This paper develops a general semantic framework in which storage specifications combine operation semantics and consistency models. The framework encompasses a broad range of objects (key-value stores, counters, sets, CRDTs, and SQL databases) and consistency models (from causal consistency and sequential consistency to snapshot isolation and bounded staleness). Within this framework, we prove the Arbitration-Free Consistency (AFC) theorem, showing that an object specification within a consistency model admits an available implementation if and only if it is arbitration-free, that is, it does not require a total arbitration order to resolve visibility or read dependencies. The AFC theorem unifies and generalizes previous results, revealing arbitration-freedom as the fundamental property that delineates coordination-free consistency from inherently synchronized behavior.",
@@ -3528,7 +4068,8 @@
     ],
     "title": "Arbitration-Free Consistency Is Available (and Vice Versa)",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776683",
@@ -3602,7 +4143,8 @@
     ],
     "title": "DafnyMPI: A Dafny Library for Verifying Message-Passing Concurrent Programs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776705",
@@ -3678,7 +4220,8 @@
     ],
     "title": "An Equational Axiomatization of Dynamic Threads via Algebraic Effects: Presheaves on Finite Relations, Labelled Posets, and Parameterized Algebraic Theories",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776706",
@@ -3687,6 +4230,35 @@
       "https://openalex.org/W7119480381"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Dao Le (UNSW Sydney)",
+    "authors": [
+      "Dao Le"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "9b44fc10-07f2-4e51-a0c5-5b63975b047f",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Decompilation into Interaction Trees",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/12/Decompilation-into-Interaction-Trees",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Contemporary proof assistants impose restrictive syntactic guardedness conditions that reject many valid corecursive definitions. Existing approaches to overcome these restrictions present a fundamental trade-off between coverage and automation. We present Compositional Heterogeneous Productivity (CHP), a theoretical framework that unifies high automation with extensive coverage for corecursive definitions. CHP introduces heterogeneous productivity applicable to functions with diverse domain and codomain types, including non-coinductive types. Its key innovation is compositionality: the productivity of composite functions is systematically computed from their components, enabling modular reasoning about complex corecursive patterns. Building on CHP, we develop Coco, a corecursion library for Rocq that provides extensive automation for productivity computation and fixed-point generation.",
@@ -3747,7 +4319,8 @@
     ],
     "title": "Coco: Corecursion with Compositional Heterogeneous Productivity",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776733",
@@ -3821,7 +4394,8 @@
     ],
     "title": "Network Change Validation with Relational NetKAT",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776656",
@@ -3891,7 +4465,8 @@
     ],
     "title": "AdapTT: Functoriality for Dependent Type Casts",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776664",
@@ -3962,7 +4537,8 @@
     ],
     "title": "The Relative Monadic Metalanguage",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776702",
@@ -3971,6 +4547,35 @@
       "https://openalex.org/W7115566896"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Dustin Juliano (Indiana University Indianapolis)",
+    "authors": [
+      "Dustin Juliano"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "9fc7c7f9-00d7-41a0-85b8-ede4fb82860e",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Towards Functional Language Runtimes Without Garbage Collection",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/2/Towards-Functional-Language-Runtimes-Without-Garbage-Collection",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "This paper studies the design of programming languages with handlers of higher-order effectful operations – effectful operations that may take in computations as arguments or return computations as output. We present and analyse a core calculus with higher-kinded impredicative polymorphism, handlers of higher-order effectful operations, and optionally general recursion. The distinctive design choice of this calculus is that handlers are carried by lawless raw monads, while the computation judgements still satisfy the monadic laws judgementally. We present the calculus with a logical framework and give denotational models of the calculus using realizability semantics. We prove closed-term canonicity and parametricity for the recursion-free fragment of the language using synthetic Tait computability and a novel form of the $\\top\\top$-lifting technique.",
@@ -4032,7 +4637,8 @@
     ],
     "title": "Handling Higher-Order Effectful Operations with Judgemental Monadic Laws",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776678",
@@ -4097,7 +4703,8 @@
     ],
     "title": "Di- is for Directed: First-Order Directed Type Theory via Dinaturality",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776703",
@@ -4167,7 +4774,8 @@
     ],
     "title": "Characterizing Sets of Theories That Can Be Disjointly Combined",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776652",
@@ -4242,7 +4850,8 @@
     ],
     "title": "U-Turn: Enhancing Incorrectness Analysis by Reversing Direction",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776688",
@@ -4313,7 +4922,8 @@
     ],
     "title": "Separating the Wheat from the Chaff: Understanding (In-)Completeness of Proof Mechanisms for Separation Logic with Inductive Definitions",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776671",
@@ -4322,6 +4932,69 @@
       "https://openalex.org/W7106852104"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "We introduce RESpecBench, a multi-domain LLM benchmark with a sound and automated specification equivalence checker across multiple domains, measuring the LLM’s ability to produce precise, semantically equivalent specifications from informal natural language descriptions. We evaluate several state-of-the-art LLMs on RESpecBench and compare our sound verifier to LLM-as-a-Judge pipelines, demonstrating that LLM-as-a-Judge produces unreliable verdicts and substantially overestimates specification correctness.",
+    "authorInstitutions": "Barış Bayazıt (University of Toronto); Xujie Si (University of Toronto)",
+    "authors": [
+      "Barış Bayazıt",
+      "Xujie Si"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30",
+      "Thu 15 Jan 2026 10:20 - 10:36"
+    ],
+    "eventType": "Poster",
+    "id": "ae609a42-054e-4af6-a9b5-f94afbabf5b4",
+    "locations": [
+      "Halle 0",
+      "Dortoirs"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session",
+      "SRC Talks"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session",
+      "Thu_15_Jan_2026-Dortoirs-10_20_-_12_00-SRC_Talks"
+    ],
+    "title": "RESpecBench: Rigorous Evaluation of Specification Generation with Automated Verification",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/1/RESpecBench-Rigorous-Evaluation-of-Specification-Generation-with-Automated-Verificat",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "George Zakhour (University of St. Gallen)",
+    "authors": [
+      "George Zakhour"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "b355ac1d-c778-476b-a7eb-8fcae2270d11",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Save Time and Mechanize",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/9/Save-Time-and-Mechanize",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Differential operators map input changes to output changes and form the building blocks of efficient incremental computations. For example, differential operators for relational algebra are used to perform live view maintenance in database systems. However, few differential operators are known and it is unclear how to develop and verify new efficient operators. In particular, we found that differential operators often need to use internal state to selectively cache relevant information, which is not supported by prior work. To this end, we designed a specification for \\emph{stateful differential operators} that allows custom state, yet places sufficient constraints to ensure correctness. We model our specification in Rocq and show that the specification not only guides the design of novel differential operators, but also can capture some of the most sophisticated existing differential operators: database join and Datalog aggregation. We show how to describe complex incremental computations in OCaml by composing stateful differential operators, which we have extracted from Rocq.",
@@ -4380,7 +5053,8 @@
     ],
     "title": "Stateful Differential Operators for Incremental Computing",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776728",
@@ -4452,7 +5126,8 @@
     ],
     "title": "Security Reasoning via Substructural Dependency Tracking",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776669",
@@ -4520,7 +5195,8 @@
     ],
     "title": "Higher-Order Behavioural Conformances via Fibrations",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776697",
@@ -4529,6 +5205,39 @@
       "https://openalex.org/W7119489326"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Kacper F. Korban (EPFL)",
+    "authors": [
+      "Kacper F. Korban"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30",
+      "Thu 15 Jan 2026 11:26 - 11:42"
+    ],
+    "eventType": "Poster",
+    "id": "b908c823-791d-4e21-8bac-d8f357f3c7c2",
+    "locations": [
+      "Halle 0",
+      "Dortoirs"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session",
+      "SRC Talks"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session",
+      "Thu_15_Jan_2026-Dortoirs-10_20_-_12_00-SRC_Talks"
+    ],
+    "title": "Bootstrapping a Verified Compiler for an Imperative Language in Rocq",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/19/Bootstrapping-a-Verified-Compiler-for-an-Imperative-Language-in-Rocq",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "We present GenJAX, a new language and compiler for vectorized programmable probabilistic inference. GenJAX integrates the vectorizing map (vmap) operation from array programming frameworks such as JAX into the programmable inference paradigm, enabling compositional vectorization of features such as probabilistic program traces, stochastic branching (for expressing mixture models), and programmable inference interfaces for writing custom probabilistic inference algorithms. We formalize vectorization as a source-to-source program transformation on a core calculus for probabilistic programming ($\\gen$), and prove that it correctly vectorizes both modeling and inference operations. We have implemented our approach in \\href{ https://github.com/probcomp/genjax }{the GenJAX language and compiler}, and have empirically evaluated this implementation on several benchmarks and case studies. Our results show that our implementation supports a wide and expressive set of programmable inference patterns and delivers performance comparable to hand-optimized JAX code.",
@@ -4607,7 +5316,8 @@
     ],
     "title": "Probabilistic Programming with Vectorized Programmable Inference",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776729",
@@ -4681,7 +5391,8 @@
     ],
     "title": "Extensible Data Types with Ad-Hoc Polymorphism",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776662",
@@ -4753,7 +5464,8 @@
     ],
     "title": "Accelerating Syntax-Guided Program Synthesis by Optimizing Domain-Specific Languages",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776679",
@@ -4762,6 +5474,35 @@
       "https://openalex.org/W7119469567"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Gyuhyeok Oh (Seoul National University)",
+    "authors": [
+      "Gyuhyeok Oh"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "cab1dedb-ac67-463e-aaf2-59b3ea4cb21b",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Partial Evaluation + Global Analyser = Separate Analyser",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/8/Partial-Evaluation-Global-Analyser-Separate-Analyser",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "Quantum programs today are written at a low level of abstraction - quantum circuits akin to assembly languages - and the unitary parts of even advanced quantum programming languages essentially function as circuit description languages. This state of affairs impedes scalability, clarity, and support for higher-level reasoning. More abstract and expressive quantum programming constructs are needed. To this end, we introduce a simple syntax for generating unitaries from \"just a phase\"; we combine a (global) phase operation that captures phase shifts with a quantum analogue of the \"if let\" construct that captures subspace selection via pattern matching. This minimal language lifts the focus from gates to eigendecomposition, conjugation, and controlled unitaries; common building blocks in quantum algorithm design. We demonstrate several aspects of the expressive power of our language in several ways. Firstly, we establish that our representation is universal by deriving a universal quantum gate set. Secondly, we show that important quantum algorithms can be expressed naturally and concisely, including Grover's search algorithm, Hamiltonian simulation, Quantum Fourier Transform, Quantum Signal Processing, and the Quantum Eigenvalue Transformation. Furthermore, we give clean denotational semantics grounded in categorical quantum mechanics. Finally, we implement a prototype compiler that efficiently translates terms of our language to quantum circuits, and prove that it is sound with respect to these semantics. Collectively, these contributions show that this construct offers a principled and practical step toward more abstract and structured quantum programming.",
@@ -4828,7 +5569,8 @@
     ],
     "title": "Quantum Circuits Are Just a Phase",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776731",
@@ -4900,7 +5642,8 @@
     ],
     "title": "Formal Verification for JavaScript Regular Expressions: A Proven Mechanized Semantics and Its Applications",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776710",
@@ -4967,7 +5710,8 @@
     ],
     "title": "Zoo: A Framework for the Verification of Concurrent OCaml 5 Programs using Separation Logic",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776701",
@@ -5036,7 +5780,8 @@
     ],
     "title": "Fuzzing Guided by Bayesian Program Analysis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776659",
@@ -5110,7 +5855,8 @@
     ],
     "title": "From Semantics to Syntax: A Type Theory for Comprehension Categories",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776725",
@@ -5177,7 +5923,8 @@
     ],
     "title": "Quotient Polymorphism",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776665",
@@ -5247,7 +5994,8 @@
     ],
     "title": "Bayesian Separation Logic",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776696",
@@ -5320,7 +6068,8 @@
     ],
     "title": "Abstraction Functions as Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776673",
@@ -5391,7 +6140,8 @@
     ],
     "title": "Hadamard-Pi: Equational Quantum Programming",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776647",
@@ -5461,7 +6211,8 @@
     ],
     "title": "Inductive Program Synthesis by Meta-Analysis-Guided Hole Filling",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776694",
@@ -5537,7 +6288,8 @@
     ],
     "title": "Piecewise Analysis of Probabilistic Programs via k-Induction",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776709",
@@ -5546,6 +6298,35 @@
       "https://openalex.org/W4393248278"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ziyue Jin (Peking University)",
+    "authors": [
+      "Ziyue Jin"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "e3725f92-d683-4c68-8557-83be41eb7675",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "The Expressiveness of Programs via Descriptive Complexity",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/24/The-Expressiveness-of-Programs-via-Descriptive-Complexity",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "We extend the scope of context-free-language (CFL) reachability to a new class of infinite-state systems. Parikh's Theorem is a useful tool for solving CFL-reachability problems for transition systems that consist of commuting transition relations. It implies that the image of a context-free language under a homomorphism into a commutative monoid is semi-linear, and that there is a linear-time algorithm for constructing a Presburger arithmetic formula that represents it. However, for many transition systems of interest, transitions do not commute. In this paper, we introduce almost-commuting transition systems, which pair finite-state control with commutative components, but which are in general not commutative. We extend Parikh's theorem to show that the image of a context-free language under a homomorphism into an \\textit{almost-commuting monoid is semi-linear and that there is a polynomial-time algorithm for constructing a Presburger arithmetic formula that represents it. This result yields a general framework for solving CFL-reachability problems over \\textit{almost-commuting transition systems}. We describe several examples of systems within this class. Finally, we examine closure properties of almost-commuting monoids that can be used to modularly compose almost-commuting transition systems while remaining in the class.",
@@ -5609,7 +6390,8 @@
     ],
     "title": "Context-Free-Language Reachability for Almost-Commuting Transition Systems",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776686",
@@ -5618,6 +6400,35 @@
       "https://openalex.org/W7119503028"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Hyeongseo Yoo (Seoul National University and Samsung Electronics)",
+    "authors": [
+      "Hyeongseo Yoo"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "e5dcb969-11a0-42f4-b376-d4d65f2bf255",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Interrupt-Aware Variable Analysis for SSD Firmware",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/3/Interrupt-Aware-Variable-Analysis-for-SSD-Firmware",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "In this paper, we define an assertion language designed for expectation-based reasoning about quantum programs. The key design idea is a representation of quantum predicates by quasi-probability distributions of generalized Pauli operators. Then we extend classical techniques such as Gödelization to prove that this language is expressive with respect to the quantum programs with loops—specifically, for any program $S$ and any postcondition $\\psi$ formulated in the assertion language, the weakest precondition of $S$ with respect to $\\psi$ can also be expressed as a formula in the assertion language. As an application, we present a sound and relatively complete quantum Hoare logic upon our expressive assertion language.",
@@ -5681,7 +6492,8 @@
     ],
     "title": "An Expressive Assertion Language for Quantum Programs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776658",
@@ -5690,6 +6502,66 @@
       "https://openalex.org/W7119505824"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Ewen BROUDIN-CARADEC (ENS Paris Saclay, TU Delft, INRIA Saclay, LMF)",
+    "authors": [
+      "Ewen BROUDIN-CARADEC"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "e7d201b1-0a4c-4e3a-ae42-821ac9294509",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "A specification for Agda Core’s unification algorithm for generic pattern matching",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/27/A-specification-for-Agda-Core-s-unification-algorithm-for-generic-pattern-matching",
+      "https://popl26-poster.ewenbc.org",
+      "https://popl26-abstract.ewenbc.org",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Jairo Miguel Marulanda-Giraldo (University of Southampton)",
+    "authors": [
+      "Jairo Miguel Marulanda-Giraldo"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "ea3d27df-7649-4167-b919-ebe84460cb26",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "A Well-behaved Differentiable Logic",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/17/A-Well-behaved-Differentiable-Logic",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "We introduce a new two-sided type system for verifying the correctness and incorrectness of functional programs with atoms and pattern matching. A key idea in the work is that types should range over sets of normal forms, rather than sets of values, and this allows us to define a complement operator on types that acts as a negation on typing formulas. We show that the complement allows us to derive a wide range of refutation principles within the system, including the type-theoretic analogue of co-implication, and we use them to certify that a number of Erlang-like programs go wrong. An expressive axiomatisation of the complement operator via subtyping is shown decidable, and the type system as a whole is shown to be not only sound, but also complete for normal forms.",
@@ -5750,7 +6622,8 @@
     ],
     "title": "A Complementary Approach to Incorrectness Typing",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776724",
@@ -5761,7 +6634,36 @@
     "volume": "10"
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
+    "authorInstitutions": "Akane Taniguchi (Institute of Science Tokyo)",
+    "authors": [
+      "Akane Taniguchi"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "ec804997-5d8f-466e-aa8a-1df1dbad1f1a",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "Handling the Selection Monad, Uniformly",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/11/Handling-the-Selection-Monad-Uniformly",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "Various mechanisms are available for managing universe levels in proof assistants based on type theory. The Agda proof assistant implements a strong form of universe polymorphism in which universe levels are internalised as a type, making levels first-class objects and permitting higher-rank quantification via ordinary Π-types. We prove normalisation and decidability of equality and type-checking for a type theory with first-class universe levels inspired by Agda. We also show that level primitives can safely be erased in extracted programs. Our development is formalised in Agda itself and builds upon previous work which uses logical relations on extrinsically typed syntax.",
     "authorIds": [
       "0000-0001-8688-0333",
       "0000-0001-9708-624X",
@@ -5819,7 +6721,8 @@
     ],
     "title": "Normalisation for First-Class Universe Levels",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776645",
@@ -5828,6 +6731,35 @@
       "https://openalex.org/W7119528897"
     ],
     "volume": "10"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Tom Divers (University of Bristol)",
+    "authors": [
+      "Tom Divers"
+    ],
+    "dates": [
+      "Wed 14 Jan 2026 17:30 - 19:30"
+    ],
+    "eventType": "Poster",
+    "id": "ee057788-0a65-4abc-8be4-030aa7816ad4",
+    "locations": [
+      "Halle 0"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_14_Jan_2026-Halle_0-17_30_-_19_30-SRC_Poster_Session"
+    ],
+    "title": "A Concise Type System for Borrow Inference",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl26.sigplan.org/details/POPL-2026-student-research-competition/20/A-Concise-Type-System-for-Borrow-Inference",
+      "https://popl26.sigplan.org/track/POPL-2026-popl-research-papers"
+    ]
   },
   {
     "abstract": "A key computational question underpinning the automated testing and verification of concurrent programs is the \\emph{consistency question} — \\emph{given a partial execution history, can it be completed in a consistent manner?} Due to its importance, consistency testing has been studied extensively for memory models, as well as for database isolation levels. A common theme in all these settings is the use of shared-memory as the primal mode of interthread communication. On the other hand, modern programming languages, such as Go, Rust and Kotlin, advocate a paradigm shift towards channel-based (i.e., message-passing) communication. However, the consistency question for channel-based concurrency is currently poorly understood. In this paper we lift the study of fundamental consistency problems to channels, taking into account various input parameters, such as the number of threads executing, the number of channels, and the channel capacities. We draw a rich complexity landscape, including upper bounds that become polynomial when certain input parameters are fixed, as well as hardness lower bounds. Our upper bounds are based on algorithms that can drive the verification of channel consistency in automated verification tools. Our lower bounds characterize minimal input parameters that are sufficient for hardness to arise, and thus shed light on the intricacies of testing channel-based concurrency. In combination, our upper and lower bounds characterize the boundary of \\emph{tractability/intractability} of verifying channel consistency, and imply that our algorithms are often (nearly) optimal. We have also implemented our main consistency checking algorithm and designed optimizations to enhance its performance. We evaluated the performance of our implementation over a set of 103 instances obtained from open source Go projects, and compared it against a constraint-solving based algorithm. Our experimental results demonstrate the power of our consistency-checking algorithm; it scales to around 1M events, and is significantly faster in running-time performance, compared to a constraint-solving approach.",
@@ -5891,7 +6823,8 @@
     ],
     "title": "The Complexity of Testing Message-Passing Concurrency",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776643",
@@ -5962,7 +6895,8 @@
     ],
     "title": "What Is a Monoid?",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776727",
@@ -6035,7 +6969,8 @@
     ],
     "title": "The Ghosts of Empires: Extracting Modularity from Interleaving-Based Proofs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776684",
@@ -6101,7 +7036,8 @@
     ],
     "title": "Canonicity for Indexed Inductive-Recursive Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776685",
@@ -6166,7 +7102,8 @@
     ],
     "title": "A Family of Sims with Diverging Interests",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776714",
@@ -6241,7 +7178,8 @@
     ],
     "title": "Bounded Treewidth, Multiple Context-Free Grammars, and Downward Closures",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776716",
@@ -6308,7 +7246,8 @@
     ],
     "title": "Rows and Capabilities as Modal Effects",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776674",
@@ -6381,7 +7320,8 @@
     ],
     "title": "ChopChop: A Programmable Framework for Semantically Constraining the Output of Language Models",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776708",
@@ -6451,7 +7391,8 @@
     ],
     "title": "Oriented Metrics for Bottom-Up Enumerative Synthesis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776717",
@@ -6527,7 +7468,8 @@
     ],
     "title": "Domain-Theoretic Semantics for Functional Logic Programming",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776699",
@@ -6600,7 +7542,8 @@
     ],
     "title": "A Logic for the Imprecision of Abstract Interpretations",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3776707",

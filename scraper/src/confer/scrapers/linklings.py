@@ -4,8 +4,6 @@ This is the original DAC 2026 scraper, reorganized behind the :class:`Scraper`
 interface. All source-specific options come from ``venue.source``:
 
     base_url:          the conference program root (required)
-    prefixes:          presentation-id prefixes to include (default ["RESEARCH"])
-    all_presentations: include every presentation type, ignoring prefixes
 """
 
 from __future__ import annotations
@@ -37,6 +35,24 @@ from .base import Scraper
 SCHEDULE_SOURCE_RE = re.compile(r'source="([^"]+wp_program_view_all_[^"]+\.txt\?v=\d+)"')
 PRESENTATION_PREFIX_RE = re.compile(r"^[A-Z]+")
 NATURAL_RE = re.compile(r"(\d+)")
+PAPER_ID_PREFIXES = {"PAPER", "RESEARCH"}
+PAPER_EVENT_TYPE_KEYWORDS = (
+    "paper",
+    "manuscript",
+    "technical",
+    "poster",
+)
+NON_PAPER_EVENT_TYPE_KEYWORDS = (
+    "keynote",
+    "panel",
+    "tutorial",
+    "break",
+    "lunch",
+    "dinner",
+    "meeting",
+    "reception",
+    "social",
+)
 
 
 def prefix_for(presentation_id: str) -> str:
@@ -77,8 +93,6 @@ class LinklingsScraper(Scraper):
         if not base_url:
             raise ValueError(f"Venue {venue.id!r}: linklings requires source.base_url")
         self.base_url = base_url.rstrip("/") + "/"
-        self.prefixes = tuple(venue.source.get("prefixes") or ("RESEARCH",))
-        self.all_presentations = bool(venue.source.get("all_presentations", False))
 
     # -- public entrypoint -------------------------------------------------
     def scrape(self) -> list[Paper]:
@@ -231,7 +245,7 @@ class LinklingsScraper(Scraper):
         deduped: dict[tuple[str, str], LinkOccurrence] = {}
         seen_sources: dict[tuple[str, str], set[str]] = defaultdict(set)
         for occurrence in all_occurrences:
-            if not self.all_presentations and prefix_for(occurrence.presentation_id) not in self.prefixes:
+            if not self.keep_occurrence(occurrence):
                 continue
             key = (occurrence.presentation_id, occurrence.session_id)
             seen_sources[key].add(occurrence.source_date)
@@ -249,6 +263,21 @@ class LinklingsScraper(Scraper):
 
         ordered = sorted(deduped.values(), key=lambda item: (item.presentation_id, item.session_id))
         return ordered, option_maps
+
+    def keep_occurrence(self, occurrence: LinkOccurrence) -> bool:
+        prefix = prefix_for(occurrence.presentation_id)
+        if prefix in PAPER_ID_PREFIXES:
+            return True
+        return self.looks_like_paper_event_type(occurrence.session_event_type_hint)
+
+    @staticmethod
+    def looks_like_paper_event_type(event_type: str) -> bool:
+        lowered = event_type.lower().strip()
+        if not lowered:
+            return False
+        if any(keyword in lowered for keyword in NON_PAPER_EVENT_TYPE_KEYWORDS):
+            return False
+        return any(keyword in lowered for keyword in PAPER_EVENT_TYPE_KEYWORDS)
 
     def parse_people(self, display: Tag) -> dict[str, list[dict[str, str]]]:
         people: dict[str, list[dict[str, str]]] = {}

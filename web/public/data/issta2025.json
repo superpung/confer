@@ -2007,6 +2007,13 @@
   },
   {
     "abstract": "The capabilities of Large Language Models (LLMs) in code generation, particularly for implementing target functionalities from natural language descriptions, have been extensively studied. As an alternative form of natural language, input-output examples (I/O examples) provide an accessible, unambiguous, and flexible way to describe functionalities, but the diversity, sparseness, and incompleteness of I/O examples also place challenges on understanding and implementing requirements. Therefore, generating code from input-output examples (i.e., example-based code generation) provides a new perspective, allowing us to evaluate LLMs’ capability to infer target functionalities from limited information and to process new-form requirements. However, related research about LLMs in example-based code generation remains largely unexplored. To fill this gap, this paper presents the first comprehensive study on example-based code generation using LLMs. To address the incorrectness caused by the incompleteness of I/O examples, we adopt an iterative evaluation framework and formalize the objective of example-based code generation as two sequential sub-objectives: generating code conforming to given examples and generating code that successfully implements the target functionalities from (iteratively) given examples. We assess six state-of-the-art LLMs using a new benchmark of 168 diverse target functionalities (derived from HumanEval and CodeHunt). The results demonstrate that when requirements were described using iterative input-output examples rather than natural language, the LLMs’ score decreased by over 60%, indicating that example-based code generation remains challenging for the evaluated LLMs. More interestingly, the vast majority (even over 95%) of successfully implemented functionalities are achieved in the first round of iterations, suggesting that the LLMs struggle to effectively utilize the iteratively supplemented requirements. Furthermore, we find that combining I/O examples with even imprecise natural language descriptions significantly improves LLM performance, and that while the choice of initial I/O examples has a limited impact on the score for most functionalities, a subset of functionalities shows high sensitivity to the initial examples, suggesting opportunities for prompt optimization. These findings highlight the importance of early prompts during interactions and offer critical insights and implications for enhancing LLM-driven code generation.",
+    "authorIds": [
+      "0000-0003-2574-9774",
+      "0009-0001-7519-5733",
+      "0000-0002-5403-3217",
+      "0000-0002-7532-5550",
+      "0000-0002-6731-216X"
+    ],
     "authorInstitutions": "Yingjie Fu (Peking University); Bozhou Li (Peking University); Linyi Li (Simon Fraser University); Wentao Zhang (Peking University); Tao Xie (Peking University)",
     "authors": [
       "Yingjie Fu",
@@ -2015,15 +2022,25 @@
       "Wentao Zhang",
       "Tao Xie"
     ],
+    "container": "Proceedings of the ACM on Software Engineering",
     "dates": [
       "Thu 26 Jun 2025 14:00 - 14:25"
     ],
     "doi": "10.1145/3728947",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "487ed593-c28e-4f15-8409-09e97bd03632",
+    "issue": "ISSTA",
     "locations": [
       "Cosmos Hall"
     ],
+    "pages": "1583-1606",
+    "publicationDate": "2025-06-22",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Research Papers",
       "Code and Documentation Generation"
@@ -2036,10 +2053,12 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3728947",
       "https://conf.researchr.org/details/issta-2025/issta-2025-papers/69/The-First-Prompt-Counts-the-Most-An-Evaluation-of-Large-Language-Models-on-Iterative",
       "https://doi.org/10.1145/3728947 ",
       "https://conf.researchr.org/program/issta-2025/program-issta-2025/Detailed-Timeline"
-    ]
+    ],
+    "volume": "2"
   },
   {
     "abstract": "Despite advances in automated testing, manual testing remains prevalent due to the high maintenance demands associated with test script fragility—scripts often break with minor changes in application structure. Recent developments in Large Language Models (LLMs) offer a potential alternative by powering Autonomous Web Agents (AWAs) that can autonomously interact with applications. These agents may serve as Autonomous Test Agents (ATAs), potentially reducing the need for maintenance-heavy automated scripts by utilising natural language instructions similar to those used by human testers. This paper investigates the feasibility of adapting AWAs for end-to-end test execution. We contribute with (1) an adaptation framework transforming a well-known AWA into an ATA and analysing which modules support autonomous testing, (2) a benchmark of three web applications and a suite of 100 test cases, including both passing and mutated failing cases, to evaluate ATA performance, and (3) an empirical evaluation that quantifies ATA efficacy and identifies core limitations in autonomous testing agents. Our findings reveal that while AWAs show promising results in replicating some test scenarios autonomously, limitations in handling assertions and errors indicate that further advancements are necessary before ATAs can fully replace manual testing. This work provides insights for developing more resilient and reliable autonomous testing systems, paving the way for robust, maintenance-free test automation.",
@@ -2605,7 +2624,7 @@
     "volume": "2"
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorIds": [
       "0009-0009-0231-287X"
     ],
@@ -3101,6 +3120,15 @@
   },
   {
     "abstract": "Loop invariant inference is a fundamental, yet challenging, problem in program verification. Recent work adopts the guess-and-check framework, where candidate loop invariants are iteratively generated in the guess step and verified in the check step. A major challenge of this general framework is to produce high-quality candidate invariants in each iteration so that the inference procedure can converge quickly. Empirically, we observe that existing approaches may struggle with guessing the complete invariant due to the complexity of logical connectives, but usually, all the clauses of the correct loop invariant have already appeared in the previous guesses. This motivates us to refine the guess-and-check framework, resulting in a generate-combine-check framework, where the loop invariant inference task is divided into clause generation and clause combination. Specifically, we propose a novel loop invariant inference approach Clause2Inv under the new framework, which consists of an LLM-based clause generator and a counterexample-driven clause combinator. As the clause generator, Clause2Inv leverages LLMs to generate a multitude of clauses; as the clause combinator, Clause2Inv leverages counterexamples from the previous rounds to convert generated clauses into invariants. Our experiments show that Clause2Inv significantly outperforms existing loop invariant inference approaches. For example, Clause2Inv solved 312 (out of 316) linear invariant generation tasks and 44 (out of 50) nonlinear invariant generation tasks, which is at least 93 and 16 more than the existing baselines, respectively. By design, the generate-combine-check framework is flexible to accommodate various existing approaches which are currently under the guess-and-check framework by splitting the guessed candidate invariants into clauses. The evaluation shows that our approach can, with minor adaptation, improve existing loop invariant inference approaches in both effectiveness and efficiency. For example, Code2Inv which solved 210 problems with an average solving time of 137.6 seconds can be improved to solve 252 problems with an average solving time of 17.8 seconds.",
+    "authorIds": [
+      "0009-0006-2433-4920",
+      "0009-0003-4689-4097",
+      "0009-0005-0438-5299",
+      "0000-0002-6913-6542",
+      "0000-0002-0427-9710",
+      "0000-0002-5993-1665",
+      "0000-0001-7970-1384"
+    ],
     "authorInstitutions": "Weining Cao (Nanjing University, China); Guangyuan Wu (Nanjing University, China); Tangzhi Xu (Nanjing University, China); Yuan Yao (Nanjing University); Hengfeng Wei (State Key Laboratory for Novel Software Technology, Nanjing University); Taolue Chen (Birkbeck, University of London); Xiaoxing Ma (Nanjing University)",
     "authors": [
       "Weining Cao",
@@ -3111,15 +3139,25 @@
       "Taolue Chen",
       "Xiaoxing Ma"
     ],
+    "container": "Proceedings of the ACM on Software Engineering",
     "dates": [
       "Fri 27 Jun 2025 11:25 - 11:50"
     ],
     "doi": "10.1145/3728920",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6b0860b8-0761-4b89-8edd-41fb2d9dc5cf",
+    "issue": "ISSTA",
     "locations": [
       "Cosmos 3B"
     ],
+    "pages": "1009-1030",
+    "publicationDate": "2025-06-22",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Research Papers",
       "Program Analysis 2"
@@ -3132,10 +3170,12 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3728920",
       "https://conf.researchr.org/details/issta-2025/issta-2025-papers/44/Clause2Inv-A-Generate-Combine-Check-Framework-for-Loop-Invariant-Inference",
       "https://doi.org/10.1145/3728920 ",
       "https://conf.researchr.org/program/issta-2025/program-issta-2025/Detailed-Timeline"
-    ]
+    ],
+    "volume": "2"
   },
   {
     "abstract": "Reachability analysis, used to determine whether an error location in a program is reachable from the initial state, is a key problem in software verification. While standard techniques typically perform this analysis in the forward direction, analyzing reachability backward from the error location can be more efficient in certain cases. The aim of this research is to introduce a technique to reverse C programs, which would enable existing forward reachability methods to effectively traverse the original program from the back. The technique is to be implemented in a standalone tool that can be easily included into the pipeline of existing verification tools.",
@@ -3241,6 +3281,15 @@
   },
   {
     "abstract": "WebAssembly enables fast execution of performance-critical in web applications utilizing native code. However, recent research has demonstrated the potential for memory corruption errors within WebAssembly modules to exploit web applications. In this work, we present the first systematic analysis of memory corruption in WebAssembly, unveiling the prevalence of a novel threat model where memory corruption enables code injection on a victim’s browser. Our large-scale analysis across 37 797 domains reveals that an alarming 29 411 (77.81 %) of those fully trust data coming from potentially attacker-controlled sources. As a result, an attacker can exploit memory errors to manipulate the WebAssembly memory, where the data is implicitly trusted and frequently passed into security-sensitive functions such as eval or directly into the DOM via innerHTML. Thus, an attacker can abuse this trust to gain JavaScript code execution, i.e., Cross-Site Scripting (XSS). To tackle this issue, we present Wemby, the first viable approach to efficiently analyze WebAssembly-powered websites holistically. We demonstrate that Wemby is proficient at detecting remotely exposed memory corruption errors in web applications through fuzzing. For this purpose, we implement binary-only WebAssembly instrumentation that provides fine-grained memory corruption oracles. We applied Wemby to different websites, uncovering several security-critical functions and memory corruption bugs, including one on the Zoom platform. In terms of performance, our ablation study demonstrates that Wemby outperforms cuurent WebAssembly fuzzers. Specifically, Wemby achieves an average speed improvement of 232 times and delivers 46% greater code coverage compared to the state-of-the-art.",
+    "authorIds": [
+      "0009-0005-6065-8087",
+      "0009-0008-3682-0197",
+      "0000-0001-8468-8516",
+      "0009-0002-3082-4345",
+      "0000-0001-6894-1008",
+      "0000-0003-2574-5060",
+      "0000-0002-7322-2777"
+    ],
     "authorInstitutions": "Oussama Draissi (University of Duisburg-Essen); Tobias Cloosters (University of Duisburg-Essen); David Klein (TU Braunschweig); Michael Rodler (Amazon Web Services); Marius Musch (TU Braunschweig); Martin Johns (TU Braunschweig); Lucas Davi (University of Duisburg-Essen)",
     "authors": [
       "Oussama Draissi",
@@ -3251,15 +3300,25 @@
       "Martin Johns",
       "Lucas Davi"
     ],
+    "container": "Proceedings of the ACM on Software Engineering",
     "dates": [
       "Fri 27 Jun 2025 14:25 - 14:50"
     ],
     "doi": "10.1145/3728937",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7082ada9-5df7-4924-80d7-d9c0e46cb25e",
+    "issue": "ISSTA",
     "locations": [
       "Cosmos 3B"
     ],
+    "pages": "1326-1349",
+    "publicationDate": "2025-06-22",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Research Papers",
       "Binary Code Analysis and Optimization"
@@ -3272,10 +3331,12 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3728937",
       "https://conf.researchr.org/details/issta-2025/issta-2025-papers/58/Wemby-s-Web-Hunting-for-Memory-Corruption-in-WebAssembly",
       "https://doi.org/10.1145/3728937 ",
       "https://conf.researchr.org/program/issta-2025/program-issta-2025/Detailed-Timeline"
-    ]
+    ],
+    "volume": "2"
   },
   {
     "abstract": "Compiler testing is critical and indispensable to improve the correctness of compilers. Spurred by recent advancements in Large Language Models (LLMs), LLM-based compiler testing techniques such as Fuzz4All, have demonstrated their potential in uncovering real bugs in diverse compilers and reducing the required engineering efforts in designing program generators. Given the continuous evolution of LLMs and the emergence of new LLM-based approaches, establishing robust baselines is crucial for rigorous evaluation and driving future advancements in this promising research direction. To this end, we introduce Kitten, a mutation-based, language-agnostic program generator. Kitten leverages a corpus of seed programs, analogous to the training set for LLMs, and utilizes the target language’s syntax, akin to the knowledge learned by LLMs. Furthermore, Kitten’s mutation operators can generate diverse test programs, demonstrating a behavior analogous to the ability of LLM inference to generate new code. Our evaluations demonstrate that, using existing compiler test suites as seed programs, Kitten outperforms Fuzz4All in terms of code coverage and bug detection capabilities. Within 24 hours, Kitten achieved 48.3%, 9.9%, 33.8% higher coverage than Fuzz4All on GCC, LLVM and Rustc, respectively, while also identifying 19.3 bugs in GCC, 20.3 bugs in LLVM and 15.7 in Rustc. Over the course of nine months dedicated to Kitten’s development and testing, we identified a total of 328 across the compilers GCC, LLVM, Rustc, Solc, JerryScript, scalac, and slang, of which 310 have been confirmed or fixed. We strongly believe that Kitten serves as an effective baseline, enabling the identification of limitations within existing LLM-based approaches and consequently driving advancements in this promising research direction.",
@@ -3650,19 +3711,32 @@
   },
   {
     "abstract": "Code review is an important practice in software development, aimed at ensuring code quality and mitigating potential issues. Although effective, manual code reviews are time-consuming. In response, the research community has explored automating this process using deep learning. However, existing models, designed to address a broad spectrum of code review types, often fail to account for the unique aspects of reviews specifically related to vulnerabilities. One reason is the underrepresentation of such reviews in training datasets, which impacts the accuracy of these models. Consequently, there is limited knowledge on the specific characteristics of vulnerability-focused code reviews and the performance of current models in this specialized context. To bridge this gap, this thesis proposes a comprehensive study of the attributes that define an effective vulnerability-focused code review. It also aims to evaluate the performance of state-of-the-art models in generating vulnerability code reviews. To improve the effectiveness of these models, the plan is to create a specialized dataset of vulnerability code reviews. The anticipated outcome is a deep understanding of the characteristics of vulnerability code reviews and a more accurate and reliable automated code review tool, specifically designed to address security vulnerabilities, thus substantially improving the robustness of software security practices.",
+    "authorIds": [
+      "0009-0008-3396-9332"
+    ],
     "authorInstitutions": "Leonardo Centellas (Computer Science Department, Pontificia Universidad Catolica de Chile)",
     "authors": [
       "Leonardo Centellas"
     ],
+    "container": "Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering",
     "dates": [
       "Wed 25 Jun 2025",
       "Wed 25 Jun 2025 14:00 - 15:30"
     ],
+    "doi": "10.1145/3696630.3731467",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "852b986b-e2c3-4dde-a522-7eab9d481101",
     "locations": [
       "Andromeda"
     ],
+    "pages": "1279-1280",
+    "publicationDate": "2025-06-23",
+    "publisher": "ACM",
     "sessionTitles": [
       "Doctoral Symposium"
     ],
@@ -3674,6 +3748,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1145/3696630.3731467",
       "https://conf.researchr.org/details/issta-2025/issta-2025-doctoral-symposium/16/Automated-Vulnerability-Focused-Code-Reviews",
       "https://conf.researchr.org/program/issta-2025/program-issta-2025/Detailed-Timeline"
     ]
@@ -4876,7 +4951,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Andreas Zeller (CISPA Helmholtz Center for Information Security); Darko Marinov (University of Illinois at Urbana-Champaign); Jie M. Zhang (King's College London); Federica Sarro (University College London)",
     "authors": [
       "Andreas Zeller",
@@ -6272,19 +6347,32 @@
   },
   {
     "abstract": "The rise of autonomous systems necessitates efficient liability apportionment. Existing approaches, such as Shapley values, are non-causal and computationally expensive. We propose \\emph{k-leg liability}, a scalable framework based on Structural Causal Models (SCMs) and robustness semantics of logical specifications, ensuring fair and efficient liability allocation. Our method leverages \\emph{causal non-interaction} to decompose computations, reducing complexity. We formally relate k-leg liability to harm quantification and empirically show it closely approximates Shapley values while significantly lowering computational cost. This provides a practical and legally interpretable approach for liability in autonomous systems.",
+    "authorIds": [
+      "0009-0003-7245-4677"
+    ],
     "authorInstitutions": "Kaveh Aryan (King's College London)",
     "authors": [
       "Kaveh Aryan"
     ],
+    "container": "Lecture Notes in Computer Science",
     "dates": [
       "Wed 25 Jun 2025",
       "Wed 25 Jun 2025 14:00 - 15:30"
     ],
+    "doi": "10.1007/978-3-032-22774-4_15",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e29a7ec4-2c40-4aa2-a59c-607db16c5e89",
     "locations": [
       "Andromeda"
     ],
+    "pages": "283-303",
+    "publicationDate": "2026-01-01",
+    "publisher": "Springer Nature Switzerland",
     "sessionTitles": [
       "Doctoral Symposium"
     ],
@@ -6296,6 +6384,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1007/978-3-032-22774-4_15",
       "https://conf.researchr.org/details/issta-2025/issta-2025-doctoral-symposium/18/Formal-Liability-Apportionment-in-Autonomous-Systems",
       "https://conf.researchr.org/program/issta-2025/program-issta-2025/Detailed-Timeline"
     ]

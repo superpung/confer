@@ -50,7 +50,7 @@
     "sessions": [],
     "title": "A Cross-Language Approach to Recommending Method Names According to Functional Descriptions",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3679551",
@@ -114,7 +114,7 @@
     "sessions": [],
     "title": "Scalable Large-Scale Multi-Granularity Code Clone Detection via Clustering Search and Pre-Trained Models",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3635158",
@@ -185,7 +185,7 @@
     "sessions": [],
     "title": "Visibility of Domain Elements in the Elicitation Process Interviews: A Family of Empirical Studies",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3662599",
@@ -248,7 +248,7 @@
     "sessions": [],
     "title": "Deobfuscation of Control Flow Flattening Based on Abstract Interpretation",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3659437",
@@ -317,7 +317,7 @@
     "sessions": [],
     "title": "On the Need to Rethink Trust in AI Assistants for Software Development: A Critical Review",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3659804",
@@ -386,7 +386,7 @@
     "sessions": [],
     "title": "Typestate-Based Fault Localization of API Usage Violations in a Deep Learning Program",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3656464",
@@ -462,7 +462,7 @@
     "sessions": [],
     "title": "Safety Analysis of Over-the-Air Updates for CPS: A Contract-Driven Approach",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3654819",
@@ -528,7 +528,7 @@
     "sessions": [],
     "title": "Do Automated Fixes Truly Mitigate Smart Contract Exploits?",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3618123",
@@ -596,7 +596,7 @@
     "sessions": [],
     "title": "Bridging Bug Localization and Issue Fixing: A Hierarchical Localization Framework Leveraging Large Language Models",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3668601",
@@ -672,7 +672,7 @@
     "sessions": [],
     "title": "Trace: Securing Smart Contract Repository Against Access Control Vulnerability",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3660900",
@@ -749,7 +749,7 @@
     "sessions": [],
     "title": "Are Decoder-Only Large Language Models the Silver Bullet for Code Search?",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3657353",
@@ -816,7 +816,7 @@
     "sessions": [],
     "title": "Improving Smart Contract Vulnerability Detection With Correlation-Driven Semi-Supervised Learning",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3647014",
@@ -898,7 +898,7 @@
     "sessions": [],
     "title": "Vercation: Precise Vulnerable Open-Source Software Version Identification Based on Static Analysis and LLM",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3599581",
@@ -967,7 +967,7 @@
     "sessions": [],
     "title": "Portus: Linking Alloy with SMT-based Finite Model Finding",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3631361",
@@ -1038,7 +1038,7 @@
     "sessions": [],
     "title": "Exploring and Analyzing Software Architecture Refactoring in Practice",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3636150",
@@ -1106,7 +1106,7 @@
     "sessions": [],
     "title": "DyCITO+: Scalable Deep Reinforcement Learning for Generating Class Integration Test Orders of Java Programs",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3680517",
@@ -1171,7 +1171,7 @@
     "sessions": [],
     "title": "Eler: Ensemble Learning-Based Automated Verification of Code Clones",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3656384",
@@ -1246,7 +1246,7 @@
     "sessions": [],
     "title": "Investigating the Feasibility of Conducting Webcam-Based Eye-Tracking Studies in Code Comprehension",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3651615",
@@ -1312,7 +1312,7 @@
     "sessions": [],
     "title": "Towards Refining Developer Questions Using LLM-Based Named Entity Recognition for Developer Chatroom Conversations",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3663599",
@@ -1382,7 +1382,7 @@
     "sessions": [],
     "title": "Efficiently Testing Distributed Systems via Abstract State Space Prioritization",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3618976",
@@ -1459,7 +1459,7 @@
     "sessions": [],
     "title": "Drivence: Realistic Driving Sequence Synthesis for Testing Multi-Sensor Fusion Perception Systems",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3650399",
@@ -1524,7 +1524,7 @@
     "sessions": [],
     "title": "CVH-REC: A Novel Method for Web API Recommendation Based on Cross-View HGNNs",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3666184",
@@ -1592,7 +1592,7 @@
     "sessions": [],
     "title": "AC2Next: A Novel Model That Can Predict the Next Animation API by Fusing the Animation API Context and the UI Animation Task",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3637777",
@@ -1664,7 +1664,7 @@
     "sessions": [],
     "title": "Iter-T: ITERative Test Suite Generation for Automated Program Repair",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3671416",
@@ -1737,7 +1737,7 @@
     "sessions": [],
     "title": "CoSQA+: Enhancing Code Search Evaluation With a Multi-Choice Benchmark and Test-Driven Agents",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3631886",
@@ -1813,7 +1813,7 @@
     "sessions": [],
     "title": "Spatial Semantic Fuzzing for LiDAR-Based Autonomous Driving Perception Systems",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3627580",
@@ -1881,7 +1881,7 @@
     "sessions": [],
     "title": "δ-SCALPEL: Docker Image Slimming Based on Source Code Static Analysis",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3640123",
@@ -1954,7 +1954,7 @@
     "sessions": [],
     "title": "Automated TEE Adaptation With LLMs: Identifying, Transforming, and Porting Sensitive Functions in Programs",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3655766",
@@ -2025,7 +2025,7 @@
     "sessions": [],
     "title": "Steer Your Model: Secure Code Generation With Contrastive Decoding",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3650127",
@@ -2097,7 +2097,7 @@
     "sessions": [],
     "title": "Shield Broken: Black-Box Adversarial Attacks on LLM-Based Vulnerability Detectors",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3638998",
@@ -2165,7 +2165,7 @@
     "sessions": [],
     "title": "Benchmarking AI Models in Software Engineering: A Review, Search Tool, and Unified Approach for Elevating Benchmark Quality",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3644183",
@@ -2231,7 +2231,7 @@
     "sessions": [],
     "title": "Understanding Docker Refactorings: Expanded Taxonomy, Operational Trade-Offs, and Role-Aware Recommendations",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3649731",
@@ -2308,7 +2308,7 @@
     "sessions": [],
     "title": "When Voice Meets Touch: Conflict Analysis in Mobile Applications",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3656691",
@@ -2376,7 +2376,7 @@
     "sessions": [],
     "title": "A Novel Method for Vulnerability Detection Based on Fusion and Hyperbolic Neural Network Graphs",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3656129",
@@ -2438,7 +2438,7 @@
     "sessions": [],
     "title": "A Dynamic Test Oracle for Quantum Programs With Separable Output States",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3670211",
@@ -2510,7 +2510,7 @@
     "sessions": [],
     "title": "Boosting Compiler Fault Localization: Getting the Best of Both Worlds by Fusing Dynamic and Historical Data",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3666208",
@@ -2581,7 +2581,7 @@
     "sessions": [],
     "title": "An Empirical Study of Overlooked Code Review Comments in OSS Projects",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3681776",
@@ -2650,7 +2650,7 @@
     "sessions": [],
     "title": "Detecting Malicious Packages in PyPI and NPM by Clustering Installation Scripts",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3618952",
@@ -2724,7 +2724,7 @@
     "sessions": [],
     "title": "Human Cognitive Pattern Simulation for Crowdsourced Test Report Consistency Detection",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3659293",
@@ -2796,7 +2796,7 @@
     "sessions": [],
     "title": "Efficient Function Orchestration for Large Language Models",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3619112",
@@ -2866,7 +2866,7 @@
     "sessions": [],
     "title": "An Empirical Study of Parameter-Efficient Fine-Tuning in Code Change Learning and Beyond",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3637335",
@@ -2936,7 +2936,7 @@
     "sessions": [],
     "title": "Beyond Functional Correctness: Exploring Hallucinations in LLM-Generated Code",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3657432",
@@ -3010,7 +3010,7 @@
     "sessions": [],
     "title": "Towards Secure Program Partitioning for Smart Contracts With LLM's In-Context Learning",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3668858",
@@ -3081,7 +3081,7 @@
     "sessions": [],
     "title": "Computation Tree Logic Guided Program Repair",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3625772",
@@ -3159,7 +3159,7 @@
     "sessions": [],
     "title": "Agents4PLC: Automating Closed-Loop PLC Code Generation and Verification in Industrial Control Systems Using LLM-Based Agents",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3667895",
@@ -3236,7 +3236,7 @@
     "sessions": [],
     "title": "DeepFWI: Identifying Bug-Sensitive Warnings With Multi-Modal Code-Warning Semantics",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3678424",
@@ -3302,7 +3302,7 @@
     "sessions": [],
     "title": "Automated Update of Android Deprecated API Usages With Large Language Models",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3627897",
@@ -3378,7 +3378,7 @@
     "sessions": [],
     "title": "Deep Learning Framework Testing via Model Mutation: How Far Are We?",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3651022",
@@ -3451,7 +3451,7 @@
     "sessions": [],
     "title": "Defining and Detecting the Defects of Large Language Model-Based Autonomous Agents",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3658554",
@@ -3516,7 +3516,7 @@
     "sessions": [],
     "title": "C2SaferRust: Transforming C Projects Into Safer Rust With NeuroSymbolic Techniques",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3641486",
@@ -3594,7 +3594,7 @@
     "sessions": [],
     "title": "MirrorFuzz: Leveraging LLM and Shared Bugs for Deep Learning Framework APIs Fuzzing",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3619966",
@@ -3663,7 +3663,7 @@
     "sessions": [],
     "title": "CARE: Context Aware Root Cause Identification Using Distributed Traces and Profiling Metrics",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3645143",
@@ -3729,7 +3729,7 @@
     "sessions": [],
     "title": "Agentic Recommender Systems: A Systematic Literature Review",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3657900",
@@ -3798,7 +3798,7 @@
     "sessions": [],
     "title": "Can LLMs Generate User Stories and Assess Their Quality?",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3670612",
@@ -3868,7 +3868,7 @@
     "sessions": [],
     "title": "Improving Gas Efficiency in Smart Contracts: Data-Driven Insights and LLM-Assisted Remediation",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3658163",
@@ -3936,7 +3936,7 @@
     "sessions": [],
     "title": "Causes and Canonicalization of Unreproducible Builds in Java",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3627891",
@@ -4011,7 +4011,7 @@
     "sessions": [],
     "title": "CodeS+: Towards Assessing the Generalization Ability of Code Models Under Distribution Shift",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3668096",
@@ -4076,7 +4076,7 @@
     "sessions": [],
     "title": "A Deep Dive Into Deprecation Declarations in the Rust Package Ecosystem",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3660015",
@@ -4138,7 +4138,7 @@
     "sessions": [],
     "title": "Adaptive Spectral Clustering and Structural Alignment for Cross-Project Defect Prediction",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3667334",
@@ -4210,7 +4210,7 @@
     "sessions": [],
     "title": "FCGHunter: Towards Evaluating Robustness of Graph-Based Android Malware Detection",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3626788",
@@ -4277,7 +4277,7 @@
     "sessions": [],
     "title": "TaskSnap: One Task at a Time With Snapshots",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3656405",
@@ -4347,7 +4347,7 @@
     "sessions": [],
     "title": "Diagnosing Violations of State-Based Specifications in iCFTL",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3667445",
@@ -4414,7 +4414,7 @@
     "sessions": [],
     "title": "Low-Cost Testing for Path Coverage of MPI Programs Using Surrogate-Assisted Changeable Multi-Objective Optimization",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3635120",
@@ -4489,7 +4489,7 @@
     "sessions": [],
     "title": "Cost-Effective Adversarial Attacks Against Code LLM With Model Attention",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3663143",
@@ -4552,7 +4552,7 @@
     "sessions": [],
     "title": "Literate Programming With LLMs? - A Study on Rosetta Code and CodeNet",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3629828",
@@ -4623,7 +4623,7 @@
     "sessions": [],
     "title": "Toward Automated Validation of Language Model Synthesized Test Cases Using Semantic Entropy",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3664287",
@@ -4695,7 +4695,7 @@
     "sessions": [],
     "title": "Facilitating Wise Decision-Making for Bounty Backers in Open Source Software Communities",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3633310",
@@ -4767,7 +4767,7 @@
     "sessions": [],
     "title": "Causality-Aware Safety Testing for Autonomous Driving Systems",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3663874",
@@ -4832,7 +4832,7 @@
     "sessions": [],
     "title": "A Multivocal Literature Review on the Effectiveness of Security Threat Modeling",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3662996",
@@ -4900,7 +4900,7 @@
     "sessions": [],
     "title": "Synthetic Malware at Scale: Malicious Code Generation With Code Transplanting",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3633280",
@@ -4968,7 +4968,7 @@
     "sessions": [],
     "title": "iRUC: Reducing Inter-Microservice Data Communication in Data-Intensive Systems via Unified Computation",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3656819",
@@ -5030,7 +5030,7 @@
     "sessions": [],
     "title": "Unleashing the Potential of Coverage Representation in Deep Learning-Based Fault Localization",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3674478",
@@ -5100,7 +5100,7 @@
     "sessions": [],
     "title": "Beyond the Sum of Parts: Leveraging Entanglement for Bug Inducing Commit Localization",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3628362",
@@ -5181,7 +5181,7 @@
     "sessions": [],
     "title": "RepoTransBench: A Real-World Multilingual Benchmark for Repository-Level Code Translation",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3645056",
@@ -5249,7 +5249,7 @@
     "sessions": [],
     "title": "Mutation-Guided Unit Test Generation With a Large Language Model",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3682975",
@@ -5319,7 +5319,7 @@
     "sessions": [],
     "title": "From Function to Repository: Towards Repository-Level Evaluation of Software Vulnerability Detection",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3662145",
@@ -5390,7 +5390,7 @@
     "sessions": [],
     "title": "How Composite Metamorphic Relations Enhance Test Effectiveness of DNN Testing: An Empirical Study",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3675285",
@@ -5459,7 +5459,7 @@
     "sessions": [],
     "title": "DockerFill: Automatically Completing Dockerfile Code With Syntax-Aware Multi-Task Learning",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3632074",
@@ -5528,7 +5528,7 @@
     "sessions": [],
     "title": "Mutants Will Tell: Statistical Mutation-Based Multiple Fault Localization for Deep Learning Programs",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3655800",
@@ -5594,7 +5594,7 @@
     "sessions": [],
     "title": "Subgraph-Oriented Testing for Deep Learning Libraries",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3655712",
@@ -5657,7 +5657,7 @@
     "sessions": [],
     "title": "Advancing LLM-Generated Code Reliability: A Hybrid Approach for Hallucination Detection",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3640641",
@@ -5726,7 +5726,7 @@
     "sessions": [],
     "title": "Studying and Improving the Soundness of Input-Based Feature-Oriented Debloating",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 4, April 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3660377",
@@ -5791,7 +5791,7 @@
     "sessions": [],
     "title": "The Power of Small LLMs: A Multi-Agent for Code Generation via Dynamic Precaution Tuning",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3632508",
@@ -5860,7 +5860,7 @@
     "sessions": [],
     "title": "Configuration Defects in Kubernetes",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3659785",
@@ -5932,7 +5932,7 @@
     "sessions": [],
     "title": "How Can ChatGPT Support Human Security Testers to Help Mitigate Supply Chain Attacks?",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3632765",
@@ -6005,7 +6005,7 @@
     "sessions": [],
     "title": "Evaluating Large Language Models for Line-Level Vulnerability Localization",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3649250",
@@ -6081,7 +6081,7 @@
     "sessions": [],
     "title": "Aging-Related Bug Prediction Based on Multi-View Graph Feature Learning and Graph-Transformer",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3618113",
@@ -6154,7 +6154,7 @@
     "sessions": [],
     "title": "SemanticLog: Towards Effective and Efficient Large-Scale Semantic Log Parsing",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3625121",
@@ -6224,7 +6224,7 @@
     "sessions": [],
     "title": "PCART: Automated Repair of Python API Parameter Compatibility Issues",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3646150",
@@ -6288,7 +6288,7 @@
     "sessions": [],
     "title": "UI-Land: Automated Adaptation of Android Portrait UIs to Landscape Mode",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 5, May 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3681369",
@@ -6363,7 +6363,7 @@
     "sessions": [],
     "title": "Software Architecture Recovery Augmented With Semantics",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3620670",
@@ -6434,7 +6434,7 @@
     "sessions": [],
     "title": "Weighted Community Division for Automated Software Architecture Refactoring",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3648996",
@@ -6502,7 +6502,7 @@
     "sessions": [],
     "title": "IssueCourier: Multi-Relational Heterogeneous Temporal Graph Neural Network for Open-Source Issue Assignment",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3634192",
@@ -6574,7 +6574,7 @@
     "sessions": [],
     "title": "AdaCoder: An Adaptive Planning and Multi-Agent Framework for Function-Level Code Generation",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3642621",
@@ -6644,7 +6644,7 @@
     "sessions": [],
     "title": "Reaching Software Quality for Bioinformatics Applications: How Far Are We?",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 2, February 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3641225",
@@ -6716,7 +6716,7 @@
     "sessions": [],
     "title": "Identifying and Mitigating API Misuse in Large Language Models",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 3, March 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2026.3651566",
@@ -6788,7 +6788,7 @@
     "sessions": [],
     "title": "ProFuse: Test Case Prioritization Based on Multi Dimensional Feature Fusion for Logic Synthesis Tools Testing Acceleration",
     "tracks": [
-      "Volume 52"
+      "Volume 52, Number 1, January 2026"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3634318",

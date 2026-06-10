@@ -13,16 +13,24 @@ from urllib.parse import quote, urlencode
 
 from .config import VenueConfig
 from .fetcher import Fetcher
-from .models import Paper
-from .util import cache_name_for_url, clean_doi, doi_from_url, strip_markup, unique_preserve_order
+from .models import Paper, normalize_title
+from .util import (
+    cache_name_for_url,
+    clean_doi,
+    doi_from_url,
+    meaningful_abstract,
+    strip_markup,
+    unique_preserve_order,
+)
 
 
 DEFAULT_MAILTO = "hi@repus.me"
 TITLE_TOKEN_RE = re.compile(r"[a-z0-9]+")
+DEFAULT_ENRICHERS = ("crossref", "openalex")
 
 
 def enrich_papers(venue: VenueConfig, fetcher: Fetcher, papers: list[Paper]) -> list[Paper]:
-    specs = venue.source.get("enrichers") or []
+    specs = venue.source.get("enrichers") if "enrichers" in venue.source else DEFAULT_ENRICHERS
     if isinstance(specs, str):
         specs = [specs]
     if not specs:
@@ -57,7 +65,8 @@ class MetadataEnricher(ABC):
         self.options = options
         self.threshold = float(options.get("title_match_threshold", 0.82))
         self.mailto = str(options.get("mailto") or DEFAULT_MAILTO)
-        self.workers = max(int(options.get("workers", venue.source.get("enricher_workers", 8))), 1)
+        default_workers = 1 if self.name == "openalex" else 4
+        self.workers = max(int(options.get("workers", venue.source.get("enricher_workers", default_workers))), 1)
 
     def enrich(self, papers: list[Paper]) -> list[Paper]:
         if self.workers <= 1 or len(papers) <= 1:
@@ -110,9 +119,20 @@ class MetadataEnricher(ABC):
     def date_filter(self, *, openalex: bool = False) -> str:
         if not self.venue.year:
             return ""
+        default_window = self.default_year_window()
+        window = int(self.options.get("year_window", self.venue.source.get("metadata_year_window", default_window)))
+        start_year = self.venue.year - max(window, 0)
+        end_year = self.venue.year + (1 if self.venue.scraper == "researchr" else 0)
         if openalex:
-            return f"from_publication_date:{self.venue.year}-01-01,to_publication_date:{self.venue.year}-12-31"
-        return f"from-pub-date:{self.venue.year}-01-01,until-pub-date:{self.venue.year}-12-31"
+            return f"from_publication_date:{start_year}-01-01,to_publication_date:{end_year}-12-31"
+        return f"from-pub-date:{start_year}-01-01,until-pub-date:{end_year}-12-31"
+
+    def default_year_window(self) -> int:
+        if self.venue.kind == "journal":
+            return 1
+        if self.venue.scraper == "researchr":
+            return 4
+        return 0
 
     def matches_title(self, expected: str, candidate: str) -> bool:
         return title_similarity(expected, candidate) >= self.threshold
@@ -140,8 +160,8 @@ class CrossrefEnricher(MetadataEnricher):
 
     def lookup_by_title(self, paper: Paper) -> dict[str, Any] | None:
         params = {
-            "query.title": paper.title,
-            "rows": str(int(self.options.get("rows", 5))),
+            "query.title": search_title(paper.title),
+            "rows": str(int(self.options.get("rows", 25))),
             "mailto": self.mailto,
         }
         date_filter = self.date_filter()
@@ -194,7 +214,11 @@ class OpenAlexEnricher(MetadataEnricher):
 
     def lookup_by_title(self, paper: Paper) -> dict[str, Any] | None:
         filters = self.date_filter(openalex=True)
-        params = {"search": paper.title, "per-page": str(int(self.options.get("rows", 5))), "mailto": self.mailto}
+        params = {
+            "search": search_title(paper.title),
+            "per-page": str(int(self.options.get("rows", 10))),
+            "mailto": self.mailto,
+        }
         if filters:
             params["filter"] = filters
         url = f"https://api.openalex.org/works?{urlencode(params)}"
@@ -218,8 +242,11 @@ ENRICHERS: dict[str, type[MetadataEnricher]] = {
 
 
 def merge_metadata(paper: Paper, metadata: dict[str, Any], source: str) -> None:
+    metadata_title = strip_markup(str(metadata.get("title", "")))
+    if should_replace_title(paper.title, metadata_title):
+        paper.title = normalize_title(metadata_title)
     paper.doi = paper.doi or clean_doi(str(metadata.get("doi", "")))
-    paper.abstract = paper.abstract or strip_markup(str(metadata.get("abstract", "")))
+    paper.abstract = meaningful_abstract(paper.abstract) or meaningful_abstract(str(metadata.get("abstract", "")))
     paper.publication_date = paper.publication_date or str(metadata.get("publication_date", ""))
     paper.publisher = paper.publisher or str(metadata.get("publisher", ""))
     paper.container = paper.container or str(metadata.get("container", ""))
@@ -271,6 +298,7 @@ def crossref_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
         if "pdf" in str(link.get("content-type", "")).lower() and link.get("URL")
     ]
     metadata = {
+        "title": first(item.get("title")),
         "doi": item.get("DOI", ""),
         "abstract": strip_markup(str(item.get("abstract", ""))),
         "publication_date": crossref_publication_date(item),
@@ -309,6 +337,7 @@ def openalex_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
     pdf = primary.get("pdf_url") or open_access.get("oa_url")
     pages = biblio_pages(biblio)
     metadata = {
+        "title": item.get("title", ""),
         "doi": clean_doi(str(item.get("doi", ""))),
         "abstract": strip_markup(inverted_abstract(item.get("abstract_inverted_index") or {})),
         "publication_date": item.get("publication_date", ""),
@@ -426,6 +455,10 @@ def normalized_title(value: str) -> str:
     return " ".join(TITLE_TOKEN_RE.findall(strip_markup(value).lower()))
 
 
+def search_title(value: str) -> str:
+    return re.sub(r"\s*(?:\.{3}|…)\s*", " ", strip_markup(value)).strip()
+
+
 def title_similarity(a: str, b: str) -> float:
     left = normalized_title(a)
     right = normalized_title(b)
@@ -433,4 +466,39 @@ def title_similarity(a: str, b: str) -> float:
         return 0.0
     if left == right:
         return 1.0
-    return SequenceMatcher(None, left, right).ratio()
+    return max(
+        SequenceMatcher(None, left, right).ratio(),
+        title_containment_similarity(left, right),
+    )
+
+
+def title_containment_similarity(left: str, right: str) -> float:
+    left_tokens = left.split()
+    right_tokens = right.split()
+    shorter, longer = (
+        (left_tokens, right_tokens)
+        if len(left_tokens) <= len(right_tokens)
+        else (right_tokens, left_tokens)
+    )
+    if len(shorter) < 5:
+        return 0.0
+    longer_set = set(longer)
+    overlap = sum(1 for token in shorter if token in longer_set) / len(shorter)
+    if overlap < 0.8:
+        return 0.0
+    return min(0.95, 0.72 + (overlap * 0.25))
+
+
+def should_replace_title(current: str, candidate: str) -> bool:
+    if not candidate:
+        return False
+    if not current:
+        return True
+    if not is_truncated_title(current):
+        return False
+    return len(candidate) > len(current) and title_similarity(current, candidate) >= 0.82
+
+
+def is_truncated_title(value: str) -> bool:
+    stripped = value.strip()
+    return stripped.endswith("…") or stripped.endswith("...")

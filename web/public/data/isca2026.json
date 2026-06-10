@@ -28,7 +28,6 @@
     "dates": [
       "Monday, June 29, 2026 10:35 – 10:55"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -68,13 +67,10 @@
     ],
     "title": "CODO: An Automated Compiler for Comprehensive Dataflow Optimization",
     "tracks": [
-      "Main Conference"
+      "Best Paper Candidate Session (Plenary)"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2604.12618",
-      "https://openalex.org/W7154656293"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -108,7 +104,7 @@
     ],
     "title": "COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices",
     "tracks": [
-      "Main Conference"
+      "Best Paper Candidate Session (Plenary)"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -175,12 +171,11 @@
     ],
     "title": "Cerberus: Cross-Layer ECC Co-Design for Robust and Efficient Memory Protection",
     "tracks": [
-      "Main Conference"
+      "Best Paper Candidate Session (Plenary)"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2605.02220",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7160237792"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -218,7 +213,7 @@
     ],
     "title": "MLX: Multi-Layer Execution for Structured LLM Workload Acceleration on Spatial Architectures",
     "tracks": [
-      "Main Conference"
+      "Best Paper Candidate Session (Plenary)"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -290,12 +285,11 @@
     ],
     "title": "Patterns Behind Chaos: Forecasting Data Movement for Efficient Large-Scale MoE LLM Inference",
     "tracks": [
-      "Main Conference"
+      "Best Paper Candidate Session (Plenary)"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19423540",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7150246153"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -327,7 +321,7 @@
     ],
     "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
     "tracks": [
-      "Main Conference"
+      "LLM 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -352,7 +346,6 @@
     "dates": [
       "Monday, June 29, 2026 12:15 – 12:35"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -391,13 +384,10 @@
     ],
     "title": "Cassandra: Enabling Reasoning LLMs at Edge via Self-Speculative Decoding",
     "tracks": [
-      "Main Conference"
+      "LLM 1"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.26558",
-      "https://openalex.org/W7162700653"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -442,7 +432,7 @@
     ],
     "title": "Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference",
     "tracks": [
-      "Main Conference"
+      "LLM 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -476,7 +466,7 @@
     ],
     "title": "ATX: Accelerator Task Extensions",
     "tracks": [
-      "Main Conference"
+      "Memory Systems and PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -509,7 +499,7 @@
     ],
     "title": "ECC Enabled Reliable and Performant Processing-in-Memory",
     "tracks": [
-      "Main Conference"
+      "Memory Systems and PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -545,7 +535,7 @@
     ],
     "title": "HBM-CASO: A Coordinated Approach to HBM System-Level and On-Die ECC",
     "tracks": [
-      "Main Conference"
+      "Memory Systems and PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -607,12 +597,11 @@
     ],
     "title": "CAPA: Manufacturing Carbon Estimation for Advanced-Packaged Architectures",
     "tracks": [
-      "Main Conference"
+      "Sustainability"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19406861",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7150307427"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -644,7 +633,7 @@
     ],
     "title": "RHODES: Robust Optimization for Uncertainty-Aware Design of CO2-Efficient Computing Systems",
     "tracks": [
-      "Main Conference"
+      "Sustainability"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -678,7 +667,7 @@
     ],
     "title": "Rearchitecting the Datacenter Lifecycle for AI",
     "tracks": [
-      "Main Conference"
+      "Sustainability"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -712,7 +701,7 @@
     ],
     "title": "Don't Surrender to Low QPS/$: Fast and Cost-Efficient ANNS with TridentANN",
     "tracks": [
-      "Main Conference"
+      "Storage"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -752,7 +741,7 @@
     ],
     "title": "Five-Minute Rule 40 Years Later: A First-Principles Revisit for Modern Memory Hierarchy",
     "tracks": [
-      "Main Conference"
+      "Storage"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -794,7 +783,7 @@
     ],
     "title": "LOONG: Utilizing Long-Stride Reprogram to Enhance the Performance of SSDs",
     "tracks": [
-      "Main Conference"
+      "Storage"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -831,7 +820,7 @@
     ],
     "title": "OASIS: Outlier-Aware LUT-Based GEMM with Dual-Side Quantization for LLM Inference Acceleration",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -866,7 +855,7 @@
     ],
     "title": "Omni-LUT: Energy-Efficient LUT-based Accelerator with Hardware-Aware KV Cache Quantization",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -906,7 +895,7 @@
     ],
     "title": "QiMeng-Tensify: Scaling up Tensor Computation Optimization via Architecture-Aware LLM-Guided MCTS",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -939,7 +928,7 @@
     ],
     "title": "Shining Light on Silicon Photonic DNN Accelerators",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -973,7 +962,7 @@
     ],
     "title": "TensorPrism: Rethinking Sparse High-order Tensor Acceleration via Co-occurrence Graph",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1007,7 +996,7 @@
     ],
     "title": "BAAP: Coupling Compute-in-SRAM with DRAM Banks for Near-Memory Processing",
     "tracks": [
-      "Main Conference"
+      "DRAM and SRAM PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1047,7 +1036,7 @@
     ],
     "title": "MERIDIAN: In-Memory Acceleration for RAG with Document Attention Decomposition",
     "tracks": [
-      "Main Conference"
+      "DRAM and SRAM PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1083,7 +1072,7 @@
     ],
     "title": "PipeIMC: a Pipelined In-SRAM Computing Architecture",
     "tracks": [
-      "Main Conference"
+      "DRAM and SRAM PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1123,7 +1112,7 @@
     ],
     "title": "PuDGhost: Experimental Analysis of Computation Result Corruption in Processing-using-DRAM Operations on Real DRAM Chips and Implications for Future Systems",
     "tracks": [
-      "Main Conference"
+      "DRAM and SRAM PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1160,7 +1149,7 @@
     ],
     "title": "Taking Analytic Databases to the Bank",
     "tracks": [
-      "Main Conference"
+      "DRAM and SRAM PIM/PNM"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1219,12 +1208,11 @@
     ],
     "title": "Helium: Quantifying Microarchitectural Side-Channel Leakage with Probabilistic Guarantees",
     "tracks": [
-      "Main Conference"
+      "Security"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19446913",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151501772"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -1253,7 +1241,7 @@
     ],
     "title": "LÆGIS: Pinpointing and Addressing Performance Overheads of GPU-based Confidential Computing",
     "tracks": [
-      "Main Conference"
+      "Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1288,7 +1276,7 @@
     ],
     "title": "MC-ORAM: A Mask-Assisted and Counter-Based Non-Deterministic ORAM inside VM-Based TEEs",
     "tracks": [
-      "Main Conference"
+      "Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1327,7 +1315,7 @@
     ],
     "title": "TimeGaps Channels: Exploiting CPU Halted Time for Fun and Profit",
     "tracks": [
-      "Main Conference"
+      "Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1385,12 +1373,11 @@
     ],
     "title": "Towards Practical Interrupt Side-Channel Attacks on macOS for Apple Silicon",
     "tracks": [
-      "Main Conference"
+      "Security"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19450240",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151549815"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -1420,7 +1407,7 @@
     ],
     "title": "Augmenting the Branch Predictor with a Squashed-Branch Reuse Buffer",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1456,7 +1443,7 @@
     ],
     "title": "Dorado: Clustered Hardware Cache Coherence for 1,000+ Cores",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1488,7 +1475,7 @@
     ],
     "title": "Hierarchical Wakeup Logic of the Issue Queue for High Scalability",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1524,7 +1511,7 @@
     ],
     "title": "RUNLTS: Branch Prediction with Register-Value Correlations and Hierarchical Table Orchestration",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1566,7 +1553,7 @@
     ],
     "title": "Revisiting Global Value Prediction: A Resurgent Complement to Local Predictors",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1605,7 +1592,7 @@
     ],
     "title": "CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM",
     "tracks": [
-      "Main Conference"
+      "LLM 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1643,7 +1630,7 @@
     ],
     "title": "HybridSpec: Exploiting Hybrid-bonding Memory to Accelerate LLM Serving through Heterogeneous Architecture and Speculative Decoding",
     "tracks": [
-      "Main Conference"
+      "LLM 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1680,7 +1667,7 @@
     ],
     "title": "P3-LLM: An Integrated NPU-PIM Accelerator for Edge LLM Inference Using Hybrid Numerical Formats",
     "tracks": [
-      "Main Conference"
+      "LLM 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1719,7 +1706,7 @@
     ],
     "title": "SHyLA: 3D-Stacked NVM-DRAM Hybrid LLM-Inference Architecture Exploiting Data and Memory Heterogeneity",
     "tracks": [
-      "Main Conference"
+      "LLM 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1780,13 +1767,11 @@
     ],
     "title": "SMOOTH: Hardware-Assisted Fine-Grained On-Chip Memory Management for Efficient On-Device LLM Inference",
     "tracks": [
-      "Main Conference"
+      "LLM 2"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19329726",
-      "https://iscaconf.org/isca2026/program/",
-      "https://github.com/Seu1ki/SMOOTH/tree/v1.0.0",
-      "https://openalex.org/W7143347477"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -1828,7 +1813,7 @@
     ],
     "title": "A Silicon-Proven Unified Low-Latency CXL Controller and Port-Based Routing Switch for Memory-Centric Fabrics",
     "tracks": [
-      "Main Conference"
+      "Industry Track 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1866,7 +1851,7 @@
     ],
     "title": "From Lab to Fleet: Building and Deploying a Practical Rowhammer Defense in Cloud SoCs",
     "tracks": [
-      "Main Conference"
+      "Industry Track 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -1920,7 +1905,7 @@
     ],
     "title": "KernelEvolve: Scaling Agentic Kernel Coding for Heterogeneous AI Accelerators at Meta",
     "tracks": [
-      "Main Conference"
+      "Industry Track 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2005,7 +1990,6 @@
     "dates": [
       "Monday, June 29, 2026 16:30 – 16:50"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -2044,13 +2028,10 @@
     ],
     "title": "SPEC CPU: The Next Generation",
     "tracks": [
-      "Main Conference"
+      "Industry Track 1"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.01575",
-      "https://openalex.org/W7160457324"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -2091,7 +2072,7 @@
     ],
     "title": "Vistara: Making CXL Real—Full Path from ASIC Design and OS Support to Hyperscale Deployment",
     "tracks": [
-      "Main Conference"
+      "Industry Track 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2130,7 +2111,7 @@
     ],
     "title": "Accelerator Polymorphism: Transcending Domain-Specific Architectures with Robotics",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2171,7 +2152,7 @@
     ],
     "title": "GRAINS: Enabling High-Performance and Low-Cost Graph-Based Genome Analysis via Storage-Aware Algorithm-Architecture Co-Design",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2209,7 +2190,7 @@
     ],
     "title": "Graph.hls: A Compiler Framework for Composable Graph Accelerator Design",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2242,7 +2223,7 @@
     ],
     "title": "Lembas: An Appliance for Scalable Genome Alignment",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2319,12 +2300,11 @@
     ],
     "title": "LoRA: Towards Improved Applicability of Reconfigurable Architecture for Versatile Nonlinear Functions",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 1"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19447154",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151229045"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -2355,7 +2335,7 @@
     ],
     "title": "A Streaming Architecture for Quantum Error Syndrome Compression at 4 Kelvin",
     "tracks": [
-      "Main Conference"
+      "Quantum 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2396,7 +2376,7 @@
     ],
     "title": "Coset Ensemble Decoder for Quantum Error Correction with Algorithm-Hardware Co-Design",
     "tracks": [
-      "Main Conference"
+      "Quantum 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2438,7 +2418,7 @@
     ],
     "title": "Kernpiler: Compiler Optimization for Quantum Hamiltonian Simulation with Partial Trotterization",
     "tracks": [
-      "Main Conference"
+      "Quantum 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2505,12 +2485,11 @@
     ],
     "title": "Transpiler-Architecture Co-Design to Curb Clifford Costs in Fault-Tolerant Quantum Computing",
     "tracks": [
-      "Main Conference"
+      "Quantum 1"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19449157",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151411140"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -2532,7 +2511,6 @@
     "dates": [
       "Monday, June 29, 2026 16:30 – 16:50"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -2571,13 +2549,10 @@
     ],
     "title": "Triage: An Adaptive Parallel Window Decoding Scheduler for Real-time Fault-Tolerant Quantum Computation",
     "tracks": [
-      "Main Conference"
+      "Quantum 1"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.04459",
-      "https://openalex.org/W7160670768"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -2617,7 +2592,6 @@
     "dates": [
       "Tuesday, June 30, 2026 10:20 – 10:40"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -2654,13 +2628,10 @@
     ],
     "title": "Accelerating MoE with Dynamic In-Switch Computing on Multi-GPUs",
     "tracks": [
-      "Main Conference"
+      "LLM 3"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.05607",
-      "https://openalex.org/W7160727205"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -2688,7 +2659,7 @@
     ],
     "title": "ConServe: Contiguity-Preserving Memory Management for Multi-Turn LLM Serving",
     "tracks": [
-      "Main Conference"
+      "LLM 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2729,7 +2700,7 @@
     ],
     "title": "DIAMoND: Dynamic Inference for Adaptive Edge MoE with Heterogeneous In-NAND and Near-DRAM Compute Architecture",
     "tracks": [
-      "Main Conference"
+      "LLM 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2764,7 +2735,7 @@
     ],
     "title": "DynoPipe: Heterogeneous Edge-Cloud LLM Serving with Dynamically Orchestrated Pipeline Boundaries",
     "tracks": [
-      "Main Conference"
+      "LLM 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2828,12 +2799,11 @@
     ],
     "title": "Mapping and Communication Optimizations with Fault Tolerance for Wafer-Scale LLM Inference",
     "tracks": [
-      "Main Conference"
+      "LLM 3"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19686855",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7155041109"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -2865,7 +2835,7 @@
     ],
     "title": "SingularBit: Exploiting Synergy of Singular Value Decomposition and Low-Bit Quantization for Weight and KV Compression in LLM Inference",
     "tracks": [
-      "Main Conference"
+      "LLM 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2908,7 +2878,7 @@
     ],
     "title": "BoostX™-NTI: Fast, Scalable and Flexible Storage Architecture with NVMe/TCP Initiator Acceleration",
     "tracks": [
-      "Main Conference"
+      "Industry Track 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -2999,7 +2969,6 @@
     "dates": [
       "Tuesday, June 30, 2026 11:00 – 11:20"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -3038,13 +3007,10 @@
     ],
     "title": "M100: An Orchestrated Dataflow Architecture Powering General AI Computing",
     "tracks": [
-      "Main Conference"
+      "Industry Track 2"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2604.17862",
-      "https://openalex.org/W7155247058"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3072,7 +3038,7 @@
     ],
     "title": "MTIA-3: Meta’s First Training Chip Featuring Built-in NICs and Collective Offloading Engines",
     "tracks": [
-      "Main Conference"
+      "Industry Track 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3119,7 +3085,7 @@
     ],
     "title": "Optimized Memory Tagging on AmpereOne® Processors",
     "tracks": [
-      "Main Conference"
+      "Industry Track 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3163,7 +3129,7 @@
     ],
     "title": "Prometheus: Toward Resilient Datacenters through Optimized Cooling Infrastructure",
     "tracks": [
-      "Main Conference"
+      "Industry Track 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3228,12 +3194,11 @@
     ],
     "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles",
     "tracks": [
-      "Main Conference"
+      "Industry Track 2"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2605.19775",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7161776522"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3268,7 +3233,7 @@
     ],
     "title": "AutoFHE: An Automatic Hardware Generation Framework for Domain-Specific FHE Accelerator",
     "tracks": [
-      "Main Conference"
+      "Crypto and Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3303,7 +3268,7 @@
     ],
     "title": "DarkStream: Exploiting Internal Throughput Contention in Data Streaming Accelerator for Timing Attacks",
     "tracks": [
-      "Main Conference"
+      "Crypto and Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3339,7 +3304,7 @@
     ],
     "title": "Intermittence-aware Speculative Page Coloring for Secure NVM",
     "tracks": [
-      "Main Conference"
+      "Crypto and Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3372,7 +3337,7 @@
     ],
     "title": "IroKnight: Ownership-Preserving Neural Acceleration for Inference Serving",
     "tracks": [
-      "Main Conference"
+      "Crypto and Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3403,7 +3368,6 @@
     "dates": [
       "Tuesday, June 30, 2026 11:40 – 12:00"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -3440,13 +3404,10 @@
     ],
     "title": "LIPPEN : A Lightweight In-Place Pointer Encryption Architecture for Pointer Integrity",
     "tracks": [
-      "Main Conference"
+      "Crypto and Security"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.03974",
-      "https://openalex.org/W7160565390"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3475,7 +3436,7 @@
     ],
     "title": "μRNG: A Framework for Assessing Randomness in Intermittent Computing Devices",
     "tracks": [
-      "Main Conference"
+      "Crypto and Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3548,12 +3509,11 @@
     ],
     "title": "L-PCN: A Point Cloud Accelerator Exploiting Spatial Locality through Octree-based Islandization",
     "tracks": [
-      "Main Conference"
+      "Potpourri"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2604.10716",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7154368111"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3585,7 +3545,7 @@
     ],
     "title": "NS-FPS: Accelerating Farthest Point Sampling via Neighbor Search in Large-Scale Point Clouds",
     "tracks": [
-      "Main Conference"
+      "Potpourri"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3610,7 +3570,6 @@
     "dates": [
       "Tuesday, June 30, 2026 12:00 – 12:20"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -3649,13 +3608,10 @@
     ],
     "title": "RangeGuard: Efficient, Bounded Approximate Error Correction for Reliable DNNs",
     "tracks": [
-      "Main Conference"
+      "Potpourri"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.04563",
-      "https://openalex.org/W7160671014"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3712,12 +3668,11 @@
     ],
     "title": "RoCC: Harnessing Raster Operations Pipeline for Efficient Tensor Collective Communication",
     "tracks": [
-      "Main Conference"
+      "Potpourri"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19489039",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7152390551"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3748,7 +3703,7 @@
     ],
     "title": "STEP: Spatial Footprint Prefetcher with Multi-Point Temporal Triggers",
     "tracks": [
-      "Main Conference"
+      "Potpourri"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3787,7 +3742,7 @@
     ],
     "title": "TDMSim: Enabling High-Density and Energy-Efficient GPU DRAM Caches with 2D-Materials for Data-Intensive Applications",
     "tracks": [
-      "Main Conference"
+      "Potpourri"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -3844,7 +3799,6 @@
     "dates": [
       "Tuesday, June 30, 2026 14:55 – 15:15"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -3884,13 +3838,10 @@
     ],
     "title": "ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs",
     "tracks": [
-      "Main Conference"
+      "LLM 4"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "http://arxiv.org/abs/2604.03298",
-      "https://openalex.org/W7152933824"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -3926,7 +3877,6 @@
     "dates": [
       "Tuesday, June 30, 2026 15:35 – 15:55"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -3967,13 +3917,10 @@
     ],
     "title": "EVA: Accelerating LLM Decoding via an Efficient Vector Quantization Architecture",
     "tracks": [
-      "Main Conference"
+      "LLM 4"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.24144",
-      "https://openalex.org/W7162606334"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4009,7 +3956,7 @@
     ],
     "title": "SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution",
     "tracks": [
-      "Main Conference"
+      "LLM 4"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4052,7 +3999,7 @@
     ],
     "title": "STEP: Adaptive Spatio-Temporal Expert Prefetching for Low-Latency and Memory-Efficient MoE Inference",
     "tracks": [
-      "Main Conference"
+      "LLM 4"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4092,7 +4039,7 @@
     ],
     "title": "Tetris: Efﬁcient Long-context LLM Serving with Chunkwise Dynamic Sequence Parallelism",
     "tracks": [
-      "Main Conference"
+      "LLM 4"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4127,7 +4074,7 @@
     ],
     "title": "AQuant: Repurposing CODEC for VLM Acceleration via Adaptive Quantization",
     "tracks": [
-      "Main Conference"
+      "Deep Learning / Memory Acceleration"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4171,7 +4118,7 @@
     ],
     "title": "Bringing Near Data Processing into the Low-Bit Floating-Point Era",
     "tracks": [
-      "Main Conference"
+      "Deep Learning / Memory Acceleration"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4232,7 +4179,6 @@
     "dates": [
       "Tuesday, June 30, 2026 14:15 – 14:35"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -4270,13 +4216,10 @@
     ],
     "title": "LoKA: Low-precision Kernel Applications for Recommendation Models At Scale",
     "tracks": [
-      "Main Conference"
+      "Deep Learning / Memory Acceleration"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.10886",
-      "https://openalex.org/W7161091136"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4308,7 +4251,6 @@
     "dates": [
       "Tuesday, June 30, 2026 14:55 – 15:15"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -4348,13 +4290,10 @@
     ],
     "title": "NasZip: Software and Hardware Co-design to Accelerate Approximate Nearest Neighbor Search with DIMM-based Near-Data Processing",
     "tracks": [
-      "Main Conference"
+      "Deep Learning / Memory Acceleration"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.21952",
-      "https://openalex.org/W7162218383"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4414,12 +4353,11 @@
     ],
     "title": "Random-Access Hardware Sequence Compression",
     "tracks": [
-      "Main Conference"
+      "Deep Learning / Memory Acceleration"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19449274",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151587823"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4449,7 +4387,7 @@
     ],
     "title": "Coarse-Grained Duplication First, Fine-Grained Deduplication Later: Duplication-Centric Multi-GPU Memory Management",
     "tracks": [
-      "Main Conference"
+      "GPUs and Compilation"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4482,7 +4420,7 @@
     ],
     "title": "Observability-aided GPU Memory Oversubscription",
     "tracks": [
-      "Main Conference"
+      "GPUs and Compilation"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4519,7 +4457,7 @@
     ],
     "title": "Reducing Page Faults via Invalidation-based Mapping Propagation in Multi-GPU Systems",
     "tracks": [
-      "Main Conference"
+      "GPUs and Compilation"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4554,7 +4492,7 @@
     ],
     "title": "æSIP: μArch-aware ASIP-ISA Co-Design via Program Synthesis, Equality Saturation, and External Don't Cares",
     "tracks": [
-      "Main Conference"
+      "GPUs and Compilation"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4614,12 +4552,11 @@
     ],
     "title": "sCROOGe: Circuit-level Design and Optimization Framework for RISC-V Out-of-Order GPUs",
     "tracks": [
-      "Main Conference"
+      "GPUs and Compilation"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19453034",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151268301"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4690,12 +4627,11 @@
     ],
     "title": "ColumnKeeper: Efficient Solutions for Mitigating ColumnDisturb in DRAM-based Systems",
     "tracks": [
-      "Main Conference"
+      "Rowhammer and Security"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19446518",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151432445"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4729,7 +4665,7 @@
     ],
     "title": "DejaVu: Why You Should Write to Your DRAM Rows Twice, Carefully",
     "tracks": [
-      "Main Conference"
+      "Rowhammer and Security"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -4793,12 +4729,11 @@
     ],
     "title": "Loaded Dice: Solving the Non-Selection Problem for Scalable Probabilistic RowHammer Defense",
     "tracks": [
-      "Main Conference"
+      "Rowhammer and Security"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2605.17358",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7161712021"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4859,12 +4794,11 @@
     ],
     "title": "PRowhammer: Propagating Bit-flips from CPU to GPU",
     "tracks": [
-      "Main Conference"
+      "Rowhammer and Security"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19326669",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7148527144"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4890,7 +4824,6 @@
     "dates": [
       "Tuesday, June 30, 2026 14:35 – 14:55"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -4929,13 +4862,10 @@
     ],
     "title": "PVAC: A RowHammer Mitigation Architecture Exploiting Per-victim-row Counting",
     "tracks": [
-      "Main Conference"
+      "Rowhammer and Security"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2604.20576",
-      "https://openalex.org/W7155574563"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -4966,7 +4896,7 @@
     ],
     "title": "ConBin: A Performance-Convergence Framework for Wafer-Scale Chip Binning",
     "tracks": [
-      "Main Conference"
+      "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5026,12 +4956,11 @@
     ],
     "title": "DICE : Detailed Inter-Chiplet End-to-End PHY Modeling for Accurate Chiplet Simulation",
     "tracks": [
-      "Main Conference"
+      "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19428664",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7150741753"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -5063,7 +4992,7 @@
     ],
     "title": "DS-ISA: Instruction Set Architecture for Dynamical System Units",
     "tracks": [
-      "Main Conference"
+      "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5101,7 +5030,7 @@
     ],
     "title": "Omelet: A Packaging-Aware Hierarchical Interconnect Simulator for 2.5D/3D Chiplet Architectures",
     "tracks": [
-      "Main Conference"
+      "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5136,7 +5065,7 @@
     ],
     "title": "PhaseWeave: Phase-Aware Execution on Heterogeneous Chiplet Architectures for Datacenters",
     "tracks": [
-      "Main Conference"
+      "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5175,7 +5104,7 @@
     ],
     "title": "WaferBRAIN: Whole-Brain Scale Neuromorphic Architecture Based on Wafer-Scale Integration",
     "tracks": [
-      "Main Conference"
+      "Emerging Technologies: Chiplet, Wafer-Scale, etc."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5209,7 +5138,7 @@
     ],
     "title": "BULLET TIME: Time Dilation for High-Fidelity Tracing",
     "tracks": [
-      "Main Conference"
+      "Performance Modeling / Datacenter"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5242,7 +5171,7 @@
     ],
     "title": "Lotus: A Task Dataflow Architecture for Cycle-Level Simulation",
     "tracks": [
-      "Main Conference"
+      "Performance Modeling / Datacenter"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5284,7 +5213,7 @@
     ],
     "title": "NeRArch-Sim: A Unified Simulator for Benchmarking and DSE of Neural Rendering Accelerators",
     "tracks": [
-      "Main Conference"
+      "Performance Modeling / Datacenter"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5362,12 +5291,11 @@
     ],
     "title": "PIPEWEAVE : Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
     "tracks": [
-      "Main Conference"
+      "Performance Modeling / Datacenter"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2601.14910",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7125379295"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -5401,7 +5329,7 @@
     ],
     "title": "R2D2: Robotized Reconfigurable Network for Disaggregated Datacenters",
     "tracks": [
-      "Main Conference"
+      "Performance Modeling / Datacenter"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5461,12 +5389,11 @@
     ],
     "title": "SSBench: Automated Characterization of Memory Dependence Predictors on Modern CPUs",
     "tracks": [
-      "Main Conference"
+      "Performance Modeling / Datacenter"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19447257",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151254713"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -5499,7 +5426,7 @@
     ],
     "title": "DESSCam: An Event-Driven Architecture with In-Sensor Epitopological Sparse Sampling to Break the Latency-Power Tradeoff in Eye Tracking",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5532,7 +5459,7 @@
     ],
     "title": "ECHO: Efficient Head-Orientation-Guided Real-Time Sound Spatialization for Virtual Reality",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5566,7 +5493,7 @@
     ],
     "title": "Enabling Continuous, In-Field Introspection: The Programmable IPU Architecture",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5605,7 +5532,7 @@
     ],
     "title": "ParetoES: Hardware-Accelerated Sparse Embedding Similarity via Pareto-Optimal Pruning",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5641,7 +5568,7 @@
     ],
     "title": "SLICE: A Selective Local Inference Framework with Codec Exploitation for Accelerating Video Super-Resolution",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5675,7 +5602,7 @@
     ],
     "title": "SegFold: Accelerating Sparse GEMM with a Fine-Grained Dynamic Dataflow",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5711,7 +5638,7 @@
     ],
     "title": "FEnc2: Unifying Data Packing for Efficient Private Inference via Convolution and Architecture-Aware Fragment Encoding",
     "tracks": [
-      "Main Conference"
+      "FHE"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5745,7 +5672,7 @@
     ],
     "title": "FlashTFHE: A Scalable Architecture for Efficient Multi-bit Fully Homomorphic Encryption",
     "tracks": [
-      "Main Conference"
+      "FHE"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5784,7 +5711,6 @@
     "dates": [
       "Wednesday, July 1, 2026 11:00 – 11:20"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -5824,13 +5750,10 @@
     ],
     "title": "HE^2: A Communication-Light Heterogeneous Architecture for Efficient Fully Homomorphic Encryption",
     "tracks": [
-      "Main Conference"
+      "FHE"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.31004",
-      "https://openalex.org/W7163287178"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -5873,7 +5796,7 @@
     ],
     "title": "HyperDrive: Hierarchical Exploitation of Memory Efficiency for GPU-Based FHE Acceleration",
     "tracks": [
-      "Main Conference"
+      "FHE"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5912,7 +5835,7 @@
     ],
     "title": "MNEMOS: A GPU-based TFHE Acceleration Framework with Memory Access Optimization",
     "tracks": [
-      "Main Conference"
+      "FHE"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5947,7 +5870,7 @@
     ],
     "title": "Unlocking Pipeline Parallelism for Bootstrapping: A Pipelined Multi-Chiplet TFHE Accelerator",
     "tracks": [
-      "Main Conference"
+      "FHE"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -5983,7 +5906,7 @@
     ],
     "title": "GauTracer: Extending Ray Tracing Accelerator for Gaussian-based Scene Representation",
     "tracks": [
-      "Main Conference"
+      "Rendering"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6022,7 +5945,7 @@
     ],
     "title": "Optimizing 3D Gaussian Splatting with Axis-Shared Rasterization and Order-independent Transmittance",
     "tracks": [
-      "Main Conference"
+      "Rendering"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6045,7 +5968,6 @@
     "dates": [
       "Wednesday, July 1, 2026 12:35 – 12:55"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -6085,13 +6007,10 @@
     ],
     "title": "TTP: A Hardware-Efficient Design for Precise Prefetching in Ray Tracing",
     "tracks": [
-      "Main Conference"
+      "Rendering"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.16253",
-      "https://openalex.org/W7161655052"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6124,7 +6043,7 @@
     ],
     "title": "Bumper: Hinting Instruction Usefulness for Robust Unified Caches",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6161,7 +6080,6 @@
     "dates": [
       "Wednesday, July 1, 2026 12:35 – 12:55"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -6198,13 +6116,10 @@
     ],
     "title": "ICP: Exploiting Instruction Correlation for Prefetching Irregular Memory Accesses",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 1"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.15645",
-      "https://openalex.org/W7161655541"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6241,7 +6156,7 @@
     ],
     "title": "Revelator: Rapid Data Fetching via OS-Guided Hash-based Speculative Address Translation",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 1"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6268,7 +6183,6 @@
     "dates": [
       "Wednesday, July 1, 2026 12:15 – 12:35"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -6306,13 +6220,10 @@
     ],
     "title": "Distilling Magic States in the Bicycle Architecture",
     "tracks": [
-      "Main Conference"
+      "Quantum 2"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2602.20546",
-      "https://openalex.org/W7131475583"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6347,7 +6258,7 @@
     ],
     "title": "Leveraging Phase Polynomials for Quantum Circuit Optimization",
     "tracks": [
-      "Main Conference"
+      "Quantum 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6378,7 +6289,6 @@
     "dates": [
       "Wednesday, July 1, 2026 12:35 – 12:55"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -6417,13 +6327,10 @@
     ],
     "title": "O3LS: Optimizing Lattice Surgery via Automatic Layout Searching and Loose Scheduling",
     "tracks": [
-      "Main Conference"
+      "Quantum 2"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2604.15099",
-      "https://openalex.org/W7154864918"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6490,12 +6397,11 @@
     ],
     "title": "Breaking Barriers in Atomic Scaling: A Hardware–Software-Collaborated Framework to Deconstruct RDMA Atomic",
     "tracks": [
-      "Main Conference"
+      "HPC"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19347430",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7150801665"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6533,7 +6439,7 @@
     ],
     "title": "Harmonia: A Unified Hierarchical Scheduling Framework for Sparse Matrix Multiplication",
     "tracks": [
-      "Main Conference"
+      "HPC"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6569,7 +6475,7 @@
     ],
     "title": "PipeComm: Maximizing Link Utilization through Pipeline-Aware Collective Communication Synthesis",
     "tracks": [
-      "Main Conference"
+      "HPC"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6627,7 +6533,7 @@
     ],
     "title": "Democratizing and Accelerating Hardware Verification with Software-Native Optimization",
     "tracks": [
-      "Main Conference"
+      "Verification and Robustness"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6689,12 +6595,11 @@
     ],
     "title": "HartBreaker: Deterministic Fuzzing of Multi-Hart RISC-V CPUs with Non-Deterministic Programs",
     "tracks": [
-      "Main Conference"
+      "Verification and Robustness"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19417381",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7149821477"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6725,7 +6630,7 @@
     ],
     "title": "QED: Scalable Consistency Verification of Memory Instruction Reordering in Hardware",
     "tracks": [
-      "Main Conference"
+      "Verification and Robustness"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6748,7 +6653,6 @@
     "dates": [
       "Wednesday, July 1, 2026 15:30 – 15:50"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -6789,13 +6693,10 @@
     ],
     "title": "täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies",
     "tracks": [
-      "Main Conference"
+      "Verification and Robustness"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.04172",
-      "https://openalex.org/W7160670509"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6819,7 +6720,6 @@
     "dates": [
       "Wednesday, July 1, 2026 14:50 – 15:10"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -6858,13 +6758,10 @@
     ],
     "title": "Enhancing Instruction Prefetching via Cache and TLB Management",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 2"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.12433",
-      "https://openalex.org/W7161204258"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -6897,7 +6794,7 @@
     ],
     "title": "From Memorization to Generalization: A Practical Neural Network Prefetching Framework",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6930,7 +6827,7 @@
     ],
     "title": "LIBRA: A High-Accuracy, Cost-Aware, and Coordinated Multi-GPU Page Prefetcher",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -6966,7 +6863,7 @@
     ],
     "title": "R-Max: Extending Bélády's MIN with Prefetching to Bound Realistic Cache Performance",
     "tracks": [
-      "Main Conference"
+      "Prefetching and Caches 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7003,7 +6900,7 @@
     ],
     "title": "Photonic Quantum Computing on Spin Memory Architecture with Tree-Encoded Fusion",
     "tracks": [
-      "Main Conference"
+      "Quantum 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7045,7 +6942,7 @@
     ],
     "title": "SATIC: An Optimizing Ising Compiler for SAT(isfiability)",
     "tracks": [
-      "Main Conference"
+      "Quantum 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7080,7 +6977,7 @@
     ],
     "title": "TUSQ: Tracking, Uncomputation, and Sampling for Noisy Quantum Simulation",
     "tracks": [
-      "Main Conference"
+      "Quantum 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7119,7 +7016,7 @@
     ],
     "title": "Unifying Qubit Routing Across Diverse Quantum ISAs via Canonical Representation",
     "tracks": [
-      "Main Conference"
+      "Quantum 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7152,7 +7049,7 @@
     ],
     "title": "Lit Silicon: A Case Where Thermal Imbalance Couples Concurrent Execution in Multiple GPUs",
     "tracks": [
-      "Main Conference"
+      "Sustainability and Energy Efficiency"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7188,7 +7085,7 @@
     ],
     "title": "PowerGrad: Hierarchical Power Management for Power-Limited ML Inference Clusters",
     "tracks": [
-      "Main Conference"
+      "Sustainability and Energy Efficiency"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7225,7 +7122,7 @@
     ],
     "title": "PowerWeave: Unlocking Energy-Efficient ML on GPUs with OS-Level Spatial Power Management",
     "tracks": [
-      "Main Conference"
+      "Sustainability and Energy Efficiency"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7266,7 +7163,7 @@
     ],
     "title": "Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads",
     "tracks": [
-      "Main Conference"
+      "Sustainability and Energy Efficiency"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7304,7 +7201,7 @@
     ],
     "title": "DisDP: Disaggregating Compute, Network, and Storage for Model-Sharded Data-Parallel Training",
     "tracks": [
-      "Main Conference"
+      "LLM 5"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7389,12 +7286,11 @@
     ],
     "title": "MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems",
     "tracks": [
-      "Main Conference"
+      "LLM 5"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2605.05888",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7160660520"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -7427,7 +7323,7 @@
     ],
     "title": "Scalable Synthesis of Distributed LLM Workloads Through Symbolic Tensor Graphs",
     "tracks": [
-      "Main Conference"
+      "LLM 5"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7470,7 +7366,7 @@
     ],
     "title": "Symbiotic MLLM Serving: Dynamically Balancing Parallelism Across GPUs and Resources Within GPUs",
     "tracks": [
-      "Main Conference"
+      "LLM 5"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7516,7 +7412,7 @@
     ],
     "title": "Dynamic Scheduling for AI Accelerators via TISA",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7555,7 +7451,7 @@
     ],
     "title": "ELSA: An ELastic SNN Inference Architecture for Efﬁcient Neuromorphic Computing",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7594,7 +7490,7 @@
     ],
     "title": "MXFFP: Microscaling Flexible Floating Point Format for Large-Scale AI Model Acceleration",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 2"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7652,12 +7548,11 @@
     ],
     "title": "UniCore: A Bit-Width Scalable GEMM Unit for Unified LLM Inference",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 2"
     ],
     "urls": [
       "https://doi.org/10.5281/zenodo.19449314",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7151332840"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -7681,7 +7576,6 @@
     "dates": [
       "Wednesday, July 1, 2026 17:20 – 17:40"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -7721,13 +7615,10 @@
     ],
     "title": "XtraMAC: An Efficient MAC Architecture for Mixed-Precision LLM Inference on FPGA",
     "tracks": [
-      "Main Conference"
+      "ML Accelerators 2"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.06052",
-      "https://openalex.org/W7160726962"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -7758,7 +7649,7 @@
     ],
     "title": "AXLE: Coordinated Offloading with Asynchronous Back-Streaming in Computational Memory Systems",
     "tracks": [
-      "Main Conference"
+      "PIM/PNM, cont."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7796,7 +7687,7 @@
     ],
     "title": "Bridging Efficiency and Scalability in LLM System via 3D Hybrid PIM with 2D In-Transit Computation",
     "tracks": [
-      "Main Conference"
+      "PIM/PNM, cont."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7833,7 +7724,7 @@
     ],
     "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures",
     "tracks": [
-      "Main Conference"
+      "PIM/PNM, cont."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7875,7 +7766,7 @@
     ],
     "title": "Early Silicon of Raptor: The First 3D-DRAM Accelerator for Generative Inference",
     "tracks": [
-      "Main Conference"
+      "PIM/PNM, cont."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7914,7 +7805,7 @@
     ],
     "title": "Optimizing Spatial Data Structure with Near-Cache Acceleration by Exploiting Physical Locality",
     "tracks": [
-      "Main Conference"
+      "PIM/PNM, cont."
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -7939,7 +7830,6 @@
     "dates": [
       "Wednesday, July 1, 2026 16:20 – 16:40"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -7979,13 +7869,10 @@
     ],
     "title": "DICE: Enabling Efficient General-Purpose SIMT Execution with Statically Scheduled Coarse-Grained Reconfigurable Arrays",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 3"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://arxiv.org/abs/2605.05496",
-      "https://openalex.org/W7160726999"
+      "https://iscaconf.org/isca2026/program/"
     ]
   },
   {
@@ -8017,7 +7904,7 @@
     ],
     "title": "DiTPA: A DiT-based Action Planner Accelerator Exploiting Action–Denoising–Multimodality Redundancy for Embodied Artificial Intelligence",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -8050,7 +7937,7 @@
     ],
     "title": "GenZA: A General and Efficient Accelerator for Diverse Zero-Knowledge Proof Protocols",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -8084,7 +7971,7 @@
     ],
     "title": "HiT: A Unified Sparsity-Adaptive Architecture for High-Throughput Matrix Multiplication",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 3"
     ],
     "urls": [
       "https://iscaconf.org/isca2026/program/"
@@ -8113,7 +8000,6 @@
     "dates": [
       "Wednesday, July 1, 2026 16:40 – 17:00"
     ],
-    "doi": "None",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -8150,12 +8036,10 @@
     ],
     "title": "TAGT: An Efficient Graph Transformer Accelerator with Topology-aware Sparsification and Merging",
     "tracks": [
-      "Main Conference"
+      "Domain Specific Accelerators 3"
     ],
     "urls": [
-      "https://doi.org/None",
-      "https://iscaconf.org/isca2026/program/",
-      "https://openalex.org/W7161102336"
+      "https://iscaconf.org/isca2026/program/"
     ]
   }
 ]

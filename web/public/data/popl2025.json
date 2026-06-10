@@ -72,7 +72,8 @@
     ],
     "title": "All Your Base Are Belong to Us: Sort Polymorphism for Proof Assistants",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704912",
@@ -146,7 +147,8 @@
     ],
     "title": "A quantitative probabilistic relational Hoare logic",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704876",
@@ -211,7 +213,8 @@
     ],
     "title": "Program logics à la carte",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704847",
@@ -280,7 +283,8 @@
     ],
     "title": "A Taxonomy of Hoare-Like Logics",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704896",
@@ -351,7 +355,8 @@
     ],
     "title": "Translation of Temporal Logic for Efficient Infinite-State Reactive Synthesis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.48550/arXiv.2411.07078",
@@ -418,7 +423,8 @@
     ],
     "title": "Compositional imprecise probability: a solution from graded monads and Markov categories",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704890",
@@ -495,7 +501,8 @@
     ],
     "title": "Automated Program Refinement: Guide and Verify Code Large Language Model with Refinement Calculus",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704905",
@@ -561,7 +568,8 @@
     ],
     "title": "Avoiding signature avoidance in ML modules with zippers",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704902",
@@ -637,7 +645,8 @@
     ],
     "title": "Symbolic Automata: omega-Regularity Modulo Theories",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704838",
@@ -710,7 +719,8 @@
     ],
     "title": "MimIR: An Extensible and Type-Safe Intermediate Representation for the DSL Age",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704840",
@@ -786,7 +796,8 @@
     ],
     "title": "Preservation of speculative constant-time by compilation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704880",
@@ -855,7 +866,8 @@
     ],
     "title": "The Duality of λ-Abstraction",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704848",
@@ -931,7 +943,8 @@
     ],
     "title": "Bluebell: An Alliance of Relational Lifting and Independence For Probabilistic Reasoning",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704894",
@@ -1003,7 +1016,8 @@
     ],
     "title": "Program Analysis via Multiple Context Free Language Reachability",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704854",
@@ -1069,7 +1083,8 @@
     ],
     "title": "Top-Down or Bottom-Up? Complexity Analyses of Synchronous Multiparty Session Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704872",
@@ -1134,7 +1149,8 @@
     ],
     "title": "QuickSub: Efficient Iso-Recursive Subtyping",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704869",
@@ -1209,7 +1225,8 @@
     ],
     "title": "Denotational Semantics of Gradual Typing using Synthetic Guarded Domain Theory",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704863",
@@ -1218,6 +1235,64 @@
       "https://openalex.org/W4406221968"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "\\emph{Runtime predictive analysis} is a technique for testing concurrent software where one observes the execution $\\sigma$ of the program $P$ and determines if $\\sigma$, \\emph{or any execution equivalent to $\\sigma$} violates the specification $\\varphi$. Given an well-defined notion of equivalence, such an analysis would have larger coverage than the vanilla analysis that simply checks for membership of $\\sigma$ in $\\varphi$. We focus on \\emph{trace equivalence}, proposed by Antoni Mazurkiewicz (Mazurkiewicz, 1995), which deems two executions (or strings) $\\sigma_1, \\sigma_2$ equivalent if one can be obtained from another by repeated swapping of neighbouring independent actions, denoted $\\sigma_1 \\equiv_{\\mathcal{M}} \\sigma_2$. The corresponding closure of a language $L$ is denoted $[L] {\\mathcal{M}} = { \\rho ,|, \\exists \\sigma \\in L, \\sigma \\equiv {\\mathcal{M}} \\rho }$. In general, it is not possible to develop linear or sublinear deterministic algorithms for the membership problem of $[L]_{\\mathcal{M}}$ when $L$ is a regular language (Ang & Mathur, 2024). In this work, we hope to use \\emph{property testing} (Newman, 2010) to develop fast randomised algorithms for this problem. A property tester is an algorithm that samples a few bits of the input (a string $w$ in our case) and attempts to check its membership in a pre-defined set (regular language $L$ in our setting). Alon et al. (2001) showed that for the vanilla membership problem $w \\in L$, there is a constant-query 1-sided property tester. Property testing has indeed been previously used in the context of PL problems such as data race detection (Thokair et al., 2023) where the closure was known to be a regular language. Sampling for testing concurrent executions has been explored previously, but the algorithms proposed were not systematic, and do not generalise beyond the specific setting considered (Kallas et al., 2020). In our work, we want to systematically investigate the algorithmic landscape for sampling algorithms for concurrent executions through the lens of property testing and design property testers against trace closures of arbitrary regular languages. Our main result involves a subclass of regular languages, which we call \\emph{atomic-star} languages. We show a two-sided $(c, \\epsilon)$ tester for the trace closure of atomic-star languages. We also demonstrate a two-sided $(c, \\epsilon)$-tester for the trace closure of any regular language when every pair of letters in the alphabet is independent. We use a combination of applying statistical methods on the numbers of each symbol, and regular language testing to obtain the above results. Finally, we establish some lower bounds for testing general trace regular languages.",
+    "authorInstitutions": "Jed Koh Jin Keat (National University of Singapore)",
+    "authors": [
+      "Jed Koh Jin Keat"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "235d529f-73d8-48f6-b092-9e5f4976037b",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Property Testing Trace Languages",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/18/Property-Testing-Trace-Languages",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "Representation transformation is a process that transforms the representation of data values while preserving their original meaning. This category of transformations includes both optimization techniques and compilation strategies for high-level features. In this ongoing work, we perform a formal study of representation transformations, using a case study of bit vector types.",
+    "authorInstitutions": "Katherine Philip (Portland State University)",
+    "authors": [
+      "Katherine Philip"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "2456455e-f193-4646-a487-13b82db52d00",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Formalizing Representation Transformations: A Case Study of Bit Vector Types",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/4/Formalizing-Representation-Transformations-A-Case-Study-of-Bit-Vector-Types",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Mainstream compilers implement different countermeasures to prevent specific classes of speculative execution attacks. Unfortunately, these countermeasures either lack formal guarantees or come with proofs restricted to speculative semantics capturing only a subset of the speculation mechanisms supported by modern CPUs, thereby limiting their practical applicability. Ideally, these security proofs should target a speculative semantics capturing the effects of all speculation mechanisms implemented in modern CPUs. However, this is impractical and requires new secure compilation proofs to support additional speculation mechanisms. In this paper, we address this problem by proposing a novel secure compilation framework that allows lifting the security guarantees provided by Spectre countermeasures from weaker speculative semantics (ignoring some speculation mechanisms) to stronger ones (accounting for the omitted mechanisms) without requiring new secure compilation proofs. Using our lifting framework, we performed the most comprehensive security analysis of Spectre countermeasures implemented in mainstream compilers to date. Our analysis spans 9 different countermeasures against 5 classes of Spectre attacks, which we proved secure against a speculative semantics accounting for five different speculation mechanisms. Our analysis highlights that fence-based and retpoline-based countermeasures can be securely lifted to the strongest speculative semantics under study. In contrast, countermeasures based on speculative load hardening cannot be securely lifted to semantics supporting indirect jump speculation.",
@@ -1279,7 +1354,8 @@
     ],
     "title": "Do You Even Lift? Strengthening Compiler Security Guarantees Against Spectre Attacks",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704867",
@@ -1289,6 +1365,35 @@
       "https://openalex.org/W4406221861"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Mutation is a fundamental aspect in programming allowing developers to implement performant applications and efficient algorithms. However, in reference-based languages, mutation often leads to unintended side effects, making programs harder to reason about and maintain. \\textit{Mutable Value Semantics} emerges as a promising alternative by allowing values to be mutated while ensuring that each mutation is local to a specific instance. We present the current status of our approach to retrofit Mutable Value Semantics into a reference-based programming language. We propose a protocol that adapts the type system while maintaining backward compatibility. The design will preserve the reference-based aspect of the language by defaulting to it in case of ambiguity.",
+    "authorInstitutions": "Hamza Remmal (EPFL, LAMP)",
+    "authors": [
+      "Hamza Remmal"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "2d5dfdbe-e926-4161-96b3-02ab4b5674bc",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Value semantics in reference-based languages",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/7/Value-semantics-in-reference-based-languages",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Levy’s call-by-push-value is a comprehensive programming paradigm that combines elements from functional and imperative programming, supports computational effects and subsumes both call-by-value and call-byname evaluation strategies. In the present work, we develop modular methods to reason about program equivalence in call-by-push-value, and in fine-grain call-by-value, which is a popular lightweight call-by-value sublanguage of the former. Our approach is based on the fundamental observation that presheaf categories of sorted sets are suitable universes to model call-by-(push)-value languages, and that natural, coalgebraic notions of program equivalence such as applicative similarity and logical relations can be developed within. Starting from this observation, we formalize fine-grain call-by-value and call-by-push-value in the higher-order abstract GSOS framework, reduce their key congruence properties to simple syntactic conditions by leveraging existing theory and argue that introducing changes to either language incurs minimal proof overhead.",
@@ -1345,7 +1450,8 @@
     ],
     "title": "Abstract Operational Methods for Call-by-Push-Value",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704871",
@@ -1420,7 +1526,8 @@
     ],
     "title": "Automating equational proofs in Dirac notation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704878",
@@ -1499,7 +1606,8 @@
     ],
     "title": "Inference Plans for Hybrid Particle Filtering",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704846",
@@ -1508,6 +1616,67 @@
       "https://openalex.org/W4405425677"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Erlang, a dynamically typed programming language often used in distributed systems, has \\textit{success types}. Success types aim to have a dual assertion to the one made in most type systems: that if a program is ill-typed, then the program will not evaluate. Dialyzer, a static analysis tool widely used in practice, implements these types, but a theoretical basis has not yet been created for them. This project focuses on rigorously specifying the type system and creating a proof of correctness for it. We first build precise definitions of ill-typed and non-evaluating terms on top of existing definitions. Due to “non-evaluating” having a different meaning for ill-typed abstractions, doing so requires a doubly-step-indexed logical relation, the novel contribution of this work. We then use these definitions in a proof by induction to prove reverse type safety.",
+    "authorInstitutions": "Elan Semenova (University of Maryland, College Park); Leonidas Lampropoulos (University of Maryland, College Park)",
+    "authors": [
+      "Elan Semenova",
+      "Leonidas Lampropoulos"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "31f796a6-038b-421f-bf75-62ef583de090",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Formalizing Erlang’s Success Typings",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/15/Formalizing-Erlang-s-Success-Typings",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Myra Dotzel (Carnegie Mellon University); Milijana Surbatovich (University of Maryland); Limin Jia (Carnegie Mellon University)",
+    "authors": [
+      "Myra Dotzel",
+      "Milijana Surbatovich",
+      "Limin Jia"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "3349c3dc-0b09-44a5-baa6-81c473ca6407",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Intermittent Concurrency",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/12/Intermittent-Concurrency",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "The phase folding optimization is a circuit optimization used in many quantum compilers as a fast and effective way of reducing the number of high-cost gates in a quantum circuit. However, existing formulations of the optimization rely on an exact, linear algebraic representation of the circuit, restricting the optimization to being performed on straightline quantum circuits or basic blocks in a larger quantum program. We show that the phase folding optimization can be re-cast as an \\emph{affine relation analysis}, which allows the direct application of classical techniques for affine relations to extend phase folding to quantum \\emph{programs} with arbitrarily complicated classical control flow including nested loops and procedure calls. Through the lens of relational analysis, we show that the optimization can be powered-up by substituting other classical relational domains, particularly ones for \\emph{non-linear} relations which are useful in analyzing circuits involving classical arithmetic. To increase the precision of our analysis and infer non-linear relations from gate sets involving only linear operations — such as Clifford+$T$ — we show that the \\emph{sum-over-paths} technique can be used to extract precise symbolic transition relations for straightline circuits. Our experiments show that our methods are able to generate and use non-trivial loop invariants for quantum program optimization, as well as achieve some optimizations of common circuits which were previously attainable only by hand.",
@@ -1572,7 +1741,8 @@
     ],
     "title": "Linear and non-linear relational analyses for Quantum Program Optimization",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704873",
@@ -1640,7 +1810,8 @@
     ],
     "title": "Progressful Interpreters for Efficient WebAssembly Mechanisation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704858",
@@ -1726,7 +1897,8 @@
     ],
     "title": "Data Race Freedom à la Mode",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704859",
@@ -1809,7 +1981,8 @@
     ],
     "title": "Verifying Quantum Circuits with Level-Synchronized Tree Automata",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704868",
@@ -1882,7 +2055,8 @@
     ],
     "title": "Semantic Logical Relations for Timed Message-Passing Protocols",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704895",
@@ -1891,6 +2065,35 @@
       "https://openalex.org/W4406222551"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Modern software extensively uses APIs for seamless interaction with cloud services, ranging from social networking to financial systems. These interactions rely on networks prone to disruptions, such as timeouts or outages. To mitigate these, developers often implement retries for failed requests. However, improper handling of retries can lead to unintended behaviors, such as duplicate operations, particularly in critical systems. We present APIdemic, a tool designed to verify the idempotency of API client programs, ensuring their robustness against such challenges. By modeling program behavior as state transitions and leveraging static analysis, APIdemic verifies safety and liveness properties, guaranteeing correct and consistent execution even under failures or retries. The tool will be evaluated on real-world examples from developer communities and open-source projects, demonstrating its practical relevance and effectiveness in addressing a common yet complex problem in API-driven systems.",
+    "authorInstitutions": "Bhavik Kamlesh Goplani (University of Kansas)",
+    "authors": [
+      "Bhavik Kamlesh Goplani"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "3e448f45-827a-4bde-9254-2e5e02dec311",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "APIdemic: Verifying Idempotency of REST API Clients",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/17/APIdemic-Verifying-Idempotency-of-REST-API-Clients",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "In this paper, we introduce DeLaM, a dependent layered modal type theory which enables meta-programming in Martin-Löf type theory (MLTT) with recursion principles on open code. DeLaM includes three layers: the layer of static syntax objects of MLTT without any computation; the layer of pure MLTT with the computational behaviors; the meta-programming layer extends MLTT with support for quoting an open MLTT code object and composing and analyzing open code using recursion. We can also execute a code object at the meta-programming layer. The expressive power strictly increases as we move up in a given layer. In particular, while code objects only describe static syntax, we allow computation at the MLTT and meta-programming layer. As a result, DeLaM provides a dependently typed foundation for meta-programming that supports both type-safe code generation and code analysis. We prove the weak normalization of DeLaM and the decidability of convertibility using Kripke logical relations.",
@@ -1947,7 +2150,8 @@
     ],
     "title": "A Dependent Type Theory for Meta-programming with Intensional Analysis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704851",
@@ -2018,7 +2222,8 @@
     ],
     "title": "Guaranteed Bounds on Posterior Distributions of Discrete Probabilistic Programs with Loops",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704874",
@@ -2089,7 +2294,8 @@
     ],
     "title": "Unifying compositional verification and certified compilation with a three-dimensional refinement algebra",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704900",
@@ -2161,7 +2367,8 @@
     ],
     "title": "Axe 'Em: Eliminating Spurious States with Induction Axioms",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704853",
@@ -2233,7 +2440,8 @@
     ],
     "title": "A Primal-Dual Perspective on Program Verification Algorithms",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704904",
@@ -2319,7 +2527,8 @@
     ],
     "title": "TensorRight: Automated Verification of Tensor Graph Rewrites",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704865",
@@ -2384,7 +2593,8 @@
     ],
     "title": "Biparsers: Exact Printing for Data Synchronisation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704910",
@@ -2455,7 +2665,8 @@
     ],
     "title": "Consistency of a Dependent Calculus of Indistinguishability",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704843",
@@ -2528,7 +2739,8 @@
     ],
     "title": "Algebras for Deterministic Computation are Inherently Incomplete",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704861",
@@ -2599,7 +2811,8 @@
     ],
     "title": "On Decidable and Undecidable Extensions of Simply Typed Lambda Calculus",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704875",
@@ -2608,6 +2821,35 @@
       "https://openalex.org/W4406222247"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "In recent years, programming languages have added many syntactic constructs for asynchronous programming. One of the most popular patterns is async/await, which allows programmers to write code using imperative constructs which can be scheduled by an asynchronous runtime. Dataflow programming languages (such as Hydroflow) offer many opportunities to improve performance with compiler optimizations. However, this programming model remains unfamiliar to developers used to imperative constructs. Existing work has explored the problem of translating between imperative code and dataflow. But much of this work has been focused on optimizations within a synchronous task (e.g. the parallelization of memory operations). In this abstract, we present a framework mapping direct-style asynchronous functions to dataflow graphs. As a concrete implementation of this framework, we present a compiler which transforms async Rust functions into Hydroflow dataflows. Our approach allows for optimizations across asynchronous tasks (e.g. batching and vectorization).",
+    "authorInstitutions": "Ryan Alameddine (University of California, Berkeley)",
+    "authors": [
+      "Ryan Alameddine"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "5097e59c-b2a3-4df4-9d59-2a0b4bbcb6ee",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Optimizing Asynchronous Rust with Hydroflow",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/13/Optimizing-Asynchronous-Rust-with-Hydroflow",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Logic programming, as exemplified by datalog, defines the meaning of a program as its unique smallest model: the deductive closure of its inference rules. However, many problems call for an enumeration of models that vary along some set of choices while maintaining structural and logical constraints—there is no single canonical model. The notion of stable models for logic programs with negation has successfully captured programmer intuition about the set of valid solutions for such problems, giving rise to a family of programming languages and associated solvers known as answer set programming. Unfortunately, the definition of a stable model is frustratingly indirect, especially in the presence of rules containing free variables. We propose a new formalism, finite-choice logic programming, that uses choice, not negation, to admit multiple solutions. Finite-choice logic programming contains all the expressive power of the stable model semantics, gives meaning to a new and useful class of programs, and enjoys a least-fixed-point interpretation over a novel domain. We present an algorithm for exploring the solution space and prove it correct with respect to our semantics. Our implementation, the Dusa logic programming language , has performance that compares favorably with state-of-the-art answer set solvers and exhibits more predictable scaling with problem size.",
@@ -2665,7 +2907,8 @@
     ],
     "title": "Finite-Choice Logic Programming",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704849",
@@ -2743,7 +2986,8 @@
     ],
     "title": "Pantograph: A Fluid and Typed Structure Editor",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704864",
@@ -2812,7 +3056,8 @@
     ],
     "title": "SNIP: Speculative Execution and Non-Interference Preservation for Compiler Transformations",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704887",
@@ -2885,7 +3130,8 @@
     ],
     "title": "BiSikkel: A Multimode Logical Framework in Agda",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704844",
@@ -2960,7 +3206,8 @@
     ],
     "title": "VeriRT: An End-To-End Verification Framework for Real-Time Distributed Systems",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704897",
@@ -2969,6 +3216,35 @@
       "https://openalex.org/W4406222219"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "We propose an encoding theory to encode relational Hoare logic ($\\forall\\exists$) into traditional Hoare logic ($\\forall$). We encapsulate the $\\forall\\exists$ pattern in assertions and prove that the validity of the encoded traditional Hoare triples ensures the validity of the original relational triples. Moreover, our encoding theory facilitates a hybrid reasoning approach with both relational and traditional Hoare logic.",
+    "authorInstitutions": "Shushu Wu (Shanghai Jiao Tong University)",
+    "authors": [
+      "Shushu Wu"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "687ea151-85d1-4944-80e3-99cfa01b20ce",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Relational Hoare Logic for Sequential Program Verification",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/8/Relational-Hoare-Logic-for-Sequential-Program-Verification",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "The classical `decision problem’ asks whether a given formula of first-order logic is satisfiable. In this work we consider an extension of this problem to regular first-order \\emph{theories}, i.e. (infinite) regular sets of formulae. Building on the beautiful classification of syntactic classes as decidable or undecidable for the classical decision problem, we show that some classes (the EPR and Gurevich classes) which are decidable in the classical setting are undecidable for regular theories; on the other hand for each we show a subclass which remains decidable in our setting, leaving a complete classification as a challenge for future work. Finally, we observe that our problem generalises prior work on verification of uninterpreted programs, and give a semantic class of existential formulae for which the problem is decidable.",
@@ -3035,7 +3311,8 @@
     ],
     "title": "The Decision Problem for Regular First Order Theories",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704870",
@@ -3070,7 +3347,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -3102,7 +3379,7 @@
       "https://doi.org/10.1145/3704886"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Automata and Temporal Properties",
       "POPL"
@@ -3113,15 +3390,73 @@
     ],
     "title": "Derivative-Guided Symbolic Execution",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704886",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/50/Derivative-Guided-Symbolic-Execution",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
-      "https://openalex.org/W4404403684"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Consistency testing is the problem of determining if an abstract execution of a concurrent program is feasible under a given memory model, i.e. does it have a concrete execution consistent with the memory model, and finds many applications in the testing and verification of concurrent software. Consequently, the complexity of consistency testing has been studied across several parametrizations, memory models, and levels of abstractions. Unfortunately, the consistency testing problem for store-order abstract executions (henceforth “store-order testing”), where the store-order relation is specified, has been understudied. In this work, we initiate the study of store-order testing by exploring its algorithmic and complexity-theoretic landscape under the memory models RC20, RA, SRA, Relaxed, and Relaxed-Acyclic. We show that store-order testing is intractable for (even the RMW-free fragments of) RC20, RA, SRA, and Relaxed-Acyclic. We next identify a practically motivated fragment for which the store-order testing problem becomes tractable. Specifically, the single-writer fragment, i.e. the fragment where every location is written to by exactly one thread, admits an efficient algorithm, running in time $O(nk)$, and in $O(n)$ for specific subfragments. We extend this result by generalizing the single-writer constraint to a weaker one, which can be cleanly formalized as a new memory model we call ‘RC20-Ordered’. We also show that these algorithms are optimal or nearly optimal by establishing conditional super-linear lower bounds that also apply to the respective RMW-free fragments.",
+    "authorInstitutions": "Grace Tan (National University of Singapore)",
+    "authors": [
+      "Grace Tan"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "6afbee16-a6a5-48b0-9b61-08d8da19ffee",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "The Store-Order Consistency Testing Problem for C-like Memory Models",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/14/The-Store-Order-Consistency-Testing-Problem-for-C-like-Memory-Models",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "This abstract discusses ongoing work on M$^3$, a novel system which combines linear types and staged computation, with support for runtime code generation and references. Most interestingly, by enforcing the requirement that all references must themselves be linear, we allow references to store arbitrary values, even quotations of variables. Scope extrusion is forbidden through the linear type system, which causes all open quotations to eventually become meaningful before they are used. In order to support evaluation under lambda terms and substitution within references, we also equip references with a notion of contextuality.",
+    "authorInstitutions": "Maite Kramarz (University of Toronto)",
+    "authors": [
+      "Maite Kramarz"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "6d267736-ea13-4a28-9247-10804cbac6cc",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "M3: A Multi-Stage ML with Mutation",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/11/M3-A-Multi-Stage-ML-with-Mutation",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Modern mainstream programming languages, such as TypeScript, Flow, and Scala, have polymorphic type systems enriched with intersection and union types. These languages implement variants of \\emph{bidirectional higher-rank polymorphic} type inference, which was previously studied mostly in the context of functional programming. However, existing type inference implementations lack solid theoretical foundations when dealing with non-structural subtyping and intersection and union types, which were not studied before. In this paper, we study bidirectional higher-rank polymorphic type inference algorithms with intersection and union types. We introduce both a bidirectional specification and algorithmic versions of the type system. We first study a type inference algorithm that has good theoretical properties: it is sound, complete, and decidable with respect to the corresponding bidirectional specification. This is helpful to identify a class of types that can always be inferred. We also explore algorithmic variants that are sound but not necessarily complete. These variants incorporate practical features, such as handling records, which align with real-world implementations. These variants enable inference for a broader range of types, enhancing the expressiveness of the type systems. Our findings provide insights for improving current implementations and inspire the design of novel type inference algorithms. To ensure rigor, all results are formalized in the Coq proof assistant.",
@@ -3187,7 +3522,8 @@
     ],
     "title": "Bidirectional Higher-Rank Polymorphism with Intersection and Union Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704907",
@@ -3266,7 +3602,8 @@
     ],
     "title": "Tail Modulo Cons, OCaml, and Relational Separation Logic",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704915",
@@ -3338,7 +3675,8 @@
     ],
     "title": "Flo: a Semantic Foundation for Progressive Stream Processing",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704845",
@@ -3403,7 +3741,8 @@
     ],
     "title": "Maximal Simplification of Polyhedral Reductions",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704839",
@@ -3475,7 +3814,8 @@
     ],
     "title": "Fulminate: Testing CN Separation-Logic Specifications in C",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704879",
@@ -3551,7 +3891,8 @@
     ],
     "title": "Relaxed Memory Concurrency Re-executed",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704908",
@@ -3630,7 +3971,8 @@
     ],
     "title": "Modelling Recursion and Probabilistic Choice in Guarded Type Theory",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704884",
@@ -3704,7 +4046,8 @@
     ],
     "title": "RE#: High Performance Derivative-Based Regex Matching with Intersection, Complement and Restricted Lookarounds",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704837",
@@ -3715,21 +4058,40 @@
     "volume": "9"
   },
   {
-    "abstract": "no description available",
+    "abstract": "Robustness is a key and desirable property of any classifying system, in particular, to avoid the ever-rising threat of adversarial attacks. Informally, a classification system is robust when the result is not affected by the perturbation of the input. This notion has been extensively studied, but little attention has been dedicated to how the perturbation affects the classification. The interference between perturbation and classification can manifest in many different ways, and its understanding is the main contribution of the present article. Starting from a rigorous definition of a standard notion of robustness, we build a formal method for accommodating the required degree of robustness—depending on the amount of error the analyst may accept on the classification result. Our idea is to precisely model this error as an abstraction . This leads us to define weakened forms of robustness also in the context of programming languages, particularly in language-based security, e.g., information-flow policies, and in program verification. The latter is possible by moving from a quantitative (standard) model of perturbation to a novel qualitative model, given by means of the notion of abstraction. As in language-based security, we show that it is possible to confine adversities, which means to characterize the degree of perturbation (and/or the degree of class generalization) for which the classifier may be deemed adequately robust. We conclude with an experimental evaluation of our ideas, showing how weakened forms of robustness apply to state-of-the-art image classifiers.",
+    "authorIds": [
+      "0000-0002-9582-3960",
+      "0000-0003-1213-536X",
+      "0009-0004-8658-9211"
+    ],
     "authorInstitutions": "Roberto Giacobazzi (University of Arizona); Isabella Mastroeni (University of Verona); Elia Perantoni",
     "authors": [
       "Roberto Giacobazzi",
       "Isabella Mastroeni",
       "Elia Perantoni"
     ],
+    "container": "ACM Transactions on Programming Languages and Systems",
     "dates": [
       "Wed 22 Jan 2025 17:20 - 17:40"
     ],
-    "eventType": "Talk; Paper",
+    "doi": "10.1145/3649309",
+    "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "853fb273-e5f4-4055-aeec-8f56546f984d",
+    "issue": "2",
     "locations": [
       "Marco Polo"
     ],
+    "pages": "1-31",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3649309"
+    ],
+    "publicationDate": "2024-06-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "TOPLAS"
     ],
@@ -3738,12 +4100,15 @@
     ],
     "title": "Adversities in Abstract Interpretation - Accommodating Robustness by Abstract Interpretation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3649309",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/86/Adversities-in-Abstract-Interpretation-Accommodating-Robustness-by-Abstract-Interpr",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
-    ]
+    ],
+    "volume": "46"
   },
   {
     "abstract": "Although there have been many approaches for developing formal memory models that support integer-pointer casts, previous approaches share the drawback that they are not designed for end-to-end verification, failing to support some important source-level coding patterns, justify some backend optimizations, or lack a source-level logic for program verification. This paper presents Archmage, a framework for integer-pointer casting designed for end-to-end verification, supporting a wide range of source-level coding patterns, backend optimizations, and a formal notion of out-of-memory. To facilitate end-to-end verification via Archmage, we also present two systems based on Archmage: CompCertCast, an extension of CompCert with Archmage to bring a full verified compilation chain to integer-pointer casting programs, and Archmage logic, a source-level logic for reasoning about integer-pointer casts. We design CompCertCast almost no performance overhead such that the overhead from formally supporting integer-pointer casts is mitigated, and illustrate the effectiveness of Archmage logic by verifying an xor-based linked-list implementation, Together, our paper presents the first practical end-to-end verification chain for programs containing integer-pointer casts.",
@@ -3811,7 +4176,8 @@
     ],
     "title": "Archmage and CompCertCast: End-to-End Verification Supporting Integer-Pointer Casting",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704881",
@@ -3820,6 +4186,81 @@
       "https://openalex.org/W4406224206"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Quantum circuit simulation is paramount to the testing and optimization of quantum algorithms, and considerable research efforts have been made towards efficient simulators. While circuits are often expressed in terms of high-level gates that correspond to classical operations like $k$-fold fan-in $\\text{AND}_k$ gates, existing simulation methods require compilation to a low-level gate-set before simulation, which increases circuit size and incurs a considerable (typically exponential) overhead. Here I present a gadget-based simulator which simulates high-level gates directly, thereby avoiding entirely the blowup of compilation. This reduces both the theoretical complexity of simulating circuits containing high-level gates, and the practical running time compared to standard simulators found in IBM’s Qiskit Aer library. My simulator uses a low-rank stabilizer decomposition of the magic state required to simulate non-stabilizer gates, with improvements in the rank directly improving performance. In this context, I also prove a lower bound of $\\Omega(t^2 / \\log^4 t)$ on the rank of the $\\ket{T}^t$ magic state, improving over the existing $\\Omega(t)$.",
+    "authorIds": [
+      "0000-0002-1275-9933"
+    ],
+    "authorInstitutions": "Adam Husted Kjelstrøm",
+    "authors": [
+      "Adam Husted Kjelstrøm"
+    ],
+    "container": "Quantum",
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "doi": "10.22331/q-2026-05-05-2093",
+    "eventType": "Poster",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "885d3a68-f309-443b-899e-bd1f5d839fef",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "pages": "2093",
+    "publicationDate": "2026-05-05",
+    "publisher": "Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften",
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Efficient Strong Simulation of High-level Quantum Gates",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.22331/q-2026-05-05-2093",
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/6/Efficient-Strong-Simulation-of-High-level-Quantum-Gates",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ],
+    "volume": "10"
+  },
+  {
+    "abstract": "The increasing diversity of CPU architectures in cloud and edge computing has driven the need for systems capable of supporting various CPUs. WebAssembly is a stack-based binary code format that runs on a variety of platforms and can be used in conjunction with live migration technology to migrate services running across different CPU architectures. The Ahead-of-Time (AOT) compilation technique in WebAssembly runtimes accelerates execution by precompiling code. However, this method complicates the preservation and restoration of platform-independent runtime states because WebAssembly value stacks are not preserved during compilation. This research introduces a method to incorporate migration functionality into WebAssembly AOT compilers. By instrumenting instructions during compilation, the proposed approach enables runtime state to be saved and restored using a platform-neutral snapshot format. To demonstrate this, we developed and evaluated Wanco, a WebAssembly compiler that supports live migration. Results from the evaluation show that this method reduces snapshot file sizes, checkpointing and restoring time, and achieves smoother program migrations compared to CRIU, a de facto standard Linux process live migration tool.",
+    "authorInstitutions": "Raiki Tamura (Kyoto University); Daisuke Kotani (Kyoto University); Yasuo Okabe (Kyoto University)",
+    "authors": [
+      "Raiki Tamura",
+      "Daisuke Kotani",
+      "Yasuo Okabe"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "907d0268-c4bb-4787-baea-b75ca6e06a2c",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Wanco: WebAssembly AOT Compiler that supports Live Migration",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/5/Wanco-WebAssembly-AOT-Compiler-that-supports-Live-Migration",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Properties such as provable security and correctness for randomized programs are naturally expressed relationally as approximate equivalences. As a result, a number of relational program logics have been developed to reason about such approximate equivalences of probabilistic programs. However, existing approximate relational logics are mostly restricted to first-order programs without general state. In this paper we develop Approxis, a higher-order approximate relational separation logic for reasoning about approximate equivalence of programs written in an expressive ML-like language with discrete probabilistic sampling, higher-order functions, and higher-order state. The Approxis logic recasts the concept of error credits in the relational setting to reason about relational approximation, which allows for expressive notions of modularity and composition, a range of new approximate relational rules, and an internalization of a standard limiting argument for showing exact probabilistic equivalences by approximation. We also use Approxis to develop a logical relation model that quantifies over error credits, which can be used to prove exact contextual equivalence . We demonstrate the flexibility of our approach on a range of examples, including the PRP/PRF switching lemma, IND$-CPA security of an encryption scheme, and a collection of rejection samplers. All of the results have been mechanized in the Coq proof assistant and the Iris separation logic framework.",
@@ -3886,7 +4327,8 @@
     ],
     "title": "Approximate Relational Reasoning for Higher-Order Probabilistic Programs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704877",
@@ -3903,10 +4345,10 @@
       "0000-0003-3029-2617",
       "0000-0001-6349-3402",
       "0009-0009-3961-3043",
-      "A5016627385",
-      "A5040992036",
+      "0009-0009-3888-8440",
+      "0009-0005-5957-7263",
       "0000-0003-1055-6785",
-      "A5039379396",
+      "0009-0000-3709-9401",
       "0000-0002-9672-5297",
       "0000-0002-7359-890X",
       "0000-0003-0631-5591"
@@ -3929,9 +4371,10 @@
       "Wed 22 Jan 2025 17:40 - 18:00"
     ],
     "doi": "10.1145/3704808",
-    "eventType": "Talk; Paper",
+    "eventType": "Talk",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3956,8 +4399,8 @@
     "pdfUrls": [
       "https://dl.acm.org/doi/pdf/10.1145/3704808"
     ],
-    "publicationDate": "2024-12-05",
-    "publisher": "Association for Computing Machinery",
+    "publicationDate": "2024-12-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "TOPLAS"
     ],
@@ -3966,7 +4409,8 @@
     ],
     "title": "Gradual C0: Symbolic Execution for Gradual Verification",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704808",
@@ -4041,7 +4485,8 @@
     ],
     "title": "Simple Linear Loops: Algebraic Invariants and Applications",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704862",
@@ -4070,7 +4515,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -4095,7 +4540,7 @@
       "https://dl.acm.org/doi/pdf/10.1145/3704852"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Program Logics 2",
       "POPL"
@@ -4106,13 +4551,13 @@
     ],
     "title": "Calculational Design of Hyperlogics by Abstract Interpretation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704852",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/16/Calculational-Design-of-Hyperlogics-by-Abstract-Interpretation",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
-      "https://openalex.org/W4404570571"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
     ],
     "volume": "9"
   },
@@ -4173,7 +4618,8 @@
     ],
     "title": "Sound and Complete Proof Rules for Probabilistic Termination",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704899",
@@ -4187,8 +4633,8 @@
     "abstract": "We present \\emph{Generic Refinement Types}: a way to write modular higher-order specifications that abstract invariants over function contracts, while preserving automatic SMT-decidable verification. We show how generic refinements let us write a variety of modular higher-order specifications, including specifications for Rust’s traits which abstract over the concrete refinements that hold for different trait implementations. We formalize generic refinements in a core calculus and show how to synthesize the generic instantiations algorithmically at usage sites via a combination of syntactic unification and constraint solving. We give semantics to generic refinements via the intuition that they correspond to \\emph{ghost parameters}, and we formalize this intuition via a type-preserving translation into the polymorphic contract calculus to establish the soundness of generic refinements. Finally, we evaluate generic refinements by implementing them in Flux and using it for two case studies. First, we show how generic refinements let us write modular specifications for Rust’s vector indexing API that lets us statically verify the bounds safety of a variety of vector-manipulating benchmarks from the literature. Second, we use generic refinements to refine Rust’s DIesel ORM library to track the semantics of the database queries issued by client applications, and hence, statically enforce data-dependent access-control policies in several database-backed web applications.",
     "authorIds": [
       "0009-0003-6838-3714",
-      "A5106525362",
-      "A5115826568",
+      "0009-0003-6699-0430",
+      "0009-0009-4608-7256",
       "0009-0001-8638-6201",
       "0000-0002-1802-9421"
     ],
@@ -4208,7 +4654,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -4230,7 +4676,7 @@
       "https://doi.org/10.1145/3704885"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Types 2",
       "POPL"
@@ -4241,13 +4687,13 @@
     ],
     "title": "Generic Refinement Types",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704885",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/49/Generic-Refinement-Types",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
-      "https://openalex.org/W4406221737"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
     ],
     "volume": "9"
   },
@@ -4311,7 +4757,8 @@
     ],
     "title": "On Extending Incorrectness Logic with Backwards Reasoning",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704850",
@@ -4377,7 +4824,8 @@
     ],
     "title": "CF-GKAT: Efficient Validation of Control-Flow Transformations",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704857",
@@ -4396,7 +4844,7 @@
     "dates": [
       "Fri 24 Jan 2025 09:00 - 10:00"
     ],
-    "eventType": "Talk; Paper",
+    "eventType": "Talk",
     "id": "9f754994-4d8d-4f28-9c56-32ea272d65b5",
     "locations": [
       "Marco Polo"
@@ -4409,7 +4857,8 @@
     ],
     "title": "Welcome to Quantum 3.0!",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/84/Welcome-to-Quantum-3-0-",
@@ -4437,7 +4886,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -4463,7 +4912,7 @@
       "https://doi.org/10.1145/3704860"
     ],
     "publicationDate": "2025-01-07",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Verification 1",
       "POPL"
@@ -4474,15 +4923,44 @@
     ],
     "title": "A Verified Foreign Function Interface Between Coq and C",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704860",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/24/A-Verified-Foreign-Function-Interface-Between-Coq-and-C",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
-      "https://openalex.org/W4406221719"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Static verification provides strong correctness guarantees for code; however, fully specifying programs for static verification is a complex, burdensome process for users. Gradual verification was introduced to make this process easier by supporting the verification of partially specified programs. The only currently working gradual verifier, Gradual C0, successfully verifies heap manipulating programs, but lacks expressiveness in its specification language. This paper describes the design and implementation of an extension to Gradual C0 that supports unfolding expressions, which allow more intuitive specifications of recursive heap data structures.",
+    "authorInstitutions": "Priyam Gupta (Purdue University)",
+    "authors": [
+      "Priyam Gupta"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "a4ec4754-cb80-4b58-93fb-a985bb77ad98",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Increasing the Expressiveness of a Gradual Verifier",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/3/Increasing-the-Expressiveness-of-a-Gradual-Verifier",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Program verification tools are often implemented as front-end translations of an input program into an intermediate verification language (IVL) such as Boogie, Gil, Viper, or Why3. The resulting IVL program is then verified using an existing back-end verifier. A soundness proof for such a translational verifier needs to relate the input program and verification logic to the semantics of the IVL, which in turn needs to be connected with the verification logic implemented in the back-end verifiers. Performing such proofs is challenging due to the large semantic gap between the input and output programs and logics, especially for complex verification logics such as separation logic. This paper presents a formal framework for reasoning about translational separation logic verifiers. At its center is a generic core IVL that captures the essence of different separation logics. We define its operational semantics and formally connect it to two different back-end verifiers, which use symbolic execution and verification condition generation, resp. Crucially, this semantics uses angelic non-determinism to enable the application of different proof search algorithms and heuristics in the back-end verifiers. An axiomatic semantics for the core IVL simplifies reasoning about the front-end translation by performing essential proof steps once and for all in the equivalence proof with the operational semantics rather than for each concrete front-end translation. We illustrate the usefulness of our formal framework by instantiating our core IVL with elements of Viper and connecting it to two Viper back-ends as well as a front-end for concurrent separation logic. The supplementary material contains a complete formalization in Isabelle, including the core IVL and its semantics, the semantics of two back-ends for a subset of Viper, and all proofs.",
@@ -4553,7 +5031,8 @@
     ],
     "title": "Formal Foundations for Translational Separation Logic Verifiers",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704856",
@@ -4624,7 +5103,8 @@
     ],
     "title": "A modal deconstruction of Löb induction",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704866",
@@ -4689,7 +5169,8 @@
     ],
     "title": "Model Checking C/C++ with Mixed-Size Accesses",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704911",
@@ -4758,7 +5239,8 @@
     ],
     "title": "An Incremental Algorithm for Algebraic Program Analysis",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704901",
@@ -4826,7 +5308,8 @@
     ],
     "title": "Algebraic Temporal Effects: Temporal Verification of Recursively Typed Higher-Order Programs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704914",
@@ -4837,7 +5320,7 @@
     "volume": "9"
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Richard A. Eisenberg; Chris Casinghino",
     "authors": [
       "Richard A. Eisenberg",
@@ -4860,7 +5343,8 @@
     ],
     "title": "Jane Street Game Night",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/82/Jane-Street-Game-Night",
@@ -4868,7 +5352,13 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "This article discusses the relationship between two frameworks: universal composability ( \\(\\mathsf{UC}\\) ) and robust compilation ( RC ). In cryptography, \\(\\mathsf{UC}\\) is a framework for the specification and analysis of cryptographic protocols with a strong compositionality guarantee: \\(\\mathsf{UC}\\) protocols remain secure even when composed with other protocols. In programming language security, RC is a novel framework for determining secure compilation by proving whether compiled programs are as secure as their source-level counterparts no matter what target-level code they interact with. Presently, these disciplines are studied in isolation, though we argue that there is a deep connection between them and exploring this connection will benefit both research fields. This article formally proves the connection between \\(\\mathsf{UC}\\) and RC and then it explores the benefits of this connection (focussing on perfect, rather than computational \\(\\mathsf{UC}\\) ). For this, this article first identifies which conditions must programming languages fulfil in order to possibly attain \\(\\mathsf{UC}\\) -like composition. Then, it proves \\(\\mathsf{UC}\\) of both an existing and a new commitment protocol as a corollary of the related compilers attaining RC . Finally, it mechanises these proofs in DEEPSEC, obtaining symbolic guarantees that the protocol is indeed \\(\\mathsf{UC}\\) . Our connection lays the groundwork towards a better and deeper understanding of both \\(\\mathsf{UC}\\) and RC , and the benefits we showcase from this connection provide evidence of scalable mechanised proofs for \\(\\mathsf{UC}\\) .",
+    "authorIds": [
+      "0000-0003-3411-9678",
+      "0000-0003-0822-9283",
+      "0000-0002-0224-1989",
+      "0000-0001-7900-8328"
+    ],
     "authorInstitutions": "Marco Patrignani (University of Trento); Robert Künnemann (CISPA Helmholtz Center for Information Security); Riad S. Wahby (Stanford University, USA); Ethan Cecchetti (University of Wisconsin-Madison)",
     "authors": [
       "Marco Patrignani",
@@ -4876,14 +5366,28 @@
       "Riad S. Wahby",
       "Ethan Cecchetti"
     ],
+    "container": "ACM Transactions on Programming Languages and Systems",
     "dates": [
       "Wed 22 Jan 2025 17:00 - 17:20"
     ],
-    "eventType": "Talk; Paper",
+    "doi": "10.1145/3698234",
+    "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c7a9fe83-435c-450a-bb56-d7cdb4c800b9",
+    "issue": "4",
     "locations": [
       "Marco Polo"
     ],
+    "pages": "1-64",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3698234"
+    ],
+    "publicationDate": "2024-12-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "TOPLAS"
     ],
@@ -4892,12 +5396,15 @@
     ],
     "title": "Universal Composability is Robust Compilation",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3698234",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/85/Universal-Composability-is-Robust-Compilation",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
-    ]
+    ],
+    "volume": "46"
   },
   {
     "abstract": "Effect handlers form a powerful construct that can express complex programming abstractions. They are a generalization of exception handlers, but allow resumption of the continuation from where the effect was raised. Allowing continuations to be resumed at most once (one-shot) or an arbitrary number of times (multi-shot) has far-reaching consequences. In addition to performance considerations, multi-shot effects break key rules of reasoning and thus render certain standard transformation/optimizations unsound, especially in languages with mutable references (such as OCaml 5). It is therefore desirable to statically track whether continuations are used in a one-shot or multi-shot discipline, so that a compiler could use this information to efficiently implement effect handlers and to determine what optimizations it may perform. We address this problem by developing a type and effect system–called Affect–which uses affine types to track the usage of continuations. A challenge is to soundly deal with advanced programming features—such as references that store continuations and nested continuations—which are crucial to support challenging examples from the effects literature (such as control inversion and cooperative concurrency). Another challenge is to support generic type signatures of polymorphic effectful functions. We address these challenges by using and extending Rust’s Cell type and Wadler’s use types. To prove soundness of Affect we model types and judgements semantically via a logical relation in the Iris separation logic framework in Coq.",
@@ -4959,7 +5466,8 @@
     ],
     "title": "Affect: An Affine Type and Effect System",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704841",
@@ -5029,7 +5537,8 @@
     ],
     "title": "Barendregt Convenes with Knaster and Tarski: Strong Rule Induction for Syntax with Bindings",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704893",
@@ -5103,7 +5612,8 @@
     ],
     "title": "Interaction Equivalence",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704891",
@@ -5119,7 +5629,7 @@
       "0000-0003-4952-7359",
       "0000-0002-4161-985X"
     ],
-    "authorInstitutions": "Donnacha Oisín Kidney; Nicolas Wu",
+    "authorInstitutions": "Donnacha Oisín Kidney (Imperial College London); Nicolas Wu (Imperial College London)",
     "authors": [
       "Donnacha Oisín Kidney",
       "Nicolas Wu"
@@ -5129,7 +5639,7 @@
       "Fri 24 Jan 2025 13:40 - 14:00"
     ],
     "doi": "10.1145/3704892",
-    "eventType": "Paper",
+    "eventType": "Research paper; Paper",
     "extra": {
       "metadataSources": [
         "crossref",
@@ -5160,15 +5670,17 @@
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
-      "POPL",
-      "Verification 2"
+      "Verification 2",
+      "POPL"
     ],
     "sessions": [
+      "Fri_24_Jan_2025-Marco_Polo-13_20_-_14_20-Verification_2",
       "popl2025-POPL"
     ],
     "title": "Formalising Graph Algorithms with Coinduction",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704892",
@@ -5238,7 +5750,8 @@
     ],
     "title": "Dis/Equality Graphs",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704913",
@@ -5312,7 +5825,8 @@
     ],
     "title": "Flexible Type-Based Resource Estimation in Quantum Circuit Description Languages",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704883",
@@ -5321,6 +5835,67 @@
       "https://openalex.org/W4406222580"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Atticus Kuhn (University of Cambridge); Abhinandan Pal (University of Birmingham); Mirco Giacobbe (University of Birmingham)",
+    "authors": [
+      "Atticus Kuhn",
+      "Abhinandan Pal",
+      "Mirco Giacobbe"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "daa3ec39-cc55-4fb0-be3f-cad82799b969",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Loop Invariants Using Neural Networks",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/10/Loop-Invariants-Using-Neural-Networks",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
+  },
+  {
+    "abstract": "We propose a calculus for modeling implicit programming that supports first-class, overlapping, locally scoped, and higher-order instances with higher-kinded types. We propose a straightforward generalization of the well-established System $F^\\omega$ to implicit parameters, with a uniform treatment of type and term abstractions. Unlike previous works, we give a \\emph{declarative} specification of unambiguous, and thus coherent, resolution without introducing restrictions motivated by an algorithmic formulation of resolution.",
+    "authorInstitutions": "Eugene Flesselle (EPFL)",
+    "authors": [
+      "Eugene Flesselle"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "ddaea68b-54ae-4c97-acb8-7de55c064ad4",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "System $F^\\omega$ with Coherent Implicit Resolution",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/19/System-F-omega-with-Coherent-Implicit-Resolution",
+      "https://arxiv.org/abs/2503.23904",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Version control systems typically rely on a \\emph{patch language}, heuristic \\emph{patch synthesis algorithms} like diff, and \\emph{three-way merge algorithms}. Standard patch languages and merge algorithms often fail to identify conflicts correctly when there are multiple edits to one line of code or code is relocated. This paper introduces Grove, a collaborative structure editor calculus that eliminates patch synthesis and three-way merge algorithms entirely. Instead, patches are derived directly from the log of the developer’s edit actions and all edits commute, i.e. the repository state forms a commutative replicated data type (CmRDT). To handle conflicts that can arise due to code relocation, the core datatype in Grove is a labeled directed multi-graph with uniquely identified vertices and edges. All edits amount to edge insertion and deletion, with deletion being permanent. To support tree-based editing, we define a decomposition from graphs into \\emph{groves}, which are a set of syntax trees with conflicts—including local, relocation, and unicyclic relocation conflicts— represented explicitly using holes and references between trees. Finally, we define a type error localization system for groves that enjoys a \\emph{totality} property, i.e. all editor states in Grove are statically meaningful, so developers can use standard editor services while working to resolve these explicitly represented conflicts. The static semantics is defined as a bidirectional marking system in line with recent work, with gradual typing employed to handle situations where errors and conflicts prevent type determination. We then layer on a unification-based type inference system to opportunistically fill type holes and fail gracefully when no solution exists. We mechanize the metatheory of Grove using the Agda theorem prover. We implement these ideas as the \\emph{Grove Workbench}, which generates the necessary data structures and algorithms in OCaml given a syntax tree specification.",
@@ -5387,7 +5962,8 @@
     ],
     "title": "Grove: A Bidirectionally Typed Collaborative Structure Editor Calculus",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704909",
@@ -5463,7 +6039,8 @@
     ],
     "title": "Generically Automating Separation Logic by Functors, Homomorphisms, and Modules",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704903",
@@ -5532,7 +6109,8 @@
     ],
     "title": "Reachability Analysis of the Domain Name System",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704898",
@@ -5594,7 +6172,8 @@
     ],
     "title": "The Best of Abstract Interpretations",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704882",
@@ -5604,6 +6183,35 @@
       "https://openalex.org/W4406222666"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Enumerated testing has emerged as a systematic approach to generate test cases and address the limitations of traditional fuzzing techniques. One of these tools is ET, a grammar-based exhaustive enumerator used to find bugs in SMT solvers using context-free grammars. In this work, we present ET++, an enhanced version of the original ET tool. ET++ expands grammar-based exhaustive enumerative testing to support context-free grammars for any language. By integrating ANTLR parsing and improving grammar translation, ET++ addresses the limitations of its predecessor, enabling it to handle more complex and varied grammar definitions across languages. Using ET++, we identified 14 new bugs in SMT solvers and the JavaScript interpreter Espruino, emphasizing ET++’s effectiveness in uncovering bugs even with small test cases.",
+    "authorInstitutions": "Thea Kjeldsmark (University of California, Irvine)",
+    "authors": [
+      "Thea Kjeldsmark"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "ea7db168-9355-4eb3-a1e1-f77149a071cb",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "Expanding the Scope of Grammar-Based Enumerative Testing",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/9/Expanding-the-Scope-of-Grammar-Based-Enumerative-Testing",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Uncomputation is a feature in quantum programming that allows the programmer to discard a value without losing quantum information, and that allows the compiler to reuse resources. Whereas quantum information has to be treated as a linear type, automatic uncomputation enables the programmer to treat it as an affine type to some extent. Automatic uncomputation requires a substructural type system between linear and affine, a subtlety that has only been captured by existing languages in an ad hoc way. We extend the Rust type system to the quantum setting to give a uniform framework for automatic uncomputation called Qurts. Specifically, we parameterise types by lifetimes, permitting them to be affine during their lifetime, while being restricted to linear use outside their lifetime. We also provide two operational semantics: one based on classical simulation, and one that does not depend on any specific uncomputation strategy.",
@@ -5663,7 +6271,8 @@
     ],
     "title": "Qurts: Automatic Quantum Uncomputation by Affine Types with Lifetime",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704842",
@@ -5673,6 +6282,36 @@
       "https://openalex.org/W4406222052"
     ],
     "volume": "9"
+  },
+  {
+    "abstract": "Automated planning is concerned with finding a sequence of actions that achieve a given goal. Of several formalisms for expressing planning problems, linear logic is promising because it is a logic for reasoning about changes in state. Past research has how fragments of linear logic can be used to encode different kinds of planning problems. However, these works make assumptions about the formal correspondence between linear logic and the STRIPS planning standard that hinder their generality. We provide a method for translating a planning problem into a linear logic judgment that overcomes these issues, and show that our translation is complete with respect to the definition of well-formed problems in first-order STRIPS planning.",
+    "authorInstitutions": "Luis Hernan Garcia Paucar (Aston University); Chris Martens (Northeastern University)",
+    "authors": [
+      "Luis Hernan Garcia Paucar",
+      "Chris Martens"
+    ],
+    "dates": [
+      "Wed 22 Jan 2025 18:00 - 20:00"
+    ],
+    "eventType": "Poster",
+    "id": "ed74df2e-acfb-48f4-a4bb-4e0e10e11e85",
+    "locations": [
+      "Four Square Corridor"
+    ],
+    "sessionTitles": [
+      "SRC Poster Session"
+    ],
+    "sessions": [
+      "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
+    ],
+    "title": "A Complete Translation from Planning Problems to linear logic",
+    "tracks": [
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/16/A-Complete-Translation-from-Planning-Problems-to-linear-logic",
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+    ]
   },
   {
     "abstract": "Temporal logics for hyperproperties have recently emerged as an expressive specification technique for relational properties of reactive systems. While the model checking problem for such logics has been widely studied, there is a scarcity of deductive proof systems for temporal hyperproperties. In particular, hyperproperties with an alternation of universal and existential quantification over system executions are rarely supported. In this paper, we focus on the difficult class of hyperproperties of the form $\\forall^ \\exists^ \\psi$, where $\\psi$ is a safety relation. We show that hyperproperties of this class – which includes many hyperliveness properties of interest – can always be approximated by coinductive relations. This enables intuitive proofs by coinduction. Based on this observation, we define HyCo (\\textbf{Hy}perproperties, \\textbf{Co}inductively), a mechanized framework to reason about temporal hyperproperties within the Coq proof assistant. We detail the construction of HyCo, provide a proof of its soundness, and exemplify its use by applying it to the verification of reactive systems modeled as imperative programs with nondeterminism and I/O.",
@@ -5733,7 +6372,8 @@
     ],
     "title": "Coinductive Proofs for Temporal Hyperliveness",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704889",
@@ -5804,7 +6444,8 @@
     ],
     "title": "A Demonic Outcome Logic for Randomized Nondeterminism",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704855",
@@ -5878,7 +6519,8 @@
     ],
     "title": "RELINCHE: Automatically Checking Linearizability under Relaxed Memory Consistency",
     "tracks": [
-      "POPL"
+      "POPL",
+      "Research Papers"
     ],
     "urls": [
       "https://doi.org/10.1145/3704906",

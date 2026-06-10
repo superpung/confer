@@ -31,6 +31,12 @@ MONTHS = {
     "november": "11",
     "december": "12",
 }
+DEFAULT_RECORD_TYPES = ("article", "inproceedings")
+DEFAULT_EXCLUDED_TITLE_PATTERNS = (
+    r"^Editorial\b",
+    r"^A Year in\b",
+    r"^A Journal for\b",
+)
 
 
 class DblpScraper(Scraper):
@@ -42,15 +48,8 @@ class DblpScraper(Scraper):
         if not toc_url:
             raise ValueError(f"Venue {venue.id!r}: dblp requires source.toc_url")
         self.toc_url = str(toc_url)
-        self.default_track = str(venue.source.get("default_track") or venue.name)
-        self.default_event_type = str(
-            venue.source.get("default_event_type")
-            or ("Journal Article" if venue.kind == "journal" else "Paper")
-        )
-        self.include_types = set(self._as_list(venue.source.get("include_types") or ["article", "inproceedings"]))
         self.exclude_title_patterns = [
-            re.compile(str(pattern), re.IGNORECASE)
-            for pattern in self._as_list(venue.source.get("exclude_title_patterns"))
+            re.compile(pattern, re.IGNORECASE) for pattern in DEFAULT_EXCLUDED_TITLE_PATTERNS
         ]
 
     def scrape(self) -> list[Paper]:
@@ -64,18 +63,10 @@ class DblpScraper(Scraper):
         )
         return selected
 
-    @staticmethod
-    def _as_list(value: Any) -> list[str]:
-        if value is None:
-            return []
-        if isinstance(value, str):
-            return [value]
-        return [str(item) for item in value]
-
     def parse_toc(self, xml: str) -> list[Paper]:
         soup = BeautifulSoup(xml, "html.parser")
         papers: list[Paper] = []
-        for record in soup.find_all(list(self.include_types)):
+        for record in soup.find_all(list(DEFAULT_RECORD_TYPES)):
             paper = self.parse_record(record)
             if paper is not None:
                 papers.append(paper)
@@ -96,13 +87,15 @@ class DblpScraper(Scraper):
         container = journal or booktitle or self.venue.name
         human_date = self.human_publication_date(record)
         publication_date = self.publication_date(record)
+        track = issue_title or self.venue.name
+        event_type = "Journal Article" if record.name == "article" or self.venue.kind == "journal" else "Paper"
 
         return Paper(
             id=safe_slug(str(record.get("key", "")) or doi or title),
             title=title,
             authors=[self.clean_author(clean_text(author)) for author in record.find_all("author")],
-            tracks=[self.default_track],
-            event_type=self.default_event_type,
+            tracks=[track],
+            event_type=event_type,
             session_titles=[issue_title] if issue_title else [],
             dates=[human_date] if human_date else [],
             urls=urls,

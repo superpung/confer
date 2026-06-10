@@ -2893,14 +2893,24 @@
       "Ching-Feng Chen",
       "Sheng-Te Lai"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11133066",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH420",
     "locations": [
       "3006, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Watts Up? AI/ML Enabled Advances in Power and Thermal Integrity"
     ],
@@ -2913,6 +2923,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133066",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH420&sess=sess135"
     ]
   },
@@ -3103,14 +3114,24 @@
       "Lilia Zaourar",
       "Alix Munier-Kordon"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11132525",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH436",
     "locations": [
       "3004, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Exploring the Unchartered: From Chiplets to Architecture and Validation"
     ],
@@ -3123,6 +3144,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132525",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH436&sess=sess128"
     ]
   },
@@ -4116,14 +4138,24 @@
       "Xiaoyao Liang",
       "Zhuoran Song"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11133171",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH535",
     "locations": [
       "3000, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Flattering Splatting: Gaussian Splatting, Video Processing, and Diffusion"
     ],
@@ -4136,6 +4168,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133171",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH535&sess=sess110"
     ]
   },
@@ -4330,14 +4363,24 @@
       "Chenqi Zhang",
       "Minyi Guo"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132479",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH556",
     "locations": [
       "3001, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Balancing Speed and Memory: Advancing LLM Acceleration"
     ],
@@ -4350,6 +4393,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132479",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH556&sess=sess113"
     ]
   },
@@ -5414,14 +5458,24 @@
       "You Zhou",
       "Fei Wu"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11133202",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH688",
     "locations": [
       "3008, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "To Abstract or Not to Abstract the Storage Layer"
     ],
@@ -5434,6 +5488,7 @@
       "Systems"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133202",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH688&sess=sess159"
     ]
   },
@@ -6154,14 +6209,24 @@
       "Yingtao Jiang",
       "Amit Singh"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11132942",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH764",
     "locations": [
       "3004, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Exploring the Unchartered: From Chiplets to Architecture and Validation"
     ],
@@ -6174,6 +6239,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132942",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH764&sess=sess128"
     ]
   },
@@ -6459,14 +6525,24 @@
       "Jianwang Zhai",
       "Kang Zhao"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11132878",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH791",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Back to the Future: Where Speed Meets Efficiency"
     ],
@@ -6479,6 +6555,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132878",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH791&sess=sess117"
     ]
   },
@@ -7435,14 +7512,24 @@
       "Zhou Jin",
       "Cheng Zhuo"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132758",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH874",
     "locations": [
       "3006, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Watts Up? AI/ML Enabled Advances in Power and Thermal Integrity"
     ],
@@ -7455,6 +7542,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132758",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH874&sess=sess135"
     ]
   },
@@ -9186,14 +9274,24 @@
       "Yunsheng Bai",
       "Haoxing Ren"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132537",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1166",
     "locations": [
       "3000, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Optimizing Large Language Models: Speed, Size, and Smarts"
     ],
@@ -9206,6 +9304,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132537",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1166&sess=sess104"
     ]
   },
@@ -9942,14 +10041,24 @@
       "Tsung-Yi Ho",
       "Bei Yu"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11132534",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1280",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "LLM Uprising: Fast & Furious"
     ],
@@ -9962,6 +10071,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132534",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1280&sess=sess115"
     ]
   },
@@ -10330,14 +10440,24 @@
       "Cheng Zhuo",
       "Liang Zhao"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132687",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1334",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "The Answer Is In-memory!? ... In the Memory? ... Memory? Find Out Here!"
     ],
@@ -10350,6 +10470,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132687",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1334&sess=sess163"
     ]
   },
@@ -10632,14 +10753,24 @@
       "Sang-Seol Lee",
       "Mingu Kang"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11132726",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1366",
     "locations": [
       "3000, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Skip the Bits!: Innovative Arithmetic, Architecture, Co-Design for AI"
     ],
@@ -10652,6 +10783,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132726",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1366&sess=sess112"
     ]
   },
@@ -11390,14 +11522,24 @@
       "Sanjay Gandham",
       "Mingjie Lin"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11132968",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1458",
     "locations": [
       "3008, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Of Circuits and Secrets: Emerging Hardware Security Primitives and Cryptographic Accelerators"
     ],
@@ -11410,6 +11552,7 @@
       "Security"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132968",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1458&sess=sess150"
     ]
   },
@@ -11613,14 +11756,24 @@
       "Shuai Zhao",
       "Zhe Jiang"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11133064",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1483",
     "locations": [
       "3008, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program, Debug, Accelerate: Software Innovations"
     ],
@@ -11633,6 +11786,7 @@
       "Systems"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133064",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1483&sess=sess157"
     ]
   },
@@ -12514,14 +12668,24 @@
       "Jungrae Kim",
       "Seokin Hong"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11133391",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1619",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Spike It, See It, Say It: Next-Gen AI Processing"
     ],
@@ -12534,6 +12698,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133391",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1619&sess=sess162"
     ]
   },
@@ -12729,14 +12894,24 @@
       "Fei Li",
       "Hailong Yao"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11132965",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1640",
     "locations": [
       "3004, Level 3"
     ],
+    "pages": "1-6",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "All You Can Route Buffet"
     ],
@@ -12749,6 +12924,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132965",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1640&sess=sess142"
     ]
   },
@@ -12984,14 +13160,24 @@
       "Vivek Chaturvedi",
       "Muhammad Shafique"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132466",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1694",
     "locations": [
       "3008, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "All Quiet on the Processor Front: Next-Gen Processor Security and Enclave Innovations"
     ],
@@ -13004,6 +13190,7 @@
       "Security"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132466",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1694&sess=sess151"
     ]
   },
@@ -13959,14 +14146,24 @@
       "Hsiang-Yun Cheng",
       "An-Yeu (Andy) Wu"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11133320",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1831",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Need a Break from AI? Memory-centric Computing for Beyond Machine Learning Application"
     ],
@@ -13979,6 +14176,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133320",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1831&sess=sess133"
     ]
   },
@@ -14669,14 +14867,24 @@
       "Xueqi Li",
       "Ninghui Sun"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11133193",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1912",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Spike It, See It, Say It: Next-Gen AI Processing"
     ],
@@ -14689,6 +14897,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133193",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH1912&sess=sess162"
     ]
   },
@@ -15603,14 +15812,24 @@
       "Nam Sung Kim",
       "Naresh Shanbhag"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132463",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2082",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "The Answer Is In-memory!? ... In the Memory? ... Memory? Find Out Here!"
     ],
@@ -15623,6 +15842,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132463",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2082&sess=sess163"
     ]
   },
@@ -15907,14 +16127,24 @@
       "Haoxing Ren",
       "Sung Kyu Lim"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11132448",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2126",
     "locations": [
       "3006, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Navigating 3D, Clock Trees, and Shared Learning"
     ],
@@ -15927,6 +16157,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132448",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2126&sess=sess143"
     ]
   },
@@ -16117,14 +16348,24 @@
       "Ajey Jacob",
       "Akhilesh jaiswal"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132453",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2162",
     "locations": [
       "3002, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Breaking Boundaries in Accelerator Design: Photonic, Time-Domain, and Security-Driven AI"
     ],
@@ -16137,6 +16378,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132453",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2162&sess=sess120"
     ]
   },
@@ -16655,14 +16897,24 @@
       "Jason Cong",
       "Shimeng Yu"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132615",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2244",
     "locations": [
       "3001, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Shaping Tomorrow: Co-Designing Emerging Technologies for Computing and Beyond"
     ],
@@ -16675,6 +16927,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132615",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2244&sess=sess124"
     ]
   },
@@ -17408,14 +17661,24 @@
       "Priyadarshini Panda",
       "Sherief Reda"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Tuesday, June 24"
     ],
+    "doi": "10.1109/dac63849.2025.11133061",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2348",
     "locations": [
       "3000, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Turbocharging Deep Learning Training: Efficiency Meets Innovation"
     ],
@@ -17428,6 +17691,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133061",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2348&sess=sess101"
     ]
   },
@@ -17442,14 +17706,24 @@
       "Paul Kelly",
       "Wayne Luk"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Monday, June 23"
     ],
+    "doi": "10.1109/dac63849.2025.11132539",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2363",
     "locations": [
       "3003, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Building Pillars of Quantum Circuits: Synthesis, Simulation & Compilation"
     ],
@@ -17462,6 +17736,7 @@
       "Design"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11132539",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2363&sess=sess127"
     ]
   },
@@ -17861,20 +18136,35 @@
   },
   {
     "abstract": "Dynamically scheduled high-level synthesis (HLS) is an approach to HLS that maps programs into dataflow circuits. These circuits use distributed control for communication and therefore can be automatically pipelined. However, pipelined function call is challenging due to the absence of centralized control, thus general software programs cannot be well-supported by the HLS tools. Traditional solutions to this problem impose restrictions on pipelining when accessing the shared functions. We present \\name, a modular synthesis method that decomposes the synthesis into compilation stage and linking stage, which enables the fully-pipelined access to shared functions in dataflow circuits. We develop a complete HLS engine using this approach and use asynchronous circuits as the target implementation. Our engine supports pipelined access to shared function units, as well as pipelined memory access in a unified fashion. Compared to existing HLS tools, PipeLink results in 20X reduction in energy and 1.56X improvement in throughput.",
+    "authorIds": [
+      "0000-0002-5683-9441",
+      "",
+      "0000-0001-8211-6602"
+    ],
     "authorInstitutions": "Rui Li (Intel Corporation); Lincoln Berkley (Yale University); Rajit Manohar (Yale University)",
     "authors": [
       "Rui Li",
       "Lincoln Berkley",
       "Rajit Manohar"
     ],
+    "container": "Proceedings of the 2025 ACM/SIGDA International Symposium on Field Programmable Gate Arrays",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1145/3706628.3708842",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2461",
     "locations": [
       "3004, Level 3"
     ],
+    "pages": "182-182",
+    "publicationDate": "2025-02-27",
+    "publisher": "ACM",
     "sessionTitles": [
       "Look Both Ways: New Directions in High-Level Synthesis and Approximate Computing"
     ],
@@ -17887,6 +18177,7 @@
       "EDA"
     ],
     "urls": [
+      "https://doi.org/10.1145/3706628.3708842",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2461&sess=sess136"
     ]
   },
@@ -17992,14 +18283,24 @@
       "Sirish Oruganti",
       "Jaydeep Kulkarni"
     ],
+    "container": "2025 62nd ACM/IEEE Design Automation Conference (DAC)",
     "dates": [
       "Wednesday, June 25"
     ],
+    "doi": "10.1109/dac63849.2025.11133032",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH2474",
     "locations": [
       "3000, Level 3"
     ],
+    "pages": "1-7",
+    "publicationDate": "2025-06-22",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Skip the Bits!: Innovative Arithmetic, Architecture, Co-Design for AI"
     ],
@@ -18012,6 +18313,7 @@
       "AI"
     ],
     "urls": [
+      "https://doi.org/10.1109/dac63849.2025.11133032",
       "https://62dac.conference-program.com/?post_type=page&p=15&id=RESEARCH2474&sess=sess112"
     ]
   },

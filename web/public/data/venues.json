@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T08:46:07+00:00",
+  "generatedAt": "2026-06-09T15:39:40+00:00",
   "venues": [
     {
       "category": "Computer Architecture",
@@ -84,7 +84,7 @@
     },
     {
       "category": "Programming Languages",
-      "count": 215,
+      "count": 212,
       "id": "oopsla2025",
       "kind": "conference",
       "name": "OOPSLA 2025",
@@ -111,7 +111,7 @@
     },
     {
       "category": "Programming Languages",
-      "count": 92,
+      "count": 120,
       "id": "popl2026",
       "kind": "conference",
       "name": "POPL 2026",
@@ -120,7 +120,7 @@
     },
     {
       "category": "Programming Languages",
-      "count": 84,
+      "count": 101,
       "id": "popl2025",
       "kind": "conference",
       "name": "POPL 2025",
@@ -129,7 +129,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 437,
+      "count": 440,
       "id": "ase2025",
       "kind": "conference",
       "name": "ASE 2025",
@@ -138,7 +138,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 260,
+      "count": 265,
       "id": "ase2024",
       "kind": "conference",
       "name": "ASE 2024",
@@ -147,7 +147,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 232,
+      "count": 247,
       "id": "ase2023",
       "kind": "conference",
       "name": "ASE 2023",
@@ -165,7 +165,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 329,
+      "count": 369,
       "id": "fse2025",
       "kind": "conference",
       "name": "FSE 2025",
@@ -174,7 +174,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 288,
+      "count": 313,
       "id": "fse2024",
       "kind": "conference",
       "name": "FSE 2024",
@@ -183,7 +183,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 231,
+      "count": 247,
       "id": "fse2023",
       "kind": "conference",
       "name": "FSE 2023",
@@ -192,7 +192,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 737,
+      "count": 738,
       "id": "icse2026",
       "kind": "conference",
       "name": "ICSE 2026",
@@ -210,7 +210,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 600,
+      "count": 602,
       "id": "icse2024",
       "kind": "conference",
       "name": "ICSE 2024",
@@ -219,7 +219,7 @@
     },
     {
       "category": "Software Engineering",
-      "count": 497,
+      "count": 525,
       "id": "icse2023",
       "kind": "conference",
       "name": "ICSE 2023",
@@ -282,7 +282,7 @@
     },
     {
       "category": "Software Testing & Analysis",
-      "count": 146,
+      "count": 163,
       "id": "issta2023",
       "kind": "conference",
       "name": "ISSTA 2023",

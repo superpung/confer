@@ -51,7 +51,7 @@
     ],
     "title": "Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756071",
@@ -104,7 +104,7 @@
     ],
     "title": "LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756062",
@@ -185,7 +185,7 @@
     ],
     "title": "Stratum: System-Hardware Co-design with Tiered Monolithic 3D-DRAM for Efficient MoE Serving",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756043",
@@ -253,7 +253,7 @@
     ],
     "title": "3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756087",
@@ -305,7 +305,7 @@
     ],
     "title": "ComPASS: A Compatible PIM Protocol Architecture and Scheduling Solution for Processor-PIM Collaboration",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756017",
@@ -372,7 +372,7 @@
     ],
     "title": "PIM-CCA: An Efficient PIM Architecture with Optimized Integration of Configurable Functional Units",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756034",
@@ -416,7 +416,7 @@
     ],
     "title": "DExiM: Exposing Impedance-Based Data Leakage in Emerging Memories",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Side Channels"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756114",
@@ -478,7 +478,7 @@
     ],
     "title": "One Flew over the Stack Engine’s Nest: Practical Microarchitectural Attacks on the Stack Engine",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Side Channels"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756058",
@@ -541,7 +541,7 @@
     ],
     "title": "Sonar: A Fuzzing Framework to Uncover Contention Side Channels in Processors",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Side Channels"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756136",
@@ -607,7 +607,7 @@
     ],
     "title": "RICH Prefetcher: Storing Rich Information in Memory to Trade Capacity and Bandwidth for Latency Hiding",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture - Prefetching 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756081",
@@ -672,7 +672,7 @@
     ],
     "title": "Software Prefetch Multicast: Sharer-Exposed Prefetching for Bandwidth Efficiency in Manycore Processors",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture - Prefetching 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756049",
@@ -735,7 +735,7 @@
     ],
     "title": "Symbiotic Task Scheduling and Data Prefetching",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture - Prefetching 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756031",
@@ -803,7 +803,7 @@
     ],
     "title": "Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756083",
@@ -854,7 +854,7 @@
     ],
     "title": "Coruscant: Co-Designing GPU Kernel and Sparse Tensor Core to Advocate Unstructured Sparsity in Efficient LLM Inference",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756065",
@@ -919,7 +919,7 @@
     ],
     "title": "DECA: A Near-Core LLM Decompression Accelerator Grounded on a 3D Roofline Model",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756073",
@@ -984,7 +984,7 @@
     ],
     "title": "StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (LLMs) - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3762817",
@@ -1040,7 +1040,7 @@
     ],
     "title": "Accelerating Retrieval Augmented Language Model via PIM and PNM Integration",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756020",
@@ -1106,7 +1106,7 @@
     ],
     "title": "HEAT: NPU-NDP HE terogeneous A rchitecture for T ransformer-Empowered Graph Neural Networks",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756117",
@@ -1168,7 +1168,7 @@
     ],
     "title": "Pimba: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756121",
@@ -1213,7 +1213,7 @@
     ],
     "title": "RayN: Ray Tracing Acceleration with Near-memory Computing",
     "tracks": [
-      "Main Conference"
+      "Processing-In-Memory - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756067",
@@ -1279,7 +1279,7 @@
     ],
     "title": "Athena: Accelerating Quantized Convolutional Neural Networks under Fully Homomorphic Encryption",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Machine Learning"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756103",
@@ -1316,7 +1316,7 @@
     ],
     "title": "GateBleed: A Timing-Only Membership Inference Attack, MoE-Routing Inference, and a Stealthy, Generic Magnifier Via Hardware Power Gating in AI Accelerators",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Machine Learning"
     ],
     "urls": [
       "https://microarch.org/micro58/program/index.php"
@@ -1355,8 +1355,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -1391,13 +1390,11 @@
     ],
     "title": "Ironman: Accelerating Oblivious Transfer Extension for Privacy-Preserving AI with Near-Memory Processing",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Machine Learning"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756025",
-      "https://microarch.org/micro58/program/index.php",
-      "http://arxiv.org/abs/2507.16391",
-      "https://openalex.org/W4417439630"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -1470,7 +1467,7 @@
     ],
     "title": "ccAI: A Compatible and Confidential System for AI Computing",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Machine Learning"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756104",
@@ -1536,7 +1533,7 @@
     ],
     "title": "Dissecting and Modeling the Architecture of Modern GPU Cores",
     "tracks": [
-      "Main Conference"
+      "GPU - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756041",
@@ -1598,7 +1595,7 @@
     ],
     "title": "Interleaved Bitstream Execution for Multi-Pattern Regex Matching on GPUs",
     "tracks": [
-      "Main Conference"
+      "GPU - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756052",
@@ -1655,7 +1652,7 @@
     ],
     "title": "LATPC: Accelerating GPU Address Translation Using Locality-Aware TLB Prefetching and MSHR Compression",
     "tracks": [
-      "Main Conference"
+      "GPU - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756069",
@@ -1723,7 +1720,7 @@
     ],
     "title": "SoftWalker: Supporting Software Page Table Walk for Irregular GPU Applications",
     "tracks": [
-      "Main Conference"
+      "GPU - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756056",
@@ -1787,7 +1784,7 @@
     ],
     "title": "HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Emerging Applications)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756115",
@@ -1861,7 +1858,7 @@
     ],
     "title": "LLM.265: Video Codecs are Secretly Tensor Codecs",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Emerging Applications)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756078",
@@ -1946,7 +1943,7 @@
     ],
     "title": "ORCHES: Orchestrated Test-Time-Computation-based LLM Reasoning on Collaborative GPU-PIM HEterogeneous System",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Emerging Applications)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756039",
@@ -2012,7 +2009,7 @@
     ],
     "title": "S-DMA: Sparse Diffusion Models Acceleration via Spatiality-Aware Prediction and Dimension-Adaptive Dataflow",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Emerging Applications)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756046",
@@ -2088,7 +2085,7 @@
     ],
     "title": "A TRRIP Down Memory Lane: Temperature-Based Re-Reference Interval Prediction For Instruction Caching",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture I"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756110",
@@ -2150,7 +2147,7 @@
     ],
     "title": "Drishti: Do Not Forget Slicing While Designing Last-Level Cache Replacement Policies for Many-Core Systems",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture I"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756028",
@@ -2228,7 +2225,7 @@
     ],
     "title": "LoopFrog: In-Core Hint-Based Loop Parallelization",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture I"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756051",
@@ -2272,7 +2269,7 @@
     ],
     "title": "Multi-Stream Squash Reuse for Control-Independent Processors",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture I"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3762248",
@@ -2334,7 +2331,7 @@
     ],
     "title": "Accurate Leakage Speculation for Quantum Error Correction",
     "tracks": [
-      "Main Conference"
+      "Quantum - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756053",
@@ -2424,7 +2421,7 @@
     ],
     "title": "Distributed-HISQ: A Distributed Quantum Control Architecture",
     "tracks": [
-      "Main Conference"
+      "Quantum - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756048",
@@ -2493,7 +2490,7 @@
     ],
     "title": "LANCER: Low-Overhead, Accurate, and Non-Destructive Calibration for Real-World Fault-Tolerant Quantum Applications",
     "tracks": [
-      "Main Conference"
+      "Quantum - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756026",
@@ -2551,7 +2548,7 @@
     ],
     "title": "YOUTIAO: Hybrid Multiplexing with Dynamic Qubit Grouping for Low-cost and Scalable Quantum Wiring",
     "tracks": [
-      "Main Conference"
+      "Quantum - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756061",
@@ -2622,7 +2619,7 @@
     ],
     "title": "Characterizing the Efficiency of Distributed Training: A Power, Performance, and Thermal Perspective",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Training)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756111",
@@ -2696,7 +2693,7 @@
     ],
     "title": "NetZIP: Algorithm/Hardware Co-design of In-network Lossless Compression for Distributed Large Model Training",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Training)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756079",
@@ -2748,7 +2745,7 @@
     ],
     "title": "Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Training)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756057",
@@ -2795,7 +2792,7 @@
     ],
     "title": "SkipReduce: (Interconnection) Network Sparsity to Accelerate Distributed Machine Learning",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Training)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756092",
@@ -2845,7 +2842,7 @@
     ],
     "title": "ATR: Out-of-Order Register Release Exploiting Atomic Regions",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture II"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756135",
@@ -2901,7 +2898,7 @@
     ],
     "title": "SHADOW: Simultaneous Multi-Threading Architecture with Asymmetric Threads",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture II"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756070",
@@ -2986,7 +2983,7 @@
     ],
     "title": "Titan-I: An Open-Source, High Performance RISC-V Vector Core",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture II"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756059",
@@ -3034,7 +3031,7 @@
     ],
     "title": "MUSS-TI: Multi-level Shuttle Scheduling for Large-Scale Entanglement Module Linked Trapped-Ion",
     "tracks": [
-      "Main Conference"
+      "Quantum - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756129",
@@ -3093,7 +3090,7 @@
     ],
     "title": "Rasengan: A Transition Hamiltonian-based Approximation Algorithm for Solving Constrained Binary Optimization Problems",
     "tracks": [
-      "Main Conference"
+      "Quantum - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756107",
@@ -3128,7 +3125,7 @@
     ],
     "title": "Resource-adaptive Compilation of Photonic One-way Quantum Computing",
     "tracks": [
-      "Main Conference"
+      "Quantum - 2"
     ],
     "urls": [
       "https://microarch.org/micro58/program/index.php"
@@ -3202,7 +3199,7 @@
     ],
     "title": "Vegapunk: Accurate and Fast Decoding for Quantum LDPC Codes with Online Hierarchical Algorithm and Sparse Accelerator",
     "tracks": [
-      "Main Conference"
+      "Quantum - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756084",
@@ -3275,7 +3272,7 @@
     ],
     "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756095",
@@ -3322,7 +3319,7 @@
     ],
     "title": "Boötes: Boosting the Efficiency of Sparse Accelerators Using Spectral Clustering",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756125",
@@ -3367,7 +3364,7 @@
     ],
     "title": "Chasoň: Supporting Cross HBM Channel Data Migration to Enable Efficient Sparse Algebraic Acceleration",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756086",
@@ -3415,7 +3412,7 @@
     ],
     "title": "Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756126",
@@ -3484,7 +3481,7 @@
     ],
     "title": "Amove: Accelerating LLMs through Mitigating Outliers and Salient Points via Fine-Grained Grouped Vectorized Data Type",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Quantization)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756113",
@@ -3546,7 +3543,7 @@
     ],
     "title": "AxCore: A Quantization-Aware Approximate GEMM Unit for LLM Inference",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Quantization)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756094",
@@ -3571,6 +3568,7 @@
       "Jaehoon Cho",
       "Jaewoong Sim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
@@ -3578,7 +3576,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -3598,9 +3596,11 @@
     "locations": [],
     "pages": "869-883",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756118",
       "https://doi.org/10.1145/3725843.3756118"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5A: Systems for AI (Quantization)"
     ],
@@ -3609,16 +3609,23 @@
     ],
     "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Quantization)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756118",
-      "https://microarch.org/micro58/program/index.php",
-      "https://openalex.org/W4415308961"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0008-7112-6045",
+      "0000-0002-3106-5451",
+      "0009-0008-3070-6107",
+      "0009-0001-8303-1616",
+      "0000-0001-6243-8479",
+      "0000-0002-3285-2625"
+    ],
     "authorInstitutions": "Shuiyi He (National Univ. of Defense Technology); Zicong Wang (National Univ. of Defense Technology); Xuan Tang (National Univ. of Defense Technology); Hao Tang (National Univ. of Defense Technology); Dezun Dong (NUDT); Liquan Xiao (National Univ. of Defense Technology)",
     "authors": [
       "Shuiyi He",
@@ -3628,15 +3635,23 @@
       "Dezun Dong",
       "Liquan Xiao"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756133",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Microarchitecture - Prefetching 2"
     },
     "id": "5B-Elevating_Temporal_Prefetching_Through_Instruction_Correlation",
     "locations": [],
+    "pages": "915-928",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5B: Microarchitecture - Prefetching 2"
     ],
@@ -3645,9 +3660,10 @@
     ],
     "title": "Elevating Temporal Prefetching Through Instruction Correlation",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture - Prefetching 2"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756133",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3697,7 +3713,7 @@
     ],
     "title": "Ghost Threading: Helper-Thread Prefetching for Real Systems",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture - Prefetching 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756106",
@@ -3758,7 +3774,7 @@
     ],
     "title": "Micro-MAMA: Multi-Agent Reinforcement Learning for Multicore Prefetching",
     "tracks": [
-      "Main Conference"
+      "Microarchitecture - Prefetching 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756096",
@@ -3768,6 +3784,15 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-7946-2683",
+      "0009-0001-8046-7545",
+      "0009-0003-7770-003X",
+      "0000-0003-0612-4939",
+      "0009-0001-7305-6748",
+      "0000-0001-5168-9045",
+      "0000-0003-2595-5228"
+    ],
     "authorInstitutions": "Gerasimos Gerogiannis (Univ. of Illinois Urbana-Champaign); Dimitrios Merkouriadis (Univ. of Illinois Urbana-Champaign); Charles Block (Univ. of Illinois Urbana-Champaign); Annus Zulfiqar (Univ. of Michigan); Filippos Tofalos (Univ. of Illinois Urbana-Champaign); Muhammad Shahbaz (Univ. of Michigan); Josep Torrellas (Univ. of Illinois Urbana-Champaign)",
     "authors": [
       "Gerasimos Gerogiannis",
@@ -3778,15 +3803,26 @@
       "Muhammad Shahbaz",
       "Josep Torrellas"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
+    "doi": "10.1145/3725843.3756076",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Sparsity - 2"
     },
     "id": "5C-NetSparse_In-Network_Acceleration_of_Distributed_Sparse_Kernels",
     "locations": [],
+    "pages": "958-974",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3725843.3756076"
+    ],
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5C: Sparsity - 2"
     ],
@@ -3795,9 +3831,10 @@
     ],
     "title": "NetSparse: In-Network Acceleration of Distributed Sparse Kernels",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 2"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756076",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -3858,7 +3895,7 @@
     ],
     "title": "Quartz: A Reconfigurable, Distributed Memory Accelerator for Sparse Applications",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756035",
@@ -3869,7 +3906,7 @@
   {
     "abstract": "Sparse tensor computations are highly memory-bound, making on-chip data reuse in SRAM buffers critical to the performance of domain-specific sparse accelerators.On-demand caches are commonly used in recent sparse accelerators, due to the advantage of easy space allocation and the ability to avoid unnecessary data fetches compared to scratchpad-style data buffering.However, existing cache designs suffer from inefficient space utilization due to the difficulty of fitting variable-length sparse data into fixedsize cache blocks.The theoretically optimal replacement policies used by them also have substantial implementation cost, requiring significant on-chip space to manage the metadata.To address these issues, we propose SeaCache to enable efficient and adaptive caching for sparse accelerators.SeaCache includes three key techniques.First, it incorporates fiber packing and splitting to efficiently map variable-length data into fixed-size cache blocks with high space utilization.Second, it proposes a practical replacement policy that performs similarly to the optimal one but has a much cheaper implementation.Third, it shares the cache space between the actual data and the replacement policy metadata, with a two-phase adaptive mechanism to decide the best partition ratio.Overall, Sea-Cache outperforms state-of-the-art sparse cache designs by 2.8 on average, demonstrating the effectiveness of its novel optimizations.",
     "authorIds": [
-      "A5058196045",
+      "0009-0007-7461-8662",
       "0009-0004-1039-619X",
       "0000-0001-8433-7281"
     ],
@@ -3879,6 +3916,7 @@
       "Jinchen Jiang",
       "Mingyu Gao"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 9:20 AM KST – 10:20 AM KST"
     ],
@@ -3886,7 +3924,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -3908,7 +3946,8 @@
     "pdfUrls": [
       "https://dl.acm.org/doi/pdf/10.1145/3725843.3756040"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5C: Sparsity - 2"
     ],
@@ -3917,12 +3956,11 @@
     ],
     "title": "SeaCache: Efficient and Adaptive Caching for Sparse Accelerators",
     "tracks": [
-      "Main Conference"
+      "Sparsity - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756040",
-      "https://microarch.org/micro58/program/index.php",
-      "https://openalex.org/W4415295242"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -3988,7 +4026,7 @@
     ],
     "title": "Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device",
     "tracks": [
-      "Main Conference"
+      "Superconducting Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756132",
@@ -4057,7 +4095,7 @@
     ],
     "title": "ColumnDisturb: Understanding Column-based Read Disturbance in Real DRAM Chips and Implications for Future Systems",
     "tracks": [
-      "Main Conference"
+      "Superconducting Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756022",
@@ -4131,7 +4169,7 @@
     ],
     "title": "SuperSFQ: A Hardware Design to Realize High-Frequency Superconducting Processors",
     "tracks": [
-      "Main Conference"
+      "Superconducting Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756024",
@@ -4183,7 +4221,7 @@
     ],
     "title": "C3ache: Towards Hierarchical Cache-Centric Computing for Sparse Matrix Multiplication on GPGPUs",
     "tracks": [
-      "Main Conference"
+      "GPUs - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756077",
@@ -4232,7 +4270,7 @@
     ],
     "title": "Leveraging Chiplet-Locality for Efficient Memory Mapping in Multi-Chip Module GPUs",
     "tracks": [
-      "Main Conference"
+      "GPUs - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756090",
@@ -4294,7 +4332,7 @@
     ],
     "title": "Security and Performance Implications of GPU Cache Eviction Priority Hints",
     "tracks": [
-      "Main Conference"
+      "GPUs - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756116",
@@ -4367,7 +4405,7 @@
     ],
     "title": "COSMOS: RL-Enhanced Locality-Aware Counter Cache Optimization for Secure Memory",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756047",
@@ -4416,7 +4454,7 @@
     ],
     "title": "Citadel: Rethinking Memory Allocation to Safeguard Against Inter-Domain Rowhammer Exploits",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756098",
@@ -4425,6 +4463,12 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0009-0000-5630-8264",
+      "0000-0002-0406-1973",
+      "0000-0003-3987-463X",
+      "0000-0003-2133-0722"
+    ],
     "authorInstitutions": "Debpratim Adak (North Carolina State Univ.); Eric Rotenberg (North Carolina State Univ.); Amro Awad (Univ. of Oxford); Huiyang Zhou (North Carolina State Univ.)",
     "authors": [
       "Debpratim Adak",
@@ -4432,15 +4476,23 @@
       "Amro Awad",
       "Huiyang Zhou"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 2: Tuesday, October 21, 2025 10:40 AM KST – 12:00 PM KST"
     ],
+    "doi": "10.1145/3725843.3756050",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Security and Privacy - Memory"
     },
     "id": "6B-CryptoBTB_A_Secure_Hierarchical_BTB_for_Diverse_Instruction_Footprint_Workloads",
     "locations": [],
+    "pages": "1087-1101",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6B: Security and Privacy - Memory"
     ],
@@ -4449,9 +4501,10 @@
     ],
     "title": "CryptoBTB: A Secure Hierarchical BTB for Diverse Instruction Footprint Workloads",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Memory"
     ],
     "urls": [
+      "https://doi.org/10.1145/3725843.3756050",
       "https://microarch.org/micro58/program/index.php"
     ]
   },
@@ -4509,7 +4562,7 @@
     ],
     "title": "Efficient Security Support for CXL Memory through Adaptive Incremental Offloaded (Re-)Encryption",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756119",
@@ -4561,7 +4614,7 @@
     ],
     "title": "EcoCore: Dynamic Core Management for Improving Energy Efficiency in Latency-Critical Applications",
     "tracks": [
-      "Main Conference"
+      "Energy and Power"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756021",
@@ -4630,7 +4683,7 @@
     ],
     "title": "Flexing RISC-V Instruction Subset Processors to Extreme Edge",
     "tracks": [
-      "Main Conference"
+      "Energy and Power"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756036",
@@ -4686,7 +4739,7 @@
     ],
     "title": "Multi-Dimensional ML-Pipeline Optimization in Cost-Effective Disaggregated Datacenter",
     "tracks": [
-      "Main Conference"
+      "Energy and Power"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756088",
@@ -4750,7 +4803,7 @@
     ],
     "title": "ReGate: Enabling Power Gating in Neural Processing Units",
     "tracks": [
-      "Main Conference"
+      "Energy and Power"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756038",
@@ -4818,7 +4871,7 @@
     ],
     "title": "CrossBit: Bitwise Computing in NAND Flash Memory with Inter-Bitline Data Communication",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Computing and Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756055",
@@ -4868,7 +4921,7 @@
     ],
     "title": "DEAR: Improving Performance and Lifetime of SSDs Using Dynamic Error-Aware Refresh",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Computing and Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756134",
@@ -4921,7 +4974,7 @@
     ],
     "title": "FexMo: Enabling Fuse Execution Mode for Multi-task CGRAs",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Computing and Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756019",
@@ -4970,7 +5023,7 @@
     ],
     "title": "Nexus Machine: An Energy-Efficient Active Message Inspired Reconfigurable Architecture",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Computing and Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756091",
@@ -5041,7 +5094,7 @@
     ],
     "title": "Crane: Inter-Layer Scheduling Framework for DNN Inference and Training Co-Support on Tiled Architecture",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (HW/SW Support)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756023",
@@ -5074,8 +5127,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -5110,13 +5162,11 @@
     ],
     "title": "ELK: Exploring the Efficiency of Inter-core Connected AI Chips with Deep Learning Compiler Techniques",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (HW/SW Support)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756064",
-      "https://microarch.org/micro58/program/index.php",
-      "http://arxiv.org/abs/2507.11506",
-      "https://openalex.org/W4414946629"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -5154,8 +5204,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -5191,13 +5240,11 @@
     ],
     "title": "Empowering Vector Architectures for ML: The CAMP Architecture for Matrix Multiplication",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (HW/SW Support)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3760547",
-      "https://microarch.org/micro58/program/index.php",
-      "http://arxiv.org/abs/2504.08137",
-      "https://openalex.org/W4414827607"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -5246,7 +5293,7 @@
     ],
     "title": "OASIS: A Commercial High Performance Terminal AI Processor Supporting RISC-V Tensor Extension Instructions",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (HW/SW Support)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756054",
@@ -5302,7 +5349,7 @@
     ],
     "title": "TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (HW/SW Support)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756075",
@@ -5352,8 +5399,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -5385,13 +5431,11 @@
     ],
     "title": "LEGOSim: A Unified Parallel Simulation Framework for Multi-chiplet Heterogeneous Integration",
     "tracks": [
-      "Main Conference"
+      "Tools and Simulators"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756068",
-      "https://microarch.org/micro58/program/index.php",
-      "https://doi.org/10.5281/zenodo.16886880",
-      "https://openalex.org/W7127096965"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -5452,7 +5496,7 @@
     ],
     "title": "LLMulator: Generalizable Cost Modeling for Dataflow Accelerators with Input-Adaptive Control Flow",
     "tracks": [
-      "Main Conference"
+      "Tools and Simulators"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756027",
@@ -5523,7 +5567,7 @@
     ],
     "title": "PyTorchSim: A Comprehensive, Fast, and Accurate NPU Simulation Framework",
     "tracks": [
-      "Main Conference"
+      "Tools and Simulators"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756045",
@@ -5586,7 +5630,7 @@
     ],
     "title": "Simulating Hardware with C Speed and RTL Accuracy for High-Level Synthesis Designs",
     "tracks": [
-      "Main Conference"
+      "Tools and Simulators"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756033",
@@ -5637,7 +5681,7 @@
     ],
     "title": "Swift and Trustworthy Large-Scale GPU Simulation with Fine-Grained Error Modeling and Hierarchical Clustering",
     "tracks": [
-      "Main Conference"
+      "Tools and Simulators"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3757107",
@@ -5698,7 +5742,7 @@
     ],
     "title": "DRAM Fault Classification through Large-Scale Field Monitoring for Robust Memory RAS Management",
     "tracks": [
-      "Main Conference"
+      "Reliability, Fault-tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756089",
@@ -5749,7 +5793,7 @@
     ],
     "title": "DiffTest-H: Toward Semantic-Aware Communication in Hardware-Accelerated Processor Verification",
     "tracks": [
-      "Main Conference"
+      "Reliability, Fault-tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756108",
@@ -5820,7 +5864,7 @@
     ],
     "title": "ρHammer: Reviving RowHammer Attacks on New Architectures via Prefetching",
     "tracks": [
-      "Main Conference"
+      "Reliability, Fault-tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756042",
@@ -5870,7 +5914,7 @@
     ],
     "title": "SymbFuzz: Symbolic Execution Guided Hardware Fuzzing",
     "tracks": [
-      "Main Conference"
+      "Reliability, Fault-tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756131",
@@ -5942,7 +5986,7 @@
     ],
     "title": "Understanding and Mitigating Covert and Side Channel Vulnerabilities Introduced by RowHammer Defenses",
     "tracks": [
-      "Main Conference"
+      "Reliability, Fault-tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756029",
@@ -6018,7 +6062,7 @@
     ],
     "title": "Boosting Task Scheduling Data Locality with Low-latency, HW-accelerated Label Propagation",
     "tracks": [
-      "Main Conference"
+      "Graph processing and HPC"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756080",
@@ -6073,7 +6117,7 @@
     ],
     "title": "FALA: Locality-Aware PIM-Host Cooperation for Graph Processing with Fine-Grained Column Access",
     "tracks": [
-      "Main Conference"
+      "Graph processing and HPC"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756127",
@@ -6139,7 +6183,7 @@
     ],
     "title": "Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework",
     "tracks": [
-      "Main Conference"
+      "Graph processing and HPC"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756128",
@@ -6185,7 +6229,7 @@
     ],
     "title": "TransFusion: End-to-End Transformer Acceleration via Graph Fusion and Pipelining",
     "tracks": [
-      "Main Conference"
+      "Graph processing and HPC"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756105",
@@ -6246,7 +6290,7 @@
     ],
     "title": "X-SET: An Efficient Graph Pattern Matching Accelerator With Order-Aware Parallel Intersection Units",
     "tracks": [
-      "Main Conference"
+      "Graph processing and HPC"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756112",
@@ -6315,7 +6359,7 @@
     ],
     "title": "BitL: A Hybrid Bit-Serial and Parallel Deep Learning Accelerator for Critical Path Reduction",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Data Representations)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756044",
@@ -6361,7 +6405,7 @@
     ],
     "title": "HiPACK: Efficient Sub-8-Bit Direct Convolution with SIMD and Bitwise Management",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Data Representations)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756124",
@@ -6405,8 +6449,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -6440,13 +6483,11 @@
     ],
     "title": "MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Data Representations)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756037",
-      "https://microarch.org/micro58/program/index.php",
-      "http://arxiv.org/abs/2509.10372",
-      "https://openalex.org/W4414596626"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -6507,7 +6548,7 @@
     ],
     "title": "MHE-TPE: Multi-Operand High-Radix Encoder for Mixed-Precision Fixed-Point Tensor Processing Engines",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Processor architecture)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756101",
@@ -6558,7 +6599,7 @@
     ],
     "title": "PolymorPIC: Embedding Polymorphic Processing-in-Cache in RISC-V based Processor for Full-stack Efficient AI Inference",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Processor architecture)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756066",
@@ -6568,10 +6609,10 @@
   {
     "abstract": "",
     "authorIds": [
-      "A5072358118",
+      "0009-0001-7111-086X",
       "0009-0009-5928-3053",
       "0000-0001-8145-815X",
-      "A5002298749"
+      "0000-0002-2590-698X"
     ],
     "authorInstitutions": "Sabuj Laskar (Texas A&M Univ.); Pranati Majhi (Texas A&M Univ.); Abdullah Muzahid (Texas A&M Univ.); Eun Jung Kim (Texas A&M Univ.)",
     "authors": [
@@ -6580,6 +6621,7 @@
       "Abdullah Muzahid",
       "Eun Jung Kim"
     ],
+    "container": "Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture",
     "dates": [
       "Day 3: Wednesday, October 22, 2025 8:30 AM KST – 9:30 AM KST"
     ],
@@ -6587,7 +6629,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -6609,7 +6651,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3725843.3756085"
     ],
-    "publicationDate": "2025-10-17",
+    "publicationDate": "2025-10-18",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8B: Systems for AI (Processor architecture)"
     ],
@@ -6618,12 +6661,11 @@
     ],
     "title": "SuperMesh: Energy-Efficient Collective Communications for Accelerators",
     "tracks": [
-      "Main Conference"
+      "Systems for AI (Processor architecture)"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756085",
-      "https://microarch.org/micro58/program/index.php",
-      "https://openalex.org/W4415309062"
+      "https://microarch.org/micro58/program/index.php"
     ]
   },
   {
@@ -6694,7 +6736,7 @@
     ],
     "title": "DS-TIDE: Harnessing Dynamical Systems for Efficient Time-Independent Differential Equation Solving",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756082",
@@ -6746,7 +6788,7 @@
     ],
     "title": "MINDFUL: Safe, Implantable, Large-Scale Brain-Computer Interfaces from a System-Level Design Perspective",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756032",
@@ -6817,7 +6859,7 @@
     ],
     "title": "SMX: Heterogeneous Architecture for Universal Sequence Alignment Acceleration",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 1"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756018",
@@ -6880,7 +6922,7 @@
     ],
     "title": "HAWK: Fully Homomorphic Encryption Accelerator with Fixed-Word Key Decomposition Switching",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756123",
@@ -6938,7 +6980,7 @@
     ],
     "title": "ShadowBinding: Realizing Effective Microarchitectures for In-Core Secure Speculation Schemes",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756074",
@@ -6990,7 +7032,7 @@
     ],
     "title": "SmartPIR: A Private Information Retrieval System using Computational Storage Devices",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756060",
@@ -7051,7 +7093,7 @@
     ],
     "title": "Towards Closing the Performance Gap for Cryptographic Kernels Between CPUs and Specialized Hardware",
     "tracks": [
-      "Main Conference"
+      "Security and Privacy - Cryptography, Speculation and Computational Storage"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756120",
@@ -7105,7 +7147,7 @@
     ],
     "title": "Beyond Page Migration: Enhancing Tiered Memory Performance via Integrated Last-Level Cache Management and Page Migration",
     "tracks": [
-      "Main Conference"
+      "Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756063",
@@ -7176,7 +7218,7 @@
     ],
     "title": "Delegato: Locality-Aware Atomic Memory Operations on Chiplets",
     "tracks": [
-      "Main Conference"
+      "Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756030",
@@ -7249,7 +7291,7 @@
     ],
     "title": "Learning to Walk: Architecting Learned Virtual Memory Translation",
     "tracks": [
-      "Main Conference"
+      "Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756093",
@@ -7303,7 +7345,7 @@
     ],
     "title": "Re-architecting End-host Networking with CXL: Coherence, Memory, and Offloading",
     "tracks": [
-      "Main Conference"
+      "Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756102",
@@ -7371,7 +7413,7 @@
     ],
     "title": "GCC: A 3DGS Inference Architecture with Gaussian-Wise and Cross-Stage Conditional Processing",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756072",
@@ -7429,7 +7471,7 @@
     ],
     "title": "PointISA: ISA-Extensions for Efficient Point Cloud Analytics via Architecture and Algorithm Co-Design",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756122",
@@ -7506,7 +7548,7 @@
     ],
     "title": "REACT3D: Real-time Edge Accelerator for Incremental Training in 3D Gaussian Splatting based SLAM Systems",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756109",
@@ -7553,8 +7595,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -7590,13 +7631,11 @@
     ],
     "title": "RTGS: Real-Time 3D Gaussian Splatting SLAM via Multi-Level Redundancy Reduction",
     "tracks": [
-      "Main Conference"
+      "Emerging Applications - 2"
     ],
     "urls": [
       "https://doi.org/10.1145/3725843.3756099",
-      "https://microarch.org/micro58/program/index.php",
-      "http://arxiv.org/abs/2510.06644",
-      "https://openalex.org/W4415097159"
+      "https://microarch.org/micro58/program/index.php"
     ]
   }
 ]

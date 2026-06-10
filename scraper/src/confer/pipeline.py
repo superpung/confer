@@ -1,7 +1,6 @@
 """Orchestrate: for each venue, run its adapter and emit site data."""
 
-from __future__ import annotations
-
+import json
 import sys
 from pathlib import Path
 from typing import Any
@@ -13,6 +12,7 @@ from .fetcher import Fetcher
 from .models import Paper
 from .paths import cache_root, site_data_dir
 from .scrapers import get_scraper
+from .util import meaningful_abstract
 
 
 def build_venue(
@@ -34,7 +34,12 @@ def build_venue(
     )
     scraper = get_scraper(venue, fetcher, limit=limit, workers=workers)
     papers = scraper.scrape()
-    return enrich_papers(venue, fetcher, papers)
+    papers = enrich_papers(venue, fetcher, papers)
+    # Drop placeholder abstracts ("No abstract available", …) so a from-scratch
+    # build is clean without depending on any previously written output.
+    for paper in papers:
+        paper.abstract = meaningful_abstract(paper.abstract)
+    return papers
 
 
 def build(
@@ -78,8 +83,6 @@ def build(
 
 def _merge_manifest(out_dir: Path, summaries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Keep manifest entries for venues we did not rebuild this run."""
-    import json
-
     rebuilt_ids = {item["id"] for item in summaries}
     existing: list[dict[str, Any]] = []
     manifest_path = out_dir / "venues.json"

@@ -396,14 +396,24 @@
       "Yang Hu",
       "Shouyi Yin"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 10:10 - 10:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408518",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "20834088-132d-4722-b0d7-7cd65280547f",
     "locations": [
       "Coogee"
     ],
+    "pages": "1-16",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Wafer-Scale Systems for Large Models",
       "Main Conference"
@@ -417,6 +427,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408518",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/14/FACE-Fully-PD-Overlapped-Scheduling-and-Multi-Level-Architecture-Co-Exploration-on-W",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -2258,14 +2269,24 @@
       "Ming-Chang Yang",
       "Bingzhe Li"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Wed 4 Feb 2026 09:50 - 10:10"
     ],
+    "doi": "10.1109/hpca68181.2026.11408524",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7d14a5b5-a02c-479c-8c43-51d04a3ae827",
     "locations": [
       "Coogee"
     ],
+    "pages": "1-16",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Graph Neural Networks and Retrieval Systems",
       "Main Conference"
@@ -2279,6 +2300,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408524",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/102/VeloxGNN-Accelerating-Out-of-Core-based-GNN-Training-with-Low-Data-Migration-and-Hig",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -3707,14 +3729,24 @@
       "Amelie Chi Zhou",
       "Cheng Chen"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Wed 4 Feb 2026 11:30 - 11:50"
     ],
+    "doi": "10.1109/hpca68181.2026.11408549",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b13f65e8-92dd-4451-805d-3a666af71799",
     "locations": [
       "Coogee"
     ],
+    "pages": "1-15",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Efficient Serving and Resource Management",
       "Main Conference"
@@ -3728,6 +3760,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408549",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/85/Near-Zero-Overhead-Freshness-for-Recommendation-Systems-via-Inference-Side-Model-Upda",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -3787,14 +3820,24 @@
       "Qiangsheng Su",
       "Jiwu Shu"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 15:10 - 15:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408613",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b2c73b8d-407a-4897-b6ba-a731f7dcfe7d",
     "locations": [
       "Collaroy"
     ],
+    "pages": "1-14",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Memory Systems for Scalable Computing",
       "Main Conference"
@@ -3808,6 +3851,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408613",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/65/Pulse-Fine-Grained-Hierarchical-Hashing-Index-for-Disaggregated-Memory",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -4493,14 +4537,24 @@
       "Quang Duong",
       "Calvin Lin"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Tue 3 Feb 2026 11:50 - 12:10"
     ],
+    "doi": "10.1109/hpca68181.2026.11408470",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ce81dca1-776e-4129-a78d-db67bad0633a",
     "locations": [
       "Collaroy"
     ],
+    "pages": "1-15",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Caching and Prefetching",
       "Main Conference"
@@ -4514,6 +4568,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408470",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/35/Streamlined-On-Chip-Temporal-Prefetching",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -5219,14 +5274,24 @@
       "Steven Swanson",
       "Josep Torrellas"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Mon 2 Feb 2026 10:30 - 10:50"
     ],
+    "doi": "10.1109/hpca68181.2026.11408509",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e624dff9-b615-4840-babf-5949c7e32b8c",
     "locations": [
       "Collaroy"
     ],
+    "pages": "1-14",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Cache Coherence and Chiplet Interconnects",
       "Main Conference"
@@ -5240,6 +5305,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408509",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/56/PhasedStore-Supporting-High-performance-Write-through-Cache-coherence-Protocols-unde",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]
@@ -5347,14 +5413,24 @@
       "Yinqian Zhang",
       "Trevor E. Carlson"
     ],
+    "container": "2026 IEEE International Symposium on High Performance Computer Architecture (HPCA)",
     "dates": [
       "Wed 4 Feb 2026 10:10 - 10:30"
     ],
+    "doi": "10.1109/hpca68181.2026.11408465",
     "eventType": "Talk; Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e9b64d9b-c54d-4d8d-b4aa-924e87dcf74a",
     "locations": [
       "Collaroy"
     ],
+    "pages": "1-15",
+    "publicationDate": "2026-01-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Hardware Security and Side-Channel Defenses",
       "Main Conference"
@@ -5368,6 +5444,7 @@
       "Main Conference"
     ],
     "urls": [
+      "https://doi.org/10.1109/hpca68181.2026.11408465",
       "https://2026.hpca-conf.org/details/hpca-2026-main-conference/107/SSBleed-Non-speculative-Side-channel-Attacks-via-Speculative-Store-Bypass-on-Armv9-C",
       "https://conf.researchr.org/track/hpca-2026/hpca-2026-main-conference"
     ]

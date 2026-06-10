@@ -11,6 +11,10 @@ from urllib.parse import parse_qs, urlparse
 from bs4 import Tag
 
 DOI_RE = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Za-z0-9]+", re.IGNORECASE)
+PLACEHOLDER_ABSTRACTS = {
+    "no description available",
+    "no abstract available",
+}
 
 
 def clean_text(node: Tag | None) -> str:
@@ -31,6 +35,11 @@ def strip_markup(value: str) -> str:
     text = re.sub(r"</?[A-Za-z][^>\s]*(?=\s|$)", "", text)
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def meaningful_abstract(value: str) -> str:
+    abstract = strip_markup(value).strip()
+    return "" if abstract.lower().strip(" .") in PLACEHOLDER_ABSTRACTS else abstract
 
 
 def clean_doi(value: str) -> str:

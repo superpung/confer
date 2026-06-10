@@ -16,7 +16,6 @@ def make_scraper(tmp_path: Path) -> SigarchScraper:
         scraper="sigarch",
         source={
             "program_url": "https://www.asplos-conference.org/asplos2026/program/index.html",
-            "default_track": "Main Conference",
         },
     )
     return SigarchScraper(venue, Fetcher(tmp_path, refresh=False))
@@ -37,7 +36,7 @@ def test_parse_program_extracts_panel_papers(tmp_path):
         "Alan Turing (Example Labs); "
         "Edsger Dijkstra (Example Institute, Department of Computing)"
     )
-    assert paper.tracks == ["Main Conference"]
+    assert paper.tracks == ["LLM Serving"]
     assert paper.event_type == "Paper"
     assert paper.session_titles == ["Session 1A: LLM Serving"]
     assert paper.sessions == ["1A"]

@@ -452,6 +452,14 @@
   },
   {
     "abstract": "Review comment generation is a crucial task in code review, and significant progress has been made in automating. Previous research has generated review comments by fine-tuning pre-trained models or Large Language Models (LLMs). However, these studies have overlooked the necessity of conducting code reviews from multiple perspectives, resulting in the omission of potential issues in code changes. Additionally, the complexity of review comments often hinders the accurate quantitative evaluation of automated tools’ effectiveness. In this paper, we first conduct an empirical study to propose a comprehensive taxonomy of code review dimensions. We also identify three major limitations of existing automated code review (ACR) methods: lack of comprehensiveness, incorrectness, and vagueness. Building on the insights from our empirical study, we introduce HYDRA-REVIEWER, a collaborative multi-agent framework powered by large language models, designed to automatically generate high-quality code reviews. We utilize the CodeReview and CodeReviewNew benchmark datasets, along with a newly constructed review comment generation dataset. We compare HYDRA-REVIEWER with several baselines, including CodeReviewer, LLaMA-Reviewer, ChatGPT, Comprehensive-ChatGPT, and DeepSeek-V3. The experimental results show that HYDRA-REVIEWER achieves a BLEU score of 8.20, outperforming the state-of-the-art baseline, DeepSeek-V3, which scores 7.85. In qualitative evaluation, HYDRA-REVIEWER‘s generated comments span an average of 7.8 review dimensions, addressing the limitations of existing ACR methods effectively. Additionally, HYDRA-REVIEWER demonstrates strong generalization capabilities on an unseen dataset. We further validate the contributions of each component of HYDRA-REVIEWER through an ablation study and confirm the helpfulness and readability of the generated comments via a User Study. Finally, a cost analysis reveals that HYDRA-REVIEWER generates review comments at an average cost of 0.018 dollars and 62.63 seconds per code change.",
+    "authorIds": [
+      "0000-0002-5526-1617",
+      "0009-0004-7108-9847",
+      "0000-0002-7869-1310",
+      "0000-0003-3169-0211",
+      "0000-0002-8283-9146",
+      "0000-0002-9748-1810"
+    ],
     "authorInstitutions": "Xiaoxue Ren (Zhejiang University); Chaoqun Dai (Zhejiang Gongshang University); Qiao Huang (Zhejiang Gongshang University); Ye Wang (Zhejiang Gongshang University); Chao Liu (Chongqing University); Bo Jiang (Zhejiang Gongshang University)",
     "authors": [
       "Xiaoxue Ren",
@@ -461,14 +469,25 @@
       "Chao Liu",
       "Bo Jiang"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 11:30 - 11:50"
     ],
+    "doi": "10.1109/tse.2025.3621462",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "08a0749c-6276-49c4-be00-5d7bbbcc6ca8",
+    "issue": "12",
     "locations": [
       "MB 2.210"
     ],
+    "pages": "3540-3557",
+    "publicationDate": "2025-12-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Code Review 1"
@@ -481,9 +500,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3621462",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/40/Hydra-Reviewer-A-holistic-multi-agent-system-for-automatic-code-review-comment-gener",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "Large language models (LLMs) have achieved remarkable performance in software engineering (SE), and fine-tuning LLM for specific SE tasks has gradually become a new paradigm. However, storing fine-tuned checkpoints for multiple tasks incurs heavy storage and deployment complexity. Model fusion, which operates on fine-tuned parameters, offers excellent parameter compression and scalability, yet its effectiveness in the SE domain remains underexplored, making such an investigation essential for guiding the development of customized fusion techniques for the SE domain. To bridge this gap, we conduct a systematic study of model fusion in the SE contexts and reveal the following major findings: (1) when fusing programming languages (PLs) within the same task, model fusion usually works well and can enhance the performance of PLs with fewer data when PLs share similar features. (2) when fusing SE tasks of the same category within a same PL, all methods except TALL-Masks generally suffer substantial performance degradation on specific tasks; (3) when fusing SE tasks of different categories across different PLs, all existing model fusion methods exhibit significant performance degradation on certain tasks. In our evaluation results, TALL-Masks, which introduces a mask for each task to extract the most relevant dimensions from the fusion parameters, achieves promising performance. However, during parameters fusion, weak features (i.e., small variation in fine-tuned parameters) are easily overshadowed by strong ones (i.e., large variation in fine-tuned parameters) during parameter fusion, causing the constructed masks to fail to extract the most relevant parameters. To overcome this situation, we propose an improved version of TALL-Masks, called Scaling-Masks. The key idea is to amplify weak features to prevent them from being overshadowed by strong ones, which is achieved by scaling the value range of weak features to match that of strong features. Experimental results demonstrate that Scaling-Masks can significantly improve fusion performance for tasks with extremely weak features without affecting other tasks, with normalized accuracy improved by 63.49% for vulnerability detection when fusing SE tasks of different categories and 24.02% for PHP when fusing PLs in the code repair task.",
@@ -730,6 +751,12 @@
   },
   {
     "abstract": "Microservices emerged as a popular architectural style over the last decade. Although designed to be self-contained, microservices must communicate to realize business capabilities, creating dependencies among their data and functionalities. Developers then resort to asynchronous, event-based communication to fulfill such dependencies while reducing coupling. However, developers are often oblivious to the inherent challenges of the event-based communication paradigm, leading to pitfalls that ultimately prompt them to reconsider adopting microservices. To make matters worse, literature is scarce on the practices and challenges of designing, implementing, testing, monitoring, and troubleshooting event-based microservices. To fill this gap, this paper provides the first comprehensive characterization of event management practices and challenges in microservices, based on a repository mining study of over 8000 Stack Overflow questions. We find that developers encounter a gamut of problems, including handling large event payloads, modeling event schemas, auditing and debugging event flows, and managing event dependencies and ordering constraints, suggesting that current practices and technologies do not sufficiently serve developers. We review the state of the art and practice through the lens of unveiled challenges and provide actionable implications for developers, providers, and researchers. As a result, our study will support advancing event management solutions in microservices.",
+    "authorIds": [
+      "0000-0003-2771-7477",
+      "0000-0003-0936-1542",
+      "0000-0002-7557-9091",
+      "0000-0002-7578-8117"
+    ],
     "authorInstitutions": "Rodrigo Laigner (University of Copenhagen); Ana Carolina Almeida (State University of Rio de Janeiro); Wesley K.G. Assunção (North Carolina State University); Yongluan Zhou (University of Copenhagen)",
     "authors": [
       "Rodrigo Laigner",
@@ -737,14 +764,23 @@
       "Wesley K.G. Assunção",
       "Yongluan Zhou"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 8 Jul 2026 12:10 - 12:30"
     ],
+    "doi": "10.1145/3776581",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0c0ce41e-6776-4b3f-90c3-9b5062b8e1bf",
     "locations": [
       "MB 3.445"
     ],
+    "publicationDate": "2025-12-05",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Empirical 1"
@@ -757,6 +793,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3776581",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/13/An-Empirical-Study-on-Challenges-of-Event-Management-in-Microservice-Architectures",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -1675,14 +1712,24 @@
       "Mike Papadakis",
       "Jie M. Zhang"
     ],
+    "container": "2025 IEEE International Conference on Intelligent Rail Transportation (ICIRT)",
     "dates": [
       "Wed 8 Jul 2026 14:40 - 15:00"
     ],
+    "doi": "10.1109/icirt66379.2025.11216705",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "17e890e8-389d-4be9-8a53-4b201175f005",
     "locations": [
       "MB 2.210"
     ],
+    "pages": "80-85",
+    "publicationDate": "2025-10-11",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Research Papers",
       "LLM for SE 5"
@@ -1695,6 +1742,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/icirt66379.2025.11216705",
       "https://conf.researchr.org/details/fse-2026/fse-2026-research-papers/97/Boosting-LLMs-for-Mutation-Generation",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -2106,20 +2154,36 @@
   },
   {
     "abstract": "Attracting and retaining a steady stream of new contributors is crucial to ensuring the long-term survival of open-source software (OSS) projects. But due to the challenges faced by new contributors during the onboarding process, many fail to become long-term contributors. Small OSS projects sometimes face difficulty in attracting newcomers. To assist the newcomers in their onboarding process, researchers have proposed recommendations that newcomers may follow for successful onboarding. However, there are two key research gaps regarding recommendations for onboarding new contributors to OSS projects. First, most of the existing recommendations are based on a limited number of projects, which raises concerns about their generalizability. If a recommendation yields conflicting results in a different context, it could hinder a newcomer’s onboarding process rather than help them. Second, it’s unclear whether these recommendations also apply to experienced contributors. If certain recommendations are specific to newcomers, continuing to follow them after their initial contributions are accepted could hinder their chances of becoming long-term contributors. To address these gaps, we conducted a two-stage mixed-method study. In the first stage, we conducted a Systematic Literature Review (SLR) and identified 15 task-related actionable recommendations that newcomers to OSS projects can follow to improve their odds of successful onboarding. In the second stage, we conduct a large-scale empirical study of five Gerrit-based projects and 1,155 OSS projects from GitHub to assess whether those recommendations assist newcomers’ successful onboarding. We conducted a multivariate logistic regression analysis to identify which task-related recommendations are practically influencing newcomer onboarding and which recommendations are not. Our results suggest that four recommendations positively correlate with newcomers’ first patch acceptance in most contexts. Four recommendations are context-dependent, and four indicate significant negative associations for most projects. Our results also found three newcomer-specific recommendations, which OSS joiners should abandon at non-newcomer status to increase their odds of becoming long-term contributors. We have released our dataset and scripts on GitHub, which is publicly available as: \\url{ https://github.com/WSU-SEAL/newcomer-onboarding }. This study has important implications for researchers by providing empirical evidence on the effectiveness and real-world impact of task-related onboarding recommendations in OSS projects. By evaluating recommendations across a large and diverse set of projects, the findings help identify which practices generalize across contexts and which are context-dependent or ineffective. The findings are also valuable for OSS project maintainers and contributors. Maintainers can use these insights to refine onboarding guidelines by emphasizing recommendations that positively influence newcomer success and reconsidering those with negative or limited impact. Newcomers can follow the validated recommendations to improve their chances of successful onboarding, while experienced contributors can better understand which practices should be discontinued after the newcomer stage to enhance their long-term contribution potential.",
+    "authorIds": [
+      "0000-0002-0869-4962",
+      "0000-0002-8316-2560",
+      "0000-0002-3178-6232"
+    ],
     "authorInstitutions": "Asif Kamal Turzo (University of Massachusetts Dartmouth); Sayma Sultana (Tulane University, USA); Amiangshu Bosu (Wayne State University)",
     "authors": [
       "Asif Kamal Turzo",
       "Sayma Sultana",
       "Amiangshu Bosu"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 10:30 - 10:50"
     ],
+    "doi": "10.1109/tse.2025.3550881",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "209a3342-ea08-43b9-bb64-4327cdeaf926",
+    "issue": "4",
     "locations": [
       "MB 3.445"
     ],
+    "pages": "1303-1318",
+    "publicationDate": "2025-04-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Empirical 1"
@@ -2132,10 +2196,12 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3550881",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/22/From-First-Patch-to-Long-Term-Contributor-Evaluating-Onboarding-Recommendations-for-",
       "https://github.com/WSU-SEAL/newcomer-onboarding",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "Visual language model (VLM) agents show great promise in automating end-to-end (E2E) web testing against requirements in natural language. However, the probabilistic nature of language models can have inherent hallucinations. Therefore, given a detected inconsistency between the requirement and the web application, it is hard to distinguish whether it stems from the hallucination or a real application bug. Addressing this issue presents two core technical challenges: the implicit oracle inference challenge, where the agent must act as its own oracle to implicitly decide if the application’s behavior is correct without guidance, and the probabilistic inference challenge, where an LLM’s inconsistent reasoning undermines its trustworthiness as an oracle. Existing LLM-based approaches fail to capture such implicit oracles, either by treating any page navigation that doesn’t crash as a success, or by checking each state in isolation, thus missing bugs dependent on context from prior steps. We introduce WebTestPilot, an LLM-based agent designed to address these challenges. WebTestPilot uses (1) a symbolization layer which detects and symbolizes critical GUI elements on the web application into symbols (i.e., variables) and (2) translates natural language specification into a sequence of steps, each of which is equipped with inferred pre- and post-conditions over the symbols as an oracle. This oracle captures data, temporal, and causal dependencies, enabling the validation of implicit requirements. To advance research in this area, we build a benchmark of bug-injected web apps for evaluating NL-to-E2E testing. The results show that WebTestPilot achieves a completion rate of 84%, with 86% precision and 80% recall in bug detection, outperforming the best baseline (+36 precision, +54 recall). The agent generalizes across diverse natural language inputs (i.e., those containing typos, grammatical errors, redundant sentences, stylistic restyling, or abbreviations) and model scales (3B–72B). In a real-world deployment with a no-code platform, WebTestPilot discovered 8 bugs during development, including data binding, UI, and navigation issues.",
@@ -2333,14 +2399,24 @@
       "Liping Zhang",
       "Dan Pei"
     ],
+    "container": "2026 6th International Conference on Neural Networks, Information and Communication Engineering (NNICE)",
     "dates": [
       "Thu 9 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1109/nnice68970.2026.11466191",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "25f358e5-74cd-4503-97a6-32af7e25be3d",
     "locations": [
       "MB 2.430"
     ],
+    "pages": "195-200",
+    "publicationDate": "2026-01-23",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Industry Papers",
       "Root Cause Analysis"
@@ -2353,6 +2429,7 @@
       "Industry Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/nnice68970.2026.11466191",
       "https://conf.researchr.org/details/fse-2026/fse-2026-industry-papers/18/Bridging-the-Delay-Lag-Aware-Spatio-Temporal-Causal-Inference-for-Microservice-Root-",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -2536,20 +2613,38 @@
   },
   {
     "abstract": "Slicing is a fault localization technique that has been proposed to support debugging and program comprehension. Yet, its empirical effectiveness during code inspection by humans has received limited attention. The goal of our study is two-fold. First, we aim to define what it means for a code reviewer to identify the vulnerable lines correctly. Second, we investigate whether reducing the number of to-be-inspected lines by method-level slicing supports code reviewers in detecting security vulnerabilities. We propose a novel approach based on the notion of a $\\delta$-neighborhood (intuitively based on the idea of the context size of the command \\texttt{git, diff}) to define correctly identified lines. Then, we conducted a multi-year controlled experiment (2017-2023) in which MSc students attending security courses ($n=236$) were tasked with identifying vulnerable lines in original or sliced Java files from Apache Tomcat. We provide perfect seed lines for a slicing algorithm to control for confounding factors. Each treatment differs in the pair (Vulnerability, Original/Sliced) with a balanced design with vulnerabilities from the OWASP Top 10 2017: A1 (Injection), A5 (Broken Access Control), A6 (Security Misconfiguration), and A7 (Cross-Site Scripting). To generate smaller slices for human consumption, we used a variant of intra-procedural thin slicing. We report the results for $\\delta = 0$ which corresponds to exactly matching the vulnerable ground truth lines, and $\\delta = 3$ which represents the scenario of identifying the vulnerable area. For both cases, we found that slicing helps in finding something' (the participant has found at least some vulnerable lines) as opposed to finding nothing’. For the case of $\\delta = 0$ analyzing a slice and analyzing the original file are statistically equivalent from the perspective of lines found by those who found something. With $\\delta = 3$ slicing helps to find more vulnerabilities compared to analyzing an original file, as we would normally expect. Given the type of population, additional experiments are necessary to be generalized to experienced developers.",
+    "authorIds": [
+      "0000-0003-3207-7662",
+      "0000-0001-7189-2817",
+      "0000-0002-1091-8486"
+    ],
     "authorInstitutions": "Aurora Papotti (Vrije Universiteit Amsterdam); Katja Tuma (Eindhoven University of Technology); Fabio Massacci (University of Trento; Vrije Universiteit Amsterdam)",
     "authors": [
       "Aurora Papotti",
       "Katja Tuma",
       "Fabio Massacci"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Tue 7 Jul 2026 16:20 - 16:40"
     ],
+    "doi": "10.1007/s10664-025-10636-y",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2c691fb4-a328-4025-bbe6-689b4a1237f3",
+    "issue": "4",
     "locations": [
       "MB 3.270"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10636-y.pdf"
+    ],
+    "publicationDate": "2025-07-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Vulnerability 1"
@@ -2562,9 +2657,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10636-y",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/47/On-the-Effects-of-Program-Slicing-for-Vulnerability-Detection-during-Code-Inspection-",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "As autonomous coding agents become active contributors in software engineering, a key question emerges: does it matter which agent produces the code, or only what the code contains? Using the AIDev dataset (31,284 PRs from five AI agents), we develop machine learning models to predict merge outcomes at submission time, achieving 82% accuracy (ROC-AUC: 0.85). Ablation analysis reveals that PR quality characteristics (size, complexity, and content type) are collectively the most important predictors, while agent identity has negligible predictive value. Repository context emerges as the strongest standalone signal, suggesting where a PR is submitted matters as much as what it contains. Although individual reputation features rank highly in importance, they prove largely redundant with each other. These findings suggest merge outcomes for agent-authored code depend on technical merit and project context rather than agent source, with practical implications: developers deploying agents should prioritize PR quality and repository selection over agent choice.",
@@ -3570,6 +3667,14 @@
   },
   {
     "abstract": "Empirical software engineering research produces lots of results. But what do all these results mean? Do we know? Theories are important because they can help us understand and predict empirical observations. But where are the theories that we need for our next experiments? Who creates them? Many SE researchers implicitly believe they can’t “do” theory, and I posit this common belief lacks basis and does not withstand scrutiny. In this talk, I will describe how we used empirical research as a springboard to theory-building, explain how theory positively impacted our empirical research in software testing, and share some surprising concrete ideas for how you, as an empirical SE researcher, might also add theoretical methods to your own research repertoire. (Throughout, I will refer to our TestLoop theoretical process model as well as our TerzoN and NaNofuzz composite software testing tools as concrete examples that illustrate and provide context for this journey.)",
+    "authorIds": [
+      "0000-0003-2366-8436",
+      "0000-0002-7901-8777",
+      "0009-0005-6046-1815",
+      "0000-0002-7107-7043",
+      "0000-0002-4769-0219",
+      "0000-0002-9672-5297"
+    ],
     "authorInstitutions": "Matthew C. Davis (Carnegie Mellon University); Sangheon Choi (Rose-Hulman Institute of Technology); Amy Wei (University of Michigan); Sam Estep (Carnegie Mellon University); Brad A. Myers (Carnegie Mellon University); Joshua Sunshine (Carnegie Mellon University)",
     "authors": [
       "Matthew C. Davis",
@@ -3579,15 +3684,23 @@
       "Brad A. Myers",
       "Joshua Sunshine"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Thu 9 Jul 2026 16:40 - 17:00"
     ],
     "doi": "10.1145/3765754",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "3bddf0c2-cda4-4a96-b1e9-d629d6f079c1",
     "locations": [
       "MB 2.430"
     ],
+    "publicationDate": "2025-09-04",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Software Tests 2"
@@ -3600,11 +3713,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3765754",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/30/TestLoop-A-Process-Model-Describing-Human-in-the-Loop-Software-Test-Suite-Generation",
       "https://dl.acm.org/doi/10.1145/3765754",
       "https://dl.acm.org/doi/10.1145/3729359",
       "https://dl.acm.org/doi/10.1145/3611643.3616327",
-      "https://doi.org/10.1145/3765754",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
   },
@@ -4018,6 +4131,15 @@
   },
   {
     "abstract": "The last decade has seen widespread adoption of Machine Learning (ML) components in software systems. This has occurred in nearly every domain, from natural language processing to computer vision. These ML components range from relatively simple neural networks to complex and resource-intensive large language models. However, despite this widespread adoption, little is known about the supply chain relationships that produce these models, which can have implications for compliance and security. In this work, we conducted an extensive analysis of 760,460 models and 175,000 datasets extracted from the popular model-sharing site Hugging Face. First, we evaluate the current state of documentation in the Hugging Face supply chain, report real-world examples of shortcomings, and offer actionable suggestions for improvement. Next, we analyze the underlying structure of the existing supply chain. Finally, we explore the current licensing landscape against what was reported in previous work and discuss the unique challenges posed in this domain. Our results motivate multiple research avenues, including the need for better license management for ML models/datasets, better support for model documentation, and automated inconsistency checking and validation. We make our research infrastructure and dataset available to facilitate future research.",
+    "authorIds": [
+      "0009-0005-6000-4227",
+      "0009-0006-2123-7412",
+      "0000-0003-2838-685X",
+      "0000-0001-9258-2105",
+      "0000-0002-0340-9747",
+      "0000-0001-5661-4392",
+      "0000-0002-5626-7586"
+    ],
     "authorInstitutions": "Trevor Stalnaker (William & Mary); Nathan Wintersgill (William & Mary); Oscar Chaparro (William & Mary); Laura A. Heymann (William & Mary); Massimiliano Di Penta (University of Sannio, Italy); Daniel M. German (University of Victoria); Denys Poshyvanyk (William & Mary)",
     "authors": [
       "Trevor Stalnaker",
@@ -4028,14 +4150,23 @@
       "Daniel M. German",
       "Denys Poshyvanyk"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 8 Jul 2026 11:50 - 12:10"
     ],
+    "doi": "10.1145/3776739",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "42f0604f-683d-4b76-9ec4-16dcd54d4184",
     "locations": [
       "MB 3.445"
     ],
+    "publicationDate": "2025-11-14",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Empirical 1"
@@ -4048,6 +4179,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3776739",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/39/An-Empirical-Analysis-of-Machine-Learning-Model-and-Dataset-Documentation-Supply-Cha",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -4849,6 +4981,12 @@
   },
   {
     "abstract": "Fault localization aims to identify code regions responsible for failures. Traditional techniques primarily correlate statement execution with failures; however, program behavior involves diverse execution features, including variable values, branch conditions, and definition-use pairs, which can provide richer diagnostic insights. This paper comprehensively investigates execution features for fault understanding, addressing two complementary goals. First, we conduct an empirical study of 310 bugs across 20 projects, analyzing 17 execution features and assessing their correlation with failure outcomes. Our findings suggest that fault localization benefits from a broader range of execution features: (1) Scalar pairs exhibit the strongest correlation with failures; (2) Beyond line executions, def-use pairs and functions executed are key indicators for fault localization; and (3) Combining multiple features enhances effectiveness compared to relying on individual features. Second, building on these insights, we introduce a debugging approach that learns relevant features from labeled test outcomes. The approach extracts fine-grained execution features and trains a decision tree to differentiate passing and failing runs. The trained model generates fault diagnoses that explain the underlying causes of failures. Our evaluation demonstrates that the generated diagnoses achieve high predictive accuracy. These interpretable diagnoses empower developers to debug software efficiently by providing deeper insights into failures.",
+    "authorIds": [
+      "0000-0002-4899-9031",
+      "0000-0003-4268-7632",
+      "0000-0002-8747-3745",
+      "0000-0003-4719-8803"
+    ],
     "authorInstitutions": "Marius Smytzek (CISPA Helmholtz Center for Information Security); Martin Eberlein (Humboldt-Universtität zu Berlin); Lars Grunske (Humboldt-Universität zu Berlin); Andreas Zeller (CISPA Helmholtz Center for Information Security)",
     "authors": [
       "Marius Smytzek",
@@ -4856,15 +4994,23 @@
       "Lars Grunske",
       "Andreas Zeller"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Thu 9 Jul 2026 15:00 - 15:20"
     ],
     "doi": "10.1145/3783989",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "51f1e446-b3e0-4ee2-af61-a51213c1e2a3",
     "locations": [
       "MB 2.435"
     ],
+    "publicationDate": "2025-12-23",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Failures"
@@ -4877,9 +5023,9 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3783989",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/9/How-Execution-Features-Relate-to-Failures-An-Empirical-Study-and-Diagnosis-Approach",
       "https://dl.acm.org/doi/pdf/10.1145/3783989",
-      "https://doi.org/10.1145/3783989",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
   },
@@ -5140,14 +5286,24 @@
       "Wenkai Li",
       "Zongwei Li"
     ],
+    "container": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
     "dates": [
       "Wed 8 Jul 2026 15:10 - 15:20"
     ],
+    "doi": "10.18653/v1/2025.naacl-long.449",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "54aa5580-dd19-4a87-a87b-dccf572c5662",
     "locations": [
       "MB 3.445"
     ],
+    "pages": "8912-8924",
+    "publicationDate": "2025-01-01",
+    "publisher": "Association for Computational Linguistics",
     "sessionTitles": [
       "Ideas, Visions and Reflections",
       "Smart contracts"
@@ -5160,6 +5316,7 @@
       "Ideas, Visions and Reflections"
     ],
     "urls": [
+      "https://doi.org/10.18653/v1/2025.naacl-long.449",
       "https://conf.researchr.org/details/fse-2026/fse-2026-ideas-visions-and-reflections/7/SCPatcher-Automated-Smart-Contract-Code-Repair-via-Retrieval-Augmented-Generation-an",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -5394,19 +5551,32 @@
   },
   {
     "abstract": "Large language models (LLMs) have significantly improved their ability to perform tasks in the field of code generation. However, there is still a gap between LLMs being capable coders and being top-tier software engineers. The most recent trend is using LLM-based agents to iterate the code generation process. Based on the observation that top-level software engineers often ask clarifying questions to reduce \\textit{Ambiguity} in both requirements and coding solutions, we argue that the same should be applied to LLMs for code generation tasks. For this purpose, we define the communication skills of LLMs as ``being able to ask clarifying questions when the description of the code generation problem has issues''. In this study, we restrict these issues to three matters from the software requirement engineering field: inconsistent requirements, ambiguous requirements, and incomplete requirements. By asking probing questions about the requirements of problem descriptions before generating the final code, the challenges of programming with LLMs, such as unclear intent specification may be alleviated, resulting to a correct code in the initial iterations. In this work, we conducted an empirical study on the benchmark and analysis of the communication skills of LLMs for code generation. We created a new benchmark, HumanEvalComm, by modifying problem descriptions according to three issues mentioned above, \\textit{Inconsistency}, \\textit{Ambiguity}, \\textit{Incompleteness}. We then experimented on HumanEvalComm with different Code LLMs, and a new LLM agent approach, \\textit{C\\underline{o}de \\underline{C}l\\underline{a}rificatio\\underline{n} \\underline{a}nd \\underline{G}eneration \\underline{A}ge\\underline{n}t} (Okanagan), to identify and ask questions in ambiguous parts from code and descriptions for further refining the generated code. In the evaluation, we introduced an \\textit{LLM-based evaluator} and created \\textit{Communication Rate }and \\textit{Good Question Rate} as the evaluation metrics to represent the ratio of questions asked and questions with good quality in responses. We found that more than 60% of responses from Code LLMs still generate code rather than ask questions when the problem descriptions are manually modified according to different clarification categories. The Pass@1 and Test Pass Rate of most Code LLMs drop by 35% $\\sim$ 52% and by 17% $\\sim$ 35% respectively, with statistical significance in each category for over 75% numbers. Okanagan, as an LLM agent approach that uses LLM such as ChatGPT 3.5, effectively increases the Communication Rate and Good Question Rate by an absolute 58% and 38%, respectively. Thus, Okanagan boosts Pass@1 and Test Pass Rate by an absolute 8% and 7%, respectively, when the problem descriptions are modified based on given clarification categories. This result indicates the potential for achieving more effective communication capability using LLM agent. Our benchmark and full code are publicly available at \\href{ https://github.com/jie-jw-wu/human-eval-comm }{ https://github.com/jie-jw-wu/human-eval-comm }.",
+    "authorIds": [
+      "0000-0002-7895-2023",
+      "0000-0002-4505-6257"
+    ],
     "authorInstitutions": "Jie JW Wu (Michigan Technological University, USA); Fatemeh Hendijani Fard (University of British Columbia, Okanagan)",
     "authors": [
       "Jie JW Wu",
       "Fatemeh Hendijani Fard"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Thu 9 Jul 2026 11:50 - 12:10"
     ],
+    "doi": "10.1145/3715109",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5a31be57-a0c1-41e2-882c-8fd03a67b35f",
     "locations": [
       "MB 3.210"
     ],
+    "publicationDate": "2025-01-27",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Code Generation 2"
@@ -5419,6 +5589,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3715109",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/21/HumanEvalComm-Benchmarking-the-Communication-Competence-of-Code-Generation-for-LLMs-",
       "https://github.com/jie-jw-wu/human-eval-comm",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
@@ -5525,19 +5696,34 @@
   },
   {
     "abstract": "To effectively test complex software, it is important to generate goal-specific inputs, i.e., inputs that achieve a specific testing goal. For instance, developers may intend to target one or more testing goal(s) during testing – generate complex inputs or trigger new or error-prone behaviors. However, most state-of-the-art test generators are not designed to target specific goals. Notably, grammar-based test generators, which (randomly) produce syntactically valid inputs via an input specification (i.e., grammar) have a low probability of achieving an arbitrary testing goal. This work addresses this challenge by proposing an automated test generation approach (called FdLoop) which iteratively learns relevant input properties from existing inputs to drive the generation of goal-specific inputs. The main idea of our approach is to leverage test feedback to generate goal-specific inputs via a combination of evolutionary testing and grammar learning. FdLoop automatically learns a mapping between input structures and a specific testing goal, such mappings allow to generate inputs that target the goal-at-hand. Given a testing goal, FdLoop iteratively selects, evolves and learn the input distribution of goal-specific test inputs via test feedback and a probabilistic grammar. We concretize FdLoop for four testing goals, namely unique code coverage, input-to-code complexity, program failures (exceptions) and long execution time. We evaluate FdLoop using three (3) well-known input formats (JSON, CSS and JavaScript) and 20 open-source software. In most (86%) settings, FdLoop outperforms all five tested baselines namely the baseline grammar-based test generators (random, probabilistic and inverse-probabilistic methods), EvoGFuzz and DynaMOSA. FdLoop is (up to) twice (2X) as effective as the best baseline (EvoGFuzz) in inducing erroneous behaviors. In addition, we show that the main components of FdLoop (i.e., input mutator, grammar mutator and test feedbacks) contribute positively to its effectiveness. We also observed that FdLoop is effective across varying parameter settings – the number of initial seed inputs, the number of generated inputs, the number of input generations and varying random seed values. Finally, our evaluation demonstrates that FdLoop effectively achieves single testing goals and scales to multiple testing goals.",
+    "authorIds": [
+      "0009-0004-8126-9630",
+      "0000-0002-0039-8106"
+    ],
     "authorInstitutions": "Lukas Kirschner (Saarland University); Ezekiel Soremekun (Singapore University of Technology and Design)",
     "authors": [
       "Lukas Kirschner",
       "Ezekiel Soremekun"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Tue 7 Jul 2026 14:50 - 15:10"
     ],
+    "doi": "10.1109/tse.2025.3627220",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5ce52cb0-fe33-4561-a126-0c21fedd1062",
+    "issue": "12",
     "locations": [
       "MB 3.435"
     ],
+    "pages": "3669-3691",
+    "publicationDate": "2025-12-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Test generation 1"
@@ -5550,9 +5736,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3627220",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/58/Directed-Grammar-Based-Test-Generation",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "Translating C code into Rust is an effective way to ensure its memory safety. Rule-based translation produces Rust code that remains unsafe and fails to leverage Rust’s safety features. LLM-based methods can generate more idiomatic and safer Rust as LLMs are trained on large amounts of human-written code. Although promising, existing LLM-based methods still struggle with project-level C-to-Rust translation. They typically partition a C project into smaller units (e.g., functions) based on the call graph and translate them bottom-up to resolve dependencies. However, this bottom-up, unit-by-unit paradigm often fails to handle pointer translation due to the lack of a global perspective on pointer usage. To address this, we propose a novel C-Rust Pointer Knowledge Graph (KG) that enriches a code-dependency graph with two types of pointer semantics: (i) pointer-usage information, recording global behaviors such as points-to flows and lower-level struct usage by higher-level units; and (ii) Rust-oriented annotations, encoding ownership, mutability, nullability, and lifetimes. Based on the C-Rust Pointer KG and its synergy with LLMs, we further propose PtrTrans, a project-level C-to-Rust translation technique. In PtrTrans, the C-Rust Pointer KG provides LLMs with comprehensive pointer semantics from a global perspective, thus guiding LLMs towards generating safe and idiomatic Rust code from a given C project. Our experiments show that PtrTrans reduces unsafe usages in translated Rust by 99.9% compared to both rule-based translation and LLM-based rewriting, while achieving an average 29.3% higher functional correctness than fuzzing-enhanced LLM methods.",
@@ -5900,6 +6088,13 @@
   },
   {
     "abstract": "The proliferation of open Pre-trained Language Models (PTLMs) on model registry platforms like Hugging Face (HF) presents both opportunities and challenges for companies building products around them. Similar to traditional software dependencies, PTLMs continue to evolve after a release. However, the current state of release practices of PTLMs on model registry platforms are plagued by a variety of inconsistencies, such as ambiguous naming conventions and inaccessible model training documentation. Given the knowledge gap on current PTLM release practices, our empirical study uses a mixed-methods approach to analyze the releases of 52,227 PTLMs on the most well-known model registry, HF. Our results reveal 148 different naming practices for PTLM releases, with 40.87% of changes to model weight files not represented in the adopted name-based versioning practice or their documentation. In addition, we identified that the 52,227 PTLMs are derived from only 299 different base models (the modified original models used to create 52,227 PTLMs), with Fine-tuning and Quantization being the most prevalent modification methods applied to these base models. Significant gaps in release transparency, in terms of training dataset specifications and model card availability, still exist, highlighting the need for standardized documentation. While we identified a model naming practice explicitly differentiating between major and minor PTLM releases, we did not find any significant difference in the types of changes that went into either type of releases, suggesting that major/minor version numbers for PTLMs often are chosen arbitrarily. Our findings provide valuable insights to improve PTLM release practices, nudging the field towards more formal semantic versioning practices.",
+    "authorIds": [
+      "0000-0002-9212-4566",
+      "",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Adekunle Ajibode (Queen's University); Abdul Ali Bangash (Queen's University); Filipe Roseiro Cogo (Centre for Software Excellence, Huawei Canada); Bram Adams (Queen's University); Ahmed E. Hassan (Queen’s University)",
     "authors": [
       "Adekunle Ajibode",
@@ -5908,14 +6103,27 @@
       "Bram Adams",
       "Ahmed E. Hassan"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 10:30 - 10:50"
     ],
+    "doi": "10.1007/s10664-025-10631-3",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "61509253-c1b3-4fcd-90cd-ec10f1718b5a",
+    "issue": "3",
     "locations": [
       "MB 9A"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10631-3.pdf"
+    ],
+    "publicationDate": "2025-05-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Release Engineering"
@@ -5928,9 +6136,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10631-3",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/3/Towards-semantic-versioning-of-open-pre-trained-language-model-releases-on-hugging-fa",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "We present RSFuzz, a new technique to enhance grammar-based fuzzing by reducing the generation of coverage-equivalent inputs during testing. Grammar-based fuzzers apply production rules from a given grammar to generate well-structured inputs for the target program. However, a key limitation is that many existing fuzzers still produce a large number of “coverage-equivalent” inputs—those that revisit already explored program paths—thereby restricting their ability to uncover new bugs and improve coverage. To address this issue, RSFuzz automatically identifies recurrent sequences of production rules that cause coverage-equivalent inputs and prevents their reuse during fuzzing. A key challenge in practice lies in the large number of coverage-equivalent input groups, each with many inputs, making it difficult to identify the underlying recurrent sequences. RSFuzz tackles this challenge with a customized algorithm that iteratively groups coverage-equivalent inputs, selects promising groups, and extracts recurrent sequences for each group based on accumulated data while running any grammar-based fuzzer. We integrated RSFuzz with existing random and probabilistic fuzzers and evaluated it on eight real-world programs using JavaScript and JSON input formats. Experimental results show that incorporating RSFuzz with both fuzzers exclusively detects 108 and 31 crashes with distinct stack traces, increases line coverage by 6.5% and 5.1%, and reduces duplicate-coverage input generation by 29.7% and 37.7%, respectively, compared to their performance without RSFuzz.",
@@ -6879,6 +7089,13 @@
   },
   {
     "abstract": "Code review is a widespread practice in software engineering during which developers examine each other’s source code changes to identify potential issues and improve code quality. Among the automated techniques proposed by researchers to reduce the manual workload of code review, Automated Code Revision (ACR) aims to automatically address reviewers’ feedback by producing a revised version of the code. Transformer-based language models have demonstrated state-of-the-art results in ACR. The performance of these models, however, is significantly influenced by the quality and preparation of the training and evaluation data. We present several systematic analyses of prevalent preprocessing steps, examined both cumulatively and in isolation, across three established preprocessing pipelines and two dataset splitting strategies (time-level vs. project-level). Our study spans across models of different scales: OpenNMT (small), T5 and CodeReviewer (mid-sized), LoRA-tuned CodeLLaMA-7B (large), and GPT-3.5-Turbo (large, black-box). Using datasets up to 496k training records, we evaluate and statistically compare models’ performance using exact match ratio (EXM), CodeBLEU, and Levenshtein ratio. Our findings show that preprocessing may be a significant component in the success of the different techniques: OpenNMT relies on heavy preprocessing; T5 benefits from light filtering (selective removal of records); CodeReviewer performs best when trained on larger, less aggressively filtered data; CodeLLaMA-7B and ChatGPT-3.5 Turbo are largely indifferent to preprocessing. Overall, the effectiveness of ACR tools depends on aligning preprocessing with model scale and training setup. In general, small models need abstraction, mid-sized ones benefit from light filtering, and large-scale models perform best when trained on the original, unprocessed form of the code.",
+    "authorIds": [
+      "0009-0005-7360-2648",
+      "",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Shirin Pirouzkhah (University of Zurich); Pooja Rani (University of Zurich); Francesco Sovrano (University of Zurich); Vincent Hellendoorn (Google DeepMind, USA); Alberto Bacchelli (IfI, University of Zurich)",
     "authors": [
       "Shirin Pirouzkhah",
@@ -6887,14 +7104,27 @@
       "Vincent Hellendoorn",
       "Alberto Bacchelli"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 14:00 - 14:20"
     ],
+    "doi": "10.1007/s10664-025-10781-4",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "70fadd53-0cd6-446b-bf6b-c349e38aa75c",
+    "issue": "2",
     "locations": [
       "MB 2.210"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10781-4.pdf"
+    ],
+    "publicationDate": "2026-03-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Code review 2"
@@ -6907,9 +7137,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10781-4",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/46/The-Price-of-Precision-The-Cost-of-Preprocessing-for-Automated-Code-Revision-in-Code",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "31"
   },
   {
     "abstract": "Debugging consumes a substantial portion of the software development lifecycle, yet the effectiveness of large language models (LLMs) in this task is not well understood. Competitive programming offers a rich benchmark for such evaluation, given its diverse problem domains and strict efficiency requirements. This paper presents an empirical study of LLM-based debugging on competitive programming problems and introduces DePro, a test-case–driven approach that assists programmers by correcting existing code rather than generating new solutions. DePro combines brute-force reference generation, stress testing, and iterative LLM-guided refinement to identify and resolve errors efficiently. Experiments on 13 faulty user submissions from Codeforces demonstrate that DePro consistently produces correct solutions, reducing debugging attempts by up to 64% and debugging time by an average of 7.6 minutes per problem compared to human programmers and zero-shot LLM debugging.",
@@ -7086,6 +7318,19 @@
   },
   {
     "abstract": "Identifier names are crucial components of code, serving as primary clues for developers to understand program behavior. This paper investigates the linguistic structure of identifier names by extending the concept of grammar patterns, which represent the part-of-speech (PoS) sequences underlying identifier phrases. The specific focus is on closed syntactic categories (e.g., prepositions, conjunctions, determiners), which are rarely studied in software engineering despite their central role in general natural language. To study these categories, the Closed Category Identifier Dataset (CCID), a new manually annotated dataset of 1,275 identifiers drawn from 30 open-source systems, is constructed and presented. The relationship between closed-category grammar patterns and program behavior is then analyzed using grounded-theory-inspired coding, statistical, and pattern analysis. The results reveal recurring structures that developers use to express concepts such as control flow, data transformation, temporal reasoning, and other behavioral roles through naming. This work contributes an empirical foundation for understanding how linguistic resources encode behavior in identifier names and supports new directions for research in naming, program comprehension, and education.",
+    "authorIds": [
+      "0000-0002-8838-4074",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Christian D. Newman (Rochester Institute of Technology); Anthony Peruma (University of Hawai‘i at Mānoa); Eman Abdullah AlOmar (Stevens Institute of Technology, USA); Mahie Crabbe (University of Hawai‘i at Mānoa); Syreen Banabilah (Kent State University); Reem Alsuhaibani (Prince Sultan University); Michael J. Decker (Bowling Green State University); Farhad Akhbardeh (Briar Cliff University); Marcos Zampieri (George mason University); Mohamed Wiem Mkaouer (University of Michigan-Flint); Jonathan I. Maletic (Kent State University)",
     "authors": [
       "Christian D. Newman",
@@ -7100,14 +7345,27 @@
       "Mohamed Wiem Mkaouer",
       "Jonathan I. Maletic"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 11:30 - 11:50"
     ],
+    "doi": "10.1007/s10664-025-10699-x",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7470df63-7b3e-4e4c-b5ac-3e457123f316",
+    "issue": "5",
     "locations": [
       "MB 5.215"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10699-x.pdf"
+    ],
+    "publicationDate": "2025-09-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Comprehension and Maintenance"
@@ -7120,9 +7378,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10699-x",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/26/On-the-Structure-and-Semantics-of-Identifier-Names-Containing-Closed-Syntactic-Catego",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Multidisciplinary Software Development (MSD) requires domain experts and developers to collaborate across incompatible formalisms and separate artifact sets. Today, even with AI coding assistants like GitHub Copilot, this process remains inefficient; individual coding tasks are semi-automated, but the workflow connecting domain knowledge to implementation is not. Developers and experts still lack a shared view, resulting in repeated coordination, clarification rounds, and error-prone handoffs. We address this gap through a graph-based workflow optimization approach that progressively replaces manual coordination with LLM-powered services, enabling incremental adoption without disrupting established practices. We evaluate our approach on spapi, a production in-vehicle API system at Volvo Group involving 192 endpoints, 420 properties, and 776 CAN signals across six functional domains. The automated workflow achieves 93.7% F1 score while reducing per-API development time from approximately 5 hours to under 7 minutes, saving an estimated 979 engineering hours. In production, the system received high satisfaction from both domain experts and developers, with all participants reporting full satisfaction with communication efficiency.",
@@ -7271,14 +7531,26 @@
       "Liu Zhuohang",
       "Wanpeng Li"
     ],
+    "container": "Synthesis Lectures on Data Mining and Knowledge Discovery",
     "dates": [
       "Tue 7 Jul 2026 16:00 - 16:20"
     ],
+    "doi": "10.1007/978-3-031-84732-5",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7716388d-a8a5-43aa-815c-5b10851b9fde",
     "locations": [
       "MB 3.270"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/978-3-031-84732-5.pdf"
+    ],
+    "publicationDate": "2026-01-01",
+    "publisher": "Springer Nature Switzerland",
     "sessionTitles": [
       "Research Papers",
       "Vulnerability 1"
@@ -7291,6 +7563,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1007/978-3-031-84732-5",
       "https://conf.researchr.org/details/fse-2026/fse-2026-research-papers/129/DECODE-Dynamic-Exploration-for-Constraint-Guided-Vulnerability-Discovery-in-Deep-Lea",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -7432,20 +7705,34 @@
   },
   {
     "abstract": "Large Language Models (LLMs) have shown remarkable capabilities in code generation for popular programming languages. However, their performance in Low-Resource Programming Languages (LRPLs) and Domain-Specific Languages (DSLs) remains a critical challenge. This gap affects millions of developers - with Rust alone having 3.5 million users - who are currently unable to fully leverage LLM capabilities. LRPLs and DSLs face unique challenges, including severe data scarcity and, for DSLs, highly specialized syntax and semantics that are poorly represented in general-purpose datasets. Addressing these challenges is crucial as LRPLs and DSLs significantly enhance development efficiency in specialized domains and applications, including financial and scientific works. While several surveys on LLMs for software engineering and code exist, none comprehensively address the challenges and opportunities specific to LRPLs and DSLs. Our survey fills this gap by providing a systematic review of the current state, methodologies, and challenges in leveraging LLMs for code generation in LRPL and DSL. We filtered $111$ papers from over $27,000$ published studies from $2020 - 2024$ to understand the capabilities and limitations of LLMs in these specialized domains. We also expanded our literature search to include 5 recent papers from $2024 - 2025$. We report LLMs used, benchmarks, and metrics to evaluate code generation in LRPLs and DSLs, as well as strategies used to enhance LLM performance, and the collected datasets and curation methods in this context. We identified four main evaluation techniques used in the literature, along with several metrics to assess code generation in LRPL and DSL. We categorized the methods used for LLM improvement into six main groups and summarized the novel methods and architectures proposed by the researchers. We also classified different approaches used for data collection and preparation. While different techniques, metrics, and datasets are used, there is a lack of a standard approach and a benchmark dataset to evaluate code generation in several LRPLs and DSLs. We discuss several distinctions of the studied approaches with the ones used in high-resource programming languages (HRPLs), as well as several challenges unique to these languages, especially DSLs. The challenges stem from the scarcity of data, the unique requirements, and specialized domains, which often need expertise guidelines or domain-specific tools. Accordingly, we provide insights into different research opportunities for the studied aspects. This survey serves as a comprehensive resource for researchers and practitioners working at the intersection of LLMs, software engineering, and specialized programming languages, providing a foundation for future advancements in LRPL and DSL code generation. A GitHub repository was created to organize the papers of this survey at \\href{ https://github.com/jie-jw-wu/Survey-CodeLLM4LowResource-DSL }{ https://github.com/jie-jw-wu/Survey-CodeLLM4LowResource-DSL }.",
+    "authorIds": [
+      "0009-0006-8716-1430",
+      "0000-0002-7895-2023",
+      "0000-0002-4505-6257"
+    ],
     "authorInstitutions": "Sathvik Joel (Indian Institute of Technology Madras, Chennai, India); Jie JW Wu (Michigan Technological University, USA); Fatemeh Hendijani Fard (University of British Columbia, Okanagan)",
     "authors": [
       "Sathvik Joel",
       "Jie JW Wu",
       "Fatemeh Hendijani Fard"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 11:00 - 11:20"
     ],
+    "doi": "10.1145/3770084",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7bb533a2-0523-4d51-a95e-2087057658c7",
     "locations": [
       "MB 2.210"
     ],
+    "publicationDate": "2025-10-07",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "LLM for SE 1"
@@ -7458,6 +7745,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3770084",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/34/A-Survey-on-LLM-based-Code-Generation-for-Low-Resource-and-Domain-Specific-Programmin",
       "https://github.com/jie-jw-wu/Survey-CodeLLM4LowResource-DSL",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
@@ -7825,20 +8113,38 @@
   },
   {
     "abstract": "As Industry 4.0 transforms the food industry, the role of software in achieving compliance with food-safety regulations is becoming increasingly critical. Food-safety regulations, like those in many legal domains, have largely been articulated in a technology-independent manner to ensure their longevity and broad applicability. However, this approach leaves a gap between the regulations and the modern systems and software increasingly used to implement them. In this article, we pursue two main goals. First, we conduct a Grounded Theory study of food-safety regulations and develop a conceptual characterization of food-safety concepts that closely relate to systems and software requirements. Second, we examine the effectiveness of two families of large language models (LLMs) – BERT and GPT – in automatically classifying legal provisions based on requirements-related food-safety concepts. Our results show that: (a) when fine-tuned, the accuracy differences between the best-performing models in the BERT and GPT families are relatively small. Nevertheless, the most powerful model in our experiments, GPT-4o, still achieves the highest accuracy, with an average Precision of 89% and an average Recall of 87%; (b) few-shot learning with GPT-4o increases Recall to 97% but decreases Precision to 65%, suggesting a trade-off between fine-tuning and few-shot learning; (c) despite our training examples being drawn exclusively from Canadian regulations, LLM-based classification performs consistently well on test provisions from the US, indicating a degree of generalizability across regulatory jurisdictions; and (d) for our classification task, LLMs significantly outperform simpler baselines constructed using long short-term memory (LSTM) networks and automatic keyword extraction.",
+    "authorIds": [
+      "0009-0008-3056-4073",
+      "0000-0002-4711-8319",
+      "0000-0003-2414-1791"
+    ],
     "authorInstitutions": "Shabnam Hassani (University of Ottawa); Mehrdad Sabetzadeh (University of Ottawa); Daniel Amyot (University of Ottawa)",
     "authors": [
       "Shabnam Hassani",
       "Mehrdad Sabetzadeh",
       "Daniel Amyot"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1007/s10664-025-10619-z",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8119470a-8f31-48c0-8e95-dc9784b8cd55",
+    "issue": "3",
     "locations": [
       "MB 2.430"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10619-z.pdf"
+    ],
+    "publicationDate": "2025-05-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Requirements and Specification"
@@ -7851,9 +8157,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10619-z",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/11/An-empirical-study-on-LLM-based-classification-of-requirements-related-provisions-in-",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Large language models (LLMs) have transformed code generation, but their ability to generate code for applications with graphical user interfaces (GUIs), particularly games, remains underexplored. To explore their performance on applications with GUI, we construct a repository-aware evaluation dataset from 35 GUI applications. Prior code-generation benchmarks assess correctness using test cases, but this is insufficient for GUI applications. These applications are interactive and event-driven, and their correctness depends on stateful behavior over sequences of user actions. Consequently, evaluation should account for interaction flows and UI state transitions rather than relying solely on pass or fail test outcomes. To enable more reliable assessment beyond simple execution and unit tests, we propose Play@k, which measures whether at least one of k generated candidates yields an application that can be played end-to-end without logical errors. We further develop an LLM-based agent, PlayTester, that automates interactive evaluation by driving the GUI through task-oriented playthroughs and checking for logic violations. Through systematic evaluation, we demonstrate that 10 state-of-the-art code LLMs struggle to generate logically correct GUI applications, achieving near-zero Play@3 scores despite high compilation rates. To address these challenges, we introduce PlayCoder, a multi-agent, repository-aware framework that writes, evaluates and refines GUI application code via closed-loop control. PlayCoder substantially improves functional correctness and semantic alignment for both open-source and closed-source models, achieving up to 37.5% Exec@3 and 17.2% Play@3. Case studies show that it detects silent logic flaws missed by traditional metrics and repairs them through targeted edits. These results indicate that coupling an end-to-end GUI testing agent with repository-aware automated program repair is an effective path toward reliable GUI code generation.",
@@ -7892,6 +8200,12 @@
   },
   {
     "abstract": "Large Language Models (LLMs) are increasingly used by software engineers for code generation. However, limitations of LLMs such as irrelevant or incorrect code have highlighted the need for prompt programming (or prompt engineering) where engineers apply specific prompt techniques (e.g., chain-of-thought or input-output examples) to improve the generated code. While some prompt techniques have been studied, the impact of different techniques — and their interactions — on code generation is still not fully understood. In this study, we introduce CodePromptEval, a dataset of 7072 prompts designed to evaluate five prompt techniques (few-shot, persona, chain-of-thought, function signature, list of packages) and their effect on the correctness, similarity, and quality of complete functions generated by three LLMs (GPT-4o, Llama3, and Mistral). Our findings show that while certain prompt techniques significantly influence the generated code, combining multiple techniques does not necessarily improve the outcome. Additionally, we observed a trade-off between correctness and quality when using prompt techniques. Our dataset and replication package enable future research on improving LLM-generated code and evaluating new prompt techniques.",
+    "authorIds": [
+      "0000-0002-1090-3153",
+      "0000-0001-9226-5417",
+      "0000-0002-3446-1265",
+      "0000-0003-2777-528X"
+    ],
     "authorInstitutions": "Ranim Khojah (Chalmers University of Technology and University of Gothenburg); Francisco Gomes de Oliveira Neto (Chalmers | University of Gothenburg); Mazen Mohamad (Chalmers | RISE - Research Institutes of Sweden); Philipp Leitner (Chalmers | University of Gothenburg)",
     "authors": [
       "Ranim Khojah",
@@ -7899,15 +8213,25 @@
       "Mazen Mohamad",
       "Philipp Leitner"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 10:50 - 11:10"
     ],
     "doi": "10.1109/TSE.2025.3587794",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "81b02d04-e511-4d3a-9f65-fa9bd49b21ef",
+    "issue": "8",
     "locations": [
       "MB 3.210"
     ],
+    "pages": "2381-2395",
+    "publicationDate": "2025-08-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Code Generation 2"
@@ -7920,11 +8244,13 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/TSE.2025.3587794",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/43/The-Impact-of-Prompt-Programming-on-Function-Level-Code-Generation",
       "https://ieeexplore.ieee.org/abstract/document/11077752",
-      "https://doi.org/10.1109/TSE.2025.3587794",
-      "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+      "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline",
+      "https://doi.org/10.1109/tse.2025.3587794"
+    ],
+    "volume": "51"
   },
   {
     "abstract": "Dynamic languages (such as Python and JavaScript) offer flexibility and simplified type handling for programming, but this can also lead to an increase in type-related errors and additional overhead for compile-time type inference. As a result, type inference for dynamic languages has become a popular research area. Existing approaches typically achieve type inference through static analysis, machine learning, or large language models (LLMs). However, current work only focuses on the direct dependencies of variables related to type inference as the context, resulting in incomplete contextual information and thus affecting the accuracy of type inference. To address this issue, this paper proposes a method called TypePro, which leverages LLMs for type inference in dynamic languages. TypePro supplements contextual information by conducting inter-procedural code slicing. Then, TypePro proposes a set of candidate complex types based on the structural information of data types implied in the slices, thereby addressing the lack of domain knowledge of LLMs. We conducted experiments on the ManyTypes4Py and ManyTypes4TypeScript datasets, achieving Top-1 exact match (EM) rates of 88.9% and 86.6%, respectively. Notably, TypePro improves the Top-1 Exact Match by 7.1 and 10.3 percentage points over the second-best approach, showing the effectiveness and robustness of TypePro.",
@@ -8126,6 +8452,13 @@
   },
   {
     "abstract": "N-Version Programming is a well-known methodology for developing fault-tolerant systems. It achieves fault detection and correction at runtime by adding diverse redundancy into programs, minimizing fault mode overlap between redundant program variants. In this work, we propose the automated generation of program variants using large language models. We design, develop and evaluate Galápagos: a tool for generating program variants using LLMs, validating their correctness and equivalence, and using them to assemble N-Version binaries. We evaluate Galápagos by creating N-Version components of real-world C code. Our original results show that Galápagos can produce program variants that are proven to be functionally equivalent, even when the variants are written in a different programming language. Our systematic diversity measurement indicates that functionally equivalent variants produced by Galápagos, are statically different after compilation, and present diverging internal behavior at runtime. We demonstrate that the variants produced by Galápagos can protect C code against real miscompilation bugs which affect the Clang compiler. Overall, our paper shows that producing N-Version software can be drastically automated by advanced usage of practical formal verification and generative language models.",
+    "authorIds": [
+      "0000-0001-6988-3102",
+      "0009-0005-1338-3295",
+      "0000-0001-9399-8647",
+      "0000-0002-4015-4640",
+      "0000-0003-3505-3383"
+    ],
     "authorInstitutions": "Javier Ron Arteaga (KTH Royal Institute of Technology); Diogo Gaspar (KTH Royal Institute of Technology); Javier Cabrera Arteaga (KTH Royal Institute of Technology); Benoit Baudry (Université de Montréal); Martin Monperrus (KTH Royal Institute of Technology)",
     "authors": [
       "Javier Ron Arteaga",
@@ -8134,14 +8467,23 @@
       "Benoit Baudry",
       "Martin Monperrus"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 11:40 - 12:00"
     ],
+    "doi": "10.1145/3785363",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "85475946-8284-4f5d-8377-b2f133203c59",
     "locations": [
       "MB 2.210"
     ],
+    "publicationDate": "2025-12-17",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "LLM for SE 1"
@@ -8154,6 +8496,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3785363",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/2/Gal-pagos-Automated-N-Version-Programming-with-LLMs",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -9695,6 +10038,12 @@
   },
   {
     "abstract": "Deep Reinforcement Learning (DRL) has made significant advancements in various fields, such as autonomous driving, healthcare, and robotics, by enabling agents to learn optimal policies through interactions with their environments. However, the application of DRL in safety-critical domains presents challenges, particularly concerning the safety of the learned policies. DRL agents, which are focused on maximizing rewards, may select unsafe actions, leading to safety violations. Runtime safety monitoring is thus essential to ensure the safe operation of these agents, especially in unpredictable and dynamic environments. This paper introduces SMARLA, a black-box safety monitoring approach specifically designed for DRL agents. SMARLA utilizes machine learning to predict safety violations by observing the agent’s behavior during execution. The approach is based on Q-values, which reflect the expected reward for taking actions in specific states. SMARLA employs state abstraction to reduce the complexity of the state space, enhancing the predictive capabilities of the monitoring model. Such abstraction enables the early detection of unsafe states, allowing for the implementation of corrective and preventive measures before incidents occur. We quantitatively and qualitatively validated SMARLA on three well-known case studies widely used in DRL research. Empirical results reveal that SMARLA is accurate at predicting safety violations, with a low false positive rate, and can predict violations at an early stage, approximately halfway through the execution of the agent, before violations occur. We also discuss different decision criteria, based on confidence intervals of the predicted violation probabilities, to trigger safety mechanisms aiming at a trade-off between early detection and low false positive rates.",
+    "authorIds": [
+      "0000-0002-2411-7938",
+      "0000-0002-8647-1676",
+      "0000-0002-1393-1010",
+      "0000-0002-8501-7447"
+    ],
     "authorInstitutions": "Amirhossein Zolfagharian (University of Ottawa - School of Electrical Engineering & Computer Science (EECS)); Manel Abdellatif (École de Technologie Supérieure); Lionel Briand (University of Ottawa, Canada; Lero centre, University of Limerick, Ireland); Ramesh S",
     "authors": [
       "Amirhossein Zolfagharian",
@@ -9702,14 +10051,25 @@
       "Lionel Briand",
       "Ramesh S"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 14:40 - 14:50"
     ],
+    "doi": "10.1109/tse.2024.3491496",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a11a3714-9b64-4665-a416-b2ccf245a3ce",
+    "issue": "1",
     "locations": [
       "MB 3.210"
     ],
+    "pages": "82-105",
+    "publicationDate": "2025-01-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "SE and AI 3"
@@ -9722,9 +10082,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2024.3491496",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/36/SMARLA-A-Safety-Monitoring-Approach-for-Deep-Reinforcement-Learning-Agents",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "This paper investigates the impact of a KPI driven DevOps adoption initiative within a large scale financial organisation. Existing literature has studied the benefits and challenges of DevOps adoption, revealing the opportunities to increase the pace of software delivery and quality, whilst recognising the importance of culture as part of any change process. However, whilst DevOps metrics are widely promoted in industry, their effectiveness as KPIs and their impact on performance and developer behaviour remain unclear. Related studies of metrics use in the software industry have suggested adoption can have unintended impacts on practitioner behaviours, particularly when used for KPIs. To investigate the impact of DevOps metrics adoption, we conducted a case study within a business area of a large financial organisation. We employed a mixed-methods approach, combining a semi-structured interview with leadership, quantitative analysis of 1074 projects undergoing the adoption, and a survey of 17 developers capturing both attitudinal and behavioural insights. The results reveal improvements in key performance metrics but also highlight contrasts between managerial intent and developer perception, including concerns around metric gaming, pressure from ranking systems, and inconsistent understanding of targets. The findings contribute empirical evidence to the DevOps literature and emphasise the importance of aligning measurement systems with practical realities and cultural context to drive meaningful improvement.",
@@ -10008,6 +10370,13 @@
   },
   {
     "abstract": "To reduce the substantial manual annotation costs in testing deep neural networks (DNNs), various test selection approaches have been proposed, with uncertainty serving as a key objective to trigger more failures. However, focusing solely on uncertainty may expose failures caused by the same underlying fault in the model. Accordingly, recent studies have introduced diversity as another important objective, proposing multi-objective search-based approaches to select test inputs that can reveal distinct faults. Despite their effectiveness, these approaches typically require long execution times, limiting their efficiency in large-scale datasets. In this paper, we propose SETS, a simple yet effective multi-objective DNN test selection approach. Like existing multi-objective approaches, SETS optimizes both uncertainty and diversity to maximize the number of unique faults detected by the selected test inputs. But, SETS prioritizes high-uncertainty test inputs to reduce the candidate set size, and employs an efficient greedy strategy to further reduce the number of fitness evaluations. Thus, SETS differentiates itself by considerably improving the efficiency of selection while preserving effectiveness. We evaluate SETS on eight subjects, demonstrating its significant superiority over baseline approaches. SETS can operate on average 42.98 times faster while still achieving better fault detection and model retraining with its simple implementation.",
+    "authorIds": [
+      "0009-0003-1283-5080",
+      "0000-0003-1383-5421",
+      "0009-0008-9401-1777",
+      "0000-0001-5786-0894",
+      "0000-0002-9575-1012"
+    ],
     "authorInstitutions": "Jingling Wang (Nanjing University); Huayao Wu (Nanjing University); Peng Wang (Nanjing University); Xintao Niu (Nanjing University); Changhai Nie (Nanjing University)",
     "authors": [
       "Jingling Wang",
@@ -10016,14 +10385,23 @@
       "Xintao Niu",
       "Changhai Nie"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 8 Jul 2026 10:30 - 10:50"
     ],
+    "doi": "10.1145/3772084",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a52f71d3-7df1-46da-a531-efc4bbe0a625",
     "locations": [
       "MB 1.210"
     ],
+    "publicationDate": "2025-10-18",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Testing 2"
@@ -10036,6 +10414,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3772084",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/27/SETS-A-Simple-yet-Effective-DNN-Test-Selection-Approach",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -10206,9 +10585,9 @@
     "abstract": "Model-driven engineering (MDE) simplifies software development through abstraction, yet challenges such as time constraints, incomplete domain understanding, and adherence to syntactic constraints hinder the design process. This paper presents a study to evaluate the usefulness of a novel approach utilizing large language models (LLMs) and few-shot prompt learning to assist in domain modeling. The aim of this approach is to overcome the need for extensive training of traditional AI-based completion algorithms on domain-specific datasets and to offer versatile support for various modeling activities, providing valuable recommendations to software modelers. To support this approach, we developed MAGDA, a user-friendly tool, through which we conduct a user study and assess the real-world applicability of our approach in the context of domain modeling, offering valuable insights into its usability and effectiveness.",
     "authorIds": [
       "0000-0001-8133-0199",
-      "0000-0002-7779-8810",
-      "0000-0002-4870-8433",
-      "0000-0001-6304-9926"
+      "",
+      "",
+      ""
     ],
     "authorInstitutions": "Meriem Ben Chaaben (Université de Montréal); Lola Burgueño (University of Malaga); Istvan David (McMaster University / McMaster Centre for Software Certification (McSCert)); Houari Sahraoui (DIRO, Université de Montréal)",
     "authors": [
@@ -10217,11 +10596,11 @@
       "Istvan David",
       "Houari Sahraoui"
     ],
-    "container": "ACM Transactions on Software Engineering and Methodology",
+    "container": "Proceedings of the ACM/IEEE 27th International Conference on Model Driven Engineering Languages and Systems",
     "dates": [
       "Tue 7 Jul 2026 15:00 - 15:20"
     ],
-    "doi": "10.1145/3744920",
+    "doi": "10.1145/3652620.3676877",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -10233,9 +10612,9 @@
     "locations": [
       "MB 5.215"
     ],
-    "pages": "1-38",
-    "publicationDate": "2026-04-30",
-    "publisher": "Association for Computing Machinery (ACM)",
+    "pages": "188-191",
+    "publicationDate": "2024-09-22",
+    "publisher": "ACM",
     "sessionTitles": [
       "Journal-First Paper",
       "Requirement and design"
@@ -10248,7 +10627,7 @@
       "Journal-First Paper"
     ],
     "urls": [
-      "https://doi.org/10.1145/3744920",
+      "https://doi.org/10.1145/3652620.3676877",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/49/On-the-Utility-of-Domain-Modeling-Assistance-with-Large-Language-Models",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ],
@@ -10527,6 +10906,12 @@
   },
   {
     "abstract": "Deep Neural Networks (DNNs) face challenges during deployment due to covariate shift, i.e., data distribution shifts between development and deployment contexts. Fine-tuning adapts pre-trained models to new contexts requiring smaller labeled sets. However, testing fine-tuned models under constrained labeling budgets remains a critical challenge. This paper introduces MetaSel, a new approach tailored for DNN models that have been fine-tuned to address covariate shift, to select tests from unlabeled inputs. MetaSel assumes that fine-tuned and pre-trained models share related data distributions and exhibit similar behaviors for many inputs. However, their behaviors diverge within the input subspace where fine-tuning alters decision boundaries, making those inputs more prone to misclassification. Unlike general approaches that rely solely on the DNN model and its input set, MetaSel leverages information from both the fine-tuned and pre-trained models and their behavioral differences to estimate misclassification probability for unlabeled test inputs, enabling more effective test selection. Our extensive empirical evaluation, comparing MetaSel against 11 state-of-the-art approaches and involving 68 fine-tuned models across weak, medium, and strong distribution shifts, demonstrates that MetaSel consistently delivers significant improvements in Test Relative Coverage (TRC) over existing baselines, particularly under highly constrained labeling budgets. MetaSel shows average TRC improvements of 28.46% to 56.18% over the most frequent second-best baselines while maintaining a high TRC median and low variability. Our results confirm MetaSel’s practicality, robustness, and cost-effectiveness for test selection in the context of fine-tuned models.",
+    "authorIds": [
+      "0000-0001-6854-5726",
+      "0000-0002-0436-8369",
+      "0000-0002-1393-1010",
+      "0000-0002-4034-6650"
+    ],
     "authorInstitutions": "Amin Abbasishahkoo (The School of EECS, University of Ottawa); Mahboubeh Dadkhah (University of Ottawa); Lionel Briand (University of Ottawa, Canada; Lero centre, University of Limerick, Ireland); Dayi Lin (Centre for Software Excellence, Huawei Canada)",
     "authors": [
       "Amin Abbasishahkoo",
@@ -10534,14 +10919,25 @@
       "Lionel Briand",
       "Dayi Lin"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 10:50 - 11:10"
     ],
+    "doi": "10.1109/tse.2025.3612253",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ab2a740f-a11e-4565-b264-5c7446f6f244",
+    "issue": "11",
     "locations": [
       "MB 1.210"
     ],
+    "pages": "3168-3188",
+    "publicationDate": "2025-11-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Testing 2"
@@ -10554,9 +10950,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3612253",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/31/MetaSel-A-Test-Selection-Approach-for-Fine-Tuned-DNN-Models",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "Training Large Language Models (LLMs) at scale presents formidable reliability challenges, where frequent infrastructure failures incur prohibitive financial costs. Current fault localization (i.e., pinpointing faulty nodes) remains predominantly reactive and manual, severely constraining training throughput. We conduct a comprehensive empirical study of 2,943 LLM training failures collected over six months from a production environment. The analysis yields three critical insights: (1) effective diagnosis necessitates fusing full-stack visibility with longitudinal profiling to establish spatio-temporal context; (2) diagnosing implicit failures requires modeling the compound impact of pervasive benign anomalies; and (3) robust detection demands hardware-aware strategies adaptable to heterogeneous infrastructure. Guided by these insights, we propose Reflex, a real-time event-driven framework for automated fault localization. Reflex constructs a spatio-temporal context via longitudinal feature engineering to capture cumulative degradation. It employs interpretable event attribution to decode implicit failure patterns by disentangling dependencies among weak signals. Furthermore, the system ensures robustness across heterogeneous infrastructure through adaptive noise suppression and dynamic thresholding. Deployed in Platform-X, Reflex delivers precise and efficient fault localization, achieving an F1-score of 0.88 with a diagnosis latency of 1.6s under high concurrency. Finally, we open-source an anonymized dataset of production-grade alert traces to facilitate community research.",
@@ -11008,20 +11406,38 @@
   },
   {
     "abstract": "Web browsers have been used widely by users to conduct various online activities, such as information seeking or online shopping. To improve user experience and extend the functionality of browsers, practitioners provide mechanisms to allow users to install third-party-provided plugins (i.e., extensions) on their browsers. However, little is known about the performance implications caused by such extensions. In this paper, we conduct an empirical study to understand the impact of extensions on the user-perceived performance (i.e., energy consumption and page load time) of Google Chrome, the most popular browser. We study a total of 72 extensions from 11 categories (e.g., Developer Tools and Sports), consisting of 61 extensions with distinct types of privacy practices used and 11 extensions without adopting any privacy practices (i.e., no privacy-related data is collected). We observe that browser performance can be negatively impacted by the use of extensions, even when the extensions are used in unintended circumstances (e.g., when logging into an extension is not granted but required, or when an extension is not used for designated websites). We also identify a set of factors that significantly influence the performance impact of extensions, such as code complexity and privacy practices (i.e., collection of user data) adopted by the extensions. Based on our empirical observations, we provide recommendations for developers and users to mitigate the performance impact of browser extensions, such as conducting performance testing and optimization for unintended usage scenarios of extensions, or adhering to proper usage practices of extensions (e.g., logging into an extension when required).",
+    "authorIds": [
+      "0009-0009-0011-1134",
+      "0000-0001-5441-6763",
+      "0000-0002-5335-0261"
+    ],
     "authorInstitutions": "Bihui Jin (University of Waterloo); Heng Li (Polytechnique Montréal); Ying Zou (Queen's University, Kingston, Ontario)",
     "authors": [
       "Bihui Jin",
       "Heng Li",
       "Ying Zou"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 14:00 - 14:20"
     ],
+    "doi": "10.1007/s10664-025-10633-1",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b0fce149-a716-4cfe-8cc7-90f26b6b0a6b",
+    "issue": "4",
     "locations": [
       "MB 3.435"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10633-1.pdf"
+    ],
+    "publicationDate": "2025-07-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Performance and energy"
@@ -11034,9 +11450,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10633-1",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/54/Impact-of-extensions-on-browser-performance-An-empirical-study-on-google-chrome",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Closed-source software is ubiquitous in everyday computing, underscoring the urgency for robust testing of binary-only executables. While code-coverage-guided fuzzing has long proven effective at unearthing bugs in binary-only software, fuzzing for open-source software has since evolved beyond code coverage as its principal guiding metric. State-of-the-art advancements demonstrate that likely data invariants—data-level properties which, if violated, expose unusual, often bug-preceding program states—significantly widen fuzzing’s reach to defects ordinarily occluded by coverage-only testing. Unfortunately, current invariant-guided fuzzing approaches universally depend on program source code, rendering them unportable to binary-only targets. Consequently, closed-source software fuzzing—and more importantly, binary-only bug discovery—remain stalled at now-obsolete coverage-only techniques, even as open-source fuzzing advances well past them. To bridge this longstanding gap, this paper introduces Register-level Likely Invariants: the first approach integrating data-level invariants within binary-only fuzzing. In contrast to contemporary source-level invariant mining, our approach operates directly on CPU registers, capturing the low-level program states that themselves encode higher-level data relationships. From these low-level states, we automatically derive likely data invariants and expose them as fuzzer-observable signals through runtime instrumentation, steering execution into states unreachable through code coverage alone. In doing so, our approach surfaces qualitatively different states, complementing traditional coverage-guided fuzzing with distinct bug-finding capabilities. We implement our approach as a prototype, Binvariants, and evaluate its performance across 25 benchmark applications: 7 closed-source as well as 18 open-source programs compiled as binary-only. Our results show that, compared to driving fuzzing solely via code coverage guidance, Register-level Likely Invariants helps fuzzing penetrate over 27× more program state invariants, thereby exercising a mean 52% more distinct code regions. Moreover, our approach uncovers 143 unique bugs versus coverage-only fuzzing’s 137—including 20 missed by code coverage alone—demonstrating how Register-level Likely Invariants extends binary-only fuzzing’s reach into execution states beyond what code coverage alone is capable of.",
@@ -12258,6 +12676,30 @@
   },
   {
     "abstract": "Changing software is essential to add needed functionality and to fix problems, but changes may introduce defects that lead to outages. This motivates one of the oldest software quality control techniques: a temporary prevention of non-critical changes to the codebase — code freeze. Despite its widespread use in practice, research literature is scant. Historically, code freezes were used as a way to improve software quality by preventing changes during periods before software releases, but code freezes significantly slow down development. To address this shortcoming we develop and evaluate a family of code un-freeze (permitting changes) strategies tailored to different occasions and products at Meta. They are designed to un-freeze the maximum amount of code without compromising quality. The three primary dimensions to un-freeze involve a) the exact timing of (and the reasoning behind it) the code freezes, b) the parts of the organization or the codebase where the codebase freeze is applied to, and c) the method of screening of the code diffs during the code freeze with the aim to allow low risk diffs and prevent only the most risky diffs. To operationalize the drivers of outages, we consider the entire network of interdependencies among different parts of the source code, the engineers that modify the code, code complexity, and the coordination dependencies and authors’ expertise. Since the code freeze is a balancing act between reducing outages and allowing software development to proceed unimpeded, the performance of the various approaches to code un-freeze is evaluated based on the fraction of flagged/gated changes to measure overhead and the fraction of all outage-causing changes contained within the set of flagged set of changes to measure the ability of the code un-freeze to delay (or prevent) outages. We found that taking into account the risk posed by modifying individual files and the properties of the change we could un-freeze two and 2.5 times more changes correspondingly. The change level model is used by Meta in production. For example, during the winter 2023 code freeze, we see that only 16% of changes are gated. Although 42% more changes landed (were integrated into the codebase) compared to the prior year, there was a 52% decrease in outages. This reduction meant less impact on users and less strain on engineers during the holiday period. The risk model has been enormously effective at allowing low risk changes to proceed while gating high risk changes and reducing outages.",
+    "authorIds": [
+      "0000-0002-7987-7598",
+      "0000-0003-3734-3157",
+      "0000-0003-1137-4297",
+      "0009-0006-4067-9515",
+      "0009-0009-4082-2934",
+      "0009-0003-4103-1196",
+      "0009-0007-4185-5960",
+      "0009-0002-7402-7655",
+      "0009-0001-2519-9867",
+      "0009-0002-1405-4838",
+      "0009-0000-7645-1949",
+      "0009-0000-3478-5350",
+      "0009-0009-4187-7371",
+      "0009-0007-1891-7764",
+      "0009-0000-8033-1093",
+      "0009-0009-4700-9882",
+      "0009-0001-8545-6335",
+      "0009-0005-5407-3875",
+      "0009-0002-1985-8659",
+      "0009-0005-7627-8695",
+      "0009-0004-3723-9004",
+      "0000-0003-1358-4124"
+    ],
     "authorInstitutions": "Audris Mockus (University of Tennessee); Rui Abreu (Faculty of Engineering of the University of Porto, Portugal); Peter C Rigby (Meta / Concordia University); David Amsallem (Meta Platforms, Inc.); Parveen Bansal (Meta Platforms, Inc.); Kaavya Chinniah (Meta Platforms, Inc.); Brian Ellis (Meta Platforms, Inc.); Peng Fan (Meta Platforms, Inc.); Jun Ge (Meta Platforms, Inc.); Wenlei He (Meta); Kelly Hirano (Meta Platforms, Inc.); Sahil Kumar (Meta Platforms, Inc.); Ajay Lingapuram (Meta Platforms, Inc.); W. Andrew Loe III (Meta Platforms, Inc.); Megh Mehta (Meta Platforms, Inc.); Venus Montes (Meta Platforms, Inc.); Maher Saba (Meta Platforms, Inc.); Gursharan Singh (Meta Platforms, Inc.); Matt Steiner (Meta Platforms, Inc.); Weiyan Sun (Meta Platforms, Inc.); Siri Uppalapati (Meta Platforms, Inc.); Nachiappan Nagappan (Meta Platforms, Inc.)",
     "authors": [
       "Audris Mockus",
@@ -12283,14 +12725,23 @@
       "Siri Uppalapati",
       "Nachiappan Nagappan"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Thu 9 Jul 2026 12:10 - 12:30"
     ],
+    "doi": "10.1145/3722216",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c60831c3-843c-4159-bc25-6157612b4417",
     "locations": [
       "MB 2.210"
     ],
+    "publicationDate": "2025-03-11",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Developers"
@@ -12303,6 +12754,7 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3722216",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/7/Leveraging-Risk-Models-to-Improve-Productivity-for-Effective-Code-Un-Freeze-at-Scale",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
@@ -12935,20 +13387,38 @@
   },
   {
     "abstract": "Parameter Efficient Fine-Tuning (PEFT) methods are proposed as an alternative fine-tuning approach for Large Language Models (LLM) to minimize high training costs. While prior research demonstrates the effectiveness of PEFT methods in knowledge transfer using smaller language models, their application to larger LLMs, particularly in low-resource and unseen programming languages such as R, remains under-explored. In this work, we evaluate PEFT methods, LoRA, Compacter, and IA$^3$ on LLMs for code summarization and generation, with a particular emphasis on knowledge transfer to R as an unseen under-explored target language. Our experiments reveal that LoRA consistently outperforms Compacter and IA$^3$ in all settings, while Compacter offers significant resource efficiency with minimal performance trade-offs. Additionally, we find that the number of trainable parameters has a greater influence on the functional accuracy of the generated code than PEFT architecture. Our study can direct future research in developing code intelligent tasks for unseen languages including R, as well as the choice of PEFT methods for knowledge transfer, especially when balancing the computational cost and performance.",
+    "authorIds": [
+      "0009-0005-5459-8559",
+      "",
+      ""
+    ],
     "authorInstitutions": "Amirreza Esmaeili (University of British Columbia); Iman Saberi (University of British Columbia Okanagan); Fatemeh Hendijani Fard (University of British Columbia, Okanagan)",
     "authors": [
       "Amirreza Esmaeili",
       "Iman Saberi",
       "Fatemeh Hendijani Fard"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 15:00 - 15:20"
     ],
+    "doi": "10.1007/s10664-025-10740-z",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ceb4c447-33b8-41f0-854a-f421b0fb8c5a",
+    "issue": "2",
     "locations": [
       "MB 1.210"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10740-z.pdf"
+    ],
+    "publicationDate": "2026-03-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "LLM for SE 7"
@@ -12961,9 +13431,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10740-z",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/48/Empirical-Studies-of-Parameter-Efficient-Methods-for-Large-Language-Models-of-Code-an",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "31"
   },
   {
     "abstract": "Metamorphic testing (MT) is a widely recognized technique for alleviating the oracle problem in software testing. However, its adoption is hindered by the difficulty of constructing effective metamorphic relations (MRs), which often require domain-specific or hard-to-obtain knowledge. In this work, we propose a novel approach that leverages the functional coupling between methods, which is readily available in source code, to automatically construct MRs and generate metamorphic test cases (MTCs). Our technique, MR-Coupler, identifies functionally coupled method pairs, employs large language models to generate candidate MTCs, and validates them through test amplification and mutation analysis. In particular, we leverage three functional coupling patterns to avoid expensive enumeration of possible method pairs, and a novel validation mechanism to reduce false alarms. Our evaluation of MR-Coupler on 100 human-written MTCs and 50 real-world bugs shows that it generates valid MTCs for over 90% of tasks, improves valid MTC generation by 64.90%, and reduces false alarms by 36.56% compared to baselines. Furthermore, the MTCs generated by MR-Coupler detect 44% of the real bugs. Moreover, the code structures of these MTCs closely follow the human-written MR skeletons. Our results highlight the effectiveness of leveraging functional coupling for automated MR construction and the potential of MR-Coupler to facilitate the adoption of MT in practice. We also released the tool and experimental data to support future research.",
@@ -13107,20 +13579,36 @@
   },
   {
     "abstract": "Code translation migrates codebases across programming languages. Recently, large language models (LLMs) have achieved significant advancements in software mining. However, handling the syntactic structure of source code remains a challenge. Classic syntax-aware methods depend on intricate model architectures and loss functions, rendering their integration into LLM training resource-intensive. This paper employs in-context learning (ICL), which directly integrates task exemplars into the input context, to post-incorporate code structural knowledge into pre-trained LLMs. We revisit exemplar selection in ICL from an information-theoretic perspective, proposing that list-wise selection based on information coverage is more precise and general objective than traditional methods based on combine similarity and diversity. To address the challenges of quantifying information coverage, we introduce a surrogate measure, Coverage of Abstract Syntax Tree~(CAST), measuring maximum subtree coverage between ASTs of test source code and exemplars. Furthermore, we formulate the NP-hard CAST maximization for exemplar selection and prove that it is a standard submodular maximization problem. Therefore, we propose a greedy algorithm for CAST submodular maximization, which theoretically guarantees a $(1-1/e)$-approximate solution in polynomial time complexity. Our method is the first training-free and model-agnostic approach to post-incorporate code structural knowledge into existing LLMs at test time. Experimental results show that our method significantly improves LLMs performance in code translation and reveals two meaningful insights: 1) Code structural knowledge can be effectively post-incorporated into pre-trained LLMs during inference, despite being overlooked during training; 2) Scaling up model size or training data does not lead to the emergence of code structural knowledge, underscoring the necessity of explicitly considering code syntactic structure.",
+    "authorIds": [
+      "0000-0001-7759-3906",
+      "0000-0002-4701-5379",
+      "0000-0001-7977-5500"
+    ],
     "authorInstitutions": "Yali Du (Nanjing University); Hui Sun (Nanjing University, National Key Laboratory for Novel Software Technology, China; Nanjing University, School of Artificial Intelligence, China); Ming Li (Nanjing University)",
     "authors": [
       "Yali Du",
       "Hui Sun",
       "Ming Li"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 14:00 - 14:20"
     ],
+    "doi": "10.1109/tse.2025.3605768",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d0fe0c29-d1c5-49ef-9bf3-549ed0d4b0b4",
+    "issue": "11",
     "locations": [
       "MB 3.270"
     ],
+    "pages": "3038-3055",
+    "publicationDate": "2025-11-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Journal-First Paper",
       "Code translation and transformation 2"
@@ -13133,9 +13621,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3605768",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/38/Post-Incorporating-Code-Structural-Knowledge-into-Pretrained-Models-via-ICL-for-Code-",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "51"
   },
   {
     "abstract": "The rapid proliferation of diverse programming languages presents both opportunities and challenges for developing multilingual code LLMs. While existing techniques often train code LLMs by simply aggregating multilingual code data, few explore the deeper relationships between programming languages and how such relationships can be utilized to optimize the training and inference of code LLMs. In this work, we investigate two fundamental questions: (1) What are the deep linguistic relationships among programming languages? and (2) How can these relationships be leveraged to improve multilingual code LLMs? We propose an embedding-based framework to uncover the latent families of programming languages. Our approach begins by defining 21 primary linguistic features of programming languages, such as variable definition, control structures, and method declarations, and then employs LLMs to generate feature-aligned code samples across multiple languages. By embedding these semantically parallel code snippets from 19 languages, we construct a similarity matrix and perform hierarchical clustering to uncover inherent language relationships. Our analysis reveals clear hierarchical structures among programming languages. Closely related languages form well-defined clusters (\\emph{e.g.}, C, C++, Java, and Swift group together), while Go exhibits as a central language with the highest cross-language similarity. Building on the uncovered language families, we propose three strategies to enhance multilingual LLM training: transfer learning across linguistically related languages, linguistic proximity-guided curriculum learning, and centroid-based intermediary code translation. Experiments on four code intelligence tasks demonstrate that our methods significantly improve multilingual LLM performance. This work offers a universal perspective on programming languages and advances more effective strategies for multilingual code LLM training.",
@@ -13518,6 +14008,13 @@
   },
   {
     "abstract": "Growth in system complexity increases the need for automated techniques dedicated to different log analysis tasks such as Log-based Anomaly Detection (LAD). The latter has been widely addressed in the literature, mostly by means of a variety of deep learning techniques. However, despite their many advantages, that focus on deep learning techniques is somewhat arbitrary as traditional Machine Learning (ML) techniques may perform well in many cases, depending on the context and datasets. In the same vein, semi-supervised techniques deserve the same attention as supervised techniques since the former have clear practical advantages. Further, current evaluations mostly rely on the assessment of detection accuracy. However, this is not enough to decide whether or not a specific ML technique is suitable to address the LAD problem in a given context. Other aspects to consider include training and prediction times as well as the sensitivity to hyperparameter tuning, which in practice matters to engineers. In this paper, we present a comprehensive empirical study, in which we evaluate a wide array of supervised and semi-supervised, traditional and deep ML techniques w.r.t. four evaluation criteria: detection accuracy, time performance, sensitivity of detection accuracy and time performance to hyperparameter tuning. Our goal is to provide much stronger and comprehensive evidence regarding the relative advantages and drawbacks of alternative techniques for LAD. The experimental results show that supervised traditional and deep ML techniques fare similarly in terms of their detection accuracy and prediction time on most of the benchmark datasets considered in our study. Moreover, overall, sensitivity analysis to hyperparameter tuning with respect to detection accuracy shows that supervised traditional ML techniques are less sensitive than deep learning techniques. Further, semi-supervised techniques yield significantly worse detection accuracy than supervised techniques.",
+    "authorIds": [
+      "0009-0007-3211-7691",
+      "",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Shan Ali (University of Ottawa); Chaima Boufaied (University of Calgary); Domenico Bianculli (University of Luxembourg); Paula Branco (University of Ottawa); Lionel Briand (University of Ottawa, Canada; Lero centre, University of Limerick, Ireland)",
     "authors": [
       "Shan Ali",
@@ -13526,14 +14023,27 @@
       "Paula Branco",
       "Lionel Briand"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 14:20 - 14:40"
     ],
+    "doi": "10.1007/s10664-025-10669-3",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d9513a93-9111-49dd-becf-2a41a21a0601",
+    "issue": "5",
     "locations": [
       "MB 5.215"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10669-3.pdf"
+    ],
+    "publicationDate": "2025-09-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Anomaly and failure 1"
@@ -13546,9 +14056,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10669-3",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/1/A-Comprehensive-Study-of-Machine-Learning-Techniques-for-Log-Based-Anomaly-Detection",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Large language models (LLMs) have been adopted for text-to-SQL tasks, utilizing their in-context learning (ICL) capability to translate natural language questions into SQL queries. However, such a technique faces correctness problems. In this paper, we conduct the first comprehensive study of text-to-SQL errors of ICL-based techniques. Our study covers four representative ICL-based techniques, five basic repairing methods, two benchmarks, and two LLM settings. We find that text-to-SQL errors are widespread and summarize 27 error types of 7 categories. We also find that existing repairing attempts have limited correctness improvement while having high computational overhead and many mis-repairs. Based on these findings, we propose MapleDoctor, a novel text-to-SQL error detection and repairing framework. The evaluation demonstrates that MapleDoctor outperforms existing solutions by repairing 13.8% more queries with neglectable mis-repairs and reducing 67.4% overhead. The artifact is publicly available at GitHub.",
@@ -13681,20 +14193,38 @@
   },
   {
     "abstract": "Mutation testing can help minimize the delivery of faulty software. Therefore, it is a recommended practice for developing embedded software in safety-critical cyber-physical systems (CPS). However, state-of-the-art mutation testing techniques for C and C++ software, which are common languages for CPS, depend on symbolic execution. Unfortunately, symbolic execution’s limitations hinder its applicability (e.g., systems with black-box components). In our previous work, presented at ASE 2024, we proposed Mutation Testing with Fuzzing (MOTIF), an approach relying on fuzz testing to automatically generate mutant-killing inputs for software developed in C. MOTIF leverages static analysis to automatically generate a test driver that loads data from a binary file generated by a fuzzer and assigns them to the variables passed to the function under test and its mutated version. By invoking a function and its mutant with the same data, MOTIF can identify inputs that kill the mutant as the ones leading to differences in output values (e.g., return values and referenced memory addresses). Further, by prioritizing inputs that exercise different paths, the fuzzer can guide the input selection process toward states that differ for the original and the mutated function. Although it demonstrated MOTIF effectiveness, our ASE paper focused solely on procedural software and did not fully leverage the available static analysis information that could be used to drive fuzzing. Therefore, our EMSE paper, which is the object of this journal-first track application, substantially extended our ASE paper by: 1) enabling MOTIF on object-oriented C++ software, 2) investigating what static analysis information improves mutation testing effectiveness, 3) assessing the combination of fuzzing and symbolic execution, 4) performing a large study on industrial software for space CPS. To summarize, our EMSE extension does not simply consist of assessing MOTIF on additional case study subjects, but it concerned extending the approach and assessing it with a large set of static and hybrid analysis configurations. Our empirical evaluation shows that MOTIF can detect between 40% and 90% of the mutants not detected by developers’ test suites. Further, we empirically determined that the best results are obtained by integrating the Clang compiler, a memory address sanitizer, and relying on laf-intel instrumentation to collect coverage and guide fuzzing. Our approach detects a significantly higher percentage of live mutants compared to symbolic execution, with an increase of up to 50 percentage points; further, we observed that although the combination of fuzzing and symbolic execution leads to additional mutants being killed, the benefits are minimal (a gain of less than one percentage point).",
+    "authorIds": [
+      "0000-0002-5222-1820",
+      "0000-0003-3541-3641",
+      "0000-0002-1393-1010"
+    ],
     "authorInstitutions": "Jaekwon Lee (Kangwon National University, South Korea); Fabrizio Pastore (University of Luxembourg); Lionel Briand (University of Ottawa, Canada; Lero centre, University of Limerick, Ireland)",
     "authors": [
       "Jaekwon Lee",
       "Fabrizio Pastore",
       "Lionel Briand"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 10:30 - 10:50"
     ],
+    "doi": "10.1007/s10664-025-10700-7",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ddb80d8f-9a7f-49ec-9d04-1301b77d2971",
+    "issue": "1",
     "locations": [
       "MB 3.430"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10700-7.pdf"
+    ],
+    "publicationDate": "2026-01-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Fuzzing 1"
@@ -13707,9 +14237,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10700-7",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/19/Fuzzing-based-mutation-testing-of-C-C-software-in-cyber-physical-systems",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "31"
   },
   {
     "abstract": "The rapid growth in scale and complexity of modern software systems has intensified the need for intelligent and reliable IT operations. While Artificial Intelligence for IT Operations (AIOps) addresses some challenges, existing solutions predominantly rely on isolated, task-specific models that struggle with interpreting multimodal data, incur high maintenance costs, and lack sufficient transparency. Operations Large Language Models (OpsLLMs) offer unified, knowledge-rich reasoning capabilities, yet their evaluation faces significant barriers, including the absence of Ops-centric evaluation taxonomies, limited availability of public datasets, simplistic question-generation methods, and inadequate quality standards for comprehensive operations tasks. We present Eagle, a comprehensive benchmarking framework tailored for evaluating OpsLLMs. Deployed inside Huawei, Eagle ingests enterprise product documentation and synthesizes 4{,}845 domain-grounded QA pairs across logs, metrics, traces, and configurations, which are paired with a standardized model evaluation system. This deployment supported multiple evaluations of OpsLLM and culminated in an internal horizontal benchmarking report that informed model selection and rollout decisions. Methodologically, Eagle (i) defines an operations-centric taxonomy aligning core LLM abilities with end-to-end operations tasks; (ii) implements an automated question-generation pipeline with multi-granular quality controls validated by human annotation; and (iii) provides reproducible evaluation suites and metrics for scenario-driven reasoning. In offline studies, Eagle-generated test suites improve expert-rated rubric scores by 22%–49% over state-of-the-art baselines, enabling more precise assessments of anomaly detection, fault diagnosis, and root-cause analysis abilities in OpsLLMs. To foster community adoption and reproducibility, we open-source the framework ( https://github.com/NickLennonLiu/eagle_code/ ) and a sanitized dataset ( https://github.com/NickLennonLiu/eagle_data/ ). By bridging general LLM evaluation and operations practice, Eagle delivers a deployable foundation for advancing large-model applications in AIOps.",
@@ -13857,19 +14389,32 @@
   },
   {
     "abstract": "Much of software engineering (SE) research assumes that progress depends on massive datasets and CPU-intensive optimizers. Yet has this assumption been rigorously tested? The counter-evidence presented in this paper suggests otherwise: across dozens of optimization problems from recent SE literature, even with just a few dozen labels, very simple methods (e.g. diversity sampling, a minimal Bayesian learner, or random probes) achieve over 90% of the best reported results. Further, these simple methods perform just as well as more state-of-the-the-art optimizers like DEHB. While some tasks would require better outcomes and more sampling, these results seen after a few dozen samples would suffice for many engineering needs (particularly when the goal is rapid and cost-efficient guidance rather than slow and exhaustive optimization). Our results highlights that some SE tasks may be better served by lightweight approaches that demand fewer labels and far less computation. We hence propose the data-light challenge: when will a handful of labels suffice for SE tasks? To enable a large-scale investigation of this issue, we contribute (1) a mathematical formalization of labeling, (2) lightweight baseline algorithms, and (3) results on public-domain data showing the conditions under which lightweight methods excel or fail. For the purposes of open science, our scripts and data are on-line at http://github.com/anon-artifacts/bingo .",
+    "authorIds": [
+      "",
+      "0000-0003-1487-4203"
+    ],
     "authorInstitutions": "Kishan Kumar Ganguly (NC State); Tim Menzies (North Carolina State University)",
     "authors": [
       "Kishan Kumar Ganguly",
       "Tim Menzies"
     ],
+    "container": "The Annals of Thoracic Surgery",
     "dates": [
       "Thu 9 Jul 2026 12:10 - 12:30"
     ],
+    "doi": "10.1016/j.athoracsur.2026.05.043",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e1849ac8-5ab0-424d-b4d5-7d838cd271e5",
     "locations": [
       "MB 3.445"
     ],
+    "publicationDate": "2026-06-01",
+    "publisher": "Elsevier BV",
     "sessionTitles": [
       "Research Papers",
       "Empirical 2"
@@ -13882,6 +14427,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1016/j.athoracsur.2026.05.043",
       "https://conf.researchr.org/details/fse-2026/fse-2026-research-papers/165/How-Low-Can-You-Go-The-Data-Light-SE-Challenge",
       "http://github.com/anon-artifacts/bingo",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
@@ -14262,20 +14808,38 @@
   },
   {
     "abstract": "Long-time contributors (LTCs) are essential for the sustainability of open source software (OSS) projects, but unfortunately many developers leave early. Predicting potential LTCs early in their tenure allows project maintainers to effectively allocate resources and mentoring to enhance their development and retention. Prior study shows that developers are primarily motivated to join OSS projects by opportunities to learn and enhance their skills at different areas, including the aspects of programming languages. This motivation plays a crucial role in their continued engagement and contributions to projects. Mapping programming language expertise to developers and characterizing projects in terms of how they use programming languages can help identify developers who are more likely to become LTCs. However, prior studies on predicting LTCs do not consider programming language skills. Towards filling this gap, this paper reports an empirical study on the usage of knowledge units (KUs) of the Java programming language to predict LTCs. A KU is a cohesive set of key capabilities that are offered by one or more building blocks of a given programming language. We select 75 real-world actively maintained Java projects from GitHub. Next, we build a prediction model called KULTC, which leverages KU-based features along five different dimensions. To engineer these features, we detect and analyze KUs from the studied 75 Java projects (spanning a total of 353K commits and 168K pull requests) as well as 4,219 other Java projects in which the studied developers previously worked (spanning a total of 1.7M commits). We compare the performance of KULTC with the state-of-the-art model, which we call BAOLTC. Even though KULTC focuses exclusively on the programming language perspective, KULTC achieves a median AUC of at least 0.75 and significantly outperforms BAOLTC. Combining the features of KULTC with the features of BAOLTC results in an enhanced model (KULTC+BAOLTC) that significantly outperforms BAOLTC across different settings with a normalized AUC improvement of 16.5%. Our feature importance analysis with SHAP reveals that developer expertise in the studied project is the most influential feature dimension for predicting LTCs. Finally, we develop a cost-effective model (KULTC_DEV_EXP+BAOLTC) that significantly outperforms BAOLTC. These encouraging results can be helpful to researchers who wish to further study the developers’ engagement/retention to OSS projects or build models for predicting LTCs. Future work in this area should thus (i) consider KULTC as a baseline model and (ii) consider KU-based features in the design of models that predict LTCs.",
+    "authorIds": [
+      "0000-0002-3709-2741",
+      "",
+      ""
+    ],
     "authorInstitutions": "Md Ahasanuzzaman (Queen's University); Gustavo A. Oliva (Huawei Canada and Queen's University); Ahmed E. Hassan (Queen’s University)",
     "authors": [
       "Md Ahasanuzzaman",
       "Gustavo A. Oliva",
       "Ahmed E. Hassan"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Tue 7 Jul 2026 14:10 - 14:30"
     ],
+    "doi": "10.1007/s10664-025-10655-9",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e9accde7-507c-4942-a7e5-9171917872c9",
+    "issue": "4",
     "locations": [
       "MB 3.210"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10655-9.pdf"
+    ],
+    "publicationDate": "2025-07-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "SE and AI 1"
@@ -14288,9 +14852,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10655-9",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/55/Predicting-long-time-contributors-with-knowledge-units-of-programming-languages-an-e",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Bug Reproduction Tests (BRTs) have been used in many Automated Program Repair (APR) systems, primarily for validating promising fixes and aiding fix generation. In practice, when developers submit a patch, they often implement the BRT alongside the fix. Our experience deploying agentic APR reveals that developers similarly desire a BRT within AI-generated patches to increase their confidence. However, canonical APR systems tend to generate BRTs and fixes separately, and focus on producing only the fix in the final patch. In this paper, we study agentic APR in the context of cogeneration, where the APR agent is instructed to generate both a fix and a BRT in the same patch. We evaluate the effectiveness of different cogeneration strategies on 120 human-reported bugs at Google and characterize different cogeneration strategies by their influence on APR agent behavior. We develop and evaluate patch selectors that account for test change information to select patches with plausible fixes (and plausible BRTs). Finally, we analyze the root causes of failed cogeneration trajectories. Importantly, we show that cogeneration allows the APR agent to generate BRTs for at least as many bugs as a dedicated BRT agent, without compromising the generation rate of plausible fixes, thereby reducing engineering effort in maintaining and coordinating separate generation pipelines for fix and BRT at scale.",
@@ -14955,14 +15521,24 @@
       "Ting Chen",
       "Zhong Chen"
     ],
+    "container": "Companion Proceedings of the 32nd ACM International Conference on the Foundations of Software Engineering",
     "dates": [
       "Wed 8 Jul 2026 14:00 - 14:20"
     ],
+    "doi": "10.1145/3663529.3664458",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f360ec1a-25b9-482a-b502-46211fe74920",
     "locations": [
       "MB 1.210"
     ],
+    "pages": "683-685",
+    "publicationDate": "2024-07-10",
+    "publisher": "ACM",
     "sessionTitles": [
       "Research Papers",
       "LLM for SE 4"
@@ -14975,12 +15551,21 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1145/3663529.3664458",
       "https://conf.researchr.org/details/fse-2026/fse-2026-research-papers/26/Detecting-Code-Comment-Inconsistencies-in-Smart-Contracts-by-Combining-LLM-and-Progra",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
     ]
   },
   {
     "abstract": "[Context] Microservices enable the decomposition of applications into small, independent, and connected services. The independence between services could positively affect a project’s velocity, which is considered an important maintenance metric measuring the time taken to implement features and fix bugs. However, no studies have investigated the causal relationship between microservices and velocity. [Objective and Method] The goal of this study is to investigate the effect of microservices on velocity which is a common maintenance metric. The study compares projects on GitHub developed with microservices style from the beginning and similar projects using monolithic architectures. The study was conducted as a retrospective cohort study,which is a study type used to assess causality. [Results] The results did not find statistically significant differences in mean velocities in microservice-based and monolithic projects. Furthermore, the statistical adjustment performed to quantify the statistical impact of the use of microservices on velocity considering additional confounders did not find statistically significant impact from these. [Conclusions] The results did not indicate a difference between microservices-based projects and monolithic projects in terms of velocity. In addition, this study will contribute to the body of knowledge of empirical methods and be among the first works to adopt the methodology of the cohort study.",
+    "authorIds": [
+      "",
+      "",
+      "0000-0003-0511-5133",
+      "",
+      "",
+      ""
+    ],
     "authorInstitutions": "Nyyti Saarimäki (University of Luxembourg); Mikel Robredo (University of Oulu); Valentina Lenarduzzi (University of Southern Denmark); Sira Vegas (Universidad Politecnica de Madrid); Natalia Juristo (Universidad Politecnica de Madrid); Davide Taibi (University of Southern Denmark and University of Oulu)",
     "authors": [
       "Nyyti Saarimäki",
@@ -14990,14 +15575,27 @@
       "Natalia Juristo",
       "Davide Taibi"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Thu 9 Jul 2026 10:30 - 10:50"
     ],
+    "doi": "10.1007/s10664-025-10673-7",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f3aa95e9-feed-4ab9-b0d9-3e80200b2860",
+    "issue": "5",
     "locations": [
       "MB 3.445"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-025-10673-7.pdf"
+    ],
+    "publicationDate": "2025-09-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Journal-First Paper",
       "Empirical 2"
@@ -15010,9 +15608,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-025-10673-7",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/57/Does-Microservice-Adoption-Impact-the-Velocity-A-Cohort-Study",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Code editing is a frequent yet cognitively demanding task in software development. Existing AI-powered tools often disrupt developer flow by requiring explicit natural language instructions and suffer from high latency, limiting real-world usability. We present NES (Next Edit Suggestion), an instruction-free, low-latency code editing framework that leverages learned historical editing trajectories to implicitly capture developers’ goals and coding habits. NES features a dual-model architecture: one model predicts the next edit location and the other generates the precise code change, both without any user instruction. Trained on our open-sourced SFT and DAPO datasets, NES achieves state-of-the-art performance (75.6% location accuracy, 27.7% exact match rate) while delivering suggestions in under 250ms. Deployed at Ant Group, NES serves over 20,000 developers through a seamless Tab-key interaction, achieving effective acceptance rates of 51.55% for location predictions and 43.44% for edits, demonstrating its practical impact in real-world development workflows.",
@@ -15157,6 +15757,14 @@
   },
   {
     "abstract": "Software logs serve as valuable resources for understanding system running and are extensively used in diverse software maintenance tasks. Logs are generated by logging statements in the code, which are written by developers. Therefore, logs may reflect developers’ sentiments about the described situations. Consequently, when developers and system administrators read logs, the sentiments embedded in logs may influence their understanding. Although the sentiments associated with logs can convey valuable information, such information is not leveraged in research and practice. Previous research has primarily relied on verbosity levels of logs to gauge sentiments, which does not really capture the sentiments and emotions perceived by humans. To bridge this gap, in this paper, we first conduct an exploratory study to investigate sentiments and emotions that are communicated within logs. Our study encompasses five anomaly log datasets from LogHub and a dataset involving eight open-source Apache Java projects. We find that 8% of the logs express sentiments and emotions though developers are suggested to write them in an objective way. While most log messages might not explicitly express sentiments and emotions, they can still implicitly evoke sentiments and emotions in those who read them. Therefore, we exploit issue reports referencing logs to capture such sentiments and emotions. In these issue reports, 47.5% exhibit emotions, with 54.7% of those emotions being related to logs and 8.1% directly addressing logs. Furthermore, we demonstrate the potential of leveraging sentiment analysis to complement verbosity levels in logs, showcasing how sentiment information can offer novel insights and enhance log analysis. Specifically, by applying automatic tools, we identify 41 issue reports (9.8% on average) with negative sentiment and 55 reports (13.2% on average) with negative emotions, all referencing INFO or DEBUG logs (i.e., low severity). After manually verifying and filtering exception logs, we uncover three main concerns from 22 critical instances.",
+    "authorIds": [
+      "0009-0004-5674-8752",
+      "0000-0002-3390-4079",
+      "0000-0002-0803-5609",
+      "0000-0001-7410-9146",
+      "0000-0002-2968-3496",
+      "0000-0001-6222-7444"
+    ],
     "authorInstitutions": "Xiaohui Wang (University of Waterloo); Youshuai Tan (Macau University of Science and Technology); Zishuo Ding (The Hong Kong University of Science and Technology (Guangzhou)); Jinfu Chen (Wuhan University); Jifeng Xuan (Wuhan University); Weiyi Shang (University of Waterloo)",
     "authors": [
       "Xiaohui Wang",
@@ -15166,14 +15774,25 @@
       "Jifeng Xuan",
       "Weiyi Shang"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 7 Jul 2026 14:40 - 15:00"
     ],
+    "doi": "10.1145/3723355",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f57c95dc-eec1-40c1-8845-3d326053ff1d",
+    "issue": "1",
     "locations": [
       "MB 3.445"
     ],
+    "pages": "1-28",
+    "publicationDate": "2026-01-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Journal-First Paper",
       "Logging"
@@ -15186,9 +15805,11 @@
       "Journal-First Paper"
     ],
     "urls": [
+      "https://doi.org/10.1145/3723355",
       "https://conf.researchr.org/details/fse-2026/fse-2026-journal-first/60/Enhancing-Log-Sentiments-An-Exploratory-Study-of-Sentiments-and-Emotions-with-Softwa",
       "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Pairwise testing is the most commonly used combinatorial interaction testing (CIT) technique to verify highly configurable systems, aiming to select the minimum number of testing configurations to cover all valid pairwise combinations of option values. The core problem of pairwise testing is the pairwise covering array generation (PCAG) problem. Existing PCAG methods typically struggle to generate small-scale pairwise covering arrays (PCA) for instances with complex constraints, or they require excessive computational time. To address these limitations, we propose \\textit{DivSampCA}, which employs a tuple-oriented adaptive sampling technique to enhance the diversity of the sampled configurations. Moreover, \\textit{DivSampCA} employs a novel full coverage strategy to ensure that the remaining uncovered pairwise tuples are covered with as few configurations as possible. We validate our method on 121 publicly available configurable system instances, and the experimental results show that \\textit{DivSampCA} achieves the smallest covering array in 71% of the instances, which is on average 15.54% smaller than that of other algorithms. Moreover, it is the fastest in 65% of the instances, reducing the average time by 42.36%. These results indicate that \\textit{DivSampCA} can generate smaller covering arrays in a shorter time and represents a significant advancement in solving the PCAG problem.",

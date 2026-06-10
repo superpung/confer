@@ -64,7 +64,7 @@
     ],
     "title": "Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Throughput Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790135",
@@ -132,7 +132,7 @@
     ],
     "title": "QoServe: Breaking the Silos of LLM Inference Serving",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Throughput Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790206",
@@ -201,7 +201,7 @@
     ],
     "title": "Shift Parallelism: Low-Latency, High-Throughput LLM Inference for Dynamic Workloads",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Throughput Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790219",
@@ -279,7 +279,7 @@
     ],
     "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Throughput Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790236",
@@ -323,7 +323,7 @@
     ],
     "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Throughput Optimization"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -401,7 +401,7 @@
     ],
     "title": "BAT: Efficient Generative Recommender Serving with Bipartite Attention",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Latency & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790131",
@@ -479,7 +479,7 @@
     ],
     "title": "BlendServe: Optimizing Offline Inference with Resource-Aware Batching",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Latency & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790133",
@@ -556,7 +556,7 @@
     ],
     "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Latency & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790187",
@@ -637,7 +637,7 @@
     ],
     "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Latency & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790200",
@@ -710,7 +710,7 @@
     ],
     "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
     "tracks": [
-      "Main Conference"
+      "LLM Serving: Latency & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790250",
@@ -778,7 +778,7 @@
     ],
     "title": "Borrowing Dirty Qubits in Quantum Programs",
     "tracks": [
-      "Main Conference"
+      "Quantum Computing: Compilation"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790134",
@@ -816,7 +816,7 @@
     ],
     "title": "PowerMove: Optimizing Compilation for Neutral Atom Quantum Computers with Zoned Architecture",
     "tracks": [
-      "Main Conference"
+      "Quantum Computing: Compilation"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -854,7 +854,7 @@
     ],
     "title": "QTurbo: A Robust and Efficient Compiler for Analog Quantum Simulation",
     "tracks": [
-      "Main Conference"
+      "Quantum Computing: Compilation"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -926,7 +926,7 @@
     ],
     "title": "Reconfigurable Quantum Instruction Set Computers for High Performance Attainable on Hardware",
     "tracks": [
-      "Main Conference"
+      "Quantum Computing: Compilation"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790208",
@@ -995,7 +995,7 @@
     ],
     "title": "Reducing T Gates with Unitary Synthesis",
     "tracks": [
-      "Main Conference"
+      "Quantum Computing: Compilation"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790210",
@@ -1059,7 +1059,7 @@
     ],
     "title": "A Programming Model for Disaggregated Memory over CXL",
     "tracks": [
-      "Main Conference"
+      "CXL & Memory Fabric"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790121",
@@ -1127,7 +1127,7 @@
     ],
     "title": "CXLMC: Model Checking CXL Shared Memory Programs",
     "tracks": [
-      "Main Conference"
+      "CXL & Memory Fabric"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790150",
@@ -1194,7 +1194,7 @@
     ],
     "title": "Cxlalloc: Safe and Efficient Memory Allocation for a CXL Pod",
     "tracks": [
-      "Main Conference"
+      "CXL & Memory Fabric"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790149",
@@ -1232,7 +1232,7 @@
     ],
     "title": "HybridTier: An Adaptive and Lightweight CXL-Memory Tiering System",
     "tracks": [
-      "Main Conference"
+      "CXL & Memory Fabric"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -1306,7 +1306,7 @@
     ],
     "title": "vCXLGen: Automated Synthesis and Verification of CXL Bridges for Heterogeneous Architectures",
     "tracks": [
-      "Main Conference"
+      "CXL & Memory Fabric"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790245",
@@ -1384,7 +1384,7 @@
     ],
     "title": "DIP: Efficient Large Multimodal Model Training with Dynamic Interleaved Pipeline",
     "tracks": [
-      "Main Conference"
+      "LLM Training Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790154",
@@ -1425,7 +1425,7 @@
     ],
     "title": "Dynamic Sparsity in Large-Scale Video DiT Training",
     "tracks": [
-      "Main Conference"
+      "LLM Training Systems"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -1502,7 +1502,7 @@
     ],
     "title": "Fine-grained and Non-intrusive LLM Training Monitoring via Microsecond-level Traffic Measurement",
     "tracks": [
-      "Main Conference"
+      "LLM Training Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790163",
@@ -1577,7 +1577,7 @@
     ],
     "title": "SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training",
     "tracks": [
-      "Main Conference"
+      "LLM Training Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790223",
@@ -1613,7 +1613,7 @@
     ],
     "title": "SuperOffload: Unleashing the Power of Large-Scale LLM Training on Superchips",
     "tracks": [
-      "Main Conference"
+      "LLM Training Systems"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -1688,7 +1688,7 @@
     ],
     "title": "DFVG: A Heterogeneous Architecture for Speculative Decoding with Draft-on-FPGA and Verify-on-GPU",
     "tracks": [
-      "Main Conference"
+      "Speculative Decoding"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790153",
@@ -1766,7 +1766,7 @@
     ],
     "title": "EARTH: An Efficient MoE Accelerator with Entropy-Aware Speculative Prefetch and Result Reuse",
     "tracks": [
-      "Main Conference"
+      "Speculative Decoding"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790155",
@@ -1837,7 +1837,7 @@
     ],
     "title": "SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs",
     "tracks": [
-      "Main Conference"
+      "Speculative Decoding"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790224",
@@ -1910,7 +1910,7 @@
     ],
     "title": "SpecProto: A Parallelizing Compiler for Speculative Decoding of Large Protocol Buffers Data",
     "tracks": [
-      "Main Conference"
+      "Speculative Decoding"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790225",
@@ -1988,7 +1988,7 @@
     ],
     "title": "SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference",
     "tracks": [
-      "Main Conference"
+      "Speculative Decoding"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790246",
@@ -2062,7 +2062,7 @@
     ],
     "title": "Asynchrony and GPUs: Bridging this Dichotomy for I/O with AGIO",
     "tracks": [
-      "Main Conference"
+      "GPU Systems & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790130",
@@ -2112,7 +2112,7 @@
     ],
     "title": "GFS: A Preemption-aware Scheduling Framework for GPU Clusters with Predictive Spot Instance Management",
     "tracks": [
-      "Main Conference"
+      "GPU Systems & Scheduling"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -2180,7 +2180,7 @@
     ],
     "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
     "tracks": [
-      "Main Conference"
+      "GPU Systems & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790176",
@@ -2270,7 +2270,7 @@
     ],
     "title": "MSCCL++: Rethinking GPU Communication Abstractions for AI Inference",
     "tracks": [
-      "Main Conference"
+      "GPU Systems & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790188",
@@ -2346,7 +2346,7 @@
     ],
     "title": "gShare: Efficient GPU Sharing with Aggressive Scheduling in Multi-tenant FaaS platform",
     "tracks": [
-      "Main Conference"
+      "GPU Systems & Scheduling"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790168",
@@ -2417,7 +2417,7 @@
     ],
     "title": "APT: Securing Against DRAM Read Disturbance via Adaptive Probabilistic In-DRAM Trackers",
     "tracks": [
-      "Main Conference"
+      "DRAM Reliability & Security"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790126",
@@ -2481,7 +2481,7 @@
     ],
     "title": "Optimizer-Friendly Instrumentation for Event Quantification with PRUE Algorithm",
     "tracks": [
-      "Main Conference"
+      "DRAM Reliability & Security"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790196",
@@ -2557,7 +2557,7 @@
     ],
     "title": "RowArmor: Efficient and Comprehensive Protection Against DRAM Disturbance Errors",
     "tracks": [
-      "Main Conference"
+      "DRAM Reliability & Security"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790213",
@@ -2630,7 +2630,7 @@
     ],
     "title": "STRAW: Stress-Aware WL-Based Read Disturbance Management for High-Density NAND Flash Memory",
     "tracks": [
-      "Main Conference"
+      "DRAM Reliability & Security"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790228",
@@ -2698,7 +2698,7 @@
     ],
     "title": "Trust-V: Toward Secure and Reliable Storage for Trusted Execution Environments",
     "tracks": [
-      "Main Conference"
+      "DRAM Reliability & Security"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790242",
@@ -2768,7 +2768,7 @@
     ],
     "title": "I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention",
     "tracks": [
-      "Main Conference"
+      "LLM Attention & KV Cache"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790174",
@@ -2835,7 +2835,7 @@
     ],
     "title": "Mugi: Value Level Parallelism For Efficient LLMs",
     "tracks": [
-      "Main Conference"
+      "LLM Attention & KV Cache"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790189",
@@ -2904,7 +2904,7 @@
     ],
     "title": "REPA: Reconfigurable PIM for the Joint Acceleration of KV Cache Offloading and Processing",
     "tracks": [
-      "Main Conference"
+      "LLM Attention & KV Cache"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790212",
@@ -2981,7 +2981,7 @@
     ],
     "title": "STARC: Selective Token Access with Remapping and Clustering for Efficient LLM Decoding on PIM Systems",
     "tracks": [
-      "Main Conference"
+      "LLM Attention & KV Cache"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790226",
@@ -3057,7 +3057,7 @@
     ],
     "title": "TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill & Decode Inference",
     "tracks": [
-      "Main Conference"
+      "LLM Attention & KV Cache"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790237",
@@ -3131,7 +3131,7 @@
     ],
     "title": "FastTTS: Accelerating Test-Time Scaling for Edge LLM Reasoning",
     "tracks": [
-      "Main Conference"
+      "Mixture-of-Experts & Efficient Inference"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790161",
@@ -3206,7 +3206,7 @@
     ],
     "title": "LAER-MoE: Load-Adaptive Expert Re-layout for Efficient Mixture-of-Experts Training",
     "tracks": [
-      "Main Conference"
+      "Mixture-of-Experts & Efficient Inference"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790180",
@@ -3243,7 +3243,7 @@
     ],
     "title": "MoDM: Efficient Serving for Image Generation via Mixture-of-Diffusion Models",
     "tracks": [
-      "Main Conference"
+      "Mixture-of-Experts & Efficient Inference"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -3320,7 +3320,7 @@
     ],
     "title": "Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter",
     "tracks": [
-      "Main Conference"
+      "Mixture-of-Experts & Efficient Inference"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790231",
@@ -3384,7 +3384,7 @@
     ],
     "title": "oFFN: Outlier and Neuron-aware Structured FFN for Fast yet Accurate LLM Inference",
     "tracks": [
-      "Main Conference"
+      "Mixture-of-Experts & Efficient Inference"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790194",
@@ -3421,7 +3421,7 @@
     ],
     "title": "AGS: Accelerating 3D Gaussian Splatting SLAM via CODEC-Assisted Frame Covisibility Detection",
     "tracks": [
-      "Main Conference"
+      "3D Gaussian Splatting & Rendering"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -3499,7 +3499,7 @@
     ],
     "title": "CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting",
     "tracks": [
-      "Main Conference"
+      "3D Gaussian Splatting & Rendering"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790140",
@@ -3568,7 +3568,7 @@
     ],
     "title": "GS-Scale: Unlocking Large-Scale 3D Gaussian Splatting Training via Host Offloading",
     "tracks": [
-      "Main Conference"
+      "3D Gaussian Splatting & Rendering"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790167",
@@ -3646,7 +3646,7 @@
     ],
     "title": "Nebula: Infinite-Scale 3D Gaussian Splatting in VR via Collaborative Rendering and Accelerated Stereo Rasterization",
     "tracks": [
-      "Main Conference"
+      "3D Gaussian Splatting & Rendering"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790190",
@@ -3715,7 +3715,7 @@
     ],
     "title": "Neo: Real-Time On-Device 3D Gaussian Splatting with Reuse-and-Update Sorting Acceleration",
     "tracks": [
-      "Main Conference"
+      "3D Gaussian Splatting & Rendering"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790192",
@@ -3785,7 +3785,7 @@
     ],
     "title": "Compass: Navigating the Design Space of Taint Schemes for RTL Security Verification",
     "tracks": [
-      "Main Conference"
+      "Trusted Execution Environments"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790144",
@@ -3855,7 +3855,7 @@
     ],
     "title": "Detecting Inconsistencies in ARM CCA’s Formally Verified Specification",
     "tracks": [
-      "Main Conference"
+      "Trusted Execution Environments"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790152",
@@ -3865,6 +3865,16 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0002-4232-4519",
+      "0000-0002-1869-0826",
+      "0009-0005-5124-9513",
+      "0000-0002-4878-9827",
+      "0009-0006-3956-266X",
+      "0000-0003-1508-0261",
+      "0000-0002-2442-0582",
+      "0000-0002-2416-6537"
+    ],
     "authorInstitutions": "Nils Asmussen (Barkhausen Institut); Sebastian Haas (Barkhausen Institut); Carsten Weinhold (Barkhausen Institut); Nicholas Gordon (Barkhausen Institut); Stephan Gerhold (TU Dresden); Friedrich Pauls (Barkhausen Institut); Nilanjana Das (Barkhausen Institut); Michael Roitzsch (Barkhausen Institut)",
     "authors": [
       "Nils Asmussen",
@@ -3876,17 +3886,25 @@
       "Nilanjana Das",
       "Michael Roitzsch"
     ],
+    "container": "Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
     "dates": [
       "Day 1: Tuesday, March 24, 2026 3:55 – 6:00 PM EDT"
     ],
+    "doi": "10.1145/3779212.3790232",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Trusted Execution Environments"
     },
     "id": "3D-TEEM_Core-Independent_and_Cooperating_Trusted_Execution_Environments",
     "locations": [
       "Ohio & Monogahela"
     ],
+    "pages": "1966-1981",
+    "publicationDate": "2026-03-22",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 3D: Trusted Execution Environments"
     ],
@@ -3895,9 +3913,10 @@
     ],
     "title": "TEEMÂ³: Core-Independent and Cooperating Trusted Execution Environments",
     "tracks": [
-      "Main Conference"
+      "Trusted Execution Environments"
     ],
     "urls": [
+      "https://doi.org/10.1145/3779212.3790232",
       "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
@@ -3964,7 +3983,7 @@
     ],
     "title": "WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight",
     "tracks": [
-      "Main Conference"
+      "Trusted Execution Environments"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790247",
@@ -4037,7 +4056,7 @@
     ],
     "title": "WorksetEnclave: Towards Optimizing Cold Starts in Confidential Serverless with Workset-Based Enclave Restore",
     "tracks": [
-      "Main Conference"
+      "Trusted Execution Environments"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790249",
@@ -4076,7 +4095,7 @@
     ],
     "title": "DeepContext: A Context-aware, Cross-platform, and Cross-framework Tool for Performance Profiling and Analysis of Deep Learning Workloads",
     "tracks": [
-      "Main Conference"
+      "ML Training & Monitoring"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -4140,7 +4159,7 @@
     ],
     "title": "LAIKA: Machine Learning-Assisted In-Kernel APU Acceleration",
     "tracks": [
-      "Main Conference"
+      "ML Training & Monitoring"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790181",
@@ -4177,7 +4196,7 @@
     ],
     "title": "NotebookOS: A Replicated Notebook Platform for Interactive Training with On-Demand GPUs",
     "tracks": [
-      "Main Conference"
+      "ML Training & Monitoring"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -4250,7 +4269,7 @@
     ],
     "title": "T-Control: An Efficient Dynamic Tensor Rematerialization System for DNN Training",
     "tracks": [
-      "Main Conference"
+      "ML Training & Monitoring"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790230",
@@ -4331,7 +4350,7 @@
     ],
     "title": "Triton-Sanitizer: A Fast and Device-Agnostic Memory Sanitizer for Triton with Rich Diagnostic Context",
     "tracks": [
-      "Main Conference"
+      "ML Training & Monitoring"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790241",
@@ -4406,7 +4425,7 @@
     ],
     "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow",
     "tracks": [
-      "Main Conference"
+      "ML Compilers & Tensor Programs"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790165",
@@ -4449,7 +4468,7 @@
     ],
     "title": "Linear Layouts: Robust Code Generation of Efficient Tensor Computation Using F2",
     "tracks": [
-      "Main Conference"
+      "ML Compilers & Tensor Programs"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -4525,7 +4544,7 @@
     ],
     "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
     "tracks": [
-      "Main Conference"
+      "ML Compilers & Tensor Programs"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790209",
@@ -4602,7 +4621,7 @@
     ],
     "title": "Streaming Tensor Program: A streaming abstraction for dynamic parallelism",
     "tracks": [
-      "Main Conference"
+      "ML Compilers & Tensor Programs"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790229",
@@ -4674,7 +4693,7 @@
     ],
     "title": "Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation",
     "tracks": [
-      "Main Conference"
+      "ML Compilers & Tensor Programs"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790240",
@@ -4748,7 +4767,7 @@
     ],
     "title": "Accelerating Computation in Quantum LDPC Code",
     "tracks": [
-      "Main Conference"
+      "Quantum Error Correction"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790122",
@@ -4825,7 +4844,7 @@
     ],
     "title": "AlphaSyndrome: Tackling the Syndrome Measurement Circuit Scheduling Problem for QEC Codes",
     "tracks": [
-      "Main Conference"
+      "Quantum Error Correction"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790123",
@@ -4890,7 +4909,7 @@
     ],
     "title": "Architecting Scalable Trapped Ion Quantum Computers using Surface Codes",
     "tracks": [
-      "Main Conference"
+      "Quantum Error Correction"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790128",
@@ -4958,7 +4977,7 @@
     ],
     "title": "PropHunt: Automated Optimization of Quantum Syndrome Measurement Circuits",
     "tracks": [
-      "Main Conference"
+      "Quantum Error Correction"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790205",
@@ -5045,7 +5064,7 @@
     ],
     "title": "iSwitch: QEC on Demand via In-Situ Encoding of Bare Qubits for Ion Trap Architectures",
     "tracks": [
-      "Main Conference"
+      "Quantum Error Correction"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790177",
@@ -5119,7 +5138,7 @@
     ],
     "title": "A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs",
     "tracks": [
-      "Main Conference"
+      "Processing-in-Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790119",
@@ -5184,7 +5203,7 @@
     ],
     "title": "CoGraf: Fully Accelerating Graph Applications with Fine-Grained PIM",
     "tracks": [
-      "Main Conference"
+      "Processing-in-Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790142",
@@ -5248,7 +5267,7 @@
     ],
     "title": "DARTH-PUM: A Hybrid Processing-Using-Memory Architecture",
     "tracks": [
-      "Main Conference"
+      "Processing-in-Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790151",
@@ -5325,7 +5344,7 @@
     ],
     "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
     "tracks": [
-      "Main Conference"
+      "Processing-in-Memory"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790197",
@@ -5364,7 +5383,7 @@
     ],
     "title": "PUSHtap: PIM-based In-Memory HTAP with Unified Data Storage Format",
     "tracks": [
-      "Main Conference"
+      "Processing-in-Memory"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -5402,7 +5421,7 @@
     ],
     "title": "Compositional AI Beyond LLMs: System Implications of Neuro-Symbolic-Probabilistic Architectures",
     "tracks": [
-      "Main Conference"
+      "Generative Model Serving"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -5471,7 +5490,7 @@
     ],
     "title": "It Takes Two to Entangle",
     "tracks": [
-      "Main Conference"
+      "Generative Model Serving"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790178",
@@ -5536,7 +5555,7 @@
     ],
     "title": "Segment Only Where You Look: Leveraging Human Gaze Behavior for Efficient Computer Vision Applications in Augmented Reality",
     "tracks": [
-      "Main Conference"
+      "Generative Model Serving"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790216",
@@ -5610,7 +5629,7 @@
     ],
     "title": "TetriServe: Efficiently Serving Mixed DiT Workloads",
     "tracks": [
-      "Main Conference"
+      "Generative Model Serving"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790233",
@@ -5650,7 +5669,7 @@
     ],
     "title": "Tilus: A Tile-Level GPGPU Programming Language for Low-Precision Computation",
     "tracks": [
-      "Main Conference"
+      "Generative Model Serving"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -5686,7 +5705,7 @@
     ],
     "title": "ASDR: Exploiting Adaptive Sampling and Data Reuse for CIM-based Instant Neural Rendering",
     "tracks": [
-      "Main Conference"
+      "On-Device & Edge AI"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -5771,7 +5790,7 @@
     ],
     "title": "BitRed: Taming Non-Uniform Bit-Level Sparsity with a Programmable RISC-V ISA for DNN Acceleration",
     "tracks": [
-      "Main Conference"
+      "On-Device & Edge AI"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790132",
@@ -5847,7 +5866,7 @@
     ],
     "title": "FlashMem: Supporting Modern DNN Workloads on Mobile with GPU Memory Hierarchy Optimizations",
     "tracks": [
-      "Main Conference"
+      "On-Device & Edge AI"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790164",
@@ -5940,7 +5959,7 @@
     ],
     "title": "Lifetime-Aware Design for Item-Level Intelligence at the Extreme Edge",
     "tracks": [
-      "Main Conference"
+      "On-Device & Edge AI"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790182",
@@ -5981,7 +6000,7 @@
     ],
     "title": "Neuralink: Fast on-Device LLM Inference with Neuron Co-Activation Linking",
     "tracks": [
-      "Main Conference"
+      "On-Device & Edge AI"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -6049,7 +6068,7 @@
     ],
     "title": "Graphiti: Formally Verified Out-of-Order Execution in Dataflow Circuits",
     "tracks": [
-      "Main Conference"
+      "Formal Verification"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790166",
@@ -6060,11 +6079,11 @@
   {
     "abstract": "System software is often complex and hides exploitable security vulnerabilities. Formal verification promises bug-free software but comes with a prohibitive proof cost. We present Spoq2, the first verification framework to highly automate security verification of unmodified system software. Spoq2 is based on the observation that many security properties, such as noninterference, can be reduced to establishing inductive invariants on individual transitions of a transition system that models system software. However, directly verifying such invariants for real system code overwhelms existing SMT solvers. Spoq2 makes this possible by automatically reducing verification complexity. It decomposes transitions into individual execution paths, extends cone-of-influence analysis to the individual transition level, and eliminates irrelevant machine states, clauses, and control-flow paths before invoking the SMT solver. Spoq2 further optimizes how pointer operations are modeled and verified through pointer abstractions that eliminate expensive bit-wise operations from SMT queries. We demonstrate the effectiveness of Spoq2 by verifying security properties of four unmodified, real-world system codebases with minimal manual effort.",
     "authorIds": [
-      "A5109729525",
-      "A5103491790",
+      "0009-0006-5703-2582",
+      "0009-0003-2107-1625",
       "0000-0003-2740-2109",
-      "A5128708863",
-      "A5113242941",
+      "0009-0000-1371-2179",
+      "0009-0009-3378-006X",
       "0009-0005-8301-4479",
       "0000-0002-6812-6182"
     ],
@@ -6078,6 +6097,7 @@
       "Jason Nieh",
       "Ronghui Gu"
     ],
+    "container": "Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
     "dates": [
       "Day 2: Wednesday, March 25, 2026 1:30 – 3:35 PM EDT"
     ],
@@ -6085,7 +6105,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -6114,7 +6134,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3779212.3790171"
     ],
-    "publicationDate": "2026-03-10",
+    "publicationDate": "2026-03-22",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 5C: Formal Verification"
     ],
@@ -6123,12 +6144,11 @@
     ],
     "title": "Highly Automated Verification of Security Properties for Unmodified System Software",
     "tracks": [
-      "Main Conference"
+      "Formal Verification"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790171",
-      "https://www.asplos-conference.org/asplos2026/program/index.html",
-      "https://openalex.org/W7134889611"
+      "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
   {
@@ -6193,7 +6213,7 @@
     ],
     "title": "LPO: Discovering Missed Peephole Optimizations with Large Language Models",
     "tracks": [
-      "Main Conference"
+      "Formal Verification"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790184",
@@ -6261,7 +6281,7 @@
     ],
     "title": "Once-for-All: Skeleton-Guided SMT Solver Fuzzing with LLM-Synthesized Generators",
     "tracks": [
-      "Main Conference"
+      "Formal Verification"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790195",
@@ -6295,7 +6315,7 @@
     ],
     "title": "SylQ-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching",
     "tracks": [
-      "Main Conference"
+      "Formal Verification"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -6361,7 +6381,7 @@
     ],
     "title": "CacheMind: From Miss Rates to Why – Natural-Language, Trace-Grounded Reasoning for Cache Replacement",
     "tracks": [
-      "Main Conference"
+      "Storage & Caching"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790136",
@@ -6436,7 +6456,7 @@
     ],
     "title": "Hitchhike: Efficient Request Submission via Deferred Enforcement of Address Contiguity",
     "tracks": [
-      "Main Conference"
+      "Storage & Caching"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790173",
@@ -6504,7 +6524,7 @@
     ],
     "title": "ICARUS: Criticality and Reuse based Instruction Caching for Datacenter Applications",
     "tracks": [
-      "Main Conference"
+      "Storage & Caching"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790175",
@@ -6586,7 +6606,7 @@
     ],
     "title": "Nemo: A Low-Write-Amplification Cache for Tiny Objects on Log-Structured Flash Devices",
     "tracks": [
-      "Main Conference"
+      "Storage & Caching"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790191",
@@ -6652,7 +6672,7 @@
     ],
     "title": "Toasty: Speeding up network I/O with cache-warm buffers",
     "tracks": [
-      "Main Conference"
+      "Storage & Caching"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790235",
@@ -6739,7 +6759,7 @@
     ],
     "title": "CREATE: Cross-Layer Resilience Characterization and Optimization for Efficient yet Reliable Embodied AI Systems",
     "tracks": [
-      "Main Conference"
+      "Neural Network Acceleration"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790147",
@@ -6852,7 +6872,7 @@
     ],
     "title": "Hardwired-Neuron Language Processing Units as General-Purpose Cognitive Substrates",
     "tracks": [
-      "Main Conference"
+      "Neural Network Acceleration"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790169",
@@ -6929,7 +6949,7 @@
     ],
     "title": "History Doesn’t Repeat Itself but Rollouts Rhyme: Accelerating Reinforcement Learning with HistoRL",
     "tracks": [
-      "Main Conference"
+      "Neural Network Acceleration"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790172",
@@ -6965,7 +6985,7 @@
     ],
     "title": "Syno: Structured Synthesis for Neural Operators",
     "tracks": [
-      "Main Conference"
+      "Neural Network Acceleration"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -7010,7 +7030,7 @@
     ],
     "title": "Voyager: Input-Adaptive Algebraic Transformations for High-Performance Graph Neural Networks",
     "tracks": [
-      "Main Conference"
+      "Neural Network Acceleration"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -7075,7 +7095,7 @@
     ],
     "title": "Anvil: A General-Purpose Timing-Safe Hardware Description Language",
     "tracks": [
-      "Main Conference"
+      "Hardware Design Languages"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790125",
@@ -7152,7 +7172,7 @@
     ],
     "title": "Parameterized Hardware Design with Latency-Abstract Interfaces",
     "tracks": [
-      "Main Conference"
+      "Hardware Design Languages"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790199",
@@ -7221,7 +7241,7 @@
     ],
     "title": "RTeAAL Sim: Using Tensor Algebra to Represent and Accelerate RTL Simulation",
     "tracks": [
-      "Main Conference"
+      "Hardware Design Languages"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790214",
@@ -7294,7 +7314,7 @@
     ],
     "title": "Rage Against the State Machine: Type-Stated Hardware Peripherals for Increased Driver Correctness",
     "tracks": [
-      "Main Conference"
+      "Hardware Design Languages"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790207",
@@ -7330,7 +7350,7 @@
     ],
     "title": "Sequential Specifications for Precise Hardware Exceptions",
     "tracks": [
-      "Main Conference"
+      "Hardware Design Languages"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -7410,7 +7430,7 @@
     ],
     "title": "Efficient Temporal Graph Network Training via Unified Redundancy Elimination",
     "tracks": [
-      "Main Conference"
+      "Graph & Sparse Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790157",
@@ -7445,7 +7465,7 @@
     ],
     "title": "Leveraging Sparsity to Accelerate Automata Processing",
     "tracks": [
-      "Main Conference"
+      "Graph & Sparse Computing"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -7515,7 +7535,7 @@
     ],
     "title": "SLAWS: Spatial Locality Analysis and Workload Orchestration for Sparse Matrix Multiplication",
     "tracks": [
-      "Main Conference"
+      "Graph & Sparse Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790222",
@@ -7560,7 +7580,7 @@
     ],
     "title": "TempGraph: An Efficient Chain-driven Temporal Graph Computing Framework on the GPU",
     "tracks": [
-      "Main Conference"
+      "Graph & Sparse Computing"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -7623,7 +7643,7 @@
     ],
     "title": "Understanding Query Optimization Bugs in Graph Database Systems",
     "tracks": [
-      "Main Conference"
+      "Graph & Sparse Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790244",
@@ -7701,7 +7721,7 @@
     ],
     "title": "CPU-Oblivious Offloading of Failure-Atomic Transactions for Disaggregated Memory",
     "tracks": [
-      "Main Conference"
+      "Disaggregated Memory Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790146",
@@ -7771,7 +7791,7 @@
     ],
     "title": "CREST: High-Performance Contention Resolution for Disaggregated Transactions",
     "tracks": [
-      "Main Conference"
+      "Disaggregated Memory Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790148",
@@ -7841,7 +7861,7 @@
     ],
     "title": "Efficient Remote Memory Ordering for Non-Coherent Systems",
     "tracks": [
-      "Main Conference"
+      "Disaggregated Memory Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790156",
@@ -7852,7 +7872,7 @@
   {
     "abstract": "The emerging Compute Express Link (CXL) interconnect supports multi-host cache-coherent disaggregated shared memory (CXL-DSM). However, existing page migration approaches, designed primarily for single-host systems, are inefficient in multi-host CXL-DSM scenarios. To address this, we propose Partial and Incremental Page Migration (PIPM), a hardware-based solution that transparently leverages host-side local memory. PIPM is co-designed with the CXL multi-host coherence protocol, enabling coherent access to data residing in local DRAM. To overcome limitations of existing migration methods, PIPM supports fine-grained data migration and integrates hardware-based monitoring and decision-making mechanisms to optimize data placement. Evaluation results demonstrate that PIPM delivers performance improvements of up to 2.54× (1.86× on average) over the default multi-host CXL-DSM configuration.",
     "authorIds": [
-      "A5128253890",
+      "0009-0004-2427-760X",
       "0000-0001-5181-9639",
       "0000-0003-4165-9138"
     ],
@@ -7862,6 +7882,7 @@
       "Heiner Litz",
       "Yuanchao Xu"
     ],
+    "container": "Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
     "dates": [
       "Day 2: Wednesday, March 25, 2026 3:55 – 6:00 PM EDT"
     ],
@@ -7869,7 +7890,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -7895,7 +7916,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3779212.3790203"
     ],
-    "publicationDate": "2026-03-10",
+    "publicationDate": "2026-03-22",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 6D: Disaggregated Memory Systems"
     ],
@@ -7904,12 +7926,11 @@
     ],
     "title": "PIPM: Partial and Incremental Page Migration for Multi-host CXL Disaggregated Shared Memory",
     "tracks": [
-      "Main Conference"
+      "Disaggregated Memory Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790203",
-      "https://www.asplos-conference.org/asplos2026/program/index.html",
-      "https://openalex.org/W7134952944"
+      "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
   {
@@ -7970,7 +7991,7 @@
     ],
     "title": "Understanding and Optimizing Database Pushdown on Disaggregated Storage",
     "tracks": [
-      "Main Conference"
+      "Disaggregated Memory Systems"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790243",
@@ -8045,7 +8066,7 @@
     ],
     "title": "A Framework for Developing and Optimizing Fully Homomorphic Encryption Programs on GPUs",
     "tracks": [
-      "Main Conference"
+      "Fully Homomorphic Encryption"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790120",
@@ -8125,7 +8146,7 @@
     ],
     "title": "Falcon: Algorithm-Hardware Co-Design for Efficient Fully Homomorphic Encryption Accelerator",
     "tracks": [
-      "Main Conference"
+      "Fully Homomorphic Encryption"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790160",
@@ -8196,7 +8217,7 @@
     ],
     "title": "HEPIC: Private Inference over Homomorphic Encryption with Client Intervention",
     "tracks": [
-      "Main Conference"
+      "Fully Homomorphic Encryption"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790170",
@@ -8268,7 +8289,7 @@
     ],
     "title": "Maverick: Rethinking TFHE Bootstrapping on GPUs via Algorithm-Hardware Co-Design",
     "tracks": [
-      "Main Conference"
+      "Fully Homomorphic Encryption"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790186",
@@ -8307,7 +8328,7 @@
     ],
     "title": "COGENT: Adaptable Compiler Toolchain for Tagging RISC-V Binaries",
     "tracks": [
-      "Main Conference"
+      "Compilers & Code Generation"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -8375,7 +8396,7 @@
     ],
     "title": "Evaluating Compiler Optimization Impacts on zkVM Performance",
     "tracks": [
-      "Main Conference"
+      "Compilers & Code Generation"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790159",
@@ -8444,7 +8465,7 @@
     ],
     "title": "Finding Reusable Instructions via E-Graph Anti-Unification",
     "tracks": [
-      "Main Conference"
+      "Compilers & Code Generation"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790162",
@@ -8518,7 +8539,7 @@
     ],
     "title": "LOOPRAG: Enhancing Loop Transformation Optimization with Retrieval-Augmented Large Language Models",
     "tracks": [
-      "Main Conference"
+      "Compilers & Code Generation"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790183",
@@ -8559,7 +8580,7 @@
     ],
     "title": "DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking assisted Processor Fuzzing",
     "tracks": [
-      "Main Conference"
+      "Testing & Fuzzing"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -8626,7 +8647,7 @@
     ],
     "title": "SEVI: Silent Data Corruption of Vector Instructions in Hyper-Scale Datacenters",
     "tracks": [
-      "Main Conference"
+      "Testing & Fuzzing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790217",
@@ -8692,7 +8713,7 @@
     ],
     "title": "Scaling Automated Database System Testing",
     "tracks": [
-      "Main Conference"
+      "Testing & Fuzzing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790215",
@@ -8755,7 +8776,7 @@
     ],
     "title": "Signal Breaker: Fuzzing Digital Signal Processors",
     "tracks": [
-      "Main Conference"
+      "Testing & Fuzzing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790220",
@@ -8829,12 +8850,11 @@
     ],
     "title": "A Data-Driven Dynamic Execution Orchestration Architecture",
     "tracks": [
-      "Main Conference"
+      "Processor Microarchitecture"
     ],
     "urls": [
       "https://doi.org/10.48550/arxiv.2602.17119",
-      "https://www.asplos-conference.org/asplos2026/program/index.html",
-      "https://openalex.org/W7130712874"
+      "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
   {
@@ -8893,7 +8913,7 @@
     ],
     "title": "Arm Weak Memory Consistency on Apple Silicon: What Is It Good For?",
     "tracks": [
-      "Main Conference"
+      "Processor Microarchitecture"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790129",
@@ -8958,7 +8978,7 @@
     ],
     "title": "Chips Need DIP: Time-Proportional Per-Instruction Cycle Stacks at Dispatch",
     "tracks": [
-      "Main Conference"
+      "Processor Microarchitecture"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790139",
@@ -9025,7 +9045,7 @@
     ],
     "title": "Co-Exploration of RISC-V Processor Microarchitectures and FreeRTOS Extensions for Lower Context Switch Latency",
     "tracks": [
-      "Main Conference"
+      "Processor Microarchitecture"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790141",
@@ -9063,7 +9083,7 @@
     ],
     "title": "CHERI-SIMT: Implementing Capability Memory Protection in GPGPUs",
     "tracks": [
-      "Main Conference"
+      "GPU Programming"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -9097,7 +9117,7 @@
     ],
     "title": "Lobster: A GPU-Accelerated Framework for Neurosymbolic Programming",
     "tracks": [
-      "Main Conference"
+      "GPU Programming"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -9167,7 +9187,7 @@
     ],
     "title": "ReliaFHE: Resilient Design for Fully Homomorphic Encryption Accelerators",
     "tracks": [
-      "Main Conference"
+      "GPU Programming"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790211",
@@ -9202,7 +9222,7 @@
     ],
     "title": "cuJSON: A Highly Parallel JSON Parser for GPUs",
     "tracks": [
-      "Main Conference"
+      "GPU Programming"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -9211,8 +9231,8 @@
   {
     "abstract": "Despite a decade of research, most high-performance userspace network stacks remain impractical for public cloud tenants developing their applications atop Virtual Machines (VMs). We identify two root causes: (1) reliance on specialized NIC features (e.g., flow steering, deep buffers) absent in commodity cloud vNICs, and (2) rigid execution models ill-suited to diverse application needs. We present Machnet, a highperformance and flexible userspace network stack designed for public cloud VMs. Machnet uses only a minimal set of vNIC features that any major cloud provider supports. It also relies on a microkernel architecture to enable flexible application execution. We evaluate Machnet across three major public clouds and on production-grade applications, including a key-value store, an HTTP server, and a statemachine replication system. We release Machnet at https: //github.com/microsoft/machnet.",
     "authorIds": [
-      "A5112907002",
-      "A5128749044",
+      "0000-0001-6461-1650",
+      "0000-0001-9182-3085",
       "0000-0002-1901-3157",
       "0000-0002-5784-4592",
       "0000-0002-7568-0624",
@@ -9229,6 +9249,7 @@
       "Kostis Kaffes",
       "Gianni Antichi"
     ],
+    "container": "Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
     "dates": [
       "Day 3: Thursday, March 26, 2026 1:30 – 3:10 PM EDT"
     ],
@@ -9236,7 +9257,7 @@
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
-        "openalex"
+        "crossref"
       ],
       "openAccess": {
         "is_oa": true,
@@ -9261,7 +9282,8 @@
     "pdfUrls": [
       "https://doi.org/10.1145/3779212.3790158"
     ],
-    "publicationDate": "2026-03-10",
+    "publicationDate": "2026-03-22",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8B: Serverless & Cloud Networking"
     ],
@@ -9270,12 +9292,11 @@
     ],
     "title": "Enabling fast networking in the public cloud",
     "tracks": [
-      "Main Conference"
+      "Serverless & Cloud Networking"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790158",
-      "https://www.asplos-conference.org/asplos2026/program/index.html",
-      "https://openalex.org/W7134947106"
+      "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
   {
@@ -9306,7 +9327,7 @@
     ],
     "title": "Lambda-trim: Reducing Monetary and Performance Cost of Serverless Cold Starts with Cost-driven Application Debloating",
     "tracks": [
-      "Main Conference"
+      "Serverless & Cloud Networking"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -9380,7 +9401,7 @@
     ],
     "title": "SG-IOV: Socket-Granular I/O Virtualization for SmartNIC-Based Container Networks",
     "tracks": [
-      "Main Conference"
+      "Serverless & Cloud Networking"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790218",
@@ -9448,7 +9469,7 @@
     ],
     "title": "Skyler: Static Analysis for Predicting API-Driven Costs in Serverless Applications",
     "tracks": [
-      "Main Conference"
+      "Serverless & Cloud Networking"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790221",
@@ -9516,7 +9537,7 @@
     ],
     "title": "CounterPoint: Using Hardware Event Counters to Refute and Refine Microarchitectural Assumptions",
     "tracks": [
-      "Main Conference"
+      "Memory Hierarchy & Performance"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790145",
@@ -9587,7 +9608,7 @@
     ],
     "title": "PACT: A Criticality-First Design for Tiered Memory",
     "tracks": [
-      "Main Conference"
+      "Memory Hierarchy & Performance"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790198",
@@ -9659,7 +9680,7 @@
     ],
     "title": "PF-LLM: Large Language Model Hinted Hardware Prefetching",
     "tracks": [
-      "Main Conference"
+      "Memory Hierarchy & Performance"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790202",
@@ -9730,7 +9751,7 @@
     ],
     "title": "Performance Predictability in Heterogeneous Memory",
     "tracks": [
-      "Main Conference"
+      "Memory Hierarchy & Performance"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790201",
@@ -9805,7 +9826,7 @@
     ],
     "title": "Neura: A Unified Framework for Hierarchical and Adaptive CGRAs",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Architectures"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790193",
@@ -9871,7 +9892,7 @@
     ],
     "title": "Static Analysis for Efficient Streaming Tokenization",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Architectures"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790227",
@@ -9912,7 +9933,7 @@
     ],
     "title": "The Configuration Wall: Characterization and Elimination of Accelerator Configuration Overhead",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Architectures"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -9920,6 +9941,13 @@
   },
   {
     "abstract": "",
+    "authorIds": [
+      "0000-0001-6599-3996",
+      "0009-0006-0232-9821",
+      "0009-0006-2866-9824",
+      "0000-0002-8218-5656",
+      "0000-0002-8118-3026"
+    ],
     "authorInstitutions": "Abhishek Vijaya Kumar (Cornell University); Eric Ding (Cornell University); Arjun Devraj (Cornell University); Darius Bunandar (Lightmatter); Rachee Singh (Cornell)",
     "authors": [
       "Abhishek Vijaya Kumar",
@@ -9928,17 +9956,25 @@
       "Darius Bunandar",
       "Rachee Singh"
     ],
+    "container": "Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
     "dates": [
       "Day 3: Thursday, March 26, 2026 1:30 – 3:10 PM EDT"
     ],
+    "doi": "10.1145/3779212.3790238",
     "eventType": "Paper",
     "extra": {
+      "metadataSources": [
+        "crossref"
+      ],
       "sessionTrack": "Reconfigurable Architectures"
     },
     "id": "8D-Transforming_Torus_Fabrics_for_Efficient_Multi-tenant_ML",
     "locations": [
       "Ohio & Monogahela"
     ],
+    "pages": "1547-1565",
+    "publicationDate": "2026-03-22",
+    "publisher": "ACM",
     "sessionTitles": [
       "Session 8D: Reconfigurable Architectures"
     ],
@@ -9947,9 +9983,10 @@
     ],
     "title": "Transforming Torus Fabrics for Efficient Multi-tenant ML",
     "tracks": [
-      "Main Conference"
+      "Reconfigurable Architectures"
     ],
     "urls": [
+      "https://doi.org/10.1145/3779212.3790238",
       "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
@@ -10025,7 +10062,7 @@
     ],
     "title": "Arancini: A Hybrid Binary Translator for Weak Memory Model Architectures",
     "tracks": [
-      "Main Conference"
+      "Systems Profiling & Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790127",
@@ -10060,7 +10097,7 @@
     ],
     "title": "Cheddar: A Swift Fully Homomorphic Encryption Library Designed for GPU Architectures",
     "tracks": [
-      "Main Conference"
+      "Systems Profiling & Optimization"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -10140,7 +10177,7 @@
     ],
     "title": "M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization",
     "tracks": [
-      "Main Conference"
+      "Systems Profiling & Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790185",
@@ -10206,7 +10243,7 @@
     ],
     "title": "Wax: Optimizing Data Center Applications With Stale Profile",
     "tracks": [
-      "Main Conference"
+      "Systems Profiling & Optimization"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790248",
@@ -10282,7 +10319,7 @@
     ],
     "title": "CEMU: Enabling Full-System Emulation of Computational Storage beyond Hardware Limits",
     "tracks": [
-      "Main Conference"
+      "Quantum & Emerging Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790137",
@@ -10358,7 +10395,7 @@
     ],
     "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
     "tracks": [
-      "Main Conference"
+      "Quantum & Emerging Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790138",
@@ -10433,7 +10470,7 @@
     ],
     "title": "COMPAS: A Distributed Multi-Party SWAP Test for Parallel Quantum Algorithms",
     "tracks": [
-      "Main Conference"
+      "Quantum & Emerging Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790143",
@@ -10499,7 +10536,7 @@
     ],
     "title": "TreeVQA: A Tree-Structured Execution Framework for Shot Reduction in Variational Quantum Algorithms",
     "tracks": [
-      "Main Conference"
+      "Quantum & Emerging Computing"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790239",
@@ -10549,7 +10586,7 @@
     ],
     "title": "Fault Escaping: Improving Robustness of DPU Enhanced Platform with Mutual Assisted VM Recovery",
     "tracks": [
-      "Main Conference"
+      "Reliability & Fault Tolerance"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -10615,7 +10652,7 @@
     ],
     "title": "PrioriFI: More Informed Fault Injection for Edge Neural Networks",
     "tracks": [
-      "Main Conference"
+      "Reliability & Fault Tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790204",
@@ -10653,7 +10690,7 @@
     ],
     "title": "Radshield: Software Radiation Protection for Commodity Hardware in Space",
     "tracks": [
-      "Main Conference"
+      "Reliability & Fault Tolerance"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -10729,7 +10766,7 @@
     ],
     "title": "TierX: A Simulation Framework for Multi-tier BCI System Design Evaluation and Exploration",
     "tracks": [
-      "Main Conference"
+      "Reliability & Fault Tolerance"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790234",
@@ -10806,7 +10843,7 @@
     ],
     "title": "An MLIR Lowering Pipeline for Stencils at Wafer-Scale",
     "tracks": [
-      "Main Conference"
+      "Network & Cloud Infrastructure"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790124",
@@ -10880,7 +10917,7 @@
     ],
     "title": "JOSer: Just-In-Time Object Serialization for Heavy Java Serialization Workloads",
     "tracks": [
-      "Main Conference"
+      "Network & Cloud Infrastructure"
     ],
     "urls": [
       "https://doi.org/10.1145/3779212.3790179",
@@ -10917,7 +10954,7 @@
     ],
     "title": "TiNA: Tiered Network Buffer Architecture for Fast Networking in Chiplet-based CPU",
     "tracks": [
-      "Main Conference"
+      "Network & Cloud Infrastructure"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"
@@ -10955,7 +10992,7 @@
     ],
     "title": "Wave: Offloading Resource Management to SmartNIC Cores",
     "tracks": [
-      "Main Conference"
+      "Network & Cloud Infrastructure"
     ],
     "urls": [
       "https://www.asplos-conference.org/asplos2026/program/index.html"

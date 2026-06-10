@@ -87,7 +87,7 @@
       "Wed 18 Jun 2025 15:00 - 15:20"
     ],
     "doi": "10.1145/3731555",
-    "eventType": "Talk; Paper",
+    "eventType": "Talk",
     "extra": {
       "metadataSources": [
         "crossref",
@@ -1176,7 +1176,7 @@
       "Fri 20 Jun 2025 14:40 - 15:00"
     ],
     "doi": "10.1145/3732933",
-    "eventType": "Talk; Paper",
+    "eventType": "Talk",
     "extra": {
       "metadataSources": [
         "crossref",
@@ -2965,7 +2965,7 @@
       "0000-0002-6557-684X",
       "0000-0002-6068-880X",
       "0000-0002-8007-4725",
-      "A5118196838",
+      "0009-0003-8590-6740",
       "0000-0001-5014-9784",
       "0000-0002-8616-3905"
     ],
@@ -2987,6 +2987,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3007,10 +3008,11 @@
     ],
     "pages": "277-300",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3729257",
       "https://doi.org/10.1145/3729257"
     ],
     "publicationDate": "2025-06-10",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Big Red KATs",
       "Research Papers"
@@ -3214,6 +3216,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3240,10 +3243,11 @@
     ],
     "pages": "1043-1067",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3729292",
       "https://doi.org/10.1145/3729292"
     ],
     "publicationDate": "2025-06-10",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "High Performance Computing",
       "Research Papers"
@@ -4512,9 +4516,9 @@
     "abstract": "Exact probabilistic inference is a requirement for many applications of probabilistic programming languages (PPLs) such as in high-consequence settings or verification. However, designing and implementing a PPL with scalable high-performance exact inference is difficult: exact inference engines, much like SAT solvers, are intricate low-level programs that are hard to implement. Due to this implementation challenge, PPLs that support scalable exact inference are restrictive and lack many features of general-purpose languages. This paper presents Roulette, the first discrete probabilistic programming language that combines high-performance exact inference with general-purpose language features. Roulette supports a significant subset of Racket, including data structures, first-class functions, surely-terminating recursion, mutable state, modules, and macros, along with probabilistic features such as finitely supported discrete random variables, conditioning, and top-level inference. The key insight is that there is a close connection between exact probabilistic inference and the symbolic evaluation strategy of Rosette. Building on this connection, Roulette generalizes and extends the Rosette solver-aided programming system to reason about probabilistic rather than symbolic quantities. We prove Roulette sound by generalizing a proof of correctness for Rosette to handle probabilities, and demonstrate its scalability and expressivity on a number of examples.",
     "authorIds": [
       "0000-0002-4384-6351",
-      "A5118139268",
+      "0009-0008-3242-6969",
       "0000-0003-2130-5092",
-      "A5118139269",
+      "0000-0002-7744-4932",
       "0000-0002-8190-5412"
     ],
     "authorInstitutions": "Cameron Moy (Northeastern University); Jack Czenszak (Northeastern University); John Li (Northeastern University); Brianna Marshall (Northeastern University); Steven Holtzen (Northeastern University)",
@@ -4533,6 +4537,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -4557,10 +4562,11 @@
     ],
     "pages": "2081-2105",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3729334",
       "https://doi.org/10.1145/3729334"
     ],
     "publicationDate": "2025-06-10",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Probabilistic Programming",
       "Research Papers"
@@ -5079,7 +5085,7 @@
   {
     "abstract": "We transport multi-stage programming from functional to relational programming, with novel constructs to give programmers control over staging and non-determinism. We stage interpreters written as relations, in which the programs under interpretation can contain holes representing unknown expressions or values. By compiling the known parts without interpretive overhead and deferring interpretation to run time only for the unknown parts, we compound the benefits of staging (e.g., turning interpreters into compilers) and relational interpretation (e.g., turning functions into relations and synthesizing from sketches). We extend miniKanren with staging constructs and apply the resulting multi-stage language to relational interpreters for subsets of Racket and miniKanren as well as a relational recognizer for context-free grammars. We demonstrate significant performance gains across multiple synthesis problems, systematically comparing unstaged and staged computation, as well as indicatively comparing with an existing hand-tuned relational interpreter.",
     "authorIds": [
-      "A5054580236",
+      "0009-0007-9958-6281",
       "0009-0009-7266-7422",
       "0000-0002-5405-2936",
       "0000-0003-4730-5293",
@@ -5101,6 +5107,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -5122,10 +5129,11 @@
     ],
     "pages": "1591-1615",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3729314",
       "https://doi.org/10.1145/3729314"
     ],
     "publicationDate": "2025-06-10",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Synthesis",
       "Research Papers"
@@ -5867,6 +5875,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -5894,10 +5903,11 @@
     ],
     "pages": "1692-1715",
     "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3729318",
       "https://doi.org/10.1145/3729318"
     ],
     "publicationDate": "2025-06-10",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Security & Cryptography",
       "Research Papers"
@@ -5939,6 +5949,7 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -5971,7 +5982,7 @@
       "https://doi.org/10.1145/3729317"
     ],
     "publicationDate": "2025-06-10",
-    "publisher": "Association for Computing Machinery",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Probabilistic Programming",
       "Research Papers"

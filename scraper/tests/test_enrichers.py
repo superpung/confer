@@ -72,6 +72,22 @@ def test_merge_metadata_fills_publication_fields():
     assert paper.extra == {"metadataSources": ["crossref"]}
 
 
+def test_merge_metadata_replaces_truncated_title():
+    paper = Paper(id="x", title="SLR: From Saltzer & Schoeder to 2021…")
+    merge_metadata(
+        paper,
+        {
+            "title": (
+                "SLR: From Saltzer and Schroeder to 2021... 47 Years of Research "
+                "on the Development and Validation of Security API Recommendations"
+            ),
+        },
+        "crossref",
+    )
+
+    assert paper.title.endswith("Security API Recommendations")
+
+
 def test_inverted_abstract_reconstructs_word_order():
     index = {"Static": [0], "paper": [1], "sites": [2], "rock": [3]}
     assert inverted_abstract(index) == "Static paper sites rock"

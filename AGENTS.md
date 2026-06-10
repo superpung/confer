@@ -30,11 +30,11 @@ Three decoupled layers joined by one **unified `Paper` schema**:
 config/venues.yaml ─▶ scraper + enrichers (Python) ─▶ unified JSON per venue ─▶ Astro site ─▶ Netlify
 ```
 
-- **Config** names which scraper adapter a venue uses, passes source options, and can
-  opt into metadata enrichers.
+- **Config** names which scraper adapter a venue uses and passes only the source
+  locator the adapter cannot infer, such as `program_url`, `base_url`, or `toc_url`.
 - **Adapters** know one platform each and all emit the *same* `Paper` shape.
 - **Enrichers** merge DOI, abstracts, publication metadata, keywords, and open-access
-  links from Crossref/OpenAlex without changing venue-specific adapters.
+  links from Crossref/OpenAlex by default without changing venue-specific adapters.
 - **Site** consumes only the unified data — it never knows which platform data came from.
 
 ### Layout
@@ -140,8 +140,9 @@ file in `scrapers/` + one registry entry.** Do not branch on platform anywhere e
 ### How to add a venue
 1. Add an entry to `config/venues.yaml` (see the seed file for fields).
 2. Ensure its `scraper:` matches a registered adapter.
-3. Add `source.enrichers` (`crossref`, `openalex`) when the primary source lacks DOI,
-   abstracts, publication details, PDF/open-access links, or keywords.
+3. Provide only the adapter's required source locator. Tracks, event types,
+   default labels, and normal metadata enrichers are inferred by the adapter and
+   pipeline.
 4. Run `confer build --venue <id>` and check `web/public/data/<id>.json`.
 
 ### How to add a scraper adapter
@@ -163,8 +164,8 @@ uv run confer build --venue asplos2026    # SIGARCH-style static programme venue
 uv run confer build --venue hpca2026      # Researchr accepted-list venue
 uv run confer build --venue icse2026      # ICSE 2026 via Researchr
 uv run confer build --venue fse2026       # Researchr detailed timeline venue
-uv run confer build --venue tosem2026     # DBLP journal TOC + metadata enrichers
-uv run confer build --venue popl2026      # Researchr + Crossref/OpenAlex enrichers
+uv run confer build --venue tosem2026     # DBLP journal TOC + default metadata enrichment
+uv run confer build --venue popl2026      # Researchr + default metadata enrichment
 uv run confer build --refresh             # ignore cache, refetch over the network
 uv run confer build --venue dac2026 --limit 5   # debug: only a few detail pages
 uv run --extra dev pytest                    # offline parser tests (tests/fixtures/)
@@ -180,6 +181,16 @@ npm run build                     # static build → web/dist/ (what Netlify pub
 - **Determinism:** sort outputs (by id, then session) and serialize JSON with
   `ensure_ascii=False, indent=2, sort_keys=True`. Stable diffs matter — the data is
   committed and served.
+- **Pipeline must be a pure function of source + APIs — no backfill.**
+  `pipeline.py` must not read previously written output JSON to compensate for
+  enrichment misses (DOI/abstract backfill). A build that depends on its own
+  historical products is non-reproducible, masks real regressions, and produces
+  subtly stale data. **Root-cause any enrichment miss at the right layer**: transient
+  429/5xx → add retry/backoff to `Fetcher`; structural miss → fix the adapter or
+  enricher match logic. The committed `Fetcher` already has exponential backoff with
+  `Retry-After` support; lean on it. If a cold build cannot achieve the same quality
+  as one that reads old JSON, that is a bug in the scraper/enricher, not a reason to
+  add backfill.
 - **Caching:** never refetch when a cache file exists unless `--refresh`. Be polite:
   reuse the shared `Fetcher`, keep a sane `User-Agent`, support `--delay`.
 - **`data/cache/` is gitignored** raw HTML — do not commit it. It is regenerable and
@@ -215,9 +226,10 @@ npm run build                     # static build → web/dist/ (what Netlify pub
 4. **UX polish** — collapsible sidebar & filter groups (animated), responsive mobile layout
    + drawer, sidebar footer (last update, repo + commit links).
 5. **Researchr venues** — `researchr` adapter parses Researchr program tables,
-   detailed timelines, and accepted-paper track pages; filters venue-configured paper
-   tracks/event types; fetches cached detail modals for abstracts and official detail
-   URLs; and publishes ICSE 2025/2026, FSE 2025/2026, ASE 2025, ISSTA 2025,
+   detailed timelines, and accepted-paper track pages; infers paper-bearing tracks
+   and event types from the linked page; fetches cached detail modals for abstracts
+   and official detail URLs; and publishes ICSE 2023/2024/2025/2026,
+   FSE 2023/2024/2025/2026, ASE 2023/2024/2025, ISSTA 2023/2024/2025,
    OOPSLA 2025/2026, HPCA 2026, POPL 2025/2026, and PLDI 2025/2026.
 6. **DATE 2025/2026** — `dateconf` adapter parses the DATE official detailed programme,
    keeps downloadable paper rows, normalizes session metadata / author affiliations /
@@ -227,8 +239,10 @@ npm run build                     # static build → web/dist/ (what Netlify pub
    nested institution strings seen in live pages; publishes ASPLOS 2026, ISCA 2026,
    and MICRO 2025. HPCA 2026 is published through the Researchr adapter.
 8. **Publication metadata enrichment** — `enrichers.py` merges Crossref/OpenAlex data
-   after the primary scrape, filling DOI, abstracts, publication date, publisher,
-   container, volume/issue/pages, keywords, PDF/open-access links, and source provenance.
+   after the primary scrape by default, filling DOI, abstracts, publication date,
+   publisher, container, volume/issue/pages, keywords, PDF/open-access links, and
+   source provenance. Matching uses a broader conference-year window and can replace
+   visibly truncated titles with richer bibliographic titles.
 9. **DBLP journals and PL venues** — `dblp` adapter publishes TOSEM 2025/2026 and
    TSE 2025/2026 journal articles from DBLP TOC XML; Researchr publishes POPL
    2025/2026 and PLDI 2025/2026; all use metadata enrichment.

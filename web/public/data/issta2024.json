@@ -39,7 +39,8 @@
     ],
     "title": "Soft Verification for Actor Contract Systems",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685551",
@@ -262,7 +263,8 @@
     ],
     "title": "From Fault Injection to Formal Verification: A Holistic Approach to Fault Diagnosis in Cyber-Physical Systems",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685552",
@@ -472,7 +474,8 @@
     ],
     "title": "Search-Based Translations for Tensor Operations",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685558",
@@ -592,6 +595,15 @@
   },
   {
     "abstract": "Microservice resilience, the ability of microservices to recover from failures and continue providing reliable and responsive services, is crucial for cloud vendors. However, the current practice relies on manually configured rules specific to a certain microservice system, resulting in labor-intensity and flexibility issues, given the large scale and high dynamics of microservices. A more labor-efficient and versatile solution is desired. Our insight is that resilient deployment can effectively prevent the dissemination of degradation from system performance metrics to user-aware metrics, and the latter directly affects service quality. In other words, failures in a non-resilient deployment can impact both types of metrics, leading to user dissatisfaction. With this in mind, we propose MicroRes, the first versatile resilience profiling framework for microservices via degradation dissemination indexing. MicroRes first injects failures into microservices and collects available monitoring metrics. Then, it ranks the metrics according to their contributions to the overall service degradation. It produces a resilience index by how much the degradation is disseminated from system performance metrics to user-aware metrics. Higher degradation dissemination indicates lower resilience. We evaluate MicroRes on two open-source and one industrial microservice system. The experiments show MicroRes' efficient and effective resilience profiling of microservices. We also showcase MicroRes' practical usage in production.",
+    "authorIds": [
+      "0000-0003-1492-5197",
+      "0000-0002-0301-3662",
+      "0009-0000-2855-2403",
+      "0000-0002-3338-8561",
+      "0009-0000-5556-4004",
+      "0000-0001-9733-4346",
+      "0000-0002-3666-5798"
+    ],
     "authorInstitutions": "Tianyi Yang (Chinese University of Hong Kong); Cheryl Lee (Chinese University of Hong Kong); Jiacheng Shen (Chinese University of Hong Kong); Yuxin Su (Sun Yat-sen University); Cong Feng (Huawei Cloud Computing Technology); Yongqiang Yang (Huawei Cloud Computing Technology); Michael Lyu (Chinese University of Hong Kong)",
     "authors": [
       "Tianyi Yang",
@@ -602,15 +614,24 @@
       "Yongqiang Yang",
       "Michael Lyu"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 13:30 - 13:50"
     ],
     "doi": "10.1145/3650212.3652131",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "0da91b13-7f08-4dda-b16e-a656f75709e1",
     "locations": [
       "EI 7"
     ],
+    "pages": "325-337",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Execution and Profiling"
@@ -623,8 +644,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/27/MicroRes-Versatile-Resilience-Profiling-in-Microservices-via-Degradation-Disseminati",
       "https://doi.org/10.1145/3650212.3652131",
+      "https://2024.issta.org/details/issta-2024-papers/27/MicroRes-Versatile-Resilience-Profiling-in-Microservices-via-Degradation-Disseminati",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -838,7 +859,8 @@
     ],
     "title": "Integrating Mutation Techniques to Keep Specification and Source Code in Sync",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685556",
@@ -1037,7 +1059,8 @@
     ],
     "title": "FunRedisp: A Function Redispatch Tool to Reduce Invocation Gas Fees in Solidity Smart Contracts",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685312",
@@ -1046,7 +1069,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Eric Jul (University of Oslo)",
     "authors": [
       "Eric Jul"
@@ -1068,7 +1091,8 @@
     ],
     "title": "How to get your Ph.D. DONE!",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2024.issta.org/details/issta-ecoop-2024-doctoral-symposium/16/How-to-get-your-Ph-D-DONE-",
@@ -1077,6 +1101,17 @@
   },
   {
     "abstract": "Software engineers develop, fine-tune, and deploy deep learning (DL) models using a variety of development frameworks and runtime environments. DL model converters move models between frameworks and to runtime environments. Conversion errors compromise model quality and disrupt deployment. However, the failure characteristics of DL model converters are unknown, adding risk when using DL interoperability technologies. This paper analyzes failures in DL model converters. We survey software engineers about DL interoperability tools, use cases, and pain points (N=92). Then, we characterize failures in model converters associated with the main interoperability tool, ONNX (N=200 issues in PyTorch and TensorFlow). Finally, we formulate and test two hypotheses about structural causes for the failures we studied. We find that the node conversion stage of a model converter accounts for ∼75% of the defects and 33% of reported failure are related to semantically incorrect models. The cause of semantically incorrect models is elusive, but models with behaviour inconsistencies share operator sequences. Our results motivate future research on making DL interoperability software simpler to maintain, extend, and validate. Research into behavioural tolerances and architectural coverage metrics would be fruitful.",
+    "authorIds": [
+      "0000-0002-1199-6363",
+      "0000-0003-2608-8576",
+      "0000-0002-1512-858X",
+      "0009-0007-9151-5008",
+      "0009-0006-7686-4157",
+      "0009-0000-1384-1990",
+      "0000-0002-5491-7661",
+      "0000-0002-0452-5571",
+      "0000-0003-2495-686X"
+    ],
     "authorInstitutions": "Purvish Jajal (Purdue University); Wenxin Jiang (Purdue University); Arav Tewari (Purdue University); Erik Kocinare (Purdue University); Joseph Woo (Purdue University); Anusha Sarraf (Purdue University); Yung-Hsiang Lu (Purdue University); George K. Thiruvathukal (Loyola University Chicago); James C. Davis (Purdue University)",
     "authors": [
       "Purvish Jajal",
@@ -1089,15 +1124,24 @@
       "George K. Thiruvathukal",
       "James C. Davis"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 15:30 - 15:50"
     ],
     "doi": "10.1145/3650212.3680374",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1e2cc576-283a-40b2-823b-81f0cf71ae15",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "1466-1478",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Testing and Repairing Neural Networks"
@@ -1110,8 +1154,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/117/Interoperability-in-Deep-Learning-A-User-Survey-and-Failure-Analysis-of-ONNX-Model-C",
       "https://doi.org/10.1145/3650212.3680374",
+      "https://2024.issta.org/details/issta-2024-papers/117/Interoperability-in-Deep-Learning-A-User-Survey-and-Failure-Analysis-of-ONNX-Model-C",
       "https://arxiv.org/abs/2303.17708",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
@@ -1329,21 +1373,35 @@
   },
   {
     "abstract": "Static analysis techniques for buffer overflow detection still struggle with being scalable for millions of lines of code, while being precise enough to have an acceptable false positive rate. The checking of buffer overflow necessitates reasoning about the heap reachability and numerical relations, which are mutually dependent. Existing techniques to resolve the dependency cycle either sacrifice precision or efficiency due to their limitations in reasoning about symbolic heap location, i.e., heap location with possibly symbolic numerical offsets. A symbolic heap location potentially aliases a large number of other heap locations, leading to a disjunction of heap states that is particularly challenging to reason precisely. Acknowledging the inherent difficulties in heap and numerical reasoning, we introduce a disjointness assumption into the analysis by shrinking the program state space so that all the symbolic locations involved in memory accesses are disjoint from each other. The disjointness property permits strong updates to be performed at symbolic heap locations, significantly improving the precision by incorporating numerical information in heap reasoning. Also, it aids in the design of a compositional analysis to boost scalability, where compact and precise function summaries are efficiently generated and reused. We implement the idea in the static buffer overflow detector Cod. When applying it to large, real-world software such as PHP and QEMU, we have uncovered 29 buffer overflow bugs with a false positive rate of 37%, while projects of millions of lines of code can be successfully analyzed within four hours.",
+    "authorIds": [
+      "0000-0001-5985-6610",
+      "0000-0003-0342-9518",
+      "0000-0001-6417-1034"
+    ],
     "authorInstitutions": "Yiyuan Guo (Hong Kong University of Science and Technology); Peisen Yao (Zhejiang University); Charles Zhang (Hong Kong University of Science and Technology)",
     "authors": [
       "Yiyuan Guo",
       "Peisen Yao",
       "Charles Zhang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 13:30 - 13:50"
     ],
     "doi": "10.1145/3650212.3652110",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "24f38869-66ac-4967-bac0-9857c5935daf",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "63-75",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Static analysis"
@@ -1356,14 +1414,21 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/6/Precise-Compositional-Buffer-Overflow-Detection-via-Heap-Disjointness",
       "https://doi.org/10.1145/3650212.3652110",
+      "https://2024.issta.org/details/issta-2024-papers/6/Precise-Compositional-Buffer-Overflow-Detection-via-Heap-Disjointness",
       "https://yiyuaner.github.io/files/issta24.pdf",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "In the evolving landscape of large language models (LLMs) tailored for software engineering, the need for benchmarks that accurately reflect real-world development scenarios is paramount. Current benchmarks are either too simplistic or fail to capture the multi-tasking nature of software development. To address this, we introduce CoderUJB, a new benchmark designed to evaluate LLMs across diverse Java programming tasks that are executable and reflective of actual development scenarios, acknowledging Java's prevalence in real-world software production. CoderUJB comprises 2,239 programming questions derived from 17 real open-source Java projects and spans five practical programming tasks. Our empirical study on this benchmark investigates the coding abilities of various open-source and closed-source LLMs, examining the effects of continued pre-training in specific programming languages code and instruction fine-tuning on their performance. The findings indicate that while LLMs exhibit strong potential, challenges remain, particularly in non-functional code generation (e.g., test generation and defect detection). Importantly, our results advise caution in the specific programming languages continued pre-training and instruction fine-tuning, as these techniques could hinder model performance on certain tasks, suggesting the need for more nuanced strategies. CoderUJB thus marks a significant step towards more realistic evaluations of programming capabilities in LLMs, and our study provides valuable insights for the future development of these models in software engineering.",
+    "authorIds": [
+      "0009-0009-8422-4522",
+      "0009-0007-9969-8259",
+      "0000-0002-1756-7746",
+      "0000-0002-9331-4716",
+      "0000-0002-8576-2674"
+    ],
     "authorInstitutions": "Zhengran Zeng (Peking University); Yidong Wang (Peking University); Rui Xie (Peking University); Wei Ye (Peking University); Shikun Zhang (Peking University)",
     "authors": [
       "Zhengran Zeng",
@@ -1372,15 +1437,24 @@
       "Wei Ye",
       "Shikun Zhang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 15:50 - 16:10"
     ],
     "doi": "10.1145/3650212.3652115",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2518717d-03ab-4f9f-974b-de20cade60d9",
     "locations": [
       "EI 7"
     ],
+    "pages": "124-136",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Models of Code"
@@ -1393,8 +1467,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/11/CoderUJB-An-Executable-and-Unified-Java-Benchmark-for-Practical-Programming-Scenario",
       "https://doi.org/10.1145/3650212.3652115",
+      "https://2024.issta.org/details/issta-2024-papers/11/CoderUJB-An-Executable-and-Unified-Java-Benchmark-for-Practical-Programming-Scenario",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -1440,7 +1514,8 @@
     ],
     "title": "SMBugFinder: An Automated Framework for Testing Protocol Implementations for State Machine Bugs",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685310",
@@ -1450,6 +1525,13 @@
   },
   {
     "abstract": "In the field of code intelligence, effectively modeling long-range code poses a significant challenge. Existing pre-trained language models (PLMs) such as UniXcoder have achieved remarkable success, but they still face difficulties with long code inputs. This is mainly due to their limited capacity to maintain contextual continuity and memorize the key information over long-range code. To alleviate the difficulties, we propose EXPO, a framework for EXtending Pre-trained language models for lOng-range code. EXPO incorporates two innovative memory mechanisms we propose in this paper: Bridge Memory and Hint Memory. Bridge Memory uses a tagging mechanism to connect disparate snippets of long-range code, helping the model maintain contextual coherence. Hint Memory focuses on crucial code elements throughout the global context, such as package imports, by integrating a 𝑘NN attention layer to adaptively select the relevant code elements. This dual-memory approach bridges the gap between understanding local code snippets and maintaining global code coherence, thereby enhancing the model’s overall comprehension of long code sequences. We validate the effectiveness of EXPO on five popular pre-trained language models such as UniXcoder and two code intelligence tasks including API recommendation and vulnerability detection. Experimental results demonstrate that EXPO significantly improves the pre-training language models.",
+    "authorIds": [
+      "0000-0003-2901-0643",
+      "0000-0003-4774-2434",
+      "0009-0008-9092-3381",
+      "0000-0002-3063-9425",
+      "0000-0003-1012-5301"
+    ],
     "authorInstitutions": "Yujia Chen (Harbin Institute of Technology); Cuiyun Gao (Harbin Institute of Technology); Zezhou Yang (Harbin Institute of Technology); Hongyu Zhang (Chongqing University); Qing Liao (Harbin Institute of Technology)",
     "authors": [
       "Yujia Chen",
@@ -1458,15 +1540,24 @@
       "Hongyu Zhang",
       "Qing Liao"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 13:30 - 13:50"
     ],
     "doi": "10.1145/3650212.3652127",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "299023b0-2a1c-41ae-9f90-0ec5224a84a8",
     "locations": [
       "EI 7"
     ],
+    "pages": "274-286",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "LLMs for Code"
@@ -1479,13 +1570,23 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/23/Bridge-and-Hint-Extending-Pre-trained-Language-Models-for-Long-Range-Code",
       "https://doi.org/10.1145/3650212.3652127",
+      "https://2024.issta.org/details/issta-2024-papers/23/Bridge-and-Hint-Extending-Pre-trained-Language-Models-for-Long-Range-Code",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "The coordinated vulnerability disclosure model, widely adopted in open-source software (OSS) organizations, recommends the silent resolution of vulnerabilities without revealing vulnerability information until their public disclosure. However, the inherently public nature of OSS development leads to security fixes becoming publicly available in repositories weeks before the official disclosure of vulnerabilities. This time gap poses a significant security risk to OSS users, as attackers could discover the fix and exploit vulnerabilities before disclosure. Thus, there is a critical need for OSS users to sense fixes as early as possible to address the vulnerability before any exploitation occurs. In response to this challenge, we introduce EarlyVulnFix, a novel approach designed to identify silent fixes for taint-style vulnerabilities—a persistent class of security weaknesses where attacker-controlled input reaches sensitive operations (sink) without proper sanitization. Leveraging data flow and dependency analysis, our tool distinguishes two types of connections between newly introduced code and sinks, tailored for two common fix scenarios. Our evaluation demonstrates that EarlyVulnFix surpasses state-of-the-art baselines by a substantial margin in terms of F1 score. Furthermore, when applied to the 700 latest commits across seven projects, EarlyVulnFix detected three security fixes before their respective security releases, highlighting its effectiveness in identifying unreported vulnerability fixes in the wild.",
+    "authorIds": [
+      "0009-0005-6737-9953",
+      "0000-0002-5181-3146",
+      "0000-0002-4011-5350",
+      "0000-0001-5777-7759",
+      "0000-0003-0093-3292",
+      "0000-0002-4323-497X",
+      "0000-0003-0104-2731",
+      "0000-0003-3090-9568"
+    ],
     "authorInstitutions": "Zhongzhen Wen (Nanjing University); Jiayuan Zhou (Huawei); Minxue Pan (Nanjing University); Shaohua Wang (Central University of Finance and Economics); Xing Hu (Zhejiang University); Tongtong Xu (Huawei); Tian Zhang (Nanjing University); Xuandong Li (Nanjing University)",
     "authors": [
       "Zhongzhen Wen",
@@ -1497,15 +1598,24 @@
       "Tian Zhang",
       "Xuandong Li"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 15:30 - 15:50"
     ],
     "doi": "10.1145/3650212.3652139",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2cd9ce9c-0efb-4404-8aed-fec9dc16b6b1",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "428-439",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Vulnerabilities and Malware"
@@ -1518,13 +1628,22 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/35/Silent-Taint-Style-Vulnerability-Fixes-Identification",
       "https://doi.org/10.1145/3650212.3652139",
+      "https://2024.issta.org/details/issta-2024-papers/35/Silent-Taint-Style-Vulnerability-Fixes-Identification",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "Recent studies show that on-device deployed deep learning (DL) models, such as those of Tensor Flow Lite (TFLite), can be easily extracted from real-world applications and devices by attackers to generate many kinds of adversarial and other attacks. Although securing deployed on-device DL models has gained increasing attention, no existing methods can fully prevent these attacks. Traditional software protection techniques have been widely explored. If on-device models can be implemented using pure code, such as C++, it will open the possibility of reusing existing robust software protection techniques. However, due to the complexity of DL models, there is no automatic method that can translate DL models to pure code. To fill this gap, we propose a novel method, CustomDLCoder, to automatically extract on-device DL model information and synthesize a customized executable program for a wide range of DL models. CustomDLCoder first parses the DL model, extracts its backend computing codes, configures the extracted codes, and then generates a customized program to implement and deploy the DL model without explicit model representation. The synthesized program hides model information for DL deployment environments since it does not need to retain explicit model representation, preventing many attacks on the DL model. In addition, it improves ML performance because the customized code removes model parsing and preprocessing steps and only retains the data computing process. Our experimental results show that CustomDLCoder improves model security by disabling on-device model sniffing. Compared with the original on-device platform (i.e., TFLite), our method can accelerate model inference by 21.0% and 24.3% on x86-64 and ARM64 platforms, respectively. Most importantly, it can significantly reduce memory consumption by 68.8% and 36.0% on x86-64 and ARM64 platforms, respectively.",
+    "authorIds": [
+      "0000-0003-3514-0372",
+      "0000-0001-9895-4600",
+      "0000-0001-6008-7265",
+      "0000-0003-4928-7076",
+      "0000-0003-2011-9618",
+      "0000-0002-4508-5971",
+      "0000-0003-2990-1614"
+    ],
     "authorInstitutions": "Mingyi Zhou (Monash University); Xiang Gao (Beihang University); Pei Liu (CSIRO’s Data61); John Grundy (Monash University); Chunyang Chen (TU Munich); Xiao Chen (University of Newcastle); Li Li (Beihang University)",
     "authors": [
       "Mingyi Zhou",
@@ -1535,15 +1654,24 @@
       "Xiao Chen",
       "Li Li"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 15:30 - 15:50"
     ],
     "doi": "10.1145/3650212.3652119",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2d2c8d7f-c1be-47d1-9974-9b69a9aa6030",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "174-185",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Analyzing Neural Models"
@@ -1556,13 +1684,24 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/15/Model-less-Is-the-Best-Model-Generating-Pure-Code-Implementations-to-Replace-On-Devi",
       "https://doi.org/10.1145/3650212.3652119",
+      "https://2024.issta.org/details/issta-2024-papers/15/Model-less-Is-the-Best-Model-Generating-Pure-Code-Implementations-to-Replace-On-Devi",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "Log data have facilitated various tasks of software development and maintenance, such as testing, debugging and diagnosing. Due to the unstructured nature of logs, log parsing is typically required to transform log messages into structured data for automated log analysis. Given the abundance of log parsers that employ various techniques, evaluating these tools to comprehend their characteristics and performance becomes imperative. Loghub serves as a commonly used dataset for benchmarking log parsers, but it suffers from limited scale and representativeness, posing significant challenges for studies to comprehensively evaluate existing log parsers or develop new methods. This limitation is particularly pronounced when assessing these log parsers for production use. To address these limitations, we provide a new collection of annotated log datasets, denoted Loghub-2.0, which can better reflect the characteristics of log data in real-world software systems. Loghub-2.0 comprises 14 datasets with an average of 3.6 million log lines in each dataset. Based on Loghub-2.0, we conduct a thorough re-evaluation of 15 state-of-the-art log parsers in a more rigorous and practical setting. Particularly, we introduce a new evaluation metric to mitigate the sensitivity of existing metrics to imbalanced data distributions. We are also the first to investigate the granular performance of log parsers on logs that represent rare system events, offering in-depth details for software diagnosis. Accurately parsing such logs is essential, yet it remains a challenge. We believe this work could shed light on the evaluation and design of log parsers in practical settings, thereby facilitating their deployment in production systems.",
+    "authorIds": [
+      "0009-0003-1988-6219",
+      "0000-0003-0037-1912",
+      "0009-0004-6962-5292",
+      "0009-0009-8370-644X",
+      "0009-0006-8798-5667",
+      "0000-0002-5831-9474",
+      "0000-0001-5158-6716",
+      "0000-0002-5666-8320",
+      "0000-0002-3666-5798"
+    ],
     "authorInstitutions": "Zhihan Jiang (Chinese University of Hong Kong); Jinyang Liu (Chinese University of Hong Kong); Junjie Huang (Chinese University of Hong Kong); Yichen LI (Chinese University of Hong Kong); Yintong Huo (Chinese University of Hong Kong); Jiazhen Gu (Chinese University of Hong Kong); Zhuangbin Chen (Sun Yat-sen University); Jieming Zhu (Huawei Noah’s Ark Lab); Michael Lyu (Chinese University of Hong Kong)",
     "authors": [
       "Zhihan Jiang",
@@ -1575,15 +1714,24 @@
       "Jieming Zhu",
       "Michael Lyu"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 10:30 - 10:50"
     ],
     "doi": "10.1145/3650212.3652123",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2dd4be4c-ea68-4921-8aa3-79538228ba03",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "223-234",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Logging and Field Bugs"
@@ -1596,8 +1744,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/19/A-Large-Scale-Evaluation-for-Log-Parsing-Techniques-How-Far-Are-We-",
       "https://doi.org/10.1145/3650212.3652123",
+      "https://2024.issta.org/details/issta-2024-papers/19/A-Large-Scale-Evaluation-for-Log-Parsing-Techniques-How-Far-Are-We-",
       "https://arxiv.org/abs/2308.10828",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
@@ -1830,6 +1978,17 @@
   },
   {
     "abstract": "The evolution of recent malware, characterized by the escalating use of cloaking techniques, poses a significant challenge in the analysis of malware behaviors. Researchers proposed forced execution to penetrate malware’s self-protection mechanisms and expose hidden behaviors, by forcefully setting certain branch outcomes. Existing studies focus on enhancing the forced executor to provide light-weight crash-free execution models. However, insufficient attention has been directed toward the path exploration strategy, an aspect equally crucial to the effectiveness. Linear search employed in state-of-the-art forced execution tools exhibits inherent limitations that lead to unnecessary path exploration and incomplete behavior exposure. In this paper, we propose a novel and practical path exploration strategy that focuses on the coverage of defineuse relations in the subject binary. We develop a fuzzing approach for exploring these define-use relations in a progressive and self-supervised way. Our experimental results show that the proposed solution outperforms the existing forced execution tools in both memory dependence coverage and malware behavior exposure.",
+    "authorIds": [
+      "0009-0004-3370-8627",
+      "0009-0003-9000-168X",
+      "0009-0003-3345-5861",
+      "0000-0003-1009-6627",
+      "0000-0002-4818-7164",
+      "0000-0003-4403-0060",
+      "0000-0002-5160-1223",
+      "0000-0002-6515-0021",
+      "0000-0002-9544-2500"
+    ],
     "authorInstitutions": "Dongnan He (Renmin University of China); Dongchen Xie (Renmin University of China); Yujie Wang (Renmin University of China); Wei You (Renmin University of China); Bin Liang (Renmin University of China); Jianjun Huang (Renmin University of China); Wenchang Shi (Renmin University of China); Zhuo Zhang (Purdue University); Xiangyu Zhang (Purdue University)",
     "authors": [
       "Dongnan He",
@@ -1842,15 +2001,24 @@
       "Zhuo Zhang",
       "Xiangyu Zhang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 14:10 - 14:30"
     ],
     "doi": "10.1145/3650212.3652128",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "40c5e04f-1fcb-4a52-9950-961110616d29",
     "locations": [
       "EI 7"
     ],
+    "pages": "287-299",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Execution and Profiling"
@@ -1863,13 +2031,19 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/24/Define-Use-Guided-Path-Exploration-for-Better-Forced-Execution",
       "https://doi.org/10.1145/3650212.3652128",
+      "https://2024.issta.org/details/issta-2024-papers/24/Define-Use-Guided-Path-Exploration-for-Better-Forced-Execution",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "This paper investigates neuron dropout as a post-processing bias mitigation method for deep neural networks (DNNs). Neural-driven software solutions are increasingly applied in socially critical domains with significant fairness implications. While DNNs are exceptional at learning statistical patterns from data, they may encode and amplify historical biases. Existing bias mitigation algorithms often require modifying the input dataset or the learning algorithms. We posit that prevalent dropout methods may be an effective and less intrusive approach to improve fairness of pre-trained DNNs during inference. However, finding the ideal set of neurons to drop is a combinatorial problem. We propose NeuFair, a family of post-processing randomized algorithms that mitigate unfairness in pre-trained DNNs via dropouts during inference. Our randomized search is guided by an objective to minimize discrimination while maintaining the model’s utility. We show that NeuFair is efficient and effective in improving fairness (up to 69%) with minimal or no model performance degradation. We provide intuitive explanations of these phenomena and carefully examine the influence of various hyperparameters of NeuFair on the results. Finally, we empirically and conceptually compare NeuFair to different state-of-the-art bias mitigators.",
+    "authorIds": [
+      "0000-0002-1849-1288",
+      "0000-0001-8773-2084",
+      "0000-0002-1375-3154",
+      "0000-0001-6109-6091"
+    ],
     "authorInstitutions": "Vishnu Asutosh Dasu (Pennsylvania State University); Ashish Kumar (Pennsylvania State University); Saeid Tizpaz-Niari (University of Texas at El Paso); Gang (Gary) Tan (Pennsylvania State University)",
     "authors": [
       "Vishnu Asutosh Dasu",
@@ -1877,15 +2051,24 @@
       "Saeid Tizpaz-Niari",
       "Gang (Gary) Tan"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 13:30 - 13:50"
     ],
     "doi": "10.1145/3650212.3680380",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "42b2d7c7-ced1-4393-897f-6bc62c173539",
     "locations": [
       "EI 7"
     ],
+    "pages": "1541-1553",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Fairness and Safety of Neural Networks"
@@ -1898,13 +2081,23 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/123/NeuFair-Neural-Network-Fairness-Repair-with-Dropout",
       "https://doi.org/10.1145/3650212.3680380",
+      "https://2024.issta.org/details/issta-2024-papers/123/NeuFair-Neural-Network-Fairness-Repair-with-Dropout",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "Vulnerability detection is crucial for ensuring the security and reliability of software systems. Recently, Graph Neural Networks (GNNs) have emerged as a prominent code embedding approach for vulnerability detection, owing to their ability to capture the underlying semantic structure of source code. However, GNNs face significant challenges in explainability due to their inherently black-box nature. To this end, several factual reasoning-based explainers have been proposed. These explainers provide explanations for the predictions made by GNNs by analyzing the key features that contribute to the outcomes. We argue that these factual reasoning-based explanations cannot answer critical what-if questions: \"What would happen to the GNN's decision if we were to alter the code graph into alternative structures?\" Inspired by advancements of counterfactual reasoning in artificial intelligence, we propose CFExplainer, a novel counterfactual explainer for GNN-based vulnerability detection. Unlike factual reasoning-based explainers, CFExplainer seeks the minimal perturbation to the input code graph that leads to a change in the prediction, thereby addressing the what-if questions for vulnerability detection. We term this perturbation a counterfactual explanation, which can pinpoint the root causes of the detected vulnerability and furnish valuable insights for developers to undertake appropriate actions for fixing the vulnerability. Extensive experiments on four GNN-based vulnerability detection models demonstrate the effectiveness of CFExplainer over existing state-of-the-art factual reasoning-based explainers.",
+    "authorIds": [
+      "0000-0003-4333-8063",
+      "0000-0001-6937-4180",
+      "0000-0002-8308-9551",
+      "0009-0002-8313-5092",
+      "0000-0002-3063-9425",
+      "0000-0002-9510-6574",
+      "0000-0003-4493-6663",
+      "0000-0002-3934-7605"
+    ],
     "authorInstitutions": "Zhaoyang Chu (Huazhong University of Science and Technology); Yao Wan (Huazhong University of Science and Technology); Qian Li (Curtin University); Yang Wu (Huazhong University of Science and Technology); Hongyu Zhang (Chongqing University); Yulei Sui (UNSW); Guandong Xu (University of Technology); Hai Jin (Huazhong University of Science and Technology)",
     "authors": [
       "Zhaoyang Chu",
@@ -1916,15 +2109,24 @@
       "Guandong Xu",
       "Hai Jin"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 14:30 - 14:50"
     ],
     "doi": "10.1145/3650212.3652136",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "43b9ef94-9d72-44a3-8baf-ab8eaf5d7b57",
     "locations": [
       "EI 3 Sahulka"
     ],
+    "pages": "389-401",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Vulnerability Detection"
@@ -1937,14 +2139,25 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/32/Graph-Neural-Networks-for-Vulnerability-Detection-A-Counterfactual-Explanation",
       "https://doi.org/10.1145/3650212.3652136",
+      "https://2024.issta.org/details/issta-2024-papers/32/Graph-Neural-Networks-for-Vulnerability-Detection-A-Counterfactual-Explanation",
       "https://arxiv.org/abs/2404.15687",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "In software development, bug report reproduction is a challenging task. This paper introduces ReBL, a novel feedback-driven approach that leverages GPT-4, a large-scale language model (LLM), to automatically reproduce Android bug reports. Unlike traditional methods, ReBL bypasses the use of Step to Reproduce (S2R) entities. Instead, it leverages the entire textual bug report and employs innovative prompts to enhance GPT’s contextual reasoning. This approach is more flexible and context-aware than the traditional step-by-step entity matching approach, resulting in improved accuracy and effectiveness. In addition to handling crash reports, ReBL has the capability of handling non-crash functional bug reports. Our evaluation of 96 Android bug reports (73 crash and 23 non-crash) demonstrates that ReBL successfully reproduced 90.63% of these reports, averaging only 74.98 seconds per bug report. Additionally, ReBL outperformed three existing tools in both success rate and speed.",
+    "authorIds": [
+      "0009-0002-9675-6824",
+      "0000-0001-8663-4175",
+      "0000-0001-7740-0377",
+      "0000-0003-1333-1637",
+      "0000-0003-4951-9367",
+      "0000-0003-2011-9618",
+      "0009-0002-5618-2264",
+      "0000-0002-4890-2455",
+      "0000-0002-9461-4251"
+    ],
     "authorInstitutions": "Dingbang Wang (University of Connecticut); Yu Zhao (University of Cincinnati); Sidong Feng (Monash University); Zhaoxu Zhang (University of Southern California); William G.J. Halfond (University of Southern California); Chunyang Chen (TU Munich); Xiaoxia Sun (China Mobile (Suzhou) Software Technology); Jiangfan Shi (Zhejiang University); Tingting Yu (University of Connecticut)",
     "authors": [
       "Dingbang Wang",
@@ -1957,15 +2170,24 @@
       "Jiangfan Shi",
       "Tingting Yu"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 10:50 - 11:10"
     ],
     "doi": "10.1145/3650212.3680341",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "44a28eb2-b3de-495f-aee0-ba1a7880419e",
     "locations": [
       "EI 3 Sahulka"
     ],
+    "pages": "1048-1060",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Android and AR"
@@ -1978,8 +2200,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/84/Feedback-Driven-Automated-Whole-Bug-Report-Reproduction-for-Android-Apps",
       "https://doi.org/10.1145/3650212.3680341",
+      "https://2024.issta.org/details/issta-2024-papers/84/Feedback-Driven-Automated-Whole-Bug-Report-Reproduction-for-Android-Apps",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -2025,7 +2247,8 @@
     ],
     "title": "Graph Learning for Extract Class Refactoring",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685561",
@@ -2246,7 +2469,8 @@
     ],
     "title": "SeeWasm: An Efficient and Fully-Functional Symbolic Execution Engine for WebAssembly Binaries",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685300",
@@ -2256,6 +2480,16 @@
   },
   {
     "abstract": "Multi-agent systems (MASs) have achieved remarkable success in multi-robot control, intelligent transportation, and multiplayer games, etc. Thorough testing for MAS is urgently needed to ensure its robustness in the face of constantly changing and unexpected scenarios. Existing methods mainly focus on single-agent system testing and cannot be directly applied to MAS testing due to the complexity of MAS. To our best knowledge, there are fewer studies on MAS testing. While several studies have focused on adversarial attacks on MASs, they primarily target failure detection from an attack perspective, i.e., discovering failure scenarios, while ignoring the diversity of scenarios. In this paper, to highlight a typical balance between exploration (diversifying behaviors) and exploitation (detecting failures), we propose an advanced testing framework for MAS called {\\tool} with diversity-guided exploration and adaptive critical state exploitation. It incorporates both individual diversity and team diversity, and designs an adaptive perturbation mechanism to perturb the action at the critical states, so as to trigger more and more diverse failure scenarios of the system. We evaluate MASTest on two popular MAS simulation environments: Coop Navi and StarCraft II. Results show that the average distance of the resulting failure scenarios is increased by 29.55%-103.57% and 74.07%-370.00% on two environments compared to the baselines. Also, the failure patterns found by MASTest are improved by 71.44%-300.00% and 50%-500.00% on two experimental environments compared to the baselines.",
+    "authorIds": [
+      "0000-0002-8514-2336",
+      "0000-0003-2854-4889",
+      "0000-0002-9941-6713",
+      "0000-0002-1288-6502",
+      "0009-0001-9285-3419",
+      "0000-0001-8641-8130",
+      "0009-0004-6016-7360",
+      "0000-0002-2618-5694"
+    ],
     "authorInstitutions": "Xuyan Ma (Institute of Software at Chinese Academy of Sciences); Yawen Wang (Institute of Software at Chinese Academy of Sciences); Junjie Wang (Institute of Software at Chinese Academy of Sciences); Xiaofei Xie (Singapore Management University); Boyu Wu (Institute of Software at Chinese Academy of Sciences); Shoubin Li (Institute of Software at Chinese Academy of Sciences); Fanjiang Xu (Institute of Software at Chinese Academy of Sciences); Qing Wang (Institute of Software at Chinese Academy of Sciences)",
     "authors": [
       "Xuyan Ma",
@@ -2267,15 +2501,24 @@
       "Fanjiang Xu",
       "Qing Wang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 15:30 - 15:50"
     ],
     "doi": "10.1145/3650212.3680376",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4b687258-5518-49fc-9928-2ff368ebf5b0",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "1491-1503",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Builds and Testing"
@@ -2288,8 +2531,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/119/Enhancing-Multi-agent-System-Testing-with-Diversity-Guided-Exploration-and-Adaptive-C",
       "https://doi.org/10.1145/3650212.3680376",
+      "https://2024.issta.org/details/issta-2024-papers/119/Enhancing-Multi-agent-System-Testing-with-Diversity-Guided-Exploration-and-Adaptive-C",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -2395,6 +2638,14 @@
   },
   {
     "abstract": "In Continuous Integration (CI), accurate build prediction is crucial for minimizing development costs and enhancing efficiency. However, existing build prediction methods, typically based on predefined rules or machine learning classifiers employing feature engineering, have been constrained by their limited ability to fully capture the intricate details of commit artifacts, such as code change and commit messages. These artifacts are critical for understanding the commit under a build but have been inadequately utilized in existing approaches. To address this problem, we propose GitSense, a Transformer-based model specifically designed to incorporate the rich and complex information contained within commit artifacts for the first. GitSense employs an advanced textual encoder with built-in sliding window text samplers for textual features and a statistical feature encoder for extracted statistical features. This innovative approach allows for a comprehensive analysis of lengthy and intricate commit artifacts, surpassing the capabilities of traditional methods. We conduct comprehensive experiments to compare GitSense with five state-of-the-art build prediction models, Longformer, and ChatGPT. The experimental results show that GitSense outperforms these models in predicting failed builds, evidenced by 32.7%-872.1.0% better on F1-score, 23.9%-437.5% better on Precision, and 40.2%-1396.0% better on Recall.",
+    "authorIds": [
+      "0009-0000-5208-4750",
+      "0000-0002-9990-9120",
+      "0000-0003-1821-3170",
+      "0000-0002-2035-0791",
+      "0000-0002-1697-3451",
+      "0000-0001-8295-303X"
+    ],
     "authorInstitutions": "Guoqing Wang (Peking University); Zeyu Sun (Institute of Software at Chinese Academy of Sciences); Yizhou Chen (Peking University); Yifan Zhao (Peking University); Qingyuan Liang (Peking University); Dan Hao (Peking University)",
     "authors": [
       "Guoqing Wang",
@@ -2404,15 +2655,24 @@
       "Qingyuan Liang",
       "Dan Hao"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 15:50 - 16:10"
     ],
     "doi": "10.1145/3650212.3680356",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4f1bb244-ecf3-4534-aa6b-c839d0383b49",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "1236-1248",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Builds and Testing"
@@ -2425,27 +2685,42 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/99/Commit-Artifact-Preserving-Build-Prediction",
       "https://doi.org/10.1145/3650212.3680356",
+      "https://2024.issta.org/details/issta-2024-papers/99/Commit-Artifact-Preserving-Build-Prediction",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "Patch correctness assessment aims at effectively detecting overfitted patches, i.e., patches that causes all tests to pass but do not actually fix the bug. Although several automated techniques for assessing patch correctness have been proposed, these techniques typically yield a binary result (correct/incorrect) without providing any additional information explaining the rationale behind the decision of classifying a patch as correct or incorrect. This tool demo paper presents FixCheck, a tool based on static analysis, random testing and Large Language Models (LLMs), that seeks to improve the patch correctness analysis process by providing fault-revealing tests for potentially incorrect patches. To this end, FixCheck first employs static analysis and random testing to generate a comprehensive set of test cases that are \\emph{similar} to the original failing test case. Then, FixCheck relies on LLMs to derive \\emph{meaningful} assertions for each new test case. Finally, FixCheck executes the generated tests, and those that fail are selected and prioritized based on their likelihood of revealing a defect in the patch.",
+    "authorIds": [
+      "0000-0002-2441-1555",
+      "0000-0001-7378-2603",
+      "0000-0002-6711-3080"
+    ],
     "authorInstitutions": "Facundo Molina (IMDEA Software Institute); Juan Manuel Copia (IMDEA Software Institute; Universidad Politécnica de Madrid); Alessandra Gorla (IMDEA Software Institute)",
     "authors": [
       "Facundo Molina",
       "Juan Manuel Copia",
       "Alessandra Gorla"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 15:55 - 16:08"
     ],
+    "doi": "10.1145/3650212.3685308",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "51c49361-ec98-4289-b30c-d51916e6fd4f",
     "locations": [
       "EI 5 Hochenegg"
     ],
+    "pages": "1856-1860",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "ISSTA/ECOOP Tool Demonstrations",
       "Tool demos 2"
@@ -2455,9 +2730,11 @@
     ],
     "title": "FixCheck: A Tool for Improving Patch Correctness Analysis",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1145/3650212.3685308",
       "https://2024.issta.org/details/issta-ecoop-2024-tool-demonstrations/10/FixCheck-A-Tool-for-Improving-Patch-Correctness-Analysis",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
@@ -2556,7 +2833,8 @@
     ],
     "title": "DMMPP: Constructing Dummy Main Methods for Android Apps with Path-sensitive Predicates",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685302",
@@ -2724,6 +3002,13 @@
   },
   {
     "abstract": "Traditional call-graph construction algorithms conflate the computation of possible runtime types with the actual resolution of (virtual) calls. This tangled design impedes supporting complex language features and APIs and making systematic trade-offs between precision, soundness, and scalability. It also impedes implementation of precise downstream analyses that rely on type information. To address the problem, we propose Unimocg, a modular architecture for call-graph construction that decouples the computation of type information from resolving calls. Due to its modular design, Unimocg can combine a wide range of different call-graph algorithms with algorithm-agnostic modules to support individual language features. Moreover, these modules operate at the same precision as the chosen call-graph algorithm with no further effort. Additionally, Unimocg allows other analyses to easily reuse type information from the call-graph construction at full precision. We demonstrate how Unimocg enables a framework of call-graph algorithms with different precision, soundness, and scalability trade-offs from reusable modules. Unimocg currently supports ten call-graph algorithms from vastly different families, such as CHA, RTA, XTA, and $k$-$l$-CFA. These algorithms show consistent soundness without sacrificing precision or performance. We also show how an immutability analysis is improved using Unimocg.",
+    "authorIds": [
+      "0009-0004-6425-8630",
+      "0000-0001-6561-0430",
+      "0000-0002-4278-2181",
+      "0000-0002-7561-5750",
+      "0000-0001-6563-7537"
+    ],
     "authorInstitutions": "Dominik Helm (University of Duisburg-Essen; TU Darmstadt; National Research Center for Applied Cybersecurity ATHENE); Tobias Roth (TU Darmstadt; National Research Center for Applied Cybersecurity ATHENE); Sven Keidel (TU Darmstadt); Michael Reif (CQSE); Mira Mezini (TU Darmstadt; hessian.AI; National Research Center for Applied Cybersecurity ATHENE)",
     "authors": [
       "Dominik Helm",
@@ -2732,15 +3017,24 @@
       "Michael Reif",
       "Mira Mezini"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 10:30 - 10:50"
     ],
     "doi": "10.1145/3650212.3652109",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5a3ca0f9-27fb-4170-8db8-1be17d2b528e",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "51-62",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Call Graphs and Static Analysis"
@@ -2753,8 +3047,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/5/Unimocg-Modular-Call-Graph-Algorithms-for-Consistent-Handling-of-Language-Features",
       "https://doi.org/10.1145/3650212.3652109",
+      "https://2024.issta.org/details/issta-2024-papers/5/Unimocg-Modular-Call-Graph-Algorithms-for-Consistent-Handling-of-Language-Features",
       "https://www.opal-project.de/articles/Unimocg@ISSTA24.pdf",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
@@ -2785,7 +3079,8 @@
     ],
     "title": "With Biabduction towards Memory Safety across the Rust-C-FFI",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2024.issta.org/details/issta-ecoop-2024-doctoral-symposium/9/With-Biabduction-towards-Memory-Safety-across-the-Rust-C-FFI",
@@ -3319,21 +3614,35 @@
   },
   {
     "abstract": "With the use of Deep Learning (DL) in safety-critical domains, the systematic testing of these systems has become a critical issue for human life. Due to the data-driven nature of Deep Neural Networks (DNNs), the effectiveness of tests is closely related to the adequacy of test datasets. Test data need to be labeled, which requires manual human effort and sometimes expert knowledge. DL system testers aim to select the test data that will be most helpful in identifying the weaknesses of the DNN model by using resources efficiently. To help achieve this goal, we propose a test data prioritization approach based on using a meta-model that gets uncertainty metrics as input, which are derived from outputs of other base models. Integrating different uncertainty metrics helps overcome individual limitations of these metrics and be effective in a wider range of scenarios. We train the meta-models with the objective of predicting whether a test input will lead the tested model to make an incorrect prediction or not. We conducted an experimental evaluation with popular image classification datasets and DNN models to evaluate the proposed approach. The results of the experiments demonstrate that our approach effectively prioritizes the test datasets and outperforms existing state-of-the-art test prioritization methods used in comparison. In the experiments, we evaluated the test prioritization approach from a distribution-aware perspective by generating test datasets with and without out-of-distribution data.",
+    "authorIds": [
+      "0000-0002-7497-5957",
+      "0000-0002-4828-0190",
+      "0000-0002-0738-6669"
+    ],
     "authorInstitutions": "Demet Demir (Middle East Technical University); Aysu Betin Can (Middle East Technical University); Elif Surer (Middle East Technical University)",
     "authors": [
       "Demet Demir",
       "Aysu Betin Can",
       "Elif Surer"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 10:50 - 11:10"
     ],
     "doi": "10.1145/3650212.3680312",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6e96ae6c-9681-4399-a631-00bd95265858",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "678-690",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Testing Neural Networks"
@@ -3346,8 +3655,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/55/Test-Selection-for-Deep-Neural-Networks-using-Meta-Models-with-Uncertainty-Metrics",
       "https://doi.org/10.1145/3650212.3680312",
+      "https://2024.issta.org/details/issta-2024-papers/55/Test-Selection-for-Deep-Neural-Networks-using-Meta-Models-with-Uncertainty-Metrics",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -3399,21 +3708,35 @@
   },
   {
     "abstract": "Kubernetes is the leading cluster management platform, and within Kubernetes, an operator is an application-specific program that leverages the Kubernetes API to automate operation tasks for managing an application deployed on a Kubernetes cluster. Users can declare a desired state for the managed cluster, specifying their configuration preferences. The operator program is responsible for reconciling the cluster's actual state to align with the desired state. However, the complex, dynamic, and distributed nature of the overall system can introduce operator bugs, and lead to severe consequences, e.g., outages and undesired cluster state. In this paper, we conduct the first comprehensive study on 210 operator bugs from 36 Kubernetes operators. For all the studied bugs, we investigate their root causes, manifestations, impacts and fixing. Our study reveals many interesting findings that can guide the detection and testing of operator bugs, as well as the development of more reliable operators.",
+    "authorIds": [
+      "0009-0007-9126-9425",
+      "0009-0009-8312-6736",
+      "0000-0002-8561-2481"
+    ],
     "authorInstitutions": "Qingxin Xu (Institute of Software at Chinese Academy of Sciences; University of Chinese Academy of Sciences); Yu Gao (Institute of Software at Chinese Academy of Sciences; University of Chinese Academy of Sciences); Jun Wei (Institute of Software at Chinese Academy of Sciences; University of Chinese Academy of Sciences)",
     "authors": [
       "Qingxin Xu",
       "Yu Gao",
       "Jun Wei"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 15:50 - 16:10"
     ],
     "doi": "10.1145/3650212.3680396",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6fd97d00-fb8b-4b1a-a3dd-7a0024152f63",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "1746-1758",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Empirical Studies"
@@ -3426,27 +3749,40 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/139/An-Empirical-Study-on-Kubernetes-Operator-Bugs",
       "https://doi.org/10.1145/3650212.3680396",
+      "https://2024.issta.org/details/issta-2024-papers/139/An-Empirical-Study-on-Kubernetes-Operator-Bugs",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "Test flakiness, a non-deterministic behavior of builds irrelevant to code changes, is a major and continuing impediment to deliver- ing reliable software. The very few techniques for the automated repair of test flakiness are specifically crafted to repair either Order- Dependent (OD) or Implementation-Dependent (ID) flakiness. They are also all symbolic approaches, i.e., they leverage program analy- sis to detect and repair known test flakiness patterns and root causes, failing to generalize. To bridge the gap, we propose FlakyDoctor, a neuro-symbolic technique that combines the power of LLMs— generalizability—and program analysis—soundness—to fix different types of test flakiness. Our extensive evaluation using 873 confirmed flaky tests (332 OD and 541 ID) from 243 real-world projects demonstrates the ability of FlakyDoctor in repairing flakiness, achieving 57% (OD) and 59% (ID) success rate. Comparing to three alternative flakiness repair approaches, FlakyDoctor can repair 8% more ID tests than DexFix, 12% more OD flaky tests than ODRepair, and 17% more OD flaky tests than iFixFlakies. Regardless of underlying LLM, the non-LLM components of FlakyDoctor contribute to 12–31 % of the overall performance, i.e., while part of the FlakyDoctor power is from using LLMs, they are not good enough to repair flaky tests in real-world projects alone. What makes the proposed technique superior to related research on test flakiness mitigation specifically and program repair, in general, is repairing 79 previously unfixed flaky tests in real-world projects. We opened pull requests for all cases with corresponding patches; 19 of them were accepted and merged at the time of submission.",
+    "authorIds": [
+      "0009-0008-1409-4163",
+      "0000-0002-0668-8526"
+    ],
     "authorInstitutions": "Yang Chen (University of Illinois at Urbana-Champaign); Reyhaneh Jabbarvand (University of Illinois at Urbana-Champaign)",
     "authors": [
       "Yang Chen",
       "Reyhaneh Jabbarvand"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 11:10 - 11:30"
     ],
     "doi": "10.1145/3650212.3680369",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "70534f3a-d267-417b-b924-e2d4b4946f25",
     "locations": [
       "EI 7"
     ],
+    "pages": "1402-1414",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Program Repair 2"
@@ -3459,8 +3795,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/112/Neurosymbolic-Repair-of-Test-Flakiness",
       "https://doi.org/10.1145/3650212.3680369",
+      "https://2024.issta.org/details/issta-2024-papers/112/Neurosymbolic-Repair-of-Test-Flakiness",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -3574,21 +3910,35 @@
   },
   {
     "abstract": "Fault localization is essential to software maintenance tasks such as testing and automated program repair. Many fault localization techniques have been developed, the most common of which are spectrum-based. Most techniques have been designed for traditional programming paradigms that map passing and failing test cases to lines or branches of code, hence specialized programming paradigms which utilize different code abstractions may fail to localize well. In this paper, we study fault localization in the context of a class of programs, molecular programs. Recent research has designed automated testing and repair frameworks for these pro- grams but has ignored the importance of fault localization. As we demonstrate, using existing spectrum-based approaches may not provide much information. Instead we propose a novel approach, Traceback, that leverages temporal trace data. In an empirical study on a set of 89 faulty program variants, we demonstrate that Trace- back provides between a 32-90% improvement in localization over reaction-based mapping, a direct translation of spectrum-based localization. We see little difference in parameter tuning of Trace- back when all tests, or only code-based (invariant) tests are used, however the best depth and weight parameters vary when using specification based tests, which can be either functional or meta- morphic. Overall, invariant-based tests provide the best localization results (either alone or in combination with others), followed by metamorphic and then functional tests.",
+    "authorIds": [
+      "0000-0002-5620-434X",
+      "0000-0002-5467-5818",
+      "0000-0003-2443-2425"
+    ],
     "authorInstitutions": "Michael C. Gerten (Iowa State University); James I. Lathrop (Iowa State University); Myra Cohen (Iowa State University)",
     "authors": [
       "Michael C. Gerten",
       "James I. Lathrop",
       "Myra Cohen"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 15:30 - 15:50"
     ],
     "doi": "10.1145/3650212.3652138",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "718106ef-3996-4753-b6e9-09735081c716",
     "locations": [
       "EI 3 Sahulka"
     ],
+    "pages": "415-427",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Debugging"
@@ -3601,8 +3951,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/34/Traceback-A-Fault-Localization-Technique-for-Molecular-Programs",
       "https://doi.org/10.1145/3650212.3652138",
+      "https://2024.issta.org/details/issta-2024-papers/34/Traceback-A-Fault-Localization-Technique-for-Molecular-Programs",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -3839,6 +4189,14 @@
   },
   {
     "abstract": "Augmented Reality (AR) technology opens up exciting possibilities in various fields, such as education, work guidance, shopping, communication, and gaming. However, users often encounter usability and user experience issues in current AR apps, often due to the imprecise placement of virtual objects. Detecting these inaccuracies is crucial for AR app testing, but automating the process is challenging due to its reliance on human perception and validation. This paper introduces VOPA (Virtual Object Placement Assessment), a novel approach that automatically identifies imprecise virtual object placements in real-world AR apps. VOPA involves instrumenting real-world AR apps to collect screenshots representing various object placement scenarios and their corresponding metadata under real-world scenes. The collected data are then labeled through crowdsourcing and used to train a hybrid neural network that identifies object placement errors. VOPA aims to enhance AR app testing by automating the assessment of virtual object placement quality and detecting imprecise instances. In our evaluation of a test set of 304 screenshots, VOPA achieved an accuracy of 99.34%, precision of 96.92% and recall of 100%. Furthermore, VOPA successfully identified 38 real-world object placement errors, including instances where objects were hovering between two surfaces or appearing embedded in the wall.",
+    "authorIds": [
+      "0009-0001-2084-867X",
+      "0000-0002-6484-454X",
+      "0000-0003-4006-8731",
+      "0000-0001-6995-4775",
+      "0000-0002-9079-5534",
+      "0000-0002-3156-906X"
+    ],
     "authorInstitutions": "Xiaoyi Yang (Rochester Institute of Technology); Yuxing Wang (Rochester Institute of Technology); Tahmid Rafi (University of Texas at San Antonio); Dongfang Liu (Rochester Institute of Technology); Xiaoyin Wang (University of Texas at San Antonio); Xueling Zhang (Rochester Institute of Technology)",
     "authors": [
       "Xiaoyi Yang",
@@ -3848,15 +4206,24 @@
       "Xiaoyin Wang",
       "Xueling Zhang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 11:30 - 11:50"
     ],
     "doi": "10.1145/3650212.3680315",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7a929207-4875-4958-b3b9-6791a95a73da",
     "locations": [
       "EI 3 Sahulka"
     ],
+    "pages": "717-729",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Android and AR"
@@ -3869,8 +4236,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/58/Towards-Automatic-Oracle-Prediction-for-AR-Testing-Assessing-Virtual-Object-Placemen",
       "https://doi.org/10.1145/3650212.3680315",
+      "https://2024.issta.org/details/issta-2024-papers/58/Towards-Automatic-Oracle-Prediction-for-AR-Testing-Assessing-Virtual-Object-Placemen",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -4032,7 +4399,8 @@
     ],
     "title": "PolyTracker: Whole-Input Dynamic Information Flow Tracing",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685313",
@@ -4042,6 +4410,13 @@
   },
   {
     "abstract": "Neural networks (NNs) are known to have diverse defects such as adversarial examples, backdoor and discrimination, raising great concerns about their reliability. While NN testing can effectively expose these defects to a significant degree, understanding their root causes within the network requires further examination. In this work, inspired by the idea of debugging in traditional software for failure isolation, we propose a novel unified neuron-isolation-based framework for debugging neural networks, shortly IDNN. Given a buggy NN that exhibits certain undesired properties (e.g., discrimination), the goal of IDNN is to identify the most critical and minimal set of neurons that are responsible for exhibiting these properties. Notably, such isolation is conducted with the objective that by simply ‘freezing’ these neurons, the model’s undesired properties can be eliminated, resulting in a much more efficient model repair compared to computationally expensive retraining or weight optimization as in existing literature. We conduct extensive experiments to evaluate IDNN across a diverse set of NN structures on five benchmark datasets, for solving three debugging tasks, including backdoor, unfairness, and weak class. As a lightweight framework, IDNN outperforms state-of-the-art baselines by successfully identifying and isolating a very small set of responsible neurons, demonstrating superior generalization performance across all tasks.",
+    "authorIds": [
+      "0000-0003-4322-4285",
+      "0000-0001-7113-7635",
+      "0000-0002-1893-6259",
+      "0000-0002-4221-2162",
+      "0000-0003-3155-3145"
+    ],
     "authorInstitutions": "Jialuo Chen (Zhejiang University); Jingyi Wang (Zhejiang University); Youcheng Sun (University of Manchester); Peng Cheng (Zhejiang University); Jiming Chen (Zhejiang University; Hangzhou Dianzi University)",
     "authors": [
       "Jialuo Chen",
@@ -4050,15 +4425,24 @@
       "Peng Cheng",
       "Jiming Chen"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 16:30 - 16:50"
     ],
     "doi": "10.1145/3650212.3652132",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "7f8c3f32-a6d9-4310-bec4-ef283efb80d4",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "338-349",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Testing and Repairing Neural Networks"
@@ -4071,8 +4455,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/28/Isolation-Based-Debugging-for-Neural-Networks",
       "https://doi.org/10.1145/3650212.3652132",
+      "https://2024.issta.org/details/issta-2024-papers/28/Isolation-Based-Debugging-for-Neural-Networks",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -4232,6 +4616,12 @@
   },
   {
     "abstract": "Modern programs, characterized by their complex functionalities, high integration, and rapid iteration cycles, are prone to errors. This complexity poses challenges in program analysis and software testing, making it difficult to achieve comprehensive bug coverage during the development phase. As a result, many bugs are only discovered during the software’s production phase. Tracking and understanding these field bugs is essential but challenging: the uploaded field error reports are extensive, and trivial yet high-frequency bugs can overshadow important low-frequency bugs. Additionally, application codebases evolve rapidly, causing a single bug to produce varied exceptions and stack traces across different code releases. In this paper, we introduce Foliage, a bug tracking and clustering toolchain designed to trace and characterize field bugs in JavaScript applications, aiding developers in locating and fixing these bugs. To address the challenges of efficiently tracking and analyzing the dynamic and complex nature of software bugs, Foliage proposes an error message enhancement technique. Foliage also introduces the verbal-characteristic-based clustering technique, along with three evaluation metrics for bug clustering: V-measure, cardinality bias, and hit rate. The results show that Foliage’s verbal-characteristic-based bug clustering outperforms previous bug clustering approaches by an average of 31.1% across these three metrics. We present an empirical study of Foliage applied to a complex real-world application over a two-year production period, capturing over 250,000 error reports and clustering them into 132 unique bugs. Finally, we open-source a bug dataset consisting of real and labeled error reports, which can be used to benchmark bug clustering techniques.",
+    "authorIds": [
+      "0000-0001-9890-8196",
+      "0000-0002-7209-2771",
+      "0000-0001-5899-0295",
+      "0000-0003-2730-2319"
+    ],
     "authorInstitutions": "Zhanyao Lei (Shanghai Jiao Tong University); Yixiong Chen (Shanghai Jiao Tong University); Mingyuan Xia (AppetizerIO); Zhengwei Qi (Shanghai Jiao Tong University)",
     "authors": [
       "Zhanyao Lei",
@@ -4239,15 +4629,24 @@
       "Mingyuan Xia",
       "Zhengwei Qi"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 11:30 - 11:50"
     ],
     "doi": "10.1145/3650212.3680363",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "85747273-5f41-4527-adbc-aefad82d8932",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "1325-1337",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Logging and Field Bugs"
@@ -4260,8 +4659,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/106/Foliage-Nourishing-Evolving-Software-by-Characterizing-and-Clustering-Field-Bugs",
       "https://doi.org/10.1145/3650212.3680363",
+      "https://2024.issta.org/details/issta-2024-papers/106/Foliage-Nourishing-Evolving-Software-by-Characterizing-and-Clustering-Field-Bugs",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -4465,7 +4864,8 @@
     ],
     "title": "Decentralized Near-Synchronous Local-First Programming Collaboration",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685555",
@@ -4819,7 +5219,8 @@
     ],
     "title": "The Devil's Guide to Doing your PhD – 10 tips for despair, dismay, and disappointment",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2024.issta.org/details/issta-ecoop-2024-doctoral-symposium/15/The-Devil-s-Guide-to-Doing-your-PhD-10-tips-for-despair-dismay-and-disappointment",
@@ -4879,7 +5280,8 @@
     ],
     "title": "Leveraging Natural Language Processing and Data Mining to Augment and Validate APIs",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685554",
@@ -4889,6 +5291,12 @@
   },
   {
     "abstract": "While large language models (LLMs) have shown significant advancements in code generation, their susceptibility to producing incorrect code poses a significant challenge to the adoption of LLM-generated programs. This issue largely stems from the reliance on natural language descriptions as informal oracles in code generation. Current strategies to mitigate this involve selecting the best program from multiple LLM-generated alternatives, judged by criteria like the consistency of their execution results on an LLM-generated test suite. However, this approach has crucial limitations: (1) LLMs often generate redundant tests or tests that cannot distinguish between correct and incorrect solutions, (2) the used consistency criteria, such as the majority vote, fail to foster developer trust due to the absence of transparent rationale behind the made choices. In this work, we propose a new perspective on increasing the quality of LLM-generated code via program selection using the LLM as a test oracle. Our method is based on our experimentally confirmed observation that LLMs serve more effectively as oracles when tasked with selecting the correct output from multiple choices. Leveraging this insight, we first generate distinguishing inputs that capture semantic discrepancies of programs sampled from an LLM, and record outputs produced by the programs on these inputs. An LLM then selects the most likely to be correct output from these, guided by the natural language problem description. We implemented this idea in a tool LLMCodeChoice and evaluated its accuracy in generating and selecting standalone programs. Our experiments demonstrated its effectiveness in improving pass@1 by 3.6-7% on HumanEval and MBPP benchmarks compared to the state-of-art CodeT. Most interestingly, the selected input-output specifications helped us to uncover incompleteness and ambiguities in task descriptions and also identify incorrect ground-truth implementations in the benchmarks.",
+    "authorIds": [
+      "0000-0002-8165-9493",
+      "0009-0008-1080-4770",
+      "0000-0001-6088-4993",
+      "0000-0002-7127-1137"
+    ],
     "authorInstitutions": "Zhiyu Fan (National University of Singapore); Haifeng Ruan (National University of Singapore); Sergey Mechtaev (Peking University); Abhik Roychoudhury (National University of Singapore)",
     "authors": [
       "Zhiyu Fan",
@@ -4896,15 +5304,24 @@
       "Sergey Mechtaev",
       "Abhik Roychoudhury"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 14:10 - 14:30"
     ],
     "doi": "10.1145/3650212.3680308",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "94ab24f6-fa45-4b9a-a7b9-e6aa4fc91758",
     "locations": [
       "EI 7"
     ],
+    "pages": "628-640",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "LLMs for Code"
@@ -4917,8 +5334,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/51/Oracle-Guided-Program-Selection-from-Large-Language-Models",
       "https://doi.org/10.1145/3650212.3680308",
+      "https://2024.issta.org/details/issta-2024-papers/51/Oracle-Guided-Program-Selection-from-Large-Language-Models",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -5086,6 +5503,14 @@
   },
   {
     "abstract": "MLIR (Multi-Level Intermediate Representation) compiler infrastructure has gained widespread popularity in recent years. It introduces dialects to accommodate various levels of abstraction within the representation. Due to its fundamental role in compiler construction, it is critical to ensure its correctness. Recently, a grammar-based fuzzing technique (i.e., MLIRSmith) has been proposed for it and achieves notable effectiveness. However, MLIRSmith generates test programs in a random manner, which restricts the exploration of the input space, thereby limiting the overall fuzzing effectiveness. In this work, we propose a novel fuzzing technique, called MLIR. As complicated or uncommon data/control dependencies among various operations are often helpful to trigger MLIR bugs, it constructs the operation dependency graph for an MLIR program and defines the associated operation dependency coverage to guide the fuzzing process. To drive the fuzzing process towards increasing operation dependency coverage, MLIR then designs a set of dependency-targeted mutation rules. By applying MLIR to the latest revisions of the MLIR compiler infrastructure, it detected 63 previously unknown bugs, among which 38/48 bugs have been fixed/confirmed by developers.",
+    "authorIds": [
+      "0000-0001-5436-940X",
+      "0000-0003-3056-9962",
+      "0000-0001-8766-7235",
+      "0000-0003-1983-6572",
+      "0000-0003-2998-1052",
+      "0000-0002-8980-1634"
+    ],
     "authorInstitutions": "Chenyao Suo (Tianjin University); Junjie Chen (Tianjin University); Shuang Liu (Renmin University of China); Jiajun Jiang (Tianjin University); Yingquan Zhao (Tianjin University); Jianrong Wang (Tianjin University)",
     "authors": [
       "Chenyao Suo",
@@ -5095,15 +5520,24 @@
       "Yingquan Zhao",
       "Jianrong Wang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 10:50 - 11:10"
     ],
     "doi": "10.1145/3650212.3680360",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9f076ef5-d629-43b5-a8da-73e50f2ce0f7",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "1287-1299",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Compilers and Decompilers"
@@ -5116,8 +5550,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/103/Fuzzing-MLIR-Compiler-Infrastructure-via-Operation-Dependency-Analysis",
       "https://doi.org/10.1145/3650212.3680360",
+      "https://2024.issta.org/details/issta-2024-papers/103/Fuzzing-MLIR-Compiler-Infrastructure-via-Operation-Dependency-Analysis",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -5182,20 +5616,33 @@
   },
   {
     "abstract": "On the one hand, there has been considerable progress on neural network verification in recent years, which makes certifying neural networks a possibility. On the other hand, neural networks in practice are often re-trained over time to cope with new data distribution or for solving different tasks (a.k.a. continual learning). Once re-trained, the verified correctness of the neural network is likely broken, particularly in the presence of the phenomenon known as catastrophic forgetting. In this work, we propose an approach called certified continual learning which improves existing continual learning methods by preserving, as long as possible, the established correctness properties of a verified network. Our approach is evaluated with multiple neural networks and on two different continual learning methods. The results show that our approach is efficient and the trained models preserve their certified correctness and often maintain high utility.",
+    "authorIds": [
+      "0000-0003-2242-9564",
+      "0000-0002-3545-1392"
+    ],
     "authorInstitutions": "Long H. Pham (Singapore Management University); Jun Sun (Singapore Management University)",
     "authors": [
       "Long H. Pham",
       "Jun Sun"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 16:50 - 17:10"
     ],
     "doi": "10.1145/3650212.3680322",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9fe78551-574c-49d0-9535-366d8da315c6",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "806-818",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Testing and Repairing Neural Networks"
@@ -5208,13 +5655,21 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/65/Certified-Continual-Learning-for-Neural-Network-Regression",
       "https://doi.org/10.1145/3650212.3680322",
+      "https://2024.issta.org/details/issta-2024-papers/65/Certified-Continual-Learning-for-Neural-Network-Regression",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "A fundamental component of the Wasm ecosystem is the Wasm runtime, as it directly impacts whether Wasm applications can be executed as expected. Bugs in Wasm runtimes are frequently reported, so the research community has made a few attempts to design automated testing frameworks to detect bugs in Wasm runtimes. However, existing testing frameworks are limited by the quality of test cases, i.e., they face challenges in generating Wasm binaries that are both semantically rich and syntactically correct. As a result, complicated bugs cannot be triggered effectively. In this work, we present WASMaker, a novel differential testing framework that can generate complicated Wasm test cases by disassembling and assembling real-world Wasm binaries, which can trigger hidden inconsistencies among Wasm runtimes. To further pinpoint the root causes of unexpected behaviors, we design a runtime-agnostic root cause location method to locate bugs accurately. Extensive evaluation suggests that WASMaker outperforms state-of-the-art techniques in terms of both efficiency and effectiveness. We have uncovered 33 unique bugs in popular Wasm runtimes, among which 25 have been confirmed.",
+    "authorIds": [
+      "0009-0007-4557-3813",
+      "0000-0002-9980-7298",
+      "0009-0001-2988-7042",
+      "0000-0003-3466-0165",
+      "0000-0001-5905-9515",
+      "0000-0003-1100-8633"
+    ],
     "authorInstitutions": "Shangtong Cao (Beijing University of Posts and Telecommunications); Ningyu He (Peking University); Xinyu She (Huazhong University of Science and Technology); Yixuan Zhang (Peking University); Mu Zhang (University of Utah); Haoyu Wang (Huazhong University of Science and Technology)",
     "authors": [
       "Shangtong Cao",
@@ -5224,15 +5679,24 @@
       "Mu Zhang",
       "Haoyu Wang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 13:50 - 14:10"
     ],
     "doi": "10.1145/3650212.3680358",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a005510a-b6d6-46f6-ae62-eec3ba6f960f",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "1262-1273",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "WebAssembly and Browsers"
@@ -5245,8 +5709,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/101/WASMaker-Differential-Testing-of-WebAssembly-Runtimes-via-Semantic-Aware-Binary-Gene",
       "https://doi.org/10.1145/3650212.3680358",
+      "https://2024.issta.org/details/issta-2024-papers/101/WASMaker-Differential-Testing-of-WebAssembly-Runtimes-via-Semantic-Aware-Binary-Gene",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -5292,7 +5756,8 @@
     ],
     "title": "Shaping Test Inputs in Grammar-Based Fuzzing",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685553",
@@ -5342,7 +5807,8 @@
     ],
     "title": "Testing concurrent algorithms on JVM with Lincheck and IntelliJ IDEA",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685301",
@@ -5352,6 +5818,12 @@
   },
   {
     "abstract": "Assembler is a critical component of the compiler toolchain, which has been less tested than the other components. Unfortunately, current grammar-based fuzzing techniques suffer from several challenges when testing assemblers. First, each different assembler accepts different grammar rules and syntaxes, and there are no existing assembly grammar specifications. Second, not every assembler is open-source, which makes it difficult to extract grammar rules from the source code. While existing black-box grammar inference approaches are applicable to such closed-source assemblers, they suffer from the scalability issue, which renders them impractical for testing assemblers. To address these challenges, we propose a novel way to test assemblers by automatically inferring their grammar rules with only a few queries to the target assemblers by leveraging their error messages. The key insight is that assembly error messages often deliver useful information to infer the underlying grammar rules. We have implemented our technique in a tool named AsFuzzer, and evaluated it on 4 real-world assemblers including Clang-integrated assembler (Clang), GNU assembler (GAS), Intel’s assembler (ICC), and Microsoft macro assembler (MASM). With AsFuzzer, we have successfully found 497 buggy instruction opcodes for six popular architectures, and reported them to the developers.",
+    "authorIds": [
+      "0009-0008-2158-9367",
+      "0000-0003-3129-3857",
+      "0009-0006-2631-2741",
+      "0000-0002-6012-7228"
+    ],
     "authorInstitutions": "Hyungseok Kim (Affiliated Institute of ETRI); Soomin Kim (KAIST); Jungwoo Lee (KAIST); Sang Kil Cha (KAIST)",
     "authors": [
       "Hyungseok Kim",
@@ -5359,15 +5831,24 @@
       "Jungwoo Lee",
       "Sang Kil Cha"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 14:10 - 14:30"
     ],
     "doi": "10.1145/3650212.3680345",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a4bd4a6e-8a3c-4195-9f1a-d9f27a61d2db",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "1099-1111",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Domain-Specific Testing"
@@ -5380,13 +5861,21 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/88/AsFuzzer-Differential-Testing-of-Assemblers-with-Error-Driven-Grammar-Inference",
       "https://doi.org/10.1145/3650212.3680345",
+      "https://2024.issta.org/details/issta-2024-papers/88/AsFuzzer-Differential-Testing-of-Assemblers-with-Error-Driven-Grammar-Inference",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "Though many approaches have been proposed for Automated Program Repair (APR) and indeed achieved remarkable performance, they still have limitations in fixing bugs that require analyzing and reasoning about the logic of the buggy program. Recently, large language models (LLMs) instructed by prompt engineering have attracted much attention for their powerful ability to address many kinds of tasks including bug-fixing. However, the quality of the prompt will highly affect the ability of LLMs and manually constructing high-quality prompts is a costly endeavor. To address this limitation, we propose a self-directed LLM-based automated program repair, ThinkRepair, with two main phases: collection phase and fixing phase. The former phase automatically collects various chains of thoughts that constitute pre-fixed knowledge by instructing LLMs with the Chain-of-Thought (CoT) prompt. The latter phase targets fixing a bug by first selecting examples for few-shot learning and second automatically interacting with LLMs, optionally appending with feedback of testing information. Evaluations on two widely studied datasets (Defects4J and QuixBugs) by comparing ThinkRepair with 12 SOTA APRs indicate the priority of ThinkRepair in fixing bugs. Notably, ThinkRepair fixes 98 bugs and improves baselines by 27%∼344.4% on Defects4J V1.2. On Defects4J V2.0, ThinkRepair fixes 12∼65 more bugs than the SOTA APRs. Additionally, ThinkRepair also makes a considerable improvement on QuixBugs (31 for Java and 21 for Python at most).",
+    "authorIds": [
+      "0009-0005-3396-0571",
+      "0000-0002-2906-0598",
+      "0000-0001-5777-7759",
+      "0000-0002-4909-1535",
+      "0000-0003-1009-7603",
+      "0000-0003-4111-4189"
+    ],
     "authorInstitutions": "Xin Yin (Zhejiang University); Chao Ni (Zhejiang University); Shaohua Wang (Central University of Finance and Economics); Zhenhao Li (York University); Limin Zeng (Zhejiang University); Xiaohu Yang (Zhejiang University)",
     "authors": [
       "Xin Yin",
@@ -5396,15 +5885,24 @@
       "Limin Zeng",
       "Xiaohu Yang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 15:50 - 16:10"
     ],
     "doi": "10.1145/3650212.3680359",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a74bb312-c73c-4275-989b-12e9c4cdcd06",
     "locations": [
       "EI 7"
     ],
+    "pages": "1274-1286",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Program Repair 1"
@@ -5417,13 +5915,19 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/102/ThinkRepair-Self-Directed-Automated-Program-Repair",
       "https://doi.org/10.1145/3650212.3680359",
+      "https://2024.issta.org/details/issta-2024-papers/102/ThinkRepair-Self-Directed-Automated-Program-Repair",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "As deep neural networks (DNNs) are increasingly used in safety-critical applications, there is a growing concern for their reliability. Even highly trained, high-performant networks are not 100% accurate. However, it is very difficult to predict their behavior during deployment without ground truth. In this paper, we provide a comparative and replicability study on recent approaches that have been proposed to evaluate the reliability of DNNs in deployment. We find that it is hard to run and reproduce the results for these approaches on their replication packages and even more difficult to run them on artifacts other than their own. Further, it is difficult to compare the effectiveness of the approaches, due to the lack of clearly defined evaluation metrics. Our results indicate that more effort is needed in our research community to obtain sound techniques for evaluating the reliability of neural networks in safety-critical domains. To this end, we contribute an evaluation framework that incorporates the considered approaches and enables evaluation on common benchmarks, using common metrics.",
+    "authorIds": [
+      "0000-0002-0729-4684",
+      "0000-0002-1242-7701",
+      "0000-0003-3734-3157",
+      "0000-0002-5579-6961"
+    ],
     "authorInstitutions": "Eduard Pinconschi (Carnegie Mellon University); Divya Gopinath (KBR; NASA Ames); Rui Abreu (INESC-ID; University of Porto); Corina S. Păsăreanu (Carnegie Mellon University; NASA Ames)",
     "authors": [
       "Eduard Pinconschi",
@@ -5431,15 +5935,24 @@
       "Rui Abreu",
       "Corina S. Păsăreanu"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 16:50 - 17:10"
     ],
     "doi": "10.1145/3650212.3680401",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a778b619-4836-464f-b26a-47c9537b524f",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "1300-1311",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Analyzing Neural Models"
@@ -5452,8 +5965,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/104/Evaluating-Deep-Neural-Networks-in-Deployment-A-Comparative-Study-Replicability-Stu",
       "https://doi.org/10.1145/3650212.3680401",
+      "https://2024.issta.org/details/issta-2024-papers/104/Evaluating-Deep-Neural-Networks-in-Deployment-A-Comparative-Study-Replicability-Stu",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -5550,7 +6063,8 @@
     ],
     "title": "FRAFOL: FRAmework FOr Learning mutation testing",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685306",
@@ -5602,7 +6116,8 @@
     ],
     "title": "The Flexcrash Platform for Testing Autonomous Vehicles in Mixed-Traffic Scenarios",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685299",
@@ -5650,7 +6165,8 @@
     ],
     "title": "Generalized Concurrency Testing Tool for Distributed Systems",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685309",
@@ -6083,7 +6599,8 @@
     ],
     "title": "HECS: A Hypergraph Learning-based System for Detecting Extract Class Refactoring Opportunities",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685307",
@@ -6093,6 +6610,12 @@
   },
   {
     "abstract": "As the largest package registry, Node Package Manager (NPM) has become the prime target for various supply chain attacks recently and has been flooded with numerous malicious packages, posing significant security risks to end-users. Learning-based methods have demonstrated promising performance with good adaptability to various types of attacks. However, they suffer from two main limitations. First, they often utilize metadata features or coarse-grained code features extracted at the package level while overlooking complex code semantics. Second, the dataset used to train the model often suffers from a lack of variety both in quantity and diversity, and thus cannot detect significant types of attacks. To address these problems, we introduce Maltracker, a learningbased NPM malware tracker based on fine-grained features empowered by LLM-enhanced dataset. First, Maltracker constructs precise call graphs to extract suspicious functions that are reachable to a pre-defined set of sensitive APIs, and then utilizes community detection algorithm to identify suspicious code gadgets based on program dependency graph, from which fine-grained features are then extracted. To address the second limitation, we extend the dataset using advanced large language models (LLM) to translate malicious functions from other languages (e.g., C/C++, Python, and Go) into JavaScript. Evaluations shows that Maltracker can achieve an improvement of about 12.6% in terms of F1-score at the package level and 31.0% at the function level compared with the SOTA learning-based methods. Moreover, the key components of 𝑀𝑎𝑙𝑡𝑟𝑎𝑐𝑘𝑒𝑟 all contribute to the effectiveness of its performance. Finally, Maltracker has also detected 230 new malicious packages in NPM and received 61 thanks letters, among which some contain new malicious behaviors that cannot be detected by existing tools.",
+    "authorIds": [
+      "0009-0006-7045-7139",
+      "0000-0001-5588-9618",
+      "0009-0004-7954-9967",
+      "0000-0002-3934-7605"
+    ],
     "authorInstitutions": "Zeliang Yu (Huazhong University of Science and Technology); Ming Wen (Huazhong University of Science and Technology); Xiaochen Guo (Huazhong University of Science and Technology); Hai Jin (Huazhong University of Science and Technology)",
     "authors": [
       "Zeliang Yu",
@@ -6100,15 +6623,24 @@
       "Xiaochen Guo",
       "Hai Jin"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 16:10 - 16:30"
     ],
     "doi": "10.1145/3650212.3680397",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c938ebb3-01b4-42ee-8a9b-b235a41a068f",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "1759-1771",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Vulnerabilities and Malware"
@@ -6121,8 +6653,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/140/Maltracker-A-Fine-Grained-NPM-Malware-Tracker-Copiloted-by-LLM-Enhanced-Dataset",
       "https://doi.org/10.1145/3650212.3680397",
+      "https://2024.issta.org/details/issta-2024-papers/140/Maltracker-A-Fine-Grained-NPM-Malware-Tracker-Copiloted-by-LLM-Enhanced-Dataset",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -6240,6 +6772,14 @@
   },
   {
     "abstract": "The remarkable capability of large language models (LLMs) in generating high-quality code has drawn increasing attention in the software testing community. However, existing code LLMs often demonstrate unsatisfactory capabilities in generating accurate, complete tests since they were trained on code snippets collected without differentiating between code for testing and for other purposes. In this paper, we present a large-scale dataset, UniTSyn, which can enhance LLMs for Unit Test Synthesis. Associating tests with the tested functions is crucial for LLMs to infer the expected behavior and the logic paths to be verified. By leveraging Language Server Protocol, UniTSyn achieves the challenging goal of collecting focal-test pairs without per-project execution setups or per-language heuristics, which tend to be fragile and difficult to scale. Containing 2.7 million focal-test pairs across five mainstream programming languages, it can enhance the test generation ability of LLMs. Our experiments demonstrate that, by building an autoregressive LLM based on UniTSyn, we can achieve significant benefits in learning and understanding unit test representations, resulting in improved generation accuracy and code coverage across all the evaluated programming languages.",
+    "authorIds": [
+      "0000-0002-5389-7128",
+      "0000-0001-7900-3439",
+      "0000-0003-0648-0255",
+      "0000-0002-0709-4877",
+      "0009-0000-2715-0410",
+      "0000-0002-4072-0710"
+    ],
     "authorInstitutions": "Yifeng He (University of California at Davis); Jiabo Huang (Tencent); Yuyang Rong (University of California at Davis); Yiwen Guo (Unaffiliated); Ethan Wang (University of California at Davis); Hao Chen (University of California at Davis)",
     "authors": [
       "Yifeng He",
@@ -6249,15 +6789,24 @@
       "Ethan Wang",
       "Hao Chen"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 14:10 - 14:30"
     ],
     "doi": "10.1145/3650212.3680342",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cd7dff0d-30c9-44d5-9d33-6c71787fab43",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "1061-1072",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Test Generation"
@@ -6270,13 +6819,23 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/85/UniTSyn-A-Large-Scale-Dataset-Capable-of-Enhancing-the-Prowess-of-Large-Language-Mod",
       "https://doi.org/10.1145/3650212.3680342",
+      "https://2024.issta.org/details/issta-2024-papers/85/UniTSyn-A-Large-Scale-Dataset-Capable-of-Enhancing-the-Prowess-of-Large-Language-Mod",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
   {
     "abstract": "The Robot Operating System 2 (ROS) is the de-facto standard for robotic software development, with a wide application in diverse safety-critical domains. There are many efforts in testing that seek to deliver a more secure ROS codebase. However, existing testing methods are often inadequate to capture the complex and stateful behaviors inherent to ROS deployments, resulting in limited test- ing effectiveness. In this paper, we propose R2D2, a ROS system fuzzer that leverages ROS’s runtime states as guidance to increase fuzzing effectiveness and efficiency. Unlike traditional fuzzers, R2D2 employs a systematic instrumentation strategy that captures the system’s runtime behaviors and profiles the current system state in real-time. This approach provides a more in-depth understanding of system behaviors, thereby facilitating a more insightful explo- ration of ROS’s extensive state space. For evaluation, we applied it to four well-known ROS applications. Our evaluation shows that R2D2 achieves an improvement of 3.91× and 2.56× in code coverage compared to state-of-the-art ROS fuzzers, including Ros2Fuzz and RoboFuzz, while also uncovering 39 previously unknown vulnera- bilities, with 6 fixed in both ROS runtime and ROS applications. For its runtime overhead, R2D2 maintains an average execution and memory usage overhead with 10.4% and 1.0% in respect, making R2D2 effective in ROS testing.",
+    "authorIds": [
+      "0000-0002-2667-5431",
+      "0000-0003-3612-4315",
+      "0000-0002-9386-1453",
+      "0000-0003-2095-092X",
+      "0000-0002-2153-6766",
+      "0000-0003-3775-911X",
+      "0000-0002-9040-7247",
+      "0000-0003-0955-503X"
+    ],
     "authorInstitutions": "Yuheng Shen (Tsinghua University); Jianzhong Liu (Tsinghua University); Yiru Xu (Tsinghua University); Hao Sun (ETH Zurich); Mingzhe Wang (Tsinghua University); Nan Guan (City University of Hong Kong); Heyuan Shi (Central South University); Yu Jiang (Tsinghua University)",
     "authors": [
       "Yuheng Shen",
@@ -6288,15 +6847,24 @@
       "Heyuan Shi",
       "Yu Jiang"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 11:10 - 11:30"
     ],
     "doi": "10.1145/3650212.3652111",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ce9b9e6a-0daf-49ee-bc40-48ff5d11a976",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "76-87",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Fuzzing 1"
@@ -6309,8 +6877,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/7/Enhancing-ROS-System-Fuzzing-through-Callback-Tracing",
       "https://doi.org/10.1145/3650212.3652111",
+      "https://2024.issta.org/details/issta-2024-papers/7/Enhancing-ROS-System-Fuzzing-through-Callback-Tracing",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -6460,7 +7028,8 @@
     ],
     "title": "Quality Assurance For Non-Trivial Systems: Use Case GCC Plugins",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685557",
@@ -6566,7 +7135,8 @@
     ],
     "title": "JCWIT: A Correctness-Witness Validator for Java Programs based on Bounded Model Checking",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685303",
@@ -6630,6 +7200,12 @@
   },
   {
     "abstract": "Fairness has been a critical issue that affects the adoption of deep learning models in real practice. To improve model fairness, many existing methods have been proposed and evaluated to be effective in their own contexts. However, there is still no systematic evaluation among them for a comprehensive comparison under the same context, which makes it hard to understand the performance distinction among them, hindering the research progress and practical adoption of them. To fill this gap, this paper endeavours to conduct the first large-scale empirical study to comprehensively compare the performance of existing state-of-the-art fairness improving techniques. Specifically, we target the widely-used application scenario of image classification, and utilized three different datasets and five commonly-used performance metrics to assess in total 13 methods from diverse categories. Our findings reveal substantial variations in the performance of each method across different datasets and sensitive attributes, indicating over-fitting on specific datasets by many existing methods. Furthermore, different fairness evaluation metrics, due to their distinct focuses, yield significantly different assessment results. Overall, we observe that pre-processing methods and in-processing methods outperform post-processing methods, with pre-processing methods exhibiting the best performance. Our empirical study offers comprehensive recommendations for enhancing fairness in deep learning models. We approach the problem from multiple dimensions, aiming to provide a uniform evaluation platform and inspire researchers to explore more effective fairness solutions via a set of implications.",
+    "authorIds": [
+      "0000-0002-1066-1190",
+      "0000-0003-1983-6572",
+      "0000-0002-9990-9120",
+      "0000-0003-3056-9962"
+    ],
     "authorInstitutions": "Junjie Yang (College of Intelligence and Computing, Tianjin University); Jiajun Jiang (Tianjin University); Zeyu Sun (Institute of Software at Chinese Academy of Sciences); Junjie Chen (Tianjin University)",
     "authors": [
       "Junjie Yang",
@@ -6637,15 +7213,24 @@
       "Zeyu Sun",
       "Junjie Chen"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 18 Sep 2024 13:50 - 14:10"
     ],
     "doi": "10.1145/3650212.3652122",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "dab7cb95-fab8-486e-a289-f4ac45d7cbb5",
     "locations": [
       "EI 7"
     ],
+    "pages": "210-222",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Fairness and Safety of Neural Networks"
@@ -6658,8 +7243,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/18/A-Large-Scale-Empirical-Study-on-Improving-the-Fairness-of-Image-Classification-Model",
       "https://doi.org/10.1145/3650212.3652122",
+      "https://2024.issta.org/details/issta-2024-papers/18/A-Large-Scale-Empirical-Study-on-Improving-the-Fairness-of-Image-Classification-Model",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -6717,6 +7302,14 @@
   },
   {
     "abstract": "Open-source software (OSS) vulnerabilities are increasingly prevalent, emphasizing the importance of security patches. However, in widely used security platforms like NVD, a substantial number of CVE records still lack trace links to patches. Although rank-based approaches have been proposed for security patch tracing, they heavily rely on handcrafted features in a single-step framework, which limits their effectiveness. In this paper, we propose PatchFinder, a two-phase framework with end-to-end correlation learning for better-tracing security patches. In the initial retrieval phase, we employ a hybrid patch retriever to account for both lexical and semantic matching based on the code changes and the description of a CVE, to narrow down the search space by extracting those commits as candidates that are similar to the CVE descriptions. Afterwards, in the re-ranking phase, we design an end-to-end architecture under the supervised fine-tuning paradigm for learning the semantic correlations between CVE descriptions and commits. In this way, we can automatically rank the candidates based on their correlation scores while maintaining low computation overhead. We evaluated our system against 4,789 CVEs from 532 OSS projects. The results are highly promising: PatchFinder achieves a Recall@10 of 80.63% and a Mean Reciprocal Rank (MRR) of 0.7951. Moreover, the Manual Effort@10 required is curtailed to 2.77, marking a 1.94 times improvement over current leading methods. When applying PatchFinder in practice, we initially identified 533 patch commits and submitted them to the official, 482 of which have been confirmed by CVE Numbering Authorities.",
+    "authorIds": [
+      "0000-0002-3517-353X",
+      "0000-0001-8316-1894",
+      "0000-0001-9477-4100",
+      "0009-0000-8384-7933",
+      "0000-0001-7300-9215",
+      "0000-0003-1235-5530"
+    ],
     "authorInstitutions": "Kaixuan Li (East China Normal University; Nanyang Technological University); Jian Zhang (Nanyang Technological University); Sen Chen (Tianjin University); Han Liu (East China Normal University); Yang Liu (Nanyang Technological University); Yixiang Chen (East China Normal University)",
     "authors": [
       "Kaixuan Li",
@@ -6726,15 +7319,24 @@
       "Yang Liu",
       "Yixiang Chen"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 16:30 - 16:50"
     ],
     "doi": "10.1145/3650212.3680305",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e037d896-28fe-4664-a7cc-75eb6d5e8319",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "590-602",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Vulnerabilities and Malware"
@@ -6747,8 +7349,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/48/PatchFinder-A-Two-Phase-Approach-to-Security-Patch-Tracing-for-Disclosed-Vulnerabili",
       "https://doi.org/10.1145/3650212.3680305",
+      "https://2024.issta.org/details/issta-2024-papers/48/PatchFinder-A-Two-Phase-Approach-to-Security-Patch-Tracing-for-Disclosed-Vulnerabili",
       "https://arxiv.org/pdf/2407.17065",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
@@ -6894,7 +7496,8 @@
     ],
     "title": "Robustness against the C/C++11 memory model",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685549",
@@ -6958,21 +7561,35 @@
   },
   {
     "abstract": "Jump tables are a common source of indirect jumps in binary code. Resolving these indirect jumps is critical for constructing a complete control-flow graph, which is an essential first step for most applications involving binaries, including binary hardening and instrumentation, binary analysis and fuzzing for vulnerability discovery, malware analysis and reverse engineering. Existing techniques for jump table analysis generally prioritize performance over soundness. While lack of soundness may be acceptable for applications such as decompilation, it can cause unpredictable runtime failures in binary instrumentation applications. We therefore present SJA, a new jump table analysis technique in this paper that is sound and scalable. Our analysis uses a novel abstract domain to systematically track the \"structure\" of computed code pointers without relying on syntactic pattern-matching that is common in previous works. In addition, we present a bounds analysis that efficiently and losslessly reasons about equality and inequality relations that arise in the context of jump tables. As a result, our system reduces miss rate by 35× over the next best technique. When evaluated on error rate based on F1-score, our technique outperforms the best previous techniques by 3×.",
+    "authorIds": [
+      "0009-0003-3976-9941",
+      "0009-0006-8375-9857",
+      "0009-0008-9135-3296"
+    ],
     "authorInstitutions": "Huan Nguyen (Stony Brook University); Soumyakant Priyadarshan (Stony Brook University); R. Sekar (Stony Brook University)",
     "authors": [
       "Huan Nguyen",
       "Soumyakant Priyadarshan",
       "R. Sekar"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 19 Sep 2024 14:10 - 14:30"
     ],
     "doi": "10.1145/3650212.3680301",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "e4e673b6-2e3e-4293-be5e-101dc451dd1d",
     "locations": [
       "EI 9 Hlawka"
     ],
+    "pages": "541-552",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Static analysis"
@@ -6985,8 +7602,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/44/Scalable-Sound-and-Accurate-Jump-Table-Analysis",
       "https://doi.org/10.1145/3650212.3680301",
+      "https://2024.issta.org/details/issta-2024-papers/44/Scalable-Sound-and-Accurate-Jump-Table-Analysis",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   },
@@ -7082,7 +7699,8 @@
     ],
     "title": "Automated Testing of Networked Systems Reliability",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685559",
@@ -7132,7 +7750,8 @@
     ],
     "title": "Collaboration to Repository-Level Vulnerability Detection",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685562",
@@ -7182,7 +7801,8 @@
     ],
     "title": "Learning the Effects of Software Changes",
     "tracks": [
-      "ISSTA/ECOOP Doctoral Symposium"
+      "ISSTA/ECOOP Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685550",
@@ -7782,7 +8402,8 @@
     ],
     "title": "Panda: A Concurrent Scheduler for Compiler-Based Tools",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685311",
@@ -8105,7 +8726,8 @@
     ],
     "title": "ESBMC-Python: A Bounded Model Checker for Python Programs",
     "tracks": [
-      "ISSTA/ECOOP Tool Demonstrations"
+      "ISSTA/ECOOP Tool Demonstrations",
+      "Tool Demonstrations"
     ],
     "urls": [
       "https://doi.org/10.1145/3650212.3685304",
@@ -8221,6 +8843,15 @@
   },
   {
     "abstract": "With the widespread application of machine learning-based Android malware detection methods, building a high-quality dataset has become increasingly important. Existing large-scale datasets are mostly annotated with VirusTotal by aggregating the decisions of antivirus engines, and most of them indiscriminately accept the decisions of all engines. In reality, however, these engines have different capabilities in detecting malware, especially those that have been obfuscated. Previous research has revealed that code obfuscation degrades the detection performance of these engines to varying degrees. This makes us believe that using all engines indiscriminately is unreasonable for dataset annotation. Therefore, in this paper, we first conduct a data-driven evaluation to confirm the negative effects of code obfuscation on engine-based dataset annotation. To gain a deeper understanding of the reasons behind this phenomenon, we evaluate the availability, effectiveness and robustness of every engine under various code obfuscation techniques. Then we categorize the engines and select a set of obfuscation-robust engines. Finally, we conduct comprehensive experiments to verify the effectiveness of the selected engines for dataset annotation. Our experiments show that when 50% obfuscated samples are mixed into the training set, on the classic malware detectors Drebin and Malscan, using our selected engines can effectively improve detection performance by 15.21% and 19.23%, respectively, compared to using all the engines.",
+    "authorIds": [
+      "0000-0003-0709-3361",
+      "0000-0002-1515-3558",
+      "0000-0001-8045-8983",
+      "0000-0002-5867-5364",
+      "0009-0005-4276-517X",
+      "0009-0009-0481-6537",
+      "0000-0001-7300-9215"
+    ],
     "authorInstitutions": "Gao Cuiying (Huazhong University of Science and Technology; JD.com); Yueming Wu (Nanyang Technological University); Heng Li (Huazhong University of Science and Technology); Wei Yuan (Huazhong University of Science and Technology); Haoyu Jiang (Huazhong University of Science and Technology); Qidan He (JD.com); Yang Liu (Nanyang Technological University)",
     "authors": [
       "Gao Cuiying",
@@ -8231,15 +8862,24 @@
       "Qidan He",
       "Yang Liu"
     ],
+    "container": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Fri 20 Sep 2024 11:30 - 11:50"
     ],
     "doi": "10.1145/3650212.3680302",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "fc8277ab-88a8-49d8-9343-db731110db00",
     "locations": [
       "EI 10 Fritz Paschke"
     ],
+    "pages": "553-565",
+    "publicationDate": "2024-09-11",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "Compilers and Decompilers"
@@ -8252,8 +8892,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2024.issta.org/details/issta-2024-papers/45/Uncovering-and-Mitigating-the-Impact-of-Code-Obfuscation-on-Dataset-Annotation-with-A",
       "https://doi.org/10.1145/3650212.3680302",
+      "https://2024.issta.org/details/issta-2024-papers/45/Uncovering-and-Mitigating-the-Impact-of-Code-Obfuscation-on-Dataset-Annotation-with-A",
       "https://2024.issta.org/program/program-issta-2024/Detailed-Timeline"
     ]
   }

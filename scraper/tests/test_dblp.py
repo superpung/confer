@@ -17,8 +17,6 @@ def make_scraper(tmp_path: Path) -> DblpScraper:
         scraper="dblp",
         source={
             "toc_url": "https://dblp.org/db/journals/example/example1.xml",
-            "default_track": "Volume 1",
-            "exclude_title_patterns": ["^Editorial"],
         },
     )
     return DblpScraper(venue, Fetcher(tmp_path, refresh=False))
@@ -34,7 +32,7 @@ def test_parse_toc_extracts_journal_articles(tmp_path):
     assert paper.id == "journals_example_DoeR26"
     assert paper.title == "Precise Metadata Collection for Static Paper Sites"
     assert paper.authors == ["Jane Doe", "John Roe"]
-    assert paper.tracks == ["Volume 1"]
+    assert paper.tracks == ["Volume 1, Number 1, January 2026"]
     assert paper.event_type == "Journal Article"
     assert paper.session_titles == ["Volume 1, Number 1, January 2026"]
     assert paper.dates == ["January 2026"]

@@ -3,6 +3,7 @@ from pathlib import Path
 
 from confer.config import VenueConfig
 from confer.fetcher import Fetcher
+from confer.models import Paper
 from confer.scrapers.researchr import ResearchrScraper
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -16,10 +17,6 @@ def make_scraper(
 ) -> ResearchrScraper:
     source_config: dict[str, object] = {
         "program_url": "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
-        "context": "icse-2026",
-        "include_tracks": ["Research Track"],
-        "include_event_types": ["Talk"],
-        "require_authors": True,
     }
     if source:
         source_config.update(source)
@@ -121,10 +118,6 @@ def test_timeline_program_uses_modal_details_for_schema(tmp_path):
         series="FSE",
         source={
             "program_url": "https://conf.researchr.org/program/fse-2026/program-fse-2026/Detailed-Timeline",
-            "context": "fse-2026",
-            "include_tracks": ["Research Papers"],
-            "include_event_types": [],
-            "default_event_type": "Paper",
         },
     )
     html = (FIXTURES / "researchr_timeline_program.html").read_text(encoding="utf-8")
@@ -195,10 +188,6 @@ def test_overview_program_extracts_accepted_papers(tmp_path):
         series="OOPSLA",
         source={
             "program_url": "https://conf.researchr.org/track/splash-2026/oopsla-2026",
-            "context": "splash-2026",
-            "include_tracks": ["OOPSLA"],
-            "include_event_types": [],
-            "default_event_type": "Paper",
         },
     )
     html = (FIXTURES / "researchr_overview_program.html").read_text(encoding="utf-8")
@@ -216,3 +205,28 @@ def test_overview_program_extracts_accepted_papers(tmp_path):
     assert occurrence.date == ""
     assert occurrence.location == ""
     assert scraper.keep_occurrence(occurrence)
+
+
+def test_placeholder_abstracts_and_nonpaper_titles(tmp_path):
+    scraper = make_scraper(tmp_path)
+    modal_html = """
+    <div class="modal">
+      <div class="modal-body">
+        <div class="bg-primary event-title"><h4>Q&A</h4></div>
+        <div class="bg-info event-description"><p>No description available.</p></div>
+      </div>
+    </div>
+    """
+    detail = scraper.parse_modal_response(
+        json.dumps([{"action": "append", "id": "event-modals", "value": modal_html}])
+    )
+
+    assert detail.abstract == ""
+    assert not scraper.keep_paper(Paper(id="qa", title="Q&A", event_type="Paper"))
+    assert scraper.keep_paper(
+        Paper(
+            id="paper",
+            title="Domain Specific Languages for Optimisation Modelling",
+            event_type="Paper",
+        )
+    )

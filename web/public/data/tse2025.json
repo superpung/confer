@@ -50,7 +50,7 @@
     "sessions": [],
     "title": "A Retrospective on Whole Test Suite Generation: On the Role of SBST in the Age of LLMs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3539458",
@@ -112,7 +112,7 @@
     "sessions": [],
     "title": "A Reflection on Change Classification in the Era of Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3539566",
@@ -177,7 +177,7 @@
     "sessions": [],
     "title": "A Retrospective on Mining Version Histories to Guide Software Changes",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533559",
@@ -248,7 +248,7 @@
     "sessions": [],
     "title": "MetaSel: A Test Selection Approach for Fine-Tuned DNN Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3612253",
@@ -315,7 +315,7 @@
     "sessions": [],
     "title": "Identifying Reusable Services in Legacy Object-Oriented Systems: A Type-Sensitive Identification Approach",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3603009",
@@ -379,7 +379,7 @@
     "sessions": [],
     "title": "DiffGAN: A Test Generation Approach for Differential Testing of Deep Neural Networks for Image Analysis",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3611329",
@@ -445,7 +445,7 @@
     "sessions": [],
     "title": "Recovering Traceability Links Between Code and Documentation: A Retrospective",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534027",
@@ -512,7 +512,7 @@
     "sessions": [],
     "title": "Search-Based DNN Testing and Retraining With GAN-Enhanced Simulations",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3540549",
@@ -574,7 +574,7 @@
     "sessions": [],
     "title": "Toward Measurement-Based Software Engineering",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3541922",
@@ -633,7 +633,7 @@
     "sessions": [],
     "title": "Object-Oriented Development, Revisited",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3536328",
@@ -695,7 +695,7 @@
     "sessions": [],
     "title": "BLAZE: Cross-Language and Cross-Project Bug Localization via Dynamic Chunking and Hard Example Learning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3579574",
@@ -762,7 +762,7 @@
     "sessions": [],
     "title": "What You See Is What You Get: Prototype Generation for IoT End-User Programming",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3571585",
@@ -826,7 +826,7 @@
     "sessions": [],
     "title": "MBL-CPDP: A Multi-Objective Bilevel Method for Cross-Project Defect Prediction",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3577808",
@@ -894,7 +894,7 @@
     "sessions": [],
     "title": "Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3525955",
@@ -967,7 +967,7 @@
     "sessions": [],
     "title": "NumScout: Unveiling Numerical Defects in Smart Contracts Using LLM-Pruning Symbolic Execution",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3555622",
@@ -1031,7 +1031,7 @@
     "sessions": [],
     "title": "Improving Data Curation of Software Vulnerability Patches through Uncertainty Quantification",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3612278",
@@ -1101,7 +1101,7 @@
     "sessions": [],
     "title": "Sprint2Vec: A Deep Characterization of Sprints in Iterative Software Development",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3509016",
@@ -1176,7 +1176,7 @@
     "sessions": [],
     "title": "Anomaly Detection on Interleaved Log Data With Semantic Association Mining on Log-Entity Graph",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3527856",
@@ -1233,7 +1233,7 @@
     "sessions": [],
     "title": "A Personal Retrospective on Symbolic Execution",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3536898",
@@ -1302,7 +1302,7 @@
     "sessions": [],
     "title": "How Toxic Can You Get? Search-Based Toxicity Testing for Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3607625",
@@ -1376,7 +1376,7 @@
     "sessions": [],
     "title": "On the Effectiveness of LLM-as-a-Judge for Code Generation and Summarization",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3586082",
@@ -1445,7 +1445,7 @@
     "sessions": [],
     "title": "GenProgJS: A Baseline System for Test-Based Automated Repair of JavaScript Programs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3497798",
@@ -1513,7 +1513,7 @@
     "sessions": [],
     "title": "Women's Participation in Student Software Development Teams: A Cross-Sectional Study on Role Distribution",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3612199",
@@ -1583,7 +1583,7 @@
     "sessions": [],
     "title": "Enhancing Project-Specific Code Completion by Inferring Internal API Information",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3592823",
@@ -1650,7 +1650,7 @@
     "sessions": [],
     "title": "TARGET: Traffic Rule-Based Test Generation for Autonomous Driving via Validated LLM-Guided Knowledge Extraction",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3569086",
@@ -1712,7 +1712,7 @@
     "sessions": [],
     "title": "How Do OSS Developers Reuse Architectural Solutions From Q&A Sites: An Empirical Study",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3572027",
@@ -1773,7 +1773,7 @@
     "sessions": [],
     "title": "Boosting Generalizable Fairness With Mahalanobis Distances Guided Boltzmann Exploratory Testing",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3581402",
@@ -1845,7 +1845,7 @@
     "sessions": [],
     "title": "Post-Incorporating Code Structural Knowledge Into Pretrained Models via ICL for Code Translation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3605768",
@@ -1901,7 +1901,7 @@
     "sessions": [],
     "title": "Ten Years of Journal First Publication in Software Engineering",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3536852",
@@ -1974,7 +1974,7 @@
     "sessions": [],
     "title": "A Holistic Approach to Design Understanding Through Concept Explanation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3522973",
@@ -2045,7 +2045,7 @@
     "sessions": [],
     "title": "Enhanced Crowdsourced Test Report Prioritization via Image-and-Text Semantic Understanding and Feature Integration",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3516372",
@@ -2113,7 +2113,7 @@
     "sessions": [],
     "title": "What Makes a Great Software Quality Assurance Engineer?",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3542763",
@@ -2177,7 +2177,7 @@
     "sessions": [],
     "title": "CGP-Tuning: Structure-Aware Soft Prompt Tuning for Code Vulnerability Detection",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3591934",
@@ -2242,7 +2242,7 @@
     "sessions": [],
     "title": "SecureFalcon: Are We There Yet in Automated Software Vulnerability Detection With LLMs?",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3548168",
@@ -2277,6 +2277,7 @@
       "dblpKey": "journals/tse/FluriW0G25",
       "dblpSource": "https://dblp.org/db/journals/tse/tse51.xml",
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2298,14 +2299,14 @@
     "locations": [],
     "pages": "852-857",
     "publicationDate": "2025",
-    "publisher": "IEEE Computer Society",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Volume 51, Number 3, March 2025"
     ],
     "sessions": [],
     "title": "A Retrospective of ChangeDistiller: Tree Differencing for Fine-Grained Source Code Change Extraction",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3538326",
@@ -2366,7 +2367,7 @@
     "sessions": [],
     "title": "Program Slicing: A Brief Retrospective",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3538279",
@@ -2433,7 +2434,7 @@
     "sessions": [],
     "title": "Adapting Installation Instructions in Rapidly Evolving Software Ecosystems",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3552614",
@@ -2499,7 +2500,7 @@
     "sessions": [],
     "title": "Cross-Level Requirements Tracing Based on Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3572094",
@@ -2513,7 +2514,7 @@
   {
     "abstract": "Machine/deep learning models have been widely adopted to predict the configuration performance of software systems. However, a crucial yet unaddressed challenge is how to cater for the sparsity inherited from the configuration landscape: the influence of configuration options (features) and the distribution of data samples are highly sparse. In this paper, we propose a model-agnostic and sparsity-robust framework for predicting configuration performance, dubbed DaL, based on the new paradigm of dividable learning that builds a model via “divide-and-learn”. To handle sample sparsity, the samples from the configuration landscape are divided into distant divisions, for each of which we build a sparse local model, e.g., regularized Hierarchical Interaction Neural Network, to deal with the feature sparsity. A newly given configuration would then be assigned to the right model of division for the final prediction. Further, DaL adaptively determines the optimal number of divisions required for a system and sample size without any extra training or profiling. Experiment results from 12 real-world systems and five sets of training data reveal that, compared with the state-of-the-art approaches, DaL performs no worse than the best counterpart on 44 out of 60 cases (within which 31 cases are significantly better) with up to $1.61\\times$ improvement on accuracy; requires fewer samples to reach the same/better accuracy; and producing acceptable training overhead. In particular, the mechanism that adapted the parameter $d$ can reach the optimal value for 76.43% of the individual runs. The result also confirms that the paradigm of dividable learning is more suitable than other similar paradigms such as ensemble learning for predicting configuration performance. Practically, DaL considerably improves different global models when using them as the underlying local models, which further strengthens its flexibility. To promote open science, all the data, code, and supplementary materials of this work can be accessed at our repository: https://github.com/ideas-labo/DaL-ext.",
     "authorIds": [
-      "A5114368115",
+      "0000-0003-4551-0701",
       "0000-0001-5025-5472",
       "0000-0002-1139-5795"
     ],
@@ -2533,6 +2534,7 @@
       "dblpKey": "journals/tse/GongCB25",
       "dblpSource": "https://dblp.org/db/journals/tse/tse51.xml",
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -2551,14 +2553,14 @@
     "locations": [],
     "pages": "106-134",
     "publicationDate": "2025-01-01",
-    "publisher": "IEEE Computer Society",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Volume 51, Number 1, January 2025"
     ],
     "sessions": [],
     "title": "Dividable Configuration Performance Learning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3491945",
@@ -2626,7 +2628,7 @@
     "sessions": [],
     "title": "The Evolution of Automated Software Repair",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533309",
@@ -2688,7 +2690,7 @@
     "sessions": [],
     "title": "Manifestations of Empathy in Software Engineering: How, Why, and When It Matters",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3612888",
@@ -2760,7 +2762,7 @@
     "sessions": [],
     "title": "Understanding and Identifying Technical Debt in the Co-Evolution of Production and Test Code",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3553112",
@@ -2830,7 +2832,7 @@
     "sessions": [],
     "title": "An Empirical Study on Meta Virtual Reality Applications: Security and Privacy Perspectives",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3553283",
@@ -2897,7 +2899,7 @@
     "sessions": [],
     "title": "Prioritizing Test Gaps by Risk in Industrial Practice: An Automated Approach and Multimethod Study",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3556248",
@@ -2971,7 +2973,7 @@
     "sessions": [],
     "title": "Trusting Code in the Wild: Exploring Contributor Reputation Measures to Review Dependencies in the Rust Ecosystem",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3551664",
@@ -3047,7 +3049,7 @@
     "sessions": [],
     "title": "Do Chase Your Tail! Missing Key Aspects Augmentation in Textual Vulnerability Descriptions of Long-Tail Software Through Feature Inference",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3523284",
@@ -3079,6 +3081,7 @@
       "dblpKey": "journals/tse/HarelM25",
       "dblpSource": "https://dblp.org/db/journals/tse/tse51.xml",
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -3097,14 +3100,14 @@
     "locations": [],
     "pages": "741-745",
     "publicationDate": "2025",
-    "publisher": "IEEE Computer Society",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Volume 51, Number 3, March 2025"
     ],
     "sessions": [],
     "title": "From Executable Specifications to Hard-to-Specify Requirements: Challenges in Describing Reactive System Behavior",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534572",
@@ -3165,7 +3168,7 @@
     "sessions": [],
     "title": "ChatAssert: LLM-Based Test Oracle Generation With External Tools Assistance",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3519159",
@@ -3226,7 +3229,7 @@
     "sessions": [],
     "title": "Subgraphs as First-Class Citizens in Incident Management for Large-Scale Online Systems: An Evolution-Aware Framework",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3590221",
@@ -3297,7 +3300,7 @@
     "sessions": [],
     "title": "How to Save My Gas Fees: Understanding and Detecting Real-World Gas Issues in Solidity Programs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3593930",
@@ -3354,7 +3357,7 @@
     "sessions": [],
     "title": "Model-Based Systems Engineering and TCAS II: Thirty Years Later",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3537537",
@@ -3415,7 +3418,7 @@
     "sessions": [],
     "title": "Retrospective: An Empirical Study of Speed and Communication in Globally Distributed Software Development",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533977",
@@ -3492,7 +3495,7 @@
     "sessions": [],
     "title": "Triple Peak Day: Work Rhythms of Software Developers in Hybrid Work",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3504831",
@@ -3549,7 +3552,7 @@
     "sessions": [],
     "title": "The Analysis of Safety Critical Software Systems",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3532391",
@@ -3611,7 +3614,7 @@
     "sessions": [],
     "title": "The \"Question Neighbourhood\" Approach for Systematic Evaluation of Code-Generating LLMs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3612251",
@@ -3684,7 +3687,7 @@
     "sessions": [],
     "title": "Probabilistic Bisimulation for Parameterized Anonymity and Uniformity Verification",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3567423",
@@ -3744,7 +3747,7 @@
     "sessions": [],
     "title": "SQLaw: Detecting Bugs in GPU Database Management Systems via Rule-Based Differential Execution",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3574328",
@@ -3814,7 +3817,7 @@
     "sessions": [],
     "title": "Towards Improving the Performance of Comment Generation Models by Using Bytecode Information",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3523713",
@@ -3872,7 +3875,7 @@
     "sessions": [],
     "title": "A Taxonomy of Contextual Factors in Continuous Integration Processes",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3572382",
@@ -3942,7 +3945,7 @@
     "sessions": [],
     "title": "Look Before You Leap: An Exploratory Study of Uncertainty Analysis for Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3519464",
@@ -4013,7 +4016,7 @@
     "sessions": [],
     "title": "One Sentence Can Kill the Bug: Auto-Replay Mobile App Crashes From One-Sentence Overviews",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3535938",
@@ -4081,7 +4084,7 @@
     "sessions": [],
     "title": "Comprehensive Fine-Tuning Large Language Models of Code for Automated Program Repair",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3532759",
@@ -4152,7 +4155,7 @@
     "sessions": [],
     "title": "MoCo: Fuzzing Deep Learning Libraries via Assembling Code",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3509975",
@@ -4232,7 +4235,7 @@
     "sessions": [],
     "title": "Unearthing Gas-Wasting Code Smells in Smart Contracts With Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3491578",
@@ -4302,7 +4305,7 @@
     "sessions": [],
     "title": "Evaluating and Improving GPT-Based Expansion of Abbreviations",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3623625",
@@ -4373,7 +4376,7 @@
     "sessions": [],
     "title": "Enhancing Fine-Grained Vulnerability Detection With Reinforcement Learning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3603400",
@@ -4451,7 +4454,7 @@
     "sessions": [],
     "title": "DeepVec: State-Vector Aware Test Case Selection for Enhancing Recurrent Neural Network",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3565037",
@@ -4509,7 +4512,7 @@
     "sessions": [],
     "title": "Reflections on McCabe's Cyclomatic Complexity",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534580",
@@ -4571,7 +4574,7 @@
     "sessions": [],
     "title": "A Retrospective on Developing Code Clone Detector CCFinder and Its Impact",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3523370",
@@ -4607,6 +4610,7 @@
       "dblpKey": "journals/tse/KaracPTJ25",
       "dblpSource": "https://dblp.org/db/journals/tse/tse51.xml",
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -4627,14 +4631,14 @@
       "https://doi.org/10.1109/tse.2024.3497332"
     ],
     "publicationDate": "2025-01-01",
-    "publisher": "IEEE Computer Society",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Volume 51, Number 1, January 2025"
     ],
     "sessions": [],
     "title": "Does Treatment Adherence Impact Experiment Results in TDD?",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3497332",
@@ -4700,7 +4704,7 @@
     "sessions": [],
     "title": "Automated Co-Evolution of Metamodels and Code",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3540545",
@@ -4768,7 +4772,7 @@
     "sessions": [],
     "title": "The Impact of Prompt Programming on Function-Level Code Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3587794",
@@ -4832,7 +4836,7 @@
     "sessions": [],
     "title": "Directed Grammar-Based Test Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3627220",
@@ -4896,7 +4900,7 @@
     "sessions": [],
     "title": "A Retrospective on How Developers Seek, Relate, and Collect Information About Code",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534071",
@@ -4960,7 +4964,7 @@
     "sessions": [],
     "title": "Consistent Local-First Software: Enforcing Safety and Invariants for Local-First Applications",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3477723",
@@ -5017,7 +5021,7 @@
     "sessions": [],
     "title": "Influence of the 1990 IEEE TSE Paper \"Automated Software Test Data Generation\" on Software Engineering",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3540430",
@@ -5074,7 +5078,7 @@
     "sessions": [],
     "title": "Reflections of a Former Editor-in-Chief of TSE",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3521306",
@@ -5130,7 +5134,7 @@
     "sessions": [],
     "title": "Dynamic Change Management: Quiescence Revisited",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3521298",
@@ -5186,7 +5190,7 @@
     "sessions": [],
     "title": "A Retrospective of Proving the Correctness of Multiprocess Programs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3522038",
@@ -5244,7 +5248,7 @@
     "sessions": [],
     "title": "Privacy Impact Tree Analysis (PITA): A Tree-Based Privacy Threat Modeling Approach",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3573380",
@@ -5311,7 +5315,7 @@
     "sessions": [],
     "title": "From Tea Leaves to System Maps: A Survey and Framework on Context-Aware Machine Learning Monitoring",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3602520",
@@ -5376,7 +5380,7 @@
     "sessions": [],
     "title": "Obstacle Analysis in Requirements Engineering: Retrospective and Emerging Challenges",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534318",
@@ -5436,7 +5440,7 @@
     "sessions": [],
     "title": "Design and Assurance of Control Software",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3539975",
@@ -5504,7 +5508,7 @@
     "sessions": [],
     "title": "Finding Correctness Issues on Ethereum Verkle Tries via Preimage-Aware Differential Testing",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3611956",
@@ -5571,7 +5575,7 @@
     "sessions": [],
     "title": "VulFinder: Exploring Chaincode Vulnerabilities More Effectively and Efficiently Using Knowledge Graph Based Defect Pattern Matching",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3605379",
@@ -5643,7 +5647,7 @@
     "sessions": [],
     "title": "Open Source, Hidden Costs: A Systematic Literature Review on OSS License Management",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3586411",
@@ -5713,7 +5717,7 @@
     "sessions": [],
     "title": "Multimodal Fusion for Android Malware Detection Based on Large Pre-Trained Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3557577",
@@ -5774,7 +5778,7 @@
     "sessions": [],
     "title": "Enhancing Real-Time Operating System Security Analysis via Slice-Based Fuzzing",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3615642",
@@ -5843,7 +5847,7 @@
     "sessions": [],
     "title": "ASTRO: Detecting Access Control Vulnerabilities in Smart Contracts via Graph Similarity Comparison",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3605988",
@@ -5920,7 +5924,7 @@
     "sessions": [],
     "title": "Understanding the Robustness of Transformer-Based Code Intelligence via Code Transformation: Challenges and Opportunities",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3524461",
@@ -5995,7 +5999,7 @@
     "sessions": [],
     "title": "Improving Co-Decoding Based Security Hardening of Code LLMs Leveraging Knowledge Distillation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3591791",
@@ -6063,7 +6067,7 @@
     "sessions": [],
     "title": "Retrieval-Augmented Fine-Tuning for Improving Retrieve-and-Edit Based Assertion Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3558403",
@@ -6133,7 +6137,7 @@
     "sessions": [],
     "title": "Demystifying Rust Unstable Features at Ecosystem Scale: Evolution, Propagation, and Mitigation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3550160",
@@ -6204,7 +6208,7 @@
     "sessions": [],
     "title": "TransferFuzz-Pro: Large Language Model Driven Code Debugging Technology for Verifying Propagated Vulnerability",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3584774",
@@ -6276,7 +6280,7 @@
     "sessions": [],
     "title": "ASTRA: Adversarial Sim-to-Real Transfer Reinforcement Learning for Autoscaling in Cloud Systems",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3603995",
@@ -6341,7 +6345,7 @@
     "sessions": [],
     "title": "DaNuoYi: Evolutionary Multitask Injection Testing on Web Application Firewalls",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2023.3343716",
@@ -6417,7 +6421,7 @@
     "sessions": [],
     "title": "Directional Diffusion-Style Code Editing Pre-Training",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3592841",
@@ -6499,7 +6503,7 @@
     "sessions": [],
     "title": "Condor: A Code Discriminator Integrating General Semantics With Code Details",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3620145",
@@ -6573,7 +6577,7 @@
     "sessions": [],
     "title": "Augmenting Smart Contract Decompiler Output Through Fine-Grained Dependency Analysis and LLM-Facilitated Semantic Recovery",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3623325",
@@ -6645,7 +6649,7 @@
     "sessions": [],
     "title": "Satellite: Detecting and Analyzing Smart Contract Vulnerabilities Caused by Subcontract Misuse",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3613470",
@@ -6709,7 +6713,7 @@
     "sessions": [],
     "title": "Understanding the Effect of Agile Practice Quality on Software Product Quality",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3532502",
@@ -6773,7 +6777,7 @@
     "sessions": [],
     "title": "Large Language Models-Aided Program Debloating",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3594673",
@@ -6835,7 +6839,7 @@
     "sessions": [],
     "title": "PATEN: Identifying Unpatched Third-Party APIs via Fine-Grained Patch-Enhanced AST-Level Signature",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3537102",
@@ -6903,7 +6907,7 @@
     "sessions": [],
     "title": "COTE: Predicting Code-to-Test Co-Evolution by Integrating Link Analysis and Pre-Trained Language Model Techniques",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3583027",
@@ -6973,7 +6977,7 @@
     "sessions": [],
     "title": "An Empirical Study of Exploring the Capabilities of Large Language Models in Code Learning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3609876",
@@ -7042,7 +7046,7 @@
     "sessions": [],
     "title": "CEDAR: Silent Control Flow Error Detection via Heterogeneous Relation Learning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3618552",
@@ -7118,7 +7122,7 @@
     "sessions": [],
     "title": "Seeing is Believing: Vision-Driven Non-Crash Functional Bug Detection for Mobile Apps",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3614469",
@@ -7187,7 +7191,7 @@
     "sessions": [],
     "title": "An Automated Approach to Discovering Software Refactorings by Comparing Successive Versions",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534239",
@@ -7261,7 +7265,7 @@
     "sessions": [],
     "title": "A Context-Aware Clustering Approach for Assisting Operators in Classifying Security Alerts",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3497588",
@@ -7337,7 +7341,7 @@
     "sessions": [],
     "title": "A Comprehensive Study of Bugs in Relational DBMS",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3625300",
@@ -7403,7 +7407,7 @@
     "sessions": [],
     "title": "On Inter-Dataset Code Duplication and Data Leakage in Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3504286",
@@ -7469,7 +7473,7 @@
     "sessions": [],
     "title": "Enhancing Protocol Fuzzing via Diverse Seed Corpus Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3595396",
@@ -7540,7 +7544,7 @@
     "sessions": [],
     "title": "Detecting Build Dependency Errors by Dynamic Analysis of Build Execution Against Declaration",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3566225",
@@ -7615,7 +7619,7 @@
     "sessions": [],
     "title": "Understanding Security Issues in the DAO Governance Process",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3543280",
@@ -7686,7 +7690,7 @@
     "sessions": [],
     "title": "Practitioners' Expectations on Log Anomaly Detection",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3586700",
@@ -7765,7 +7769,7 @@
     "sessions": [],
     "title": "Diversity-Oriented Testing for Competitive Game Agent via Constraint-Guided Adversarial Agent Training",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3491193",
@@ -7811,6 +7815,7 @@
       "dblpKey": "journals/tse/MaYJFZLZXX25",
       "dblpSource": "https://dblp.org/db/journals/tse/tse51.xml",
       "metadataSources": [
+        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -7831,14 +7836,14 @@
     "locations": [],
     "pages": "2764-2786",
     "publicationDate": "2025-10-01",
-    "publisher": "IEEE Computer Society",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Volume 51, Number 10, October 2025"
     ],
     "sessions": [],
     "title": "LUK: Empowering Log Understanding With Expert Knowledge From Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3594046",
@@ -7910,7 +7915,7 @@
     "sessions": [],
     "title": "On the Influence of Data Resampling for Deep Learning-Based Log Anomaly Detection: Insights and Recommendations",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3513413",
@@ -7977,7 +7982,7 @@
     "sessions": [],
     "title": "Testing CPS With Design Assumptions-Based Metamorphic Relations and Genetic Programming",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3563121",
@@ -8046,7 +8051,7 @@
     "sessions": [],
     "title": "Towards Explainable Vulnerability Detection With Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3605442",
@@ -8111,7 +8116,7 @@
     "sessions": [],
     "title": "FM-PRO: A Feature Modeling Process",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3513635",
@@ -8180,7 +8185,7 @@
     "sessions": [],
     "title": "Do Experts Agree About Smelly Infrastructure?",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3553383",
@@ -8253,7 +8258,7 @@
     "sessions": [],
     "title": "BabelRTS: Polyglot Regression Test Selection",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3554403",
@@ -8315,7 +8320,7 @@
     "sessions": [],
     "title": "Software Engineering Research Trends 1994-2024: Stepping Beyond the Lamppost",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3530898",
@@ -8380,7 +8385,7 @@
     "sessions": [],
     "title": "Software Architecture Description Revisited",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533387",
@@ -8448,7 +8453,7 @@
     "sessions": [],
     "title": "AFLNet Five Years Later: On Coverage-Guided Protocol Fuzzing",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3535925",
@@ -8521,7 +8526,7 @@
     "sessions": [],
     "title": "Completeness and Consistency of Tabular Requirements: An SMT-Based Verification Approach",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3530820",
@@ -8580,7 +8585,7 @@
     "sessions": [],
     "title": "Retrospective: Data Mining Static Code Attributes to Learn Defect Predictors",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3537406",
@@ -8658,7 +8663,7 @@
     "sessions": [],
     "title": "Mecha: A Neural-Symbolic Open-Set Homogeneous Decision Fusion Approach for Zero-Day Malware Similarity Detection",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3531210",
@@ -8715,7 +8720,7 @@
     "sessions": [],
     "title": "Representing and Reasoning With Non-Functional Requirements: A Retrospective",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533418",
@@ -8772,7 +8777,7 @@
     "sessions": [],
     "title": "Engineering Within Boundaries When Software Has None",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3541189",
@@ -8842,7 +8847,7 @@
     "sessions": [],
     "title": "An Empirical Study of Software Refactorings in Real-World Open-Source Java Projects",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3604821",
@@ -8901,7 +8906,7 @@
     "sessions": [],
     "title": "Retrospective on: Constraint-Based Automatic Test Data Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3535662",
@@ -8979,7 +8984,7 @@
     "sessions": [],
     "title": "Understanding Code Understandability Improvements in Code Reviews",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3453783",
@@ -9047,7 +9052,7 @@
     "sessions": [],
     "title": "On-the-Fly Syntax Highlighting: Generalisation and Speed-Ups",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3506040",
@@ -9103,7 +9108,7 @@
     "sessions": [],
     "title": "Three \"Influential\" Software Design Papers",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3535911",
@@ -9177,7 +9182,7 @@
     "sessions": [],
     "title": "Keep It Simple: Self-Adaptive Code Graph Simplification for Accurate Vulnerability Detection",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3593515",
@@ -9248,7 +9253,7 @@
     "sessions": [],
     "title": "Relevance of Log Mining and Analytics Papers to IEEE Transactions on Software Engineering",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3591380",
@@ -9305,7 +9310,7 @@
     "sessions": [],
     "title": "Evidence-Based Software Engineering Guidelines Revisited",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3526730",
@@ -9374,7 +9379,7 @@
     "sessions": [],
     "title": "Parallelization in System-Level Testing: Novel Approaches to Manage Test Suite Dependencies",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3572388",
@@ -9435,7 +9440,7 @@
     "sessions": [],
     "title": "A Reflection on \"Advances in Software Inspections\"",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3537080",
@@ -9511,7 +9516,7 @@
     "sessions": [],
     "title": "Robotic Visual GUI Testing for Truly Non-Intrusive Test Automation of Touch Screen Applications",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3544441",
@@ -9579,7 +9584,7 @@
     "sessions": [],
     "title": "SoapFL: A Standard Operating Procedure for LLM-Based Method-Level Fault Localization",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3543187",
@@ -9647,7 +9652,7 @@
     "sessions": [],
     "title": "Developers' Views on Commercial Involvement in OSS: A Survey From Three Projects",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3568056",
@@ -9711,7 +9716,7 @@
     "sessions": [],
     "title": "OpCodeBERT: A Method for Python Code Representation Learning by BERT With Opcode",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3610244",
@@ -9778,7 +9783,7 @@
     "sessions": [],
     "title": "Contrasting the Hyperparameter Tuning Impact Across Software Defect Prediction Scenarios",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3624631",
@@ -9845,7 +9850,7 @@
     "sessions": [],
     "title": "Diagnosing Unknown Attacks in Smart Homes Using Abductive Reasoning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3610540",
@@ -9903,7 +9908,7 @@
     "sessions": [],
     "title": "Looking Back on Recovery Blocks and Conversations",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533973",
@@ -9967,7 +9972,7 @@
     "sessions": [],
     "title": "Detecting Information Flow Security Vulnerabilities by Analysis Coupling",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3589647",
@@ -10037,7 +10042,7 @@
     "sessions": [],
     "title": "Hydra-Reviewer: A Holistic Multi-Agent System for Automatic Code Review Comment Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3621462",
@@ -10095,7 +10100,7 @@
     "sessions": [],
     "title": "A Retrospective on the Source Code Control System",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3524947",
@@ -10161,7 +10166,7 @@
     "sessions": [],
     "title": "On \"Prioritizing Test Cases for Regression Testing\"",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3538490",
@@ -10222,7 +10227,7 @@
     "sessions": [],
     "title": "Bug-Locating Method Based on Statistical Testing for Quantum Programs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3597316",
@@ -10290,7 +10295,7 @@
     "sessions": [],
     "title": "Qualitative Research Methods in Software Engineering: Past, Present, and Future",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3538751",
@@ -10362,7 +10367,7 @@
     "sessions": [],
     "title": "Proactive Debugging of Memory Leakage Bugs in Single Page Web Applications",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3571192",
@@ -10434,7 +10439,7 @@
     "sessions": [],
     "title": "Revisiting Abstractions for Software Architecture and Tools to Support Them",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533549",
@@ -10497,7 +10502,7 @@
     "sessions": [],
     "title": "ReCompGPT: An NL2NL Framework for Automated Requirements Completeness",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3613507",
@@ -10565,7 +10570,7 @@
     "sessions": [],
     "title": "\"Estimating Software Project Effort Using Analogies\": Reflections After 28 Years",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534032",
@@ -10627,7 +10632,7 @@
     "sessions": [],
     "title": "MM-SCS: Leveraging Multimodal Features to Enhance Smart Contract Code Search",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3531692",
@@ -10704,7 +10709,7 @@
     "sessions": [],
     "title": "PHPJoy: A Novel Extended Graph-Based PHP Code Analysis Framework",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3614304",
@@ -10768,7 +10773,7 @@
     "sessions": [],
     "title": "RepairLLaMA: Efficient Representations and Fine-Tuned Adapters for Program Repair",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3581062",
@@ -10841,7 +10846,7 @@
     "sessions": [],
     "title": "ArchHypo: Managing Software Architecture Uncertainty Using Hypotheses Engineering",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3520477",
@@ -10917,7 +10922,7 @@
     "sessions": [],
     "title": "SmartOracle: Generating Smart Contract Oracle via Fine-Grained Invariant Detection",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3534567",
@@ -10990,7 +10995,7 @@
     "sessions": [],
     "title": "Relationship Between Model-Based Decision-Making and the Comprehension Performance of Source Code With Confusing Patterns",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3566537",
@@ -11059,7 +11064,7 @@
     "sessions": [],
     "title": "Misactivation-Aware Stealthy Backdoor Attacks on Neural Code Understanding Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3614128",
@@ -11133,7 +11138,7 @@
     "sessions": [],
     "title": "ARAP: Demystifying Anti Runtime Analysis Code in Android Apps",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3596016",
@@ -11199,7 +11204,7 @@
     "sessions": [],
     "title": "A Systematic Study on Real-World Android App Bundles",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3560026",
@@ -11265,7 +11270,7 @@
     "sessions": [],
     "title": "Detecting Compiler Error Recovery Defects via Program Mutation Exploration",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3510912",
@@ -11330,7 +11335,7 @@
     "sessions": [],
     "title": "LLMorpheus: Mutation Testing Using Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3562025",
@@ -11398,7 +11403,7 @@
     "sessions": [],
     "title": "T4PC: Training Deep Neural Networks for Property Conformance",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3601591",
@@ -11467,7 +11472,7 @@
     "sessions": [],
     "title": "A Systematic Literature Review of Machine Learning Approaches for Migrating Monolithic Systems to Microservices",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3603897",
@@ -11534,7 +11539,7 @@
     "sessions": [],
     "title": "Efficient State Identification for Finite State Machine-Based Testing",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3604472",
@@ -11594,7 +11599,7 @@
     "sessions": [],
     "title": "From First Patch to Long-Term Contributor: Evaluating Onboarding Recommendations for OSS Newcomers",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3550881",
@@ -11624,7 +11629,6 @@
       "dblpKey": "journals/tse/Uchitel25",
       "dblpSource": "https://dblp.org/db/journals/tse/tse51.xml",
       "metadataSources": [
-        "crossref",
         "openalex"
       ],
       "openAccess": {
@@ -11642,14 +11646,14 @@
     "locations": [],
     "pages": "663-665",
     "publicationDate": "2025",
-    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "publisher": "IEEE Computer Society",
     "sessionTitles": [
       "Volume 51, Number 3, March 2025"
     ],
     "sessions": [],
     "title": "50 Years of Transactions on Software Engineering",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3540338",
@@ -11699,7 +11703,7 @@
     "sessions": [],
     "title": "State of the Journal",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3639694",
@@ -11765,7 +11769,7 @@
     "sessions": [],
     "title": "LLM-Based Automation of COSMIC Functional Size Measurement From Use Cases",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3554562",
@@ -11829,7 +11833,7 @@
     "sessions": [],
     "title": "RECOVER: Toward Requirements Generation From Stakeholders' Conversations",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3572056",
@@ -11901,7 +11905,7 @@
     "sessions": [],
     "title": "Programmer Visual Attention During Context-Aware Code Summarization",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3554990",
@@ -11978,7 +11982,7 @@
     "sessions": [],
     "title": "A Comprehensive Study of OOP-Related Bugs in C++ Compilers",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3566490",
@@ -12049,7 +12053,7 @@
     "sessions": [],
     "title": "Unity is Strength: Enhancing Precision in Reentrancy Vulnerability Detection of Smart Contract Analysis Tools",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3427321",
@@ -12132,7 +12136,7 @@
     "sessions": [],
     "title": "Decision Support for Selecting Blockchain-Based Application Design Patterns With Layered Taxonomy and Quality Attributes",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3538612",
@@ -12196,7 +12200,7 @@
     "sessions": [],
     "title": "R2API: A Novel Method for Web API Recommendation by Using HGNNs With Multi-Task Learning",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3592214",
@@ -12268,7 +12272,7 @@
     "sessions": [],
     "title": "Why Do Machine Learning Notebooks Crash? An Empirical Study on Public Python Jupyter Notebooks",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3574500",
@@ -12335,7 +12339,7 @@
     "sessions": [],
     "title": "D3: Differential Testing of Distributed Deep Learning With Model Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3461657",
@@ -12404,7 +12408,7 @@
     "sessions": [],
     "title": "Translating to a Low-Resource Language with Compiler Feedback: A Case Study on Cangjie",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3594908",
@@ -12473,7 +12477,7 @@
     "sessions": [],
     "title": "OneMoreTest: A Learning-Based Approach to Generating and Selecting Fault-Revealing Unit Tests",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3581556",
@@ -12562,7 +12566,7 @@
     "sessions": [],
     "title": "Advanced Smart Contract Vulnerability Detection via LLM-Powered Multi-Agent Systems",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3597319",
@@ -12629,7 +12633,7 @@
     "sessions": [],
     "title": "How Do Developers Structure Unit Test Cases? An Empirical Analysis of the AAA Pattern in Open Source Projects",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3537337",
@@ -12685,7 +12689,7 @@
     "sessions": [],
     "title": "Impact of \"Evaluating Software Complexity Measures\"",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533467",
@@ -12746,7 +12750,7 @@
     "sessions": [],
     "title": "Impact of \"An Applicable Family of Data Flow Testing Criteria\"",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533393",
@@ -12811,7 +12815,7 @@
     "sessions": [],
     "title": "Trustworthy Distributed Certification of Program Execution",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3541810",
@@ -12875,7 +12879,7 @@
     "sessions": [],
     "title": "PackHunter: Recovering Missing Packages for C/C++ Projects",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3506629",
@@ -12946,7 +12950,7 @@
     "sessions": [],
     "title": "Question Selection for Multimodal Code Search Synthesis Using Probabilistic Version Spaces",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3565387",
@@ -13020,7 +13024,7 @@
     "sessions": [],
     "title": "SmartFL: Semantics Based Probabilistic Fault Localization",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3574487",
@@ -13098,7 +13102,7 @@
     "sessions": [],
     "title": "Can Large Language Models Serve as Evaluators for Code Summarization?",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3595283",
@@ -13168,7 +13172,7 @@
     "sessions": [],
     "title": "FlexFL: Flexible and Effective Fault Localization With Open-Source Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3553363",
@@ -13237,7 +13241,7 @@
     "sessions": [],
     "title": "Enhanced Smart Contract Vulnerability Detection via Graph Neural Networks: Achieving High Accuracy and Efficiency",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3570421",
@@ -13301,7 +13305,7 @@
     "sessions": [],
     "title": "Evaluating Spectrum-Based Fault Localization on Deep Learning Libraries",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3552622",
@@ -13360,7 +13364,7 @@
     "sessions": [],
     "title": "Who Is Pulling the Strings: Unveiling Smart Contract State Manipulation Attacks Through State-Aware Dataflow Analysis",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3605145",
@@ -13426,7 +13430,7 @@
     "sessions": [],
     "title": "Isolating Compiler Faults Through Differentiated Compilation Configurations",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3569530",
@@ -13493,7 +13497,7 @@
     "sessions": [],
     "title": "Automated Test Case Repair Using Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3541166",
@@ -13568,7 +13572,7 @@
     "sessions": [],
     "title": "Prompt Alchemy: Automatic Prompt Refinement for Enhancing Code Generation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3589634",
@@ -13634,7 +13638,7 @@
     "sessions": [],
     "title": "Is Hyper-Parameter Optimization Different for Software Analytics?",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3550103",
@@ -13704,7 +13708,7 @@
     "sessions": [],
     "title": "Line-Level Defect Prediction by Capturing Code Contexts With Graph Convolutional Networks",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3503723",
@@ -13768,7 +13772,7 @@
     "sessions": [],
     "title": "Using Cooperative Co-Evolutionary Search to Generate Metamorphic Test Cases for Autonomous Driving Systems",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3570897",
@@ -13834,7 +13838,7 @@
     "sessions": [],
     "title": "Unadmitted Technical Debt: Dataset and Detection Approaches",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3623644",
@@ -13894,7 +13898,7 @@
     "sessions": [],
     "title": "Simplifying and Isolating Failure-Inducing Input: A Retrospective on Delta Debugging",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3537167",
@@ -13960,7 +13964,7 @@
     "sessions": [],
     "title": "QoS-Aware Service Composition: A Retrospective",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 3, March 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533423",
@@ -14036,7 +14040,7 @@
     "sessions": [],
     "title": "Wolf in Sheep's Clothing: Shearing the Camouflage of Malicious Java Components in Maven",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 10, October 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3599732",
@@ -14100,7 +14104,7 @@
     "sessions": [],
     "title": "Just-in-Time Prediction of Software Architectural Changes Through Commit-Level Analyses",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3587849",
@@ -14170,7 +14174,7 @@
     "sessions": [],
     "title": "When Crypto Fails: Demystifying Cryptographic Defects in Ethereum Smart Contracts",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 5, May 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3551776",
@@ -14243,7 +14247,7 @@
     "sessions": [],
     "title": "A Little Help Goes a Long Way: Tutoring LLMs in Solving Competitive Programming Through Hints",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3614204",
@@ -14321,7 +14325,7 @@
     "sessions": [],
     "title": "Improving Retrieval-Augmented Deep Assertion Generation via Joint Training",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3545970",
@@ -14394,7 +14398,7 @@
     "sessions": [],
     "title": "ACFix: Guiding LLMs With Mined Common RBAC Practices for Context-Aware Repair of Access Control Vulnerabilities in Smart Contracts",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3590108",
@@ -14467,7 +14471,7 @@
     "sessions": [],
     "title": "Enriching Mutation Testing With Innovative Method Invocation Mutation: Filling the Crucial Missing Piece of the Puzzle",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3573751",
@@ -14536,7 +14540,7 @@
     "sessions": [],
     "title": "SmartUpdater: Enabling Transparent, Automated, and Secure Maintenance of Stateful Smart Contracts",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3548730",
@@ -14612,7 +14616,7 @@
     "sessions": [],
     "title": "Malo in the Code Jungle: Explainable Fault Localization for Decentralized Applications",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3578816",
@@ -14680,7 +14684,7 @@
     "sessions": [],
     "title": "Anchor Attention, Small Cache: Code Generation With Large Language Models",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3570680",
@@ -14747,7 +14751,7 @@
     "sessions": [],
     "title": "On the Workflows and Smells of Leaderboard Operations (LBOps): An Exploratory Study of Foundation Model Leaderboards",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 4, April 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3533972",
@@ -14812,7 +14816,7 @@
     "sessions": [],
     "title": "On the Applicability of Code Language Models to Scientific Computing Programs",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 6, June 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3564599",
@@ -14886,7 +14890,7 @@
     "sessions": [],
     "title": "CRADLE: An Accident Scenario Generation Method Based on Scenario Knowledge Graph Considering Accident Causation",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 9, September 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3593832",
@@ -14959,7 +14963,7 @@
     "sessions": [],
     "title": "Towards Secure Code Generation With LLMs: A Study on Common Weakness Enumeration",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3619281",
@@ -15030,7 +15034,7 @@
     "sessions": [],
     "title": "GNNContext: GNN-based Code Context Prediction for Programming Tasks",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 8, August 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3578390",
@@ -15100,7 +15104,7 @@
     "sessions": [],
     "title": "Towards Exploring Developers' Struggles in Developing Upgradeable Smart Contracts",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 11, November 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3609077",
@@ -15169,7 +15173,7 @@
     "sessions": [],
     "title": "Refactoring Microservices to Microservices in Support of Evolutionary Design",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 2, February 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3523487",
@@ -15239,7 +15243,7 @@
     "sessions": [],
     "title": "OptSE: Toward Optimal Symbolic Execution",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 7, July 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3564666",
@@ -15302,7 +15306,7 @@
     "sessions": [],
     "title": "SMARLA: A Safety Monitoring Approach for Deep Reinforcement Learning Agents",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 1, January 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2024.3491496",
@@ -15355,7 +15359,7 @@
     "sessions": [],
     "title": "DT4LM: Differential Testing for Reliable Language Model Updates in Classification Tasks",
     "tracks": [
-      "Volume 51"
+      "Volume 51, Number 12, December 2025"
     ],
     "urls": [
       "https://doi.org/10.1109/TSE.2025.3622251",

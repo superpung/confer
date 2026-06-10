@@ -301,7 +301,8 @@
     ],
     "title": "RAML: Toward Retrieval-Augmented Localization of Malicious Payloads in Android Apps",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00351",
@@ -562,7 +563,8 @@
     ],
     "title": "Is Measurement Enough? Rethinking Output Validation in Quantum Program Testing",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00324",
@@ -606,7 +608,8 @@
     ],
     "title": "Envisioning Intelligent Requirements Engineering via Knowledge-Guided Multi-Agent Collaboration",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00334",
@@ -1092,7 +1095,8 @@
     ],
     "title": "Uncovering Systematic Failures of LLMs in Verifying Code Against Natural Language Specifications",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00323",
@@ -1176,7 +1180,8 @@
     ],
     "title": "Measuring Software Resilience Using Socially Aware Truck Factor Estimation",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00318",
@@ -1354,7 +1359,8 @@
     ],
     "title": "Interaction-Aware Patch Assessment for Multi-Fault Automated Program Repair",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00319",
@@ -1485,7 +1491,8 @@
     ],
     "title": "The Future of Software Transparency: Bridging Understanding, Measurement, and Practice",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00325",
@@ -2054,6 +2061,14 @@
   },
   {
     "abstract": "Automated unit test generation has been extensively explored in research, with recent advances highlighting the considerable promise of Large Language Models (LLMs). Models such as GPT-4, trained on extensive corpora of text and code, have demonstrated strong capabilities across various code-related tasks—including unit test generation. Nevertheless, current LLM-based methods tend to operate with a narrow focus, often limited to the immediate code context (e.g., variable references) while overlooking richer, task-specific knowledge sources. For instance, they frequently fail to leverage existing test cases of related methods, which could offer highly relevant guidance. Furthermore, many of these tools emphasize achieving high code coverage, frequently compromising the practical usability, functional correctness, and long-term maintainability of the generated tests. To address these issues, we introduce a novel mechanism called ​​Reference-Based Retrieval Augmentation​​, which enhances traditional Retrieval-Augmented Generation (RAG) by incorporating task-aware context retrieval. In the context of unit test generation, we define “test reference relationships” as the potential for test reusability or referential value between a focal method and other methods within the codebase. These relationships allow the system to retrieve pertinent methods and their accompanying unit tests, providing rich contextual clues for generating high-quality tests. Our approach further decomposes test construction into three structured phases—​​Given​​, ​​When​​, and ​​Then​​—aligning with the typical test design pattern. For each phase, RefTest retrieves and utilizes examples from existing tests of reference methods, offering targeted support for test setup, method invocation, and assertion writing. We implemented this approach in a tool named ​​RefTest​​, which systematically conducts preprocessing, test reference retrieval, and unit test generation. An incremental generation strategy is adopted, wherein each newly created test informs and improves subsequent ones. RefTest was evaluated on 12 open-source projects containing 1,515 methods. Results show that it significantly surpasses existing tools across multiple dimensions: correctness, completeness, and maintainability of the generated tests.",
+    "authorIds": [
+      "0009-0007-4089-4087",
+      "0009-0006-7490-6149",
+      "0009-0009-6294-326X",
+      "0000-0001-9895-4600",
+      "0000-0001-7654-5574",
+      "0000-0003-4233-4407"
+    ],
     "authorInstitutions": "Zhe Zhang (Beihang University); Liu Xingyu (Beihang University); Yuanzhang Lin (Beihang University); Xiang Gao (Beihang University); Hailong Sun (Beihang University); Yuan Yuan (Beihang University)",
     "authors": [
       "Zhe Zhang",
@@ -2063,14 +2078,25 @@
       "Hailong Sun",
       "Yuan Yuan"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 14:20 - 14:30"
     ],
+    "doi": "10.1145/3765758",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1ed7496b-8477-4d48-b3af-ef93287ef3e2",
+    "issue": "6",
     "locations": [
       "Vista"
     ],
+    "pages": "1-34",
+    "publicationDate": "2026-06-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Test Generation, Selection & Prioritization 2"
     ],
@@ -2082,12 +2108,21 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3765758",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/46/Reference-Based-Retrieval-Augmented-Unit-Test-Generation",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "An implicit call is a mechanism that triggers the execution of a method m without a direct call to m in the code being analyzed. For instance, in Android apps the Thread.start() method implicitly executes the Thread.run() method. These implicit calls can be conditionally triggered by programmer-specified constraints that are evaluated at run time. For instance, the JobScheduler.schedule() method can be called to implicitly execute the JobService.onStartJob() method only if the device’s battery is charging. Such conditional implicit calls can effectively disguise logic bombs, posing significant challenges for both static and dynamic software analyses. Conservative static analysis may produce false-positive alerts due to over-approximation, while less conservative approaches might overlook potential covert behaviors, a serious concern in security analysis. Dynamic analysis may fail to generate the specific inputs required to activate these implicit call targets. To address these challenges, we introduce Archer, a tool designed to resolve conditional implicit calls and extract the constraints triggering execution control transfer. Our evaluation reveals that ① implicit calls are prevalent in Android apps; ② Archer enhances app models’ soundness beyond existing static analysis methods; and ③ Archer successfully infers constraint values, enabling dynamic analyzers to detect (i.e., thanks to better code coverage) and assess conditionally triggered implicit calls.",
+    "authorIds": [
+      "0000-0001-6052-6184",
+      "0000-0002-5982-275X",
+      "0000-0001-9379-277X",
+      "0000-0001-7270-9869",
+      "0000-0003-4052-475X"
+    ],
     "authorInstitutions": "Jordan Samhi (University of Luxembourg, Luxembourg); René Just (University of Washington); Michael D. Ernst (University of Washington); Tegawendé F. Bissyandé (University of Luxembourg); Jacques Klein (University of Luxembourg)",
     "authors": [
       "Jordan Samhi",
@@ -2096,14 +2131,25 @@
       "Tegawendé F. Bissyandé",
       "Jacques Klein"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 11:00 - 11:10"
     ],
+    "doi": "10.1145/3729168",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "1f953785-66df-4b39-9333-8a944384b2e1",
+    "issue": "2",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "1-25",
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Web & Mobile Systems 1"
     ],
@@ -2115,9 +2161,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3729168",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/17/Resolving-Conditional-Implicit-Calls-to-Improve-Static-and-Dynamic-Analysis-in-Androi",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Quantum computers in the Noisy Intermediate- Scale Quantum (NISQ) era face significant challenges due to inherent noise and limited qubit coherence. Accurate fidelity evaluation of quantum states necessitates multiple repeated measurements to obtain statistical results. But determining the optimal number of measurements remains an open problem due to the dynamic, device-dependent nature of quantum noise. Existing approaches either assume prior knowledge of noise models or rely on historical circuit data, limiting their applicability in practical deployment scenarios. This paper presents AutoFid, an adaptive and noise-aware fidelity measurement framework that automatically determines the number of required tests based on circuit structure and hardware feedback. AutoFid models quantum circuits as Directed Acyclic Graphs and estimates structural complexity via random walks, enabling principled estimation of measurement effort. It further incorporates transpilation-aware features such as gate fidelity, depth inflation, and crosstalk to refine iteration budgets. During runtime, AutoFid dynamically samples fidelity results and employs an early stopping strategy based on confidence intervals to reduce redundant measurements while preserving statistical guarantees. We evaluate AutoFid on 18 quantum benchmarks executed on real IBMQ hardware platforms. Experimental results show that AutoFid reduces measurement costs by more than 50% compared to both fixed shot and learning based baselines, while consistently maintaining fidelity bias below 0.01. Additional analysis using classical software testing metrics and ablation studies demonstrate its effectiveness, robustness, and adaptability across a wide range of quantum workloads.",
@@ -2723,14 +2771,24 @@
       "Philip Kolvenbach",
       "Steven Arzt"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 14:00 - 14:10"
     ],
+    "doi": "10.1109/ase63991.2025.00136",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "29b7b40d-7802-4f10-8242-db26882a38bd",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "1616-1628",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Fuzzing 2"
     ],
@@ -2742,6 +2800,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00136",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/63/Terminator-enabling-efficient-fuzzing-of-closed-source-GUI-programs-by-automatic-cov",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -2848,14 +2907,24 @@
       "Chaozheng Wang",
       "Yuetang Deng"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 16:00 - 16:10"
     ],
+    "doi": "10.1109/ase63991.2025.00285",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "2bee0e0a-7efd-4107-8083-37ed39fb81d9",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "3450-3461",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Code Generation 3"
     ],
@@ -2867,6 +2936,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00285",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/30/Automated-Prompt-Generation-for-Code-Intelligence-An-Empirical-study-and-Experience-",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -3038,7 +3108,8 @@
     ],
     "title": "Simulated Interactive Debugging",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00338",
@@ -3165,7 +3236,8 @@
     ],
     "title": "Human-In-The-Loop Oracle Learning for Simulation-Based Testing",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00341",
@@ -3527,7 +3599,8 @@
     ],
     "title": "Taming Uncertainty via Automation: Observing, Analyzing, and Optimizing Agentic AI Systems",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00327",
@@ -3716,7 +3789,8 @@
     ],
     "title": "Walk the Talk: Is Your Log-based Software Reliability Maintenance System Really Reliable?",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00316",
@@ -4320,7 +4394,8 @@
     ],
     "title": "CodeACT-R: A Cognitive Simulation Framework for Human Attention in Code Reading",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00333",
@@ -4410,7 +4485,8 @@
     ],
     "title": "Detecting and Repairing Incomplete Software Requirements with Multi-LLM Ensembles",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00328",
@@ -4680,7 +4756,8 @@
     ],
     "title": "Debugging the Undebuggable: Why Multi-Fault Programs Break Debugging and Repair Tools",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00320",
@@ -5184,14 +5261,24 @@
       "Jianyi Zhou",
       "Junjie Chen"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 11:20 - 11:30"
     ],
+    "doi": "10.1109/ase63991.2025.00233",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "43ec5054-e6f4-4d1e-9e09-7b9c87186004",
     "locations": [
       "Vista"
     ],
+    "pages": "2834-2845",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Test Generation, Selection & Prioritization 1"
     ],
@@ -5203,6 +5290,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00233",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/101/Reflective-Unit-Test-Generation-for-Precise-Type-Error-Detection-with-Large-Language-",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -5293,19 +5381,33 @@
   },
   {
     "abstract": "Cryptography is known as a challenging topic for developers. We studied the StackOverflow posts to identify the problems that developers encounter when using the Java Cryptography Architecture (JCA) for symmetric encryption. We investigated the security risks disseminated in these posts, and we examined whether ChatGPT helps avoid cryptography issues. Our manual inspection of 400 StackOverflow posts revealed that developers frequently struggle with key and initialization vector (IV) generation, as well as padding. Exception messages are often confusing and do not uncover the root causes of problems. Security is a top concern among developers, yet security issues are pervasive in the shared code snippets. An analysis of 13 security rules showed that 82% of the inspected posts contained at least one violation, and in a large-scale study of 3,426 posts we identified 5,305 violations, averaging 1.7 violations per post. The most common issues involved the use of insecure encryption modes and hard-coded keys. We further examined how GPT responds to 100 StackOverflow questions. ChatGPT provided “working” solutions, but in most cases it transferred security violations from the question to its answer. When explicitly prompted to provide a “secure solution,” ChatGPT corrected violations in 42 cases, and with more targeted prompting, additional issues could be cleared. Nevertheless, it continued to adopt weak key generation functions and include CBC in scenarios where it is not secure. In summary, we provided a comprehensive study of Java developer challenges in symmetric encryption, revealed the prevalence of security violations in StackOverflow code, highlighted the potential of ChatGPT in complementing human expertise, and demonstrated that while it can assist in evaluating code security, it does not replace human expertise. Developers should remain alert when using ChatGPT as a programming assistant.",
+    "authorIds": [
+      "0009-0000-7563-4196",
+      "0000-0002-1986-9668"
+    ],
     "authorInstitutions": "Ehsan Firouzi (TU Clausthal); Mohammad Ghafari (TU Clausthal)",
     "authors": [
       "Ehsan Firouzi",
       "Mohammad Ghafari"
     ],
+    "container": "Journal of Systems and Software",
     "dates": [
       "Wed 19 Nov 2025 11:20 - 11:30"
     ],
+    "doi": "10.1016/j.jss.2024.112135",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "44462202-9d58-45a1-ba11-f097546c808c",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "112135",
+    "publicationDate": "2024-10-01",
+    "publisher": "Elsevier BV",
     "sessionTitles": [
       "Security 4"
     ],
@@ -5317,9 +5419,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1016/j.jss.2024.112135",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/5/Time-to-separate-from-StackOverflow-and-match-with-ChatGPT-for-encryption",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "216"
   },
   {
     "abstract": "Extended Berkeley Packet Filter (eBPF) allows developers to extend Linux kernel functionality without modifying its source code. To ensure system safety, an in-kernel safety checker, the verifier, enforces strict safety constraints (e.g., a limited program size) on eBPF programs loaded into the kernel. These constraints, combined with eBPF’s performance-critical use cases, make effective optimization essential. However, existing compilers (e.g., Clang) offer limited optimization support, and many semantics-preserving transformations are rejected by the verifier, which makes handcrafted optimization rule design both challenging and limited in effectiveness. Superoptimization overcomes the limitations of rule-based methods by automatically discovering optimal transformations, but its high computational cost limits scalability. To address this, we propose EPSO, a caching-based superoptimizer that discovers rewrite rules via offline superoptimization, and reuses them to achieve high-quality optimizations with minimal runtime overhead. We evaluate EPSO on benchmarks from the Linux kernel and several eBPF-based projects, including Cilium, Katran, hXDP, Sysdig, Tetragon, and Tracee. EPSO discovers 624 rewrite rules and achieves up to 68.87% (avg. 20.01%) reduction in program size compared to Clang’s best output, outperforming the state-of-the-art BPF optimizer K2 on all benchmarks and Merlin on 81.60% of them. Additionally, EPSO reduces program runtime by an average of 6.60%, improving throughput and lowering latency in network applications.",
@@ -5568,14 +5672,24 @@
       "Takahiro Iida",
       "Fumio Narisawa"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 16:00 - 16:10"
     ],
+    "doi": "10.1109/ase63991.2025.00314",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "496c2cf9-ccc0-4340-bd23-297ed90dcecd",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "3772-3777",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Testing & Analysis 3"
     ],
@@ -5587,6 +5701,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00314",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/60/Acceleration-of-Automotive-Software-Development-by-Retrieval-Augmented-Integration-Te",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -5746,14 +5861,24 @@
       "Jun Li",
       "Xiaohong Guan"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 11:30 - 11:40"
     ],
+    "doi": "10.1109/ase63991.2025.00027",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4a55753a-9fff-46a3-b562-5dbf0a74c9d9",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "228-240",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Formal Method & Verification 2"
     ],
@@ -5765,6 +5890,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00027",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/125/RELIA-Accelerating-Analysis-of-Cloud-Access-Control-Policies",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -6092,6 +6218,13 @@
   },
   {
     "abstract": "The Multi-Agent Path Finding (MAPF) problem, i.e., the scheduling of multiple agents to reach their destinations, has been widely investigated. Testing MAPF systems is challenging, due to the complexity and variety of scenarios and the agents’ distribution and interaction. Moreover, MAPF testing suffers from the oracle problem, i.e., it is not always clear whether a test shows a failure or not. Indeed, only considering whether the agents reach their destinations without collision is not sufficient. Other properties related to the ``quality'' of the generated paths should be assessed, e.g., an agent should not follow an unnecessarily long path. To tackle this issue, this paper proposes MET-MAPF, a Metamorphic Testing approach for MAPF systems. We identified ten Metamorphic Relations (MRs) that a MAPF system should guarantee, designed over the environment in which agents operate, the behaviour of the single agents, and the interactions among agents. Starting from the different MRs, MET-MAPF automatically generates test cases addressing them, so possibly exposing different types of failures. Experimental results show that MET-MAPF can indeed find MR violations not exposed by approaches that only consider the completion of the mission as test oracle. Moreover, experiments show that different MRs expose different types of violations.",
+    "authorIds": [
+      "0000-0001-7414-8057",
+      "0000-0003-2222-3232",
+      "0000-0002-6253-4062",
+      "0000-0002-0758-1616",
+      "0000-0001-7922-9067"
+    ],
     "authorInstitutions": "Xiao-Yi Zhang (University of Science and Technology Beijing); Yang Liu (Nanyang Technological University); Paolo Arcaini (National Institute of Informatics); Mingyue Jiang (Zhejiang Sci-Tech University); Zheng Zheng (Beihang University)",
     "authors": [
       "Xiao-Yi Zhang",
@@ -6100,15 +6233,25 @@
       "Mingyue Jiang",
       "Zheng Zheng"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 18 Nov 2025 14:10 - 14:20"
     ],
     "doi": "10.1145/3669663",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "4e06d2ec-b88b-425e-a464-e36d8f421054",
+    "issue": "8",
     "locations": [
       "Vista"
     ],
+    "pages": "1-37",
+    "publicationDate": "2024-11-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Testing & Analysis 2"
     ],
@@ -6120,11 +6263,12 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3669663",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/43/MET-MAPF-A-Metamorphic-Testing-Approach-for-Multi-Agent-Path-Finding-Algorithms",
       "https://dl.acm.org/doi/10.1145/3669663",
-      "https://doi.org/10.1145/3669663",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "33"
   },
   {
     "abstract": "OpenZeppelin is a building block for many smart contracts on Ethereum-compatible blockchains. It provides modular and reusable libraries for various Ethereum standards (e.g., ERC20 and ERC721) and common functionalities such as upgradeable contracts. Little research has been done on OpenZeppelin security except for a recent study, which focused only on the \\textit{misuse} of OpenZeppelin code, assuming OpenZeppelin itself is secure but contract developers may not follow OpenZeppelin ’s function checks appropriately. We argue that, despite appearing robust, OpenZeppelin itself could have many Vulnerabilities, and these library-level vulnerabilities could inadvertently affect third-party smart contracts, even without misuse from developers. We present ZEPCOMPARE, the first end-to-end system for demystifying OpenZeppelin’s own vulnerabilities and analyzing their propagation in third-party smart contracts. ZEPCOMPARE incorporates a manual analysis stage where we review OpenZeppelin’s 64 historical releases, identifying 109 vulnerable-fixed code pairs, exposing flaws in cryptographic utilities, access control, etc. Leveraging these pairs, ZEPCOMPARE introduces \\textit{facts of changes}, a novel structure capturing vulnerable and fixed code contexts for flexible matching. Evaluated across 88,605 contracts from three Ethereum-compatible chains, ZEPCOMPARE detects 4,708 instances of OpenZeppelin-derived vulnerabilities. Manual sampling and a ground-truth experiment confirm that ZEPCOMPARE achieves 86.7% precision and 77.1% recall. Our findings reveal significant security risks in both historical and the latest versions of OpenZeppelin libraries, underscoring the urgent need for systematic auditing of foundational contracts components.",
@@ -6434,6 +6578,17 @@
   },
   {
     "abstract": "Open-source software (OSS) has experienced a surge in popularity, attributed to its collaborative development model and cost-effective nature. However, the adoption of specific software versions in development projects may introduce security risks when these versions bring along vulnerabilities. Current methods of identifying vulnerable versions typically analyze and extract the code features involved in vulnerability patches using static analysis with pre-defined rules. They then use code clone detection to identify the vulnerable versions. These methods are hindered by imprecision due to (1) the exclusion of vulnerability-irrelevant code in the analysis and (2) the inadequacy of code clone detection. This paper presents VERCATION, an approach designed to identify vulnerable versions of OSS written in C/C++. VERCATION combines program slicing with a Large Language Model (LLM) to identify vulnerability-relevant code from vulnerability patches. It then backtracks historical commits to gather previous modifications of identified vulnerability-relevant code. We propose code clone detection based on expanded and normalized ASTs to compare the differences between pre-modification and post-modification code, thereby locating the vulnerability-introducing commit (\\textit{vic}) and enabling the identification of the vulnerable versions between the vulnerability-fixing commit and the \\textit{vic}. We curate a dataset linking 122 OSS vulnerabilities and 1,211 versions to evaluate VERCATION. On this dataset, our approach achieves an F1 score of 93.1%, outperforming current state-of-the-art methods. More importantly, VERCATION detected 202 incorrect vulnerable OSS versions in NVD reports.",
+    "authorIds": [
+      "0009-0002-9333-356X",
+      "0000-0002-6001-1372",
+      "0000-0001-5130-0407",
+      "0000-0003-4385-8261",
+      "0009-0000-4729-7778",
+      "0000-0002-4367-7201",
+      "0000-0002-0549-0999",
+      "0000-0001-6168-8003",
+      "0000-0003-2745-7521"
+    ],
     "authorInstitutions": "Yiran Cheng (Beijing Key Laboratory of IOT Information Security Technology, Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China；); Ting Zhang (Monash University); Lwin Khin Shar (Singapore Management University); Shouguo Yang (Zhongguancun Laboratory, Beijing, China); Chaopeng Dong (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China;); David Lo (Singapore Management University); Shichao Lv (Institute of Information Engineering at Chinese Academy of Sciences; University of Chinese Academy of Sciences); Zhiqiang Shi (Institute of Information Engineering at Chinese Academy of Sciences; University of Chinese Academy of Sciences); Limin Sun (Institute of Information Engineering at Chinese Academy of Sciences; University of Chinese Academy of Sciences)",
     "authors": [
       "Yiran Cheng",
@@ -6446,14 +6601,25 @@
       "Zhiqiang Shi",
       "Limin Sun"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Tue 18 Nov 2025 11:20 - 11:30"
     ],
+    "doi": "10.1109/tse.2025.3599581",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "50e87acc-a9a5-4b13-a1c3-e55f19d45271",
+    "issue": "2",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "376-394",
+    "publicationDate": "2026-02-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Security 1"
     ],
@@ -6465,9 +6631,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2025.3599581",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/23/VERCATION-Precise-Vulnerable-Open-source-Software-Version-Identification-based-on-St",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "52"
   },
   {
     "abstract": "Build reproducibility of container images is essential to ensure that deployed systems will work as expected and have not been tampered with. However, bit-by-bit reproducibility of container images is almost never achievable due to external factors, and it is also very slow and labor intensive to determine the causes and severity of reproducibility failures. In this paper, we present a taxonomy of reproducibility issues for container images, as well as a tool to help automatically categorize the type and severity of reproducibility failures in container images. We analyzed a set of open source repositories where container images are built to find common patterns and configure our tool to properly categorize failures. Our analysis shows that approximately 87% of their reproducibility failures were automatically classified by the tool according to our taxonomy. However, the vast majority of these failures were caused by trivial issues and not non-trivial issues, which could cause noticeable changes in execution of container applications and are more difficult to detect. These results highlight the need for additional research and tooling to detect, classify, and fix reproducibility issues, especially those that can lead to major failures.",
@@ -6504,7 +6672,8 @@
     ],
     "title": "Vessel: A Taxonomy of Reproducibility Issues for Container Images",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00348",
@@ -6846,20 +7015,36 @@
   },
   {
     "abstract": "REST (Representational State Transfer) is an architectural style that provides guidelines for building web services, commonly referred to as REST APIs or RESTful APIs. Nowadays, REST APIs have been widely adopted in industry, especially in developing large-scale enterprise microservices architectures. Due to its importance and widespread adoption in industry, the validation and verification of REST APIs has attracted major interest from the research community. A lot of automated testing approaches for REST APIs have been proposed in recent years. Although existing fuzzers have demonstrated effectiveness in code coverage and fault detection, several open research challenges remain that hinder further improvements. For example, benefiting from the OpenAPI Specification (OAS) as a standard for defining schemas, most approaches use OAS as input to generate tests. However, faults or under-specified schemas may exist, representing one of the major issues for black-box fuzzers. In addition, web API commonly interacts with databases. Under-specified constraints may also exist in the database schema, which can hinder the preparation of necessary test data. Without access to source code, such under-specified API schemas and constraints cannot be addressed. But, in the literature, most of the approaches focus on black-box fuzzing. EvoMaster is the only existing open-source fuzzer that supports white-box fuzzing of REST APIs. In this paper, building on EvoMaster, we employed white-box techniques (e.g., method replacement and taint analysis) and proposed a series of novel white-box heuristics to tackle three main challenges: (1) Under-specified schemas in OAS, particularly when HTTP query parameters and header information are missing. If these headers and parameters are not included in API requests during fuzzing, then the code responsible for handling them and their associated functionalities would never be tested. (2) Under-specified constraints in SQL database schemas, especially when the tested API relies on the Java Persistence API (JPA) to access databases. Depending on the state of the databases the API interacts with, the same request may exercise different code paths and correspond to different business scenarios, e.g., happy-path' or exceptional scenarios. As such, invalid data inserted into a SQL database can hamper the testing process for code coverage, e.g., the API may crash when such data is read. (3) \\emph{Flag} problem in common library calls. Function calls that return boolean values or raise exceptions on invalid inputs can create fitness plateaus'' in the search space, resulting in no effective guidance for the evolutionary process of generating high-coverage test cases. To assess the effectiveness of our approach, we carried out an empirical study on 14 open-source, JVM REST APIs currently part of the EMB corpus. To better generalize our results, we also included one industrial API from one of our industrial partners. The results of our empirical study demonstrate clear improvements achieved by our approach on several of these APIs in terms of both code coverage and fault detection. This study enables us to push forward the boundaries of scientific research in white-box fuzzing of Web APIs. Nevertheless, there are still several challenges left, which will require further research on developing more advanced white-box heuristics to solve these further issues. Our novel heuristics have been integrated as part of our open-source fuzzer EvoMaster. In this presentation, we will explain how our approach tackles major challenges in REST API fuzzing and include a live demo of EvoMaster. However, these novel techniques are independent of EvoMaster. They can be integrated and evaluated in any white-box fuzzer for REST APIs.",
+    "authorIds": [
+      "0000-0003-0799-2930",
+      "0000-0003-1204-9322",
+      "0000-0002-0747-8205"
+    ],
     "authorInstitutions": "Andrea Arcuri (Kristiania University College and Oslo Metropolitan University); Man Zhang (Beihang University, China); Juan Pablo Galeotti (University of Buenos Aires)",
     "authors": [
       "Andrea Arcuri",
       "Man Zhang",
       "Juan Pablo Galeotti"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Tue 18 Nov 2025 15:20 - 15:30"
     ],
+    "doi": "10.1145/3652157",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "52ef87ea-1d98-4b4f-b7d8-d6d5b66b977d",
+    "issue": "6",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "1-36",
+    "publicationDate": "2024-07-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Fuzzing 1"
     ],
@@ -6871,9 +7056,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3652157",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/37/Advanced-White-Box-Heuristics-for-Search-Based-Fuzzing-of-REST-APIs",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "33"
   },
   {
     "abstract": "Among the programming languages for Programmable Logic Controllers (PLCs), Structured Text (ST) is widely adopted for industrial automation due to its expressiveness and flexibility. However, major vendors implement ST with proprietary extensions and hardware-specific libraries - Siemens’ SCL and CODESYS’s ST each differ in syntax and functionality. This fragmentation forces engineers to relearn implementation details across platforms, creating substantial productivity barriers. To address this challenge, we developed AutoPLC, a framework capable of automatically generating vendor-aware ST code directly from natural language requirements. Our solution begins by building two essential knowledge sources tailored to each vendor’s specifications: a structured API library containing platform-exclusive functions, and an annotated case database that captures real-world implementation experience. Building on these foundations, we created a four-stage generation process that combines step-wise planning (enhanced with a lightweight natural language state machine support for control logic), contextual case retrieval using LLM-based reranking, API recommendation guided by industrial data, and dynamic validation through direct interaction with vendor IDEs. Implemented for Siemens TIA Portal and the CODESYS platform, AutoPLC achieves 90%+ compilation success on our 914-task benchmark (covering general-purpose functions and process control functions), outperforming all selected baselines, at an average cost of only $0.13 per task. Experienced PLC engineers positively assessed the practical utility of the generated code, including cases that initially failed compilation.",
@@ -7174,14 +7361,24 @@
       "Chunying Zhou",
       "Xiaoyuan Xie"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 11:30 - 11:40"
     ],
+    "doi": "10.1109/ase63991.2025.00087",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "55150517-8afc-4a1a-8e1a-2e023e7039a0",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "996-1007",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security 1"
     ],
@@ -7193,6 +7390,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00087",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/35/Not-Every-Patch-is-an-Island-LLM-Enhanced-Identification-of-Multiple-Vulnerability-P",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -7258,14 +7456,24 @@
       "Ge Li",
       "Chen Lyu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 11:20 - 11:30"
     ],
+    "doi": "10.1109/ase63991.2025.00160",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5692ddae-61ce-4c25-90f5-83bcf5d163ea",
     "locations": [
       "Grand Hall 4"
     ],
+    "pages": "1919-1930",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Program Repair 3"
     ],
@@ -7277,6 +7485,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00160",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/193/SemGuard-Real-Time-Semantic-Evaluator-for-Correcting-LLM-Generated-Code",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -7415,7 +7624,8 @@
     ],
     "title": "Linguistic Theories Coincide with Misformalization in Temporal Logic",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00329",
@@ -7511,11 +7721,39 @@
     ],
     "title": "From Modules to Marketplaces: A Vision for Composable Capability Sharing Across Organizations",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00317",
       "https://conf.researchr.org/details/ase-2025/ase-2025-nier-track/2/From-Modules-to-Marketplaces-A-Vision-for-Composable-Capability-Sharing-Across-Organ",
+      "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
+    ]
+  },
+  {
+    "abstract": "All papers from research/journal first/industry showcase/NIER track that are being presented on 19th November will also have their posters displayed in Walker Hall throughout the day. Authors of research and journal first papers will be around their poster between 15:30~18:00; authors of industry showcase and NIER track papers will join their posters after their presentation (16:00~17:00).",
+    "authorInstitutions": "",
+    "authors": [],
+    "dates": [
+      "Wed 19 Nov 2025 09:00 - 18:00"
+    ],
+    "eventType": "Poster",
+    "id": "59885b3c-7bf0-4b92-b813-c5eef5acba01",
+    "locations": [
+      "Walker Hall (Posters)"
+    ],
+    "sessionTitles": [
+      "Posters for Day 3"
+    ],
+    "sessions": [
+      "Wed_19_Nov_2025-Walker_Hall_Posters_-09_00_-_18_00-Posters_for_Day_3"
+    ],
+    "title": "Research/JF/Industry/NIER Posters for Day 3 (19th November)",
+    "tracks": [
+      "Posters"
+    ],
+    "urls": [
+      "https://conf.researchr.org/details/ase-2025/ase-2025-posters/3/Research-JF-Industry-NIER-Posters-for-Day-3-19th-November-",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
   },
@@ -7553,7 +7791,8 @@
     ],
     "title": "Unseen Data Detection using Routing Entropy in Mixture-of-Experts for Autonomous Vehicles",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00332",
@@ -7564,6 +7803,13 @@
   },
   {
     "abstract": "Automatic test generation plays a crucial role in software quality assurance by helping developers efficiently detect bugs. Search-Based Software Testing (SBST) techniques are among the most widely studied approaches, relying on heuristic search to explore the test space. While effective, SBST tools frequently fail to cover certain branches, especially those requiring scenario-specific values or deeper semantic reasoning. Recently, Large Language Models (LLMs) have shown promise in alleviating these limitations by leveraging their code comprehension abilities to generate meaningful tests. However, despite these advances, LLM-based approaches still struggle to cover hard-to-cover branches, leaving many branches to be handled manually. We define hard-to-cover branches as those that (1) require complex object construction, where valid inputs must be built through multi-step processes involving interdependent objects and specific attribute values, or (2) involve intricate inter-procedural dependencies, where the outcome of a branch condition depends on the chained execution of several methods. Existing LLM-based techniques are not equipped to handle such challenges: they achieve relatively low compilation success rates and lack sufficient semantic guidance when only given the code of the target method and limited context. To address these issues, we propose TELPA, a novel LLM-based test generation technique enhanced by program analysis. TELPA combines lightweight program analyses with LLM prompting to systematically guide test generation toward hard-to-cover branches. First, its object construction analysis collects method invocation sequences that lead to target methods, enabling the LLM to observe how valid complex objects are constructed in practice. Second, its branch dependency analysis identifies the methods involved in branch conditions and incorporates their code in a semantically meaningful order. This allows the LLM to reason about inter-procedural dependencies instead of being overwhelmed by irrelevant surrounding code. To ensure efficiency, TELPA is triggered only when lightweight SBST tools fail to improve coverage, and it integrates a feedback loop where counter-examples—previously ineffective tests—are added to prompts to guide the LLM toward unexplored solutions. We conducted an extensive evaluation of TELPA on 27 open-source Python projects widely used in prior studies. Results show that TELPA consistently outperforms state-of-the-art SBST (Pynguin) and LLM-based test generation tools (CODAMOSA, CHATTESTER). On average, TELPA achieves 34.10%, 25.93%, and 21.10% higher branch coverage than these baselines, respectively, under the same testing time budget. An ablation study further confirms the contribution of each major component: both object construction analysis and branch dependency analysis indeed improve branch coverage, and counter-example feedback enhances both efficiency and diversity of generated tests. These findings demonstrate that integrating program analysis with LLM prompting is a promising direction for overcoming the long-standing challenge of covering hard-to-cover branches.",
+    "authorIds": [
+      "0000-0003-0759-940X",
+      "0000-0003-3056-9962",
+      "0000-0001-6307-8460",
+      "0009-0000-8630-8724",
+      "0000-0002-4867-5416"
+    ],
     "authorInstitutions": "Chen Yang (Tianjin University); Junjie Chen (Tianjin University); Bin Lin (Hangzhou Dianzi University); Ziqi Wang (Tianjin University); Jianyi Zhou (Huawei Cloud Computing Technologies Co., Ltd.)",
     "authors": [
       "Chen Yang",
@@ -7572,14 +7818,25 @@
       "Ziqi Wang",
       "Jianyi Zhou"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 11:40 - 11:50"
     ],
+    "doi": "10.1145/3748505",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5a2e49d3-c0c1-438b-97a9-98ae96ff29c4",
+    "issue": "5",
     "locations": [
       "Vista"
     ],
+    "pages": "1-31",
+    "publicationDate": "2026-05-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Test Generation, Selection & Prioritization 1"
     ],
@@ -7591,12 +7848,21 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3748505",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/41/Advancing-Code-Coverage-Incorporating-Program-Analysis-with-Large-Language-Models",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Testing web forms is an essential activity for ensuring the quality of web applications. It typically involves evaluating the interactions between users and forms. Automated test-case generation remains a challenge for web-form testing: Due to the complex, multi-level structure of web pages, it can be difficult to automatically capture their inherent contextual information for inclusion in the tests. Large Language Models (LLMs) have shown great potential for contextual text generation. This motivated us to explore how they could generate automated tests for web forms, making use of the contextual information within form elements. To the best of our knowledge, no comparative study examining different LLMs has yet been reported for web-form-test generation. To address this gap in the literature, we conducted a comprehensive empirical study investigating the effectiveness of 11 LLMs on 146 web forms from 30 open-source Java web applications. In addition, we propose three HTML-structure-pruning methods to extract key contextual information. The experimental results show that different LLMs can achieve different testing effectiveness, with the GPT-4, GLM-4, and Baichuan2 LLMs generating the best web-form tests. Compared with GPT-4, the other LLMs had difficulty generating appropriate tests for the web forms: Their successfully-submitted rates (SSRs) — the proportions of the LLMs-generated web-form tests that could be successfully inserted into the web forms and submitted — decreased by 9.10% to 74.15%. Our findings also show that, for all LLMs, when the designed prompts include complete and clear contextual information about the web forms, more effective web-form tests were generated. Specifically, when using Parser-Processed HTML for Task Prompt (PH-P), the SSR averaged 70.63%, higher than the 60.21% for Raw HTML for Task Prompt (RH-P) and 50.27% for LLM-Processed HTML for Task Prompt (LH-P). With RH-P, GPT-4’s SSR was 98.86%, outperforming models like LLaMa2 (7B) with 34.47% and GLM-4V with 0%. Similarly, with PH-P, GPT-4 reached an SSR of 99.54%, the highest among all models and prompt types. Finally, this paper also highlights strategies for selecting LLMs based on performance metrics, and for optimizing the prompt design to improve the quality of the web-form tests.",
+    "authorIds": [
+      "0009-0001-7413-9692",
+      "0009-0004-8746-316X",
+      "0000-0002-1769-6126",
+      "0000-0003-0877-4353",
+      "0000-0002-8621-2420"
+    ],
     "authorInstitutions": "Tao Li (Macau University of Science and Technology); Chenhui Cui (Macau University of Science and Technology); Rubing Huang (Macau University of Science and Technology (MUST)); Dave Towey (University of Nottingham Ningbo China); Lei Ma (The University of Tokyo & University of Alberta)",
     "authors": [
       "Tao Li",
@@ -7605,14 +7871,25 @@
       "Dave Towey",
       "Lei Ma"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 14:20 - 14:30"
     ],
+    "doi": "10.1145/3735553",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5a5162f4-f005-4537-b021-231e24f3cb85",
+    "issue": "3",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "1-37",
+    "publicationDate": "2026-03-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Web & Mobile Systems 2"
     ],
@@ -7624,9 +7901,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3735553",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/36/Large-Language-Models-for-Automated-Web-Form-Test-Generation-An-Empirical-Study",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "Quantum programs are designed to run on quantum computers, leveraging quantum circuits to solve problems that are intractable for classical machines. As quantum computing advances, ensuring the reliability of quantum programs has become increasingly important. This paper introduces NovaQ, a diversity-guided testing framework for quantum programs. NovaQ combines a distribution-based test case generator with a novelty-driven evaluation module. The generator produces diverse quantum state inputs by mutating circuit parameters, while the evaluator quantifies behavioral novelty based on internal circuit state metrics, including magnitude, phase, and entanglement. By selecting inputs that map to infrequently covered regions in the metric space, NovaQ effectively explores under-tested program behaviors. We evaluate NovaQ on quantum programs of varying sizes and complexities. Experimental results show that NovaQ consistently achieves higher test input diversity and detects more bugs than existing baseline approaches.",
@@ -7662,7 +7941,8 @@
     ],
     "title": "NovaQ: Improving Quantum Program Testing through Diversity-Guided Test Case Generation",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00335",
@@ -7672,6 +7952,14 @@
   },
   {
     "abstract": "Differential testing offers a promising strategy to alleviate the test oracle problem by comparing the test results between alternative implementations. However, existing differential testing techniques for deep learning (DL) libraries are limited by the key challenges of finding alternative implementations (called counterparts) for a given API and subsequently generating diverse test inputs. To address the two challenges, this paper introduces DLLens, an LLM-enhanced differential testing technique for DL libraries. The first challenge is addressed by an observation that DL libraries are commonly designed to support the computation of a similar set of DL algorithms. Therefore, the counterpart of a given API’s computation could be successfully synthesized through certain composition and adaptation of the APIs from another DL library. DLLens incorporates a novel counterpart synthesis workflow, leveraging a large language model (LLM) to search for valid counterparts for differential testing. To address the second challenge, DLLens incorporates a static analysis technique that extracts the path constraints from the implementations of a given API and its counterpart to guide diverse test input generation. The extraction is facilitated by LLM’s knowledge of the concerned DL library and its upstream libraries. DLLens incorporates validation mechanisms to manage the LLM’s hallucinations in counterpart synthesis and path constraint extraction. We evaluate DLLens on two popular DL libraries, TensorFlow and PyTorch. Our evaluation shows that DLLens synthesizes counterparts for 1.84 times as many APIs as those found by state-of-the-art techniques on these libraries. Moreover, under the same time budget, DLLens covers 7.23% more branches and detects 1.88 times as many bugs as state-of-the-art techniques on 200 randomly sampled APIs. DLLens has successfully detected 71 bugs in recent TensorFlow and PyTorch libraries. Among them, 59 are confirmed by developers, including 46 confirmed as previously unknown bugs, and 10 of these previously unknown bugs have been fixed in the latest version of TensorFlow and PyTorch.",
+    "authorIds": [
+      "0000-0001-5947-4030",
+      "0009-0004-6482-8509",
+      "0009-0004-8423-7781",
+      "0000-0003-4892-6294",
+      "0000-0003-1644-2965",
+      "0000-0002-3508-7172"
+    ],
     "authorInstitutions": "Meiziniu LI (The Hong Kong University of Science and Technology); Dongze Li (The Hong Kong University of Science and Technology); Jianmeng Liu (The Hong Kong University of Science and Technology); Jialun Cao (Hong Kong University of Science and Technology); Yongqiang Tian (Monash University); Shing-Chi Cheung (Hong Kong University of Science and Technology)",
     "authors": [
       "Meiziniu LI",
@@ -7681,14 +7969,25 @@
       "Yongqiang Tian",
       "Shing-Chi Cheung"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Mon 17 Nov 2025 14:50 - 15:00"
     ],
+    "doi": "10.1145/3735637",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5b23512a-0313-4f9a-912a-e9cbf567b157",
+    "issue": "4",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "1-39",
+    "publicationDate": "2026-04-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Testing & Analysis 1"
     ],
@@ -7700,9 +7999,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3735637",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/25/Enhancing-Differential-Testing-With-LLMs-For-Testing-Deep-Learning-Libraries",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "The focus on rapid software delivery inevitably results in the accumulation of technical debt, which, in turn, affects quality and slows future development. Our primary aim is to discover how companies keep their codebases maintainable and how code improvements might be automated. Method: we investigate Meta practices by collaborating with engineers on code quality (via action research) and by analyzing rich source code change history using mixed-methods to reveal a range of practices used for continual improvement of the codebase. Results: Code improvements at Meta range from completely organic grass-roots done at the initiative of individual engineers, to regularly blocked time and engagement via gamification of Better Engineering (BE) work, to major explicit initiatives aimed at reengineering the complex parts of the codebase or deleting accumulations of dead code. Over 14% of changes are explicitly devoted to code improvement and the developers are given “badges” to acknowledge the type of work and the amount of effort. Based on the interactions with development teams we suggest metrics to help prioritization of code improvement efforts. Finally, our models of the impact of reengineering activities revealed substantial improvements in quality and speed and reductions in code complexity. Overall, code improvement activities are relatively effort intensive yet simple enough to be prime targets for automation.",
@@ -7749,6 +8050,14 @@
   },
   {
     "abstract": "Automated program repair (APR) techniques generate patches for fixing software bugs automatically. The aim of APR is to significantly reduce the manual effort required by developers to fix software bugs. However, previous studies have shown that APR techniques suffer from the overfitting problem. Overfitting happens when a patch is run and the test suite does not reveal any error, but the patch actually does not fix the underlying bug or it introduces a new defect that is not covered by the test suite. These are termed \\emph{plausible} patches. Therefore, the patches generated by APR tools need to be validated by human programmers, which can be very costly, and prevents APR tool adoption in practice. Our work aims to minimize the number of plausible patches that programmers have to review, thereby reducing the time and effort required to find a correct patch. To alleviate these issues, we present a light-weight patch post-processing technique, named XTESTCLUSTER, that aims to reduce the number of generated patches that a developer has to assess. Our technique clusters plausible repair patches exhibiting the same behavior (according to a given set of test suites), and provides the developer with fewer patches, each representative of a given cluster, thus ensuring that those patches exhibit different behavior. Our technique can be used not only when a single tool generates multiple plausible patches for a given bug, but also when different available APR tools are running (potentially in parallel) in order to increase the chance of finding a correct patch. In this way, developers will only need to examine one patch, representative of a given cluster, rather than all, possibly hundreds, of patches produced by APR tools. Our approach presents two main novelties: First, it leverages the diversity of the behavior of the generated patches (and this diversity is not exposed by the developer-written test cases used to synthesize patches). In particular, our clustering approach XTESTCLUSTER exploits automatically generated test cases that enforce diverse behavior in addition to the existing test suite. Second, our approach has the main advantage that it does not involve code instrumentation (aside from patch application) nor an oracle or pre-existing dataset to learn fix patterns. Moreover, XTESTCLUSTER is complementary to previous work on patch overfitting assessment, as it can apply different prioritization strategies to each cluster. The output of XTESTCLUSTER provides developers and code reviewers with: 1) a way of reducing the number of patches to analyze, as they can focus on analyzing a sample of patches from each cluster, and 2) enriched information for each patch, including newly generated test cases, their outcomes, and the inputs that expose behavioral differences across alternative patches for the same bug. Such information supports reviewers in selecting the most appropriate patch to merge into the codebase. We evaluate our approach on 902 patches (248 correct and 654 overfitted) for bugs from Defects4J data set, generated by 21 different APR tools. After removing duplicates, we used two automated test-case generation tools, EvoSuite and Randoop, to generate test cases for our patch set. Finally, we cluster patches based on test case results. To our knowledge, XTESTCLUSTER is the first approach to analyze together patches from multiple program repair approaches generated to fix a particular bug. Our results show that XTESTCLUSTER is able to create at least two clusters for almost half of the bugs that have two or more different patches. By having patches clustered, XTESTCLUSTER is able to reduce a median of 50% of the number of patches to review and analyze. This reduction could help code reviewers (developers using automated repair tools or researchers evaluating patches) to reduce the time of patch evaluation. We also analyze the assessment done by two state-of-the-art patch assessment approaches, ODS and Cache on the patches clustered by XTESTCLUSTER. The results show that XTESTCLUSTER can be used complementarily to those approaches and can help to detect false positives and false negatives.",
+    "authorIds": [
+      "",
+      "",
+      "",
+      "",
+      "0000-0002-9146-442X",
+      ""
+    ],
     "authorInstitutions": "Matias Martinez (Universitat Politècnica de Catalunya (UPC)); Maria Kechagia (National and Kapodistrian University of Athens); Anjana Perera (Oracle Labs, Australia); Justyna Petke (University College London); Federica Sarro (University College London); Aldeida Aleti (Monash University)",
     "authors": [
       "Matias Martinez",
@@ -7758,14 +8067,27 @@
       "Federica Sarro",
       "Aldeida Aleti"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Mon 17 Nov 2025 11:20 - 11:30"
     ],
+    "doi": "10.1007/s10664-024-10503-2",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5bed07ba-cd46-450b-a304-81718e7f62fc",
+    "issue": "5",
     "locations": [
       "Grand Hall 1"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-024-10503-2.pdf"
+    ],
+    "publicationDate": "2024-09-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Program Repair 1"
     ],
@@ -7777,9 +8099,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-024-10503-2",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/42/Test-based-Patch-Clustering-for-Automatically-Generated-Patches-Assessment",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "29"
   },
   {
     "abstract": "Large language models (LLMs) have demonstrated strong capabilities in code generation, underscoring the critical need for rigorous and comprehensive evaluation. Existing evaluation approaches fall into three categories, including human-centered, metric-based, and LLM-based. Considering that human-centered approaches are labour-intensive and metric-based ones overly rely on reference answers, LLM-based approaches are gaining increasing attention due to their stronger contextual understanding capabilities. However, they generally evaluate the generated code based on static prompts, and tend to fail for complex code scenarios which typically involve multiple requirements and require more contextual information. In addition, these approaches lack fine-grained evaluation for complex code, resulting in limited explainability. To mitigate the limitations, we propose \\textbf{CodeVisionary}, the first agent-based evaluation framework for complex code generation. CodeVisionary consists of two stages: \\textbf{(1) \\textit{Requirement-guided multi-dimensional context distillation stage}}, which first formulates a detailed evaluation plan by decomposing task requirements, and then stepwise collects multi-dimensional contextual information for each requirement. \\textbf{(2) \\textit{Fine-grained scoring and summarization stage}}, which defines self-directed and negotiation-based actions, allowing multiple judges to comprehend complex code from fine-grained and diverse viewpoints, and reach a consensus through discussion. A comprehensive evaluation report is also generated for enhanced explainability. For validation, we construct a new benchmark consisting of 363 samples spanning 37 coding scenarios and 23 programming languages. Extensive experiments demonstrate that \\framework achieves the best performance among three baselines for evaluating complex code generation, outperforming the best baseline with average improvements of 0.217, 0.163, and 0.141 in Pearson, Spearman, and Kendall-Tau coefficients, respectively. The resources of CodeVisionary are available at https://anonymous.4open.science/r/CodeVisionary .",
@@ -7861,7 +8185,8 @@
     ],
     "title": "Tether: A Personalized Support Assistant for Software Engineers with ADHD",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00342",
@@ -8711,7 +9036,8 @@
     ],
     "title": "Autonomous Agents for Accessibility: Simulating Visual Impairments in Web Interfaces",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00349",
@@ -8767,14 +9093,24 @@
     "authors": [
       "Sali Moussa"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Thu 20 Nov 2025 11:15 - 12:00"
     ],
+    "doi": "10.1109/ase63991.2025.00396",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6e538b64-81bf-46f5-a94f-b79aad6ab9b4",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "4141-4144",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Doctoral Symposium 2"
     ],
@@ -8786,6 +9122,7 @@
       "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00396",
       "https://conf.researchr.org/details/ase-2025/ase-2025-doctoral-symposium/2/Testing-Autonomous-Driving-Systems-Through-Blind-Spot-Guided-Fuzzing",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -8909,7 +9246,8 @@
     ],
     "title": "LLM-Powered Fully Automated Chaos Engineering: Towards Enabling Anyone to Build Resilient Software Systems at Low Cost",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00331",
@@ -9386,14 +9724,24 @@
       "Yuan Zhang",
       "Min Yang"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 11:50 - 12:00"
     ],
+    "doi": "10.1109/ase63991.2025.00199",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "772e2357-e65d-4727-bb2f-482f845d56d6",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "2414-2426",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security 1"
     ],
@@ -9405,6 +9753,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00199",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/213/DeepExploitor-LLM-Enhanced-Automated-Exploitation-of-DeepLink-Attack-in-Hybrid-Apps",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -9680,7 +10029,8 @@
     ],
     "title": "Towards Automated Governance: A DSL for Human-Agent Collaboration in Software Projects",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00337",
@@ -10218,14 +10568,24 @@
       "Yifan Tian",
       "Xin Peng"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 12:00 - 12:10"
     ],
+    "doi": "10.1109/ase63991.2025.00010",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "81920c4f-b7f5-4cb4-b743-94504a3dc38e",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "13-25",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Autonomous Driving & VR"
     ],
@@ -10237,6 +10597,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00010",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/114/Argus-Resilience-Oriented-Safety-Assurance-Framework-for-End-to-End-ADSs",
       "https://arxiv.org/abs/2511.09032",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -10467,20 +10828,36 @@
   },
   {
     "abstract": "Background: Research shows that emotional intelligence (EI) should be used alongside cognitive intelligence during requirements change (RC) handling in Software Engineering (SE), especially in agile settings. Objective: We wanted to study the role of EI in-depth during RC handling. Method: We conducted a mixed-methods study (an interview study followed by a survey study) with 124 software practitioners. Findings: We found the causal condition, intervening condition and causes lead to key direct consequences of regulating own emotions, managing relationships, and extended consequences of sustaining productivity, setting and sustaining team goals. We found several strategies for supporting EI during RC handling. Further, we found strong correlations between six strategies and one being aware of own emotions, regulating own emotions, sustaining team productivity, and setting and sustaining team goals. Conclusion: Empathising with others and tracking commitments and decisions as a team are key strategies that have strong correlations between managing emotions, between sustaining team productivity, and between setting and sustaining team goals. To the best of our knowledge, the framework we present in this paper is the first theoretical framework on EI in SE research. We provide recommendations for software practitioners to consider during RC handling. Summary of Implications: An immediate implication of the work is a problem-solution guide (given in the paper) that comprises strategies which can be deployed in various scenarios, including emotional awareness and regulation at individual level, and productivity sustainment and goal set and sustainment at team level. Further Work: Informed by the findings of this paper, we later developed a GPT-4 integrated developer insights platform where the development team’s responses to RCs generate summaries and recommendations for engineering managers to better guide the team.",
+    "authorIds": [
+      "0000-0003-1363-8786",
+      "0000-0001-5147-8096",
+      "0000-0003-4928-7076"
+    ],
     "authorInstitutions": "Kashumi Madampe (Monash University, Australia); Rashina Hoda (Monash University); John Grundy (Monash University)",
     "authors": [
       "Kashumi Madampe",
       "Rashina Hoda",
       "John Grundy"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Mon 17 Nov 2025 14:50 - 15:00"
     ],
+    "doi": "10.1145/3664600",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "8623c456-7684-4eb8-a0cb-584a7b11316f",
+    "issue": "6",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "1-38",
+    "publicationDate": "2024-07-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Software Process"
     ],
@@ -10492,9 +10869,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3664600",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/28/Supporting-Emotional-Intelligence-Productivity-and-Team-Goals-while-Handling-Softwar",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "33"
   },
   {
     "abstract": "Jupyter notebooks have become central in data science, integrating code, text and output in a flexible environment. With the rise of machine learning (ML), notebooks are increasingly used for prototyping and data analysis. However, due to their dependence on complex ML libraries and the flexible notebook semantics that allow cells to be run in any order, notebooks are susceptible to software bugs that may lead to program crashes. This paper presents a comprehensive empirical study focusing on crashes in publicly available Python ML notebooks. We collect 64,031 notebooks containing 92,542 crashes from GitHub and Kaggle, and manually analyze a sample of 746 crashes across various aspects, including crash types and root causes. Our analysis identifies unique ML-specific crash types, such as tensor shape mismatches and dataset value errors that violate API constraints. Additionally, we highlight unique root causes tied to notebook semantics, including out-of-order execution and residual errors from previous cells, which have been largely overlooked in prior research. Furthermore, we identify the most error-prone ML libraries, and analyze crash distribution across ML pipeline stages. We find that over 40% of crashes stem from API misuse and notebook-specific issues. Crashes frequently occur when using ML libraries like TensorFlow/Keras and Torch. Additionally, over 70% of the crashes occur during data preparation, model training, and evaluation or prediction stages of the ML pipeline, while data visualization errors tend to be unique to ML notebooks.",
@@ -10850,7 +11229,8 @@
     ],
     "title": "IDBFuzz: Web Storage DataBase Fuzzing with Controllable Semantics",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00346",
@@ -11412,14 +11792,24 @@
       "Kevin Moran",
       "Mattia Fazzini"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 11:30 - 11:40"
     ],
+    "doi": "10.1109/ase63991.2025.00182",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "97fb766b-d875-44cb-be39-2cb9c6d6d3e6",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "2196-2208",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Web & Mobile Systems 1"
     ],
@@ -11431,6 +11821,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00182",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/85/Generating-Failure-Based-Oracles-to-Support-Testing-of-Reported-Bugs-in-Android-Apps",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -11452,14 +11843,24 @@
       "Kexin Liu",
       "Yu Zhang"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 11:50 - 12:00"
     ],
+    "doi": "10.1109/ase63991.2025.00184",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "98cdd04f-fcd9-4e37-b9a7-190684daec40",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "2222-2234",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Bug Understanding 1"
     ],
@@ -11471,6 +11872,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00184",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/204/LLM-Powered-Multi-Agent-Collaboration-for-Intelligent-Industrial-On-Call-Automation",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -11487,14 +11889,24 @@
       "Gencheng Liu",
       "Jie Liu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 11:50 - 12:00"
     ],
+    "doi": "10.1109/ase63991.2025.00204",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "999641bb-990c-4ef2-9629-7dcdbeb2d6cd",
     "locations": [
       "Grand Hall 1"
     ],
+    "pages": "2478-2490",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Code Generation 2"
     ],
@@ -11506,6 +11918,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00204",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/216/Evaluating-and-Improving-Framework-based-Parallel-Code-Completion-with-Large-Language",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -11545,7 +11958,8 @@
     ],
     "title": "Fault Injection for Simulink-based CPS Models: Insights and Future Directions",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00326",
@@ -11868,7 +12282,8 @@
     ],
     "title": "Requirements Development and Formalization for Reliable Code Generation: A Multi-Agent Vision",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00345",
@@ -11878,6 +12293,12 @@
   },
   {
     "abstract": "Despite its promise of openness and inclusiveness, the development of free and open source software (FOSS) remains significantly unbalanced in terms of gender representation among contributors. To assist open source project maintainers and communities in addressing this imbalance, it is crucial to understand the causes of this inequality. In this study, we aim to establish how the COVID-19 pandemic has influenced the ability of women to contribute to public code. To do so, we use the Software Heritage archive, which holds the largest dataset of commits to public code, and the difference in differences (DID) methodology from econometrics that enables the derivation of causality from historical data. Our findings show that the COVID-19 pandemic has disproportionately impacted women’s ability to contribute to the development of public code, relatively to men. Further, our observations of specific contributor subgroups indicate that COVID-19 particularly affected women hobbyists, identified using contribution patterns and email address domains.",
+    "authorIds": [
+      "",
+      "0000-0003-2269-8094",
+      "0000-0002-4576-136X",
+      "0000-0002-3580-8806"
+    ],
     "authorInstitutions": "Annalí Casanueva (Ifo Institute, Big Data Junior Research Group, Munich, Germany); Davide Rossi (University of Bologna); Théo Zimmermann (Télécom Paris, Polytechnic Institute of Paris); Stefano Zacchiroli (LTCI, Télécom Paris, Institut Polytechnique de Paris, Palaiseau, France)",
     "authors": [
       "Annalí Casanueva",
@@ -11885,15 +12306,27 @@
       "Théo Zimmermann",
       "Stefano Zacchiroli"
     ],
+    "container": "Empirical Software Engineering",
     "dates": [
       "Mon 17 Nov 2025 14:40 - 14:50"
     ],
     "doi": "10.1007/s10664-024-10552-7",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9d8626ff-bf0a-44f6-8574-564de87f9b7d",
+    "issue": "1",
     "locations": [
       "Grand Hall 4"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s10664-024-10552-7.pdf"
+    ],
+    "publicationDate": "2025-01-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Human & Social Aspects 1"
     ],
@@ -11905,12 +12338,13 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1007/s10664-024-10552-7",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/47/The-Impact-of-the-COVID-19-Pandemic-on-Women-s-Contribution-to-Public-Code",
       "https://link.springer.com/article/10.1007/s10664-024-10552-7",
-      "https://doi.org/10.1007/s10664-024-10552-7",
       "https://arxiv.org/pdf/2410.01454",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "30"
   },
   {
     "abstract": "Automated web GUI testing is important for software quality, however, its effectiveness is often undermined by test case brittleness, especially in continuously evolving real-world applications. In this experience paper, we pragmatically investigate the root causes of brittleness. We first analyze why legacy test cases, derived from the Mind2Web dataset, fail when executed on current web application versions. Our findings reveal that brittleness stems from multifaceted factors, including test script design, web application complexity, and automation framework limitations. A longitudinal study further shows that 81.7% of repaired tests break again within six months, primarily due to similar recurring issues, highlighting the persistent nature of brittleness. We further demonstrate that Large Language Models, when provided with human-like diagnostic context, can successfully repair a substantial portion of these brittle tests, though human expertise remains important for more complex scenarios. Our findings emphasize that brittleness is a multifaceted problem requiring collaboration between different parts involved in the automation testing.",
@@ -11953,6 +12387,33 @@
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00251",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/243/Who-s-to-Blame-Rethinking-the-Brittleness-of-Automated-Web-GUI-Testing-from-a-Pragma",
+      "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
+    ]
+  },
+  {
+    "abstract": "All papers from research/journal first/industry showcase/NIER track that are being presented on 18th November will also have their posters displayed in Walker Hall throughout the day. Authors of research and journal first papers will be around their poster between 15:30~18:00; authors of industry showcase and NIER track papers will join their posters after their presentation (16:00~17:00).",
+    "authorInstitutions": "",
+    "authors": [],
+    "dates": [
+      "Tue 18 Nov 2025 09:00 - 18:00"
+    ],
+    "eventType": "Poster",
+    "id": "9e098c15-fde3-4d1b-9f04-3425d93a10b4",
+    "locations": [
+      "Walker Hall (Posters)"
+    ],
+    "sessionTitles": [
+      "Posters for Day 2"
+    ],
+    "sessions": [
+      "Tue_18_Nov_2025-Walker_Hall_Posters_-09_00_-_18_00-Posters_for_Day_2"
+    ],
+    "title": "Research/JF/Industry/NIER Posters for Day 2 (18th November)",
+    "tracks": [
+      "Posters"
+    ],
+    "urls": [
+      "https://conf.researchr.org/details/ase-2025/ase-2025-posters/2/Research-JF-Industry-NIER-Posters-for-Day-2-18th-November-",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
   },
@@ -12266,20 +12727,36 @@
   },
   {
     "abstract": "The exponential growth of the mobile app market underscores the importance of constant innovation and rapid response to user demands. As user satisfaction is paramount to the success of a mobile application (app), developers typically rely on user reviews, which represent user feedback that includes ratings and comments to identify areas for improvement. However, the sheer volume of user reviews poses challenges in manual analysis, necessitating automated approaches. Existing automated approaches either analyze only the target app’s reviews, neglecting the comparison of similar features to competitors or fail to provide suggestions for feature enhancement. To address these gaps, we propose a Large Language Model (LLM)-based Competitive User Review Analysis for Feature Enhancement) (LLM-Cure), an approach powered by LLMs to automatically generate suggestions for mobile app feature improvements. More specifically, LLM-Cure identifies and categorizes features within reviews by applying LLMs. When provided with a complaint in a user review, LLM-Cure curates highly rated (4 and 5 stars) reviews in competing apps related to the complaint and proposes potential improvements tailored to the target application. We evaluate LLM-Cure on 1,056,739 reviews of 70 popular Android apps. Our evaluation demonstrates that LLM-Cure significantly outperforms the state-of-the-art approaches in assigning features to reviews by up to 13% in F1-score, up to 16% in recall and up to 11% in precision. Additionally, LLM-Cure demonstrates its capability to provide suggestions for resolving user complaints. We verify the suggestions using the release notes that reflect the changes of features in the target mobile app. LLM-Cure achieves a promising average of 73% of the implementation of the provided suggestions, demonstrating its potential for competitive feature enhancement.",
+    "authorIds": [
+      "0000-0003-1274-7550",
+      "0000-0001-7090-0475",
+      "0000-0002-5335-0261"
+    ],
     "authorInstitutions": "Maram Assi (Université du Québec à Montréal); Safwat Hassan (University of Toronto); Ying Zou (Queen's University, Kingston, Ontario)",
     "authors": [
       "Maram Assi",
       "Safwat Hassan",
       "Ying Zou"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 14:50 - 15:00"
     ],
+    "doi": "10.1145/3744644",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "a13ab1c6-3429-466a-b589-fadb13fa4d81",
+    "issue": "4",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "1-25",
+    "publicationDate": "2026-04-30",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Web & Mobile Systems 2"
     ],
@@ -12291,9 +12768,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3744644",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/8/LLM-Cure-LLM-based-Competitor-User-Review-Analysis-for-Feature-Enhancement",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "While static program analyzers based on abstract interpretation implement precision-improving techniques to reduce false alarms, such as loop unrolling, their computational cost requires carefully devised heuristics for selective application. Manually designing such heuristics is non-trivial and error-prone, possibly leading to state explosion. This paper presents Loupe, a novel end-to-end approach for automatically learning loop unrolling heuristics for static program analysis. Unlike previous data-driven methods, Loupe leverages Graph Neural Networks (GNNs) to learn directly from graph-based program representations. To enable supervised learning, we use the static analyzer itself to automatically label training data. We implement Loupe on top of Frama-C/EVA, an open source C static analyzer, and demonstrate that the best performing heuristic (GINE) outperforms the Frama-C/EVA built-in heuristic on real-world programs, reducing false alarms by 1.5x while improving analysis performance by 56%. Remarkably, GINE accurately predicts loop unrolling decisions made by expert Frama-C/EVA engineers, while maintaining acceptable false-positive rates. Finally, we show that Loupe can effectively learn heuristics for other static analyzers such as Mopsa.",
@@ -12703,7 +13182,8 @@
     ],
     "title": "LLM-based Dynamic Differential Testing for Database Connectors with Reinforcement Learning-Guided Prompt Selection",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00322",
@@ -13010,7 +13490,8 @@
     ],
     "title": "STaint: Detecting Second-Order Vulnerabilities in PHP Applications with LLM-Assisted Bi-Directional Static Taint Analysis",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00347",
@@ -13149,6 +13630,12 @@
   },
   {
     "abstract": "Software maintenance constitutes a substantial portion of a software system’s lifetime cost, with comprehension of existing code accounting for roughly half of these expenses [Nguyen(2010)]. While inline comments and documentation can substantially ease code reading [Stapleton et al.(2020)], [Tenny(1988)], current automated approaches often produce unstructured, irrelevant, or overly verbose annotations for code snippets that must be manually selected. Such manual selection not only incurs additional developer effort but also risks overlooking critical code regions, leading to coverage gaps in documentation. Moreover, the vast majority of prior work evaluates comment quality using string-similarity metrics such as BLEU, despite evidence that BLEU correlates poorly with actual developer comprehension and task performance [Stapleton et al.(2020)]. This disconnect leaves open the question of whether automatically generated comments truly benefit maintainers in practice. To address these gaps, we introduce ComCat, an expertise-guided context generation pipeline that leverages developer input and LLM prompting to produce concise, accurate, and contextually appropriate comments in C/C++ code. ComCat operates in five fully automated stages: (1) an LLVM-based code parser that segments input C/C++ files into logical \\emph{Snippets} by leveraging Clang’s AST to identify functions, loops, and branches; (2) a fine-tuned Code Classifier based on CodeBERT that predicts the most helpful comment type for each Snippet, achieving a 96% classification f1-score on held-out examples; (3) a template catalog mapping each comment class to a prompt structure; (4) a prompt generator that composes prompts by combining snippet-level code context with file-level summaries and selected template slots; and (5) ChatGPT-driven comment synthesis followed by automated AST-based insertion into the source. Taken as a whole, ComCat takes C/C++ source code as input and produces thoroughly commented equivalent source code as output, complete with inline comments and function-level summaries. This fully automated pipeline leverages human-subject research to inform its design, ensuring relevance and clarity of generated comments. We validate ComCat through human-subject research in three studies. First, in HSR1 (n=24), we derive a 12-category schema and corresponding dataset of classified code-comment pairs, identifying the five comment types most useful for comprehension according to expert participants (function, variable, snippet functionality, branch, reasoning). Using this schema, we train the Code Classifier and construct developer-guided templates. Next, in HSR2 (n=54), participants complete short-answer, code writing, and debugging tasks given code that is commented in different ways, and we measure their performance. HSR2 demonstrates that ComCat-generated comments increase overall correctness by 13.3% over human-written comments and 16.3% over naively prompted ChatGPT (improving from 71.4% and 68.4% to 84.7% correctness respectively; $p<0.001$). Finally, in HSR3 (n=32), we find that developers prefer ComCat comments to human and standard ChatGPT outputs in 66%–82% of trials ($p<0.001$), indicating strong subjective endorsement. Beyond correctness and preference, ComCat improves comment consistency over standard ChatGPT by ~70% (BLEU 0.334 vs.\\ 0.197) and yields perfect run-to-run code stability (BLEU=1.000). Here we use BLEU only to measure consistency, not comprehension. These improvements in correctness and developer preference show that ComCat increases code comprehensibility, a factor known to boost productivity and lower maintenance costs [Nguyen(2010)]. Our contributions include: (1) a developer-validated taxonomy and annotated dataset of C/C++ comments, (2) a catalog of LLM prompt templates for targeted comment generation, (3) the ComCat tool for automated expertise-guided commenting, and (4) empirical evidence of its effectiveness in improving code comprehension and developer satisfaction. We release our dataset and implementation ( https://osf.io/tf2eu/?view_only=4dcf8efa50a346dc96d28b139b0d3b90 ) to support future research on AI-assisted software documentation.",
+    "authorIds": [
+      "0009-0006-8051-1063",
+      "0009-0006-1225-6312",
+      "0000-0002-5885-5365",
+      "0000-0002-4001-3442"
+    ],
     "authorInstitutions": "Skyler Grandel (Vanderbilt University); Scott Andersen (National Autonomous University of Mexico); Yu Huang (Vanderbilt University); Kevin Leach (Vanderbilt University)",
     "authors": [
       "Skyler Grandel",
@@ -13156,14 +13643,25 @@
       "Yu Huang",
       "Kevin Leach"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 12:10 - 12:20"
     ],
+    "doi": "10.1145/3742475",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "aaed5092-4cfe-4478-adc7-2143cfce000c",
+    "issue": "3",
     "locations": [
       "Grand Hall 3"
     ],
+    "pages": "1-30",
+    "publicationDate": "2026-03-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Maintenance & Evolution 3"
     ],
@@ -13175,10 +13673,12 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3742475",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/21/ComCat-Expertise-Guided-Context-Generation-to-Enhance-Code-Comprehension",
       "https://osf.io/tf2eu/?view_only=4dcf8efa50a346dc96d28b139b0d3b90",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "When proving to a third party that a software system is free from critical memory bugs, software vendors often face the problem of having to reveal their source code, so that the third party can scan the source code using static analysis tools. However, such transparency poses a significant threat to vendors, as the source code typically contains proprietary algorithms, core technical innovations, or trade secrets, exposing them to potential intellectual property risks. In this paper, we present a novel solution that offers a balance between transparency and code privacy, so that software vendors can provide minimal source code information but can justify the sufficiency of bug detection. To this end, we propose DIReducer, which reduces source code information, a.k.a. debug information, from non-stripped binaries while preserving its utility for memory bug detection. DIReducer consists of two components: selective pruning and type minimization. The former eliminates redundant debug information, and the latter is proved to be NP-hard and minimizes type-related debug information by reducing it to the classic set-cover problem, which offers feasible and near-optimal solutions. Experimental results show that we can reduce over 90% of debug information while maintaining similar bug detection capability compared to using full debug information.",
@@ -13443,7 +13943,8 @@
     ],
     "title": "Are We SOLID Yet? An Empirical Study on Prompting LLMs to Detect Design Principle Violations",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00350",
@@ -13532,7 +14033,8 @@
     ],
     "title": "How Does ChatGPT Make Assumptions When Creating Erroneous Programs?",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00321",
@@ -14247,6 +14749,14 @@
   },
   {
     "abstract": "Adaptive Random Testing (ART) enhances the testing effectiveness (including faultdetection capability) of Random Testing (RT) by increasing the diversity of the random test cases throughout the input domain. Many ART algorithms have been investigated such as Fixed-Size-Candidate-Set ART (FSCS) and Restricted Random Testing (RRT), and have been widely used in many practical applications. Despite its popularity, ART suffers from the problem of high computational costs during test-case generation, especially as the number of test cases increases. Although several strategies have been proposed to enhance the ART testing efficiency, such as the forgetting strategy and the 𝑘-dimensional tree strategy, these algorithms still face some challenges, including: (1) Although these algorithms can reduce the computation time, their execution costs are still very high, especially when the number of test cases is large; and (2) To achieve low computational costs, they may sacrifice some fault-detection capability. In this paper, we propose an approach based on Approximate Nearest Neighbors (ANNs), called Locality-Sensitive Hashing ART (LSH-ART). When calculating distances among different test inputs, LSHART identifies the approximate (not necessarily exact) nearest neighbors for candidates in an efficient way. The results of our simulations and empirical studies show that, overall, LSH-ART achieves comparable and even better fault detection than the original ART and its variants. LSH-ART incurs lower computational costs when generating the same number of test cases, especially when the input domain dimensionality is high, resulting in better cost-effectiveness. We have also reported on a preliminary investigation into expanding the scope of LSH-ART from numerical to nonnumerical domains. The study showed LSH efficiency to be superior to other ART variants, with significant advantages over the others when searching for the (approximate) nearest neighbors in these nonnumerical domains. These findings highlight the potential for LSH-ART to be extended to other types of programs, and we look forward to exploring such a possibility in our future research.",
+    "authorIds": [
+      "0000-0002-1769-6126",
+      "0009-0004-8746-316X",
+      "0009-0007-3167-1236",
+      "0000-0003-0877-4353",
+      "0000-0001-6013-1369",
+      "0000-0002-3284-9143"
+    ],
     "authorInstitutions": "Rubing Huang (Macau University of Science and Technology (MUST)); Chenhui Cui (Macau University of Science and Technology); Junlong Lian (Jiangsu University); Haibo Chen (Jiangsu University); Dave Towey (University of Nottingham Ningbo China); Weifeng Sun",
     "authors": [
       "Rubing Huang",
@@ -14256,14 +14766,25 @@
       "Dave Towey",
       "Weifeng Sun"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Wed 19 Nov 2025 12:10 - 12:20"
     ],
+    "doi": "10.1109/tse.2024.3379592",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b42328a2-3d07-48c7-a5b6-9a74ea70659b",
+    "issue": "5",
     "locations": [
       "Vista"
     ],
+    "pages": "1182-1214",
+    "publicationDate": "2024-05-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Test Generation, Selection & Prioritization 1"
     ],
@@ -14275,9 +14796,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2024.3379592",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/33/Toward-Cost-Effective-Adaptive-Random-Testing-An-Approximate-Nearest-Neighbor-Approa",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "50"
   },
   {
     "abstract": "The multi-window mode in Android has greatly improved productivity and usability by allowing multiple apps to run concurrently. However, alongside the advantages, such mode also introduces unforeseen risks in both functionality and security. In this work, we present the first systematic study to identify a previously unexplored class of issues, termed Multi-window Resource Conflicts (MRCs). Such conflicts occur when multiple app windows access the same system resource concurrently, potentially leading to crashes, functionality failures or unintended behaviors. To enhance the robustness and security of Android multi-window execution, we conduct a systematic and in-depth empirical study on the MRCs. We begin with a comprehensive root cause analysis, categorizing MRCs into three fundamental types based on their triggering patterns and affected resource states. To enable large-scale detection, we develop MRC-Detector, a static analysis framework that automatically identifies MRC issues in Android apps. Our manual verification confirms its high accuracy and effectiveness. We apply the MRC-Detector to the detection of over $150k$ real-world apps from F-droid and Google Play, uncovering the prevalence of MRC risks. Additionally, the distribution of MRC issues is analyzed in depth across multiple dimensions, including MRC type, APK size, app source and security classification. We further investigated the recognition and confirmation from developers and received $14$ positive responses from vendors and project maintainers. Finally, comprehensive mitigation strategies are discussed. The materials of the study are available at: https://github.com/Huimilia/MRC .",
@@ -14388,14 +14911,24 @@
       "Jing Tang",
       "Peng Cai"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Mon 17 Nov 2025 16:30 - 16:40"
     ],
+    "doi": "10.1109/ase63991.2025.00310",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "b85b44bd-43bf-4775-9bb7-7f0e7f315df1",
     "locations": [
       "Grand Hall 6"
     ],
+    "pages": "3742-3753",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Log & Dependency 2"
     ],
@@ -14407,6 +14940,7 @@
       "Industry Showcase"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00310",
       "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/56/LogSage-An-LLM-Based-Framework-for-CI-CD-Failure-Detection-and-Remediation-with-Indu",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -14563,14 +15097,24 @@
       "Xinyue Li",
       "MingXuan Hui"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 12:10 - 12:20"
     ],
+    "doi": "10.1109/ase63991.2025.00099",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "bc608ad6-5076-4e9c-bef0-5d5cafc1fbe2",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "1143-1155",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Fault Localization"
     ],
@@ -14582,6 +15126,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00099",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/161/Hypergraph-Neural-Network-based-Multi-Granular-Root-Cause-Localization-for-Microservi",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -14862,7 +15407,8 @@
     ],
     "title": "A Secure Mocking Approach towards Software Supply Chain Security",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00352",
@@ -15084,7 +15630,8 @@
     ],
     "title": "Measuring LLM Code Generation Stability via Structural Entropy",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00343",
@@ -15501,6 +16048,15 @@
   },
   {
     "abstract": "Code models, such as CodeBERT and CodeT5, offer general-purpose representations of code and play a vital role in supporting downstream automated software engineering tasks. Most recently, code models were revealed to be vulnerable to backdoor attacks. A code model that is backdoor-attacked can behave normally on clean examples but will produce pre-defined malicious outputs on examples injected with triggers that activate the backdoors. Existing backdoor attacks on code models use unstealthy and easy-to-detect triggers. This paper aims to investigate the vulnerability of code models to stealthy backdoor attacks. To this end, we propose Afraidoor (Adversarial Feature as Adaptive Backdoor). Afraidoor achieves stealthiness by leveraging adversarial perturbations to inject adaptive triggers into different inputs. We evaluate Afraidoor on three widely adopted code models (CodeBERT, PLBART, and CodeT5) and two downstream tasks (code summarization and method name prediction). We find that around 85% of adaptive triggers in Afraidoor bypass the detection in the defense process. By contrast, fewer than 12% of the triggers from previous work bypass the defense. When the defense method is not applied, both Afraidoor and baselines have almost perfect attack success rates. However, once a defense is applied, the success rates of baselines decrease dramatically to 10.47% and 12.06%, while the success rate of Afraidoor is 77.05% and 92.98% on the two tasks. Our finding exposes security weaknesses in code models under stealthy backdoor attacks and show that the existing defense method cannot provide sufficient protection. We call for more research efforts in understanding security threats to code models and developing more effective countermeasures.",
+    "authorIds": [
+      "0000-0001-5938-1918",
+      "0000-0002-1006-8493",
+      "0000-0003-0481-7264",
+      "0000-0001-7335-7295",
+      "0000-0002-0799-5018",
+      "0000-0003-3370-8585",
+      "0000-0002-4367-7201"
+    ],
     "authorInstitutions": "Zhou Yang (University of Alberta, Alberta Machine Intelligence Institute); Bowen Xu (North Carolina State University); Jie M. Zhang (King's College London); Hong Jin Kang (University of Sydney); Jieke Shi (Singapore Management University); Junda He (Singapore Management University); David Lo (Singapore Management University)",
     "authors": [
       "Zhou Yang",
@@ -15511,14 +16067,25 @@
       "Junda He",
       "David Lo"
     ],
+    "container": "IEEE Transactions on Software Engineering",
     "dates": [
       "Tue 18 Nov 2025 15:20 - 15:30"
     ],
+    "doi": "10.1109/tse.2024.3361661",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cb6ce60e-d465-43c5-9c50-5f30aa621a0b",
+    "issue": "4",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "721-741",
+    "publicationDate": "2024-04-01",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
       "Security 2"
     ],
@@ -15530,9 +16097,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1109/tse.2024.3361661",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/4/Stealthy-Backdoor-Attack-for-Code-Models",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "50"
   },
   {
     "abstract": "Large language models (LLMs) have become an essential tool to support developers using traditional text-based programming languages, but the graphical notation of the block-based Scratch programming environment inhibits the use of LLMs. To overcome this limitation, we propose the LitterBox+ framework that extends the Scratch static code analysis tool LitterBox with the generative abilities of LLMs. By converting block-based code to a textual representation suitable for LLMs, LitterBox+ allows users to query LLMs about their programs, about quality issues reported by LitterBox, and it allows generating code fixes. Besides offering a programmatic API for these functionalities, LitterBox+ also extends the Scratch user interface to make these functionalities available directly in the environment familiar to learners. The framework is designed to be easily extensible with other prompts, LLMs providers, and new features combining the program analysis capabilities of LitterBox with the generative features of LLMs. We provide a screencast demonstrating the tool at https://youtu.be/RZ6E0xgrIgQ .",
@@ -15587,14 +16156,24 @@
       "Jinku Li",
       "Jianfeng Ma"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 12:10 - 12:20"
     ],
+    "doi": "10.1109/ase63991.2025.00071",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cd9cad97-c3f3-4ae0-9b12-1cf265489768",
     "locations": [
       "Grand Hall 5"
     ],
+    "pages": "791-803",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Security 1"
     ],
@@ -15606,6 +16185,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00071",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/150/Hit-The-Bullseye-On-The-First-Shot-Improving-LLMs-Using-Multi-Sample-Self-Reward-Fee",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -15797,14 +16377,24 @@
       "Zhonghao Jiang",
       "Ran Hou"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Tue 18 Nov 2025 15:30 - 18:00"
     ],
+    "doi": "10.1109/ase63991.2025.00362",
     "eventType": "Demonstration",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "cfcf97ae-f8a7-43b0-9a9b-1f7ae40e076e",
     "locations": [
       "Walker Hall (Demo)"
     ],
+    "pages": "4009-4012",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Tools - LLMs and Agents"
     ],
@@ -15816,6 +16406,7 @@
       "Tool Demonstration Track"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00362",
       "https://conf.researchr.org/details/ase-2025/ase-2025-tool-demonstration-track/10/AgentDroid-A-Multi-Agent-Tool-for-Detecting-Fraudulent-Android-Applications",
       "https://youtu.be/YOM9Ex-nBts",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
@@ -16173,6 +16764,12 @@
   },
   {
     "abstract": "Large Language Models (LLMs) have demonstrated their ability to solve tasks across various domains, including software engineering. However, their extensive number of parameters makes full fine-tuning computationally prohibitive. While Parameter-efficient fine-tuning (PEFT) methods, such as adapter fine-tuning, have been proposed to address this issue; yet, they typically employ default configurations that use the same adapter settings across all layers. Concurrently, Automated Machine Learning (AutoML) has demonstrated success in hyperparameter optimization, while Neural Architecture Search (NAS) has proven effective in optimizing neural network architectures. Building on these successes, we introduce AutoAdapt, a novel approach that leverages NAS to automatically discover task-specific, layer-wide adapter configurations, allowing each layer to adopt distinct adapter parameters. AutoAdapt defines a search space tailored for adapter-based fine-tuning and employs an evolutionary algorithm to explore a diverse range of configurations, thereby evaluating the benefits of customizing each layer individually. We evaluate AutoAdapt on well-established software engineering tasks, including vulnerability detection, code clone detection, and code search. Our empirical results demonstrate that AutoAdapt outperforms manually engineered adapter configurations, achieving up to a 5% improvement in F1-score for clone detection and defect detection, and up to a 25% improvement in MRR for code search. Additionally, it surpasses other PEFT techniques, such as Prefix Tuning and LoRA. Furthermore, AutoAdapt is capable of identifying configurations that outperform even full fine-tuning, while training less than 2.5% of the model parameters. A comprehensive analysis reveals that factors such as selective layer adaptation, module selection (e.g., attention versus feed-forward layers), normalization, and dropout significantly influence performance across different tasks. Additionally, our findings suggest the possibility of transferring adapter configurations to similar datasets and tasks, thus simplifying the search for optimal PEFT settings. Our code and data are available for access at: https://github.com/serval-uni-lu/AutoAdapt",
+    "authorIds": [
+      "0009-0005-7908-3279",
+      "0000-0001-8312-1358",
+      "0000-0003-1852-2547",
+      "0000-0002-1045-4861"
+    ],
     "authorInstitutions": "Amal Akli (University of Luxembourg); Maxime Cordy (University of Luxembourg, Luxembourg); Mike Papadakis (University of Luxembourg); Yves Le Traon (University of Luxembourg, Luxembourg)",
     "authors": [
       "Amal Akli",
@@ -16180,14 +16777,25 @@
       "Mike Papadakis",
       "Yves Le Traon"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Mon 17 Nov 2025 12:20 - 12:30"
     ],
+    "doi": "10.1145/3734867",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d7a3f5ad-a336-4ca0-af9b-dafd6fc0ac41",
+    "issue": "3",
     "locations": [
       "Vista"
     ],
+    "pages": "1-31",
+    "publicationDate": "2026-03-31",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "SE4AI & AI4SE 1"
     ],
@@ -16199,10 +16807,12 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3734867",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/34/AutoAdapt-On-the-Application-of-AutoML-for-Parameter-Efficient-Fine-Tuning-of-Pre-Tr",
       "https://github.com/serval-uni-lu/AutoAdapt",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "A resource leak occurs when a program fails to release finite resources such as sockets, file descriptors, database connections, etc. While sound static analysis tools can detect all leaks, automatically repairing them remains challenging. Prior work took the output of a detection tool and attempted to repair only leaks of a hard-coded list of library resource types. This approach limits the scope of repairable leaks: real-world code uses resource wrappers that store a resource in a field and must themselves be closed. This paper makes four key contributions to improve resource leak repair in the presence of wrappers. (1) It integrates inference of resource management specifications into the repair pipeline, enabling extant fixing approaches to reason about wrappers. (2) It transforms programs into variants that are easier to analyze, making inference, detection, and fixing tools more effective; for instance, it makes detection tools report problems closer to the root cause, often in a client of a resource wrapper rather than within the wrapper class itself. (3) A novel Field Containment Analysis reasons more precisely about resource lifetimes, enabling repair of more leaks involving resources stored in fields. (4) It introduces a new repair pattern and more precise reasoning to better handle resources stored in non-final fields. Prior work fixed 41% of resource leak warnings in the NJR benchmark suite; our implementation Arodnap fixes 69%.",
@@ -17488,20 +18098,35 @@
   },
   {
     "abstract": "Fuzzing is an effective technique for detecting bugs by executing programs with randomly generated or mutated inputs. However, as various fuzzers have been developed, selecting the most suitable fuzzer for a specific program has become increasingly difficult. To address this issue, collaborative fuzzing techniques have been proposed, which combine multiple fuzzers and select the optimal one. However, existing approaches are inefficient and have limited accuracy, as they require significant time to evaluate fuzzer performance and fail to effectively utilize the latest results from the fuzzing campaign. To overcome these challenges, we propose RCFuzzer, a ReCommendation based collaborative Fuzzer. RCFuzzer treats the fuzzer selection problem as a Multi-Armed Bandit(MAB) problem and improves the efficiency and accuracy of selecting the optimal fuzzer using Thompson sampling. First, RCFuzzer is efficient because it directly utilizes the current fuzzing results, eliminating the need for additional time to evaluate individual fuzzers. Second, RCFuzzer can accurately select the optimal fuzzer by using the fuzzing results obtained from the current state of the fuzzing target as feedback. Additionally, to further improve the accuracy of fuzzer selection, RCFuzzer adopts the branch difficulty heuristics, which assigns different weights to branches based on their difficulty to cover and evaluates fuzzers accordingly. The empirical evaluation on the 47 programs from MAGMA, UNIFUZZ and Google’s Fuzzer-Test-Suite shows that RCFuzzer outperforms individual fuzzers in code coverage and crash detection capability. Additionally, RCFuzzer achieves higher code coverage for 29 out of 47 programs and detects 18 more unique crashes than autofz, the state-of-the-art collaborative fuzzer.",
+    "authorIds": [
+      "",
+      "",
+      "0000-0001-6366-6916"
+    ],
     "authorInstitutions": "Hyeonmin Mo (Hanyang University); Jongmun Yang (Hanyang University); Yunho Kim (Hanyang University)",
     "authors": [
       "Hyeonmin Mo",
       "Jongmun Yang",
       "Yunho Kim"
     ],
+    "container": "Journal of Systems and Software",
     "dates": [
       "Wed 19 Nov 2025 15:20 - 15:30"
     ],
+    "doi": "10.1016/j.jss.2025.112564",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ea1be10d-98a8-4a2a-aa46-eb2dab38677c",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "112564",
+    "publicationDate": "2025-12-01",
+    "publisher": "Elsevier BV",
     "sessionTitles": [
       "Fuzzing 2"
     ],
@@ -17513,10 +18138,12 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1016/j.jss.2025.112564",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/9/RCFuzzer-Recommendation-based-Collaborative-Fuzzer",
       "https://www.sciencedirect.com/science/article/pii/S016412122500233X",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "230"
   },
   {
     "abstract": "Log-based fault diagnosis is essential for maintaining software system availability. However, existing fault diagnosis methods are built using a task-independent manner, which fails to bridge the gap between anomaly detection and root cause localization in terms of data form and diagnostic objectives, resulting in three major issues: 1) Diagnostic bias accumulates in the system; 2) System deployment relies on expensive monitoring data; 3) The collaborative relationship between diagnostic tasks is overlooked. Facing this problems, we propose a novel end-to-end log-based fault diagnosis method, Chimera, whose key idea is to achieve end-to-end fault diagnosis through bidirectional interaction and knowledge transfer between anomaly detection and root cause localization. Chimera is based on interactive multi-task learning, carefully designing interaction strategies between anomaly detection and root cause localization at the data, feature, and diagnostic result levels, thereby achieving both sub-tasks interactively within a unified end-to-end framework. Evaluation on two public datasets and one industrial dataset shows that Chimera outperforms existing methods in both anomaly detection and root cause localization, achieving improvements of over 2.92%~5.00% and 19.01%~37.09%, respectively. It has been successfully deployed in production, serving an industrial cloud platform. Website: https://chimera4log.github.io/",
@@ -17799,7 +18426,8 @@
     ],
     "title": "When Abstraction Breaks Physics: Rethinking Modular Design in Quantum Software",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00336",
@@ -17982,6 +18610,33 @@
     ]
   },
   {
+    "abstract": "All papers from research/journal first/industry showcase/NIER track that are being presented on 17th November will also have their posters displayed in Walker Hall throughout the day. Authors of research and journal first papers will be around their poster between 15:30~18:00; authors of industry showcase and NIER track papers will join their posters after their presentation (16:00~17:00).",
+    "authorInstitutions": "",
+    "authors": [],
+    "dates": [
+      "Mon 17 Nov 2025 09:00 - 18:00"
+    ],
+    "eventType": "Poster",
+    "id": "f1516f6c-e66b-4208-aa2c-c84e126371ee",
+    "locations": [
+      "Walker Hall (Posters)"
+    ],
+    "sessionTitles": [
+      "Posters for Day 1"
+    ],
+    "sessions": [
+      "Mon_17_Nov_2025-Walker_Hall_Posters_-09_00_-_18_00-Posters_for_Day_1"
+    ],
+    "title": "Research/JF/Industry/NIER Posters for Day 1 (17th November)",
+    "tracks": [
+      "Posters"
+    ],
+    "urls": [
+      "https://conf.researchr.org/details/ase-2025/ase-2025-posters/1/Research-JF-Industry-NIER-Posters-for-Day-1-17th-November-",
+      "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
+    ]
+  },
+  {
     "abstract": "Pre-trained large language models (LLMs) are increasingly used in software development for code generation to enhance productivity. Companies often prefer private LLMs over public ones to mitigate the risk of exposing corporate secrets. Validating the stability of the outputs from these LLMs is crucial, and our study proposes using symmetric Metamorphic Relations (MRs) from Metamorphic Testing (MT) for this purpose. Our study involved an empirical experiment with eight private LLMs, two public LLMs and two publicly available datasets. The test scenario simulated a software development environment where private LLMs were used to generate source codes for software enhancements and maintenance, while ensuring that the company’s software assets remained secure and unexposed. We defined seven symmetric MRs that are based on the principles of symmetry and semantic preservation. These MRs were used to generate “Follow-up” datasets from “Source” datasets for testing purposes. Our evaluation aimed to detect the occurrence of violations (inconsistent predictions) between “Source” and “Follow-up” datasets. We then assess the effectiveness of MRs in identifying correct and incorrect non-violated predictions from ground truths, as well as how the MRs influenced LLM performance by measuring the correctness of the generated codes. Results showed that one public and four private LLMs did not violate “Case transformation of prompts” MR. Furthermore, the effectiveness and performance results indicated that proposed MRs effectively explain the instability of LLM’s outputs through “Case transformation of prompts”, “Duplication of prompts”, and “Paraphrasing of prompts”. Additionally, the findings revealed that using a mix of LLM technologies and pre-training with a vast number of datasets can cause the MRs under study to be ineffective. Most LLMs, except copilot, demonstrated low semantic understanding and primarily relied on statistical patterns to interpret the prompts. This study demonstrated that the proposed MRs could serve as a validation tool with violation measurements for the stability of code generation LLMs’ outputs under the simulation, where no ground truth is available. The effectiveness and performance results indicated that proposed MRs are indeed effective tools for explaining the instability of LLM’s outputs. Moreover, the findings highlighted the necessity for enhancing LLMs’ semantic understanding of prompts to improve stability and suggested potential future research directions. These include exploring different MRs, enhancing semantic understanding, and applying symmetry to prompt engineering.",
     "authorInstitutions": "Chan Pak Yuen (Department of Computer Science, City University of Hong Kong, Kowloon, Hong Kong, China); Jacky Keung (City University of Hong Kong); Zhen Yang (Shandong University)",
     "authors": [
@@ -18069,20 +18724,36 @@
   },
   {
     "abstract": "Controllers for software-defined networks (SDNs) are centralised software components that enable advanced network functionalities, such as dynamic traffic engineering and network virtualisation. However, these functionalities increase the complexity of SDN controllers, making thorough testing crucial. SDN controllers are stateful, interacting with multiple network devices through sequences of control messages. Identifying stateful failures in an SDN controller is challenging due to the infinite possible sequences of control messages, which result in an unbounded number of stateful interactions between the controller and network devices. In this article, we propose SeqFuzzSDN, a learning-guided fuzzing method for testing stateful SDN controllers. SeqFuzzSDN aims to (1) efficiently explore the state space of the SDN controller under test, (2) generate effective and diverse tests (i.e., control message sequences) to uncover failures, and (3) infer accurate failure-inducing models that characterise the message sequences leading to failures. In addition, we compare SeqFuzzSDN with three extensions of state-of-the-art (SOTA) methods for fuzzing SDNs. Our findings show that, compared to the extended SOTA methods, SeqFuzzSDN (1) generates more diverse message sequences that lead to failures within the same time budget, and (2) produces more accurate failure-inducing models, significantly outperforming the other extended SOTA methods in terms of sensitivity.",
+    "authorIds": [
+      "0000-0001-8219-0466",
+      "0000-0001-9025-7173",
+      "0000-0002-1393-1010"
+    ],
     "authorInstitutions": "Raphaël Ollando (University of Luxembourg); Seung Yeob Shin (University of Luxembourg); Lionel Briand (University of Ottawa, Canada; Lero centre, University of Limerick, Ireland)",
     "authors": [
       "Raphaël Ollando",
       "Seung Yeob Shin",
       "Lionel Briand"
     ],
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Wed 19 Nov 2025 15:00 - 15:10"
     ],
+    "doi": "10.1145/3733717",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "f28dcf6e-a173-40b5-9d00-1c9105d70b8f",
+    "issue": "2",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "1-45",
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Fuzzing 2"
     ],
@@ -18094,9 +18765,11 @@
       "Journal-First"
     ],
     "urls": [
+      "https://doi.org/10.1145/3733717",
       "https://conf.researchr.org/details/ase-2025/ase-2025-journal-first-track/13/Learning-Guided-Fuzzing-for-Testing-Stateful-SDN-Controllers",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
-    ]
+    ],
+    "volume": "35"
   },
   {
     "abstract": "An open source Linux distribution often undergoes version upgrades and migrations, which is prone to incompatibility issues especially when it comes to large-scale software changes. Although differential testing has been widely used in software testing, it is still challenging to apply it for detecting such incompatibilities in the context of industrial settings. In this paper, we report our experience in leveraging LLMs to address the challenges faced by the Anolis OS community. Specifically, we develop an LLM-based differential testing method called Versify to assist maintainers of Linux distributions in locating incompatibilities during version upgrades and migrations. Its first month of use in Anolis OS community shows that it uncovered 8,489 instances of differing behavior, of which 644 were prioritized for attention by developers. After deduplication and filtering, 39 unique compatibility reports were identified. Feedback from Anolis OS developers indicates that our reports have provided valuable recommendations for package selection in future OS releases. As of this writing, Versify has been in use for over a year in the Anolis OS testing process, and it has reduced package incompatibility issues by 81.8% in the community.",
@@ -18234,7 +18907,8 @@
     ],
     "title": "LLM-Guided Genetic Improvement: Envisioning Semantic Aware Automated Software Evolution",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00339",
@@ -18593,7 +19267,8 @@
     ],
     "title": "CONFUSETAINT: Exploiting Vulnerabilities to Bypass Dynamic Taint Analysis",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00340",
@@ -18730,7 +19405,8 @@
     ],
     "title": "Exploring Autonomous Agents: A Closer Look at Why They Fail When Completing Tasks",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00330",
@@ -18987,14 +19663,24 @@
       "Daoyuan Wu",
       "Yang Liu"
     ],
+    "container": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "dates": [
       "Wed 19 Nov 2025 15:10 - 15:20"
     ],
+    "doi": "10.1109/ase63991.2025.00013",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "fc4f0578-a54b-47b7-9c99-8872a082c36e",
     "locations": [
       "Grand Hall 2"
     ],
+    "pages": "52-64",
+    "publicationDate": "2025-11-16",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Fuzzing 2"
     ],
@@ -19006,6 +19692,7 @@
       "Research Papers"
     ],
     "urls": [
+      "https://doi.org/10.1109/ase63991.2025.00013",
       "https://conf.researchr.org/details/ase-2025/ase-2025-papers/116/Learning-from-the-Past-Real-World-Exploit-Migration-for-Smart-Contract-PoC-Generatio",
       "https://conf.researchr.org/program/ase-2025/program-ase-2025/"
     ]
@@ -19086,7 +19773,8 @@
     ],
     "title": "Multiple Schema-Conformant Declarative Code Generation",
     "tracks": [
-      "NIER"
+      "NIER",
+      "New Ideas and Emerging Results"
     ],
     "urls": [
       "https://doi.org/10.1109/ase63991.2025.00344",

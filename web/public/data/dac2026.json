@@ -10764,14 +10764,27 @@
       "Wei Xing",
       "Wang Kang"
     ],
+    "container": "International Journal of Computer Vision",
     "dates": [
       "Monday, July 27"
     ],
+    "doi": "10.1007/s11263-026-02731-4",
     "eventType": "Research Manuscript",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "RESEARCH1420",
+    "issue": "4",
     "locations": [
       "Mtg Room 202AB"
     ],
+    "pdfUrls": [
+      "https://link.springer.com/content/pdf/10.1007/s11263-026-02731-4.pdf"
+    ],
+    "publicationDate": "2026-04-01",
+    "publisher": "Springer Science and Business Media LLC",
     "sessionTitles": [
       "Generative AI and Graph-Based Learning for Next-Gen Circuit & Device Simulation",
       "RM Poster Session Two"
@@ -10788,9 +10801,11 @@
       "SYS4. Embedded System Design Tools and Methodologies"
     ],
     "urls": [
+      "https://doi.org/10.1007/s11263-026-02731-4",
       "https://63dac.conference-program.com/?post_type=page&p=16&id=RESEARCH1420&sess=sess117",
       "https://63dac.conference-program.com/?post_type=page&p=16&id=RESEARCH1420&sess=sess313"
-    ]
+    ],
+    "volume": "134"
   },
   {
     "abstract": "Spiking Neural Networks (SNNs) are energy-efficient and biologically plausible, ideal for embedded and security-critical systems, yet their adversarial robustness remains open. Existing adversarial attacks often overlook SNNs' bio-plausible dynamics. We propose Spike-PTSD, a biologically inspired adversarial attack framework modeled on abnormal neural firing in Post-Traumatic Stress Disorder (PTSD). It localizes decision-critical layers, selects neurons via hyper/hypoactivation signatures, and optimizes adversarial examples with dual objectives. Across six datasets, three encoding types, and four models, Spike-PTSD achieves over 99% success rates, systematically compromising SNN robustness. Code: https://anonymous.4ope- n.science/r/Anonymous-testcode.",

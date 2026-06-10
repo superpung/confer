@@ -2,14 +2,9 @@
 
 Source-specific options:
 
-    program_url:         the Researchr program page (required)
-    context:             Researchr context id, inferred from program_url when absent
-    include_tracks:      track display names to keep (optional)
-    include_event_types: event type labels to keep (optional)
-    exclude_event_types: event type labels to drop (optional)
-    default_event_type: event type to use when a page omits one (optional)
+    program_url:         the Researchr program or track page (required)
+    context:             optional Researchr context id override
     fetch_details:       fetch event detail modals for abstracts (default true)
-    require_authors:     skip records without parsed authors (default false)
 """
 
 from __future__ import annotations
@@ -29,11 +24,94 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 from ..config import VenueConfig
 from ..fetcher import Fetcher
 from ..models import Paper
-from ..util import clean_text, safe_slug, unique_preserve_order
+from ..util import clean_text, meaningful_abstract, safe_slug, unique_preserve_order
 from .base import Scraper
 
 
 DURATION_RE = re.compile(r"^(?:(\d+)h)?(?:(\d+)m)?$")
+
+PAPER_TRACK_KEYWORDS = (
+    "paper",
+    "research",
+    "technical",
+    "journal",
+    "demonstration",
+    "demo",
+    "tool",
+    "doctoral",
+    "poster",
+    "student research",
+    "src",
+    "industry",
+    "practice",
+    "education",
+    "society",
+    "new ideas",
+    "emerging",
+    "vision",
+    "reflection",
+    "fose",
+)
+NON_PAPER_TRACK_KEYWORDS = (
+    "keynote",
+    "social",
+    "workshop",
+    "tutorial",
+    "catering",
+    "break",
+    "lunch",
+    "dinner",
+    "reception",
+    "plenary",
+    "opening",
+    "closing",
+    "volunteer",
+    "attending",
+    "mentoring",
+    "new faculty",
+    "most influential",
+    "technical briefing",
+    "open science",
+    "submitting",
+)
+PAPER_EVENT_TYPE_KEYWORDS = (
+    "paper",
+    "poster",
+    "talk",
+    "demonstration",
+    "presentation",
+)
+NON_PAPER_EVENT_TYPE_KEYWORDS = (
+    "break",
+    "coffee",
+    "lunch",
+    "dinner",
+    "keynote",
+    "panel",
+    "opening",
+    "closing",
+    "social",
+    "meeting",
+    "tutorial",
+    "award",
+    "plenary",
+    "reception",
+    "other",
+)
+NON_PAPER_TITLE_PATTERNS = (
+    re.compile(r"^q\s*&\s*a$", re.IGNORECASE),
+    re.compile(r"^ask me anything$", re.IGNORECASE),
+    re.compile(r"^break[- ]?out sessions?$", re.IGNORECASE),
+    re.compile(r"^opening$", re.IGNORECASE),
+    re.compile(r"^closing$", re.IGNORECASE),
+    re.compile(r"\bawards?\b", re.IGNORECASE),
+    re.compile(r"\bbusiness meeting\b", re.IGNORECASE),
+    re.compile(r"\bpc chair's report\b", re.IGNORECASE),
+    re.compile(r"\borganisers? discussion\b", re.IGNORECASE),
+    re.compile(r"\borganizers? discussion\b", re.IGNORECASE),
+    re.compile(r"\bpanel\b", re.IGNORECASE),
+    re.compile(r"^welc?ome from the general chair\b", re.IGNORECASE),
+)
 
 
 @dataclass
@@ -104,18 +182,14 @@ class ResearchrScraper(Scraper):
             raise ValueError(f"Venue {venue.id!r}: researchr requires source.program_url")
         self.program_url = str(program_url)
         self.context = str(venue.source.get("context") or self._infer_context(self.program_url))
-        self.include_tracks = set(self._as_list(venue.source.get("include_tracks")))
-        self.include_event_types = set(self._as_list(venue.source.get("include_event_types")))
-        self.exclude_event_types = set(self._as_list(venue.source.get("exclude_event_types")))
-        self.default_event_type = str(venue.source.get("default_event_type") or "")
         self.fetch_details = bool(venue.source.get("fetch_details", True))
-        self.require_authors = bool(venue.source.get("require_authors", False))
         self.track_prefix = str(venue.source.get("track_prefix") or venue.series or "")
 
     def scrape(self) -> list[Paper]:
         html = self.fetcher.get_text(self.program_url, "program.html")
         occurrences, modal_config = self.parse_program(html)
-        kept = [occ for occ in occurrences if self.keep_occurrence(occ)]
+        paper_tracks = self.infer_paper_tracks(html, occurrences)
+        kept = [occ for occ in occurrences if self.keep_occurrence(occ, paper_tracks)]
         events = self.merge_occurrences(kept)
         selected = events[: self.limit] if self.limit else events
         print(
@@ -126,20 +200,10 @@ class ResearchrScraper(Scraper):
 
         details = self.crawl_details(selected, modal_config) if self.fetch_details else {}
         papers = [self.to_paper(event, details.get(event.event_id)) for event in selected]
-        if self.require_authors:
-            papers = [paper for paper in papers if paper.authors]
-        return papers
+        return [paper for paper in papers if self.keep_paper(paper)]
 
     def _abs(self, href: str) -> str:
         return urljoin(self.program_url, href) if href else ""
-
-    @staticmethod
-    def _as_list(value: Any) -> list[str]:
-        if value is None:
-            return []
-        if isinstance(value, str):
-            return [value]
-        return [str(item) for item in value]
 
     @staticmethod
     def _infer_context(program_url: str) -> str:
@@ -148,7 +212,16 @@ class ResearchrScraper(Scraper):
             idx = parts.index("program")
             if idx + 1 < len(parts):
                 return parts[idx + 1]
+        if "track" in parts:
+            idx = parts.index("track")
+            if idx + 1 < len(parts):
+                candidate = parts[idx + 1]
+                if re.search(r"-20\d{2}$", candidate):
+                    return candidate
         return ""
+
+    def is_track_page(self) -> bool:
+        return "/track/" in urlparse(self.program_url).path
 
     def _normalize_track(self, value: str) -> str:
         track = re.sub(r"\s+", " ", value or "").strip()
@@ -178,6 +251,59 @@ class ResearchrScraper(Scraper):
             if occurrence:
                 occurrences.append(occurrence)
         return occurrences, modal_config
+
+    def infer_paper_tracks(self, html: str, occurrences: list[ResearchrOccurrence]) -> set[str]:
+        """Infer the paper-bearing tracks from the linked page.
+
+        Track pages are already scoped by the URL, so keep every track observed on
+        the page. Full program pages can include co-hosted events and workshops;
+        for those, use the page's own track navigation plus broad paper-track
+        naming heuristics.
+        """
+        observed = set(self.observed_tracks(occurrences))
+        if not observed:
+            return set()
+        if self.is_track_page():
+            return observed
+
+        primary_tracks = set(self.primary_nav_tracks(html))
+        candidates = observed.intersection(primary_tracks) if primary_tracks else observed
+        paper_tracks = {track for track in candidates if self.looks_like_paper_track(track)}
+        return paper_tracks or candidates
+
+    @staticmethod
+    def observed_tracks(occurrences: list[ResearchrOccurrence]) -> list[str]:
+        return unique_preserve_order(
+            [track for occurrence in occurrences for track in occurrence.tracks + occurrence.facet_tracks if track]
+        )
+
+    def primary_nav_tracks(self, html: str) -> list[str]:
+        soup = BeautifulSoup(html, "html.parser")
+        tracks: list[str] = []
+        for anchor in soup.select('#tracks-in-navbar a[href*="/track/"]'):
+            href = self._abs(anchor.get("href", ""))
+            if self.context and f"/track/{self.context}/" not in urlparse(href).path:
+                continue
+            label = self._normalize_track(clean_text(anchor))
+            if label:
+                tracks.append(label)
+        return unique_preserve_order(tracks)
+
+    @staticmethod
+    def looks_like_paper_track(track: str) -> bool:
+        lowered = track.lower()
+        if any(keyword in lowered for keyword in NON_PAPER_TRACK_KEYWORDS):
+            return False
+        return any(keyword in lowered for keyword in PAPER_TRACK_KEYWORDS)
+
+    @staticmethod
+    def looks_like_paper_event_type(event_type: str) -> bool:
+        lowered = event_type.lower().strip()
+        if not lowered:
+            return True
+        if any(keyword in lowered for keyword in NON_PAPER_EVENT_TYPE_KEYWORDS):
+            return False
+        return any(keyword in lowered for keyword in PAPER_EVENT_TYPE_KEYWORDS)
 
     def parse_modal_config(self, soup: BeautifulSoup) -> ResearchrModalConfig | None:
         loader = soup.select_one("#event-modal-loader")
@@ -349,7 +475,7 @@ class ResearchrScraper(Scraper):
             event_id=event_id,
             slot_id=event_id,
             title=self.parse_event_title(title_anchor),
-            event_type=self.default_event_type,
+            event_type="Paper",
             tracks=tracks,
             facet_tracks=tracks,
             authors=[person["name"] for person in people if person.get("name")],
@@ -483,16 +609,18 @@ class ResearchrScraper(Scraper):
         total = hours * 60 + minutes
         return total if total else None
 
-    def keep_occurrence(self, occurrence: ResearchrOccurrence) -> bool:
+    def keep_occurrence(
+        self,
+        occurrence: ResearchrOccurrence,
+        paper_tracks: set[str] | None = None,
+    ) -> bool:
         if not occurrence.title:
             return False
-        if self.include_event_types and occurrence.event_type not in self.include_event_types:
+        if not self.looks_like_paper_event_type(occurrence.event_type):
             return False
-        if self.exclude_event_types and occurrence.event_type in self.exclude_event_types:
-            return False
-        if self.include_tracks:
+        if paper_tracks:
             track_names = set(occurrence.tracks + occurrence.facet_tracks)
-            if not track_names.intersection(self.include_tracks):
+            if not track_names.intersection(paper_tracks):
                 return False
         return True
 
@@ -632,6 +760,7 @@ class ResearchrScraper(Scraper):
                 for row in description.select(".row"):
                     row.extract()
                 abstract = clean_text(description)
+            abstract = meaningful_abstract(abstract)
             extra_urls = [
                 self._abs(anchor.get("href", ""))
                 for anchor in description.select("a[href]")
@@ -662,12 +791,14 @@ class ResearchrScraper(Scraper):
     def to_paper(self, event: ResearchrEvent, detail: ResearchrDetail | None = None) -> Paper:
         detail = detail or ResearchrDetail()
         urls = unique_preserve_order([detail.url] + event.urls + detail.urls + [self.program_url])
-        tracks = list(event.tracks or detail.tracks)
+        tracks = unique_preserve_order(event.tracks + detail.tracks)
         authors = event.authors or detail.authors
         session_titles = unique_preserve_order(event.session_titles + [detail.session_title])
         dates = unique_preserve_order(event.dates + [detail.date])
         locations = unique_preserve_order(event.locations + [detail.location])
-        event_types = unique_preserve_order(event.event_types + [self.default_event_type])
+        event_types = unique_preserve_order([event_type for event_type in event.event_types if event_type])
+        if not event_types:
+            event_types = ["Paper"]
         return Paper(
             id=event.event_id,
             title=detail.title or event.title,
@@ -682,3 +813,17 @@ class ResearchrScraper(Scraper):
             locations=locations,
             urls=urls,
         )
+
+    def keep_paper(self, paper: Paper) -> bool:
+        if not paper.title:
+            return False
+        if self.looks_like_non_paper_title(paper.title):
+            return False
+        if not self.looks_like_paper_event_type(paper.event_type):
+            return False
+        return True
+
+    @staticmethod
+    def looks_like_non_paper_title(title: str) -> bool:
+        normalized = re.sub(r"\s+", " ", title or "").strip()
+        return any(pattern.search(normalized) for pattern in NON_PAPER_TITLE_PATTERNS)

@@ -227,6 +227,38 @@
     ]
   },
   {
+    "abstract": "Automatically constructing objects based on description of their internal state is challenging because available constructors and API calls can manipulate the state in non-trivial ways. This problem is of particular relevance to constraint solver-driven automated testing, where the solver is queried to describe the initial state required for execution of a specific path through the target method. In this work, we focus on the Dafny programming language that supports verification of heap-related properties. Dafny has built-in test generation functionality and we propose to extend it with a technique for synthesizing sequences of API calls that create objects and set their state in such a way that properties required by test generation are respected. The proposed method uses a heuristic-guided search over sequences of API calls, while leaving the task of inferring appropriate primitive arguments to the verifier. By combining domain-specific heuristics with the logics used by the Z3 theorem prover, the proposed method allows synthesizing instances of types defined in various open-source Dafny projects.",
+    "authorInstitutions": "Aleksandr Fedchin (Tufts University)",
+    "authors": [
+      "Aleksandr Fedchin"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "1416fdfa-3cfd-4144-96e6-70ed0167fa80",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Object Synthesis for Automated Test Generation",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/5/Object-Synthesis-for-Automated-Test-Generation",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
     "abstract": "Starting with a random initial seed, fuzzers search for inputs that trigger bugs or vulnerabilities. However, fuzzers often fail to generate inputs for program paths guarded by restrictive branch conditions. In this paper, we show that by first identifying rare-paths in programs (i.e., program paths with path constraints that are unlikely to be satisfied by random input generation), and then, generating inputs/seeds that trigger rare-paths, one can improve the coverage of fuzzing tools. In particular, we present techniques 1) that identify rare paths using quantitative symbolic analysis, and 2) generate inputs that can explore these rare paths using path-guided concolic execution. We provide these inputs as initial seed sets to three state of the art fuzzers. Our experimental evaluation on a set of programs shows that the fuzzers achieve better coverage with the rare-path based seed set compared to a random initial seed.",
     "authorInstitutions": "Seemanta Saha (University of California at Santa Barbara); Laboni Sarker (University of California at Santa Barbara); Md Shafiuzzaman (University of California at Santa Barbara); Chaofan Shou (University of California at Santa Barbara); Albert Li (University of California at Santa Barbara); Ganesh Sankaran (University of California at Santa Barbara); Tevfik Bultan (University of California at Santa Barbara)",
     "authors": [
@@ -549,6 +581,38 @@
     ]
   },
   {
+    "abstract": "It is challenging to test static analysis tools which implement complicated algorithms. The lack of rigorous testing may lead to issues that can undermine the reliability and usability of these tools. This work systematically studies the nondeterministic behavior in static analysis tools to fill in the knowledge gap. First, we follow a rigorous methodology that studies how prevalent are nondeterministic results across a wide variety of static analysis tools under multiple dimensions. Based on the discovered nondeterminism, we then semi-automatically identify and categorize the common factors that cause the nondeterministic results. We have so far applied our methodology to two popular tools, FlowDroid and SOOT. We have detected nondeterminism in 11 configurations in the two tools. Our investigation of the root causes has led to one FlowDroid bug confirmed and fixed by its developers.",
+    "authorInstitutions": "Dakota Soles (The University of Texas at Dallas)",
+    "authors": [
+      "Dakota Soles"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "26a71d24-d0f1-43ee-84bb-4292042b970f",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "An Empirical Study of Nondeterministic Behavior and Its Causes in Static Analysis Tools",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/3/An-Empirical-Study-of-Nondeterministic-Behavior-and-Its-Causes-in-Static-Analysis-Too",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
     "abstract": "TreeLine and SlackLine are grammar-based fuzzers for quickly finding performance problems in programs driven by richly structured text that can be described by context-free grammars. In contrast to long fuzzing campaigns to find (mostly invalid) inputs that trigger security vulnerabilities, TreeLine and SlackLine are designed to search for performance problems in the space of valid inputs in minutes rather than hours. The two front-ends use a common back-end. The back-end executes a target application and provides coverage and performance feedback to a search algorithm. It is an extension of the PerfFuzz back-end, which in turn is an extension of AFL. The back-end is packaged as a server running in a separate Unix process to facilitate experimental combinations of different fuzzing strategies. The front end (currently TreeLine for Monte Carlo tree search and SlackLine for genetic search with derivation tree splicing) is responsible for generating inputs to test, as well as recording results. This separation of concerns should facilitate use by other researchers who wish to explore alternatives and extensions of either the front or back ends.",
     "authorInstitutions": "Ziyad Alsaeed (Qassim University); Michal Young (University of Oregon)",
     "authors": [
@@ -730,6 +794,38 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598148",
       "https://2023.issta.org/details/issta-2023-technical-papers/107/Improving-Spectrum-Based-Localization-of-Multiple-Faults-by-Iterative-Test-Suite-Redu",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Nikolaos Louloudakis (University of Edinburgh)",
+    "authors": [
+      "Nikolaos Louloudakis"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "293a5b46-d1d5-4280-8b5e-e0d8efd4a45e",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "DeltaNN: Differential Testing to Evaluate Robustness of Image Recognition Models",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/12/DeltaNN-Differential-Testing-to-Evaluate-Robustness-of-Image-Recognition-Models",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -1288,15 +1384,24 @@
       "Milos Gligoric",
       "Owolabi Legunsen"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 20 Jul 2023 11:45 - 12:00"
     ],
     "doi": "10.1145/3597926.3598149",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "35fb0b05-ba00-4935-844c-0be0cd6f894e",
     "locations": [
       "Amazon Auditorium (Gates G20)"
     ],
+    "pages": "1458-1470",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA 9: Testing 2"
@@ -1309,8 +1414,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/108/Extracting-Inline-Tests-from-Unit-Tests",
       "https://doi.org/10.1145/3597926.3598149",
+      "https://2023.issta.org/details/issta-2023-technical-papers/108/Extracting-Inline-Tests-from-Unit-Tests",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -1360,6 +1465,52 @@
     ]
   },
   {
+    "abstract": "Programming with versions introduced versions as an element of types where same-named definitions can be distinguished by their versions. This paradigm gives users finer-grained control over their programs. Downstream users can benefit from avoiding dependency locks and upstream users can benefit from easier multi-version management of codebases. However, the implementation of this concept, BatakJava, lacks version polymorphism. BatakJava does not allow a single class definition to be instantiated with different versions in different class instances. To solve this problem, we propose the use of parameterized versions to allow version polymorphic definitions, similar to the treatment of type parameters in Java’s generics. We introduce the plan for the design of the language, its benefits, and show a preliminary idea of its compilation into Java.",
+    "authorIds": [
+      "0000-0002-1498-7788"
+    ],
+    "authorInstitutions": "Luthfan Anshar Lubis (Tokyo Institute of Technology)",
+    "authors": [
+      "Luthfan Anshar Lubis"
+    ],
+    "container": "Lecture Notes in Computer Science",
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "doi": "10.1007/978-981-99-8311-7_1",
+    "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "39f1fc09-2f52-407e-80a9-dfeeac0a5f8e",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "pages": "3-23",
+    "publicationDate": "2023-01-01",
+    "publisher": "Springer Nature Singapore",
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Polymorphism for Programming With Versions",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.1007/978-981-99-8311-7_1",
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/1/Polymorphism-for-Programming-With-Versions",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
     "abstract": "Fuzzing of compilers and code analysers has led to a large number of bugs being found and fixed in widely-used frameworks such as LLVM, GCC and Frama-C. Most such fuzzing techniques have taken a blackbox approach, with compilers and code analysers starting to become relatively immune to such fuzzers. We propose a coverage-directed, mutation-based approach for fuzzing C compilers and code analysers, inspired by the success of this type of greybox fuzzing in other application domains. The main challenge of applying mutation-based fuzzing in this context is that naive mutations are likely to generate programs that do not compile. Such programs are not useful for finding deep bugs that affect optimisation, analysis, and code generation routines. We have designed a novel greybox fuzzer for C compilers and analysers by developing a new set of mutations to target common C constructs, and transforming fuzzed programs so that they produce meaningful output, allowing differential testing to be used as a test oracle, and paving the way for fuzzer-generated programs to be integrated into compiler and code analyser regression test suites. We have implemented our approach in GrayC, a new open-source LibFuzzer-based tool, and present experiments showing that it provides more coverage on the middle- and back-end stages of compilers and analysers compared to other mutation-based approaches, including Clang-Fuzzer, PolyGlot, and a technique similar to LangFuzz. We have used GrayC to identify 30 confirmed compiler and code analyser bugs: 25 previously unknown bugs (with 22 of them already fixed in response to our reports) and 5 confirmed bugs reported independently shortly before we found them. A further 3 bug reports are under investigation. Apart from the results above, we have contributed 24 simplified versions of coverage-enhancing test cases produced by GrayC to the Clang/LLVM test suite, targeting 78 previously uncovered functions in the LLVM codebase.",
     "authorInstitutions": "Karine Even-Mendoza (King’s College London); Arindam Sharma (Imperial College London); Alastair F. Donaldson (Imperial College London); Cristian Cadar (Imperial College London)",
     "authors": [
@@ -1400,6 +1551,38 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598130",
       "https://2023.issta.org/details/issta-2023-technical-papers/89/GrayC-Greybox-Fuzzing-of-Compilers-and-Analysers-for-C",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "Programming and debugging embedded devices is significantly more difficult than debugging traditional sequential applications. The hardware is resource constraint, making it impossible to use most existing debugging techniques for traditional sequential applications. Additionally, the execution of embedded programs often has multiple possible execution paths, making it difficult to track and reproduce bugs. Current debuggers are ill-equipped to debug highly nondeterministic constraint systems. To solve this issue, this research aims to develop a novel debugger targeting embedded devices, that overcomes the inherent resource constraints, while providing insight into the multiple execution paths of the system. This allows developers to quickly reproduce, and find the root causes of bugs. In this extended abstract we show the current status of developing this novel debugger.",
+    "authorInstitutions": "Tom Lauwaerts (Universiteit Gent, Belgium)",
+    "authors": [
+      "Tom Lauwaerts"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "3b6530f4-840c-41c1-ba7b-690a8bbdf8d7",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Out-of-place Multiverse Debugging for Constraint Devices",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/8/Out-of-place-Multiverse-Debugging-for-Constraint-Devices",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -1451,6 +1634,38 @@
       "https://doi.org/10.1145/3597926.3598126",
       "https://2023.issta.org/details/issta-2023-technical-papers/85/Synthesizing-Speech-Test-Cases-with-Text-to-Speech-An-Empirical-Study-on-the-False-A",
       "https://github.com/julianyonghao/FAinASRtest",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Austin Mordahl (University of Texas at Dallas)",
+    "authors": [
+      "Austin Mordahl"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "3dcba158-ed41-43ae-9b43-9baf3be88f37",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "An Exploration of Static Variability Bug Detection Through Desugaring",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/9/An-Exploration-of-Static-Variability-Bug-Detection-Through-Desugaring",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -1583,6 +1798,49 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598128",
       "https://2023.issta.org/details/issta-2023-technical-papers/87/SlipCover-Near-Zero-Overhead-Code-Coverage-for-Python",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Zhongzhen Wen (Nanjing University)",
+    "authors": [
+      "Zhongzhen Wen"
+    ],
+    "container": "2024 IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "doi": "10.1109/icsme58944.2024.00018",
+    "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "4a2a0d77-584a-4de5-9b67-a71885ca4b2d",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "pages": "75-86",
+    "publicationDate": "2024-10-06",
+    "publisher": "IEEE",
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Enhancing Web Test Script Repair using Integrated UI Structural and Visual Information",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.1109/icsme58944.2024.00018",
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/17/Enhancing-Web-Test-Script-Repair-using-Integrated-UI-Structural-and-Visual-Informatio",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -1769,6 +2027,70 @@
     ]
   },
   {
+    "abstract": "A tangled commit or patch contains multiple independent changes, such as a bug fix and a refactoring. Tangled commits are harder to review, increasing the chance to miss problems during code review. For AI assistants such as code synthesis and bug-fixing models, tangled commits create noise in model’s training dataset, deteriorating performance. Recent work proposed untangling approaches to solve this issue. Unfortunately, existing untangling approaches use synthetic commits, which may not be representative of real commits, or do incremental evaluations, making it difficult for researchers to compare unrelated approaches. Compared to previous work, our methodology evaluates unrelated approaches on a set of real commits that have been manually untangled. We find that untangling approaches may have a lower performance on real commits than on synthetic commits and that the resulting untangled commits may be hard to leverage in practice for developers due to the granularity of how the changes are represented in the untangling approaches. Additionally, we find that the size of the change has a statistically significant and large effect on the performance of the untangling approaches.",
+    "authorInstitutions": "Thomas Schweizer (University of Washington, Seattle)",
+    "authors": [
+      "Thomas Schweizer"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "50c9f561-a8f0-459f-bf17-ee695b18a925",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "An empirical evaluation of commit-untangling tools",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/4/An-empirical-evaluation-of-commit-untangling-tools",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Siyuan Li",
+    "authors": [
+      "Siyuan Li"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "54a6a657-8ffb-46a9-a03a-16e419ae1be2",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "LibAE: An Area Exploration Technology for Detecting Third-party Libraries in Binaries",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/10/LibAE-An-Area-Exploration-Technology-for-Detecting-Third-party-Libraries-in-Binaries",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
     "abstract": "The Robot Framework is a popular and widely used test automation framework that abstracts test case specifications toward natural language specifications. This makes it well suited for implementing high-level test cases, at least as long as the functions provided by Robot can support the intended functionality. For more complicated test cases, custom and often deeply nested functionality specifications are required, and the readability of Robot test cases tends to decrease. We present RobotBT, a library for the Robot framework that addresses these shortcomings by adding support for specifying test cases using behavior trees. Behavior trees are a comprehensive method for specifying complex behaviors based on a control flow model that orchestrates the execution of functionality. We evaluated RobotBT on a test suite for GUI testing from G~DATA CyberDefense AG and interviewed their engineers about the usability, readability, and applicability of RobotBT. Our results show that BTs improve the expressiveness and readability of Robot Framework test cases and are applicable to practical problems.",
     "authorInstitutions": "Sven Peldszus (Ruhr University Bochum); Noubar Akopian (Ruhr University Bochum); Thorsten Berger (Ruhr University Bochum)",
     "authors": [
@@ -1815,7 +2137,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Mara Downing (University of California, Santa Barbara); Wing Lam (George Mason University); Xusheng Xiao (Case Western Reserve University); Jonathan Aldrich (Carnegie Mellon University)",
     "authors": [
       "Mara Downing",
@@ -1850,7 +2172,8 @@
     ],
     "title": "Quantitative Robustness Analysis of Neural Networks",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3597926.3605231",
@@ -1859,7 +2182,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Pingshi Yu (Imperial College London); Andreas Zeller (CISPA Helmholtz Center for Information Security); Xusheng Xiao (Case Western Reserve University); Emery Berger",
     "authors": [
       "Pingshi Yu",
@@ -1867,14 +2190,24 @@
       "Xusheng Xiao",
       "Emery Berger"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Mon 17 Jul 2023 15:30 - 15:35"
     ],
+    "doi": "10.1145/3597926.3605239",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "5897e142-2ed2-41fb-99cc-5dc3d063e915",
     "locations": [
       "Madrona Seminar Room (Gates 371)"
     ],
+    "pages": "1552-1554",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "ECOOP and ISSTA Doctoral Symposium",
       "Session 3"
@@ -1884,9 +2217,11 @@
     ],
     "title": "Reasoning About MLIR Semantics Through Algebraic Effects and Handlers",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1145/3597926.3605239",
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/13/Reasoning-About-MLIR-Semantics-Through-Algebraic-Effects-and-Handlers",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
@@ -2024,6 +2359,52 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598078",
       "https://2023.issta.org/details/issta-2023-technical-papers/38/Quantitative-Policy-Repair-for-Access-Control-on-the-Cloud",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "Calculi with disjointness received significant research interest recently. The disjointness restricts potential problematic programs. An example is the disjoint intersection types proposed for deterministic merge operator. A variant of disjointness is also implemented in the type-based switch construct in Ceylon programming language. Such a type-based switch construct provides deterministic elimination of the union types. Another variant of disjointness has recently been implemented in Scala match types. The disjointness plays an integral role in maintaining the determinism in these calculi. We propose a novel disjointness algorithm for a calculus with intersection and union types. Our disjointness algorithm naturally extends for disjoint polymorphism without any ad-hoc restrictions. Importantly, we explore the integration of merge operator and type-based switch expression in a deterministic manner based on disjointness and unambiguous upcasts.",
+    "authorIds": [
+      "0000-0002-9458-8428"
+    ],
+    "authorInstitutions": "Baber Rehman (University of Hong Kong)",
+    "authors": [
+      "Baber Rehman"
+    ],
+    "container": "Proceedings of the 26th ACM International Workshop on Formal Techniques for Java-like Programs",
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "doi": "10.1145/3678721.3686230",
+    "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "5e5f8763-ae71-4efc-96ca-2a9cb8f5280c",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "pages": "23-29",
+    "publicationDate": "2024-09-20",
+    "publisher": "ACM",
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Determinism with Intersection and Union Types",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.1145/3678721.3686230",
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/2/Determinism-with-Intersection-and-Union-Types",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -2294,6 +2675,53 @@
     ]
   },
   {
+    "abstract": "",
+    "authorIds": [
+      "0000-0003-1262-8893"
+    ],
+    "authorInstitutions": "Tom Lauwaerts (Universiteit Gent, Belgium)",
+    "authors": [
+      "Tom Lauwaerts"
+    ],
+    "container": "Science of Computer Programming",
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "doi": "10.1016/j.scico.2024.103157",
+    "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "67973d9a-3159-4313-a9ae-5ff591a783b1",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "pages": "103157",
+    "publicationDate": "2024-12-01",
+    "publisher": "Elsevier BV",
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "LATCH: Enabling Large-scale Tests on Constraint Systems",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.1016/j.scico.2024.103157",
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/14/LATCH-Enabling-Large-scale-Tests-on-Constraint-Systems",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ],
+    "volume": "238"
+  },
+  {
     "abstract": "Smart contracts written in Solidity are widely used in different blockchain platforms such as Ethereum, TRON and BNB Chain. One of the unique designs in Solidity smart contracts is its statereverting mechanism for error handling and access control. Unfortunately, a number of recent security incidents showed that adversaries also utilize this mechanism to manipulate critical states of smart contracts, and hence, bring security consequences such as illegal profit-gain and Deny-of-Service (DoS). In this paper, we call such vulnerabilities as the State-reverting Vulnerability (SRV). Automatically identifying SRVs poses unique challenges, as it requires an in-depth analysis and understanding of the state-dependency relations in smart contracts. This paper presents SmartState, a new framework for detecting state-reverting vulnerability in Solidity smart contracts via finegrained state-dependency analysis. SmartState integrates a set of novel mechanisms to ensure its effectiveness. Particularly, Smart- State extracts state dependencies from both contract bytecode and historical transactions. Both of them are critical for inferring dependencies related to SRVs. Further, SmartState models the generic patterns of SRVs (i.e., profit-gain and DoS) as SRV indicators, and hence effectively identify SRVs based on the constructed statedependency graph. To evaluate SmartState, we manually annotated a ground-truth dataset which contains 91 SRVs in the real world. Evaluation results showed that SmartState achieves a precision of 87.23% and a recall of 89.13%. In addition, SmartState successfully identifies 406 new SRVs from 47,351 real-world smart contracts. 11 of these SRVs are from popular smart contracts with high transaction amounts (i.e., top 2000). In total, our reported SRVs affect a total amount of digital assets worth 428,600 USD.",
     "authorInstitutions": "Zeqin Liao (Sun Yat-sen University); Sicheng Hao (Sun Yat-sen University); Yuhong Nan (Sun Yat-sen University); Zibin Zheng (Sun Yat-sen University)",
     "authors": [
@@ -2487,15 +2915,24 @@
       "Kai Chen",
       "Xuandong Li"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 16:30 - 16:40"
     ],
     "doi": "10.1145/3597926.3598084",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "6de8c4e5-493b-4c0b-ad2a-d0cbddaf466c",
     "locations": [
       "Bezos Seminar Room (Gates G04)"
     ],
+    "pages": "639-651",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA Online 3: Empirical Studies"
@@ -2508,8 +2945,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/44/Security-Checking-of-Trigger-Action-Programming-Smart-Home-Integrations",
       "https://doi.org/10.1145/3597926.3598084",
+      "https://2023.issta.org/details/issta-2023-technical-papers/44/Security-Checking-of-Trigger-Action-Programming-Smart-Home-Integrations",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -2702,15 +3139,24 @@
       "Xu Lu",
       "Bin Yu"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 19 Jul 2023 16:30 - 16:40"
     ],
     "doi": "10.1145/3597926.3598110",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "79c8b46c-ad46-4220-b7d7-758f16edab32",
     "locations": [
       "Habib Classroom (Gates G01)"
     ],
+    "pages": "967-979",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA Online 5: Domain-Specific Testing"
@@ -2723,8 +3169,51 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/69/SBDT-Search-Based-Differential-Testing-of-Certificate-Parsers-in-SSL-TLS-Implementat",
       "https://doi.org/10.1145/3597926.3598110",
+      "https://2023.issta.org/details/issta-2023-technical-papers/69/SBDT-Search-Based-Differential-Testing-of-Certificate-Parsers-in-SSL-TLS-Implementat",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Joannah Nanjekye (University of New Brunswick)",
+    "authors": [
+      "Joannah Nanjekye"
+    ],
+    "container": "Proceedings of the 18th ACM International Workshop on Implementation, Compilation, Optimization of OO Languages, Programs and Systems",
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "doi": "10.1145/3605158.3605849",
+    "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "7a447021-ef75-4fb5-90a6-f4e665dee74a",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "pages": "15-26",
+    "publicationDate": "2023-07-17",
+    "publisher": "ACM",
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Towards Reliable Memory Management for Python Native Extensions",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.1145/3605158.3605849",
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/13/Towards-Reliable-Memory-Management-for-Python-Native-Extensions",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -2776,7 +3265,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Jonathan Aldrich (Carnegie Mellon University)",
     "authors": [
       "Jonathan Aldrich"
@@ -2798,7 +3287,8 @@
     ],
     "title": "Planning your dissertation topic",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/12/Planning-your-dissertation-topic",
@@ -3269,16 +3759,26 @@
       "António Morgado",
       "José Fragoso Santos"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 14:27 - 14:34",
       "Wed 19 Jul 2023"
     ],
+    "doi": "10.1145/3597926.3604923",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "9192d6f2-31e6-4ae0-b00a-33e74ffb87ca",
     "locations": [
       "Habib Classroom (Gates G01)",
       "Microsoft Atrium (Allen Center)"
     ],
+    "pages": "1499-1502",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Tool Demonstrations",
       "Tool Demo Presentations"
@@ -3292,6 +3792,7 @@
       "Tool Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1145/3597926.3604923",
       "https://2023.issta.org/details/issta-2023-tool-demonstrations/8/MetaData262-Automatic-Test-Suite-Selection-for-Partial-JavaScript-Implementations",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
@@ -3435,7 +3936,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Emery Berger",
     "authors": [
       "Emery Berger"
@@ -3457,7 +3958,8 @@
     ],
     "title": "How to conduct impactful research",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/16/How-to-conduct-impactful-research",
@@ -3913,7 +4415,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "talank baral; Owolabi Legunsen (Cornell University); Tevfik Bultan (University of California at Santa Barbara)",
     "authors": [
       "talank baral",
@@ -3937,7 +4439,8 @@
     ],
     "title": "Optimizing Continuous Development and Predicting Test Information in Software Development",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/5/Optimizing-Continuous-Development-and-Predicting-Test-Information-in-Software-Develop",
@@ -3945,7 +4448,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Eric Jul (University of Oslo)",
     "authors": [
       "Eric Jul"
@@ -3967,7 +4470,8 @@
     ],
     "title": "How to get your Ph.D. DONE!",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/3/How-to-get-your-Ph-D-DONE-",
@@ -3981,16 +4485,26 @@
       "Roland Kuhn",
       "Alan Darmasaputra"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 14:47 - 14:53",
       "Wed 19 Jul 2023"
     ],
+    "doi": "10.1145/3597926.3604917",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ab0e4d95-ca44-43f3-a930-38e4a998fbf1",
     "locations": [
       "Habib Classroom (Gates G01)",
       "Microsoft Atrium (Allen Center)"
     ],
+    "pages": "1475-1478",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Tool Demonstrations",
       "Tool Demo Presentations"
@@ -4004,6 +4518,7 @@
       "Tool Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1145/3597926.3604917",
       "https://2023.issta.org/details/issta-2023-tool-demonstrations/2/Behaviorally-Typed-State-Machines-in-TypeScript-for-Heterogeneous-Swarms",
       "https://github.com/Actyx/machines",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
@@ -4018,15 +4533,24 @@
       "Xusheng Xiao",
       "Jonathan Aldrich"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Mon 17 Jul 2023 13:38 - 13:46"
     ],
     "doi": "10.1145/3597926.3605233",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ab4468f5-7d00-4ec5-bc6a-d5b8c087a41d",
     "locations": [
       "Madrona Seminar Room (Gates 371)"
     ],
+    "pages": "1541-1545",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "ECOOP and ISSTA Doctoral Symposium",
       "Session 2"
@@ -4036,12 +4560,13 @@
     ],
     "title": "Harnessing Large Language Models for Simulink Toolchain Testing and Developing Diverse Open-Source Corpora of Simulink",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
+      "https://doi.org/10.1145/3597926.3605233",
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/9/Harnessing-Large-Language-Models-for-Simulink-Toolchain-Testing-and-Developing-Divers",
       "https://dl.acm.org/doi/pdf/10.1145/3597926.3605233",
-      "https://doi.org/10.1145/3597926.3605233",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -4099,15 +4624,24 @@
       "Xiapu Luo",
       "Haoyu Wang"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Wed 19 Jul 2023 10:30 - 10:45"
     ],
     "doi": "10.1145/3597926.3598037",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "ac71766f-78db-4bdd-82e7-eb3847a90bac",
     "locations": [
       "Smith Classroom (Gates G10)"
     ],
+    "pages": "52-63",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA 5: Improving Deep Learning Systems"
@@ -4120,8 +4654,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/111/Understanding-and-Tackling-Label-Errors-in-Deep-Learning-Based-Vulnerability-Detectio",
       "https://doi.org/10.1145/3597926.3598037",
+      "https://2023.issta.org/details/issta-2023-technical-papers/111/Understanding-and-Tackling-Label-Errors-in-Deep-Learning-Based-Vulnerability-Detectio",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -4186,15 +4720,24 @@
       "Yang Liu",
       "Yixiang Chen"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Thu 20 Jul 2023 10:30 - 10:45"
     ],
     "doi": "10.1145/3597926.3598056",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "af32edd0-8299-4137-8520-324e5bc9bae5",
     "locations": [
       "Amazon Auditorium (Gates G20)"
     ],
+    "pages": "285-297",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA 9: Testing 2"
@@ -4207,8 +4750,40 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/16/A-Comprehensive-Study-on-Quality-Assurance-Tools-for-Java",
       "https://doi.org/10.1145/3597926.3598056",
+      "https://2023.issta.org/details/issta-2023-technical-papers/16/A-Comprehensive-Study-on-Quality-Assurance-Tools-for-Java",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "wei kong",
+    "authors": [
+      "wei kong"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "af5bfcd4-ec02-4da4-943c-0a4424325083",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Context-adaptive Automated Testing for Deep Learning Model",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/15/Context-adaptive-Automated-Testing-for-Deep-Learning-Model",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -4259,6 +4834,37 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598064",
       "https://2023.issta.org/details/issta-2023-technical-papers/24/Eunomia-Enabling-User-Specified-Fine-Grained-Search-in-Symbolically-Executing-WebAss",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "Learning a new programming language is a challenging task. Contextualizing programming language documentation to the particular code that a programmer is working on is a promising direction for easing the difficulty of this common task. We improved and deployed a contextualized documentation tool, ExplainThis, to an undergraduate programming languages course and gathered feed- back from students. Overall, students expressed that they would use ExplainThis again for learning a new programming language and found the provided documentation helpful.",
+    "authorInstitutions": "Hannah Potter (University of Washington)",
+    "authors": [
+      "Hannah Potter"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "b1a5721d-22bd-43ff-8ffe-109665026d86",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_-15_30_-_17_00-ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "ExplainThis: Teaching a New Programming Language and Paradigm Using Contextualized Explanations",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/6/ExplainThis-Teaching-a-New-Programming-Language-and-Paradigm-Using-Contextualized-Ex",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -4407,17 +5013,26 @@
       "Konstantinos (Kostis) Sagonas",
       "Thanasis Typaldos"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 13:55 - 14:02",
       "Wed 19 Jul 2023"
     ],
     "doi": "10.1145/3597926.3604922",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "bace2b6b-829c-4d7d-87c3-590d1515afb8",
     "locations": [
       "Habib Classroom (Gates G01)",
       "Microsoft Atrium (Allen Center)"
     ],
+    "pages": "1495-1498",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Tool Demonstrations",
       "Tool Demo Presentations"
@@ -4431,8 +5046,8 @@
       "Tool Demonstrations"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-tool-demonstrations/7/EDHOC-Fuzzer-An-EDHOC-Protocol-State-Fuzzer",
       "https://doi.org/10.1145/3597926.3604922",
+      "https://2023.issta.org/details/issta-2023-tool-demonstrations/7/EDHOC-Fuzzer-An-EDHOC-Protocol-State-Fuzzer",
       "https://assist-project.github.io/publications/papers/EDHOC-Fuzzer@ISTTA-23.pdf",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
@@ -4628,15 +5243,24 @@
       "Deqing Zou",
       "Hai Jin"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 16:20 - 16:30"
     ],
     "doi": "10.1145/3597926.3598146",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "c276ae76-85e3-40fb-b118-3ef87f7e8c3d",
     "locations": [
       "Bezos Seminar Room (Gates G04)"
     ],
+    "pages": "1420-1432",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA Online 3: Empirical Studies"
@@ -4649,8 +5273,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/105/An-Empirical-Study-on-the-Effects-of-Obfuscation-on-Static-Machine-Learning-Based-Mal",
       "https://doi.org/10.1145/3597926.3598146",
+      "https://2023.issta.org/details/issta-2023-technical-papers/105/An-Empirical-Study-on-the-Effects-of-Obfuscation-on-Static-Machine-Learning-Based-Mal",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -4800,7 +5424,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Frank Busse (Imperial College London); Owolabi Legunsen (Cornell University); Tevfik Bultan (University of California at Santa Barbara)",
     "authors": [
       "Frank Busse",
@@ -4824,7 +5448,8 @@
     ],
     "title": "Sparse Symbolic Execution",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/6/Sparse-Symbolic-Execution",
@@ -4976,7 +5601,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Laboni Sarker (University of California at Santa Barbara); Andreas Zeller (CISPA Helmholtz Center for Information Security); Xusheng Xiao (Arizona State University); Emery Berger",
     "authors": [
       "Laboni Sarker",
@@ -5011,7 +5636,8 @@
     ],
     "title": "Quantitative Symbolic Similarity Analysis",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3597926.3605238",
@@ -5082,15 +5708,24 @@
       "Chenyuan Yang",
       "Lingming Zhang"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 11:15 - 11:30"
     ],
     "doi": "10.1145/3597926.3598067",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "d6517d47-4d03-4bb1-a204-976863f8098f",
     "locations": [
       "Smith Classroom (Gates G10)"
     ],
+    "pages": "423-435",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Technical Papers",
       "ISSTA 2: Fuzzing 1"
@@ -5103,8 +5738,8 @@
       "Technical Papers"
     ],
     "urls": [
-      "https://2023.issta.org/details/issta-2023-technical-papers/27/Large-Language-Models-Are-Zero-Shot-Fuzzers-Fuzzing-Deep-Learning-Libraries-via-Larg",
       "https://doi.org/10.1145/3597926.3598067",
+      "https://2023.issta.org/details/issta-2023-technical-papers/27/Large-Language-Models-Are-Zero-Shot-Fuzzers-Fuzzing-Deep-Learning-Libraries-via-Larg",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -5202,7 +5837,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "William G.J. Halfond (University of Southern California)",
     "authors": [
       "William G.J. Halfond"
@@ -5224,7 +5859,8 @@
     ],
     "title": "Introduction and welcome to the Doctoral Symposium",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/2/Introduction-and-welcome-to-the-Doctoral-Symposium",
@@ -5232,7 +5868,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Ori Roth (Technion); Andreas Zeller (CISPA Helmholtz Center for Information Security); Xusheng Xiao (Case Western Reserve University); Emery D. Berger (University of Massachusetts Amherst)",
     "authors": [
       "Ori Roth",
@@ -5267,7 +5903,8 @@
     ],
     "title": "Type Automata",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3597926.3605237",
@@ -5409,7 +6046,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Suzzana Rafi; Owolabi Legunsen (Cornell University); Tevfik Bultan (University of California at Santa Barbara)",
     "authors": [
       "Suzzana Rafi",
@@ -5433,7 +6070,8 @@
     ],
     "title": "Understanding and Improving the Adoption of Large Language Models",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/7/Understanding-and-Improving-the-Adoption-of-Large-Language-Models",
@@ -5574,6 +6212,58 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598127",
       "https://2023.issta.org/details/issta-2023-technical-papers/86/A-Tale-of-Two-Approximations-Tightening-Over-Approximation-for-DNN-Robustness-Verifi",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorIds": [
+      "0000-0001-6370-0678"
+    ],
+    "authorInstitutions": "Yegor Bugayenko (Huawei)",
+    "authors": [
+      "Yegor Bugayenko"
+    ],
+    "container": "Proceedings of the 2023 7th International Conference on Computer Science and Artificial Intelligence",
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "doi": "10.1145/3638584.3638679",
+    "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
+    "id": "e9b313f6-65f3-4994-8ac5-57a18514b5fc",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "pages": "152-164",
+    "publicationDate": "2023-12-08",
+    "publisher": "ACM",
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "An Algorithm for Partial Elimination of Jumps in An Object-Oriented Dataflow Language",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://doi.org/10.1145/3638584.3638679",
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/11/An-Algorithm-for-Partial-Elimination-of-Jumps-in-An-Object-Oriented-Dataflow-Language",
+      "https://www.zerocracy.com",
+      "https://www.yegor256.com/elegant-object.html",
+      "https://www.yegor256.com",
+      "https://www.zold.io",
+      "https://www.cactoos.org",
+      "https://www.takes.org",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -5800,6 +6490,38 @@
     ]
   },
   {
+    "abstract": "WebAssembly provides a secure way to build portable applications that can run on different environments without the need for platform-specific code. This has led to the creation of the WebAssembly System Interface (WASI), a low-level system interface that offers a standard system interface for WebAssembly modules. WASI enables these modules to interact with the underlying operating system, accessing system resources such as the file system, network, and environment variables. With WASI, developers can build portable and efficient applications that can run on multiple operating systems and environments. However, to determine if WASI is suitable for a specific use case, it is important to compare its performance to that of native code. To this end, we conducted micro-benchmarks that were compute, memory, and file-system intensive to evaluate how WASI compares to native code. For each benchmark, we evaluated performance with compiler optimizations turned on and off. We found that WASI results were exponentially worse than native code for low-intensity workloads. For workloads with medium or high intensity, the gap between the performance of WASI and native code was small, and for some metrics, WASI outperformed native code.",
+    "authorInstitutions": "Jamshed Ashurov (UC San Diego)",
+    "authors": [
+      "Jamshed Ashurov"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "ed651f25-4965-4594-9105-bbc2090de65b",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Characterizing WebAssembly Performance in the Era of Serverless Computing",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/7/-Characterizing-WebAssembly-Performance-in-the-Era-of-Serverless-Computing",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
     "abstract": "Memory safety issues are the intrinsic diseases of C/C++ programs. Dynamic memory safety enforcement as the dominant approach has an advantage in high effectiveness, yet suffers from prohibitively high runtime overhead. Existing attempts to reduce the overhead are either labor-intensive, tightly dependent on specific hardware/compiler support, or poorly effective. In this paper, we propose a novel technique to reduce time overhead by executing the dynamic checking code in parallel. We leverage static dependence analysis and dynamic profit analysis to identify and dispatch the potential code to separate threads running simultaneously. We implemented a tool called Catamaran and evaluated it over a rich set of benchmarks. The experimental results validate that Catamaran is able to significantly reduce the runtime overhead of the existing dynamic tools, without sacrificing capability of memory safety enforcement.",
     "authorInstitutions": "Yiyu Zhang (Nanjing University); Tianyi Liu (Nanjing University); Zewen Sun (Nanjing University); Zhe Chen (Nanjing University of Aeronautics and Astronautics); Xuandong Li (Nanjing University); Zhiqiang Zuo (Nanjing University)",
     "authors": [
@@ -5890,7 +6612,7 @@
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Xusheng Xiao (Arizona State University)",
     "authors": [
       "Xusheng Xiao"
@@ -5912,7 +6634,8 @@
     ],
     "title": "General advice for your PhD career",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://2023.issta.org/details/ecoop-issta-2023-doctoral-symposium/11/General-advice-for-your-PhD-career",
@@ -6006,6 +6729,38 @@
     "urls": [
       "https://doi.org/10.1145/3597926.3598122",
       "https://2023.issta.org/details/issta-2023-technical-papers/81/Data-Constraint-Mining-for-Automatic-Reconciliation-Scripts-Generation",
+      "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
+    ]
+  },
+  {
+    "abstract": "",
+    "authorInstitutions": "Frederico Ramos (Instituto Superior Técnico)",
+    "authors": [
+      "Frederico Ramos"
+    ],
+    "dates": [
+      "Tue 18 Jul 2023",
+      "Tue 18 Jul 2023 15:30 - 17:00"
+    ],
+    "eventType": "Paper",
+    "id": "f3ee010c-631b-45f8-a614-46c9c3284e98",
+    "locations": [
+      "Microsoft Atrium (Allen Center)"
+    ],
+    "sessionTitles": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Posters"
+    ],
+    "sessions": [
+      "Tue_18_Jul_2023-Microsoft_Atrium_Allen_Center_--ECOOP_and_ISSTA_Student_Research_Competition"
+    ],
+    "title": "Specification-Driven Synthesis of Summaries for Symbolic Execution",
+    "tracks": [
+      "ECOOP and ISSTA Student Research Competition",
+      "Student Research Competition"
+    ],
+    "urls": [
+      "https://2023.issta.org/details/ecoop-issta-2023-student-research-competition/16/Specification-Driven-Synthesis-of-Summaries-for-Symbolic-Execution",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
@@ -6242,16 +6997,26 @@
       "Martin Nowack",
       "Cristian Cadar"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 14:02 - 14:08",
       "Wed 19 Jul 2023"
     ],
+    "doi": "10.1145/3597926.3604921",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "fc6d0d42-6e4b-4836-adfe-4dade6a065f6",
     "locations": [
       "Habib Classroom (Gates G01)",
       "Microsoft Atrium (Allen Center)"
     ],
+    "pages": "1491-1494",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Tool Demonstrations",
       "Tool Demo Presentations"
@@ -6265,12 +7030,13 @@
       "Tool Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1145/3597926.3604921",
       "https://2023.issta.org/details/issta-2023-tool-demonstrations/6/KDAlloc-The-KLEE-Deterministic-Allocator",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Huizhong Xiao; Wing Lam (George Mason University); Xusheng Xiao (Case Western Reserve University); Jonathan Aldrich (Carnegie Mellon University)",
     "authors": [
       "Huizhong Xiao",
@@ -6305,7 +7071,8 @@
     ],
     "title": "Fairness Testing For Recommender Systems",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3597926.3605235",
@@ -6323,16 +7090,26 @@
       "Zenong Zhang",
       "Shiyi Wei"
     ],
+    "container": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "dates": [
       "Tue 18 Jul 2023 13:42 - 13:49",
       "Wed 19 Jul 2023"
     ],
+    "doi": "10.1145/3597926.3604918",
     "eventType": "Paper",
+    "extra": {
+      "metadataSources": [
+        "crossref"
+      ]
+    },
     "id": "fec46a98-9d00-4519-9fba-6cd38396f616",
     "locations": [
       "Habib Classroom (Gates G01)",
       "Microsoft Atrium (Allen Center)"
     ],
+    "pages": "1479-1482",
+    "publicationDate": "2023-07-12",
+    "publisher": "ACM",
     "sessionTitles": [
       "Tool Demonstrations",
       "Tool Demo Presentations"
@@ -6346,12 +7123,13 @@
       "Tool Demonstrations"
     ],
     "urls": [
+      "https://doi.org/10.1145/3597926.3604918",
       "https://2023.issta.org/details/issta-2023-tool-demonstrations/3/ECSTATIC-Automatic-Configuration-Aware-Testing-and-Debugging-of-Static-Analysis-Tool",
       "https://2023.issta.org/program/program-issta-2023/Detailed-Timeline"
     ]
   },
   {
-    "abstract": "no description available",
+    "abstract": "",
     "authorInstitutions": "Austin Mordahl (University of Texas at Dallas); Owolabi Legunsen (Cornell University); Tevfik Bultan (University of California at Santa Barbara)",
     "authors": [
       "Austin Mordahl",
@@ -6385,7 +7163,8 @@
     ],
     "title": "Automatic Testing and Benchmarking for Configurable Static Analysis Tools",
     "tracks": [
-      "ECOOP and ISSTA Doctoral Symposium"
+      "ECOOP and ISSTA Doctoral Symposium",
+      "Doctoral Symposium"
     ],
     "urls": [
       "https://doi.org/10.1145/3597926.3605232",
