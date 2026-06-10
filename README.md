@@ -28,7 +28,9 @@ It's a static website backed by a small scraping pipeline: each venue is normali
 to one shared `Paper` shape, then enriched from bibliographic/open metadata sources
 for DOI, abstracts, publication details, and open-access links where available. No
 accounts, no backend — your groups, collections, tags and saved searches live in your
-browser, and can be exported to a single file.
+browser. You can export everything to a file, share a collection with a link, or
+optionally sign in with GitHub to sync your config across devices automatically.
+Sync is opt-in; confer is fully usable without any account.
 
 ## Highlights
 
@@ -46,8 +48,12 @@ browser, and can be exported to a single file.
   later. Everything is local and exportable from a settings panel.
 - 📤 **Selection & export.** Select papers from the list, then copy BibTeX or download
   CSV with DOI and publication metadata.
+- 🔗 **Share & sync.** Share a collection or your whole setup with a link. Or sign in
+  with GitHub to sync everything across devices automatically — stored in a private
+  gist only you can reach. No account needed; sync is opt-in.
 - ⚡ **Fast & private.** A single pre-rendered page; all filtering happens client-side.
-  Light/dark themes, keyboard shortcuts (`⌘K`, `⌘/`), and a responsive mobile layout.
+  Light/dark themes with accent colors, keyboard shortcuts (`⌘K`, `⌘/`), and a
+  responsive mobile layout.
 
 ## Venues
 
