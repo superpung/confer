@@ -325,14 +325,41 @@ html.is-rail-collapsed { --col-right: 0; }
 .search-clear .ic { width: 15px; height: 15px; }
 .search-clear[hidden] { display: none; }   /* author display:grid would beat UA [hidden] */
 .search-clear:hover { color: var(--text); }
-.topbar-select {
-  min-height: 42px; border: 1px solid var(--line-strong); border-radius: 10px;
+/* Custom caret-select — replaces native <select> for Sort and Collection filter. */
+.caret-select { position: relative; display: inline-flex; flex-shrink: 0; }
+.caret-select[hidden] { display: none; }
+.caret-select-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  height: 38px; border: 1px solid var(--line-strong); border-radius: 10px;
   background: var(--panel); color: var(--text); font: inherit; font-size: 13.5px;
-  padding: 8px 32px 8px 12px; cursor: pointer; outline: none;
-  appearance: none; -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2373726c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 11px center;
+  padding: 0 12px; cursor: pointer; white-space: nowrap;
 }
+.caret-select-btn:hover { border-color: var(--accent); background: var(--panel-hover); }
+.caret-select-arrow { flex-shrink: 0; color: var(--muted); transition: transform 0.2s ease; }
+.caret-select-btn[aria-expanded="true"] .caret-select-arrow { transform: rotate(180deg); }
+.caret-menu {
+  position: absolute; top: calc(100% + 5px); left: 0; z-index: 200;
+  background: var(--panel); border: 1px solid var(--line-strong);
+  border-radius: 10px; padding: 4px; min-width: 100%;
+  box-shadow: var(--shadow); list-style: none; margin: 0;
+  animation: pop-in 0.15s ease;
+}
+.caret-menu[hidden] { display: none; }
+.caret-option {
+  display: block; width: 100%; padding: 8px 12px; border-radius: 7px;
+  cursor: pointer; font: inherit; font-size: 13.5px; color: var(--text-soft);
+  white-space: nowrap; text-align: left; background: none; border: none;
+  transition: var(--hover-tr);
+}
+.caret-option:hover { background: var(--panel-hover); color: var(--text); }
+.caret-option.is-on { color: var(--accent); }
+/* Pill variant: matches .chip-btn style (collection filter in controls row) */
+.caret-select--pill .caret-select-btn {
+  height: auto; border-radius: 999px; font-size: 13px; font-weight: 500;
+  padding: 6px 10px 6px 14px; color: var(--muted);
+}
+.caret-select--pill .caret-select-btn:hover { color: var(--text); }
+.caret-select--pill .caret-option { font-size: 13px; }
 
 .icon-btn {
   display: inline-grid; place-items: center; flex: 0 0 auto;
@@ -354,17 +381,6 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .chip-btn:hover, .chip-btn[aria-expanded="true"] { background: var(--panel-hover); color: var(--text); border-color: var(--accent); }
 .chip-btn-count { min-width: 17px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 600; padding: 1px 6px; text-align: center; }
-.collection-filter {
-  -webkit-appearance: none; appearance: none;
-  border: 1px solid var(--line-strong); border-radius: 999px;
-  background: var(--panel); color: var(--muted);
-  /* custom caret with comfortable breathing room from the right edge */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23878172' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 12px center;
-  font: inherit; font-size: 13px; font-weight: 500; padding: 6px 32px 6px 14px; cursor: pointer; max-width: 240px;
-}
-.collection-filter[hidden] { display: none; }
-.collection-filter:hover { border-color: var(--accent); color: var(--text); }
 .result-summary { margin-left: auto; color: var(--muted); font-size: 13.5px; }
 
 .active-filters { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 28px; margin-top: 12px; }
@@ -862,7 +878,7 @@ html.is-rail-collapsed { --col-right: 0; }
   /* Topbar wraps: row 1 = menu + sort, row 2 = full-width search. */
   .topbar { padding: 10px 18px; gap: 8px; flex-wrap: wrap; }
   .topbar [data-help] { display: none; }     /* keyboard shortcuts: desktop only */
-  .topbar-select { flex: 1; min-height: 40px; }
+  #sortSelect { flex: 1; }
   .search-wrap { order: 3; flex: 1 0 100%; }
   .controls, .active-filters, .facets, .export-bar, .paper-list, .list-more { padding-left: 18px; padding-right: 18px; }
   .facets, .export-bar { margin-left: 18px; margin-right: 18px; }

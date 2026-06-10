@@ -56,6 +56,8 @@ const ICONS = {
   settings: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
   externalLink: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   network: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><line x1="6.8" y1="6.8" x2="10.4" y2="16.2"/><line x1="17.3" y1="8.4" x2="13.3" y2="16.4"/><line x1="6.9" y1="6.2" x2="17" y2="6.8"/></svg>',
+  download: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>',
+  upload: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -375,8 +377,6 @@ const els = {
   selCount: $('#selCount'),
   search: $<HTMLInputElement>('#searchInput'),
   searchClear: $<HTMLButtonElement>('[data-search-clear]'),
-  sort: $<HTMLSelectElement>('#sortSelect'),
-  collectionFilter: $<HTMLSelectElement>('#collectionFilter'),
 };
 
 let topbarResizeObserver: ResizeObserver | undefined;
@@ -757,7 +757,7 @@ function render() {
   // reflect simple controls
   els.search.value = state.query;
   els.searchClear.hidden = !state.query;
-  els.sort.value = state.sort;
+  reflectSort();
   reflectCollectionFilter();
 
   if (!state.selected.size) {
@@ -905,11 +905,22 @@ function deleteGroup(id: string) {
 
 // --- collection filter (controls) -------------------------------------
 function reflectCollectionFilter() {
-  const sel = els.collectionFilter;
-  sel.innerHTML = `<option value="">All papers</option>` +
-    state.collections.map((c) => `<option value="${c.id}">${esc(c.name)} (${c.keys.length})</option>`).join('');
-  sel.value = state.collection;
-  sel.hidden = state.collections.length === 0;
+  const container = document.querySelector<HTMLElement>('#collectionFilter');
+  if (!container) return;
+  const label = container.querySelector<HTMLElement>('.caret-select-label');
+  const menu = container.querySelector<HTMLElement>('.caret-menu');
+  if (label && menu) {
+    const options = [
+      { value: '', text: 'All papers' },
+      ...state.collections.map((c) => ({ value: c.id, text: `${esc(c.name)} (${c.keys.length})` })),
+    ];
+    const cur = options.find((o) => o.value === state.collection) ?? options[0];
+    label.textContent = cur.text;
+    menu.innerHTML = options.map((o) =>
+      `<li class="caret-option${o.value === state.collection ? ' is-on' : ''}" role="option" data-col-val="${esc(o.value)}">${o.text}</li>`
+    ).join('');
+  }
+  container.hidden = state.collections.length === 0;
 }
 
 // --- popover menu (shared by collection + group pickers) --------------
@@ -1195,8 +1206,8 @@ function renderSettings() {
 
   body.innerHTML = `
     <div class="set-actions">
-      <button class="text-btn" data-settings-export type="button">⬇ Export all (JSON)</button>
-      <button class="text-btn" data-settings-import type="button">⬆ Import…</button>
+      <button class="text-btn" data-settings-export type="button">${ICONS.download} Export</button>
+      <button class="text-btn" data-settings-import type="button">${ICONS.upload} Import…</button>
     </div>
     <section class="set-section"><h3 class="set-title">Appearance</h3><div class="accent-swatches">${swatchesHtml}</div></section>
     <section class="set-section"><h3 class="set-title">Venue groups</h3>${groupsHtml}</section>
@@ -1328,6 +1339,34 @@ function closeModals() {
   stopNetwork();
 }
 
+// --- caret-select (custom dropdown) -----------------------------------
+function toggleCaret(btn: HTMLElement) {
+  const menu = btn.nextElementSibling as HTMLElement;
+  document.querySelectorAll<HTMLElement>('.caret-select-btn[aria-expanded="true"]').forEach((b) => {
+    if (b !== btn) { b.setAttribute('aria-expanded', 'false'); (b.nextElementSibling as HTMLElement).hidden = true; }
+  });
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!open));
+  menu.hidden = open;
+}
+function closeAllCarets() {
+  document.querySelectorAll<HTMLElement>('.caret-select-btn[aria-expanded="true"]').forEach((btn) => {
+    btn.setAttribute('aria-expanded', 'false');
+    (btn.nextElementSibling as HTMLElement).hidden = true;
+  });
+}
+const SORT_LABELS: Record<string, string> = {
+  venue: 'Sort: Venue', date: 'Sort: Date', id: 'Sort: Paper ID',
+  title: 'Sort: Title', authors: 'Sort: Authors',
+};
+function reflectSort() {
+  const label = document.querySelector<HTMLElement>('#sortSelect .caret-select-label');
+  if (label) label.textContent = SORT_LABELS[state.sort] ?? 'Sort: Venue';
+  document.querySelectorAll<HTMLElement>('#sortSelect .caret-option').forEach((opt) => {
+    opt.classList.toggle('is-on', opt.dataset.sortVal === state.sort);
+  });
+}
+
 // --- theme -------------------------------------------------------------
 function reflectTheme() {
   const dark = document.documentElement.dataset.theme === 'dark';
@@ -1412,17 +1451,32 @@ function wire() {
     t = window.setTimeout(() => { state.query = els.search.value.trim(); state.shown = PAGE; writeUrl(); render(); }, 130);
   });
   els.searchClear.addEventListener('click', () => { state.query = ''; els.search.value = ''; writeUrl(); render(); els.search.focus(); });
-  els.sort.addEventListener('change', () => { state.sort = els.sort.value; writeUrl(); render(); });
-  // collection filter — narrows the list to a collection (loads its venues)
-  els.collectionFilter.addEventListener('change', () => {
-    state.collection = els.collectionFilter.value; state.shown = PAGE;
-    const c = state.collection ? collectionById(state.collection) : undefined;
-    if (c) {
-      const need = [...new Set(c.keys.map((k) => k.split(':')[0]))].filter((id) => venueById.has(id) && !state.selected.has(id));
-      need.forEach((id) => state.selected.add(id));
-      reflectSidebar();
-      ensureLoaded([...state.selected]).then(() => { writeUrl(); render(); });
-    } else { writeUrl(); render(); }
+  // Sort caret-select
+  $('#sortSelect').addEventListener('click', (e) => {
+    const opt = (e.target as HTMLElement).closest<HTMLElement>('[data-sort-val]');
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('.caret-select-btn');
+    if (opt) { state.sort = opt.dataset.sortVal ?? 'venue'; closeAllCarets(); reflectSort(); writeUrl(); render(); return; }
+    if (btn) toggleCaret(btn);
+  });
+  // Collection filter caret-select
+  document.addEventListener('click', (e) => {
+    const opt = (e.target as HTMLElement).closest<HTMLElement>('#collectionFilter [data-col-val]');
+    const btn = (e.target as HTMLElement).closest<HTMLElement>('#collectionFilter .caret-select-btn');
+    if (opt) {
+      state.collection = opt.dataset.colVal ?? ''; state.shown = PAGE;
+      const c = state.collection ? collectionById(state.collection) : undefined;
+      closeAllCarets(); reflectCollectionFilter();
+      if (c) {
+        const need = [...new Set(c.keys.map((k) => k.split(':')[0]))].filter((id) => venueById.has(id) && !state.selected.has(id));
+        need.forEach((id) => state.selected.add(id));
+        reflectSidebar();
+        ensureLoaded([...state.selected]).then(() => { writeUrl(); render(); });
+      } else { writeUrl(); render(); }
+      return;
+    }
+    if (btn) { toggleCaret(btn); return; }
+    // close on click outside any caret-select
+    if (!(e.target as HTMLElement).closest('.caret-select')) closeAllCarets();
   });
 
   // facets toggle + changes
@@ -1631,6 +1685,7 @@ function wire() {
     if ((e.metaKey || e.ctrlKey) && e.key === '/') { e.preventDefault(); toggleHelp(); return; }
     if (e.key === 'Escape') {
       if (promptResolver) { settlePrompt(null); return; }
+      if (document.querySelector('.caret-select-btn[aria-expanded="true"]')) { closeAllCarets(); return; }
       if (!popEl.hidden) { closePop(); return; }
       if (document.activeElement === els.search) {
         if (state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }

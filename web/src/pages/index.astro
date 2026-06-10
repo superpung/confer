@@ -139,13 +139,19 @@ const year = new Date().getFullYear();
           <kbd class="search-kbd">⌘K</kbd>
           <button class="search-clear" data-search-clear aria-label="Clear search" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
         </div>
-        <select id="sortSelect" class="topbar-select" aria-label="Sort">
-          <option value="venue">Sort: Venue</option>
-          <option value="date">Sort: Date</option>
-          <option value="id">Sort: Paper ID</option>
-          <option value="title">Sort: Title</option>
-          <option value="authors">Sort: Authors</option>
-        </select>
+        <div class="caret-select" id="sortSelect">
+          <button class="caret-select-btn" type="button" aria-expanded="false" aria-haspopup="listbox">
+            <span class="caret-select-label">Sort: Venue</span>
+            <svg class="ic caret-select-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="caret-menu" role="listbox" hidden>
+            <li class="caret-option is-on" role="option" data-sort-val="venue">Sort: Venue</li>
+            <li class="caret-option" role="option" data-sort-val="date">Sort: Date</li>
+            <li class="caret-option" role="option" data-sort-val="id">Sort: Paper ID</li>
+            <li class="caret-option" role="option" data-sort-val="title">Sort: Title</li>
+            <li class="caret-option" role="option" data-sort-val="authors">Sort: Authors</li>
+          </ul>
+        </div>
         <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></button>
         <button class="icon-btn rail-toggle" data-rail-toggle title="Show insights" aria-label="Show insights"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="9"/><line x1="18" y1="20" x2="18" y2="4"/></svg></button>
         <button class="icon-btn" data-settings title="Settings" aria-label="Settings">
@@ -157,9 +163,15 @@ const year = new Date().getFullYear();
         <button class="chip-btn" data-facets-toggle type="button" aria-expanded="false">
           <span>Filters</span><span class="chip-btn-count" id="facetActiveCount" hidden>0</span>
         </button>
-        <select id="collectionFilter" class="collection-filter" aria-label="Filter by collection" hidden>
-          <option value="">All papers</option>
-        </select>
+        <div class="caret-select caret-select--pill" id="collectionFilter" hidden>
+          <button class="caret-select-btn" type="button" aria-expanded="false" aria-haspopup="listbox">
+            <span class="caret-select-label">All papers</span>
+            <svg class="ic caret-select-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="caret-menu" role="listbox" hidden>
+            <li class="caret-option is-on" role="option" data-col-val="">All papers</li>
+          </ul>
+        </div>
         <button class="chip-btn" data-open-saved type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Saved</button>
         <div class="result-summary" id="resultSummary">Select a venue to begin.</div>
       </div>
