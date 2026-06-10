@@ -79,8 +79,6 @@ export interface SettingsBundle {
   collections?: Collection[];
   paperTags?: Record<string, string[]>;
   savedSearches?: SavedSearch[];
-  theme?: string;
-  accent?: string;
 }
 
 /** Cached GitHub user info (from GET /user). Stored as K_GH_USER. */

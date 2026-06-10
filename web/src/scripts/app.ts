@@ -17,7 +17,7 @@ const K_GIST_ID = 'confer.gistId';           // id of the user's confer config g
 const K_GH_USER = 'confer.ghUser';           // cached GitHubUser JSON
 const K_SYNC_META = 'confer.syncMeta';       // SyncMeta JSON (conflict detection)
 // Keys bundled by the settings export/import and Gist sync.
-const CONFIG_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_THEME, K_ACCENT];
+const CONFIG_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED];
 // OAuth broker endpoint (Netlify Function — stateless, stores nothing).
 const OAUTH_BROKER = '/.netlify/functions/github-oauth';
 // GitHub OAuth App client_id (public; the secret lives only in Netlify env).
@@ -1662,8 +1662,6 @@ function bundleFingerprint(b: Partial<SettingsBundle>): string {
     collections: b.collections ?? [],
     paperTags: b.paperTags ?? {},
     savedSearches: b.savedSearches ?? [],
-    theme: b.theme ?? '',
-    accent: b.accent ?? '',
   });
 }
 
@@ -1701,12 +1699,6 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   const ssLocal = (local.savedSearches ?? []).filter((s) => !rSNames.has(s.name)).map((s) => s.name);
   const ssRemote = (remote.savedSearches ?? []).filter((s) => !lSNames.has(s.name)).map((s) => s.name);
   if (ssLocal.length || ssRemote.length) rows.push({ label: 'Saved searches', localItems: ssLocal, remoteItems: ssRemote });
-
-  const appLocal: string[] = [];
-  const appRemote: string[] = [];
-  if ((local.theme ?? '') !== (remote.theme ?? '')) { appLocal.push(`theme: ${local.theme || 'light'}`); appRemote.push(`theme: ${remote.theme || 'light'}`); }
-  if ((local.accent ?? '') !== (remote.accent ?? '')) { appLocal.push(`accent: ${local.accent || 'clay'}`); appRemote.push(`accent: ${remote.accent || 'clay'}`); }
-  if (appLocal.length) rows.push({ label: 'Appearance', localItems: appLocal, remoteItems: appRemote });
 
   if (!rows.length) return '<p class="set-note">The content is the same; only timestamps differ.</p>';
 
@@ -1867,8 +1859,6 @@ function serializeSettings(): SettingsBundle {
     collections: state.collections,
     paperTags: Object.fromEntries([...state.tags].filter(([, v]) => v.length)),
     savedSearches: state.saved,
-    theme: localStorage.getItem(K_THEME) ?? '',
-    accent: localStorage.getItem(K_ACCENT) ?? '',
   };
 }
 
@@ -1900,12 +1890,6 @@ function applySettingsBundle(d: Partial<SettingsBundle>, opts?: { merge?: boolea
     state.saved = merge ? [...state.saved, ...d.savedSearches.filter((s) => !state.saved.find((x) => x.name === s.name))] : d.savedSearches;
     writeJson(K_SAVED, state.saved);
   }
-  if (typeof d.theme === 'string' && d.theme && !merge) {
-    document.documentElement.dataset.theme = d.theme;
-    try { localStorage.setItem(K_THEME, d.theme); } catch { /* ignore */ }
-    reflectTheme();
-  }
-  if (typeof d.accent === 'string' && !merge) applyAccent(d.accent);
   reflectSidebar(); renderVenueGroups(); reflectSeriesGroup(); renderSaved(); renderSettings();
   writeUrl();
   ensureLoaded([...state.selected]).then(render);
