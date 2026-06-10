@@ -1351,10 +1351,10 @@ function renderSettings() {
         <button class="set-mini" data-share-full type="button" aria-label="Copy share link" title="Share all">${ICONS.link}</button></h3>
       <p class="set-note">Site config stored in this browser.</p>
       <pre class="set-raw">${esc(JSON.stringify(raw, null, 2))}</pre>
-      <div class="set-local-storage">
-        <span>Local storage ${formatBytes(localDataBytes())}</span>
-        <button class="set-mini set-mini-del" data-clear-local type="button" aria-label="Clear all local data" title="Clear all local data">${ICONS.trash}</button>
-      </div>
+    </section>
+    <section class="set-section">
+      <h3 class="set-title"><span>Local storage</span><span class="set-item-meta">${formatBytes(localDataBytes())}</span></h3>
+      <button class="text-btn text-btn--danger" data-clear-local type="button">${ICONS.trash} Clear local data</button>
     </section>`;
 }
 

@@ -658,10 +658,6 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-title { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; color: var(--faint); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
 .set-title .set-item-meta { font-weight: 600; }
 .set-note { margin: 0 0 8px; color: var(--faint); font-size: 12px; }
-.set-local-storage {
-  display: flex; align-items: center; gap: 8px; margin-top: 10px;
-  color: var(--faint); font-size: 12px;
-}
 .set-empty { color: var(--muted); font-size: 13px; }
 
 /* GitHub account identity row (Sync section, logged-in state) */
