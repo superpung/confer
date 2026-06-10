@@ -254,7 +254,6 @@ const year = new Date().getFullYear();
     <div class="modal" id="settingsModal" hidden>
       <div class="modal-card modal-card--tall" role="dialog" aria-modal="true" aria-label="Settings">
         <div class="modal-head"><h2>Settings</h2><button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
-        <p class="modal-hint">Venue groups, collections, tags and saved searches — all stored only in this browser. Export to back them up or move them to another device.</p>
         <div id="settingsBody" class="settings-body"></div>
         <input type="file" id="importFile" accept="application/json,.json" hidden />
       </div>
@@ -267,6 +266,20 @@ const year = new Date().getFullYear();
         <div class="net-wrap">
           <canvas id="networkCanvas"></canvas>
           <p class="net-empty" id="networkEmpty" hidden>Not enough co-authorship in this view.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="confirmModal" hidden>
+      <div class="modal-card modal-card--prompt" role="dialog" aria-modal="true" aria-label="Confirm">
+        <div class="modal-head">
+          <h2 id="confirmTitle">Confirm</h2>
+          <button class="icon-btn" type="button" data-confirm-cancel aria-label="Cancel"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+        <p id="confirmMessage" class="modal-hint" style="margin-bottom:16px"></p>
+        <div class="prompt-actions">
+          <button type="button" class="text-btn" data-confirm-cancel>Cancel</button>
+          <button type="button" class="text-btn text-btn--primary" id="confirmOk">OK</button>
         </div>
       </div>
     </div>

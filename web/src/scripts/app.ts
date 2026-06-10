@@ -71,6 +71,9 @@ const ICONS = {
   github: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>',
   cloudUp: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>',
   cloudDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>',
+  help: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+  signout: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
+  extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -908,12 +911,11 @@ function reflectSeriesGroup() {
 function deleteGroup(id: string) {
   const g = state.groups.find((x) => x.id === id);
   if (!g) return;
-  if (!window.confirm(`Delete group “${g.name}”?`)) return;
-  state.groups = state.groups.filter((x) => x.id !== id);
-  saveGroups();
-  renderVenueGroups();
-  reflectSeriesGroup();
-  renderSettings();
+  askConfirm({ title: 'Delete group', message: `Delete group “${g.name}”?`, ok: 'Delete', danger: true }).then((ok) => {
+    if (!ok) return;
+    state.groups = state.groups.filter((x) => x.id !== id);
+    saveGroups(); renderVenueGroups(); reflectSeriesGroup(); renderSettings();
+  });
 }
 
 // --- collection filter (controls) -------------------------------------
@@ -1007,6 +1009,29 @@ function settlePrompt(value: string | null) {
   const resolve = promptResolver;
   promptResolver = null;
   $('#promptModal').hidden = true;
+  resolve(value);
+}
+
+// --- custom confirm dialog (replaces window.confirm) ------------------
+let confirmResolver: ((v: boolean) => void) | null = null;
+function askConfirm(opts: { title: string; message: string; ok?: string; danger?: boolean }): Promise<boolean> {
+  closePop();
+  if (confirmResolver) settleConfirm(false);
+  return new Promise((resolve) => {
+    confirmResolver = resolve;
+    $('#confirmTitle').textContent = opts.title;
+    $('#confirmMessage').textContent = opts.message;
+    const okBtn = $<HTMLButtonElement>('#confirmOk');
+    okBtn.textContent = opts.ok ?? 'OK';
+    okBtn.className = `text-btn ${opts.danger ? 'text-btn--danger' : 'text-btn--primary'}`;
+    $('#confirmModal').hidden = false;
+  });
+}
+function settleConfirm(value: boolean) {
+  if (!confirmResolver) return;
+  const resolve = confirmResolver;
+  confirmResolver = null;
+  $('#confirmModal').hidden = true;
   resolve(value);
 }
 
@@ -1198,49 +1223,55 @@ function renderSyncSection(): string {
 
   const token = localStorage.getItem(K_GH_TOKEN);
   const gistId = localStorage.getItem(K_GIST_ID);
+  const SYNC_TIP = 'Sync your config across devices via a secret GitHub Gist — only accessible with the direct URL.';
 
   // Logged out
   if (!token) {
     return `<section class="set-section">
-      ${actionBtns}
-      <div class="set-actions" style="margin-top:4px">
+      <div class="set-actions">
         <button class="text-btn" data-gh-login type="button">${ICONS.github} Login with GitHub</button>
+        <button class="gh-help" title="${esc(SYNC_TIP)}" type="button" aria-label="About sync">${ICONS.help}</button>
       </div>
-      <p class="set-note">Sync your config across devices via a secret GitHub Gist — only accessible with the direct URL.</p>
+      ${actionBtns}
     </section>`;
   }
 
-  // Logged in — try to render identity
+  // Logged in
   const user = readJson<GitHubUser | null>(K_GH_USER, null);
   const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
   const initials = user ? (user.name || user.login).slice(0, 2).toUpperCase() : '?';
   const avatarHtml = user?.avatarUrl
     ? `<div class="gh-avatar"><img src="${esc(user.avatarUrl)}" alt="" loading="lazy"></div>`
     : `<div class="gh-avatar">${esc(initials)}</div>`;
-  const displayName = user
-    ? (user.name ? `${esc(user.name)} · ` : '') + `@${esc(user.login)}`
-    : 'GitHub account';
-  const emailHtml = user?.email ? `<span class="gh-meta">${esc(user.email)}</span>` : '';
+  // Name on top, @login below (only if a real name exists)
+  const nameHtml = user?.name ? `<span class="gh-name">${esc(user.name)}</span>` : `<span class="gh-name">@${esc(user?.login ?? '')}</span>`;
+  const loginHtml = user?.name ? `<span class="gh-login">@${esc(user.login)}</span>` : '';
+  // Sync time beside the button
   const syncedHtml = meta?.remoteUpdatedAt
-    ? `<span class="gh-meta">Last synced ${relativeTime(meta.remoteUpdatedAt)}</span>`
-    : `<span class="gh-meta">Not yet synced</span>`;
-  const gistHref = gistId
-    ? `href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer"`
+    ? `<span class="gh-synced" title="${esc(fullTimestamp(meta.remoteUpdatedAt))}">Synced ${relativeTime(meta.remoteUpdatedAt)}</span>`
+    : `<span class="gh-synced">Not yet synced</span>`;
+  // View Gist: dashed-underline inline link styled like paper authors
+  const gistLinkHtml = gistId
+    ? `<a class="gh-gist-link" href="https://gist.github.com/${gistId}" target="_blank" rel="noreferrer">View Gist ${ICONS.extLink}</a>`
     : '';
 
   return `<section class="set-section">
     <div class="set-account">
-      ${avatarHtml}
-      <div class="gh-identity">
-        <span class="gh-name">${displayName}</span>
-        ${emailHtml}
-        ${syncedHtml}
+      <div class="gh-id-group">
+        ${avatarHtml}
+        <div class="gh-identity">
+          ${nameHtml}
+          ${loginHtml}
+        </div>
+        <button class="gh-signout" data-gh-signout type="button" title="Sign out" aria-label="Sign out">${ICONS.signout}</button>
       </div>
-    </div>
-    <div class="set-actions">
-      <button class="text-btn text-btn--primary" data-sync-now type="button">${ICONS.cloudUp} Sync now</button>
-      ${gistId ? `<a class="text-btn" ${gistHref}>View Gist ↗</a>` : ''}
-      <button class="text-btn" data-gh-signout type="button">Sign out</button>
+      <div class="gh-sync">
+        <div class="gh-sync-top">
+          ${syncedHtml}
+          <button class="text-btn text-btn--primary" data-sync-now type="button">${ICONS.cloudUp} Sync now</button>
+        </div>
+        ${gistLinkHtml}
+      </div>
     </div>
     ${actionBtns}
   </section>`;
@@ -1320,7 +1351,8 @@ function formatBytes(n: number): string {
 }
 // Wipe every confer.* key and reset in-memory state (after a confirmation).
 function clearLocalData() {
-  if (!window.confirm('Erase all confer data stored in this browser — venue groups, collections, tags, saved searches and preferences? This cannot be undone.')) return;
+  askConfirm({ title: 'Clear all data', message: 'Erase all confer data stored in this browser — venue groups, collections, tags, saved searches and preferences? This cannot be undone.', ok: 'Clear', danger: true }).then((ok) => { if (!ok) return; clearLocalDataNow(); }); }
+function clearLocalDataNow() {
   const keys: string[] = [];
   for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith('confer.')) keys.push(k); }
   keys.forEach((k) => { try { localStorage.removeItem(k); } catch { /* ignore */ } });
@@ -1427,19 +1459,7 @@ async function handleShareHash() {
       : colCount === 1
         ? `Import collection "${colName}" (${paperCount} papers)?`
         : `Import ${colCount} collections (${paperCount} papers)?`;
-    const confirmed = await new Promise<boolean>((resolve) => {
-      const promptEl = document.querySelector<HTMLElement>('#promptModal');
-      const inputEl = document.querySelector<HTMLInputElement>('#promptInput');
-      const hintEl = document.querySelector<HTMLElement>('#promptHint');
-      const okEl = document.querySelector<HTMLElement>('#promptOk');
-      if (!promptEl || !inputEl || !hintEl || !okEl) { resolve(false); return; }
-      // repurpose the text prompt as a confirm dialog
-      hintEl.textContent = desc;
-      inputEl.style.display = 'none';
-      okEl.textContent = 'Import';
-      promptEl.hidden = false;
-      promptResolver = (v) => { inputEl.style.display = ''; okEl.textContent = 'OK'; resolve(v !== null); };
-    });
+    const confirmed = await askConfirm({ title: 'Import shared data', message: desc, ok: 'Import' });
     if (confirmed) {
       applySettingsBundle(bundle, { merge: true });
       toast('Imported shared data');
@@ -1529,14 +1549,15 @@ function applyRemoteBundle(remote: SettingsBundle): void {
   writeJson(K_SYNC_META, { remoteUpdatedAt: remote.updatedAt ?? '', localFingerprint: bundleFingerprint(serializeSettings()) } satisfies SyncMeta);
 }
 
-/** Sign out: clear token, identity, gist id, and sync meta. */
+/** Sign out: confirm, then clear token, identity, gist id, and sync meta. */
 function signOutGitHub() {
-  try {
-    [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k));
-  } catch { /* ignore */ }
-  conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
-  toast('Signed out');
-  renderSettings();
+  askConfirm({ title: 'Sign out', message: 'Sign out of GitHub? Your local config stays in this browser.', ok: 'Sign out' }).then((ok) => {
+    if (!ok) return;
+    try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
+    conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
+    toast('Signed out');
+    renderSettings();
+  });
 }
 
 // --- GitHub API helpers -----------------------------------------------
@@ -1572,6 +1593,11 @@ async function fetchGitHubUser(token: string): Promise<void> {
     writeJson(K_GH_USER, user);
     renderSettings();
   } catch { /* non-fatal */ }
+}
+
+/** Full localized timestamp with timezone, used in hover tooltips. */
+function fullTimestamp(iso: string): string {
+  try { return new Date(iso).toLocaleString(undefined, { timeZoneName: 'short' }); } catch { return iso; }
 }
 
 /** Human-readable relative time (e.g. "3 min ago", "2 h ago"). */
@@ -1834,6 +1860,7 @@ function setQuery(q: string) {
 // --- modals ------------------------------------------------------------
 function closeModals() {
   if (promptResolver) settlePrompt(null);
+  if (confirmResolver) settleConfirm(false);
   document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; });
   closePop();
   stopNetwork();
@@ -2098,6 +2125,10 @@ function wire() {
   $('#promptForm').addEventListener('submit', (e) => { e.preventDefault(); settlePrompt($<HTMLInputElement>('#promptInput').value); });
   document.querySelectorAll('[data-prompt-cancel]').forEach((b) => b.addEventListener('click', () => settlePrompt(null)));
 
+  // custom confirm dialog
+  $('#confirmOk').addEventListener('click', () => settleConfirm(true));
+  document.querySelectorAll('[data-confirm-cancel]').forEach((b) => b.addEventListener('click', () => settleConfirm(false)));
+
   // conflict resolution modal
   $('#conflictModal').addEventListener('click', (e) => {
     const t = e.target as HTMLElement;
@@ -2135,7 +2166,7 @@ function wire() {
     const cRen = t.closest<HTMLElement>('[data-col-rename]');
     if (cRen) { const c = collectionById(cRen.dataset.colRename ?? ''); if (c) askText({ title: 'Rename collection', value: c.name, max: NAME_MAX, ok: 'Rename' }).then((n) => { const cl = cleanInput(n ?? ''); if (cl) { c.name = cl; saveCollections(); afterCollectionsChange(); } }); return; }
     const cDel = t.closest<HTMLElement>('[data-col-del]');
-    if (cDel) { const c = collectionById(cDel.dataset.colDel ?? ''); if (c && window.confirm(`Delete collection “${c.name}”?`)) { state.collections = state.collections.filter((x) => x.id !== c.id); if (state.collection === c.id) state.collection = ''; saveCollections(); afterCollectionsChange(); render(); } return; }
+    if (cDel) { const c = collectionById(cDel.dataset.colDel ?? ''); if (c) askConfirm({ title: 'Delete collection', message: `Delete collection “${c.name}”?`, ok: 'Delete', danger: true }).then((ok) => { if (!ok) return; state.collections = state.collections.filter((x) => x.id !== c.id); if (state.collection === c.id) state.collection = ''; saveCollections(); afterCollectionsChange(); render(); }); return; }
     const tagPurge = t.closest<HTMLElement>('[data-tag-purge]');
     if (tagPurge) { const tag = tagPurge.dataset.tagPurge ?? ''; for (const [k, tags] of [...state.tags]) { const next = tags.filter((x) => x !== tag); if (next.length) state.tags.set(k, next); else state.tags.delete(k); } saveTags(); renderSettings(); render(); return; }
   });

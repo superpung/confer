@@ -653,7 +653,11 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-empty { color: var(--muted); font-size: 13px; }
 
 /* GitHub account identity row (Sync section, logged-in state) */
-.set-account { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.set-account {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.gh-id-group { display: flex; align-items: center; gap: 10px; }
 .gh-avatar {
   width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
   background: var(--line-strong); display: flex; align-items: center; justify-content: center;
@@ -661,8 +665,36 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .gh-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .gh-identity { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-.gh-name { font-size: 13.5px; font-weight: 500; }
-.gh-meta { font-size: 12px; color: var(--faint); }
+.gh-name { font-size: 13.5px; font-weight: 500; color: var(--text); }
+.gh-login { font-size: 12px; color: var(--faint); }
+/* Sign-out icon button — sits inline after the identity text */
+.gh-signout {
+  display: inline-grid; place-items: center; width: 26px; height: 26px;
+  border: 1px solid transparent; border-radius: 7px;
+  background: none; color: var(--faint); cursor: pointer; padding: 0; flex-shrink: 0;
+}
+.gh-signout:hover { color: var(--favorite); border-color: var(--line-strong); background: var(--panel-hover); }
+/* Right-hand sync cluster */
+.gh-sync { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.gh-sync-top { display: flex; align-items: center; gap: 10px; }
+.gh-synced { font-size: 12px; color: var(--faint); cursor: help; white-space: nowrap; }
+.gh-gist-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12.5px; color: var(--muted);
+  text-decoration: underline dashed; text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px; cursor: pointer; background: none; border: none; padding: 0;
+}
+.gh-gist-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.gh-gist-link svg { flex-shrink: 0; }
+/* Help tooltip trigger in logged-out row */
+.gh-help {
+  display: inline-grid; place-items: center; color: var(--faint);
+  cursor: help; padding: 0; background: none; border: none;
+}
+.gh-help:hover { color: var(--accent); }
+@media (max-width: 580px) {
+  .gh-sync { align-items: flex-start; }
+}
 
 /* Sync conflict diff table */
 .conflict-table {
@@ -732,6 +764,8 @@ html.is-rail-collapsed { --col-right: 0; }
 .prompt-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
 .text-btn--primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .text-btn--primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+.text-btn--danger { background: var(--favorite); border-color: var(--favorite); color: #fff; }
+.text-btn--danger:hover { filter: brightness(0.88); }
 
 
 /* Right rail (insights) ------------------------------------------------ */
