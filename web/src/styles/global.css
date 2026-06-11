@@ -698,17 +698,10 @@ html.is-rail-collapsed { --col-right: 0; }
   cursor: pointer; background: none; border: none; padding: 0; font-family: inherit;
 }
 .gh-conflict:hover { text-decoration: underline; }
-/* Icon-only animated cloud Sync button (title carries the sync time) */
-.gh-sync-btn {
-  display: inline-grid; place-items: center; width: 28px; height: 28px;
-  border: 1px solid transparent; border-radius: 7px;
-  background: none; color: var(--muted); cursor: pointer; padding: 0; flex-shrink: 0;
-  transition: var(--hover-tr);
-}
-.gh-sync-btn:hover { color: var(--accent); border-color: var(--line-strong); background: var(--panel-hover); }
-/* Cloud icon spin animation for sync-in-progress state */
+/* Sync pill button: .chip-btn base + these modifiers */
+.gh-sync-btn .ic { transform-box: fill-box; transform-origin: center; }
+.gh-sync-btn.is-syncing .ic { animation: sync-spin 1s linear infinite; }
 @keyframes sync-spin { to { transform: rotate(360deg); } }
-.spin-part { animation: sync-spin 1s linear infinite; }
 /* Help tooltip trigger in logged-out row */
 .gh-help {
   display: inline-grid; place-items: center; color: var(--faint);

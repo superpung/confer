@@ -75,13 +75,6 @@ const ICONS = {
   extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   refresh: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
   chevronDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>',
-  // Cloud icon states for the sync button: synced(check) / pending(up-arrow) / syncing(spin)
-  // Symmetric cloud outline: two equal side lobes (r5) + centred top hump (r6), symmetric about x=12.
-  cloud: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/></svg>',
-  cloudSync: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/><g class="spin-part" style="transform-box:fill-box;transform-origin:center"><path d="M9 14a3 3 0 1 0 3-3" stroke-linecap="round"/><polyline points="9,14 9,11 12,14"/></g></svg>',
-  cloudDone: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/><polyline points="9 14 11 16 15 11"/></svg>',
-  // Local changes pending upload: cloud + centred up-arrow
-  cloudPending: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/><line x1="12" y1="16" x2="12" y2="11"/><polyline points="9.5 13 12 10.5 14.5 13"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -1420,19 +1413,17 @@ function renderSyncSection(): string {
   // Name on top, @login below (only if a real name exists)
   const nameHtml = user?.name ? `<span class="gh-name">${esc(user.name)}</span>` : `<span class="gh-name">@${esc(user?.login ?? '')}</span>`;
   const loginHtml = user?.name ? `<span class="gh-login">@${esc(user.login)}</span>` : '';
-  // Sync button: icon reflects current state — check(synced), up-arrow(pending), spinner(in-flight).
-  // On conflict a text warning button replaces the icon button.
+  // Sync button: icon+text pill reusing .chip-btn; title carries the precise last-sync time.
+  // Conflict replaces the pill with a text warning button.
   const syncDisplayTs = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
   const isPending = localPending();
-  const syncBtnTitle = isPending
-    ? 'Local changes not yet synced — click to sync now'
-    : syncDisplayTs
-      ? `Synced ${relativeTime(syncDisplayTs)} — click to sync now (${fullTimestamp(syncDisplayTs)})`
-      : 'Not yet synced — click to sync now';
-  const syncBtnIcon = isPending ? ICONS.cloudPending : ICONS.cloudDone;
+  const syncLabel = isPending ? 'Pending' : 'Synced';
+  const syncHoverTitle = syncDisplayTs
+    ? `Last synced at ${fullTimestamp(syncDisplayTs)}`
+    : 'Never synced';
   const syncBtn = syncConflictPending
     ? `<button class="gh-conflict" type="button" title="Local and cloud both changed — click to review and resolve">⚠ Sync conflict — review</button>`
-    : `<button class="gh-sync-btn" data-sync-now type="button" title="${esc(syncBtnTitle)}" aria-label="${isPending ? 'Local changes pending sync' : 'Sync now'}">${syncBtnIcon}</button>`;
+    : `<button class="chip-btn gh-sync-btn" data-sync-now type="button" title="${esc(syncHoverTitle)}" aria-label="Sync now">${ICONS.refresh}<span class="gh-sync-text">${syncLabel}</span></button>`;
 
   return `<section class="set-section">
     <div class="set-account">
@@ -1879,27 +1870,27 @@ function localPending(): boolean {
   return bundleFingerprint(serializeSettings()) !== meta.localFingerprint;
 }
 
-/** Update the cloud sync button icon/title when the Settings modal is open.
- *  'synced'  = cloud + check    (last sync matches current state)
- *  'pending' = cloud + up-arrow (local changes not yet pushed)
- *  'syncing' = cloud + spinning arrow (in-flight)
- * Call with no arg (or pass 'auto') to derive the state from localPending(). */
+/** Update the sync pill button when the Settings modal is open.
+ *  'syncing' = icon spins, label "Syncing…"
+ *  'pending' = label "Pending", hover = last-sync time
+ *  'synced'  = label "Synced",  hover = last-sync time */
 function setSyncBtnState(s: 'syncing' | 'pending' | 'synced') {
   const btn = document.querySelector<HTMLElement>('[data-sync-now]');
   if (!btn) return;
+  const textEl = btn.querySelector<HTMLElement>('.gh-sync-text');
+  // Spin the refresh icon while syncing; stop otherwise
+  btn.classList.toggle('is-syncing', s === 'syncing');
   if (s === 'syncing') {
-    btn.innerHTML = ICONS.cloudSync; btn.title = 'Syncing…'; btn.setAttribute('aria-label', 'Syncing…');
-  } else if (s === 'pending') {
-    btn.innerHTML = ICONS.cloudPending;
-    btn.title = 'Local changes not yet synced — click to sync now';
-    btn.setAttribute('aria-label', 'Local changes pending sync');
+    if (textEl) textEl.textContent = 'Syncing…';
+    btn.setAttribute('aria-label', 'Syncing…');
+    // Keep existing title (last-sync time) so the tooltip stays informative
   } else {
     const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
     const ts = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
-    const title = ts
-      ? `Synced ${relativeTime(ts)} — click to sync now (${fullTimestamp(ts)})`
-      : 'Not yet synced — click to sync now';
-    btn.innerHTML = ICONS.cloudDone; btn.title = title; btn.setAttribute('aria-label', 'Sync now');
+    const hoverTitle = ts ? `Last synced at ${fullTimestamp(ts)}` : 'Never synced';
+    if (textEl) textEl.textContent = s === 'pending' ? 'Pending' : 'Synced';
+    btn.title = hoverTitle;
+    btn.setAttribute('aria-label', 'Sync now');
   }
 }
 
