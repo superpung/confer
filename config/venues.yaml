@@ -7,6 +7,10 @@
 #   sigarch:   program_url
 #   researchr: program_url
 #   dblp:      toc_url
+#   openreview: venue_id (optional; inferred for ICLR/ICML/NeurIPS)
+#   acl_anthology: event_url (optional; inferred for ACL)
+#   aaai:      archive_url / issue_prefix (optional; inferred for AAAI)
+#   ndss:      accepted_url (optional; inferred for NDSS)
 #
 # Paper tracks, event types, default labels, and metadata enrichers are inferred
 # by the scraper pipeline. Do not encode derived page metadata here.
@@ -320,6 +324,66 @@ venues:
     source:
       toc_url: https://dblp.org/db/conf/sp/sp2025.xml
 
+  - id: ndss2026
+    name: NDSS 2026
+    series: NDSS
+    category: Security & Privacy
+    kind: conference
+    year: 2026
+    scraper: ndss
+    enabled: true
+    source: {}
+
+  - id: aaai2026
+    name: AAAI 2026
+    series: AAAI
+    category: Artificial Intelligence & Machine Learning
+    kind: conference
+    year: 2026
+    scraper: aaai
+    enabled: true
+    source: {}
+
+  - id: neurips2025
+    name: NeurIPS 2025
+    series: NeurIPS
+    category: Artificial Intelligence & Machine Learning
+    kind: conference
+    year: 2025
+    scraper: openreview
+    enabled: true
+    source: {}
+
+  - id: icml2025
+    name: ICML 2025
+    series: ICML
+    category: Artificial Intelligence & Machine Learning
+    kind: conference
+    year: 2025
+    scraper: openreview
+    enabled: true
+    source: {}
+
+  - id: iclr2026
+    name: ICLR 2026
+    series: ICLR
+    category: Artificial Intelligence & Machine Learning
+    kind: conference
+    year: 2026
+    scraper: openreview
+    enabled: true
+    source: {}
+
+  - id: acl2025
+    name: ACL 2025
+    series: ACL
+    category: Natural Language Processing
+    kind: conference
+    year: 2025
+    scraper: acl_anthology
+    enabled: true
+    source: {}
+
   - id: tosem2026
     name: TOSEM 2026
     series: TOSEM
@@ -429,14 +493,3 @@ venues:
     enabled: true
     source:
       program_url: https://pldi25.sigplan.org/track/pldi-2025-papers
-
-  - id: neurips2025
-    name: NeurIPS 2025
-    series: NeurIPS
-    category: Machine Learning
-    kind: conference
-    year: 2025
-    scraper: openreview
-    enabled: false
-    source:
-      venue_id: NeurIPS.cc/2025/Conference

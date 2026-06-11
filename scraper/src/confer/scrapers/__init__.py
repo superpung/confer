@@ -8,18 +8,26 @@ from __future__ import annotations
 
 from ..config import VenueConfig
 from ..fetcher import Fetcher
+from .aaai import AaaiScraper
+from .acl_anthology import AclAnthologyScraper
 from .base import Scraper
 from .dateconf import DateConfScraper
 from .dblp import DblpScraper
 from .linklings import LinklingsScraper
+from .ndss import NdssScraper
+from .openreview import OpenReviewScraper
 from .researchr import ResearchrScraper
 from .sigarch import SigarchScraper
 
 
 SCRAPERS: dict[str, type[Scraper]] = {
+    AaaiScraper.name: AaaiScraper,
+    AclAnthologyScraper.name: AclAnthologyScraper,
     DateConfScraper.name: DateConfScraper,
     DblpScraper.name: DblpScraper,
     LinklingsScraper.name: LinklingsScraper,
+    NdssScraper.name: NdssScraper,
+    OpenReviewScraper.name: OpenReviewScraper,
     ResearchrScraper.name: ResearchrScraper,
     SigarchScraper.name: SigarchScraper,
 }

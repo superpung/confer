@@ -1,6 +1,42 @@
 {
-  "generatedAt": "2026-06-11T10:16:38+00:00",
+  "generatedAt": "2026-06-11T14:14:16+00:00",
   "venues": [
+    {
+      "category": "Artificial Intelligence & Machine Learning",
+      "count": 2375,
+      "id": "aaai2026",
+      "kind": "conference",
+      "name": "AAAI 2026",
+      "series": "AAAI",
+      "year": 2026
+    },
+    {
+      "category": "Artificial Intelligence & Machine Learning",
+      "count": 5351,
+      "id": "iclr2026",
+      "kind": "conference",
+      "name": "ICLR 2026",
+      "series": "ICLR",
+      "year": 2026
+    },
+    {
+      "category": "Artificial Intelligence & Machine Learning",
+      "count": 3257,
+      "id": "icml2025",
+      "kind": "conference",
+      "name": "ICML 2025",
+      "series": "ICML",
+      "year": 2025
+    },
+    {
+      "category": "Artificial Intelligence & Machine Learning",
+      "count": 5286,
+      "id": "neurips2025",
+      "kind": "conference",
+      "name": "NeurIPS 2025",
+      "series": "NeurIPS",
+      "year": 2025
+    },
     {
       "category": "Computer Architecture",
       "count": 168,
@@ -74,6 +110,15 @@
       "year": 2025
     },
     {
+      "category": "Natural Language Processing",
+      "count": 4548,
+      "id": "acl2025",
+      "kind": "conference",
+      "name": "ACL 2025",
+      "series": "ACL",
+      "year": 2025
+    },
+    {
       "category": "Programming Languages",
       "count": 74,
       "id": "oopsla2026",
@@ -144,6 +189,15 @@
       "name": "IEEE S&P 2025",
       "series": "IEEE S&P",
       "year": 2025
+    },
+    {
+      "category": "Security & Privacy",
+      "count": 265,
+      "id": "ndss2026",
+      "kind": "conference",
+      "name": "NDSS 2026",
+      "series": "NDSS",
+      "year": 2026
     },
     {
       "category": "Security & Privacy",

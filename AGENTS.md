@@ -10,8 +10,8 @@ static, searchable website (Netlify) for browsing papers. Venues are configured 
 `config/venues.yaml`, scraped through pluggable adapters, enriched from bibliographic
 metadata APIs, normalized to one schema, and shown in a single site with a category
 **sidebar**. Enabled venues now span EDA, computer architecture, software engineering,
-testing, programming languages, security/privacy, systems/networking, and journals;
-new venues are added by config + adapter, never by changing the site.
+testing, programming languages, security/privacy, systems/networking, AI/ML, NLP, and
+journals; new venues are added by config + adapter, never by changing the site.
 
 **Stack:** a **monorepo** — a **Python** scraper (`scraper/`, package `confer`) that
 emits unified JSON, consumed by an **Astro** static site (`web/`) that renders a single
@@ -56,13 +56,17 @@ scraper/               [now] Python project, package `confer`
     util.py            [now] shared helpers
     scrapers/
       __init__.py      [now] SCRAPERS registry
+      aaai.py          [now] AAAI OJS archive / issue / article-detail adapter
+      acl_anthology.py [now] ACL Anthology event-page adapter
       base.py          [now] Scraper ABC
       dateconf.py      [now] DATE official programme adapter
       dblp.py          [now] DBLP bibliography TOC adapter
       linklings.py     [now] DAC (Linklings program) adapter
+      ndss.py          [now] NDSS accepted-paper / detail-page adapter
+      openreview.py    [now] OpenReview notes API adapter
       researchr.py     [now] Researchr program / timeline / accepted-list adapter
       sigarch.py       [now] SIGARCH-style static program adapter
-      ...              [target] openreview.py, ieee.py, acm_dl.py
+      ...              [target] ieee.py, acm_dl.py
   tests/fixtures/      [now] small sample of cached pages for offline parse tests
 web/                   [now] Astro static site (Netlify)
   package.json  astro.config.mjs  tsconfig.json
@@ -253,12 +257,17 @@ npm run build                     # static build → web/dist/ (what Netlify pub
    conference proceedings from DBLP TOC XML. It follows linked USENIX presentation
    pages to fill abstracts, author-affiliation display text, pages, publisher, and
    PDF links. Researchr publishes POPL 2025/2026 and PLDI 2025/2026.
+10. **Official AI/NLP/security sources** — `openreview` publishes ICLR 2026,
+    ICML 2025, and NeurIPS 2025 from accepted OpenReview notes; `aaai` publishes
+    AAAI 2026 from the official OJS archive; `acl_anthology` publishes ACL 2025
+    from ACL Anthology event pages; and `ndss` publishes NDSS 2026 from the official
+    accepted-paper pages.
 
 **Planned:**
 
-- **More adapters** — OpenReview next (clean JSON API; `neurips2025` is seeded in
-  `config/venues.yaml` with `enabled: false` until the adapter exists), then ieee /
-  acm_dl. Adding a platform stays "one file in `scrapers/` + one registry entry".
+- **More adapters** — IEEE and ACM DL for sources that are not exposed through official
+  program pages, DBLP, or OpenReview. Adding a platform stays "one file in
+  `scrapers/` + one registry entry".
 
 ## Tech notes
 

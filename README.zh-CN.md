@@ -46,8 +46,9 @@
 ## 收录会场
 
 confer 目前汇聚了 EDA、计算机体系结构、软件工程、软件测试、程序语言、安全与隐私、
-系统与网络领域的会议和期刊，新增会场只需改配置。在分类侧边栏中即可浏览全部。
-当前数据已覆盖多个会场系列的多年份版本，并按领域、系列与年份组织。
+系统与网络、AI/ML 和自然语言处理领域的会议和期刊，新增会场只需改配置。
+在分类侧边栏中即可浏览全部。当前数据已覆盖多个会场系列的多年份版本，并按领域、
+系列与年份组织。
 
 ## 工作原理
 
@@ -94,10 +95,9 @@ npm run build      # 静态构建 → web/dist/
 ## 新增会场
 
 1. 在 `config/venues.yaml` 增加一项（字段在文件内有注释说明）。
-2. 把它的 `scraper:` 指向已注册的适配器（`dateconf`、`dblp`、`linklings`、
-   `researchr`、`sigarch`）。
-3. 只提供该适配器必要的来源入口（`program_url`、`base_url` 或 `toc_url`）。
-   track、event type、默认标签和 Crossref/OpenAlex 元数据补全由流水线自动推断。
+2. 把它的 `scraper:` 指向已注册的适配器。
+3. 只提供该适配器必要的来源入口，例如来源 URL 或来源标识。track、event type、
+   默认标签和 Crossref/OpenAlex 元数据补全由流水线自动推断。
 4. `uv run confer build --venue <id>`，检查 `web/public/data/<id>.json`。
 
 要支持新平台，在 `scraper/src/confer/scrapers/` 下新增一个适配器并注册——

@@ -60,9 +60,10 @@ without any account.
 
 confer currently brings together conferences and journals across EDA, computer
 architecture, software engineering, testing, programming languages, security and
-privacy, and systems/networking, with more added purely through configuration.
-Browse them all from the category sidebar. The current data set includes multiple
-yearly editions for several venue series, grouped by area, series, and year.
+privacy, systems/networking, AI/ML, and natural language processing, with more
+added purely through configuration. Browse them all from the category sidebar.
+The current data set includes multiple yearly editions for several venue series,
+grouped by area, series, and year.
 
 ## How it works
 
@@ -112,10 +113,9 @@ build — no Python at deploy time.
 ## Add a venue
 
 1. Add an entry to `config/venues.yaml` (fields are documented inline).
-2. Point its `scraper:` at a registered adapter (`dateconf`, `dblp`, `linklings`,
-   `researchr`, `sigarch`).
-3. Provide only the adapter's source locator (`program_url`, `base_url`, or
-   `toc_url`). Tracks, event types, default labels, and Crossref/OpenAlex
+2. Point its `scraper:` at a registered adapter.
+3. Provide only the adapter's source locator, such as a source URL or source
+   identifier. Tracks, event types, default labels, and Crossref/OpenAlex
    enrichment are inferred by the pipeline.
 4. `uv run confer build --venue <id>` and check `web/public/data/<id>.json`.
 

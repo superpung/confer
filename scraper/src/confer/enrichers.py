@@ -27,10 +27,16 @@ from .util import (
 DEFAULT_MAILTO = "hi@repus.me"
 TITLE_TOKEN_RE = re.compile(r"[a-z0-9]+")
 DEFAULT_ENRICHERS = ("crossref", "openalex")
+PRIMARY_METADATA_SCRAPERS = {"aaai", "acl_anthology", "ndss", "openreview"}
 
 
 def enrich_papers(venue: VenueConfig, fetcher: Fetcher, papers: list[Paper]) -> list[Paper]:
-    specs = venue.source.get("enrichers") if "enrichers" in venue.source else DEFAULT_ENRICHERS
+    if "enrichers" in venue.source:
+        specs = venue.source.get("enrichers")
+    elif venue.scraper in PRIMARY_METADATA_SCRAPERS:
+        specs = []
+    else:
+        specs = DEFAULT_ENRICHERS
     if isinstance(specs, str):
         specs = [specs]
     if not specs:

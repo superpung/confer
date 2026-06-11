@@ -9,6 +9,7 @@ Entries are user-facing; implementation details belong in commit messages.
 ## [Unreleased]
 
 ### Added
+- Latest AI/ML, NLP, and NDSS paper datasets are now included in the site.
 - Theme auto mode: toggle now cycles light → dark → auto; auto follows the OS
   `prefers-color-scheme` live (page reacts immediately when the OS switches).
 - Per-year official-site link in the sidebar: each venue edition shows an
