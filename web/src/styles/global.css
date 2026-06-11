@@ -639,6 +639,14 @@ html.is-rail-collapsed { --col-right: 0; }
 .pop-row-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
 .pop-row-n { color: var(--faint); font-size: 11px; font-weight: 600; }
 .pop-empty { margin: 0; padding: 4px 8px 8px; color: var(--muted); font-size: 13px; }
+/* Search/filter input inside a popmenu (tag combobox) */
+.pop-search {
+  display: block; width: 100%; box-sizing: border-box;
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  padding: 6px 8px; margin-bottom: 4px;
+  font: inherit; font-size: 13px; background: var(--bg); color: var(--text); outline: none;
+}
+.pop-search:focus { border-color: var(--accent); }
 .pop-action {
   width: 100%; text-align: left; margin-top: 4px;
   border: 0; border-top: 1px solid var(--line); border-radius: 0 0 7px 7px;
@@ -683,16 +691,14 @@ html.is-rail-collapsed { --col-right: 0; }
 .gh-name { font-size: 13.5px; font-weight: 500; color: var(--text); }
 .gh-login { font-size: 12px; color: var(--faint); }
 .gh-chevron { display: inline-flex; color: var(--faint); flex-shrink: 0; }
-/* Right-hand sync cluster: status text + compact icon Sync now button */
-.gh-sync { display: flex; align-items: center; gap: 8px; }
-.gh-synced { font-size: 12px; color: var(--faint); cursor: default; white-space: nowrap; }
+/* Sync conflict warning button */
 .gh-conflict {
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 12px; color: var(--favorite); white-space: nowrap;
   cursor: pointer; background: none; border: none; padding: 0; font-family: inherit;
 }
 .gh-conflict:hover { text-decoration: underline; }
-/* Icon-only Sync now button (replaces the heavy filled Sync now) */
+/* Icon-only animated cloud Sync button (title carries the sync time) */
 .gh-sync-btn {
   display: inline-grid; place-items: center; width: 28px; height: 28px;
   border: 1px solid transparent; border-radius: 7px;
@@ -700,6 +706,9 @@ html.is-rail-collapsed { --col-right: 0; }
   transition: var(--hover-tr);
 }
 .gh-sync-btn:hover { color: var(--accent); border-color: var(--line-strong); background: var(--panel-hover); }
+/* Cloud icon spin animation for sync-in-progress state */
+@keyframes sync-spin { to { transform: rotate(360deg); } }
+.spin-part { animation: sync-spin 1s linear infinite; }
 /* Help tooltip trigger in logged-out row */
 .gh-help {
   display: inline-grid; place-items: center; color: var(--faint);
@@ -734,6 +743,8 @@ html.is-rail-collapsed { --col-right: 0; }
 .set-mini:hover { color: var(--accent); border-color: var(--line-strong); background: var(--panel-hover); }
 .set-mini-del:hover { color: var(--favorite); }
 .set-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 9px; }
+/* Tag count in settings — visually separated from the tag name */
+.tag-n { color: var(--faint); font-size: 11px; font-weight: 600; margin-left: 4px; }
 /* Add-series "+" — hidden until its group row is hovered/focused. */
 .set-add {
   display: none; place-items: center; width: 22px; height: 22px;

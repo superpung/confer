@@ -16,6 +16,7 @@ const K_GH_TOKEN = 'confer.ghToken';         // GitHub gist-scoped access token
 const K_GIST_ID = 'confer.gistId';           // id of the user's confer config gist
 const K_GH_USER = 'confer.ghUser';           // cached GitHubUser JSON
 const K_SYNC_META = 'confer.syncMeta';       // SyncMeta JSON (conflict detection)
+const K_SYNC_ETAG = 'confer.syncEtag';       // ETag of the last fetched gist (conditional GET)
 // Keys bundled by the settings export/import and Gist sync.
 const CONFIG_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED];
 // OAuth broker endpoint (Netlify Function — stateless, stores nothing).
@@ -74,6 +75,10 @@ const ICONS = {
   extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   refresh: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
   chevronDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>',
+  // Cloud icon states for the sync button: idle / syncing (spinning arrow) / done (check)
+  cloud: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>',
+  cloudSync: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><g class="spin-part" style="transform-box:fill-box;transform-origin:center"><path d="M9 15a3 3 0 1 0 3-3" stroke-linecap="round"/><polyline points="9,15 9,12 12,15"/></g></svg>',
+  cloudDone: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><polyline points="9 15 11 17 15 13"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -263,6 +268,7 @@ const state = {
   tracks: new Set<string>(),
   events: new Set<string>(),
   venuesFacet: new Set<string>(),
+  tagFilter: new Set<string>(),                            // active tag filter (OR within tags)
   facetCollapsed: new Set<string>(),
   sort: 'venue',
   collection: '',                                       // active collection-filter id ('' = all)
@@ -302,16 +308,19 @@ function readUrl() {
   state.collection = q.get('col') ?? '';
   (q.get('track') ?? '').split(',').filter(Boolean).forEach((t) => state.tracks.add(t));
   (q.get('event') ?? '').split(',').filter(Boolean).forEach((e) => state.events.add(e));
+  (q.get('tags') ?? '').split(',').filter(Boolean).forEach((t) => state.tagFilter.add(t));
   return !!v || q.has('q') || q.has('track');
 }
 function writeUrl() {
   const q = new URLSearchParams();
   if (state.selected.size) q.set('v', [...state.selected].join(','));
-  if (state.query) q.set('q', state.query);
+  const trimmedQuery = state.query.trim();
+  if (trimmedQuery) q.set('q', trimmedQuery);
   if (state.sort !== 'venue') q.set('sort', state.sort);
   if (state.collection) q.set('col', state.collection);
   if (state.tracks.size) q.set('track', [...state.tracks].join(','));
   if (state.events.size) q.set('event', [...state.events].join(','));
+  if (state.tagFilter.size) q.set('tags', [...state.tagFilter].join(','));
   const qs = q.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
   writeJson(K_SELECTED, [...state.selected]);
@@ -360,6 +369,7 @@ function matches(row: { p: Paper; v: string }): boolean {
   if (state.venuesFacet.size && !state.venuesFacet.has(v)) return false;
   if (state.tracks.size && !p.tracks.some((t) => state.tracks.has(t))) return false;
   if (state.events.size && !eventList(p).some((e) => state.events.has(e))) return false;
+  if (state.tagFilter.size && !tagsOf(key(v, p.id)).some((t) => state.tagFilter.has(t))) return false;
   if (!matchQuery(row, state.terms)) return false;
   return true;
 }
@@ -533,13 +543,14 @@ function renderFacets(base: { p: Paper; v: string }[]) {
 function renderActiveFilters() {
   const chips: string[] = [];
   const add = (kind: string, val: string, label: string) =>
-    chips.push(`<span class="filter-chip">${esc(label)}<button data-remove-filter data-kind="${kind}" data-val="${esc(val)}" aria-label="Remove">×</button></span>`);
-  if (state.query) add('query', '', `“${state.query}”`);
+    chips.push(`<span class=”filter-chip”>${esc(label)}<button data-remove-filter data-kind=”${kind}” data-val=”${esc(val)}” aria-label=”Remove”>×</button></span>`);
+  if (state.query.trim()) add('query', '', `”${state.query.trim()}”`);
   state.tracks.forEach((t) => add('track', t, t));
   state.events.forEach((e) => add('event', e, e));
   state.venuesFacet.forEach((v) => add('venue', v, venueById.get(v)?.name ?? v));
+  state.tagFilter.forEach((t) => add('tagfilter', t, `tag: ${t}`));
   if (chips.length > 1) {
-    chips.push('<button class="filter-clear" data-clear-filters type="button">Clear all</button>');
+    chips.push('<button class=”filter-clear” data-clear-filters type=”button”>Clear all</button>');
   }
   els.active.innerHTML = chips.join('');
 }
@@ -549,6 +560,7 @@ function clearFilters() {
   state.tracks.clear();
   state.events.clear();
   state.venuesFacet.clear();
+  state.tagFilter.clear();
   state.shown = PAGE;
   writeUrl();
   render();
@@ -775,11 +787,12 @@ function render() {
   // a stale collection id (e.g. deleted) falls back to "all"
   if (state.collection && !collectionById(state.collection)) state.collection = '';
   state.colSet = state.collection ? new Set(collectionById(state.collection)!.keys) : null;
-  // reflect simple controls
-  els.search.value = state.query;
-  els.searchClear.hidden = !state.query;
+  // reflect simple controls (don't overwrite search while user is typing)
+  if (els.search !== document.activeElement) els.search.value = state.query;
+  els.searchClear.hidden = !state.query.trim();
   reflectSort();
   reflectCollectionFilter();
+  reflectTagFilter();
 
   if (!state.selected.size) {
     els.list.innerHTML = `<div class="empty-state"><h2>No venues selected</h2><p>Pick one or more venues from the left to browse their papers.</p></div>`;
@@ -953,8 +966,24 @@ document.body.appendChild(popEl);
 let popAnchor: HTMLElement | null = null;
 let popRender: (() => string) | null = null;
 let popOnPick: ((target: HTMLElement) => void) | null = null;
+let popOnInput: ((value: string) => void) | null = null;
 
-function paintPop() { if (popRender) popEl.innerHTML = popRender(); }
+function paintPop() {
+  if (!popRender) return;
+  // Preserve the search input's typed value and cursor position across innerHTML swaps.
+  const prevSearch = popEl.querySelector<HTMLInputElement>('.pop-search');
+  const prevStart = prevSearch?.selectionStart ?? null;
+  const prevEnd = prevSearch?.selectionEnd ?? null;
+  const hasFocus = prevSearch === document.activeElement;
+  popEl.innerHTML = popRender();
+  const newSearch = popEl.querySelector<HTMLInputElement>('.pop-search');
+  if (newSearch && hasFocus) {
+    newSearch.focus();
+    if (prevStart !== null && prevEnd !== null) {
+      try { newSearch.setSelectionRange(prevStart, prevEnd); } catch { /* ignore */ }
+    }
+  }
+}
 function positionPop(anchor: HTMLElement) {
   const r = anchor.getBoundingClientRect();
   popEl.style.visibility = 'hidden';
@@ -969,8 +998,8 @@ function positionPop(anchor: HTMLElement) {
   popEl.style.top = `${top + window.scrollY}px`;
   popEl.style.visibility = '';
 }
-function openPop(anchor: HTMLElement, render: () => string, onPick: (t: HTMLElement) => void) {
-  popAnchor = anchor; popRender = render; popOnPick = onPick;
+function openPop(anchor: HTMLElement, render: () => string, onPick: (t: HTMLElement) => void, onInput?: (value: string) => void) {
+  popAnchor = anchor; popRender = render; popOnPick = onPick; popOnInput = onInput ?? null;
   paintPop();
   positionPop(anchor);
   // (Re)trigger the entrance animation now that the menu is placed.
@@ -980,9 +1009,15 @@ function openPop(anchor: HTMLElement, render: () => string, onPick: (t: HTMLElem
 }
 function closePop() {
   popEl.hidden = true; popEl.innerHTML = ''; popEl.classList.remove('is-in');
-  popAnchor = null; popRender = null; popOnPick = null;
+  popAnchor = null; popRender = null; popOnPick = null; popOnInput = null;
 }
 popEl.addEventListener('click', (e) => { if (popOnPick) popOnPick(e.target as HTMLElement); });
+popEl.addEventListener('input', (e) => {
+  if (popOnInput) {
+    const inp = e.target as HTMLInputElement;
+    if (inp.classList.contains('pop-search')) popOnInput(inp.value);
+  }
+});
 document.addEventListener('click', (e) => {
   if (popEl.hidden) return;
   const t = e.target as HTMLElement;
@@ -1147,16 +1182,71 @@ function afterCollectionsChange(touchedKey?: string) {
 }
 
 // --- tags --------------------------------------------------------------
-function addTag(k: string) {
-  askText({ title: 'Add tags', placeholder: 'tag, another tag', max: TAG_MAX * 4, ok: 'Add' }).then((raw) => {
-    if (!raw) return;
+
+/** Combobox pop for adding/removing tags on a paper (replaces the plain text-prompt). */
+function openTagPop(anchor: HTMLElement, k: string) {
+  let filterText = '';
+  const buildHtml = () => {
+    const allTags = [...tagCounts().entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
     const cur = new Set(tagsOf(k));
-    raw.split(',').map((s) => cleanInput(s, TAG_MAX)).filter(Boolean).forEach((t) => cur.add(t));
-    state.tags.set(k, [...cur]);
-    saveTags();
-    render();
+    const lower = filterText.toLowerCase();
+    const visible = lower ? allTags.filter(([t]) => t.toLowerCase().includes(lower)) : allTags;
+    const rows = visible.map(([t, n]) =>
+      `<div class="pop-row" data-tag-toggle="${esc(t)}" role="button"><input type="checkbox" tabindex="-1" ${cur.has(t) ? 'checked' : ''}><span class="pop-row-label">${esc(t)}</span><span class="pop-row-n">${n}</span></div>`
+    ).join('');
+    const cleanFilter = cleanInput(filterText, TAG_MAX);
+    const isNewTag = cleanFilter && !allTags.some(([t]) => t === cleanFilter);
+    const newAction = isNewTag
+      ? `<button class="pop-action" data-tag-new="${esc(cleanFilter)}" type="button">＋ New "${esc(cleanFilter)}"</button>` : '';
+    const empty = !rows && !newAction ? '<p class="pop-empty">No tags yet.</p>' : '';
+    return `<div class="pop-title">Tags</div>`
+      + `<input class="pop-search" type="text" placeholder="Filter or create…" value="${esc(filterText)}" autocomplete="off" spellcheck="false">`
+      + (rows || empty) + newAction;
+  };
+  openPop(anchor, buildHtml, (t) => {
+    const toggle = t.closest<HTMLElement>('[data-tag-toggle]');
+    if (toggle) {
+      const tag = toggle.dataset.tagToggle!;
+      const cur = new Set(tagsOf(k));
+      if (cur.has(tag)) cur.delete(tag); else cur.add(tag);
+      if (cur.size) state.tags.set(k, [...cur]); else state.tags.delete(k);
+      saveTags(); refreshCardTags(k); paintPop();
+      return;
+    }
+    const newBtn = t.closest<HTMLElement>('[data-tag-new]');
+    if (newBtn) {
+      const tag = cleanInput(newBtn.dataset.tagNew ?? '', TAG_MAX);
+      if (!tag) return;
+      const cur = new Set(tagsOf(k));
+      cur.add(tag);
+      state.tags.set(k, [...cur]);
+      saveTags(); filterText = ''; refreshCardTags(k); paintPop();
+      return;
+    }
+  }, (val) => {
+    filterText = val.slice(0, TAG_MAX * 2);
+    paintPop();
   });
+  // Auto-focus the search input once the pop is placed
+  requestAnimationFrame(() => { popEl.querySelector<HTMLInputElement>('.pop-search')?.focus(); });
 }
+
+/** Update only the tag chips of a visible card (avoids a full re-render). */
+function refreshCardTags(k: string) {
+  const card = els.list.querySelector<HTMLElement>(`.paper-card[data-key="${CSS.escape(k)}"]`);
+  if (!card) return;
+  const chipsDiv = card.querySelector<HTMLElement>('.chips');
+  if (!chipsDiv) return;
+  const tags = tagsOf(k);
+  chipsDiv.querySelectorAll('.chip-tag, .chip-add').forEach((el) => el.remove());
+  const tagChips = tags.map((t) =>
+    `<button class="chip chip-tag" data-tag="${esc(t)}" title="Filter by tag &quot;${esc(t)}&quot;">${esc(t)}<span class="tag-x" data-tag-del="${esc(t)}" role="button" aria-label="Remove tag" title="Remove tag">×</span></button>`
+  ).join('');
+  const addBtn = `<button class="chip chip-add" data-tag-add type="button" title="Add a tag" aria-label="Add a tag">+ tag</button>`;
+  chipsDiv.insertAdjacentHTML('beforeend', tagChips + addBtn);
+  chipsDiv.classList.toggle('has-tags', tags.length > 0);
+}
+
 function removeTag(k: string, tag: string) {
   const next = tagsOf(k).filter((t) => t !== tag);
   if (next.length) state.tags.set(k, next); else state.tags.delete(k);
@@ -1169,6 +1259,50 @@ function tagCounts(): Map<string, number> {
   return m;
 }
 
+/** Open a pop for filtering the paper list by tag (multi-select). */
+function openTagFilterPop(anchor: HTMLElement) {
+  const viewTags = new Map<string, number>();
+  for (const { p, v } of state.rows) {
+    for (const t of tagsOf(key(v, p.id))) viewTags.set(t, (viewTags.get(t) ?? 0) + 1);
+  }
+  if (!viewTags.size) return;
+  const buildHtml = () => {
+    const entries = [...viewTags.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    const rows = entries.map(([t, n]) =>
+      `<div class="pop-row" data-tag-filter-val="${esc(t)}" role="button"><input type="checkbox" tabindex="-1" ${state.tagFilter.has(t) ? 'checked' : ''}><span class="pop-row-label">${esc(t)}</span><span class="pop-row-n">${n}</span></div>`
+    ).join('');
+    return `<div class="pop-title">Filter by tag</div>${rows || '<p class="pop-empty">No tags.</p>'}`;
+  };
+  openPop(anchor, buildHtml, (t) => {
+    const row = t.closest<HTMLElement>('[data-tag-filter-val]');
+    if (row) {
+      const tag = row.dataset.tagFilterVal!;
+      if (state.tagFilter.has(tag)) state.tagFilter.delete(tag); else state.tagFilter.add(tag);
+      state.shown = PAGE; writeUrl(); render(); paintPop();
+    }
+  });
+}
+
+/** Sync the Tags pill button (badge count + visibility) with the current view. */
+function reflectTagFilter() {
+  const btn = document.querySelector<HTMLElement>('#tagFilterBtn');
+  if (!btn) return;
+  // Compute tags present in the current base rows (before filtering)
+  const viewTags = new Set<string>();
+  for (const { p, v } of state.rows) {
+    for (const t of tagsOf(key(v, p.id))) viewTags.add(t);
+  }
+  // Remove any tagFilter entries that are no longer present in view
+  for (const t of [...state.tagFilter]) { if (!viewTags.has(t)) state.tagFilter.delete(t); }
+  btn.hidden = viewTags.size === 0;
+  btn.setAttribute('aria-expanded', String(!popEl.hidden && popAnchor === btn));
+  const countEl = btn.querySelector<HTMLElement>('#tagFilterCount');
+  if (countEl) {
+    countEl.textContent = String(state.tagFilter.size);
+    countEl.hidden = state.tagFilter.size === 0;
+  }
+}
+
 // --- toast -------------------------------------------------------------
 let toastTimer = 0;
 // Pending conflict resolution state (set when the conflict modal opens)
@@ -1177,9 +1311,12 @@ let conflictRemote: SettingsBundle | null = null;
 let conflictToken = '';
 let conflictGistId = '';
 // Auto-sync state
-let autoSyncTimer: number | null = null;   // debounce handle for push
-let syncConflictPending = false;           // true → paused, "Sync conflict — review" shown
-let lastAutoPullAt = 0;                    // throttle focus-pulls (epoch ms)
+const SYNC_QUIET_MS = 5000;               // ms of inactivity before auto-pushing
+const SYNC_MAX_WAIT_MS = 30_000;          // maximum ms to defer a push under continuous edits
+let autoSyncTimer: number | null = null;  // debounce handle for push
+let syncPendingSince = 0;                 // epoch ms when the current pending batch started (0 = idle)
+let syncConflictPending = false;          // true → paused, "Sync conflict — review" shown
+let lastAutoPullAt = 0;                   // throttle focus-pulls (epoch ms)
 function toast(msg: string) {
   const el = $('#toast');
   el.textContent = msg;
@@ -1221,7 +1358,7 @@ function saveCurrentSearch() {
     const clean = cleanInput(name ?? '');
     if (!clean) return;
     state.saved.push({
-      name: clean, query: state.query, sort: state.sort, collection: state.collection,
+      name: clean, query: state.query.trim(), sort: state.sort, collection: state.collection,
       tracks: [...state.tracks], events: [...state.events], venues: [...state.selected],
     });
     writeJson(K_SAVED, state.saved);
@@ -1268,13 +1405,15 @@ function renderSyncSection(): string {
   // Name on top, @login below (only if a real name exists)
   const nameHtml = user?.name ? `<span class="gh-name">${esc(user.name)}</span>` : `<span class="gh-name">@${esc(user?.login ?? '')}</span>`;
   const loginHtml = user?.name ? `<span class="gh-login">@${esc(user.login)}</span>` : '';
-  // Sync time / conflict indicator
+  // Sync button: icon-only cloud, title carries the status (time or conflict notice).
+  // On conflict a text warning button replaces the icon button.
   const syncDisplayTs = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
-  const syncedHtml = syncConflictPending
+  const syncBtnTitle = syncDisplayTs
+    ? `Synced ${relativeTime(syncDisplayTs)} — click to sync now (${fullTimestamp(syncDisplayTs)})`
+    : 'Not yet synced — click to sync now';
+  const syncBtn = syncConflictPending
     ? `<button class="gh-conflict" type="button" title="Local and cloud both changed — click to review and resolve">⚠ Sync conflict — review</button>`
-    : syncDisplayTs
-      ? `<span class="gh-synced" title="${esc(fullTimestamp(syncDisplayTs))}">Synced ${relativeTime(syncDisplayTs)}</span>`
-      : `<span class="gh-synced">Not yet synced</span>`;
+    : `<button class="gh-sync-btn" data-sync-now type="button" title="${esc(syncBtnTitle)}" aria-label="Sync now">${ICONS.cloud}</button>`;
 
   return `<section class="set-section">
     <div class="set-account">
@@ -1286,10 +1425,7 @@ function renderSyncSection(): string {
         </div>
         <span class="gh-chevron" aria-hidden="true">${ICONS.chevronDown}</span>
       </button>
-      <div class="gh-sync">
-        ${syncedHtml}
-        <button class="gh-sync-btn" data-sync-now type="button" title="Sync now" aria-label="Sync now">${ICONS.refresh}</button>
-      </div>
+      ${syncBtn}
     </div>
   </section>`;
 }
@@ -1325,7 +1461,7 @@ function renderSettings() {
     : '<p class="set-empty">No collections yet. Use the bookmark on a paper to add one.</p>';
   const tags = [...tagCounts().entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   const tagsHtml = tags.length
-    ? `<div class="set-chips">${tags.map(([t, n]) => `<span class="chip">${esc(t)} ${n}<span class="tag-x" data-tag-purge="${esc(t)}" role="button" aria-label="Remove from all">×</span></span>`).join('')}</div>`
+    ? `<div class="set-chips">${tags.map(([t, n]) => `<span class="chip">${esc(t)}<span class="tag-n">${n}</span><span class="tag-x" data-tag-purge="${esc(t)}" role="button" aria-label="Remove from all">×</span></span>`).join('')}</div>`
     : '<p class="set-empty">No tags yet. Add tags on a paper card.</p>';
   const raw: Record<string, unknown> = {};
   for (const k of CONFIG_KEYS) { const v = localStorage.getItem(k); if (!v) continue; try { raw[k] = JSON.parse(v); } catch { raw[k] = v; } }
@@ -1548,10 +1684,10 @@ async function handleOAuthCallback() {
 }
 
 /** Find or create the user's confer config gist. Uses ghFetch for 401 handling. */
-async function ensureGist(token: string): Promise<string> {
+async function ensureGist(token: string, opts?: { silent?: boolean }): Promise<string> {
   const cached = localStorage.getItem(K_GIST_ID);
   if (cached) return cached;
-  const listRes = await ghFetch('https://api.github.com/gists?per_page=100', token);
+  const listRes = await ghFetch('https://api.github.com/gists?per_page=100', token, undefined, opts);
   if (!listRes.ok) throw new Error('Failed to list gists');
   const gists = await listRes.json() as { id: string; files: Record<string, unknown> }[];
   const existing = gists.find((g) => 'confer-config.json' in g.files);
@@ -1564,7 +1700,7 @@ async function ensureGist(token: string): Promise<string> {
       public: false,
       files: { 'confer-config.json': { content: JSON.stringify({ app: 'confer', version: 1 }, null, 2) } },
     }),
-  });
+  }, opts);
   if (!createRes.ok) throw new Error('Failed to create gist');
   const gist = await createRes.json() as { id: string };
   try { localStorage.setItem(K_GIST_ID, gist.id); } catch { /* ignore */ }
@@ -1595,7 +1731,7 @@ function applyRemoteBundle(remote: SettingsBundle): void {
 function signOutGitHub() {
   askConfirm({ title: 'Sign out', message: 'Sign out of GitHub? Your local config stays in this browser.', ok: 'Sign out' }).then((ok) => {
     if (!ok) return;
-    try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
+    try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META, K_SYNC_ETAG].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
     conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
     syncConflictPending = false;
     if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
@@ -1606,8 +1742,11 @@ function signOutGitHub() {
 
 // --- GitHub API helpers -----------------------------------------------
 
-/** fetch() wrapper that surfaces 401s as an auto-signout + thrown error. */
-async function ghFetch(url: string, token: string, init?: RequestInit): Promise<Response> {
+/** fetch() wrapper that surfaces 401s as an auto-signout + thrown error.
+ *  Pass `{ silent: true }` for background calls so an expired token signs out
+ *  quietly (no toast) — manual calls remain loud. Token-refresh is not
+ *  implemented here; it requires a server-side broker extension (TODO). */
+async function ghFetch(url: string, token: string, init?: RequestInit, opts?: { silent?: boolean }): Promise<Response> {
   const res = await fetch(url, {
     ...init,
     headers: {
@@ -1617,8 +1756,8 @@ async function ghFetch(url: string, token: string, init?: RequestInit): Promise<
     },
   });
   if (res.status === 401) {
-    try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
-    toast('GitHub session expired — please log in again');
+    try { [K_GH_TOKEN, K_GH_USER, K_GIST_ID, K_SYNC_META, K_SYNC_ETAG].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
+    if (!opts?.silent) toast('GitHub session expired — please log in again');
     renderSettings();
     throw new Error('gh_401');
   }
@@ -1714,28 +1853,102 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   </div>`;
 }
 
+/** Update the cloud sync button icon/title when the Settings modal is open.
+ *  'idle' = plain cloud; 'syncing' = cloud + spinning arrow; 'done' = cloud + check. */
+function setSyncBtnState(s: 'idle' | 'syncing' | 'done') {
+  const btn = document.querySelector<HTMLElement>('[data-sync-now]');
+  if (!btn) return;
+  if (s === 'syncing') {
+    btn.innerHTML = ICONS.cloudSync; btn.title = 'Syncing…'; btn.setAttribute('aria-label', 'Syncing…');
+  } else if (s === 'done') {
+    btn.innerHTML = ICONS.cloudDone; btn.title = 'Synced ✓'; btn.setAttribute('aria-label', 'Synced');
+  } else {
+    const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
+    const ts = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
+    const title = ts
+      ? `Synced ${relativeTime(ts)} — click to sync now (${fullTimestamp(ts)})`
+      : 'Not yet synced — click to sync now';
+    btn.innerHTML = ICONS.cloud; btn.title = title; btn.setAttribute('aria-label', 'Sync now');
+  }
+}
+
 /** Debounced push trigger: called by writeJson (for CONFIG_KEYS) and theme/accent changes.
- *  Coalesces rapid local edits (3s window) before pushing to avoid spamming the Gist API. */
+ *  Coalesces rapid local edits into a single push:
+ *  - waits SYNC_QUIET_MS of inactivity before firing (cancels the timer on each new edit),
+ *  - but forces a push after SYNC_MAX_WAIT_MS of continuous editing regardless. */
 function markLocalChange() {
   if (!localStorage.getItem(K_GH_TOKEN)) return;  // not logged in
   if (syncConflictPending) return;                 // paused until conflict is resolved
+  const now = Date.now();
+  if (syncPendingSince === 0) syncPendingSince = now;
   if (autoSyncTimer !== null) clearTimeout(autoSyncTimer);
-  autoSyncTimer = window.setTimeout(() => { autoSyncTimer = null; void autoSync(); }, 3000);
+  if (now - syncPendingSince >= SYNC_MAX_WAIT_MS) {
+    // Forced flush: too long since first pending change — push immediately
+    syncPendingSince = 0;
+    void autoSync();
+    return;
+  }
+  autoSyncTimer = window.setTimeout(() => {
+    autoSyncTimer = null; syncPendingSince = 0; void autoSync();
+  }, SYNC_QUIET_MS);
 }
 
 /** Shared sync core. `auto:false` = manual (toasts + opens conflict modal);
- *  `auto:true` = silent (no toasts; conflict only marks the pending state). */
+ *  `auto:true` = silent (no toasts; 401 clears creds quietly; conflict marks pending state).
+ *
+ *  Rate-saving: sends If-None-Match on the gist GET so an unchanged remote returns 304,
+ *  which GitHub does not bill against the rate limit. */
 async function runSync({ auto }: { auto: boolean }): Promise<void> {
+  setSyncBtnState('syncing');
   const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) { if (!auto) toast('Not logged in'); return; }
+  if (!token) { if (!auto) toast('Not logged in'); setSyncBtnState('idle'); return; }
   if (!auto) toast('Syncing…');
-  try {
-    const gistId = await ensureGist(token);
-    const res = await ghFetch(`https://api.github.com/gists/${gistId}`, token);
-    if (!res.ok) throw new Error('Fetch gist failed');
-    const gist = await res.json() as { files: { 'confer-config.json'?: { content?: string } } };
-    const content = gist.files['confer-config.json']?.content;
 
+  /** Shared success epilogue: show done animation briefly, then restore idle button. */
+  const onSyncDone = (msg?: string) => {
+    if (!auto && msg) toast(msg);
+    renderSettings();
+    setSyncBtnState('done');
+    setTimeout(() => setSyncBtnState('idle'), 1200);
+  };
+
+  try {
+    const gistId = await ensureGist(token, { silent: auto });
+
+    // Conditional GET: send ETag so GitHub can return 304 (not counted against rate limit)
+    const storedEtag = localStorage.getItem(K_SYNC_ETAG);
+    const gistRes = await ghFetch(
+      `https://api.github.com/gists/${gistId}`, token,
+      storedEtag ? { headers: { 'If-None-Match': storedEtag } } : undefined,
+      { silent: auto },
+    );
+
+    // 304: remote is unchanged since our last fetch — check if we need to push
+    if (gistRes.status === 304) {
+      const local = serializeSettings();
+      const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
+      const localChanged = meta ? bundleFingerprint(local) !== meta.localFingerprint : true;
+      if (!localChanged) {
+        // Truly up to date — just bump the "last synced" display
+        if (meta) writeJson(K_SYNC_META, { ...meta, lastSyncedAt: new Date().toISOString() } satisfies SyncMeta);
+        if (auto) lastAutoPullAt = Date.now();
+        onSyncDone(!auto ? 'Already up to date' : undefined);
+        return;
+      }
+      // Local changed but remote same — push
+      await pushBundle(token, gistId, local);
+      onSyncDone(!auto ? 'Synced ✓' : undefined);
+      return;
+    }
+
+    if (!gistRes.ok) throw new Error('Fetch gist failed');
+
+    // Save the fresh ETag for the next conditional GET
+    const freshEtag = gistRes.headers.get('ETag');
+    if (freshEtag) { try { localStorage.setItem(K_SYNC_ETAG, freshEtag); } catch { /* ignore */ } }
+
+    const gist = await gistRes.json() as { files: { 'confer-config.json'?: { content?: string } } };
+    const content = gist.files['confer-config.json']?.content;
     const local = serializeSettings();
     const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
 
@@ -1747,14 +1960,13 @@ async function runSync({ auto }: { auto: boolean }): Promise<void> {
     if (!hasRealRemote) {
       // Empty or placeholder gist — first push from this device
       await pushBundle(token, gistId, local);
-      if (!auto) { toast('Synced ✓'); renderSettings(); }
-      else renderSettings();
+      onSyncDone(!auto ? 'Synced ✓' : undefined);
       return;
     }
     if (!meta) {
       // This device has never synced before but remote exists — pull down
       applyRemoteBundle(remote!);
-      if (!auto) toast('Synced ✓ — pulled cloud config');
+      onSyncDone(!auto ? 'Synced ✓ — pulled cloud config' : undefined);
       return;
     }
 
@@ -1764,23 +1976,23 @@ async function runSync({ auto }: { auto: boolean }): Promise<void> {
     if (!localChanged && !remoteChanged) {
       // Bump lastSyncedAt to reflect the confirmed-in-sync check time
       writeJson(K_SYNC_META, { ...meta, lastSyncedAt: new Date().toISOString() } satisfies SyncMeta);
-      if (auto) lastAutoPullAt = Date.now(); // update focus-throttle
-      renderSettings(); // refresh the displayed "Last synced" time
-      if (!auto) toast('Already up to date');
+      if (auto) lastAutoPullAt = Date.now();
+      onSyncDone(!auto ? 'Already up to date' : undefined);
       return;
     }
     if (localChanged && !remoteChanged) {
       await pushBundle(token, gistId, local);
-      if (!auto) toast('Synced ✓');
-      renderSettings(); return;
+      onSyncDone(!auto ? 'Synced ✓' : undefined);
+      return;
     }
     if (!localChanged) {
       applyRemoteBundle(remote!);
-      if (!auto) toast('Synced ✓');
+      onSyncDone(!auto ? 'Synced ✓' : undefined);
       return;
     }
 
     // True conflict — both sides changed
+    setSyncBtnState('idle');
     if (auto) {
       // Don't pop modal; stash and show passive indicator
       stashConflict(local, remote!, token, gistId);
@@ -1790,6 +2002,7 @@ async function runSync({ auto }: { auto: boolean }): Promise<void> {
       renderConflict(local, remote!, token, gistId);
     }
   } catch (e: unknown) {
+    setSyncBtnState('idle');
     if ((e as Error).message !== 'gh_401') { if (!auto) toast('Sync failed'); }
     console.error(e);
   }
@@ -2052,7 +2265,7 @@ function wire() {
   let t = 0;
   els.search.addEventListener('input', () => {
     clearTimeout(t);
-    t = window.setTimeout(() => { state.query = els.search.value.trim(); state.shown = PAGE; writeUrl(); render(); }, 130);
+    t = window.setTimeout(() => { state.query = els.search.value; state.shown = PAGE; writeUrl(); render(); }, 130);
   });
   els.searchClear.addEventListener('click', () => { state.query = ''; els.search.value = ''; writeUrl(); render(); els.search.focus(); });
   // Sort caret-select
@@ -2082,6 +2295,15 @@ function wire() {
     // close on click outside any caret-select
     if (!(e.target as HTMLElement).closest('.caret-select')) closeAllCarets();
   });
+
+  // Tag filter pill
+  const tagFilterBtn = document.querySelector<HTMLElement>('#tagFilterBtn');
+  if (tagFilterBtn) {
+    tagFilterBtn.addEventListener('click', () => {
+      if (popAnchor === tagFilterBtn && !popEl.hidden) closePop();
+      else openTagFilterPop(tagFilterBtn);
+    });
+  }
 
   // facets toggle + changes
   $('[data-facets-toggle]').addEventListener('click', (e) => {
@@ -2115,7 +2337,7 @@ function wire() {
     const kind = btn.dataset.kind;
     if (kind === 'query') { state.query = ''; }
     else {
-      const set = kind === 'track' ? state.tracks : kind === 'event' ? state.events : state.venuesFacet;
+      const set = kind === 'track' ? state.tracks : kind === 'event' ? state.events : kind === 'tagfilter' ? state.tagFilter : state.venuesFacet;
       set.delete(btn.dataset.val ?? '');
     }
     state.shown = PAGE; writeUrl(); render();
@@ -2142,7 +2364,9 @@ function wire() {
     } else if (tagDel) {
       removeTag(k, tagDel.dataset.tagDel ?? '');
     } else if (target.closest('[data-tag-add]')) {
-      addTag(k);
+      const tagBtn = target.closest<HTMLElement>('[data-tag-add]')!;
+      if (popAnchor === tagBtn && !popEl.hidden) closePop();
+      else openTagPop(tagBtn, k);
     } else if (target.closest('[data-tag]')) {
       setQuery(`tag:"${(target.closest('[data-tag]') as HTMLElement).dataset.tag!}"`);
     } else if (target.closest('[data-venue-badge]')) {
@@ -2411,6 +2635,7 @@ function init() {
   reflectSidebar();
   reflectSeriesGroup();
   reflectCollectionFilter();
+  reflectTagFilter();
   renderSettings();
   ensureLoaded([...state.selected]).then(render);
 }
