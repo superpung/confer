@@ -75,10 +75,13 @@ const ICONS = {
   extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   refresh: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
   chevronDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>',
-  // Cloud icon states for the sync button: idle / syncing (spinning arrow) / done (check)
-  cloud: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>',
-  cloudSync: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><g class="spin-part" style="transform-box:fill-box;transform-origin:center"><path d="M9 15a3 3 0 1 0 3-3" stroke-linecap="round"/><polyline points="9,15 9,12 12,15"/></g></svg>',
-  cloudDone: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><polyline points="9 15 11 17 15 13"/></svg>',
+  // Cloud icon states for the sync button: synced(check) / pending(up-arrow) / syncing(spin)
+  // Symmetric cloud outline: two equal side lobes (r5) + centred top hump (r6), symmetric about x=12.
+  cloud: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/></svg>',
+  cloudSync: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/><g class="spin-part" style="transform-box:fill-box;transform-origin:center"><path d="M9 14a3 3 0 1 0 3-3" stroke-linecap="round"/><polyline points="9,14 9,11 12,14"/></g></svg>',
+  cloudDone: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/><polyline points="9 14 11 16 15 11"/></svg>',
+  // Local changes pending upload: cloud + centred up-arrow
+  cloudPending: '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18A5 5 0 0 1 9 11A6 6 0 0 1 12 6A6 6 0 0 1 15 11A5 5 0 0 1 20 18Z"/><line x1="12" y1="16" x2="12" y2="11"/><polyline points="9.5 13 12 10.5 14.5 13"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -543,14 +546,14 @@ function renderFacets(base: { p: Paper; v: string }[]) {
 function renderActiveFilters() {
   const chips: string[] = [];
   const add = (kind: string, val: string, label: string) =>
-    chips.push(`<span class=”filter-chip”>${esc(label)}<button data-remove-filter data-kind=”${kind}” data-val=”${esc(val)}” aria-label=”Remove”>×</button></span>`);
+    chips.push(`<span class="filter-chip">${esc(label)}<button data-remove-filter data-kind="${kind}" data-val="${esc(val)}" aria-label="Remove">×</button></span>`);
   if (state.query.trim()) add('query', '', `”${state.query.trim()}”`);
   state.tracks.forEach((t) => add('track', t, t));
   state.events.forEach((e) => add('event', e, e));
   state.venuesFacet.forEach((v) => add('venue', v, venueById.get(v)?.name ?? v));
   state.tagFilter.forEach((t) => add('tagfilter', t, `tag: ${t}`));
   if (chips.length > 1) {
-    chips.push('<button class=”filter-clear” data-clear-filters type=”button”>Clear all</button>');
+    chips.push('<button class="filter-clear" data-clear-filters type="button">Clear all</button>');
   }
   els.active.innerHTML = chips.join('');
 }
@@ -1013,6 +1016,15 @@ function closePop() {
 }
 popEl.addEventListener('click', (e) => { if (popOnPick) popOnPick(e.target as HTMLElement); });
 popEl.addEventListener('input', (e) => {
+  // Skip mid-composition events so IME (Chinese/Japanese/etc.) input is not interrupted
+  // by paintPop() re-rendering the innerHTML. compositionend fires the update instead.
+  if ((e as InputEvent).isComposing) return;
+  if (popOnInput) {
+    const inp = e.target as HTMLInputElement;
+    if (inp.classList.contains('pop-search')) popOnInput(inp.value);
+  }
+});
+popEl.addEventListener('compositionend', (e) => {
   if (popOnInput) {
     const inp = e.target as HTMLInputElement;
     if (inp.classList.contains('pop-search')) popOnInput(inp.value);
@@ -1292,8 +1304,11 @@ function reflectTagFilter() {
   for (const { p, v } of state.rows) {
     for (const t of tagsOf(key(v, p.id))) viewTags.add(t);
   }
-  // Remove any tagFilter entries that are no longer present in view
-  for (const t of [...state.tagFilter]) { if (!viewTags.has(t)) state.tagFilter.delete(t); }
+  // Prune tagFilter entries no longer in view — but only when rows are loaded.
+  // At init, rows are still empty (loaded async), so skip the prune to preserve URL-loaded filters.
+  if (state.rows.length) {
+    for (const t of [...state.tagFilter]) { if (!viewTags.has(t)) state.tagFilter.delete(t); }
+  }
   btn.hidden = viewTags.size === 0;
   btn.setAttribute('aria-expanded', String(!popEl.hidden && popAnchor === btn));
   const countEl = btn.querySelector<HTMLElement>('#tagFilterCount');
@@ -1405,15 +1420,19 @@ function renderSyncSection(): string {
   // Name on top, @login below (only if a real name exists)
   const nameHtml = user?.name ? `<span class="gh-name">${esc(user.name)}</span>` : `<span class="gh-name">@${esc(user?.login ?? '')}</span>`;
   const loginHtml = user?.name ? `<span class="gh-login">@${esc(user.login)}</span>` : '';
-  // Sync button: icon-only cloud, title carries the status (time or conflict notice).
+  // Sync button: icon reflects current state — check(synced), up-arrow(pending), spinner(in-flight).
   // On conflict a text warning button replaces the icon button.
   const syncDisplayTs = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
-  const syncBtnTitle = syncDisplayTs
-    ? `Synced ${relativeTime(syncDisplayTs)} — click to sync now (${fullTimestamp(syncDisplayTs)})`
-    : 'Not yet synced — click to sync now';
+  const isPending = localPending();
+  const syncBtnTitle = isPending
+    ? 'Local changes not yet synced — click to sync now'
+    : syncDisplayTs
+      ? `Synced ${relativeTime(syncDisplayTs)} — click to sync now (${fullTimestamp(syncDisplayTs)})`
+      : 'Not yet synced — click to sync now';
+  const syncBtnIcon = isPending ? ICONS.cloudPending : ICONS.cloudDone;
   const syncBtn = syncConflictPending
     ? `<button class="gh-conflict" type="button" title="Local and cloud both changed — click to review and resolve">⚠ Sync conflict — review</button>`
-    : `<button class="gh-sync-btn" data-sync-now type="button" title="${esc(syncBtnTitle)}" aria-label="Sync now">${ICONS.cloud}</button>`;
+    : `<button class="gh-sync-btn" data-sync-now type="button" title="${esc(syncBtnTitle)}" aria-label="${isPending ? 'Local changes pending sync' : 'Sync now'}">${syncBtnIcon}</button>`;
 
   return `<section class="set-section">
     <div class="set-account">
@@ -1853,22 +1872,34 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   </div>`;
 }
 
+/** True when local config has diverged from the last-synced snapshot. */
+function localPending(): boolean {
+  const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
+  if (!meta) return true; // never synced
+  return bundleFingerprint(serializeSettings()) !== meta.localFingerprint;
+}
+
 /** Update the cloud sync button icon/title when the Settings modal is open.
- *  'idle' = plain cloud; 'syncing' = cloud + spinning arrow; 'done' = cloud + check. */
-function setSyncBtnState(s: 'idle' | 'syncing' | 'done') {
+ *  'synced'  = cloud + check    (last sync matches current state)
+ *  'pending' = cloud + up-arrow (local changes not yet pushed)
+ *  'syncing' = cloud + spinning arrow (in-flight)
+ * Call with no arg (or pass 'auto') to derive the state from localPending(). */
+function setSyncBtnState(s: 'syncing' | 'pending' | 'synced') {
   const btn = document.querySelector<HTMLElement>('[data-sync-now]');
   if (!btn) return;
   if (s === 'syncing') {
     btn.innerHTML = ICONS.cloudSync; btn.title = 'Syncing…'; btn.setAttribute('aria-label', 'Syncing…');
-  } else if (s === 'done') {
-    btn.innerHTML = ICONS.cloudDone; btn.title = 'Synced ✓'; btn.setAttribute('aria-label', 'Synced');
+  } else if (s === 'pending') {
+    btn.innerHTML = ICONS.cloudPending;
+    btn.title = 'Local changes not yet synced — click to sync now';
+    btn.setAttribute('aria-label', 'Local changes pending sync');
   } else {
     const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
     const ts = meta ? (meta.lastSyncedAt ?? meta.remoteUpdatedAt) : null;
     const title = ts
       ? `Synced ${relativeTime(ts)} — click to sync now (${fullTimestamp(ts)})`
       : 'Not yet synced — click to sync now';
-    btn.innerHTML = ICONS.cloud; btn.title = title; btn.setAttribute('aria-label', 'Sync now');
+    btn.innerHTML = ICONS.cloudDone; btn.title = title; btn.setAttribute('aria-label', 'Sync now');
   }
 }
 
@@ -1879,6 +1910,7 @@ function setSyncBtnState(s: 'idle' | 'syncing' | 'done') {
 function markLocalChange() {
   if (!localStorage.getItem(K_GH_TOKEN)) return;  // not logged in
   if (syncConflictPending) return;                 // paused until conflict is resolved
+  setSyncBtnState('pending');                      // show queued-upload icon immediately
   const now = Date.now();
   if (syncPendingSince === 0) syncPendingSince = now;
   if (autoSyncTimer !== null) clearTimeout(autoSyncTimer);
@@ -1893,23 +1925,30 @@ function markLocalChange() {
   }, SYNC_QUIET_MS);
 }
 
+let syncInFlight = false; // re-entrancy guard: prevents overlapping pushes
+
 /** Shared sync core. `auto:false` = manual (toasts + opens conflict modal);
  *  `auto:true` = silent (no toasts; 401 clears creds quietly; conflict marks pending state).
  *
  *  Rate-saving: sends If-None-Match on the gist GET so an unchanged remote returns 304,
  *  which GitHub does not bill against the rate limit. */
 async function runSync({ auto }: { auto: boolean }): Promise<void> {
+  if (syncInFlight) { if (!auto) toast('Syncing…'); return; }
+  syncInFlight = true;
   setSyncBtnState('syncing');
   const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) { if (!auto) toast('Not logged in'); setSyncBtnState('idle'); return; }
+  if (!token) {
+    if (!auto) toast('Not logged in');
+    setSyncBtnState(localPending() ? 'pending' : 'synced');
+    syncInFlight = false; return;
+  }
   if (!auto) toast('Syncing…');
 
-  /** Shared success epilogue: show done animation briefly, then restore idle button. */
+  /** Shared success epilogue: settle the button to the appropriate steady state. */
   const onSyncDone = (msg?: string) => {
     if (!auto && msg) toast(msg);
     renderSettings();
-    setSyncBtnState('done');
-    setTimeout(() => setSyncBtnState('idle'), 1200);
+    setSyncBtnState(localPending() ? 'pending' : 'synced');
   };
 
   try {
@@ -1992,7 +2031,7 @@ async function runSync({ auto }: { auto: boolean }): Promise<void> {
     }
 
     // True conflict — both sides changed
-    setSyncBtnState('idle');
+    setSyncBtnState(localPending() ? 'pending' : 'synced');
     if (auto) {
       // Don't pop modal; stash and show passive indicator
       stashConflict(local, remote!, token, gistId);
@@ -2002,9 +2041,11 @@ async function runSync({ auto }: { auto: boolean }): Promise<void> {
       renderConflict(local, remote!, token, gistId);
     }
   } catch (e: unknown) {
-    setSyncBtnState('idle');
+    setSyncBtnState(localPending() ? 'pending' : 'synced');
     if ((e as Error).message !== 'gh_401') { if (!auto) toast('Sync failed'); }
     console.error(e);
+  } finally {
+    syncInFlight = false;
   }
 }
 
@@ -2551,6 +2592,7 @@ function wire() {
     // Available even while typing:
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); els.search.focus(); return; }
     if ((e.metaKey || e.ctrlKey) && e.key === '/') { e.preventDefault(); toggleHelp(); return; }
+    if ((e.metaKey || e.ctrlKey) && e.key === 's') { e.preventDefault(); void syncNow(); return; }
     if (e.key === 'Escape') {
       if (promptResolver) { settlePrompt(null); return; }
       if (document.querySelector('.caret-select-btn[aria-expanded="true"]')) { closeAllCarets(); return; }
