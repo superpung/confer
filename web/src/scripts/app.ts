@@ -82,6 +82,7 @@ const ICONS = {
   extLink: '<svg style="width:12px;height:12px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;display:inline-block;vertical-align:middle" viewBox="0 0 24 24" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
   refresh: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>',
   chevronDown: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>',
+  chevronUp:   '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>',
   // reading-status icons (circle outline / half-filled dot / checkmark / bookmark+plus)
   statusUnread:  '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>',
   statusToread:  '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8.5" x2="12" y2="15.5"/><line x1="8.5" y1="12" x2="15.5" y2="12"/></svg>',
@@ -2341,6 +2342,16 @@ interface RevDiff {
  *  whole contents render as additions. */
 const EMPTY_BUNDLE: SettingsBundle = { app: 'confer', version: 2 };
 
+// --- Shared bundle-comparison helpers ------------------------------------
+/** Build a Set of string keys from an array. */
+function idSet<T>(arr: T[], key: (x: T) => string): Set<string> {
+  return new Set(arr.map(key));
+}
+/** Return items from `arr` whose key is absent from `others`. */
+function onlyInA<T>(arr: T[], others: Set<string>, key: (x: T) => string): T[] {
+  return arr.filter((x) => !others.has(key(x)));
+}
+
 /** Compute a human-readable semantic diff from `prev` → `cur`. Detects adds,
  *  removals, renames, membership and content edits across every config
  *  category. Timestamps (exportedAt/updatedAt) are intentionally ignored, so a
@@ -2506,8 +2517,13 @@ function renderHistoryList(entries: HistoryEntry[], bundles: (SettingsBundle | n
 
   const items = entries.map((e, i) => {
     const cur = bundles[i];
-    const prev = bundles[i + 1] ?? EMPTY_BUNDLE; // older neighbour, or empty for the first revision
-    const diff: RevDiff = cur ? summarizeRevision(prev, cur) : { rows: [], summary: 'Content unavailable' };
+    // bundles[i+1]: undefined = past the loaded range (oldest revision shown), null = fetch failed
+    const olderSlot = bundles[i + 1];
+    const diff: RevDiff = cur === null
+      ? { rows: [], summary: 'Content unavailable' }
+      : olderSlot === null
+        ? { rows: [], summary: 'Changes unavailable' }   // older snapshot failed to load
+        : summarizeRevision(olderSlot ?? EMPTY_BUNDLE, cur); // undefined → treat as initial revision
     const hasDetail = diff.rows.length > 0;
     const isCurrent = i === 0;
     return `<li class="hist-item${isCurrent ? ' is-current' : ''}">
@@ -2824,16 +2840,16 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   type Row = { label: string; localItems: string[]; remoteItems: string[] };
   const rows: Row[] = [];
 
-  const lGIds = new Set((local.venueGroups ?? []).map((g) => g.id));
-  const rGIds = new Set((remote.venueGroups ?? []).map((g) => g.id));
-  const grpLocal = (local.venueGroups ?? []).filter((g) => !rGIds.has(g.id)).map((g) => g.name);
-  const grpRemote = (remote.venueGroups ?? []).filter((g) => !lGIds.has(g.id)).map((g) => g.name);
+  const rGIds = idSet(remote.venueGroups ?? [], (g) => g.id);
+  const lGIds = idSet(local.venueGroups ?? [], (g) => g.id);
+  const grpLocal = onlyInA(local.venueGroups ?? [], rGIds, (g) => g.id).map((g) => g.name);
+  const grpRemote = onlyInA(remote.venueGroups ?? [], lGIds, (g) => g.id).map((g) => g.name);
   if (grpLocal.length || grpRemote.length) rows.push({ label: 'Groups', localItems: grpLocal, remoteItems: grpRemote });
 
-  const lCIds = new Set((local.collections ?? []).map((c) => c.id));
-  const rCIds = new Set((remote.collections ?? []).map((c) => c.id));
-  const colLocal = (local.collections ?? []).filter((c) => !rCIds.has(c.id)).map((c) => c.name);
-  const colRemote = (remote.collections ?? []).filter((c) => !lCIds.has(c.id)).map((c) => c.name);
+  const rCIds = idSet(remote.collections ?? [], (c) => c.id);
+  const lCIds = idSet(local.collections ?? [], (c) => c.id);
+  const colLocal = onlyInA(local.collections ?? [], rCIds, (c) => c.id).map((c) => c.name);
+  const colRemote = onlyInA(remote.collections ?? [], lCIds, (c) => c.id).map((c) => c.name);
   if (colLocal.length || colRemote.length) rows.push({ label: 'Collections', localItems: colLocal, remoteItems: colRemote });
 
   const lTags = new Set(Object.keys(local.paperTags ?? {}));
@@ -2842,10 +2858,10 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   const tagRemote = [...new Set([...rTags].filter((k) => !lTags.has(k)).flatMap((k) => remote.paperTags![k] ?? []))];
   if (tagLocal.length || tagRemote.length) rows.push({ label: 'Tags', localItems: tagLocal, remoteItems: tagRemote });
 
-  const lSNames = new Set((local.savedSearches ?? []).map((s) => s.name));
-  const rSNames = new Set((remote.savedSearches ?? []).map((s) => s.name));
-  const ssLocal = (local.savedSearches ?? []).filter((s) => !rSNames.has(s.name)).map((s) => s.name);
-  const ssRemote = (remote.savedSearches ?? []).filter((s) => !lSNames.has(s.name)).map((s) => s.name);
+  const rSNames = idSet(remote.savedSearches ?? [], (s) => s.name);
+  const lSNames = idSet(local.savedSearches ?? [], (s) => s.name);
+  const ssLocal = onlyInA(local.savedSearches ?? [], rSNames, (s) => s.name).map((s) => s.name);
+  const ssRemote = onlyInA(remote.savedSearches ?? [], lSNames, (s) => s.name).map((s) => s.name);
   if (ssLocal.length || ssRemote.length) rows.push({ label: 'Saved searches', localItems: ssLocal, remoteItems: ssRemote });
 
   const lNKeys = new Set(Object.keys(local.paperNotes ?? {}));
@@ -3833,6 +3849,8 @@ function wire() {
         const item = toggle.closest<HTMLElement>('.hist-item');
         if (!item) return;
         const open = item.classList.toggle('is-open');
+        // Swap icon to reflect state — no CSS rotation, matching the sidebar collapse pattern
+        toggle.innerHTML = open ? ICONS.chevronUp : ICONS.chevronDown;
         toggle.setAttribute('aria-label', open ? 'Hide changes' : 'Show changes');
         toggle.setAttribute('title', open ? 'Hide changes' : 'Show changes');
         requestAnimationFrame(refreshScrollFades);

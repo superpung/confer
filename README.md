@@ -35,36 +35,36 @@ without any account.
 
 ## Highlights
 
-- 🔎 **Field-aware search.** Search everything by default, then narrow with prefixes
-  like `author:`, `title:`, or `inst:` and exclude terms with `-`.
-- 🏷 **Authors & affiliations.** Hover an author to see their institution; click it to
-  pull up every paper from that institution. Same-name authors are disambiguated in
-  analytics and networks.
-- 📊 **Insights panel.** Live charts of the top institutions, authors, and tracks for
-  whatever is currently in view — click any bar to drill in. Open the topic-trend
-  chart to see how tracks rise and fall across editions.
-- 🕸 **Relationship networks.** Explore co-author and institution networks for the
-  current result set.
-- ⭐ **Groups, collections & tags.** Build custom venue groups (series-level), file
-  papers into named collections, tag papers freely, and save filter sets to return to
-  later. Everything is local and exportable — see your whole library at a glance from
-  the settings panel.
+- 🔎 **Field-aware search.** Type to search everything at once, or focus with
+  prefixes like `author:`, `title:`, `inst:`, and `track:`. Exclude terms with `-`.
+  Combine filters, saved searches, and per-paper tags for any workflow.
+- 🏷 **Authors & affiliations.** Hover any author to see their institution; click to
+  pull up all papers from that institution. Disambiguation handles same-name authors
+  correctly across analytics and network views.
+- 📊 **Live insights.** The right rail shows real-time charts of top institutions,
+  authors, and tracks for whatever is in view — click any bar to drill in. Open the
+  topic-trend chart to see how tracks rise and fall across venue editions.
+- 🕸 **Relationship networks.** Explore co-author and institution collaboration
+  networks for the current result set, rendered as an interactive graph.
+- ⭐ **Your library.** Organise venues into custom groups, collect papers by name,
+  tag anything, and save filter presets to return to later. Your whole library
+  — collections, tags, status, notes — is visible at a glance in the settings panel.
 - 📖 **Reading status & notes.** Mark papers to-read / reading / done and attach
-  private notes; filter to any status or to noted papers. Status and notes sync
-  across devices when signed in.
-- 🔍 **Find similar & "For you".** Open any paper's abstract to find related papers
-  from the entire corpus. The "For you" toolbar button recommends papers based on
-  what you've saved, tagged, or noted — act on results inline or bulk-add to a
-  collection.
-- 📤 **Selection & export.** Select papers from the list, then copy BibTeX or download
-  CSV with DOI and publication metadata.
-- 🔗 **Share & sync.** Share a collection or your whole setup with a link. Or sign in
-  with GitHub to sync everything across devices automatically — stored in a private
-  gist only you can reach. Review the full config version history and roll back to
-  any earlier revision. No account needed; sync is opt-in.
-- ⚡ **Fast & private.** A single pre-rendered page; all filtering happens client-side.
-  Light/dark themes with accent colors, keyboard shortcuts (`⌘K`, `⌘/`), and a
-  responsive mobile layout.
+  private notes. Filter to any status or to noted papers. Everything syncs across
+  devices when signed in.
+- 🔍 **Find similar & "For you".** Open any abstract to surface related papers from
+  across the full corpus. The "For you" button in the toolbar recommends papers based
+  on what you've saved, tagged, or noted — act on results inline or bulk-add them to
+  a collection.
+- 📤 **Selection & export.** Tick papers from the list, then copy BibTeX or download
+  a CSV with DOI, authors, and publication metadata — ready for reference managers.
+- 🔗 **Share & sync.** Share a collection or your full config with a link. Sign in
+  with GitHub to sync automatically across devices via a private gist only you can
+  reach. Browse the full version history of your config and roll back to any revision.
+  No account needed; sync is opt-in.
+- ⚡ **Fast & private.** One pre-rendered page — all filtering happens in the browser,
+  with no tracking. Light/dark themes with accent colors, keyboard shortcuts
+  (`⌘K` search, `⌘/` shortcuts), and a responsive layout for mobile.
 
 ## Venues
 

@@ -15,6 +15,11 @@
   --accent-soft: #f4ece6;
   --favorite: #c2410c;
   --favorite-soft: #fdf3ec;
+  --danger: #c2410c;            /* canonical warning/destructive red */
+  --danger-soft: #fdf3ec;
+  --ok: #3d8b3d;                /* canonical positive/add green */
+  --ok-soft: rgba(61, 139, 61, 0.10);
+  --status-toread: #b07d2e;     /* ochre — to-read bookmark */
   --status-reading: #b07010;    /* amber — reading in progress */
   --status-done: #2e7a44;       /* green — finished */
   --shadow: 0 1px 2px rgba(26, 26, 24, 0.04), 0 8px 24px rgba(26, 26, 24, 0.06);
@@ -61,6 +66,11 @@
   --accent-soft: #3a2c24;
   --favorite: #e0875c;
   --favorite-soft: #382a22;
+  --danger: #e0875c;            /* canonical warning/destructive red (dark) */
+  --danger-soft: #382a22;
+  --ok: #5cb85c;                /* canonical positive/add green (dark) */
+  --ok-soft: rgba(92, 184, 92, 0.12);
+  --status-toread: #cf9a4a;     /* ochre — to-read bookmark (dark) */
   --status-reading: #d4a040;
   --status-done: #4aad68;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.35);
@@ -206,7 +216,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .group-chip-n { color: var(--faint); font-size: 11px; font-weight: 600; }
 .group-chip.is-active .group-chip-n { color: var(--accent-dark); }
 .group-chip-x { border: 0; background: none; cursor: pointer; color: var(--faint); font-size: 14px; line-height: 1; padding: 4px 8px 4px 4px; }
-.group-chip-x:hover { color: var(--favorite); }
+.group-chip-x:hover { color: var(--danger); }
 .venue-cat { display: flex; flex-direction: column; }
 .venue-cat[hidden] { display: none; }   /* let the venue filter hide whole categories */
 .venue-cat-head {
@@ -553,7 +563,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .status-btn.status-btn--toread,
 .status-btn.status-btn--reading,
 .status-btn.status-btn--done { opacity: 1; }
-.status-btn--toread  { color: var(--status-toread,  #b07d2e); }
+.status-btn--toread  { color: var(--status-toread); }
 .status-btn--reading { color: var(--status-reading); }
 .status-btn--done    { color: var(--status-done); }
 /* Note edit button — hidden by default; shown on hover or when a note exists. */
@@ -620,7 +630,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .chip-tag:hover { border-color: var(--accent); color: var(--accent-dark); }
 /* A little breathing room between the label and its remove "×". */
 .tag-x { display: inline-grid; place-items: center; cursor: pointer; color: var(--faint); font-size: 12px; line-height: 1; margin-left: 5px; }
-.tag-x:hover { color: var(--favorite); }
+.tag-x:hover { color: var(--danger); }
 /* "+ tag" — same dashed style as the other "+" add buttons, just with a label.
    Reuses the .chip box so its height matches the chips (no hover jitter), and
    is hidden until the card is hovered/focused so it takes no permanent space. */
@@ -706,7 +716,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .saved-item button { border: none; background: none; cursor: pointer; font: inherit; }
 .saved-item .saved-load { color: var(--accent); font-weight: 500; flex: 1; text-align: left; }
 .saved-item .saved-del { color: var(--faint); font-size: 16px; }
-.saved-item .saved-del:hover { color: var(--favorite); }
+.saved-item .saved-del:hover { color: var(--danger); }
 
 /* Popover menu (collection + group pickers) ---------------------------- */
 .popmenu {
@@ -731,10 +741,10 @@ html.is-rail-collapsed { --col-right: 0; }
 .pop-row input { width: auto; min-height: 0; accent-color: var(--accent); pointer-events: none; }
 .pop-row-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
 .pop-row-n { color: var(--faint); font-size: 11px; font-weight: 600; }
-.pop-row--danger { color: var(--danger-text, #c03a2b); }
+.pop-row--danger { color: var(--danger); }
 .pop-row--danger .pop-row-label { color: inherit; }
 .pop-row--danger .ic { color: inherit; }
-.pop-row--danger:hover { background: rgba(192, 58, 43, 0.08); }
+.pop-row--danger:hover { background: var(--danger-soft); }
 .pop-empty { margin: 0; padding: 4px 8px 8px; color: var(--muted); font-size: 13px; }
 /* Search/filter input inside a popmenu (tag combobox) */
 .pop-search {
@@ -837,7 +847,7 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .set-mini:first-of-type { margin-left: auto; }
 .set-mini:hover { color: var(--accent); border-color: var(--line-strong); background: var(--panel-hover); }
-.set-mini-del:hover { color: var(--favorite); }
+.set-mini-del:hover { color: var(--danger); }
 .set-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 9px; }
 /* Tag count in settings — visually separated from the tag name */
 .tag-n { color: var(--faint); font-size: 11px; font-weight: 600; margin-left: 4px; }
@@ -875,7 +885,7 @@ html.is-rail-collapsed { --col-right: 0; }
 
 /* Config version history ----------------------------------------------- */
 .hist-status { margin: 0; padding: 16px 2px; font-size: 13px; color: var(--text-soft); }
-.hist-status--err { color: var(--danger-text, #c03a2b); }
+.hist-status--err { color: var(--danger); }
 .hist-list { list-style: none; margin: 2px 0; padding: 0; }
 .hist-item { position: relative; padding-left: 22px; }
 /* timeline rail + node */
@@ -890,10 +900,9 @@ html.is-rail-collapsed { --col-right: 0; }
 .hist-summary { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.5px; color: var(--text-soft); }
 .hist-summary.is-muted { color: var(--faint); font-style: italic; }
 .hist-grow { flex: 1 1 0; min-width: 4px; }
-.hist-restore { flex-shrink: 0; font-size: 12px; padding: 3px 10px; color: var(--text-soft); transition: color .15s ease, background .15s ease, border-color .15s ease; }
+.hist-restore { flex-shrink: 0; font-size: 12px; padding: 3px 10px; color: var(--text-soft); transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease; }
 .hist-restore:hover { color: var(--accent); }
-.hist-expand { flex-shrink: 0; transition: transform .2s ease, color .15s ease, background .15s ease, border-color .15s ease; }
-.hist-item.is-open .hist-expand { transform: rotate(180deg); }
+.hist-expand { flex-shrink: 0; width: 24px; height: 24px; font-size: 14px; transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease; }
 /* animated expand/collapse via grid-rows */
 .hist-detail-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .22s ease; }
 .hist-item.is-open .hist-detail-wrap { grid-template-rows: 1fr; }
@@ -903,14 +912,10 @@ html.is-rail-collapsed { --col-right: 0; }
 .hist-cat-label { flex-shrink: 0; width: 88px; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--faint); }
 .hist-cat-chips { display: flex; flex-wrap: wrap; gap: 5px; }
 .hist-chip { font-size: 11.5px; line-height: 1.55; padding: 1px 8px; border-radius: 999px; border: 1px solid transparent; white-space: nowrap; }
-.hist-chip--add { background: rgba(61, 139, 61, 0.10); border-color: rgba(61, 139, 61, 0.30); color: #3d8b3d; }
-.hist-chip--del { background: rgba(192, 58, 43, 0.08); border-color: rgba(192, 58, 43, 0.22); color: var(--danger-text, #c03a2b); }
+.hist-chip--add { background: var(--ok-soft); border-color: color-mix(in srgb, var(--ok) 30%, transparent); color: var(--ok); }
+.hist-chip--del { background: var(--danger-soft); border-color: color-mix(in srgb, var(--danger) 30%, transparent); color: var(--danger); }
 .hist-chip--mod { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
 .hist-more { align-self: center; font-size: 11px; color: var(--faint); }
-[data-theme="dark"] .hist-chip--add { color: #5cb85c; border-color: rgba(92,184,92,0.35); background: rgba(92,184,92,0.12); }
-@media (prefers-color-scheme: dark) {
-  [data-theme="auto"] .hist-chip--add { color: #5cb85c; border-color: rgba(92,184,92,0.35); background: rgba(92,184,92,0.12); }
-}
 
 /* Topic trend chart ---------------------------------------------------- */
 .trend-svg { width: 100%; height: auto; display: block; overflow: visible; }
@@ -937,10 +942,10 @@ html.is-rail-collapsed { --col-right: 0; }
 .prompt-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
 .text-btn--primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .text-btn--primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
-.text-btn--danger { background: var(--favorite); border-color: var(--favorite); color: #fff; }
+.text-btn--danger { background: var(--danger); border-color: var(--danger); color: #fff; }
 .text-btn--danger:hover { filter: brightness(0.88); }
-.text-btn--danger-ghost { background: transparent; border-color: var(--favorite); color: var(--favorite); }
-.text-btn--danger-ghost:hover { background: var(--favorite-soft); border-color: var(--favorite); color: var(--favorite); }
+.text-btn--danger-ghost { background: transparent; border-color: var(--danger); color: var(--danger); }
+.text-btn--danger-ghost:hover { background: var(--danger-soft); border-color: var(--danger); color: var(--danger); }
 
 
 /* Right rail (insights) ------------------------------------------------ */
@@ -986,7 +991,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .rail-stat { display: flex; flex-direction: column; gap: 2px; padding: 9px 6px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); text-align: center; }
 .rail-stat-n { font-size: 16px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
 .rail-stat-l { font-size: 10.5px; color: var(--faint); }
-.rail-stat--toread  .rail-stat-n { color: var(--status-toread,  #b07d2e); }
+.rail-stat--toread  .rail-stat-n { color: var(--status-toread); }
 .rail-stat--reading .rail-stat-n { color: var(--status-reading); }
 .rail-stat--done    .rail-stat-n { color: var(--status-done); }
 
@@ -1003,7 +1008,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .mini-card-list { display: flex; flex-direction: column; gap: 8px; }
 .mini-card { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
 .mini-card:hover { border-color: var(--line-strong); }
-.mini-card--toread   { border-left: 3px solid var(--status-toread, #b07d2e); }
+.mini-card--toread   { border-left: 3px solid var(--status-toread); }
 .mini-card--reading  { border-left: 3px solid var(--status-reading); }
 .mini-card--done     { border-left: 3px solid var(--status-done); }
 /* Selection checkbox on the left */

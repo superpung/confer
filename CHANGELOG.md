@@ -8,6 +8,14 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+### Changed
+- **History expand button** now matches the sidebar collapse pattern: the chevron
+  swaps between ▾ and ▴ on toggle instead of rotating, and the button is sized to
+  match the adjacent Restore button for a visually level row.
+- **Unified warning color token** (`--danger`): Sign out, Clear local data, delete
+  hovers, confirm-dialog danger buttons, error text, and del-chips all share one
+  canonical red in both light and dark themes.
+
 ### Added
 - **Config version history**: a full-screen "Config history" view (accessible via
   the history icon in Settings → Config when signed in) shows synced revisions as
