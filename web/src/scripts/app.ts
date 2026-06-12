@@ -2317,70 +2317,151 @@ function openIssue(kind: 'error' | 'venue') {
 
 // --- config version history -------------------------------------------
 
+/** Max revisions shown in the history modal (keeps upfront loading bounded). */
+const HIST_LIMIT = 30;
+
 /** A single entry in the GitHub Gist revision history. */
 interface HistoryEntry {
   version: string;
   committed_at: string;
-  change_status: { additions: number; deletions: number; total: number };
-  url: string;
 }
 
-/** Per-category diff between two revisions: show added/removed items. */
-function revisionDiff(prev: SettingsBundle, cur: SettingsBundle): string {
-  type Row = { label: string; added: string[]; removed: string[] };
-  const rows: Row[] = [];
+/** One labelled category of changes between two revisions. */
+interface DiffPart { text: string; kind: 'add' | 'del' | 'mod'; }
+interface DiffRow { label: string; parts: DiffPart[]; }
 
-  const pGIds = new Set((prev.venueGroups ?? []).map((g) => g.id));
-  const cGIds = new Set((cur.venueGroups ?? []).map((g) => g.id));
-  const gAdded = (cur.venueGroups ?? []).filter((g) => !pGIds.has(g.id)).map((g) => g.name);
-  const gRemoved = (prev.venueGroups ?? []).filter((g) => !cGIds.has(g.id)).map((g) => g.name);
-  if (gAdded.length || gRemoved.length) rows.push({ label: 'Groups', added: gAdded, removed: gRemoved });
-
-  const pCIds = new Set((prev.collections ?? []).map((c) => c.id));
-  const cCIds = new Set((cur.collections ?? []).map((c) => c.id));
-  const colAdded = (cur.collections ?? []).filter((c) => !pCIds.has(c.id)).map((c) => c.name);
-  const colRemoved = (prev.collections ?? []).filter((c) => !cCIds.has(c.id)).map((c) => c.name);
-  if (colAdded.length || colRemoved.length) rows.push({ label: 'Collections', added: colAdded, removed: colRemoved });
-
-  const pTags = new Set(Object.values(prev.paperTags ?? {}).flat());
-  const cTags = new Set(Object.values(cur.paperTags ?? {}).flat());
-  const tagsAdded = [...cTags].filter((t) => !pTags.has(t));
-  const tagsRemoved = [...pTags].filter((t) => !cTags.has(t));
-  if (tagsAdded.length || tagsRemoved.length) rows.push({ label: 'Tags', added: tagsAdded, removed: tagsRemoved });
-
-  const pSNames = new Set((prev.savedSearches ?? []).map((s) => s.name));
-  const cSNames = new Set((cur.savedSearches ?? []).map((s) => s.name));
-  const ssAdded = (cur.savedSearches ?? []).filter((s) => !pSNames.has(s.name)).map((s) => s.name);
-  const ssRemoved = (prev.savedSearches ?? []).filter((s) => !cSNames.has(s.name)).map((s) => s.name);
-  if (ssAdded.length || ssRemoved.length) rows.push({ label: 'Saved searches', added: ssAdded, removed: ssRemoved });
-
-  const pNKeys = new Set(Object.keys(prev.paperNotes ?? {}));
-  const cNKeys = new Set(Object.keys(cur.paperNotes ?? {}));
-  const notesAdded = [...cNKeys].filter((k) => !pNKeys.has(k)).length;
-  const notesRemoved = [...pNKeys].filter((k) => !cNKeys.has(k)).length;
-  if (notesAdded || notesRemoved) rows.push({ label: 'Notes', added: notesAdded ? [`+${notesAdded}`] : [], removed: notesRemoved ? [`−${notesRemoved}`] : [] });
-
-  const pSKeys = new Set(Object.keys(prev.readStatus ?? {}));
-  const cSKeys = new Set(Object.keys(cur.readStatus ?? {}));
-  const statusAdded = [...cSKeys].filter((k) => !pSKeys.has(k)).length;
-  const statusRemoved = [...pSKeys].filter((k) => !cSKeys.has(k)).length;
-  if (statusAdded || statusRemoved) rows.push({ label: 'Status', added: statusAdded ? [`+${statusAdded}`] : [], removed: statusRemoved ? [`−${statusRemoved}`] : [] });
-
-  if (!rows.length) return '<p class="set-note" style="margin:4px 0 0">No content changes in this revision.</p>';
-
-  const chips = (items: string[], cls: string) =>
-    items.slice(0, 5).map((s) => `<span class="chip hist-chip--${cls}">${esc(s)}</span>`).join('') +
-    (items.length > 5 ? `<span class="set-note" style="margin:0"> +${items.length - 5}</span>` : '');
-
-  return rows.map((r) =>
-    `<div class="hist-diff-row">
-      <span class="hist-diff-label">${esc(r.label)}</span>
-      <div class="hist-diff-changes">${chips(r.added, 'add')}${chips(r.removed, 'del')}</div>
-    </div>`
-  ).join('');
+/** Semantic diff between two config snapshots. */
+interface RevDiff {
+  rows: DiffRow[];
+  /** Compact one-line summary, e.g. "1 collection · 3 tags". */
+  summary: string;
 }
 
-/** Fetch the history list for the user's config Gist. */
+/** Empty baseline used as the "previous" for the very first revision, so its
+ *  whole contents render as additions. */
+const EMPTY_BUNDLE: SettingsBundle = { app: 'confer', version: 2 };
+
+/** Compute a human-readable semantic diff from `prev` → `cur`. Detects adds,
+ *  removals, renames, membership and content edits across every config
+ *  category. Timestamps (exportedAt/updatedAt) are intentionally ignored, so a
+ *  pure resync yields an empty diff rather than a misleading line-count. */
+function summarizeRevision(prev: SettingsBundle, cur: SettingsBundle): RevDiff {
+  const rows: DiffRow[] = [];
+  const counts: string[] = [];
+  const add = (text: string): DiffPart => ({ text, kind: 'add' });
+  const del = (text: string): DiffPart => ({ text, kind: 'del' });
+  const mod = (text: string): DiffPart => ({ text, kind: 'mod' });
+
+  // venue groups (keyed by id): add / remove / rename / membership
+  {
+    const p = prev.venueGroups ?? [], c = cur.venueGroups ?? [];
+    const pById = new Map(p.map((g) => [g.id, g] as const));
+    const cById = new Map(c.map((g) => [g.id, g] as const));
+    const parts: DiffPart[] = [];
+    for (const g of c) if (!pById.has(g.id)) parts.push(add(g.name));
+    for (const g of p) if (!cById.has(g.id)) parts.push(del(g.name));
+    for (const g of c) {
+      const old = pById.get(g.id);
+      if (!old) continue;
+      if (old.name !== g.name) parts.push(mod(`${old.name} → ${g.name}`));
+      else if (old.series.join('|') !== g.series.join('|')) parts.push(mod(`${g.name} (members)`));
+    }
+    if (parts.length) { rows.push({ label: 'Groups', parts }); counts.push(`${parts.length} ${plural(parts.length, 'group')}`); }
+  }
+
+  // collections (keyed by id): add / remove / rename / item count delta
+  {
+    const p = prev.collections ?? [], c = cur.collections ?? [];
+    const pById = new Map(p.map((x) => [x.id, x] as const));
+    const cById = new Map(c.map((x) => [x.id, x] as const));
+    const parts: DiffPart[] = [];
+    for (const x of c) if (!pById.has(x.id)) parts.push(add(x.name));
+    for (const x of p) if (!cById.has(x.id)) parts.push(del(x.name));
+    for (const x of c) {
+      const old = pById.get(x.id);
+      if (!old) continue;
+      if (old.name !== x.name) { parts.push(mod(`${old.name} → ${x.name}`)); continue; }
+      const oldKeys = new Set(old.keys), newKeys = new Set(x.keys);
+      const a = x.keys.filter((k) => !oldKeys.has(k)).length;
+      const r = old.keys.filter((k) => !newKeys.has(k)).length;
+      if (a || r) parts.push(mod(`${x.name} (${[a ? `+${a}` : '', r ? `−${r}` : ''].filter(Boolean).join(' ')})`));
+    }
+    if (parts.length) { rows.push({ label: 'Collections', parts }); counts.push(`${parts.length} ${plural(parts.length, 'collection')}`); }
+  }
+
+  // tags: compare per-paper assignments, keyed by tag label, so re-using an
+  // existing label on a new paper still registers as an addition
+  {
+    const byTag = (m?: Record<string, string[]>) => {
+      const t = new Map<string, Set<string>>();
+      for (const [k, tags] of Object.entries(m ?? {})) for (const tag of tags) {
+        let set = t.get(tag); if (!set) { set = new Set(); t.set(tag, set); }
+        set.add(k);
+      }
+      return t;
+    };
+    const pm = byTag(prev.paperTags), cm = byTag(cur.paperTags);
+    const added = new Map<string, number>(), removed = new Map<string, number>();
+    for (const [tag, cset] of cm) { const pset = pm.get(tag); const n = [...cset].filter((k) => !pset?.has(k)).length; if (n) added.set(tag, n); }
+    for (const [tag, pset] of pm) { const cset = cm.get(tag); const n = [...pset].filter((k) => !cset?.has(k)).length; if (n) removed.set(tag, n); }
+    const parts: DiffPart[] = [];
+    for (const [tag, n] of added) parts.push(add(n > 1 ? `${tag} ×${n}` : tag));
+    for (const [tag, n] of removed) parts.push(del(n > 1 ? `${tag} ×${n}` : tag));
+    if (parts.length) {
+      const total = [...added.values()].reduce((a, b) => a + b, 0) + [...removed.values()].reduce((a, b) => a + b, 0);
+      rows.push({ label: 'Tags', parts }); counts.push(`${total} ${plural(total, 'tag')}`);
+    }
+  }
+
+  // saved searches (keyed by name): add / remove / edit
+  {
+    const p = prev.savedSearches ?? [], c = cur.savedSearches ?? [];
+    const pByName = new Map(p.map((s) => [s.name, s] as const));
+    const cByName = new Map(c.map((s) => [s.name, s] as const));
+    const parts: DiffPart[] = [];
+    for (const s of c) if (!pByName.has(s.name)) parts.push(add(s.name));
+    for (const s of p) if (!cByName.has(s.name)) parts.push(del(s.name));
+    for (const s of c) {
+      const old = pByName.get(s.name);
+      if (old && JSON.stringify(old) !== JSON.stringify(s)) parts.push(mod(`${s.name} (edited)`));
+    }
+    if (parts.length) { rows.push({ label: 'Saved searches', parts }); counts.push(`${parts.length} ${plural(parts.length, 'search', 'searches')}`); }
+  }
+
+  // notes: content edits matter, so compare values not just keys
+  {
+    const p = prev.paperNotes ?? {}, c = cur.paperNotes ?? {};
+    let a = 0, e = 0, r = 0;
+    for (const k of new Set([...Object.keys(p), ...Object.keys(c)])) {
+      const ov = p[k], nv = c[k];
+      if (!ov && nv) a++; else if (ov && !nv) r++; else if (ov && nv && ov !== nv) e++;
+    }
+    const parts: DiffPart[] = [];
+    if (a) parts.push(add(`${a} added`));
+    if (e) parts.push(mod(`${e} edited`));
+    if (r) parts.push(del(`${r} removed`));
+    if (parts.length) { rows.push({ label: 'Notes', parts }); counts.push(`${a + e + r} ${plural(a + e + r, 'note')}`); }
+  }
+
+  // reading status: transitions matter, so compare values not just keys
+  {
+    const p = prev.readStatus ?? {}, c = cur.readStatus ?? {};
+    let a = 0, e = 0, r = 0;
+    for (const k of new Set([...Object.keys(p), ...Object.keys(c)])) {
+      const ov = p[k], nv = c[k];
+      if (!ov && nv) a++; else if (ov && !nv) r++; else if (ov && nv && ov !== nv) e++;
+    }
+    const parts: DiffPart[] = [];
+    if (a) parts.push(add(`${a} set`));
+    if (e) parts.push(mod(`${e} changed`));
+    if (r) parts.push(del(`${r} cleared`));
+    if (parts.length) { rows.push({ label: 'Reading status', parts }); counts.push(`${a + e + r} ${plural(a + e + r, 'paper')}`); }
+  }
+
+  return { rows, summary: counts.length ? counts.join(' · ') : 'No content changes' };
+}
+
+/** Fetch the revision list (newest first) for the user's config Gist. */
 async function fetchGistHistory(): Promise<HistoryEntry[]> {
   const token = await getValidToken();
   if (!token) throw new Error('Not signed in');
@@ -2408,49 +2489,75 @@ async function loadRevision(version: string): Promise<SettingsBundle> {
   return bundle;
 }
 
-/** Render the history list into #historyBody. */
-function renderHistoryList(entries: HistoryEntry[]) {
+/** Render the timeline of revisions into #historyBody. `bundles[i]` is the
+ *  snapshot for `entries[i]`; `bundles[i+1]` (if loaded) is the older neighbour
+ *  used to diff `entries[i]`. */
+function renderHistoryList(entries: HistoryEntry[], bundles: (SettingsBundle | null)[], truncated: boolean) {
   const body = document.querySelector<HTMLElement>('#historyBody');
   if (!body) return;
-  if (!entries.length) {
-    body.innerHTML = '<p class="set-empty" style="padding:4px 0">No history available.</p>';
-    return;
-  }
-  body.innerHTML = entries.map((e, i) =>
-    `<div class="hist-row">
-      <div class="hist-row-head">
-        <span class="hist-when" title="${esc(fullTimestamp(e.committed_at))}">${
-          i === 0 ? `<span class="chip hist-chip--current">Current</span> ` : ``
-        }${esc(relativeTime(e.committed_at))}</span>
-        <span class="hist-stat hist-stat--add" title="Lines added">+${e.change_status.additions}</span>
-        <span class="hist-stat hist-stat--del" title="Lines deleted">−${e.change_status.deletions}</span>
-        <button class="icon-btn hist-expand"
-          data-hist-expand="${i}"
-          data-hist-version="${esc(e.version)}"
-          data-hist-prev="${esc(i + 1 < entries.length ? entries[i + 1].version : '')}"
-          aria-label="Show changes" title="Show changes">${ICONS.chevronDown}</button>
-        ${i > 0 ? `<button class="text-btn text-btn--primary hist-restore" data-hist-restore="${esc(e.version)}" type="button">Restore</button>` : ''}
+  const CHIP_CAP = 8;
+  const chip = (p: DiffPart) => `<span class="hist-chip hist-chip--${p.kind}">${esc(p.text)}</span>`;
+  const detailHtml = (rows: DiffRow[]) => rows.map((r) => {
+    const shown = r.parts.slice(0, CHIP_CAP);
+    const more = r.parts.length - shown.length;
+    return `<div class="hist-cat"><span class="hist-cat-label">${esc(r.label)}</span><div class="hist-cat-chips">${
+      shown.map(chip).join('')}${more > 0 ? `<span class="hist-more">+${more} more</span>` : ''}</div></div>`;
+  }).join('');
+
+  const items = entries.map((e, i) => {
+    const cur = bundles[i];
+    const prev = bundles[i + 1] ?? EMPTY_BUNDLE; // older neighbour, or empty for the first revision
+    const diff: RevDiff = cur ? summarizeRevision(prev, cur) : { rows: [], summary: 'Content unavailable' };
+    const hasDetail = diff.rows.length > 0;
+    const isCurrent = i === 0;
+    return `<li class="hist-item${isCurrent ? ' is-current' : ''}">
+      <span class="hist-marker" aria-hidden="true"></span>
+      <div class="hist-main">
+        <div class="hist-head">
+          <span class="hist-time" title="${esc(fullTimestamp(e.committed_at))}">${esc(relativeTime(e.committed_at))}</span>
+          ${isCurrent ? '<span class="hist-badge">Current</span>' : ''}
+          <span class="hist-summary${hasDetail ? '' : ' is-muted'}">${esc(diff.summary)}</span>
+          <span class="hist-grow"></span>
+          ${isCurrent ? '' : `<button class="text-btn hist-restore" data-hist-restore="${esc(e.version)}" type="button">Restore</button>`}
+          ${hasDetail ? `<button class="icon-btn hist-expand" data-hist-toggle type="button" aria-label="Show changes" title="Show changes">${ICONS.chevronDown}</button>` : ''}
+        </div>
+        ${hasDetail ? `<div class="hist-detail-wrap"><div class="hist-detail">${detailHtml(diff.rows)}</div></div>` : ''}
       </div>
-      <div class="hist-diff" id="hist-diff-${i}" hidden></div>
-    </div>`
-  ).join('');
+    </li>`;
+  }).join('');
+
+  body.innerHTML = `<ol class="hist-list">${items}</ol>${
+    truncated ? `<p class="hist-status">Showing the latest ${HIST_LIMIT} revisions.</p>` : ''}`;
   requestAnimationFrame(refreshScrollFades);
 }
 
-/** Open the history modal and start loading. */
-function openHistory() {
+/** Open the history modal: load the revision list and snapshots, then render
+ *  the timeline. Snapshots are loaded upfront (and cached) so every row shows
+ *  an accurate summary and expands instantly. */
+async function openHistory() {
   const modal = document.querySelector<HTMLElement>('#historyModal');
   if (!modal) return;
   const body = document.querySelector<HTMLElement>('#historyBody');
-  if (body) body.innerHTML = '<p class="set-note" style="padding:8px 0">Loading history…</p>';
   modal.hidden = false;
+  if (body) body.innerHTML = '<p class="hist-status">Loading history…</p>';
   requestAnimationFrame(refreshScrollFades);
-  fetchGistHistory().then((entries) => {
-    renderHistoryList(entries);
-  }).catch((err) => {
-    if (body) body.innerHTML = `<p class="set-note" style="padding:8px 0;color:var(--faint)">Failed to load history: ${esc(String(err))}</p>`;
+  try {
+    const entries = await fetchGistHistory();
+    if (!entries.length) {
+      if (body) body.innerHTML = '<p class="hist-status">No history yet. Changes you sync will appear here.</p>';
+      requestAnimationFrame(refreshScrollFades);
+      return;
+    }
+    const shown = entries.slice(0, HIST_LIMIT);
+    // load one extra older revision so the last shown row diffs accurately
+    const need = entries.slice(0, Math.min(entries.length, HIST_LIMIT + 1));
+    const bundles = await Promise.all(need.map((e) => loadRevision(e.version).catch(() => null)));
+    renderHistoryList(shown, bundles, entries.length > HIST_LIMIT);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    if (body) body.innerHTML = `<p class="hist-status hist-status--err">Couldn't load history: ${esc(msg)}</p>`;
     requestAnimationFrame(refreshScrollFades);
-  });
+  }
 }
 
 // --- GitHub API helpers -----------------------------------------------
@@ -3721,26 +3828,14 @@ function wire() {
     historyBodyEl.addEventListener('click', (e) => {
       const t = e.target as HTMLElement;
 
-      const expandBtn = t.closest<HTMLElement>('[data-hist-expand]');
-      if (expandBtn) {
-        const idx = expandBtn.dataset.histExpand!;
-        const diffEl = document.querySelector<HTMLElement>(`#hist-diff-${idx}`);
-        if (!diffEl) return;
-        const isOpen = !diffEl.hidden;
-        if (isOpen) { diffEl.hidden = true; expandBtn.classList.remove('is-open'); return; }
-        expandBtn.classList.add('is-open');
-        diffEl.innerHTML = '<span class="set-note">Loading…</span>';
-        diffEl.hidden = false;
-        const curVersion = expandBtn.dataset.histVersion ?? '';
-        const prevVersion = expandBtn.dataset.histPrev ?? '';
-        if (!curVersion) { diffEl.innerHTML = '<p class="set-note">No version info.</p>'; return; }
-        const loadCur = loadRevision(curVersion);
-        const loadPrev = prevVersion ? loadRevision(prevVersion) : Promise.resolve(null as SettingsBundle | null);
-        Promise.all([loadCur, loadPrev]).then(([cur, prev]) => {
-          diffEl.innerHTML = prev ? revisionDiff(prev, cur) : '<p class="set-note" style="margin:4px 0 0">First revision — nothing to compare.</p>';
-        }).catch(() => {
-          diffEl.innerHTML = '<p class="set-note" style="margin:4px 0 0;color:var(--faint)">Failed to load revision content.</p>';
-        });
+      const toggle = t.closest<HTMLElement>('[data-hist-toggle]');
+      if (toggle) {
+        const item = toggle.closest<HTMLElement>('.hist-item');
+        if (!item) return;
+        const open = item.classList.toggle('is-open');
+        toggle.setAttribute('aria-label', open ? 'Hide changes' : 'Show changes');
+        toggle.setAttribute('title', open ? 'Hide changes' : 'Show changes');
+        requestAnimationFrame(refreshScrollFades);
         return;
       }
 

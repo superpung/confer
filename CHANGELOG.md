@@ -10,11 +10,15 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ### Added
 - **Config version history**: a full-screen "Config history" view (accessible via
-  the history icon in Settings → Config when signed in) lists every synced
-  revision with relative timestamps and +/− line counts; expanding a row shows a
-  per-category breakdown (groups / collections / tags / saved searches / notes /
-  reading status) of what changed; **Restore** rolls back to any earlier version
-  (applies the bundle locally and pushes a new revision so history stays linear).
+  the history icon in Settings → Config when signed in) shows synced revisions as
+  a timeline. Each entry carries its time and a plain-language summary of what
+  actually changed (e.g. "1 collection · 3 tags"); pure resyncs are labelled "No
+  content changes" rather than a misleading line count. Expanding a row reveals a
+  per-category breakdown — groups / collections / tags / saved searches / notes /
+  reading status — with colour-coded chips for additions, removals, renames, and
+  edits (including collection membership and note/status changes). **Restore**
+  rolls back to any earlier version (applies the bundle locally and pushes a new
+  revision so history stays linear).
 - **Feedback section** in Settings: one-click "Report a data issue" and
   "Suggest a venue" open a prefilled GitHub issue with a structured template.
 - **"Your library" stats card** in Settings: a grid of counts — collected papers,
