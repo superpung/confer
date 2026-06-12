@@ -674,6 +674,19 @@ function cardHtml(p: Paper, v: string): string {
   </article>`;
 }
 
+// --- dynamic scroll-fade helpers --------------------------------------
+// Toggle .is-fade-top / .is-fade-bottom on a scroll container so the CSS
+// mask gradient only appears on edges that actually have hidden content.
+const FADE_SEL = '.settings-body, .entity-body, .facet-options, .pop-list';
+function updateScrollFade(el: HTMLElement) {
+  el.classList.toggle('is-fade-top', el.scrollTop > 1);
+  el.classList.toggle('is-fade-bottom',
+    Math.ceil(el.scrollTop + el.clientHeight) < el.scrollHeight - 1);
+}
+function refreshScrollFades() {
+  document.querySelectorAll<HTMLElement>(FADE_SEL).forEach(updateScrollFade);
+}
+
 function renderFacets(base: { p: Paper; v: string }[]) {
   const trackCount = new Map<string, number>();
   const eventCount = new Map<string, number>();
@@ -706,6 +719,7 @@ function renderFacets(base: { p: Paper; v: string }[]) {
   const activeN = state.tracks.size + state.events.size + state.venuesFacet.size;
   els.facetCount.textContent = String(activeN);
   els.facetCount.hidden = activeN === 0;
+  requestAnimationFrame(refreshScrollFades);
 }
 
 function renderActiveFilters() {
@@ -1317,6 +1331,7 @@ function paintPop() {
       try { newSearch.setSelectionRange(prevStart, prevEnd); } catch { /* ignore */ }
     }
   }
+  requestAnimationFrame(refreshScrollFades);
 }
 function positionPop(anchor: HTMLElement) {
   const r = anchor.getBoundingClientRect();
@@ -2024,6 +2039,7 @@ function renderSettings() {
         <button class="text-btn" data-feedback-venue type="button">Suggest a venue</button>
       </div>
     </section>`;
+  requestAnimationFrame(refreshScrollFades);
 }
 
 // Size of the exported/synced SettingsBundle JSON.
@@ -2432,6 +2448,7 @@ function renderHistoryList(entries: HistoryEntry[]) {
       <div class="hist-diff" id="hist-diff-${i}" hidden></div>
     </div>`
   ).join('');
+  requestAnimationFrame(refreshScrollFades);
 }
 
 /** Open the history modal and start loading. */
@@ -2441,10 +2458,12 @@ function openHistory() {
   const body = document.querySelector<HTMLElement>('#historyBody');
   if (body) body.innerHTML = '<p class="set-note" style="padding:8px 0">Loading history…</p>';
   modal.hidden = false;
+  requestAnimationFrame(refreshScrollFades);
   fetchGistHistory().then((entries) => {
     renderHistoryList(entries);
   }).catch((err) => {
     if (body) body.innerHTML = `<p class="set-note" style="padding:8px 0;color:var(--faint)">Failed to load history: ${esc(String(err))}</p>`;
+    requestAnimationFrame(refreshScrollFades);
   });
 }
 
@@ -4072,6 +4091,13 @@ function wire() {
     }
   });
 
+  // dynamic scroll-fade: update edge masks on scroll and resize
+  document.addEventListener('scroll', (e) => {
+    const t = e.target as HTMLElement | null;
+    if (t && t.nodeType === 1 && (t as HTMLElement).matches?.(FADE_SEL)) updateScrollFade(t as HTMLElement);
+  }, { capture: true, passive: true });
+  window.addEventListener('resize', refreshScrollFades, { passive: true });
+
   // back to top
   const back = $('#backToTop');
   back.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -4252,6 +4278,7 @@ function openSimilarModal(title: string, rows: { p: Paper; v: string; score: num
     bodyEl.innerHTML = `<div class="mini-card-list">${rows.map((r) => miniCardHtml(r.p, r.v)).join('')}</div>`;
   }
   modal.hidden = false;
+  requestAnimationFrame(refreshScrollFades);
 }
 
 // --- global corpus TF-IDF (separate from the in-view index) -----------
@@ -4423,6 +4450,7 @@ function renderRecPanel(bodyEl: HTMLElement) {
       <div class="rec-filter-row">${bulkHtml}</div>
     </div>
     <div class="rec-results">${groupHtml || '<p class="rail-empty">No papers match the filter.</p>'}</div>`;
+  requestAnimationFrame(refreshScrollFades);
 }
 
 /** Open #entityModal immediately in a loading state (spinner), before data arrives. */
@@ -4434,6 +4462,7 @@ function openRecommendLoading(title: string) {
   titleEl.textContent = title;
   bodyEl.innerHTML = '<div class="rec-loading"><span class="rec-loading-dot"></span><span class="rec-loading-dot"></span><span class="rec-loading-dot"></span></div>';
   modal.hidden = false;
+  requestAnimationFrame(refreshScrollFades);
 }
 
 /** Populate the already-open #entityModal with recommendation results (with fade-in). */

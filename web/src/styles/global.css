@@ -343,7 +343,7 @@ html.is-rail-collapsed { --col-right: 0; }
   border: 1px solid transparent; border-radius: 10px;
   z-index: 1;
 }
-.hl-field { color: var(--accent); font-weight: 600; }
+.hl-field { color: var(--accent); }
 .hl-ghost { color: var(--faint); }
 
 .global-search {
@@ -470,12 +470,16 @@ html.is-rail-collapsed { --col-right: 0; }
 .facet-group-count { color: var(--faint); font-weight: 600; }
 .facet-collapse { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.22s ease; }
 .facet-group.is-collapsed .facet-collapse { grid-template-rows: 0fr; }
-/* Soften the seam between a fixed header/search and the scrolling option list. */
+/* Soften the seam between a fixed header/search and the scrolling option list.
+   Fades are dynamic: .is-fade-top/.is-fade-bottom toggled by JS based on scroll
+   position, so short lists and unscrolled tops show no phantom gradient. */
+.is-fade-top    { --fade-top: 10px; }
+.is-fade-bottom { --fade-bottom: 10px; }
 .facet-options {
   display: flex; flex-direction: column; gap: 3px; min-height: 0; max-height: 220px;
   overflow-y: auto; overscroll-behavior: contain;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
 }
 .facet-option { display: flex; align-items: center; gap: 8px; padding: 3px 4px; border-radius: 6px; cursor: pointer; font-size: 13px; }
 .facet-option:hover { background: var(--panel-hover); }
@@ -543,7 +547,7 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Status cycle button — unread is subtle; toread/reading/done are colored and always visible. */
 .card-actions .status-btn {
   opacity: 0.3;
-  transition: opacity .15s ease, color .15s;
+  transition: opacity .15s ease, color .15s ease, background .15s ease, border-color .15s ease;
 }
 .paper-card:hover .card-actions .status-btn,
 .status-btn.status-btn--toread,
@@ -555,7 +559,7 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Note edit button — hidden by default; shown on hover or when a note exists. */
 .card-actions .note-btn {
   opacity: 0; pointer-events: none;
-  transition: opacity .15s ease, color .15s;
+  transition: opacity .15s ease, color .15s ease, background .15s ease, border-color .15s ease;
 }
 .paper-card:hover .card-actions .note-btn,
 .card-actions .note-btn.is-on { opacity: 1; pointer-events: auto; }
@@ -714,8 +718,8 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Scrollable option rows inside a pop — title/search/action stay pinned above/below */
 .pop-list {
   max-height: 200px; overflow-y: auto; overscroll-behavior: contain;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
 }
 .popmenu[hidden] { display: none; }
 /* Entrance animation: the menu fades/scales in from its top edge. */
@@ -755,8 +759,8 @@ html.is-rail-collapsed { --col-right: 0; }
 .modal-card--page { width: min(760px, 100%); max-height: 88vh; display: flex; flex-direction: column; padding-bottom: 8px; }
 .settings-body {
   overflow-y: auto; overscroll-behavior: contain; margin: 8px -4px 0; padding: 0 4px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
 }
 .set-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .set-section { margin-bottom: 18px; }
@@ -977,8 +981,8 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Similar-papers modal (shared by "Find similar" and "For you" recommendations) */
 .entity-body {
   flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; padding: 0 2px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
 }
 /* Compact paper rows inside similar-papers / recommend modal */
 .mini-card-list { display: flex; flex-direction: column; gap: 8px; }
@@ -1013,7 +1017,7 @@ html.is-rail-collapsed { --col-right: 0; }
 .mini-card-actions { display: flex; align-items: center; gap: 2px; flex: 0 0 auto; align-self: center; }
 .mini-card-actions .icon-btn { width: 26px; height: 26px; font-size: 12px; }
 /* All 4 action buttons visible at rest; colour transitions on hover / active state */
-.mini-card-actions .icon-btn { transition: color .15s; }
+.mini-card-actions .icon-btn { transition: background .15s ease, color .15s ease, border-color .15s ease; }
 .mini-card-actions .note-btn.is-on { color: var(--accent); }
 /* Tag active = collect active: bordered accent-soft box */
 .mini-card-actions .tag-btn.is-on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }

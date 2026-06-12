@@ -129,6 +129,15 @@ Entries are user-facing; implementation details belong in commit messages.
 - Removing a series from a venue group in Settings now asks for confirmation.
 
 ### Fixed
+- Scroll-seam fade masks now appear only when content actually overflows, and only
+  on the edge with hidden content — short lists and unscrolled tops show no phantom
+  gradient (popovers, sidebar facets, Settings body, For-you / Find-similar panel).
+- "For you" / "Find similar" row action buttons now animate background and border on
+  hover, consistent with the rest of the UI (previously colour-only, no zoom).
+- Card status and note buttons now animate background and border on hover, matching
+  the collect button (previously opacity reveal only; background/border snapped).
+- Search bar field-prefix highlight is no longer bold, fixing a caret offset where
+  the cursor appeared to the left of the last typed character.
 - In-card note block no longer shows a left accent bar (aligns with the no-left-
   edge-bar design guardrail; soft accent-tint background retained).
 - Official-site links now appear in the sidebar for AAAI 2026, ICLR 2026,
