@@ -58,7 +58,8 @@
     ],
     "pages": "2253-2281",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704912"
+      "https://doi.org/10.1145/3704912",
+      "https://nantes-universite.hal.science/hal-04801739/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -79,6 +80,7 @@
       "https://doi.org/10.1145/3704912",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/76/All-Your-Base-Are-Belong-to-Us-Sort-Polymorphism-for-Proof-Assistants",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://nantes-universite.hal.science/hal-04801739",
       "https://openalex.org/W4404860218"
     ],
     "volume": "9"
@@ -133,7 +135,8 @@
     ],
     "pages": "1167-1195",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704876"
+      "https://doi.org/10.1145/3704876",
+      "https://inria.hal.science/hal-04834149v1/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -154,6 +157,7 @@
       "https://doi.org/10.1145/3704876",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/40/A-quantitative-probabilistic-relational-Hoare-logic",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://inria.hal.science/hal-04834149",
       "https://openalex.org/W4405432381"
     ],
     "volume": "9"
@@ -364,6 +368,7 @@
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
       "https://doi.org/10.1145/3704888",
       "http://arxiv.org/abs/2411.07078",
+      "https://doi.org/10.48550/arxiv.2411.07078",
       "https://openalex.org/W4404402437"
     ],
     "volume": "9"
@@ -554,7 +559,8 @@
     ],
     "pages": "1962-1991",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704902"
+      "https://doi.org/10.1145/3704902",
+      "https://inria.hal.science/hal-04801582v1/file/zipml.author.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -575,6 +581,7 @@
       "https://doi.org/10.1145/3704902",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/66/Avoiding-signature-avoidance-in-ML-modules-with-zippers",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://inria.hal.science/hal-04801582",
       "https://openalex.org/W4404680076"
     ],
     "volume": "9"
@@ -705,7 +712,9 @@
     ],
     "pages": "95-125",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704840"
+      "https://doi.org/10.1145/3704840",
+      "https://arxiv.org/pdf/2411.07443",
+      "https://madoc.bib.uni-mannheim.de/68677/1/3704840.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -728,6 +737,8 @@
       "https://dl.acm.org/doi/10.1145/3704840",
       "https://arxiv.org/abs/2411.07443",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.07443",
+      "https://doi.org/10.22028/d291-47935",
       "https://openalex.org/W4404403133"
     ],
     "volume": "9"
@@ -782,7 +793,8 @@
     ],
     "pages": "1293-1325",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704880"
+      "https://doi.org/10.1145/3704880",
+      "https://hal.univ-lorraine.fr/hal-04663857v1/file/2024-1203.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -803,6 +815,8 @@
       "https://doi.org/10.1145/3704880",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/44/Preservation-of-speculative-constant-time-by-compilation",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hal.univ-lorraine.fr/hal-04663857",
+      "https://doi.org/10.5281/zenodo.14001014",
       "https://openalex.org/W4401717176"
     ],
     "volume": "9"
@@ -852,7 +866,8 @@
     ],
     "pages": "332-361",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704848"
+      "https://doi.org/10.1145/3704848",
+      "https://hal.science/hal-04838618v1/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -874,6 +889,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/12/The-Duality-of-Abstraction",
       "https://dl.acm.org/doi/10.1145/3704848",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hal.science/hal-04838618",
       "https://openalex.org/W4405431759"
     ],
     "volume": "9"
@@ -929,7 +945,8 @@
     ],
     "pages": "1719-1749",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704894"
+      "https://doi.org/10.1145/3704894",
+      "https://arxiv.org/pdf/2402.18708"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -951,6 +968,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/58/Bluebell-An-Alliance-of-Relational-Lifting-and-Independence-For-Probabilistic-Reason",
       "https://arxiv.org/abs/2402.18708",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2402.18708",
       "https://openalex.org/W4405432368"
     ],
     "volume": "9"
@@ -1023,6 +1041,9 @@
       "https://doi.org/10.1145/3704854",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/18/Program-Analysis-via-Multiple-Context-Free-Language-Reachability",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://repository.hkust.edu.hk/ir/Record/1783.1-147623",
+      "https://pure.au.dk/portal/en/publications/adda34b0-4bfc-45fa-ad7a-7b7f0f228ae4",
+      "https://www.scopus.com/pages/publications/85215367393",
       "https://openalex.org/W4406222188"
     ],
     "volume": "9"
@@ -1512,7 +1533,8 @@
     ],
     "pages": "1227-1259",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704878"
+      "https://doi.org/10.1145/3704878",
+      "https://arxiv.org/pdf/2411.11617"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -1533,6 +1555,7 @@
       "https://doi.org/10.1145/3704878",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/42/Automating-equational-proofs-in-Dirac-notation",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.11617",
       "https://openalex.org/W4404573282"
     ],
     "volume": "9"
@@ -1592,7 +1615,10 @@
     ],
     "pages": "271-299",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704846"
+      "https://doi.org/10.1145/3704846",
+      "https://arxiv.org/pdf/2408.11283",
+      "https://dspace.mit.edu/bitstream/1721.1/158236/1/3704846.pdf",
+      "https://hal.science/hal-04928774v1/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -1613,6 +1639,9 @@
       "https://doi.org/10.1145/3704846",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/10/Inference-Plans-for-Hybrid-Particle-Filtering",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2408.11283",
+      "https://hdl.handle.net/1721.1/158236",
+      "https://hal.science/hal-04928774",
       "https://openalex.org/W4405425677"
     ],
     "volume": "9"
@@ -1727,7 +1756,8 @@
     ],
     "pages": "1072-1103",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704873"
+      "https://doi.org/10.1145/3704873",
+      "https://arxiv.org/pdf/2410.23493"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -1748,6 +1778,7 @@
       "https://doi.org/10.1145/3704873",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/37/Linear-and-non-linear-relational-analyses-for-Quantum-Program-Optimization",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2410.23493",
       "https://openalex.org/W4404346748"
     ],
     "volume": "9"
@@ -1818,6 +1849,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/22/Progressful-Interpreters-for-Efficient-WebAssembly-Mechanisation",
       "https://dl.acm.org/doi/pdf/10.1145/3704858",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/10356/205943",
       "https://openalex.org/W4406221971"
     ],
     "volume": "9"
@@ -1883,7 +1915,8 @@
     ],
     "pages": "656-686",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704859"
+      "https://doi.org/10.1145/3704859",
+      "https://inria.hal.science/hal-04884654v1/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -1904,6 +1937,7 @@
       "https://doi.org/10.1145/3704859",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/23/Data-Race-Freedom-la-Mode",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://inria.hal.science/hal-04884654",
       "https://openalex.org/W4406222012"
     ],
     "volume": "9"
@@ -1967,7 +2001,8 @@
     ],
     "pages": "923-953",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704868"
+      "https://doi.org/10.1145/3704868",
+      "https://uu.diva-portal.org/smash/get/diva2:1958292/FULLTEXT01"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -1988,6 +2023,11 @@
       "https://doi.org/10.1145/3704868",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/32/Verifying-Quantum-Circuits-with-Level-Synchronized-Tree-Automata",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-555784",
+      "https://doi.org/10.5281/zenodo.13938481",
+      "https://doi.org/10.5281/zenodo.13940422",
+      "https://doi.org/10.5281/zenodo.13954509",
+      "https://doi.org/10.5281/zenodo.13957472",
       "https://openalex.org/W4406222168"
     ],
     "volume": "9"
@@ -2208,7 +2248,8 @@
     ],
     "pages": "1104-1135",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704874"
+      "https://doi.org/10.1145/3704874",
+      "https://arxiv.org/pdf/2411.10393"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2230,6 +2271,9 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/38/Guaranteed-Bounds-on-Posterior-Distributions-of-Discrete-Probabilistic-Programs-with-",
       "https://arxiv.org/abs/2411.10393",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.10393",
+      "https://hdl.handle.net/10356/205942",
+      "https://ora.ox.ac.uk/objects/uuid:47f1cf0a-c839-4537-a997-a9c7e1402c6b",
       "https://openalex.org/W4404569728"
     ],
     "volume": "9"
@@ -2353,7 +2397,8 @@
     ],
     "pages": "479-508",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704853"
+      "https://doi.org/10.1145/3704853",
+      "https://arxiv.org/pdf/2410.18671"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2375,6 +2420,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/17/Axe-Em-Eliminating-Spurious-States-with-Induction-Axioms",
       "https://dl.acm.org/doi/10.1145/3704853",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2410.18671",
       "https://openalex.org/W4404307065"
     ],
     "volume": "9"
@@ -2513,7 +2559,8 @@
     ],
     "pages": "832-863",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704865"
+      "https://doi.org/10.1145/3704865",
+      "https://arxiv.org/pdf/2511.17838"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2535,6 +2582,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/29/TensorRight-Automated-Verification-of-Tensor-Graph-Rewrites",
       "https://dl.acm.org/doi/10.1145/3704865",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2511.17838",
       "https://openalex.org/W4406221679"
     ],
     "volume": "9"
@@ -2579,7 +2627,8 @@
     ],
     "pages": "2205-2231",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704910"
+      "https://doi.org/10.1145/3704910",
+      "https://lirias.kuleuven.be/retrieve/74b39fb5-94dc-4165-92b9-0f218dcbf810"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2600,6 +2649,7 @@
       "https://doi.org/10.1145/3704910",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/74/Biparsers-Exact-Printing-for-Data-Synchronisation",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://lirias.kuleuven.be/handle/20.500.12942/759794",
       "https://openalex.org/W4406221550"
     ],
     "volume": "9"
@@ -2725,7 +2775,8 @@
     ],
     "pages": "718-744",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704861"
+      "https://doi.org/10.1145/3704861",
+      "https://pure.uva.nl/ws/files/238009455/3704861-1.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2746,6 +2797,7 @@
       "https://doi.org/10.1145/3704861",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/25/Algebras-for-Deterministic-Computation-are-Inherently-Incomplete",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://handle.uba.uva.nl/personal/pure/en/publications/algebras-for-deterministic-computation-are-inherently-incomplete(83038de9-6e0d-4ea8-b048-399718dd8986).html",
       "https://openalex.org/W4406230619"
     ],
     "volume": "9"
@@ -2893,7 +2945,8 @@
     ],
     "pages": "362-390",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704849"
+      "https://doi.org/10.1145/3704849",
+      "https://arxiv.org/pdf/2405.19040"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2917,6 +2970,12 @@
       "https://arxiv.org/abs/2405.19040",
       "https://dusa.rocks/docs/",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2405.19040",
+      "https://doi.org/10.5281/zenodo.13915346",
+      "https://doi.org/10.5281/zenodo.13915347",
+      "https://doi.org/10.5281/zenodo.13920496",
+      "https://doi.org/10.5281/zenodo.13921177",
+      "https://doi.org/10.5281/zenodo.13983457",
       "https://openalex.org/W4399198484"
     ],
     "volume": "9"
@@ -2972,7 +3031,8 @@
     ],
     "pages": "802-831",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704864"
+      "https://doi.org/10.1145/3704864",
+      "https://arxiv.org/pdf/2411.16571"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -2994,6 +3054,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/28/Pantograph-A-Fluid-and-Typed-Structure-Editor",
       "https://arxiv.org/abs/2411.16571",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.16571",
       "https://openalex.org/W4404987967"
     ],
     "volume": "9"
@@ -3064,6 +3125,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/51/SNIP-Speculative-Execution-and-Non-Interference-Preservation-for-Compiler-Transforma",
       "https://dl.acm.org/doi/10.1145/3704887",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://leopard.tu-braunschweig.de/receive/dbbs_mods_00078814",
       "https://openalex.org/W4406222150"
     ],
     "volume": "9"
@@ -3116,7 +3178,8 @@
     ],
     "pages": "210-240",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704844"
+      "https://doi.org/10.1145/3704844",
+      "https://lirias.kuleuven.be/retrieve/ff5803ba-73f3-45b0-acf9-79570b629898"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -3137,6 +3200,7 @@
       "https://doi.org/10.1145/3704844",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/8/BiSikkel-A-Multimode-Logical-Framework-in-Agda",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://lirias.kuleuven.be/handle/20.500.12942/753478",
       "https://openalex.org/W4406222429"
     ],
     "volume": "9"
@@ -3297,7 +3361,8 @@
     ],
     "pages": "986-1012",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704870"
+      "https://doi.org/10.1145/3704870",
+      "https://arxiv.org/pdf/2410.17185"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -3320,6 +3385,8 @@
       "https://dl.acm.org/doi/10.1145/3704870",
       "https://arxiv.org/abs/2410.17185",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://cris.maastrichtuniversity.nl/en/publications/7068b169-e8bf-4564-8631-52eeaf60b9a4",
+      "http://arxiv.org/abs/2410.17185",
       "https://openalex.org/W4404261818"
     ],
     "volume": "9"
@@ -3347,7 +3414,8 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "crossref"
+        "crossref",
+        "openalex"
       ],
       "openAccess": {
         "is_oa": true,
@@ -3376,7 +3444,8 @@
     ],
     "pages": "1475-1505",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704886"
+      "https://doi.org/10.1145/3704886",
+      "https://arxiv.org/pdf/2411.02716"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -3396,7 +3465,9 @@
     "urls": [
       "https://doi.org/10.1145/3704886",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/50/Derivative-Guided-Symbolic-Execution",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.02716",
+      "https://openalex.org/W4404403684"
     ],
     "volume": "9"
   },
@@ -3529,6 +3600,7 @@
       "https://doi.org/10.1145/3704907",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/71/Bidirectional-Higher-Rank-Polymorphism-with-Intersection-and-Union-Types",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hub.hku.hk/handle/10722/357971",
       "https://openalex.org/W4406222053"
     ],
     "volume": "9"
@@ -3588,7 +3660,9 @@
     ],
     "pages": "2337-2363",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704915"
+      "https://doi.org/10.1145/3704915",
+      "https://arxiv.org/pdf/2411.19397",
+      "https://inria.hal.science/hal-04884634/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -3609,6 +3683,9 @@
       "https://doi.org/10.1145/3704915",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/79/Tail-Modulo-Cons-OCaml-and-Relational-Separation-Logic",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.19397",
+      "https://inria.hal.science/hal-04884634",
+      "https://doi.org/10.5281/zenodo.14238919",
       "https://openalex.org/W4405030530"
     ],
     "volume": "9"
@@ -3800,7 +3877,8 @@
     ],
     "pages": "1260-1292",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704879"
+      "https://doi.org/10.1145/3704879",
+      "https://www.repository.cam.ac.uk/bitstreams/a210b3f3-a209-4f54-a69d-ef24d9344806/download"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -3821,6 +3899,7 @@
       "https://doi.org/10.1145/3704879",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/43/Fulminate-Testing-CN-Separation-Logic-Specifications-in-C",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://www.repository.cam.ac.uk/handle/1810/377338",
       "https://openalex.org/W4406230623"
     ],
     "volume": "9"
@@ -3978,6 +4057,8 @@
       "https://doi.org/10.1145/3704884",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/48/Modelling-Recursion-and-Probabilistic-Choice-in-Guarded-Type-Theory",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://pure.au.dk/portal/en/publications/d5998eec-e914-4bfa-891b-ff8506bad04a",
+      "https://www.scopus.com/pages/publications/85215684518",
       "https://openalex.org/W4406224192"
     ],
     "volume": "9"
@@ -4078,11 +4159,24 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3649309"
+      }
     },
     "id": "853fb273-e5f4-4055-aeec-8f56546f984d",
     "issue": "2",
+    "keywords": [
+      "Computer science",
+      "Robustness (evolution)",
+      "Interpretation (philosophy)",
+      "Abstract interpretation",
+      "Programming language"
+    ],
     "locations": [
       "Marco Polo"
     ],
@@ -4106,7 +4200,8 @@
     "urls": [
       "https://doi.org/10.1145/3649309",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/86/Adversities-in-Abstract-Interpretation-Accommodating-Robustness-by-Abstract-Interpr",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://openalex.org/W4392131517"
     ],
     "volume": "46"
   },
@@ -4204,14 +4299,35 @@
     "eventType": "Poster",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.22331/q-2026-05-05-2093"
+      }
     },
     "id": "885d3a68-f309-443b-899e-bd1f5d839fef",
+    "keywords": [
+      "Quantum gate",
+      "Quantum circuit",
+      "Electronic circuit",
+      "Quantum computer",
+      "State (computer science)",
+      "Logic gate",
+      "Rank (graph theory)",
+      "Quantum",
+      "MAGIC (telescope)"
+    ],
     "locations": [
       "Four Square Corridor"
     ],
     "pages": "2093",
+    "pdfUrls": [
+      "https://doi.org/10.22331/q-2026-05-05-2093",
+      "https://arxiv.org/pdf/2507.04337"
+    ],
     "publicationDate": "2026-05-05",
     "publisher": "Verein zur Forderung des Open Access Publizierens in den Quantenwissenschaften",
     "sessionTitles": [
@@ -4227,7 +4343,12 @@
     "urls": [
       "https://doi.org/10.22331/q-2026-05-05-2093",
       "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/6/Efficient-Strong-Simulation-of-High-level-Quantum-Gates",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://pure.au.dk/portal/en/publications/74b4fda0-a82a-43aa-abab-dba70b5bc42e",
+      "https://arxiv.org/abs/2507.04337",
+      "https://doaj.org/article/cbebddedfb064191ad839da9cfb99cd0",
+      "https://doi.org/10.48550/arxiv.2507.04337",
+      "https://openalex.org/W4415346216"
     ],
     "volume": "10"
   },
@@ -4313,7 +4434,8 @@
     ],
     "pages": "1196-1226",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704877"
+      "https://doi.org/10.1145/3704877",
+      "https://arxiv.org/pdf/2407.14107"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -4335,6 +4457,11 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/41/Approximate-Relational-Reasoning-for-Higher-Order-Probabilistic-Programs",
       "https://arxiv.org/abs/2407.14107",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2407.14107",
+      "https://www.scopus.com/pages/publications/85215937561",
+      "https://pure.au.dk/portal/en/publications/ffc8d36f-5a5e-4a18-8fa8-95dca7239217",
+      "https://doi.org/10.5281/zenodo.13939301",
+      "https://doi.org/10.5281/zenodo.13939302",
       "https://openalex.org/W4403619146"
     ],
     "volume": "9"
@@ -4471,7 +4598,8 @@
     ],
     "pages": "745-771",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704862"
+      "https://doi.org/10.1145/3704862",
+      "https://researchonline.ljmu.ac.uk/id/eprint/24814/8/Simple%20Linear%20Loops%20Algebraic%20Invariants%20and%20Applications.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -4492,6 +4620,8 @@
       "https://doi.org/10.1145/3704862",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/26/Simple-Linear-Loops-Algebraic-Invariants-and-Applications",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://orcid.org/0000-0002-7661-7061",
+      "https://hal.science/hal-05406962",
       "https://openalex.org/W4406221863"
     ],
     "volume": "9"
@@ -4515,7 +4645,8 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "crossref"
+        "crossref",
+        "openalex"
       ],
       "openAccess": {
         "is_oa": true,
@@ -4537,7 +4668,8 @@
     ],
     "pages": "446-478",
     "pdfUrls": [
-      "https://dl.acm.org/doi/pdf/10.1145/3704852"
+      "https://dl.acm.org/doi/pdf/10.1145/3704852",
+      "https://arxiv.org/pdf/2411.11113"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -4557,7 +4689,10 @@
     "urls": [
       "https://doi.org/10.1145/3704852",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/16/Calculational-Design-of-Hyperlogics-by-Abstract-Interpretation",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.11113",
+      "https://doi.org/10.5281/zenodo.14173478",
+      "https://openalex.org/W4404570571"
     ],
     "volume": "9"
   },
@@ -4654,7 +4789,8 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "crossref"
+        "crossref",
+        "openalex"
       ],
       "openAccess": {
         "is_oa": true,
@@ -4693,7 +4829,9 @@
     "urls": [
       "https://doi.org/10.1145/3704885",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/49/Generic-Refinement-Types",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://escholarship.org/uc/item/22k7q6h5",
+      "https://openalex.org/W4406221737"
     ],
     "volume": "9"
   },
@@ -4743,7 +4881,8 @@
     ],
     "pages": "391-415",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704850"
+      "https://doi.org/10.1145/3704850",
+      "https://vtechworks.lib.vt.edu/bitstreams/eb91d0ea-f1d2-4133-85b6-d5b5d6332bca/download"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -4764,6 +4903,8 @@
       "https://doi.org/10.1145/3704850",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/14/On-Extending-Incorrectness-Logic-with-Backwards-Reasoning",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/10919/124514",
+      "https://research.ou.nl/en/publications/659379b2-ca0d-42a8-a6a3-6e09b87842cc",
       "https://openalex.org/W4406222301"
     ],
     "volume": "9"
@@ -4810,7 +4951,8 @@
     ],
     "pages": "600-626",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704857"
+      "https://doi.org/10.1145/3704857",
+      "https://arxiv.org/pdf/2411.13220"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -4831,6 +4973,8 @@
       "https://doi.org/10.1145/3704857",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/21/CF-GKAT-Efficient-Validation-of-Control-Flow-Transformations",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.13220",
+      "https://research.ou.nl/en/publications/54ab3535-3958-488f-baab-0bdbf7eafe49",
       "https://openalex.org/W4404648924"
     ],
     "volume": "9"
@@ -4886,7 +5030,8 @@
     "eventType": "Talk; Paper",
     "extra": {
       "metadataSources": [
-        "crossref"
+        "crossref",
+        "openalex"
       ],
       "openAccess": {
         "is_oa": true,
@@ -4929,7 +5074,8 @@
     "urls": [
       "https://doi.org/10.1145/3704860",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/24/A-Verified-Foreign-Function-Interface-Between-Coq-and-C",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://openalex.org/W4406221719"
     ],
     "volume": "9"
   },
@@ -4939,14 +5085,40 @@
     "authors": [
       "Priyam Gupta"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Wed 22 Jan 2025 18:00 - 20:00"
     ],
+    "doi": "10.48550/arxiv.2507.13533",
     "eventType": "Poster",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2507.13533"
+      }
+    },
     "id": "a4ec4754-cb80-4b58-93fb-a985bb77ad98",
+    "keywords": [
+      "Correctness",
+      "Heap (data structure)",
+      "Functional verification",
+      "Runtime verification",
+      "Formal verification",
+      "Process (computing)",
+      "Intelligent verification",
+      "Static analysis"
+    ],
     "locations": [
       "Four Square Corridor"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2507.13533"
+    ],
+    "publicationDate": "2025-07-17",
     "sessionTitles": [
       "SRC Poster Session"
     ],
@@ -4958,8 +5130,11 @@
       "Student Research Competition"
     ],
     "urls": [
+      "https://doi.org/10.48550/arxiv.2507.13533",
       "https://popl25.sigplan.org/details/POPL-2025-student-research-competition/3/Increasing-the-Expressiveness-of-a-Gradual-Verifier",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2507.13533",
+      "https://openalex.org/W4416833428"
     ]
   },
   {
@@ -5017,7 +5192,8 @@
     ],
     "pages": "569-599",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704856"
+      "https://doi.org/10.1145/3704856",
+      "https://arxiv.org/pdf/2407.20002"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5038,6 +5214,7 @@
       "https://doi.org/10.1145/3704856",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/20/Formal-Foundations-for-Translational-Separation-Logic-Verifiers",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2407.20002",
       "https://openalex.org/W4401202381"
     ],
     "volume": "9"
@@ -5110,6 +5287,8 @@
       "https://doi.org/10.1145/3704866",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/30/A-modal-deconstruction-of-L-b-induction",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://pure.au.dk/portal/en/publications/26729ed2-b34a-48e0-a0dd-0d716aeed74b",
+      "https://www.scopus.com/pages/publications/85215846912",
       "https://openalex.org/W4406221614"
     ],
     "volume": "9"
@@ -5155,7 +5334,8 @@
     ],
     "pages": "2232-2252",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704911"
+      "https://doi.org/10.1145/3704911",
+      "https://hdl.handle.net/21.11116/0000-0011-A9E8-9"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5176,6 +5356,8 @@
       "https://doi.org/10.1145/3704911",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/75/Model-Checking-C-C-with-Mixed-Size-Accesses",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/21.11116/0000-0010-FF45-2",
+      "https://doi.org/10.5281/zenodo.13938750",
       "https://openalex.org/W4406221981"
     ],
     "volume": "9"
@@ -5374,17 +5556,38 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3698234"
+      }
     },
     "id": "c7a9fe83-435c-450a-bb56-d7cdb4c800b9",
     "issue": "4",
+    "keywords": [
+      "Computer science",
+      "Composability",
+      "Universal composability",
+      "Mathematical proof",
+      "Programming language",
+      "Compiler",
+      "Protocol (science)",
+      "Connection (principal bundle)",
+      "Principle of compositionality",
+      "Cryptography",
+      "Scalability",
+      "Syntax"
+    ],
     "locations": [
       "Marco Polo"
     ],
     "pages": "1-64",
     "pdfUrls": [
-      "https://dl.acm.org/doi/pdf/10.1145/3698234"
+      "https://dl.acm.org/doi/pdf/10.1145/3698234",
+      "https://iris.unitn.it/bitstream/11572/447893/3/3698234.pdf"
     ],
     "publicationDate": "2024-12-31",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5402,7 +5605,9 @@
     "urls": [
       "https://doi.org/10.1145/3698234",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/85/Universal-Composability-is-Robust-Compilation",
-      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers"
+      "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/11572/447893",
+      "https://openalex.org/W4403298574"
     ],
     "volume": "46"
   },
@@ -5452,7 +5657,8 @@
     ],
     "pages": "126-154",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704841"
+      "https://doi.org/10.1145/3704841",
+      "https://repository.ubn.ru.nl//bitstream/handle/2066/316734/316734.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5474,6 +5680,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/5/Affect-An-Affine-Type-and-Effect-System",
       "https://iris-project.org/pdfs/2025-popl-affect.pdf",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/2066/316734",
       "https://openalex.org/W4406222234"
     ],
     "volume": "9"
@@ -5523,7 +5730,9 @@
     ],
     "pages": "1687-1718",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704893"
+      "https://doi.org/10.1145/3704893",
+      "https://eprints.whiterose.ac.uk/222673/1/3704893.pdf",
+      "https://curis.ku.dk/ws/files/444410915/Barendregt_Convenes.pdf"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5546,6 +5755,8 @@
       "https://dl.acm.org/doi/10.1145/3704893",
       "https://zenodo.org/records/14198070/files/barendregt_convenes_with_knaster_tarski_extended.pdf?download=1",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://orcid.org/0000-0001-8747-0619>",
+      "https://researchprofiles.ku.dk/da/publications/ba1da57f-b414-473f-a443-4333b4c0ea85",
       "https://openalex.org/W4406222038"
     ],
     "volume": "9"
@@ -5598,7 +5809,8 @@
     ],
     "pages": "1627-1656",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704891"
+      "https://doi.org/10.1145/3704891",
+      "https://arxiv.org/pdf/2409.18709"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5619,6 +5831,8 @@
       "https://doi.org/10.1145/3704891",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/55/Interaction-Equivalence",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2409.18709",
+      "https://hal.science/hal-05454681",
       "https://openalex.org/W4403799188"
     ],
     "volume": "9"
@@ -5811,7 +6025,8 @@
     ],
     "pages": "1386-1416",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704883"
+      "https://doi.org/10.1145/3704883",
+      "https://hal.science/hal-05429267v1/document"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -5832,6 +6047,8 @@
       "https://doi.org/10.1145/3704883",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/47/Flexible-Type-Based-Resource-Estimation-in-Quantum-Circuit-Description-Languages",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hal.science/hal-05429267",
+      "https://hdl.handle.net/11585/1004897",
       "https://openalex.org/W4406222580"
     ],
     "volume": "9"
@@ -5887,7 +6104,7 @@
     "sessions": [
       "Wed_22_Jan_2025-Four_Square_Corridor-18_00_-_20_00-SRC_Poster_Session"
     ],
-    "title": "System $F^\\omega$ with Coherent Implicit Resolution",
+    "title": "System F^omega with Coherent Implicit Resolution",
     "tracks": [
       "Student Research Competition"
     ],
@@ -5969,6 +6186,8 @@
       "https://doi.org/10.1145/3704909",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/73/Grove-A-Bidirectionally-Typed-Collaborative-Structure-Editor-Calculus",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/2027.42/198715",
+      "https://doi.org/10.5281/zenodo.13909484",
       "https://openalex.org/W4406221809"
     ],
     "volume": "9"
@@ -6025,7 +6244,8 @@
     ],
     "pages": "1992-2024",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704903"
+      "https://doi.org/10.1145/3704903",
+      "https://arxiv.org/pdf/2411.06094"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -6046,6 +6266,8 @@
       "https://doi.org/10.1145/3704903",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/67/Generically-Automating-Separation-Logic-by-Functors-Homomorphisms-and-Modules",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.06094",
+      "https://hdl.handle.net/10356/205941",
       "https://openalex.org/W4404401076"
     ],
     "volume": "9"
@@ -6095,7 +6317,8 @@
     ],
     "pages": "1840-1870",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704898"
+      "https://doi.org/10.1145/3704898",
+      "https://arxiv.org/pdf/2411.10188"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -6116,6 +6339,7 @@
       "https://doi.org/10.1145/3704898",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/62/Reachability-Analysis-of-the-Domain-Name-System",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2411.10188",
       "https://openalex.org/W4404648185"
     ],
     "volume": "9"
@@ -6180,6 +6404,7 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/46/The-Best-of-Abstract-Interpretations",
       "http://www.math.unipd.it/~ranzato/papers/popl2025.pdf",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://dl.acm.org/doi/10.1145/3704882",
       "https://openalex.org/W4406222666"
     ],
     "volume": "9"
@@ -6279,6 +6504,8 @@
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/6/Qurts-Automatic-Quantum-Uncomputation-by-Affine-Types-with-Lifetime",
       "https://arxiv.org/abs/2411.10835",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://www.research.ed.ac.uk/files/560724405/HirataandHeunenPOPL25Qurts.pdf",
+      "https://www.research.ed.ac.uk/en/publications/0a5ee2a6-6094-4a60-a89d-3abdccd03de7",
       "https://openalex.org/W4406222052"
     ],
     "volume": "9"
@@ -6430,7 +6657,8 @@
     ],
     "pages": "539-568",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704855"
+      "https://doi.org/10.1145/3704855",
+      "https://arxiv.org/pdf/2410.22540"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -6451,6 +6679,7 @@
       "https://doi.org/10.1145/3704855",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/19/A-Demonic-Outcome-Logic-for-Randomized-Nondeterminism",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "http://arxiv.org/abs/2410.22540",
       "https://openalex.org/W4404342313"
     ],
     "volume": "9"
@@ -6505,7 +6734,8 @@
     ],
     "pages": "2090-2117",
     "pdfUrls": [
-      "https://doi.org/10.1145/3704906"
+      "https://doi.org/10.1145/3704906",
+      "https://hdl.handle.net/21.11116/0000-0011-A9EC-5"
     ],
     "publicationDate": "2025-01-07",
     "publisher": "Association for Computing Machinery (ACM)",
@@ -6526,6 +6756,9 @@
       "https://doi.org/10.1145/3704906",
       "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/70/RELINCHE-Automatically-Checking-Linearizability-under-Relaxed-Memory-Consistency",
       "https://popl25.sigplan.org/track/POPL-2025-popl-research-papers",
+      "https://hdl.handle.net/21.11116/0000-0010-FF40-7",
+      "https://doi.org/10.5281/zenodo.13935830",
+      "https://doi.org/10.5281/zenodo.13992580",
       "https://openalex.org/W4406221732"
     ],
     "volume": "9"

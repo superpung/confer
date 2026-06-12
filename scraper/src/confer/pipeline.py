@@ -28,6 +28,7 @@ def build_venue(
     base_cache = cache_dir or cache_root()
     fetcher = Fetcher(
         base_cache / venue.id,
+        shared_cache_dir=base_cache / "_shared",
         refresh=refresh,
         timeout=timeout,
         delay=delay,

@@ -12,7 +12,15 @@ from bs4 import BeautifulSoup, Tag
 from ..config import VenueConfig
 from ..fetcher import Fetcher
 from ..models import Paper
-from ..util import cache_name_for_url, clean_doi, clean_text, safe_slug, unique_preserve_order
+from ..util import (
+    cache_name_for_url,
+    clean_doi,
+    clean_text,
+    safe_slug,
+    split_author_names,
+    strip_markup,
+    unique_preserve_order,
+)
 from .base import Scraper
 
 
@@ -145,8 +153,9 @@ def parse_aaai_detail(html: str) -> dict[str, Any]:
 def apply_aaai_detail(paper: Paper, metadata: dict[str, Any]) -> None:
     if metadata.get("title"):
         paper.title = str(metadata["title"])
-    if metadata.get("authors"):
-        paper.authors = list(metadata["authors"])
+    detail_authors = list(metadata.get("authors", []))
+    if detail_authors and (not paper.authors or len(detail_authors) >= len(paper.authors)):
+        paper.authors = detail_authors
     paper.author_institutions = paper.author_institutions or str(metadata.get("author_institutions", ""))
     paper.abstract = paper.abstract or str(metadata.get("abstract", ""))
     paper.publication_date = paper.publication_date or str(metadata.get("publication_date", ""))
@@ -159,7 +168,7 @@ def apply_aaai_detail(paper: Paper, metadata: dict[str, Any]) -> None:
 
 
 def parse_aaai_authors(value: str) -> list[str]:
-    return [part.strip() for part in value.split(",") if part.strip()]
+    return split_author_names(value)
 
 
 def clean_aaai_abstract(value: str) -> str:
@@ -182,7 +191,7 @@ def meta_content(soup: BeautifulSoup, name: str) -> str:
 
 def meta_contents(soup: BeautifulSoup, name: str) -> list[str]:
     return [
-        clean_text(meta) or str(meta.get("content", "")).strip()
+        clean_text(meta) or strip_markup(str(meta.get("content", "")).strip())
         for meta in soup.find_all("meta", attrs={"name": name})
         if str(meta.get("content", "")).strip()
     ]

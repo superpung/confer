@@ -571,16 +571,33 @@ class ResearchrScraper(Scraper):
                 institution = ""
             else:
                 name_heading = body.select_one(".media-heading")
+                institution = clean_text(body.select_one(".text-black"))
                 if name_heading is None:
                     name = clean_text(anchor)
                 else:
-                    for node in name_heading.select(".pull-right"):
-                        node.extract()
-                    name = clean_text(name_heading)
-                institution = clean_text(body.select_one(".text-black"))
+                    name, visual_institution = ResearchrScraper.parse_modal_name_heading(name_heading, institution)
+                    institution = institution or visual_institution
             if name:
                 people.append({"name": name, "institution": institution})
         return people
+
+    @staticmethod
+    def parse_modal_name_heading(name_heading: Tag, institution: str = "") -> tuple[str, str]:
+        heading = BeautifulSoup(str(name_heading), "html.parser").find(class_="media-heading")
+        if heading is None:
+            heading = name_heading
+        for node in heading.select(".pull-right"):
+            node.extract()
+
+        separator = heading.select_one(".name-visual-sep")
+        if separator is None or institution:
+            return clean_text(heading), ""
+
+        before = "".join(str(sibling) for sibling in reversed(list(separator.previous_siblings)))
+        after = "".join(str(sibling) for sibling in separator.next_siblings)
+        name = clean_text(BeautifulSoup(before, "html.parser"))
+        visual_institution = clean_text(BeautifulSoup(after, "html.parser"))
+        return name or clean_text(heading), visual_institution
 
     @classmethod
     def format_event_date(cls, date: str, start: str, duration: str) -> str:

@@ -332,7 +332,8 @@ venues:
     year: 2026
     scraper: ndss
     enabled: true
-    source: {}
+    source:
+      program_url: https://www.ndss-symposium.org/ndss2026/
 
   - id: aaai2026
     name: AAAI 2026
@@ -342,7 +343,8 @@ venues:
     year: 2026
     scraper: aaai
     enabled: true
-    source: {}
+    source:
+      program_url: https://aaai.org/conference/aaai/aaai-26/
 
   - id: neurips2025
     name: NeurIPS 2025
@@ -352,7 +354,8 @@ venues:
     year: 2025
     scraper: openreview
     enabled: true
-    source: {}
+    source:
+      program_url: https://neurips.cc/Conferences/2025
 
   - id: icml2025
     name: ICML 2025
@@ -362,7 +365,8 @@ venues:
     year: 2025
     scraper: openreview
     enabled: true
-    source: {}
+    source:
+      program_url: https://icml.cc/Conferences/2025
 
   - id: iclr2026
     name: ICLR 2026
@@ -372,7 +376,8 @@ venues:
     year: 2026
     scraper: openreview
     enabled: true
-    source: {}
+    source:
+      program_url: https://iclr.cc/Conferences/2026
 
   - id: acl2025
     name: ACL 2025
@@ -382,7 +387,8 @@ venues:
     year: 2025
     scraper: acl_anthology
     enabled: true
-    source: {}
+    source:
+      program_url: https://2025.aclweb.org/
 
   - id: tosem2026
     name: TOSEM 2026

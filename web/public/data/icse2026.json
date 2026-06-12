@@ -1,6 +1,13 @@
 [
   {
     "abstract": "Smart contracts are a core component of blockchain technology and are widely deployed across various scenarios. However, atomicity violations have become a potential security risk. Existing analysis tools often lack the precision required to detect these issues effectively. To address this challenge, we introduce AtomGraph, an automated framework designed for detecting atomicity violations. This framework leverages Graph Convolutional Networks (GCN) to identify atomicity violations through multimodal feature learning and fusion. Specifically, driven by a collaborative learning mechanism, the model simultaneously learns from two heterogeneous modalities: extracting structural topological features from the contract’s Control Flow Graph (CFG) and uncovering deep semantics from its opcode sequence. We designed an adaptive weighted fusion mechanism to dynamically adjust the weights of features from each modality to achieve optimal feature fusion. Finally, GCN detects graph-level atomicity violation on the contract. Comprehensive experimental evaluations demonstrate that AtomGraph achieves 96.88% accuracy and 96.97% F1 score, outperforming existing tools. Furthermore, compared to the concatenation fusion model, AtomGraph improves the F1 score by 6.4%, proving its potential in smart contract security detection.",
+    "authorIds": [
+      "0000-0002-4597-4226",
+      "A5120713492",
+      "0000-0001-6450-7933",
+      "A5120635521",
+      "0000-0001-7181-9222"
+    ],
     "authorInstitutions": "Xiaoqi Li (Hainan University); Zongwei Li (Hainan University); Wenkai Li (Hainan University); Zeng Zhang (Hainan University); Lei Xie (Hainan University)",
     "authors": [
       "Xiaoqi Li",
@@ -9,14 +16,40 @@
       "Zeng Zhang",
       "Lei Xie"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Fri 17 Apr 2026 16:00 - 16:15"
     ],
+    "doi": "10.48550/arxiv.2512.02399",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2512.02399"
+      }
+    },
     "id": "00303e31-12c5-4fb3-904f-1cbfd34d2877",
+    "keywords": [
+      "Atomicity",
+      "Graph",
+      "Feature (linguistics)",
+      "Exploit",
+      "Graph rewriting",
+      "Modality (human–computer interaction)",
+      "Component (thermodynamics)",
+      "Feature learning"
+    ],
     "locations": [
       "Oceania X"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2512.02399"
+    ],
+    "publicationDate": "2025-12-02",
     "sessionTitles": [
       "Dependability and Security 11"
     ],
@@ -28,20 +61,23 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.48550/arxiv.2512.02399",
       "https://conf.researchr.org/details/icse-2026/icse-2026-nier/18/AtomGraph-Tackling-Atomicity-Violation-in-Smart-Contracts-using-Multimodal-GCNs",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://arxiv.org/abs/2512.02399",
+      "https://openalex.org/W4417005355"
     ]
   },
   {
     "abstract": "There is growing concern about maintainers self-sabotaging their work in order to take political or economic stances, a practice referred to as “protestware”. Our objective is to understand the discourse around discussions on such an attack, how it is received by the community, and whether developers respond to the attack in a timely manner. We study two notable protestware cases i.e., colors.js and es5-ext. Results indicate that protestware discussions are spread more quickly on the GitHub platform, while security vulnerabilities are faster on social media. By establishing a taxonomy of protestware discussions, we identify posts that express stances and provide technical mitigation instructions. We applied a thematic analysis to 684 protestware related posts to identify five major themes during the discussions: i. disseminate and response, ii. stance, iii. reputation, iv. communicative styles, v. rights and ethics. This work sheds light on the nuanced landscape of protestware discussions, offering insights for both researchers and developers into maintaining a healthy balance between the political or social actions of developers and the collective well-being of the open-source community.",
     "authorIds": [
       "0000-0001-9372-2966",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "0000-0002-2004-0902",
+      "0000-0001-9978-9889",
+      "0009-0008-7568-6883",
+      "0000-0002-6919-2149",
+      "0000-0003-0708-5222",
+      "0000-0003-2324-0608"
     ],
     "authorInstitutions": "Youmei Fan (Nara Institute of Science and Technology); Dong Wang (Tianjin University); Supatsara Wattanakriengkrai (Nara Institute of Science and Technology); Hathaichanok Damrongsiri (Nara Institute of Science and Technology); Christoph Treude (Singapore Management University); Hideaki Hata (Shinshu University); Raula Gaikovina Kula (The University of Osaka)",
     "authors": [
@@ -61,11 +97,25 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://link.springer.com/content/pdf/10.1007/s10664-024-10599-6.pdf"
+      }
     },
     "id": "00a36c90-8e4d-4a4c-b0bf-5170decfddea",
     "issue": "2",
+    "keywords": [
+      "Open source software",
+      "Open source",
+      "Computer science",
+      "Software",
+      "Software engineering",
+      "Operating system"
+    ],
     "locations": [
       "Oceania V"
     ],
@@ -89,7 +139,8 @@
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/60/Developer-reactions-to-protestware-in-open-source-software-the-cases-of-color-js-and",
       "https://rdcu.be/e3LXC",
       "https://arxiv.org/abs/2409.15674",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4406582176"
     ],
     "volume": "30"
   },
@@ -131,6 +182,13 @@
   },
   {
     "abstract": "A great number of software packages combine code in high-level languages, such as Python, with binary extensions compiled from low-level languages such as C, C++ or Rust to either boost efficiency or enable specific functionalities. In this context, high-level function calls can trigger native (binary) code execution. This setup introduces challenges for call graph generation. Accurate call graphs are essential for various applications, including vulnerability management and software maintenance, as they help track execution paths, assess security risks, and identify unused or redundant code. This work tackles the problem of cross-language call graph construction in Python. Instead of relying on static analysis, which struggles with identifying Python-native interactions, we propose a dynamic analysis technique which does not require inputs to execute code. Our approach is based on two key insights: (1) when a binary extension is imported from Python code, all its objects (e.g., functions) are loaded into memory, and (2) the layout of callable Python objects contains pointers to the native functions they invoke. By analyzing these memory layouts for every loaded object, we identify corresponding graph edges, which link Python functions to the native functions they eventually invoke. This is an essential element for constructing call graphs across language boundaries. We implement this approach in PyXray, a tool that efficiently analyzes massive Python packages such as NumPy and PyTorch in minutes, while significantly outpeforming existing static analysis methods in terms of precision and recall. PyXray enables two key applications: (1) cross-language vulnerability management, by identifying whether a Python package potentially calls a vulnerable native function and (2) cross-language bloat analysis, by quantifying unnecessary code across Python and native components.",
+    "authorIds": [
+      "A5085013742",
+      "0000-0002-9906-3073",
+      "0000-0002-8495-7939",
+      "A5122822159",
+      "0000-0002-5061-9018"
+    ],
     "authorInstitutions": "Georgios Alexopoulos (University of Athens); Thodoris Sotiropoulos (ETH Zurich); Georgios Gousios (Endor Labs); Zhendong Su (ETH Zurich); Dimitris Mitropoulos (University of Athens)",
     "authors": [
       "Georgios Alexopoulos",
@@ -139,14 +197,40 @@
       "Zhendong Su",
       "Dimitris Mitropoulos"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Wed 15 Apr 2026 15:00 - 15:15"
     ],
+    "doi": "10.5281/zenodo.18009456",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.18009456"
+      }
+    },
     "id": "00c491a7-b7fb-4783-b4a4-0cc2b7ed566f",
+    "keywords": [
+      "Artifact (error)",
+      "Call graph",
+      "Graph",
+      "Object (grammar)",
+      "Graph drawing",
+      "Visualization"
+    ],
     "locations": [
       "Oceania IX"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.18009456",
+      "https://doi.org/10.5281/zenodo.18009455"
+    ],
+    "publicationDate": "2025-12-21",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "Testing and Analysis 4"
     ],
@@ -158,27 +242,62 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.5281/zenodo.18009456",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/38/PyXray-Practical-Cross-Language-Call-Graph-Construction-through-Object-Layout-Analys",
       "https://grgalex.gr/assets/pdf/pyxray_icse26.pdf",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W7122613025",
+      "https://doi.org/10.5281/zenodo.18009455",
+      "https://openalex.org/W7122636598"
     ]
   },
   {
     "abstract": "Generative AI code suggestion tools, such as GitHub Copilot, are increasingly integrated into developer workflows. While these tools promise productivity gains, the actual impact on developer cognition and task performance has been mixed. In this paper, we present the first in-depth eye-tracking study of how developers interact with generative AI code suggestions during programming. We recruited 35 professionals and student developers and recorded their gaze behavior, code suggestion interactions, and code editing activity during programming sessions. By combining high-resolution eye-tracking data with fine-grained logging of AI-generated suggestions, we quantify the cognitive costs of reviewing code suggestions. Our findings show that approximately half of the generated suggestions are not even looked at. From the suggestions that were looked at, over 75% are not used. Although suggestions are only reviewed briefly (~0.9 seconds on average), each suggestion introduces a micro-interruption that disrupts developer flow. We discuss opportunities for more efficient and context-aware generative AI code suggestions that minimize cognitive overhead.",
+    "authorIds": [
+      "0009-0008-5512-3549",
+      "0000-0001-9104-8365",
+      "0000-0002-1834-6240"
+    ],
     "authorInstitutions": "Tarek Alakmeh (University of Zurich); Sarah D'Angelo (Google); Thomas Fritz (University of Zurich)",
     "authors": [
       "Tarek Alakmeh",
       "Sarah D'Angelo",
       "Thomas Fritz"
     ],
+    "container": "Zenodo (CERN European Organization for Nuclear Research)",
     "dates": [
       "Thu 16 Apr 2026 16:00 - 16:15"
     ],
+    "doi": "10.5281/zenodo.17661955",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.5281/zenodo.17661955"
+      }
+    },
     "id": "00f4b5d1-923f-48ff-8eed-78872784c8cd",
+    "keywords": [
+      "Session (web analytics)",
+      "Replication (statistics)",
+      "Scripting language",
+      "Code (set theory)",
+      "Web application"
+    ],
     "locations": [
       "Oceania IX"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.5281/zenodo.17661955",
+      "https://doi.org/10.5281/zenodo.17661954",
+      "https://doi.org/10.5281/zenodo.17671255"
+    ],
+    "publicationDate": "2025-11-20",
+    "publisher": "European Organization for Nuclear Research",
     "sessionTitles": [
       "AI for Software Engineering 19"
     ],
@@ -190,9 +309,15 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.5281/zenodo.17661955",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/90/An-Eye-for-AI-Eye-Tracking-the-Micro-Interruptions-of-GenAI-Code-Suggestions",
       "https://eye-for-ai.hasel.dev/download/an-eye-for-ai-icse2026-preprint.pdf",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W7106331762",
+      "https://doi.org/10.5281/zenodo.17661954",
+      "https://openalex.org/W7106304118",
+      "https://doi.org/10.5281/zenodo.17671255",
+      "https://openalex.org/W7124241341"
     ]
   },
   {
@@ -326,6 +451,12 @@
   },
   {
     "abstract": "Test suites are inherently imperfect, and testers can always enrich a suite with new test cases that improve its quality and, consequently, the reliability of the target software system. However, finding test cases that explore execution scenarios beyond the scope of an existing suite can be extremely challenging and labor-intensive, particularly when managing large test suites over extended periods. In this paper, we propose E-Test, an approach that reduces the gap between the execution space explored with a test suite and the executions experienced after testing by augmenting the test suite with test cases that explore execution scenarios that emerge in production. E-Test (i) identifies executions that have not yet been tested from large sets of scenarios, such as those monitored during intensive production usage, and (ii) generates new test cases that enhance the test suite. E-Test leverages Large Language Models (LLMs) to pinpoint scenarios that the current test suite does not adequately cover, and augments the suite with test cases that execute these scenarios. Our evaluation on a dataset of 1,975 scenarios, collected from highly-starred open-source Java projects already in production and Defects4J, demonstrates that E-Test retrieves not-yet-tested execution scenarios significantly better than state-of-the-art approaches. While existing regression testing and field testing approaches for this task achieve a maximum F1-score of 0.34, and vanilla LLMs achieve a maximum F1-score of 0.39, E-Test reaches 0.55. These results highlight the impact of E-Test in enhancing test suites by effectively targeting not-yet-tested execution scenarios and reducing manual effort required for maintaining test suites.",
+    "authorIds": [
+      "0009-0002-9750-2762",
+      "0000-0002-5306-8645",
+      "A5074692307",
+      "0000-0001-5193-7379"
+    ],
     "authorInstitutions": "Ketai Qiu (USI Università della Svizzera Italiana); Luca Di Grazia (University of St. Gallen); Leonardo Mariani (University of Milano-Bicocca); Mauro Pezze (Università della Svizzera italiana (USI) and Università degli Studi di Milano Bicocca)",
     "authors": [
       "Ketai Qiu",
@@ -333,14 +464,42 @@
       "Leonardo Mariani",
       "Mauro Pezze"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Fri 17 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.1145/3744916.3773126",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2510.19860"
+      }
+    },
     "id": "031ce758-7578-4572-8255-973201bd5be6",
+    "keywords": [
+      "Test suite",
+      "Regression testing",
+      "Suite",
+      "Test case",
+      "Test (biology)",
+      "Test Management Approach",
+      "System under test",
+      "Task (project management)",
+      "Model-based testing"
+    ],
     "locations": [
       "Oceania II"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2510.19860"
+    ],
+    "publicationDate": "2025-10-21",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Testing and Analysis 19"
     ],
@@ -352,9 +511,12 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1145/3744916.3773126",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/84/E-Test-E-er-Improving-Test-Suites",
       "https://arxiv.org/abs/2510.19860",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://arxiv.org/abs/2510.19860",
+      "https://openalex.org/W4416249003"
     ]
   },
   {
@@ -395,20 +557,54 @@
   },
   {
     "abstract": "User feedback is crucial for the evolution of mobile apps. However, research suggests that users tend to submit uninformative, vague, or destructive feedback. Unlike recent AI4SE approaches that focus on generating code and other development artifacts, our work aims at empowering users to submit better and more constructive UI feedback with concrete suggestions on how to improve the app. We propose LikeThis!, a GenAI-based approach that takes a user comment with the corresponding screenshot to immediately generate multiple improvement alternatives, from which the user can easily choose their preferred option. To evaluate LikeThis!, we first conducted a model benchmarking study based on a public dataset of carefully critiqued UI designs. The results show that GPT-Image-1 significantly outperformed three other state-of-the-art image generation models in improving the designs to address UI issues while keeping the fidelity and without introducing new issues. An intermediate step in LikeThis! to generate a solution specification before changing the design was key to achieving effective improvement. Second, we conducted a user study with 10 production apps, where 15 users used LikeThis! to submit their feedback on encountered issues. Later, the developers of the apps assessed the understandability and actionability of the feedback with and without generated improvements. The results show that our approach helps generate better feedback from both user and developer perspectives, paving the way for AI-assisted user-developer collaboration.",
+    "authorIds": [
+      "0009-0008-6028-1576",
+      "A5114634959",
+      "0000-0002-6899-4393"
+    ],
     "authorInstitutions": "Jialiang Wei (Hasso Plattner Institute); Ali Ebrahimi Pourasad (University of Hamburg); Walid Maalej (University of Hamburg)",
     "authors": [
       "Jialiang Wei",
       "Ali Ebrahimi Pourasad",
       "Walid Maalej"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Thu 16 Apr 2026 12:00 - 12:15"
     ],
+    "doi": "10.48550/arxiv.2603.04245",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2603.04245"
+      }
+    },
     "id": "034793fc-33d7-447a-b823-122a7150d75b",
+    "keywords": [
+      "Benchmarking",
+      "Focus (optics)",
+      "Constructive",
+      "Key (lock)",
+      "Fidelity",
+      "User experience design",
+      "User modeling",
+      "Mobile apps",
+      "Quality (philosophy)"
+    ],
     "locations": [
       "Oceania IV"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2603.04245",
+      "https://arxiv.org/pdf/2603.04245"
+    ],
+    "publicationDate": "2026-03-04",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Requirements and Modeling 2"
     ],
@@ -420,12 +616,23 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.48550/arxiv.2603.04245",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/306/LikeThis-Empowering-App-Users-to-Submit-UI-Improvement-Suggestions-Instead-of-Compla",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W7133807268",
+      "http://arxiv.org/abs/2603.04245",
+      "https://openalex.org/W7133614547"
     ]
   },
   {
     "abstract": "Smart contract code summarization facilitates maintenance and vulnerability detection. Although large language models (LLMs) are widely adopted, they underperform fine-tuned models such as CodeT5+ and CodeBERT. Existing data-flow-based methods often miss hierarchical and control structures, leading to information loss and lower summarization quality. We propose \\textbf{SCLA}, a multimodal LLM approach that enhances code understanding via semantically enriched prompts. SCLA integrates Function Call Graphs (FCGs) and control-flow semantic facts extracted from the Abstract Syntax Tree (AST) to preserve structural and contextual dependencies, including both explicit and implicit behaviors. Evaluated on 40,000 real-world smart contracts, SCLA achieves substantial gains over state-of-the-art baselines: 26.7% (BLEU-4), 23.2% (METEOR), 16.7% (ROUGE-L), and 14.7% (BLEURT), demonstrating that control flow–enhanced prompting effectively bridges the gap between general-purpose LLMs and domain-specific code understanding.",
+    "authorIds": [
+      "0000-0002-6012-9178",
+      "A5104242014",
+      "",
+      "0000-0001-6548-7882",
+      "0009-0008-7233-9464"
+    ],
     "authorInstitutions": "Xiaoqi Li (Hainan University); Yingjie Mao (Hainan University); Zexin Lu (Hong Kong Polytechnic University); Wenkai Li (Hainan University); Zongwei Li (Hainan University)",
     "authors": [
       "Xiaoqi Li",
@@ -434,14 +641,40 @@
       "Wenkai Li",
       "Zongwei Li"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Thu 16 Apr 2026 14:00 - 14:15"
     ],
+    "doi": "10.48550/arxiv.2402.04863",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2402.04863"
+      }
+    },
     "id": "0385efa7-f71c-4605-a3b5-32fcd803b151",
+    "keywords": [
+      "Automatic summarization",
+      "Business",
+      "Smart contract",
+      "Computer science",
+      "Computer security",
+      "Artificial intelligence",
+      "Blockchain"
+    ],
     "locations": [
       "Europa II"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2402.04863"
+    ],
+    "publicationDate": "2024-02-07",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "AI for Software Engineering 15"
     ],
@@ -453,8 +686,11 @@
       "New Ideas and Emerging Results (NIER)"
     ],
     "urls": [
+      "https://doi.org/10.48550/arxiv.2402.04863",
       "https://conf.researchr.org/details/icse-2026/icse-2026-nier/14/SCLA-Automated-Smart-Contract-Summarization-via-LLMs-and-Control-Flow-Prompt",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://arxiv.org/abs/2402.04863",
+      "https://openalex.org/W4391709230"
     ]
   },
   {
@@ -586,11 +822,26 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://link.springer.com/content/pdf/10.1007/s10664-025-10697-z.pdf"
+      }
     },
     "id": "044a662d-9671-47cb-b8ba-01ef1814667a",
     "issue": "6",
+    "keywords": [
+      "Obstacle",
+      "Obstacle avoidance",
+      "Work (physics)",
+      "Empirical research",
+      "Relation (database)",
+      "Anomaly detection",
+      "Remotely operated underwater vehicle"
+    ],
     "locations": [
       "Oceania X"
     ],
@@ -612,7 +863,9 @@
     "urls": [
       "https://doi.org/10.1007/s10664-025-10697-z",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/31/When-Uncertainty-Leads-to-Unsafety-Empirical-Insights-into-the-Role-of-Uncertainty-i",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://hdl.handle.net/11475/34244",
+      "https://openalex.org/W4414493140"
     ],
     "volume": "30"
   },
@@ -652,6 +905,15 @@
   },
   {
     "abstract": "LLMs are increasingly used to boost productivity and support software engineering tasks. However, when applied to socially sensitive decisions such as team composition and task allocation, they raise concerns of fairness. Prior studies have revealed that LLMs may reproduce stereotypes; however, these analyses remain exploratory and examine sensitive attributes in isolation. This study investigates whether LLMs exhibit bias in team composition and task assignment by analyzing the combined effects of candidates’ country and pronouns. Using three LLMs and 3,000 simulated decisions, we find systematic disparities: demographic attributes significantly shaped both selection likelihood and task allocation, even when accounting for expertise-related factors. Task distributions further reflected stereotypes, with technical and leadership roles unevenly assigned across groups. Our findings indicate that LLMs exacerbate demographic inequities in software engineering contexts, underscoring the need for fairness-aware assessment.",
+    "authorIds": [
+      "A5117359450",
+      "0009-0002-5394-8148",
+      "0000-0001-6012-9947",
+      "A5122314249",
+      "0000-0002-5438-2281",
+      "0000-0002-4689-3401",
+      "A5091004723"
+    ],
     "authorInstitutions": "Alessandra Parziale (Gran Sasso Science Institute); Gianmario Voria (University of Salerno); Valeria Pontillo (Gran Sasso Science Institute); Amleto Di Salle (Gran Sasso Science Institute (GSSI)); Patrizio Pelliccione (Gran Sasso Science Institute, L'Aquila, Italy); Gemma Catolino (University of Salerno); Fabio Palomba (University of Salerno)",
     "authors": [
       "Alessandra Parziale",
@@ -662,14 +924,40 @@
       "Gemma Catolino",
       "Fabio Palomba"
     ],
+    "container": "arXiv (Cornell University)",
     "dates": [
       "Thu 16 Apr 2026 16:45 - 17:00"
     ],
+    "doi": "10.48550/arxiv.2601.03857",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://doi.org/10.48550/arxiv.2601.03857"
+      }
+    },
     "id": "04c9b7f8-5cfb-476f-be45-70aedb3da168",
+    "keywords": [
+      "Task (project management)",
+      "Team composition",
+      "Composition (language)",
+      "Selection (genetic algorithm)",
+      "Productivity",
+      "Software"
+    ],
     "locations": [
       "Oceania IV"
     ],
+    "pdfUrls": [
+      "https://doi.org/10.48550/arxiv.2601.03857",
+      "https://arxiv.org/pdf/2601.03857"
+    ],
+    "publicationDate": "2026-01-07",
+    "publisher": "Cornell University",
     "sessionTitles": [
       "Human and Social Aspects 10"
     ],
@@ -682,25 +970,60 @@
       "Software Engineering in Society (SEIS)"
     ],
     "urls": [
+      "https://doi.org/10.48550/arxiv.2601.03857",
       "https://conf.researchr.org/details/icse-2026/icse-2026-software-engineering-in-society/9/Once-Upon-a-Team-Investigating-Bias-in-LLM-Driven-Software-Team-Composition-and-Task",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W7119536945",
+      "http://arxiv.org/abs/2601.03857",
+      "https://openalex.org/W7119557856"
     ]
   },
   {
     "abstract": "Sustainability is increasingly recognized as a critical dimension of engineering education, yet its integration into Software Engineering curricula remains a challenge. This paper reports on a case study that examines how sustainability is being embedded across modules in the Software Engineering program at one university. The paper outlines the process through which academics and students co-identified opportunities for integration, guided by the five dimensions of the Sustainability Awareness Framework, targeted discussion questions, and good practice examples drawn from the Green Software Foundation patterns. The study highlights practical steps - including the use of frameworks, illustrative examples, student engagement, and iterative consultative processes - that can support other institutions seeking to embed sustainability into their programs. We also discuss strategies for integrating sustainability into the Software Engineering curriculum and argue that such integration is a necessary and urgent step to prepare Software Engineering graduates as sustainability-aware professionals in our changing society.",
+    "authorIds": [
+      "0000-0001-6293-3445",
+      ""
+    ],
     "authorInstitutions": "Ruzanna Chitchyan (University of Bristol); Niki Mahmoudi (University of Bristol, UK)",
     "authors": [
       "Ruzanna Chitchyan",
       "Niki Mahmoudi"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Thu 16 Apr 2026 16:15 - 16:30"
     ],
+    "doi": "10.48550/arxiv.2510.03321",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2510.03321"
+      }
+    },
     "id": "050147f4-1b04-4544-97e2-ec2de2d7aee8",
+    "keywords": [
+      "Sustainability",
+      "Software Engineering Process Group",
+      "Social software engineering",
+      "Process (computing)",
+      "Curriculum",
+      "Personal software process",
+      "Software",
+      "Software development",
+      "Dimension (graph theory)"
+    ],
     "locations": [
       "Oceania VI"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2510.03321"
+    ],
+    "publicationDate": "2025-10-01",
     "sessionTitles": [
       "Education 6"
     ],
@@ -712,8 +1035,14 @@
       "Software Engineering Education and Training (SEET)"
     ],
     "urls": [
+      "https://doi.org/10.48550/arxiv.2510.03321",
       "https://conf.researchr.org/details/icse-2026/icse-2026-software-engineering-education-and-training--seet-/37/Embedding-Sustainability-in-Software-Engineering-Curriculum-A-Case-Study",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://arxiv.org/abs/2510.03321",
+      "https://research-information.bris.ac.uk/en/publications/f17d06d8-535e-4fdd-9d45-2814625c0891",
+      "https://openalex.org/W4414968847",
+      "https://research-information.bris.ac.uk/en/publications/39f18155-d705-4adb-8a77-de32c66f28d8",
+      "https://openalex.org/W7149882477"
     ]
   },
   {
@@ -727,14 +1056,39 @@
       "Shengyu Cheng",
       "Yingfei Xiong"
     ],
+    "container": "ArXiv.org",
     "dates": [
       "Fri 17 Apr 2026 15:00 - 15:15"
     ],
+    "doi": "10.1145/3744916.3773159",
     "eventType": "Talk",
+    "extra": {
+      "metadataSources": [
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2503.12205"
+      }
+    },
     "id": "050374a4-7122-4361-a648-f36e7c552441",
+    "keywords": [
+      "Bridging (networking)",
+      "Static analysis",
+      "Key (lock)",
+      "Code (set theory)",
+      "Hallucinating",
+      "Bridge (graph theory)",
+      "Static program analysis"
+    ],
     "locations": [
       "Asia I"
     ],
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2503.12205"
+    ],
+    "publicationDate": "2025-03-15",
     "sessionTitles": [
       "AI for Software Engineering 23"
     ],
@@ -746,9 +1100,12 @@
       "Research Track"
     ],
     "urls": [
+      "https://doi.org/10.1145/3744916.3773159",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/117/PredicateFix-Repairing-Static-Analysis-Alerts-with-Bridging-Predicates",
       "https://arxiv.org/abs/2503.12205",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://arxiv.org/abs/2503.12205",
+      "https://openalex.org/W7104024401"
     ]
   },
   {
@@ -904,14 +1261,37 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3597503.3639207"
+      }
     },
     "id": "07fe0814-e641-4772-8b4c-64104aa97a2b",
+    "keywords": [
+      "Computer science",
+      "Database transaction",
+      "Database",
+      "Distributed transaction",
+      "Consistency (knowledge bases)",
+      "Transaction processing",
+      "Transaction processing system",
+      "Nested transaction",
+      "Online transaction processing",
+      "Component (thermodynamics)",
+      "Implementation",
+      "Data consistency"
+    ],
     "locations": [
       "Oceania IX"
     ],
     "pages": "1-13",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3597503.3639207"
+    ],
     "publicationDate": "2024-04-12",
     "publisher": "ACM",
     "sessionTitles": [
@@ -927,7 +1307,8 @@
     "urls": [
       "https://doi.org/10.1145/3597503.3639207",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/97/VDBFuzz-Understanding-and-Detecting-Crash-Bugs-in-Vector-Database-Management-Systems",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4394745231"
     ]
   },
   {
@@ -2984,11 +3365,26 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "1f009848-4f23-40b5-80a2-530384b531b4",
     "issue": "12",
+    "keywords": [
+      "Semantics (computer science)",
+      "Software bug",
+      "Visualization",
+      "Graphical user interface",
+      "Precision and recall",
+      "Software",
+      "Mobile apps",
+      "User interface"
+    ],
     "locations": [
       "Oceania I"
     ],
@@ -3009,7 +3405,8 @@
       "https://doi.org/10.1109/TSE.2025.3614469",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/26/Seeing-is-Believing-Vision-driven-Non-crash-Functional-Bug-Detection-for-Mobile-Apps",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
-      "https://doi.org/10.1109/tse.2025.3614469"
+      "https://doi.org/10.1109/tse.2025.3614469",
+      "https://openalex.org/W4414538634"
     ],
     "volume": "51"
   },
@@ -3146,15 +3543,38 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1145/3708526"
+      }
     },
     "id": "20403b62-8c0c-4afc-8353-9aa3183e20c8",
     "issue": "5",
+    "keywords": [
+      "Computer science",
+      "Sustainability",
+      "Social software engineering",
+      "Software engineering",
+      "Engineering management",
+      "Software",
+      "Software development",
+      "Systems engineering",
+      "Software construction",
+      "Engineering"
+    ],
     "locations": [
       "Oceania VI"
     ],
     "pages": "1-27",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3708526",
+      "https://lutpub.lut.fi/bitstream/10024/169191/1/moreira_et_al_a_roadmap_aam.pdf",
+      "https://run.unl.pt/bitstream/10362/186644/1/3708526.pdf"
+    ],
     "publicationDate": "2025-06-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -3171,7 +3591,15 @@
       "https://doi.org/10.1145/3708526",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/45/A-Roadmap-for-Integrating-Sustainability-into-Software-Engineering-Education",
       "http://dx.doi.org/10.1145/3708526",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://research.vu.nl/en/publications/4bdd74c5-a860-467d-982f-2c9cfda91832",
+      "https://lutpub.lut.fi/handle/10024/169191",
+      "http://hdl.handle.net/10362/186644",
+      "http://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-215387",
+      "http://cds.cern.ch/record/2933205",
+      "https://opus.hs-furtwangen.de/frontdoor/index/index/docId/11349",
+      "https://hdl.handle.net/1871.1/4bdd74c5-a860-467d-982f-2c9cfda91832",
+      "https://openalex.org/W4405543550"
     ],
     "volume": "34"
   },
@@ -3867,15 +4295,34 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1109/tse.2025.3612199"
+      }
     },
     "id": "29b69acc-6aad-4029-b4f8-77d1117e90f3",
     "issue": "12",
+    "keywords": [
+      "Software development",
+      "Scrum",
+      "Diversification (marketing strategy)",
+      "Distribution (mathematics)",
+      "Software",
+      "Field (mathematics)",
+      "Gender gap",
+      "Agile software development"
+    ],
     "locations": [
       "Oceania IV"
     ],
     "pages": "3331-3345",
+    "pdfUrls": [
+      "https://doi.org/10.1109/tse.2025.3612199"
+    ],
     "publicationDate": "2025-12-01",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
@@ -3893,7 +4340,8 @@
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/27/Women-s-Participation-in-Student-Software-Development-Teams-A-Cross-Sectional-Study-",
       "https://www.computer.org/csdl/journal/ts/2025/12/11175036/2adNMtMmb6M",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
-      "https://doi.org/10.1109/tse.2025.3612199"
+      "https://doi.org/10.1109/tse.2025.3612199",
+      "https://openalex.org/W4414404838"
     ],
     "volume": "51"
   },
@@ -4621,25 +5069,45 @@
       "Daniel M. German",
       "Denys Poshyvanyk"
     ],
-    "container": "SSRN Electronic Journal",
+    "container": "ACM Transactions on Software Engineering and Methodology",
     "dates": [
       "Fri 17 Apr 2026 16:15 - 16:30"
     ],
-    "doi": "10.2139/ssrn.5353252",
+    "doi": "10.1145/3743133",
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2411.10877"
+      }
     },
     "id": "30f6ac86-a013-420a-a63d-044478b8a595",
     "issue": "2",
+    "keywords": [
+      "Generative grammar",
+      "Coding (social sciences)",
+      "Copyright law",
+      "Computer science",
+      "Artificial intelligence",
+      "Intellectual property",
+      "Sociology",
+      "Social science"
+    ],
     "locations": [
       "Oceania V"
     ],
     "pages": "1-39",
-    "publicationDate": "2025-01-01",
-    "publisher": "Elsevier BV",
+    "pdfUrls": [
+      "https://arxiv.org/pdf/2411.10877",
+      "https://scholarship.law.wm.edu/context/facpubs/article/3464/viewcontent/2026_heymann_35_acm_trans_softw_eng_methodol.pdf"
+    ],
+    "publicationDate": "2026-02-28",
+    "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
       "Human and Social Aspects 13"
     ],
@@ -4651,9 +5119,13 @@
       "Journal-first Papers"
     ],
     "urls": [
-      "https://doi.org/10.2139/ssrn.5353252",
+      "https://doi.org/10.1145/3743133",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/40/Developer-Perspectives-on-Licensing-and-Copyright-Issues-Arising-from-Generative-AI-f",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://arxiv.org/abs/2411.10877",
+      "https://scholarship.law.wm.edu/facpubs/2430",
+      "https://doi.org/10.48550/arxiv.2411.10877",
+      "https://openalex.org/W4404570261"
     ],
     "volume": "35"
   },
@@ -5353,15 +5825,31 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1109/tse.2025.3563121"
+      }
     },
     "id": "3804e45a-640e-4795-b7b8-0e97981721e5",
     "issue": "6",
+    "keywords": [
+      "Computer science",
+      "Genetic programming",
+      "Programming language",
+      "Software engineering",
+      "Artificial intelligence"
+    ],
     "locations": [
       "Oceania II"
     ],
     "pages": "1666-1684",
+    "pdfUrls": [
+      "https://doi.org/10.1109/tse.2025.3563121"
+    ],
     "publicationDate": "2025-06-01",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "sessionTitles": [
@@ -5379,7 +5867,9 @@
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/30/Testing-CPS-with-Design-Assumptions-Based-Metamorphic-Relations-and-Genetic-Programmi",
       "https://github.com/ManCla/mancla.github.io/blob/main/assets/pdfs/journal/2025_tse.pdf",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
-      "https://doi.org/10.1109/tse.2025.3563121"
+      "https://doi.org/10.1109/tse.2025.3563121",
+      "https://orbilu.uni.lu/handle/10993/64828",
+      "https://openalex.org/W4409771286"
     ],
     "volume": "51"
   },
@@ -5951,10 +6441,27 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "3c38aa69-55ac-4a1f-a82c-df66a596c2e0",
+    "keywords": [
+      "Computer science",
+      "Phylogenetics",
+      "Software evolution",
+      "Software engineering",
+      "Data science",
+      "Software",
+      "Software development",
+      "Biology",
+      "Programming language",
+      "Software construction"
+    ],
     "locations": [
       "Europa II"
     ],
@@ -5973,7 +6480,8 @@
     "urls": [
       "https://doi.org/10.1145/3715002",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/63/Introducing-Phylogenetics-in-Search-based-Software-Engineering-Phylogenetics-aware-S",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4406866346"
     ]
   },
   {
@@ -7733,15 +8241,32 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://hdl.handle.net/2117/447230"
+      }
     },
     "id": "4e73e65a-aa94-46d8-a7b4-23a69d40925b",
     "issue": "8",
+    "keywords": [
+      "Computer science",
+      "Sustainability",
+      "Face (sociological concept)",
+      "Software engineering",
+      "Risk analysis (engineering)",
+      "Business"
+    ],
     "locations": [
       "Oceania I"
     ],
     "pages": "1-37",
+    "pdfUrls": [
+      "https://hdl.handle.net/2117/447230"
+    ],
     "publicationDate": "2025-11-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -7757,7 +8282,9 @@
     "urls": [
       "https://doi.org/10.1145/3744900",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/69/The-Sustainability-Face-of-Automated-Program-Repair-Tools",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://hdl.handle.net/2117/447230",
+      "https://openalex.org/W4411604867"
     ],
     "volume": "34"
   },
@@ -8028,15 +8555,35 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1145/3707457"
+      }
     },
     "id": "508c7359-d344-405f-8103-85a78f90059c",
     "issue": "4",
+    "keywords": [
+      "Code smell",
+      "Computer science",
+      "Coding (social sciences)",
+      "Software",
+      "Data science",
+      "Software quality",
+      "Software engineering",
+      "Software development",
+      "Programming language"
+    ],
     "locations": [
       "Asia I"
     ],
     "pages": "1-32",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3707457"
+    ],
     "publicationDate": "2025-05-31",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -8053,7 +8600,8 @@
       "https://doi.org/10.1145/3707457",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/55/A-Catalog-of-Data-Smells-for-Coding-Tasks",
       "https://dl.acm.org/doi/full/10.1145/3707457",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4405239633"
     ],
     "volume": "34"
   },
@@ -8799,11 +9347,25 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "59ba166e-bbe8-44f5-ad42-e286d4bef055",
     "issue": "1",
+    "keywords": [
+      "Computer science",
+      "Workload",
+      "Code (set theory)",
+      "Latency (audio)",
+      "Operating system",
+      "Telecommunications",
+      "Programming language"
+    ],
     "locations": [
       "Oceania V"
     ],
@@ -8823,7 +9385,8 @@
     "urls": [
       "https://doi.org/10.1145/3736405",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/70/Improving-Code-Reviewer-Recommendation-Accuracy-Latency-Workload-and-Bystanders",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4410771641"
     ],
     "volume": "35"
   },
@@ -9613,15 +10176,32 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://hdl.handle.net/10281/591661"
+      }
     },
     "id": "63777553-c347-4924-b475-5f5b45dce001",
     "issue": "7",
+    "keywords": [
+      "Dataflow",
+      "Computer science",
+      "Feature (linguistics)",
+      "SIGNAL (programming language)",
+      "Computer architecture",
+      "Programming language"
+    ],
     "locations": [
       "Oceania II"
     ],
     "pages": "1-37",
+    "pdfUrls": [
+      "https://hdl.handle.net/10281/591661"
+    ],
     "publicationDate": "2025-09-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -9637,7 +10217,9 @@
     "urls": [
       "https://doi.org/10.1145/3714467",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/21/Signal-Feature-Coverage-and-Testing-for-CPS-Dataflow-Models",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://hdl.handle.net/10281/591661",
+      "https://openalex.org/W4406698759"
     ],
     "volume": "34"
   },
@@ -9867,11 +10449,24 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "658f0111-b56f-4da7-b334-066b6780aeae",
     "issue": "1",
+    "keywords": [
+      "Computer science",
+      "Linux kernel",
+      "Feature (linguistics)",
+      "Software engineering",
+      "Artificial intelligence",
+      "Operating system"
+    ],
     "locations": [
       "Oceania I"
     ],
@@ -9892,7 +10487,8 @@
       "https://doi.org/10.1145/3729423",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/34/How-Configurable-is-the-Linux-Kernel-Analyzing-Two-Decades-of-Feature-Model-History",
       "https://raw.githubusercontent.com/SoftVarE-Group/Papers/main/2025/2025-TOSEM-Kuiter.pdf",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4409475865"
     ],
     "volume": "35"
   },
@@ -10381,15 +10977,37 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1145/3715112"
+      }
     },
     "id": "68863813-80dc-4d14-9e5e-69f26ac295c5",
     "issue": "5",
+    "keywords": [
+      "Computer science",
+      "Software engineering",
+      "Great power",
+      "Software",
+      "Engineering ethics",
+      "Engineering",
+      "Programming language",
+      "Political science",
+      "China",
+      "Law"
+    ],
     "locations": [
       "Oceania V"
     ],
     "pages": "1-21",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3715112",
+      "https://opus.hs-furtwangen.de/files/12482/3715112.pdf"
+    ],
     "publicationDate": "2025-06-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -10405,7 +11023,9 @@
     "urls": [
       "https://doi.org/10.1145/3715112",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/72/With-Great-Power-Comes-Great-Responsibility-The-Role-of-Software-Engineers",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://nbn-resolving.org/urn:nbn:de:bsz:fn1-opus4-124822",
+      "https://openalex.org/W4406866191"
     ],
     "volume": "34"
   },
@@ -12277,15 +12897,31 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3708534"
+      }
     },
     "id": "7bf1b034-4d18-4c0b-97a8-7e37ad9b74e4",
     "issue": "6",
+    "keywords": [
+      "Computer science",
+      "One shot",
+      "Shot (pellet)",
+      "Artificial intelligence",
+      "Materials science"
+    ],
     "locations": [
       "Oceania IX"
     ],
     "pages": "1-36",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3708534"
+    ],
     "publicationDate": "2025-07-31",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -12301,7 +12937,8 @@
     "urls": [
       "https://doi.org/10.1145/3708534",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/80/MeDeT-Medical-Device-Digital-Twins-Creation-with-Few-shot-Meta-learning",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4405396699"
     ],
     "volume": "34"
   },
@@ -14670,15 +15307,29 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1145/3725529"
+      }
     },
     "id": "90b58042-89fd-4f36-b813-63a11d982519",
     "issue": "1",
+    "keywords": [
+      "Computer science",
+      "Software engineering"
+    ],
     "locations": [
       "Oceania V"
     ],
     "pages": "1-43",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3725529",
+      "https://vbn.aau.dk/ws/files/812251571/3725529.pdf"
+    ],
     "publicationDate": "2026-01-31",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -14694,7 +15345,9 @@
     "urls": [
       "https://doi.org/10.1145/3725529",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/46/Investigating-the-Role-of-Cultural-Values-in-Adopting-Large-Language-Models-for-Softw",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://vbn.aau.dk/da/publications/4b524b19-53d6-40dd-bbb3-169c6e83e6b0",
+      "https://openalex.org/W4408692857"
     ],
     "volume": "35"
   },
@@ -15159,15 +15812,36 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3707451"
+      }
     },
     "id": "95a62f32-ff40-40e5-8720-dee7c57b9d8f",
     "issue": "3",
+    "keywords": [
+      "Teamwork",
+      "Computer science",
+      "Software development",
+      "Bottleneck",
+      "Data science",
+      "Perception",
+      "Knowledge management",
+      "Software",
+      "Software engineering",
+      "Psychology"
+    ],
     "locations": [
       "Oceania V"
     ],
     "pages": "1-50",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3707451"
+    ],
     "publicationDate": "2025-03-31",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -15183,7 +15857,8 @@
     "urls": [
       "https://doi.org/10.1145/3707451",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/5/What-Could-Possibly-Go-Wrong-Undesirable-Patterns-in-Collective-Development",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4405185588"
     ],
     "volume": "34"
   },
@@ -15442,11 +16117,30 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "99c8094b-3ce2-4a79-8407-ed920ce51c96",
     "issue": "3",
+    "keywords": [
+      "Fuzz testing",
+      "Computer science",
+      "Taxonomy (biology)",
+      "Visualization",
+      "Task (project management)",
+      "Software engineering",
+      "Artificial intelligence",
+      "Software",
+      "Programming language",
+      "Systems engineering",
+      "Biology",
+      "Engineering"
+    ],
     "locations": [
       "Oceania IX"
     ],
@@ -15466,7 +16160,8 @@
     "urls": [
       "https://doi.org/10.1145/3718346",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/64/Visualization-Task-Taxonomy-to-Understand-the-Fuzzing-Internals",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4410772098"
     ],
     "volume": "35"
   },
@@ -16609,11 +17304,27 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "a263baee-1304-4d96-a8af-7d0ae32ed8f7",
     "issue": "3",
+    "keywords": [
+      "Computer science",
+      "Categorization",
+      "Natural language processing",
+      "Empirical research",
+      "Software engineering",
+      "Artificial intelligence",
+      "Programming language",
+      "Data science",
+      "Statistics"
+    ],
     "locations": [
       "Asia IV"
     ],
@@ -16633,7 +17344,8 @@
     "urls": [
       "https://doi.org/10.1145/3736408",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/18/Exploring-Fine-Grained-Bug-Report-Categorization-with-Large-Language-Models-and-Promp",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4410537964"
     ],
     "volume": "35"
   },
@@ -17108,11 +17820,23 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "a7fcbc85-913c-40c2-b331-686e5dd663fd",
     "issue": "5",
+    "keywords": [
+      "Computer science",
+      "Software",
+      "Software engineering",
+      "Artificial intelligence",
+      "Programming language"
+    ],
     "locations": [
       "Asia I"
     ],
@@ -17132,7 +17856,8 @@
     "urls": [
       "https://doi.org/10.1145/3708525",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/22/Efficient-and-Green-Large-Language-Models-for-Software-Engineering-Literature-Review",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4405640497"
     ],
     "volume": "34"
   },
@@ -18913,15 +19638,35 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1145/3712002"
+      }
     },
     "id": "b783a0f5-b0d7-4035-822f-b808db81e5c0",
     "issue": "5",
+    "keywords": [
+      "Computer science",
+      "Software engineering",
+      "Software requirements",
+      "Software",
+      "Systems engineering",
+      "Software development",
+      "Software construction",
+      "Programming language",
+      "Engineering"
+    ],
     "locations": [
       "Oceania VIII"
     ],
     "pages": "1-48",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3712002"
+    ],
     "publicationDate": "2025-06-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -18938,7 +19683,9 @@
       "https://doi.org/10.1145/3712002",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/47/Quantum-Software-Engineering-Roadmap-and-Challenges-Ahead",
       "https://dl.acm.org/doi/10.1145/3712002",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://hdl.handle.net/11568/1289367",
+      "https://openalex.org/W4406957844"
     ],
     "volume": "34"
   },
@@ -18975,6 +19722,12 @@
   },
   {
     "abstract": "Language Models (LMs) are widely used in software engineering for code generation, but they may produce code with errors. Rather than repairing the generated code, a more thorough way is to address the underlying failures of models. LM repair offers a lightweight solution to this challenge: it requires minimal data, reduces computational costs, and reduces the side effects. Unlike full retraining, LM repair focuses on applying tailored updates to targeted neurons, making it ideal for scenarios with limited resources, high-performance demands, or strict safety requirements. In this paper, we propose \\ul{S}emantic \\ul{T}argeting for \\ul{A}nalytical \\ul{R}epair (\\textsc{STAR}), a pioneering and novel semantic-based optimization approach for repairing LLMs. \\textsc{STAR} realizes the main operations of repairing LMs in an optimization process, including locating buggy neurons'', solving neuron patches'', and patching ``buggy neurons''. Correspondingly, it computes the deltas of weight matrix as the prior information to guide optimization; and attributes the targeted layers and neurons leveraging statistical insights. The neuron patches are computed with a solid semantic-based analytical formula, which directly bridges the changes to logits with the deltas of neurons, by steering latent representations. Compared to the prior work of LM repair (\\textsc{MINT}) and optimization methods (\\textsc{SGD}), \\textsc{STAR} integrates their strengths while mitigating their limitations. By implementing LM repair as an optimization-based process, \\textsc{STAR} supports solving multiple failures together, significantly improving the usefulness. Evaluated on coding tasks using popular code LMs, \\textsc{STAR} demonstrates superior effectiveness compared with the state-of-the-art. For instance, on CoNaLa, \\textsc{STAR} obtained $10.5% \\sim 19.9%$ improvements in ExactMatch score. Besides, \\textsc{STAR} exhibits better efficiency, achieving an average speedup of $2.4 \\sim 7.0$ times in solving each model failure. In terms of side effects, namely the balance between generalization and specificity, \\textsc{STAR} outperforms prior work by a significant margin. Additionally, we conducted assessments on the overfitting risk of LM repair as well as the cumulative impact. Further, we analyzed the differences with pipeline-based methods and explained the reason why \\textsc{STAR} is better and how it mitigated the common limitations of LM repair.",
+    "authorIds": [
+      "0000-0002-8102-480X",
+      "0000-0001-8513-6836",
+      "0000-0002-1505-9887",
+      "0000-0002-3666-5798"
+    ],
     "authorInstitutions": "Jian Gu (Monash University); Aldeida Aleti (Monash University); Chunyang Chen (TU Munich); Hongyu Zhang (Chongqing University)",
     "authors": [
       "Jian Gu",
@@ -18990,10 +19743,20 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "b80d6b8c-2ad5-4bcd-bbff-249ef0a16b79",
+    "keywords": [
+      "Computer science",
+      "Code (set theory)",
+      "Programming language"
+    ],
     "locations": [
       "Oceania VII"
     ],
@@ -19013,7 +19776,8 @@
     "urls": [
       "https://doi.org/10.1109/icse55347.2025.00021",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/220/A-Semantic-based-Optimization-Approach-for-Repairing-LLMs-Case-Study-on-Code-Generat",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4411552029"
     ]
   },
   {
@@ -19678,15 +20442,32 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "bronze",
+        "oa_url": "https://dl.acm.org/doi/pdf/10.1145/3721125"
+      }
     },
     "id": "bc0304d6-2272-4c5f-b352-c0e545cbf55a",
     "issue": "8",
+    "keywords": [
+      "Computer science",
+      "Code (set theory)",
+      "Software engineering",
+      "Artificial intelligence",
+      "Data science",
+      "Programming language"
+    ],
     "locations": [
       "Oceania VIII"
     ],
     "pages": "1-39",
+    "pdfUrls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3721125"
+    ],
     "publicationDate": "2025-11-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -19702,7 +20483,8 @@
     "urls": [
       "https://doi.org/10.1145/3721125",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/57/Unraveling-Code-Clone-Dynamics-in-Deep-Learning-Frameworks",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4408054024"
     ],
     "volume": "34"
   },
@@ -19837,14 +20619,37 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1145/3691620.3695494"
+      }
     },
     "id": "be353e26-edf7-4696-a967-6c696af9d2cb",
+    "keywords": [
+      "Computer science",
+      "Inference",
+      "Grammar",
+      "Black box",
+      "Context (archaeology)",
+      "Artificial intelligence",
+      "Natural language processing",
+      "Adaptive grammar",
+      "Context-free grammar",
+      "Grammar induction",
+      "Extended Affix Grammar",
+      "Rule-based machine translation"
+    ],
     "locations": [
       "Oceania I"
     ],
     "pages": "1171-1182",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3691620.3695494"
+    ],
     "publicationDate": "2024-10-27",
     "publisher": "ACM",
     "sessionTitles": [
@@ -19861,7 +20666,9 @@
       "https://doi.org/10.1145/3691620.3695494",
       "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/105/Context-Free-Grammar-Inference-for-Complex-Programming-Languages-in-Black-Box-Setting",
       "https://arxiv.org/abs/2601.12385",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://hdl.handle.net/1885/733751617",
+      "https://openalex.org/W4403536750"
     ]
   },
   {
@@ -21338,11 +22145,27 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "cacd17ac-1c5d-4f87-8cd9-57fcf3cac27e",
     "issue": "7",
+    "keywords": [
+      "Computer science",
+      "Test suite",
+      "Suite",
+      "Parallel computing",
+      "Software testing",
+      "Programming language",
+      "Distributed computing",
+      "Test case",
+      "Software"
+    ],
     "locations": [
       "Oceania II"
     ],
@@ -21364,7 +22187,8 @@
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/54/Parallelization-in-System-level-Testing-Novel-Approaches-to-Manage-Test-Suite-Depend",
       "https://matteobiagiola.github.io/assets/pdfs/parallelization-in-system-level-testing-novel-approaches-to-manage-test-suite-dependencies.pdf",
       "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
-      "https://doi.org/10.1109/tse.2025.3572388"
+      "https://doi.org/10.1109/tse.2025.3572388",
+      "https://openalex.org/W4410582132"
     ],
     "volume": "51"
   },
@@ -21559,11 +22383,24 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "ce552137-e208-4788-9b23-4c0e0c090101",
     "issue": "1",
+    "keywords": [
+      "Fuzz testing",
+      "Computer science",
+      "Generator (circuit theory)",
+      "Programming language",
+      "Software",
+      "Power (physics)"
+    ],
     "locations": [
       "Oceania IX"
     ],
@@ -21583,7 +22420,8 @@
     "urls": [
       "https://doi.org/10.1145/3742894",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/43/The-Havoc-Paradox-in-Generator-Based-Fuzzing",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4411087888"
     ],
     "volume": "35"
   },
@@ -22201,15 +23039,39 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1145/3708523"
+      }
     },
     "id": "d24be607-5adc-4512-b517-0b869b808a3f",
     "issue": "5",
+    "keywords": [
+      "Computer science",
+      "Generative grammar",
+      "Creativity",
+      "Software development",
+      "Software engineering",
+      "Software",
+      "Engineering ethics",
+      "Artificial intelligence",
+      "Psychology",
+      "Programming language",
+      "Engineering"
+    ],
     "locations": [
       "Oceania V"
     ],
     "pages": "1-28",
+    "pdfUrls": [
+      "https://doi.org/10.1145/3708523",
+      "https://eprints.soton.ac.uk/507553/1/3708523.pdf",
+      "https://vbn.aau.dk/ws/files/816051756/3708523.pdf"
+    ],
     "publicationDate": "2025-06-30",
     "publisher": "Association for Computing Machinery (ACM)",
     "sessionTitles": [
@@ -22226,7 +23088,11 @@
       "https://doi.org/10.1145/3708523",
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/38/The-Impact-of-Generative-AI-on-Creativity-in-Software-Development-A-Research-Agenda",
       "https://dl.acm.org/doi/full/10.1145/3708523",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "http://doi.org/10.1145/3708523>).",
+      "https://vbn.aau.dk/da/publications/cd2435fe-ed5a-4ca8-bb01-57ee8cf0cd4e",
+      "https://escholarship.org/uc/item/7t86q5ck",
+      "https://openalex.org/W4405570253"
     ],
     "volume": "34"
   },
@@ -22416,11 +23282,25 @@
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref"
-      ]
+        "crossref",
+        "openalex"
+      ],
+      "openAccess": {
+        "is_oa": false,
+        "oa_status": "closed"
+      }
     },
     "id": "d62608f0-aa5f-42c3-be2e-203109c8a083",
     "issue": "4",
+    "keywords": [
+      "Computer science",
+      "SQL",
+      "Programming language",
+      "Domain (mathematical analysis)",
+      "Software engineering",
+      "Database",
+      "Information retrieval"
+    ],
     "locations": [
       "Asia I"
     ],
@@ -22442,7 +23322,8 @@
       "https://conf.researchr.org/details/icse-2026/icse-2026-journal-first-papers/81/Towards-Automating-Domain-Specific-Data-Generation-for-Text-to-SQL-A-Comprehensive-A",
       "https://dl.acm.org/doi/10.1145/3746226",
       "https://dl.acm.org/doi/epdf/10.1145/3746226",
-      "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+      "https://conf.researchr.org/program/icse-2026/program-icse-2026/",
+      "https://openalex.org/W4411673827"
     ],
     "volume": "35"
   },

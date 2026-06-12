@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+from bs4 import BeautifulSoup
+
 from confer.config import VenueConfig
 from confer.fetcher import Fetcher
 from confer.models import Paper
@@ -180,6 +182,28 @@ def test_timeline_program_uses_modal_details_for_schema(tmp_path):
     assert paper.session_titles == ["Research Papers", "Session Alpha"]
     assert paper.dates == ["Mon 6 Jul 2026 10:00 - 10:15"]
     assert paper.locations == ["Room A"]
+
+
+def test_modal_people_splits_visual_institution_when_institution_field_is_empty():
+    soup = BeautifulSoup(
+        """
+        <div>
+          <a href="https://conf.researchr.org/profile/fse-2026/cuiyungao">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading">Cuiyun Gao <span class="name-visual-sep"></span>Harbin Institute of Technology, Shenzhen</h5>
+                <h5 class="media-heading"><span class="text-black"></span></h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        """,
+        "html.parser",
+    )
+
+    assert ResearchrScraper.parse_modal_people(soup) == [
+        {"name": "Cuiyun Gao", "institution": "Harbin Institute of Technology, Shenzhen"}
+    ]
 
 
 def test_overview_program_extracts_accepted_papers(tmp_path):

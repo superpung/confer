@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import re
 import sys
 from typing import Any
 from urllib.parse import urljoin, urlparse
@@ -12,7 +11,7 @@ from bs4 import BeautifulSoup
 from ..config import VenueConfig
 from ..fetcher import Fetcher
 from ..models import Paper
-from ..util import cache_name_for_url, clean_text, safe_slug, unique_preserve_order
+from ..util import cache_name_for_url, clean_text, safe_slug, split_author_names, unique_preserve_order
 from .base import Scraper
 
 
@@ -96,19 +95,51 @@ class NdssScraper(Scraper):
 def parse_ndss_byline(byline: str) -> tuple[list[str], str]:
     authors: list[str] = []
     institutions: list[str] = []
-    for part in re.split(r"\),\s*", byline):
-        text = part.strip()
-        if not text:
-            continue
-        if "(" in text and not text.endswith(")"):
-            text += ")"
-        match = re.match(r"(.+?)\s*\((.+)\)$", text)
-        if match:
-            authors.append(match.group(1).strip())
-            institutions.append(f"{match.group(1).strip()} ({match.group(2).strip()})")
+    for names_text, affiliation in iter_ndss_author_affiliations(byline):
+        names = split_author_names(names_text)
+        if affiliation:
+            for name in names:
+                authors.append(name)
+                institutions.append(f"{name} ({affiliation})")
         else:
-            authors.append(text)
+            authors.extend(names)
     return authors, "; ".join(institutions)
+
+
+def iter_ndss_author_affiliations(byline: str) -> list[tuple[str, str]]:
+    entries: list[tuple[str, str]] = []
+    index = 0
+    length = len(byline)
+    while index < length:
+        while index < length and byline[index] in " ,":
+            index += 1
+        if index >= length:
+            break
+        open_index = byline.find("(", index)
+        if open_index == -1:
+            entries.append((byline[index:].strip(" ,"), ""))
+            break
+        names_text = byline[index:open_index].strip(" ,")
+        close_index = matching_paren_index(byline, open_index)
+        if close_index == -1:
+            entries.append((byline[index:].strip(" ,"), ""))
+            break
+        affiliation = byline[open_index + 1 : close_index].strip()
+        entries.append((names_text, affiliation))
+        index = close_index + 1
+    return entries
+
+
+def matching_paren_index(value: str, open_index: int) -> int:
+    depth = 0
+    for index in range(open_index, len(value)):
+        if value[index] == "(":
+            depth += 1
+        elif value[index] == ")":
+            depth -= 1
+            if depth == 0:
+                return index
+    return -1
 
 
 def path_slug(url: str) -> str:

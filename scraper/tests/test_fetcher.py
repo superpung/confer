@@ -74,3 +74,36 @@ def test_honors_retry_after_header(tmp_path, monkeypatch):
     monkeypatch.setattr(fetcher.session, "request", fake_request)
     assert fetcher.get_text("http://x", "d.txt") == "ok"
     assert 2.0 in waits  # honored the Retry-After value
+
+
+def test_shared_cache_reuses_existing_response(tmp_path, monkeypatch):
+    shared = tmp_path / "_shared"
+    fetcher, calls = make_fetcher(
+        tmp_path / "venue-a",
+        [FakeResponse(200, "network")],
+        monkeypatch,
+    )
+    fetcher.shared_cache_dir = shared
+    (shared / "enrich" / "openalex").mkdir(parents=True)
+    (shared / "enrich" / "openalex" / "x.json").write_text("cached", encoding="utf-8")
+
+    assert fetcher.get_shared_text("http://x", "enrich/openalex/x.json") == "cached"
+    assert fetcher.has_shared_cache("enrich/openalex/x.json")
+    assert calls["n"] == 0
+
+
+def test_shared_cache_promotes_sibling_cache(tmp_path, monkeypatch):
+    root = tmp_path
+    sibling_cache = root / "venue-b" / "enrich" / "crossref"
+    sibling_cache.mkdir(parents=True)
+    (sibling_cache / "x.json").write_text("sibling", encoding="utf-8")
+    fetcher, calls = make_fetcher(
+        root / "venue-a",
+        [FakeResponse(200, "network")],
+        monkeypatch,
+    )
+    fetcher.shared_cache_dir = root / "_shared"
+
+    assert fetcher.get_shared_text("http://x", "enrich/crossref/x.json") == "sibling"
+    assert (root / "_shared" / "enrich" / "crossref" / "x.json").read_text(encoding="utf-8") == "sibling"
+    assert calls["n"] == 0

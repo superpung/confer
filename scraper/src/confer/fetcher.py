@@ -21,6 +21,7 @@ class Fetcher:
         self,
         cache_dir: Path,
         *,
+        shared_cache_dir: Path | None = None,
         refresh: bool = False,
         timeout: int = 30,
         delay: float = 0.0,
@@ -29,6 +30,7 @@ class Fetcher:
         user_agent: str = DEFAULT_USER_AGENT,
     ) -> None:
         self.cache_dir = cache_dir
+        self.shared_cache_dir = shared_cache_dir
         self.refresh = refresh
         self.timeout = timeout
         self.delay = delay
@@ -40,6 +42,21 @@ class Fetcher:
 
     def get_text(self, url: str, cache_key: str) -> str:
         return self._cached(cache_key, lambda: self._request("GET", url))
+
+    def get_shared_text(self, url: str, cache_key: str) -> str:
+        if self.shared_cache_dir is None:
+            return self.get_text(url, cache_key)
+        return self._shared_cached(cache_key, lambda: self._request("GET", url))
+
+    def has_cache(self, cache_key: str) -> bool:
+        return (self.cache_dir / cache_key).exists() and not self.refresh
+
+    def has_shared_cache(self, cache_key: str) -> bool:
+        if self.shared_cache_dir is None:
+            return self.has_cache(cache_key)
+        if self.refresh:
+            return False
+        return self._shared_cache_path(cache_key).exists() or self._find_sibling_cache(cache_key) is not None
 
     def post_text(
         self,
@@ -58,6 +75,49 @@ class Fetcher:
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_text(text, encoding="utf-8")
         return text
+
+    def _shared_cached(self, cache_key: str, produce: Any) -> str:
+        cache_path = self._shared_cache_path(cache_key)
+        if cache_path.exists() and not self.refresh:
+            return cache_path.read_text(encoding="utf-8", errors="replace")
+        if not self.refresh:
+            sibling = self._find_sibling_cache(cache_key)
+            if sibling is not None:
+                text = sibling.read_text(encoding="utf-8", errors="replace")
+                cache_path.parent.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(text, encoding="utf-8")
+                return text
+        text = produce()
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text(text, encoding="utf-8")
+        return text
+
+    def _shared_cache_path(self, cache_key: str) -> Path:
+        if self.shared_cache_dir is None:
+            return self.cache_dir / cache_key
+        return self.shared_cache_dir / self._safe_cache_key(cache_key)
+
+    def _find_sibling_cache(self, cache_key: str) -> Path | None:
+        if self.shared_cache_dir is None:
+            return None
+        relative = self._safe_cache_key(cache_key)
+        root = self.shared_cache_dir.parent
+        if not root.exists():
+            return None
+        for sibling in root.iterdir():
+            if sibling == self.shared_cache_dir or not sibling.is_dir():
+                continue
+            candidate = sibling / relative
+            if candidate.is_file():
+                return candidate
+        return None
+
+    @staticmethod
+    def _safe_cache_key(cache_key: str) -> Path:
+        path = Path(cache_key)
+        if path.is_absolute() or ".." in path.parts:
+            raise ValueError(f"unsafe cache key: {cache_key!r}")
+        return path
 
     def _request(self, method: str, url: str, **kwargs: Any) -> str:
         """Fetch with bounded retry on transient failures.

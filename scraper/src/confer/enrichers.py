@@ -9,11 +9,13 @@ from abc import ABC, abstractmethod
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from difflib import SequenceMatcher
 from typing import Any
-from urllib.parse import quote, urlencode
+from urllib.parse import quote, urlencode, urlparse
+
+import requests
 
 from .config import VenueConfig
 from .fetcher import Fetcher
-from .models import Paper, normalize_title
+from .models import Paper, clean_author_ids, clean_title
 from .util import (
     cache_name_for_url,
     clean_doi,
@@ -26,6 +28,22 @@ from .util import (
 
 DEFAULT_MAILTO = "hi@repus.me"
 TITLE_TOKEN_RE = re.compile(r"[a-z0-9]+")
+TITLE_QUERY_SYMBOLS = {
+    "α": "alpha",
+    "β": "beta",
+    "δ": "delta",
+    "ε": "epsilon",
+    "λ": "lambda",
+    "μ": "mu",
+    "π": "pi",
+    "∀": "forall",
+    "∃": "exists",
+    "∞": "infinity",
+}
+GENERIC_METADATA_TITLE_RE = re.compile(
+    r"^(?:distinguished papers|distinguished reviewers|opening|closing|welcome|break|lunch|coffee break|.*posters for day \d.*)$",
+    re.IGNORECASE,
+)
 DEFAULT_ENRICHERS = ("crossref", "openalex")
 PRIMARY_METADATA_SCRAPERS = {"aaai", "acl_anthology", "ndss", "openreview"}
 
@@ -119,8 +137,14 @@ class MetadataEnricher(ABC):
         raise NotImplementedError
 
     def get_json(self, url: str) -> dict[str, Any]:
-        text = self.fetcher.get_text(url, f"enrich/{self.name}/{cache_name_for_url(url, '.json')}")
+        text = self.fetcher.get_shared_text(url, self.cache_key_for_url(url))
         return json.loads(text)
+
+    def has_cached_json(self, url: str) -> bool:
+        return self.fetcher.has_shared_cache(self.cache_key_for_url(url))
+
+    def cache_key_for_url(self, url: str) -> str:
+        return f"enrich/{self.name}/{cache_name_for_url(url, '.json')}"
 
     def date_filter(self, *, openalex: bool = False) -> str:
         if not self.venue.year:
@@ -151,9 +175,32 @@ class CrossrefEnricher(MetadataEnricher):
         if paper.doi:
             item = self.lookup_by_doi(paper.doi)
             if item:
-                return crossref_to_metadata(item)
+                metadata = self.complete_metadata(item)
+                if self.matches_crossref_item(paper, item):
+                    return metadata
+                title_item = self.lookup_by_title(paper)
+                if title_item:
+                    title_metadata = self.complete_metadata(title_item)
+                    title_metadata["replace_doi"] = True
+                    return title_metadata
+                return metadata
         item = self.lookup_by_title(paper)
-        return crossref_to_metadata(item) if item else None
+        if not item:
+            return None
+        return self.complete_metadata(item)
+
+    def complete_metadata(self, item: dict[str, Any]) -> dict[str, Any]:
+        metadata = crossref_to_metadata(item)
+        doi = clean_doi(str(metadata.get("doi", "")))
+        if doi and needs_crossref_detail(metadata):
+            detail = self.lookup_by_doi(doi)
+            if detail:
+                metadata = merge_metadata_dicts(metadata, crossref_to_metadata(detail))
+        return metadata
+
+    def matches_crossref_item(self, paper: Paper, item: dict[str, Any]) -> bool:
+        title = first(item.get("title"))
+        return bool(title and self.matches_title(paper.title, strip_markup(title)))
 
     def lookup_by_doi(self, doi: str) -> dict[str, Any] | None:
         url = f"https://api.crossref.org/works/{quote(clean_doi(doi), safe='')}"
@@ -165,31 +212,46 @@ class CrossrefEnricher(MetadataEnricher):
         return item if isinstance(item, dict) else None
 
     def lookup_by_title(self, paper: Paper) -> dict[str, Any] | None:
-        params = {
-            "query.title": search_title(paper.title),
-            "rows": str(int(self.options.get("rows", 25))),
-            "mailto": self.mailto,
-        }
-        date_filter = self.date_filter()
-        if date_filter:
-            params["filter"] = date_filter
-        if paper.authors:
-            params["query.author"] = paper.authors[0]
-        url = f"https://api.crossref.org/works?{urlencode(params)}"
-        try:
-            payload = self.get_json(url)
-        except Exception:
+        if not should_lookup_by_title(paper):
             return None
-        items = payload.get("message", {}).get("items", [])
-        for item in items:
-            title = first(item.get("title"))
-            if title and self.matches_title(paper.title, strip_markup(title)):
-                return item
+        for query in title_query_variants(paper.title):
+            params = {
+                "query.title": query,
+                "rows": str(int(self.options.get("rows", 25))),
+                "mailto": self.mailto,
+            }
+            date_filter = self.date_filter()
+            if date_filter:
+                params["filter"] = date_filter
+            if paper.authors:
+                params["query.author"] = paper.authors[0]
+            url = f"https://api.crossref.org/works?{urlencode(params)}"
+            try:
+                payload = self.get_json(url)
+            except Exception:
+                continue
+            items = payload.get("message", {}).get("items", [])
+            matches = []
+            for item in items:
+                title = first(item.get("title"))
+                if title and self.matches_title(paper.title, strip_markup(title)):
+                    matches.append(item)
+            if matches:
+                return max(matches, key=lambda item: crossref_item_score(item, paper, self.venue))
         return None
 
 
 class OpenAlexEnricher(MetadataEnricher):
     name = "openalex"
+
+    def __init__(self, venue: VenueConfig, fetcher: Fetcher, options: dict[str, Any]) -> None:
+        super().__init__(venue, fetcher, options)
+        self.network_disabled = False
+        self.failures = 0
+        self.max_failures = max(
+            int(options.get("max_failures", venue.source.get("openalex_max_failures", 1))),
+            1,
+        )
 
     def lookup(self, paper: Paper) -> dict[str, Any] | None:
         metadata: dict[str, Any] = {}
@@ -202,41 +264,62 @@ class OpenAlexEnricher(MetadataEnricher):
             not metadata.get("abstract") and not metadata.get("pdf_urls")
         )
         if needs_title_fallback:
-            by_title = self.lookup_by_title(paper)
-            if by_title:
-                title_metadata = openalex_to_metadata(by_title)
+            title_metadata = self.lookup_by_title(paper)
+            if title_metadata:
                 metadata = merge_metadata_dicts(metadata, title_metadata)
         return metadata or None
 
     def lookup_by_doi(self, doi: str) -> dict[str, Any] | None:
         params = {"filter": f"doi:https://doi.org/{clean_doi(doi)}", "per-page": "1", "mailto": self.mailto}
         url = f"https://api.openalex.org/works?{urlencode(params)}"
-        try:
-            payload = self.get_json(url)
-        except Exception:
+        payload = self.openalex_json(url)
+        if not payload:
             return None
         results = payload.get("results", [])
         return results[0] if results else None
 
     def lookup_by_title(self, paper: Paper) -> dict[str, Any] | None:
-        filters = self.date_filter(openalex=True)
-        params = {
-            "search": search_title(paper.title),
-            "per-page": str(int(self.options.get("rows", 10))),
-            "mailto": self.mailto,
-        }
-        if filters:
-            params["filter"] = filters
-        url = f"https://api.openalex.org/works?{urlencode(params)}"
-        try:
-            payload = self.get_json(url)
-        except Exception:
+        if not should_lookup_by_title(paper):
             return None
-        for item in payload.get("results", []):
-            title = item.get("title", "")
-            if title and self.matches_title(paper.title, strip_markup(title)):
-                return item
+        filters = self.date_filter(openalex=True)
+        for query in title_query_variants(paper.title):
+            params = {
+                "search": query,
+                "per-page": str(int(self.options.get("rows", 10))),
+                "mailto": self.mailto,
+            }
+            if filters:
+                params["filter"] = filters
+            url = f"https://api.openalex.org/works?{urlencode(params)}"
+            payload = self.openalex_json(url)
+            if not payload:
+                continue
+            matches = []
+            for item in payload.get("results", []):
+                title = item.get("title", "")
+                if title and self.matches_title(paper.title, strip_markup(title)):
+                    matches.append(item)
+            if matches:
+                return merge_openalex_metadata(matches)
         return None
+
+    def openalex_json(self, url: str) -> dict[str, Any] | None:
+        if self.network_disabled and not self.has_cached_json(url):
+            return None
+        try:
+            return self.get_json(url)
+        except Exception as exc:  # noqa: BLE001 - OpenAlex is optional enrichment
+            if is_bad_openalex_query(exc):
+                print(f"[{self.venue.id}] openalex skipped bad query: {exc}", file=sys.stderr)
+                return None
+            self.failures += 1
+            if self.failures >= self.max_failures:
+                self.network_disabled = True
+                print(
+                    f"[{self.venue.id}] openalex network disabled after {self.failures} lookup failures: {exc}",
+                    file=sys.stderr,
+                )
+            return None
 
 
 #: Selected by name from a venue's ``source.enrichers``. Add an enricher =
@@ -248,10 +331,12 @@ ENRICHERS: dict[str, type[MetadataEnricher]] = {
 
 
 def merge_metadata(paper: Paper, metadata: dict[str, Any], source: str) -> None:
-    metadata_title = strip_markup(str(metadata.get("title", "")))
+    metadata_title = clean_title(str(metadata.get("title", "")))
     if should_replace_title(paper.title, metadata_title):
-        paper.title = normalize_title(metadata_title)
-    paper.doi = paper.doi or clean_doi(str(metadata.get("doi", "")))
+        paper.title = metadata_title
+    doi = clean_doi(str(metadata.get("doi", "")))
+    if doi and (not paper.doi or metadata.get("replace_doi")):
+        paper.doi = doi
     paper.abstract = meaningful_abstract(paper.abstract) or meaningful_abstract(str(metadata.get("abstract", "")))
     paper.publication_date = paper.publication_date or str(metadata.get("publication_date", ""))
     paper.publisher = paper.publisher or str(metadata.get("publisher", ""))
@@ -266,12 +351,23 @@ def merge_metadata(paper: Paper, metadata: dict[str, Any], source: str) -> None:
     if paper.doi:
         paper.urls = unique_preserve_order([f"https://doi.org/{paper.doi}"] + paper.urls)
 
+    authorships = metadata.get("authorships")
+    if authorships and not paper.authors:
+        paper.authors = [a["name"] for a in authorships if a.get("name")]
+        paper.author_ids = [a.get("id", "") for a in authorships if a.get("name")]
+        institutions = [
+            f"{a['name']} ({a['institution']})"
+            for a in authorships
+            if a.get("name") and a.get("institution")
+        ]
+        if institutions and not paper.author_institutions:
+            paper.author_institutions = "; ".join(institutions)
+
     # Stable per-author ids (ORCID / OpenAlex id) for disambiguation, aligned to
     # paper.authors. Merge per-slot so crossref + openalex can each contribute.
-    authorships = metadata.get("authorships")
     if authorships and paper.authors:
         if len(paper.author_ids) != len(paper.authors):
-            paper.author_ids = [""] * len(paper.authors)
+            paper.author_ids = clean_author_ids(paper.author_ids, len(paper.authors)) or [""] * len(paper.authors)
         for i, aid in enumerate(align_author_ids(paper.authors, authorships)):
             if aid and not paper.author_ids[i]:
                 paper.author_ids[i] = aid
@@ -294,6 +390,74 @@ def merge_metadata_dicts(primary: dict[str, Any], fallback: dict[str, Any]) -> d
         elif not merged.get(key):
             merged[key] = value
     return merged
+
+
+def needs_crossref_detail(metadata: dict[str, Any]) -> bool:
+    return not all(
+        metadata.get(key)
+        for key in ("container", "publication_date", "publisher", "pages")
+    ) or not metadata.get("authorships")
+
+
+def is_bad_openalex_query(exc: Exception) -> bool:
+    if not isinstance(exc, requests.HTTPError):
+        return False
+    status_code = exc.response.status_code if exc.response is not None else None
+    return status_code is not None and 400 <= status_code < 500 and status_code != 429
+
+
+def should_lookup_by_title(paper: Paper) -> bool:
+    title = strip_markup(paper.title)
+    normalized = re.sub(r"\s+", " ", title).strip().lower()
+    if not normalized or GENERIC_METADATA_TITLE_RE.fullmatch(normalized):
+        return False
+    if paper.authors:
+        return True
+    return len(TITLE_TOKEN_RE.findall(normalized)) >= 4
+
+
+def crossref_item_score(item: dict[str, Any], paper: Paper, venue: VenueConfig) -> float:
+    metadata = crossref_to_metadata(item)
+    title = str(metadata.get("title", ""))
+    score = title_similarity(paper.title, title) * 100
+    if normalized_title(paper.title) == normalized_title(title):
+        score += 30
+
+    authorships = metadata.get("authorships") or []
+    if paper.authors and authorships:
+        first_author_id = align_author_ids([paper.authors[0]], authorships)[0]
+        if first_author_id or normalized_person_name(paper.authors[0]) == normalized_person_name(authorships[0].get("name", "")):
+            score += 8
+    if any(author.get("id") for author in authorships):
+        score += 4
+
+    for key, weight in (
+        ("container", 5),
+        ("pages", 4),
+        ("volume", 3),
+        ("issue", 2),
+        ("publication_date", 2),
+        ("doi", 2),
+    ):
+        if metadata.get(key):
+            score += weight
+
+    publication_year = str(metadata.get("publication_date", ""))[:4]
+    if publication_year.isdigit() and venue.year:
+        year_delta = abs(int(publication_year) - int(venue.year))
+        score -= min(year_delta, 3) * 2
+
+    item_type = str(item.get("type") or "").lower()
+    container = str(metadata.get("container") or "").lower()
+    if item_type in {"posted-content", "preprint", "report"}:
+        score -= 18
+    if "ssrn" in container:
+        score -= 24
+    return score
+
+
+def normalized_person_name(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (value or "").lower()).strip()
 
 
 def crossref_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
@@ -319,7 +483,7 @@ def crossref_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
     }
     out = {key: value for key, value in metadata.items() if value}
     auths = crossref_authorships(item)
-    if any(a["id"] for a in auths):
+    if any(a["name"] or a["id"] for a in auths):
         out["authorships"] = auths
     return out
 
@@ -336,15 +500,23 @@ def crossref_publication_date(item: dict[str, Any]) -> str:
 
 def openalex_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
     primary = item.get("primary_location") or {}
+    locations = [location for location in item.get("locations", []) or [] if isinstance(location, dict)]
     source = primary.get("source") or {}
     biblio = item.get("biblio") or {}
     open_access = item.get("open_access") or {}
-    landing = clean_metadata_url(primary.get("landing_page_url") or item.get("landing_page_url"))
-    pdf = clean_metadata_url(primary.get("pdf_url") or open_access.get("oa_url"))
+    doi = clean_doi(str(item.get("doi") or (item.get("ids") or {}).get("doi") or ""))
+    landing_urls = unique_preserve_order(
+        [
+            clean_metadata_url(primary.get("landing_page_url") or item.get("landing_page_url")),
+            *[clean_metadata_url(location.get("landing_page_url")) for location in locations],
+            item.get("id", ""),
+        ]
+    )
+    pdf_urls = openalex_pdf_urls(item, primary, locations, open_access, doi)
     pages = biblio_pages(biblio)
     metadata = {
         "title": item.get("title", ""),
-        "doi": clean_doi(str(item.get("doi", ""))),
+        "doi": doi,
         "abstract": strip_markup(inverted_abstract(item.get("abstract_inverted_index") or {})),
         "publication_date": item.get("publication_date", ""),
         "publisher": source.get("host_organization_name") or "",
@@ -352,14 +524,14 @@ def openalex_to_metadata(item: dict[str, Any]) -> dict[str, Any]:
         "volume": biblio.get("volume", ""),
         "issue": biblio.get("issue", ""),
         "pages": pages,
-        "urls": unique_preserve_order([landing, item.get("id", "")]),
-        "pdf_urls": unique_preserve_order([pdf]),
+        "urls": landing_urls,
+        "pdf_urls": pdf_urls,
         "keywords": openalex_keywords(item),
         "open_access": openalex_open_access(open_access),
     }
     out = {key: value for key, value in metadata.items() if value}
     auths = openalex_authorships(item)
-    if any(a["id"] for a in auths):
+    if any(a["name"] or a["id"] for a in auths):
         out["authorships"] = auths
     return out
 
@@ -369,6 +541,44 @@ def clean_metadata_url(value: Any) -> str:
     if re.fullmatch(r"https?://(?:dx\.)?doi\.org/(?:none|null|nan|n/a|na)?/?", url, re.IGNORECASE):
         return ""
     return url
+
+
+def openalex_pdf_urls(
+    item: dict[str, Any],
+    primary: dict[str, Any],
+    locations: list[dict[str, Any]],
+    open_access: dict[str, Any],
+    doi: str,
+) -> list[str]:
+    candidates = [
+        clean_metadata_url(primary.get("pdf_url")),
+        clean_metadata_url(open_access.get("oa_url")),
+        *[clean_metadata_url(location.get("pdf_url")) for location in locations],
+        arxiv_pdf_url(doi),
+        arxiv_pdf_url(primary.get("landing_page_url")),
+        arxiv_pdf_url(open_access.get("oa_url")),
+        *[arxiv_pdf_url(location.get("landing_page_url")) for location in locations],
+        *[arxiv_pdf_url(location.get("pdf_url")) for location in locations],
+    ]
+    ids = item.get("ids") or {}
+    candidates.extend(arxiv_pdf_url(value) for value in ids.values())
+    return unique_preserve_order(candidates)
+
+
+def arxiv_pdf_url(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    doi = clean_doi(text)
+    if doi.lower().startswith("10.48550/arxiv."):
+        return f"https://arxiv.org/pdf/{doi.split('arxiv.', 1)[1]}"
+    parsed = urlparse(text)
+    if parsed.netloc.lower() not in {"arxiv.org", "www.arxiv.org"}:
+        return ""
+    parts = [part for part in parsed.path.split("/") if part]
+    if len(parts) >= 2 and parts[0] in {"abs", "pdf"}:
+        return f"https://arxiv.org/pdf/{parts[1]}"
+    return ""
 
 
 def openalex_open_access(open_access: dict[str, Any]) -> dict[str, Any]:
@@ -391,7 +601,7 @@ def crossref_authorships(item: dict[str, Any]) -> list[dict[str, str]]:
     out: list[dict[str, str]] = []
     for a in item.get("author", []) or []:
         name = " ".join(part for part in [a.get("given", ""), a.get("family", "")] if part).strip()
-        out.append({"name": name, "id": clean_orcid(str(a.get("ORCID") or ""))})
+        out.append({"name": name, "id": clean_orcid(str(a.get("ORCID") or "")), "institution": ""})
     return out
 
 
@@ -401,8 +611,43 @@ def openalex_authorships(item: dict[str, Any]) -> list[dict[str, str]]:
         au = a.get("author") or {}
         orcid = clean_orcid(str(au.get("orcid") or ""))
         oid = str(au.get("id") or "").rstrip("/").rsplit("/", 1)[-1]
-        out.append({"name": str(au.get("display_name") or ""), "id": orcid or oid})
+        institutions = [
+            str(institution.get("display_name") or "").strip()
+            for institution in a.get("institutions", []) or []
+            if institution.get("display_name")
+        ]
+        out.append(
+            {
+                "name": str(au.get("display_name") or ""),
+                "id": orcid or oid,
+                "institution": "; ".join(institutions),
+            }
+        )
     return out
+
+
+def openalex_item_score(item: dict[str, Any]) -> float:
+    primary = item.get("primary_location") or {}
+    open_access = item.get("open_access") or {}
+    locations = [location for location in item.get("locations", []) or [] if isinstance(location, dict)]
+    score = 0.0
+    if clean_doi(str(item.get("doi") or (item.get("ids") or {}).get("doi") or "")):
+        score += 12
+    if openalex_pdf_urls(item, primary, locations, open_access, ""):
+        score += 5
+    if item.get("abstract_inverted_index"):
+        score += 3
+    if (primary.get("source") or {}).get("host_organization_name"):
+        score += 1
+    score += min(sum(1 for authorship in openalex_authorships(item) if authorship.get("id")), 10) / 10
+    return score
+
+
+def merge_openalex_metadata(items: list[dict[str, Any]]) -> dict[str, Any]:
+    metadata: dict[str, Any] = {}
+    for item in sorted(items, key=openalex_item_score, reverse=True):
+        metadata = merge_metadata_dicts(metadata, openalex_to_metadata(item))
+    return metadata
 
 
 def align_author_ids(authors: list[str], authorships: list[dict[str, str]]) -> list[str]:
@@ -472,11 +717,21 @@ def first(value: Any) -> Any:
 
 
 def normalized_title(value: str) -> str:
-    return " ".join(TITLE_TOKEN_RE.findall(strip_markup(value).lower()))
+    return " ".join(TITLE_TOKEN_RE.findall(clean_title(value).lower()))
 
 
 def search_title(value: str) -> str:
-    return re.sub(r"\s*(?:\.{3}|…)\s*", " ", strip_markup(value)).strip()
+    return title_query_variants(value)[0]
+
+
+def title_query_variants(value: str) -> list[str]:
+    primary = re.sub(r"\s*(?:\.{3}|…)\s*", " ", clean_title(value)).strip()
+    ascii_math = primary
+    for symbol, replacement in TITLE_QUERY_SYMBOLS.items():
+        ascii_math = ascii_math.replace(symbol, replacement)
+    caretless = re.sub(r"\^([+\-]|\d+)", r"\1", ascii_math)
+    loose = re.sub(r"[^A-Za-z0-9]+", " ", ascii_math).strip()
+    return unique_preserve_order([primary, ascii_math, caretless, loose])
 
 
 def title_similarity(a: str, b: str) -> float:

@@ -25,7 +25,7 @@ def test_note_to_paper_maps_openreview_fields(tmp_path):
             "id": "abc123",
             "forum": "abc123",
             "content": {
-                "title": {"value": "Task Tokens"},
+                "title": {"value": r"Task Tokens for $O(n^{2})$ Models"},
                 "authors": {"value": ["Jane Doe", "John Roe"]},
                 "authorids": {"value": ["~Jane_Doe1", "~John_Roe1"]},
                 "abstract": {"value": "A precise abstract."},
@@ -40,7 +40,7 @@ def test_note_to_paper_maps_openreview_fields(tmp_path):
     )
 
     assert paper.id == "abc123"
-    assert paper.title == "Task Tokens"
+    assert paper.title == "Task Tokens for O(n^2) Models"
     assert paper.authors == ["Jane Doe", "John Roe"]
     assert paper.author_ids == ["~Jane_Doe1", "~John_Roe1"]
     assert paper.abstract == "A precise abstract."

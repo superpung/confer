@@ -2,7 +2,7 @@ from pathlib import Path
 
 from confer.config import VenueConfig
 from confer.fetcher import Fetcher
-from confer.scrapers.ndss import NdssScraper
+from confer.scrapers.ndss import NdssScraper, parse_ndss_byline
 
 
 def make_scraper(tmp_path: Path) -> NdssScraper:
@@ -45,3 +45,18 @@ def test_parse_ndss_accepted_links_and_detail(tmp_path):
     assert paper.author_institutions == "Jane Doe (Example University); John Roe (Example Labs)"
     assert paper.abstract == "A useful abstract."
     assert paper.pdf_urls == ["https://www.ndss-symposium.org/wp-content/uploads/2026-paper.pdf"]
+
+
+def test_parse_ndss_byline_handles_nested_affiliations_and_shared_institutions():
+    authors, institutions = parse_ndss_byline(
+        "Yuhan Meng (Key Laboratory of High-Confidence Software Technologies (MOE), "
+        "School of Computer Science, Peking University), "
+        "Haowei Yang, Lei Xue (Sun Yat-sen University), "
+        "Lea Gröber (International Computer Science Institute (ICSI), USA and Lahore University of Management Sciences (LUMS))"
+    )
+
+    assert authors == ["Yuhan Meng", "Haowei Yang", "Lei Xue", "Lea Gröber"]
+    assert "School of Computer Science, Peking University" in institutions
+    assert "Haowei Yang (Sun Yat-sen University)" in institutions
+    assert "Lei Xue (Sun Yat-sen University)" in institutions
+    assert "USA and Lahore University of Management Sciences (LUMS)" in institutions

@@ -20,7 +20,7 @@ PLACEHOLDER_ABSTRACTS = {
 def clean_text(node: Tag | None) -> str:
     if node is None:
         return ""
-    return re.sub(r"\s+", " ", node.get_text(" ", strip=True)).strip()
+    return strip_markup(node.get_text(" ", strip=True))
 
 
 def strip_markup(value: str) -> str:
@@ -33,8 +33,29 @@ def strip_markup(value: str) -> str:
         return ""
     text = re.sub(r"<[^>]+>", "", value)
     text = re.sub(r"</?[A-Za-z][^>\s]*(?=\s|$)", "", text)
-    text = html.unescape(text)
+    for _ in range(3):
+        decoded = html.unescape(text)
+        if decoded == text:
+            break
+        text = decoded
     return re.sub(r"\s+", " ", text).strip()
+
+
+def split_author_names(value: str) -> list[str]:
+    """Split a source-provided author string while preserving common name suffixes."""
+    text = strip_markup(value)
+    if not text:
+        return []
+    text = re.sub(r"\s+\band\b\s+", ", ", text)
+    parts = [part.strip() for part in text.split(",") if part.strip()]
+    authors: list[str] = []
+    suffixes = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
+    for part in parts:
+        if authors and part.lower().strip(".") in {suffix.strip(".") for suffix in suffixes}:
+            authors[-1] = f"{authors[-1]}, {part}"
+        else:
+            authors.append(part)
+    return authors
 
 
 def meaningful_abstract(value: str) -> str:
