@@ -54,12 +54,18 @@ const year = new Date().getFullYear();
       <div class="venue-tools">
         <input class="venue-search" type="search" placeholder="Filter venues…" data-venue-search aria-label="Filter venues" />
         <div class="venue-tool-buttons">
-          <button class="text-btn" data-select-all type="button">All</button>
-          <button class="text-btn" data-select-none type="button">None</button>
+          <button class="icon-btn" data-select-all type="button" title="Select all venues" aria-label="Select all venues">
+            <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>
+          </button>
+          <button class="icon-btn" data-select-none type="button" title="Deselect all venues" aria-label="Deselect all venues">
+            <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </button>
+          <button class="icon-btn" data-collapse-all type="button" aria-expanded="false" title="Expand all categories" aria-label="Expand all categories">
+            <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+          </button>
         </div>
       </div>
 
-      <div class="sidebar-scroll">
       <nav class="venue-nav" aria-label="Venues">
         {groups.length === 0 && <p class="venue-empty">No venues yet.</p>}
         <div class="venue-groups" id="venueGroups" hidden></div>
@@ -129,7 +135,6 @@ const year = new Date().getFullYear();
         </p>
         <p class="foot-copy">Copyright © {year} <a href="https://github.com/superpung" target="_blank" rel="noreferrer">Super Lee</a> &amp; <a href="https://claude.com/product/claude-code" target="_blank" rel="noreferrer">Claude</a></p>
       </footer>
-      </div>{/* sidebar-scroll */}
     </aside>
 
     <div class="sidebar-scrim" id="sidebarScrim"></div>

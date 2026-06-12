@@ -142,7 +142,8 @@ html.is-rail-collapsed { --col-right: 0; }
   /* Fixed width so the content never reflows when the grid track collapses. */
   width: var(--sidebar-w);
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -153,14 +154,6 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 4px; }
 .sidebar-head-actions { display: flex; align-items: center; gap: 6px; }
-/* Pinned top blocks — never shrink. */
-.sidebar-head, .sidebar-stats, .venue-tools { flex: 0 0 auto; }
-/* Scrollable body: venue tree + groups chips + footer. */
-.sidebar-scroll {
-  flex: 1; min-height: 0;
-  overflow-y: auto; overflow-x: hidden;
-  display: flex; flex-direction: column; gap: 14px;
-}
 .brand { display: inline-flex; align-items: center; gap: 8px; color: var(--text); font-family: var(--serif); font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
 .brand:hover { color: var(--text); }
 .brand-mark { width: 22px; height: 22px; flex: 0 0 auto; border-radius: 6px; }
@@ -679,6 +672,10 @@ html.is-rail-collapsed { --col-right: 0; }
 .pop-row input { width: auto; min-height: 0; accent-color: var(--accent); pointer-events: none; }
 .pop-row-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
 .pop-row-n { color: var(--faint); font-size: 11px; font-weight: 600; }
+.pop-row--danger { color: var(--danger-text, #c03a2b); }
+.pop-row--danger .pop-row-label { color: inherit; }
+.pop-row--danger .ic { color: inherit; }
+.pop-row--danger:hover { background: rgba(192, 58, 43, 0.08); }
 .pop-empty { margin: 0; padding: 4px 8px 8px; color: var(--muted); font-size: 13px; }
 /* Search/filter input inside a popmenu (tag combobox) */
 .pop-search {

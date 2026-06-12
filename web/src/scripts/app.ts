@@ -13,6 +13,7 @@ const K_COLLECTIONS = 'confer.collections';  // Collection[] (paper collections)
 const K_TAGS = 'confer.paperTags';           // Record<paperKey, string[]>
 const K_NOTES = 'confer.paperNotes';         // Record<paperKey, string> — private notes
 const K_STATUS = 'confer.readStatus';        // Record<paperKey, 'reading'|'done'> — omit 'unread'
+const K_SORT = 'confer.sort';               // last-used sort — local only, never synced
 const K_ACCENT = 'confer.accent';            // accent color key (e.g. "sage")
 const K_GH_TOKEN = 'confer.ghToken';         // GitHub gist-scoped access token
 const K_GH_REFRESH = 'confer.ghRefresh';     // GitHub refresh token (when expiry is enabled)
@@ -330,12 +331,13 @@ function readUrl() {
   const v = q.get('v');
   if (v) v.split(',').filter(Boolean).forEach((id) => state.selected.add(id));
   state.query = q.get('q') ?? '';
-  state.sort = q.get('sort') ?? 'venue';
+  state.sort = q.get('sort') ?? localStorage.getItem(K_SORT) ?? 'venue';
   state.collection = q.get('col') ?? '';
   (q.get('track') ?? '').split(',').filter(Boolean).forEach((t) => state.tracks.add(t));
   (q.get('event') ?? '').split(',').filter(Boolean).forEach((e) => state.events.add(e));
   (q.get('tags') ?? '').split(',').filter(Boolean).forEach((t) => state.tagFilter.add(t));
   state.statusFilter = q.get('status') ?? '';
+  (q.get('vf') ?? '').split(',').filter(Boolean).forEach((id) => state.venuesFacet.add(id));
   return !!v || q.has('q') || q.has('track');
 }
 function writeUrl() {
@@ -349,6 +351,7 @@ function writeUrl() {
   if (state.events.size) q.set('event', [...state.events].join(','));
   if (state.tagFilter.size) q.set('tags', [...state.tagFilter].join(','));
   if (state.statusFilter) q.set('status', state.statusFilter);
+  if (state.venuesFacet.size) q.set('vf', [...state.venuesFacet].join(','));
   const qs = q.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
   writeJson(K_SELECTED, [...state.selected]);
@@ -528,7 +531,7 @@ function cardHtml(p: Paper, v: string): string {
   return `<article class="paper-card${sel ? ' is-selected' : ''}" data-key="${esc(k)}">
     <span class="card-select"><input type="checkbox" data-sel ${sel ? 'checked' : ''} aria-label="Select"></span>
     <div class="card-head">
-      <button class="venue-badge" data-venue-badge title="Filter to ${esc(venue.name)}">${esc(venue.name)}</button>
+      <button class="venue-badge" data-venue-badge title="Filter results to ${esc(venue.name)} (click to toggle; use Filters panel to remove)">${esc(venue.name)}</button>
       <span class="paper-id">${esc(p.id)}</span>
     </div>
     ${titleHtml}
@@ -565,7 +568,7 @@ function renderFacets(base: { p: Paper; v: string }[]) {
       <div class="facet-collapse"><div class="facet-options">${rows}</div></div>
     </div>`;
   };
-  const venueGroup = state.selected.size > 1
+  const venueGroup = (state.selected.size > 1 || state.venuesFacet.size > 0)
     ? group('Venue', venueCount, state.venuesFacet, 'venue', (id) => venueById.get(id)?.name ?? id) : '';
   els.facets.innerHTML =
     group('Track', trackCount, state.tracks, 'track', (x) => x) +
@@ -1225,7 +1228,7 @@ function openAccountMenu(anchor: HTMLElement) {
     const gistRow = gistId
       ? `<div class="pop-row" data-account-gist role="button">${ICONS.extLink}<span class="pop-row-label">View Gist</span></div>`
       : '';
-    return `${gistRow}<div class="pop-row" data-account-signout role="button">${ICONS.signout}<span class="pop-row-label">Sign out</span></div>`;
+    return `${gistRow}<div class="pop-row pop-row--danger" data-account-signout role="button">${ICONS.signout}<span class="pop-row-label">Sign out</span></div>`;
   };
   openPop(anchor, render, (t) => {
     if (t.closest('[data-account-gist]')) {
@@ -2770,6 +2773,27 @@ function wire() {
   });
   $('[data-select-all]').addEventListener('click', () => { manifest.forEach((v) => state.selected.add(v.id)); state.shown = PAGE; reflectSidebar(); writeUrl(); ensureLoaded([...state.selected]).then(render); });
   $('[data-select-none]').addEventListener('click', () => { state.selected.clear(); reflectSidebar(); writeUrl(); rebuildRows(); render(); });
+  $('[data-collapse-all]').addEventListener('click', () => {
+    const btn = $<HTMLButtonElement>('[data-collapse-all]');
+    // If any cat or series is currently expanded, collapse all; otherwise expand all.
+    const anyExpanded = !!document.querySelector('.venue-cat:not(.is-collapsed), .venue-series:not(.is-collapsed)');
+    document.querySelectorAll<HTMLElement>('.venue-cat').forEach((el) => {
+      el.classList.toggle('is-collapsed', anyExpanded);
+      el.querySelector('[data-cat-toggle]')?.setAttribute('aria-expanded', String(!anyExpanded));
+    });
+    document.querySelectorAll<HTMLElement>('.venue-series').forEach((el) => {
+      el.classList.toggle('is-collapsed', anyExpanded);
+      el.querySelector('[data-series-toggle]')?.setAttribute('aria-expanded', String(!anyExpanded));
+    });
+    // Flip button state: aria-expanded = whether things are now expanded
+    btn.setAttribute('aria-expanded', String(!anyExpanded));
+    btn.title = anyExpanded ? 'Expand all categories' : 'Collapse all categories';
+    btn.setAttribute('aria-label', btn.title);
+    // Swap icon: chevrons-down-up (collapse) vs chevrons-up-down (expand)
+    btn.querySelector('svg')!.innerHTML = anyExpanded
+      ? '<polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/>'  // expand (chevrons pointing out)
+      : '<polyline points="7 11 12 6 17 11"/><polyline points="7 18 12 13 17 18"/>'; // collapse (chevrons pointing in)
+  });
 
   // search
   let t = 0;
@@ -2782,7 +2806,7 @@ function wire() {
   $('#sortSelect').addEventListener('click', (e) => {
     const opt = (e.target as HTMLElement).closest<HTMLElement>('[data-sort-val]');
     const btn = (e.target as HTMLElement).closest<HTMLElement>('.caret-select-btn');
-    if (opt) { state.sort = opt.dataset.sortVal ?? 'venue'; closeAllCarets(); reflectSort(); writeUrl(); render(); return; }
+    if (opt) { state.sort = opt.dataset.sortVal ?? 'venue'; try { localStorage.setItem(K_SORT, state.sort); } catch { /* ignore */ } closeAllCarets(); reflectSort(); writeUrl(); render(); return; }
     if (btn) toggleCaret(btn);
   });
   // Collection filter caret-select
