@@ -55,8 +55,14 @@ Entries are user-facing; implementation details belong in commit messages.
 ### Added
 - "For you" and "Find similar" panel rows are now actionable: select papers with
   per-row checkboxes (plus select-all / select-none), then bulk-add all checked
-  papers to a collection; each row also has inline reading-status, note, and
-  collection buttons, vertically centred in the row.
+  papers to a collection; each row also has inline reading-status, note,
+  collection, and tag buttons, vertically centred in the row.
+- Search bar field-aware mode: recognised field prefixes (`author:`, `title:`,
+  `inst:`, etc.) are highlighted in accent colour; typing a partial field name
+  (e.g. `au`) shows a dim ghost completion, and **Tab** inserts it; a full-width
+  colon `：` and trailing spaces after the colon are auto-normalised to `field:`
+  (Chinese IME protected); search debounce is longer while a field name is being
+  typed to reduce mid-keystroke queries.
 
 ### Changed
 - Card status and note reveal buttons now fade in on hover (opacity only, **no

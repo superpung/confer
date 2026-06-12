@@ -323,14 +323,31 @@ html.is-rail-collapsed { --col-right: 0; }
 }
 .search-wrap { position: relative; flex: 1; display: flex; align-items: center; }
 .search-icon { position: absolute; left: 13px; font-size: 13px; opacity: 0.6; pointer-events: none; }
+/* Field-highlight overlay — absolutely positioned, mirrors the input's content area.
+   The input's text is transparent; colour comes from the backdrop. */
+.search-hl {
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+  padding: 10px 70px 10px 36px; box-sizing: border-box;
+  font: inherit; font-size: 15px; line-height: 1.4;
+  white-space: pre; overflow: hidden;
+  pointer-events: none; color: var(--text);
+  border: 1px solid transparent; border-radius: 10px;
+}
+.hl-field { color: var(--accent); font-weight: 600; }
+.hl-ghost { color: var(--faint); }
+
 .global-search {
+  position: relative;
   width: 100%; min-height: 42px;
   border: 1px solid var(--line-strong); border-radius: 10px;
-  background: var(--panel); color: var(--text);
+  background: var(--panel);
+  /* Text is transparent so the .search-hl overlay shows through */
+  color: transparent; -webkit-text-fill-color: transparent;
+  caret-color: var(--text);
   font: inherit; font-size: 15px; padding: 10px 70px 10px 36px; outline: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.global-search::placeholder { color: var(--faint); }
+.global-search::placeholder { color: var(--faint); -webkit-text-fill-color: var(--faint); }
 .global-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.14); }
 /* Suppress the browser's native search clear "×" — we render our own. */
 .global-search::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
@@ -929,11 +946,15 @@ html.is-rail-collapsed { --col-right: 0; }
 .mini-card-actions .status-btn.status-btn--toread,
 .mini-card-actions .status-btn.status-btn--reading,
 .mini-card-actions .status-btn.status-btn--done { opacity: 1; }
-/* Note button hidden until hover or noted */
-.mini-card-actions .note-btn { opacity: 0; pointer-events: none; transition: opacity .15s ease, color .15s; }
+/* Note + tag buttons hidden until hover or active */
+.mini-card-actions .note-btn,
+.mini-card-actions .tag-btn { opacity: 0; pointer-events: none; transition: opacity .15s ease, color .15s; }
 .mini-card:hover .mini-card-actions .note-btn,
-.mini-card-actions .note-btn.is-on { opacity: 1; pointer-events: auto; }
+.mini-card:hover .mini-card-actions .tag-btn,
+.mini-card-actions .note-btn.is-on,
+.mini-card-actions .tag-btn.is-on { opacity: 1; pointer-events: auto; }
 .mini-card-actions .note-btn.is-on { color: var(--accent); }
+.mini-card-actions .tag-btn.is-on { color: var(--accent); }
 
 /* Bulk selection toolbar */
 .rec-bulk { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
@@ -1132,6 +1153,7 @@ html.is-rail-collapsed { --col-right: 0; }
   /* kbd hint is hidden here, so reclaim its reserved padding and let search shrink. */
   .search-wrap { min-width: 0; }
   .global-search { padding-right: 38px; min-height: 40px; font-size: 14px; }
+  .search-hl { padding-right: 38px; font-size: 14px; }
 
   /* Denser paper cards: trim padding, shrink type, drop secondary meta so
      several papers are visible per screen instead of one or two. */

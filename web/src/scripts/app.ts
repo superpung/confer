@@ -90,6 +90,8 @@ const ICONS = {
   similar: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg>',
   // "for you" / sparkle icon for the toolbar recommendation button
   sparkle: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.2 7.3L21.5 12l-7.3 2.2L12 21.5l-2.2-7.3L2.5 12l7.3-2.2z"/></svg>',
+  // tag / label icon
+  tag: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -232,6 +234,107 @@ function parseQuery(q: string): Term[] {
   }
   return terms;
 }
+// --- field-search smart input helpers -----------------------------------
+/** Module-level ref assigned during init so render() can call it before the search handler is set up. */
+let renderSearchHL: (() => void) | null = null;
+
+/** Canonical field names shown in autocomplete (order = priority). */
+const SUGGEST_FIELDS = [
+  'author', 'title', 'inst', 'abstract', 'track', 'venue', 'event',
+  'session', 'keyword', 'doi', 'container', 'publisher', 'year', 'id', 'tag',
+];
+const SUGGEST_FIELD_SET = new Set(SUGGEST_FIELDS);
+
+/** Return the whitespace-delimited token that ends at `caret`. */
+function activeToken(value: string, caret: number): string {
+  const before = value.slice(0, caret);
+  const m = before.match(/\S+$/);
+  return m ? m[0] : '';
+}
+
+/**
+ * If `token` is a prefix of exactly one canonical field (or equals one),
+ * return the completion string (the part to append, including the colon).
+ * Returns null when not a field prefix or token already has a colon.
+ */
+function fieldSuggestion(token: string): string | null {
+  if (!token || token.includes(':') || token.includes('：')) return null;
+  const lower = token.replace(/^-/, '').toLowerCase();
+  if (!lower) return null;
+  const matches = SUGGEST_FIELDS.filter((f) => f.startsWith(lower));
+  if (!matches.length) return null;
+  // Only suggest when exactly one match to avoid ambiguity
+  if (matches.length === 1) {
+    const field = matches[0];
+    return field === lower ? ':' : field.slice(lower.length) + ':';
+  }
+  // Multiple matches: suggest only if every match shares the same prefix up to the token length
+  // (i.e. no ambiguity yet)  — just return null and wait for more input
+  return null;
+}
+
+/** Returns true when the query contains at least one completed recognised field: token. */
+function queryHasFieldToken(value: string): boolean {
+  const re = /(?:^|\s)-?(\w+)[:：]/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(value))) {
+    if (SUGGEST_FIELD_SET.has(m[1].toLowerCase())) return true;
+  }
+  return false;
+}
+
+/**
+ * Normalise field prefixes in `value`:
+ *  - full-width `：` → `:` (only for recognised fields)
+ *  - strip spaces/tabs immediately after the colon (only for recognised fields)
+ * Non-field tokens are left untouched. Returns the normalised string.
+ */
+function normalizeFieldTokens(value: string): string {
+  return value.replace(/((?:^|\s)(-?)(\w+))([:：])([ \t]*)/g, (_, pre, neg, word, colon, sp) => {
+    if (!FIELD_ALIASES[word.toLowerCase()]) return pre + colon + sp; // not a field, leave intact
+    return pre + ':'; // half-width colon, drop trailing space
+  });
+}
+
+/** Escape HTML for inserting into innerHTML (used only in the search-highlight overlay). */
+function escHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/**
+ * Build the highlighted HTML for the search-hl overlay.
+ * Wraps `word:` in .hl-field when word is a recognised field;
+ * appends a .hl-ghost span with the autocomplete suffix when suggestion is active.
+ */
+function buildSearchHlHtml(value: string, suggestion: string | null, caretPos: number): string {
+  // Match field-prefix tokens at start-of-string or after whitespace
+  // Pattern: (optional leading whitespace + optional neg)(word)(colon)
+  // We scan char-by-char using a simple regex without lookbehind for compatibility.
+  let result = '';
+  const re = /(^|\s)(-?)(\w+)([:：])/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(value))) {
+    const word = m[3];
+    const isField = !!FIELD_ALIASES[word.toLowerCase()];
+    // Everything before this match
+    if (m.index > last) result += escHtml(value.slice(last, m.index));
+    if (isField) {
+      // leading whitespace + neg as plain, field + colon coloured
+      result += escHtml(m[1] + m[2]) + `<span class="hl-field">${escHtml(m[3] + m[4])}</span>`;
+    } else {
+      result += escHtml(m[1] + m[2] + m[3] + m[4]);
+    }
+    last = m.index + m[0].length;
+  }
+  if (last < value.length) result += escHtml(value.slice(last));
+  // Append ghost suggestion if active and caret is at the end of the value
+  if (suggestion && caretPos === value.length) {
+    result += `<span class="hl-ghost">${escHtml(suggestion)}</span>`;
+  }
+  return result;
+}
+
 function fieldText(p: Paper, field: string): string {
   switch (field) {
     case 'title': return p.title.toLowerCase();
@@ -709,10 +812,12 @@ function miniCardHtml(p: Paper, v: string): string {
   const authorBtns = p.authors.slice(0, 5).map((a) =>
     `<button class="mini-author" data-mini-author="${esc(a)}" type="button">${esc(a)}</button>`
   ).join(', ') + (p.authors.length > 5 ? ` +${p.authors.length - 5}` : '');
+  const tagged = tagsOf(k).length > 0;
   const actions = `<div class="mini-card-actions">
     <button class="icon-btn status-btn status-btn--${status}" data-mini-status="${esc(k)}" type="button" title="${STATUS_TITLE[status]}" aria-label="${STATUS_TITLE[status]}">${STATUS_ICONS[status]}</button>
     <button class="icon-btn note-btn${note ? ' is-on' : ''}" data-mini-note="${esc(k)}" type="button" title="${note ? 'Edit note' : 'Add a note'}" aria-label="Note">${ICONS.pencil}</button>
     <button class="icon-btn collect-btn${collected ? ' is-on' : ''}" data-mini-collect="${esc(k)}" data-pop-anchor type="button" title="${collected ? 'In a collection — edit' : 'Add to collection'}" aria-label="Collection">${collected ? ICONS.bookmarkFilled : ICONS.bookmark}</button>
+    <button class="icon-btn tag-btn${tagged ? ' is-on' : ''}" data-mini-tag="${esc(k)}" type="button" title="${tagged ? 'Edit tags' : 'Add a tag'}" aria-label="Tags">${ICONS.tag}</button>
   </div>`;
   return `<div class="mini-card${statusCls}" data-mini-key="${esc(k)}">
     <input class="mini-card-sel" type="checkbox" data-mini-sel="${esc(k)}" ${checked ? 'checked' : ''} aria-label="Select">
@@ -884,7 +989,10 @@ function render() {
   if (state.collection && !collectionById(state.collection)) state.collection = '';
   state.colSet = state.collection ? new Set(collectionById(state.collection)!.keys) : null;
   // reflect simple controls (don't overwrite search while user is typing)
-  if (els.search !== document.activeElement) els.search.value = state.query;
+  if (els.search !== document.activeElement) {
+    els.search.value = state.query;
+    renderSearchHL?.();
+  }
   els.searchClear.hidden = !state.query.trim();
   reflectSort();
   reflectCollectionFilter();
@@ -2920,13 +3028,79 @@ function wire() {
       : '<polyline points="7 11 12 6 17 11"/><polyline points="7 18 12 13 17 18"/>'; // collapse (chevrons pointing in)
   });
 
-  // search
+  // search — with field-aware highlight overlay, autocomplete, and debounce tuning
+  const searchHlEl = document.querySelector<HTMLElement>('.search-hl');
+  let searchSuggestion: string | null = null;  // active autocomplete suffix
+  let isComposing = false;
   let t = 0;
-  els.search.addEventListener('input', () => {
+
+  renderSearchHL = function () {
+    if (!searchHlEl) return;
+    const val = els.search.value;
+    const caret = els.search.selectionStart ?? val.length;
+    const token = activeToken(val, caret);
+    searchSuggestion = fieldSuggestion(token);
+    searchHlEl.innerHTML = buildSearchHlHtml(val, searchSuggestion, caret);
+    // Keep horizontal scroll in sync
+    searchHlEl.scrollLeft = els.search.scrollLeft;
+  };
+
+  function commitSearchQuery() {
+    state.query = els.search.value;
+    state.shown = PAGE;
+    writeUrl();
+    render();
+  }
+
+  function onSearchInput() {
+    if (!isComposing) {
+      // Normalise field prefixes (full-width colon, trailing spaces)
+      const before = els.search.value;
+      const caret = els.search.selectionStart ?? before.length;
+      const after = normalizeFieldTokens(before);
+      if (after !== before) {
+        // Preserve caret: count how far the normalisation moved the prefix
+        const newCaret = normalizeFieldTokens(before.slice(0, caret)).length;
+        els.search.value = after;
+        els.search.setSelectionRange(newCaret, newCaret);
+      }
+    }
+    renderSearchHL();
     clearTimeout(t);
-    t = window.setTimeout(() => { state.query = els.search.value; state.shown = PAGE; writeUrl(); render(); }, 130);
+    // Adaptive debounce: slower while actively typing a field name (suggestion active),
+    // medium when a completed field: token is present, fast otherwise.
+    const delay = searchSuggestion ? 450 : queryHasFieldToken(els.search.value) ? 350 : 130;
+    t = window.setTimeout(commitSearchQuery, delay);
+  }
+
+  els.search.addEventListener('compositionstart', () => { isComposing = true; });
+  els.search.addEventListener('compositionend', () => { isComposing = false; onSearchInput(); });
+  els.search.addEventListener('input', onSearchInput);
+  // Keep overlay scroll in sync when the user scrolls a long query
+  els.search.addEventListener('scroll', () => { if (searchHlEl) searchHlEl.scrollLeft = els.search.scrollLeft; });
+  // Tab key: complete active field suggestion
+  els.search.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab' && searchSuggestion) {
+      e.preventDefault();
+      const val = els.search.value;
+      const caret = els.search.selectionStart ?? val.length;
+      const token = activeToken(val, caret);
+      // Replace the token with the full field + colon
+      const before = val.slice(0, caret - token.length);
+      const after = val.slice(caret);
+      const neg = token.startsWith('-') ? '-' : '';
+      const rawToken = token.replace(/^-/, '');
+      const fullField = neg + rawToken + searchSuggestion;  // e.g. "author:"
+      const newVal = before + fullField + after;
+      const newCaret = before.length + fullField.length;
+      els.search.value = newVal;
+      els.search.setSelectionRange(newCaret, newCaret);
+      onSearchInput();
+    }
   });
-  els.searchClear.addEventListener('click', () => { state.query = ''; els.search.value = ''; writeUrl(); render(); els.search.focus(); });
+  els.searchClear.addEventListener('click', () => {
+    state.query = ''; els.search.value = ''; renderSearchHL(); writeUrl(); render(); els.search.focus();
+  });
   // Sort caret-select
   $('#sortSelect').addEventListener('click', (e) => {
     const opt = (e.target as HTMLElement).closest<HTMLElement>('[data-sort-val]');
@@ -3270,6 +3444,22 @@ function wire() {
         return;
       }
 
+      // --- Per-row action: tag ---
+      const miniTag = t.closest<HTMLElement>('[data-mini-tag]');
+      if (miniTag) {
+        const k = miniTag.dataset.miniTag!;
+        openTagPop(miniTag, k);
+        // Reflect tag state after pop closes
+        const refreshTag = () => {
+          const on = tagsOf(k).length > 0;
+          miniTag.classList.toggle('is-on', on);
+          miniTag.title = on ? 'Edit tags' : 'Add a tag';
+        };
+        const obs3 = new MutationObserver((_, o) => { refreshTag(); o.disconnect(); });
+        obs3.observe(popEl, { attributes: true, attributeFilter: ['hidden'] });
+        return;
+      }
+
       // --- Checkbox selection ---
       const miniSel = t.closest<HTMLInputElement>('[data-mini-sel]');
       if (miniSel) {
@@ -3519,7 +3709,7 @@ function wire() {
       if (document.querySelector('.caret-select-btn[aria-expanded="true"]')) { closeAllCarets(); return; }
       if (!popEl.hidden) { closePop(); return; }
       if (document.activeElement === els.search) {
-        if (state.query) { state.query = ''; els.search.value = ''; writeUrl(); render(); }
+        if (state.query) { state.query = ''; els.search.value = ''; renderSearchHL?.(); writeUrl(); render(); }
         els.search.blur();
       } else { closeModals(); $('#app').classList.remove('sidebar-open', 'rail-open'); }
       return;
