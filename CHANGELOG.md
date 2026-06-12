@@ -64,9 +64,26 @@ Entries are user-facing; implementation details belong in commit messages.
   (Chinese IME protected); search debounce is longer while a field name is being
   typed to reduce mid-keystroke queries.
 
+### Fixed
+- Global search text was invisible after Segment 4's field-highlight overlay was
+  added (opaque input painted over the overlay; fixed by moving the border/bg to
+  the wrapper so the overlay stays visible below the transparent input).
+
 ### Changed
 - Card status and note reveal buttons now fade in on hover (opacity only, **no
   zoom/scale effect**); hover still animates the button colour as before.
+- "For you" / "Find similar" row action buttons (status, note, collect, tag) are
+  now always visible rather than hidden until hover — better discoverability and
+  touch friendliness.
+- Tag button active state (paper has tags) now matches the collection button:
+  bordered accent box with accent-soft background.
+- Collect (bookmark) icon slightly smaller for visual balance.
+- All popovers (tags, collections, groups, filter-by-tag, filter-by-status, add
+  series) now keep their title/search pinned while the option rows scroll, matching
+  the established pattern in GitHub Labels / Linear / Notion.
+- Fixed/scroll seams across modal bodies, popover lists, and sidebar facet lists
+  now fade softly (~10 px gradient mask) so scrolling rows don't clip hard against
+  a pinned title or search input.
 - Card expand/collapse animation shortened to 0.2 s and card layout is now
   contained (`contain: layout`) to avoid reflow of sibling cards, reducing
   perceived lag on long lists.

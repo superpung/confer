@@ -321,10 +321,19 @@ html.is-rail-collapsed { --col-right: 0; }
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.search-wrap { position: relative; flex: 1; display: flex; align-items: center; }
-.search-icon { position: absolute; left: 13px; font-size: 13px; opacity: 0.6; pointer-events: none; }
+/* The search wrapper carries the border/bg so the transparent input + .search-hl
+   overlay paint correctly: wrapper bg → search-icon → overlay (coloured text) →
+   input (transparent bg + caret). */
+.search-wrap {
+  position: relative; flex: 1; display: flex; align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line-strong); border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.search-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.14); }
+.search-icon { position: absolute; left: 13px; font-size: 13px; opacity: 0.6; pointer-events: none; z-index: 1; }
 /* Field-highlight overlay — absolutely positioned, mirrors the input's content area.
-   The input's text is transparent; colour comes from the backdrop. */
+   The input's text is transparent; colour comes from this backdrop. */
 .search-hl {
   position: absolute; left: 0; right: 0; top: 0; bottom: 0;
   padding: 10px 70px 10px 36px; box-sizing: border-box;
@@ -332,30 +341,30 @@ html.is-rail-collapsed { --col-right: 0; }
   white-space: pre; overflow: hidden;
   pointer-events: none; color: var(--text);
   border: 1px solid transparent; border-radius: 10px;
+  z-index: 1;
 }
 .hl-field { color: var(--accent); font-weight: 600; }
 .hl-ghost { color: var(--faint); }
 
 .global-search {
-  position: relative;
+  position: relative; z-index: 2;
   width: 100%; min-height: 42px;
-  border: 1px solid var(--line-strong); border-radius: 10px;
-  background: var(--panel);
+  /* Border + bg now live on .search-wrap so the overlay stays visible */
+  border: 1px solid transparent; border-radius: 10px;
+  background: transparent;
   /* Text is transparent so the .search-hl overlay shows through */
   color: transparent; -webkit-text-fill-color: transparent;
   caret-color: var(--text);
   font: inherit; font-size: 15px; padding: 10px 70px 10px 36px; outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .global-search::placeholder { color: var(--faint); -webkit-text-fill-color: var(--faint); }
-.global-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.14); }
 /* Suppress the browser's native search clear "×" — we render our own. */
 .global-search::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
-.search-kbd { position: absolute; right: 12px; }
+.search-kbd { position: absolute; right: 12px; z-index: 3; }
 /* Once there's text, the clear button takes the slot; hide the ⌘K hint. */
 .global-search:not(:placeholder-shown) ~ .search-kbd { display: none; }
 .search-clear {
-  position: absolute; right: 10px; width: 24px; height: 24px;
+  position: absolute; right: 10px; z-index: 3; width: 24px; height: 24px;
   display: grid; place-items: center;
   border: none; border-radius: 6px; background: var(--panel-hover);
   color: var(--muted); line-height: 1; cursor: pointer; padding: 0;
@@ -461,7 +470,13 @@ html.is-rail-collapsed { --col-right: 0; }
 .facet-group-count { color: var(--faint); font-weight: 600; }
 .facet-collapse { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.22s ease; }
 .facet-group.is-collapsed .facet-collapse { grid-template-rows: 0fr; }
-.facet-options { display: flex; flex-direction: column; gap: 3px; min-height: 0; max-height: 220px; overflow-y: auto; overscroll-behavior: contain; }
+/* Soften the seam between a fixed header/search and the scrolling option list. */
+.facet-options {
+  display: flex; flex-direction: column; gap: 3px; min-height: 0; max-height: 220px;
+  overflow-y: auto; overscroll-behavior: contain;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+}
 .facet-option { display: flex; align-items: center; gap: 8px; padding: 3px 4px; border-radius: 6px; cursor: pointer; font-size: 13px; }
 .facet-option:hover { background: var(--panel-hover); }
 .facet-option input { width: auto; min-height: 0; accent-color: var(--accent); }
@@ -524,6 +539,7 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Collect button */
 .collect-btn:hover { border-color: var(--accent); color: var(--accent); }
 .collect-btn.is-on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.collect-btn .ic { width: 16px; height: 16px; }
 /* Status cycle button — unread is subtle; toread/reading/done are colored and always visible. */
 .card-actions .status-btn {
   opacity: 0.3;
@@ -695,6 +711,12 @@ html.is-rail-collapsed { --col-right: 0; }
   border: 1px solid var(--line-strong); border-radius: 11px;
   background: var(--panel); box-shadow: var(--shadow); padding: 6px;
 }
+/* Scrollable option rows inside a pop — title/search/action stay pinned above/below */
+.pop-list {
+  max-height: 200px; overflow-y: auto; overscroll-behavior: contain;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+}
 .popmenu[hidden] { display: none; }
 /* Entrance animation: the menu fades/scales in from its top edge. */
 @keyframes pop-in { from { opacity: 0; transform: translateY(-6px) scale(0.97); } to { opacity: 1; transform: none; } }
@@ -729,7 +751,11 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Settings modal ------------------------------------------------------- */
 .modal-card--tall { width: min(560px, 100%); max-height: 86vh; display: flex; flex-direction: column; }
 .modal-card--tall .modal-hint { margin-top: -4px; }
-.settings-body { overflow-y: auto; overscroll-behavior: contain; margin: 8px -4px 0; padding: 0 4px; }
+.settings-body {
+  overflow-y: auto; overscroll-behavior: contain; margin: 8px -4px 0; padding: 0 4px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+}
 .set-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .set-section { margin-bottom: 18px; }
 /* Section labels reuse the app-wide "quiet uppercase" treatment shared by the
@@ -907,7 +933,11 @@ html.is-rail-collapsed { --col-right: 0; }
 .chip-btn.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
 
 /* Similar-papers modal (shared by "Find similar" and "For you" recommendations) */
-.entity-body { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; padding: 0 2px; }
+.entity-body {
+  flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; padding: 0 2px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 10px, #000 calc(100% - 10px), transparent 100%);
+}
 /* Compact paper rows inside similar-papers / recommend modal */
 .mini-card-list { display: flex; flex-direction: column; gap: 8px; }
 .mini-card { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
@@ -940,21 +970,11 @@ html.is-rail-collapsed { --col-right: 0; }
 /* Per-row action buttons (status / note / collect) — vertically centred */
 .mini-card-actions { display: flex; align-items: center; gap: 2px; flex: 0 0 auto; align-self: center; }
 .mini-card-actions .icon-btn { width: 26px; height: 26px; font-size: 12px; }
-/* Status colour rules for mini-card rows (same semantics as card-actions) */
-.mini-card-actions .status-btn { opacity: 0.35; transition: opacity .15s ease, color .15s; }
-.mini-card:hover .mini-card-actions .status-btn,
-.mini-card-actions .status-btn.status-btn--toread,
-.mini-card-actions .status-btn.status-btn--reading,
-.mini-card-actions .status-btn.status-btn--done { opacity: 1; }
-/* Note + tag buttons hidden until hover or active */
-.mini-card-actions .note-btn,
-.mini-card-actions .tag-btn { opacity: 0; pointer-events: none; transition: opacity .15s ease, color .15s; }
-.mini-card:hover .mini-card-actions .note-btn,
-.mini-card:hover .mini-card-actions .tag-btn,
-.mini-card-actions .note-btn.is-on,
-.mini-card-actions .tag-btn.is-on { opacity: 1; pointer-events: auto; }
+/* All 4 action buttons visible at rest; colour transitions on hover / active state */
+.mini-card-actions .icon-btn { transition: color .15s; }
 .mini-card-actions .note-btn.is-on { color: var(--accent); }
-.mini-card-actions .tag-btn.is-on { color: var(--accent); }
+/* Tag active = collect active: bordered accent-soft box */
+.mini-card-actions .tag-btn.is-on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
 
 /* Bulk selection toolbar */
 .rec-bulk { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }

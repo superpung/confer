@@ -1388,7 +1388,7 @@ function openCollectPop(anchor: HTMLElement, k: string) {
   const render = () => {
     const rows = state.collections.map((c) =>
       `<div class="pop-row" data-col-toggle="${c.id}" role="button"><input type="checkbox" tabindex="-1" ${c.keys.includes(k) ? 'checked' : ''}><span class="pop-row-label">${esc(c.name)}</span><span class="pop-row-n">${c.keys.length}</span></div>`).join('');
-    return `<div class="pop-title">Save to collection</div>${rows || '<p class="pop-empty">No collections yet.</p>'}<button class="pop-action" data-col-new type="button">＋ New collection…</button>`;
+    return `<div class="pop-title">Save to collection</div><div class="pop-list">${rows || '<p class="pop-empty">No collections yet.</p>'}</div><button class="pop-action" data-col-new type="button">＋ New collection…</button>`;
   };
   openPop(anchor, render, (t) => {
     const toggle = t.closest<HTMLElement>('[data-col-toggle]');
@@ -1420,7 +1420,7 @@ function openGroupPop(anchor: HTMLElement, series: string) {
   const render = () => {
     const rows = state.groups.map((g) =>
       `<div class="pop-row" data-group-toggle="${g.id}" role="button"><input type="checkbox" tabindex="-1" ${g.series.includes(series) ? 'checked' : ''}><span class="pop-row-label">${esc(g.name)}</span><span class="pop-row-n">${g.series.length}</span></div>`).join('');
-    return `<div class="pop-title">Add “${esc(series)}” to group</div>${rows || '<p class="pop-empty">No groups yet.</p>'}<button class="pop-action" data-group-new type="button">＋ New group…</button>`;
+    return `<div class=”pop-title”>Add “${esc(series)}” to group</div><div class=”pop-list”>${rows || '<p class=”pop-empty”>No groups yet.</p>'}</div><button class=”pop-action” data-group-new type=”button”>＋ New group…</button>`;
   };
   openPop(anchor, render, (t) => {
     const toggle = t.closest<HTMLElement>('[data-group-toggle]');
@@ -1509,7 +1509,7 @@ function openTagPop(anchor: HTMLElement, k: string) {
     const empty = !rows && !newAction ? '<p class="pop-empty">No tags yet.</p>' : '';
     return `<div class="pop-title">Tags</div>`
       + `<input class="pop-search" type="text" placeholder="Filter or create…" value="${esc(filterText)}" autocomplete="off" spellcheck="false">`
-      + (rows || empty) + newAction;
+      + `<div class="pop-list">${rows || empty}</div>` + newAction;
   };
   openPop(anchor, buildHtml, (t) => {
     const toggle = t.closest<HTMLElement>('[data-tag-toggle]');
@@ -1579,7 +1579,7 @@ function openTagFilterPop(anchor: HTMLElement) {
     const rows = entries.map(([t, n]) =>
       `<div class="pop-row" data-tag-filter-val="${esc(t)}" role="button"><input type="checkbox" tabindex="-1" ${state.tagFilter.has(t) ? 'checked' : ''}><span class="pop-row-label">${esc(t)}</span><span class="pop-row-n">${n}</span></div>`
     ).join('');
-    return `<div class="pop-title">Filter by tag</div>${rows || '<p class="pop-empty">No tags.</p>'}`;
+    return `<div class="pop-title">Filter by tag</div><div class="pop-list">${rows || '<p class="pop-empty">No tags.</p>'}</div>`;
   };
   openPop(anchor, buildHtml, (t) => {
     const row = t.closest<HTMLElement>('[data-tag-filter-val]');
@@ -1647,7 +1647,7 @@ function openStatusFilterPop(anchor: HTMLElement) {
     const rows = opts.map((o) =>
       `<div class="pop-row" data-status-filter-val="${o.val}" role="button"><input type="checkbox" tabindex="-1" ${state.statusFilter === o.val ? 'checked' : ''}><span class="pop-row-label">${o.label}</span><span class="pop-row-n">${counts[o.val]}</span></div>`
     ).join('');
-    return `<div class="pop-title">Filter by status</div>${rows || '<p class="pop-empty">No status set.</p>'}`;
+    return `<div class="pop-title">Filter by status</div><div class="pop-list">${rows || '<p class="pop-empty">No status set.</p>'}</div>`;
   };
   openPop(anchor, buildHtml, (t) => {
     const row = t.closest<HTMLElement>('[data-status-filter-val]');
@@ -1906,7 +1906,7 @@ function openSeriesAddPop(anchor: HTMLElement, groupId: string) {
     if (!g) return '';
     const opts = [...new Set(manifest.map((v) => v.series))].sort().filter((s) => !g.series.includes(s));
     const rows = opts.map((s) => `<div class="pop-row" data-series-pick="${esc(s)}" role="button"><span class="pop-row-label">${esc(s)}</span></div>`).join('');
-    return `<div class="pop-title">Add series</div>${rows || '<p class="pop-empty">All series added.</p>'}`;
+    return `<div class="pop-title">Add series</div><div class="pop-list">${rows || '<p class="pop-empty">All series added.</p>'}</div>`;
   };
   openPop(anchor, render, (t) => {
     const pick = t.closest<HTMLElement>('[data-series-pick]');

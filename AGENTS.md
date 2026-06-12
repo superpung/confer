@@ -211,6 +211,13 @@ npm run build                     # static build → web/dist/ (what Netlify pub
   unfinished. Use a background tint (`var(--panel-soft)`) or spacing instead. The
   status-stripe on `.mini-card--toread/reading/done` is a deliberate *state indicator*
   on a card row and is exempt.
+- **Fade fixed/scroll seams.** Any layout that pins a header, search bar, or
+  toolbar over a scrolling area (modal bodies, popovers, sidebar facets, settings)
+  must soften the boundary with a short (~10 px) gradient fade on the scroll
+  container so rows don't clip hard against the pinned element. Use `mask-image` /
+  `-webkit-mask-image` with a linear gradient from `transparent` to `#000` at both
+  top and bottom edges. Never let scrolling content collide edge-to-edge with a
+  sticky title or search input.
 - **Favorites** are client-side `localStorage`. When multi-venue lands, key them as
   `venueId:paperId` so they do not collide across venues.
 - **No backend:** the site is fully static. All filtering/search is client-side.
