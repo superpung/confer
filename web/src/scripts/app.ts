@@ -89,7 +89,7 @@ const ICONS = {
   // find-similar icon (two overlapping circles = venn/similarity)
   similar: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg>',
   // "for you" / sparkle icon for the toolbar recommendation button
-  sparkle: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5z"/><path d="M5 3l.7 2.3L8 6l-2.3.7L5 9l-.7-2.3L2 6l2.3-.7z"/><path d="M19 16l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z"/></svg>',
+  sparkle: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 6.2L20 11l-6.2 1.8L12 19l-1.8-6.2L4 11l6.2-1.8z"/><path d="M18.5 4l.6 2 2 .6-2 .6-.6 2-.6-2-2-.6 2-.6z"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -373,12 +373,14 @@ function writeUrl() {
 const loadingBar = Object.assign(document.createElement('div'), { className: 'loading-bar' });
 document.body.appendChild(loadingBar);
 
-async function ensureLoaded(ids: string[]) {
+async function ensureLoaded(ids: string[], opts?: { silent?: boolean }) {
   const todo = ids.filter((id) => !state.loaded.has(id) && venueById.has(id));
   if (!todo.length) { rebuildRows(); return; }
   let done = 0;
-  loadingBar.classList.remove('done');
-  loadingBar.style.width = '8%';
+  if (!opts?.silent) {
+    loadingBar.classList.remove('done');
+    loadingBar.style.width = '8%';
+  }
   await Promise.all(
     todo.map(async (id) => {
       try {
@@ -388,11 +390,13 @@ async function ensureLoaded(ids: string[]) {
         state.loaded.set(id, []);
       }
       done += 1;
-      loadingBar.style.width = `${8 + (done / todo.length) * 92}%`;
+      if (!opts?.silent) loadingBar.style.width = `${8 + (done / todo.length) * 92}%`;
     }),
   );
-  loadingBar.classList.add('done');
-  setTimeout(() => { loadingBar.style.width = '0'; }, 320);
+  if (!opts?.silent) {
+    loadingBar.classList.add('done');
+    setTimeout(() => { loadingBar.style.width = '0'; }, 320);
+  }
   rebuildRows();
 }
 
@@ -673,7 +677,6 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
     });
     for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
   }
-  const toreadN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'toread').length;
   const readingN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'reading').length;
   const doneN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'done').length;
   const stat = (n: number, label: string, cls = '') =>
@@ -682,7 +685,6 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
     ${stat(filtered.length, plural(filtered.length, 'paper'))}
     ${stat(authorCount.size, plural(authorCount.size, 'author'))}
     ${stat(instCount.size, plural(instCount.size, 'institution'))}
-    ${toreadN ? stat(toreadN, 'to read', 'rail-stat--toread') : ''}
     ${readingN ? stat(readingN, 'reading', 'rail-stat--reading') : ''}
     ${doneN ? stat(doneN, 'done', 'rail-stat--done') : ''}
   </div>`;
@@ -1989,7 +1991,7 @@ function applyRemoteBundle(remote: SettingsBundle): void {
 
 /** Sign out: confirm, then clear token, identity, gist id, and sync meta. */
 function signOutGitHub() {
-  askConfirm({ title: 'Sign out', message: 'Sign out of GitHub? Your local config stays in this browser.', ok: 'Sign out' }).then((ok) => {
+  askConfirm({ title: 'Sign out', message: 'Sign out of GitHub? Your local config stays in this browser.', ok: 'Sign out', danger: true }).then((ok) => {
     if (!ok) return;
     try { [K_GH_TOKEN, K_GH_REFRESH, K_GH_EXPIRES, K_GH_USER, K_GIST_ID, K_SYNC_META, K_SYNC_ETAG].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
     conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
@@ -2894,19 +2896,15 @@ function wire() {
   $('[data-select-none]').addEventListener('click', () => { state.selected.clear(); reflectSidebar(); writeUrl(); rebuildRows(); render(); });
   $('[data-collapse-all]').addEventListener('click', () => {
     const btn = $<HTMLButtonElement>('[data-collapse-all]');
-    // If any cat or series is currently expanded, collapse all; otherwise expand all.
-    const anyExpanded = !!document.querySelector('.venue-cat:not(.is-collapsed), .venue-series:not(.is-collapsed)');
-    document.querySelectorAll<HTMLElement>('.venue-cat').forEach((el) => {
-      el.classList.toggle('is-collapsed', anyExpanded);
-      el.querySelector('[data-cat-toggle]')?.setAttribute('aria-expanded', String(!anyExpanded));
-    });
+    // If any series is currently expanded, collapse all; otherwise expand all.
+    const anyExpanded = !!document.querySelector('.venue-series:not(.is-collapsed)');
     document.querySelectorAll<HTMLElement>('.venue-series').forEach((el) => {
       el.classList.toggle('is-collapsed', anyExpanded);
       el.querySelector('[data-series-toggle]')?.setAttribute('aria-expanded', String(!anyExpanded));
     });
     // Flip button state: aria-expanded = whether things are now expanded
     btn.setAttribute('aria-expanded', String(!anyExpanded));
-    btn.title = anyExpanded ? 'Expand all categories' : 'Collapse all categories';
+    btn.title = anyExpanded ? 'Expand all venues' : 'Collapse all venues';
     btn.setAttribute('aria-label', btn.title);
     // Swap icon: chevrons-down-up (collapse) vs chevrons-up-down (expand)
     btn.querySelector('svg')!.innerHTML = anyExpanded
@@ -2978,8 +2976,9 @@ function wire() {
   // "For you" toolbar button — global recommendations
   document.body.addEventListener('click', (e) => {
     if ((e.target as HTMLElement).closest('[data-open-recommend]')) {
+      openRecommendLoading('For you — recommended papers');
       ensureAllLoaded().then(() => {
-        openRecommendModal('For you — recommended papers', recommendGlobal(40));
+        populateRecommendModal('For you — recommended papers', recommendGlobal(40));
       });
     }
   });
@@ -3091,8 +3090,9 @@ function wire() {
       state.shown = PAGE; writeUrl(); render();
     } else if (target.closest('[data-find-similar]')) {
       const fk = (target.closest('[data-find-similar]') as HTMLElement).dataset.findSimilar!;
+      openRecommendLoading('Similar papers');
       ensureAllLoaded().then(() => {
-        openRecommendModal('Similar papers', similarGlobal(fk, 30));
+        populateRecommendModal('Similar papers', similarGlobal(fk, 30));
       });
     } else if (target.closest('[data-inst]')) {
       setQuery(`inst:"${(target.closest('[data-inst]') as HTMLElement).dataset.inst!}"`);
@@ -3534,7 +3534,7 @@ function allLoadedRows(): { p: Paper; v: string }[] {
 }
 
 async function ensureAllLoaded(): Promise<void> {
-  await ensureLoaded(manifest.map((v) => v.id));
+  await ensureLoaded(manifest.map((v) => v.id), { silent: true });
   _globalTfidfBuilt = false; // invalidate when corpus grows
 }
 
@@ -3680,11 +3680,25 @@ function renderRecPanel(bodyEl: HTMLElement) {
     <div class="rec-results">${groupHtml || '<p class="rail-empty">No papers match the filter.</p>'}</div>`;
 }
 
-function openRecommendModal(title: string, rows: { p: Paper; v: string; score: number }[]) {
+/** Open #entityModal immediately in a loading state (spinner), before data arrives. */
+function openRecommendLoading(title: string) {
   const modal = document.querySelector<HTMLElement>('#entityModal');
   const titleEl = document.querySelector<HTMLElement>('#entityTitle');
   const bodyEl = document.querySelector<HTMLElement>('#entityBody');
   if (!modal || !titleEl || !bodyEl) return;
+  titleEl.textContent = title;
+  bodyEl.innerHTML = '<div class="rec-loading"><span class="rec-loading-dot"></span><span class="rec-loading-dot"></span><span class="rec-loading-dot"></span></div>';
+  modal.hidden = false;
+}
+
+/** Populate the already-open #entityModal with recommendation results (with fade-in). */
+function populateRecommendModal(title: string, rows: { p: Paper; v: string; score: number }[]) {
+  const modal = document.querySelector<HTMLElement>('#entityModal');
+  const titleEl = document.querySelector<HTMLElement>('#entityTitle');
+  const bodyEl = document.querySelector<HTMLElement>('#entityBody');
+  if (!modal || !titleEl || !bodyEl) return;
+  // Modal might have been closed while loading; reopen if needed.
+  if (modal.hidden) modal.hidden = false;
   titleEl.textContent = title;
   recPanelState.rows = rows;
   recPanelState.venueFilter = '';
@@ -3693,8 +3707,14 @@ function openRecommendModal(title: string, rows: { p: Paper; v: string; score: n
     bodyEl.innerHTML = '<p class="rail-empty">No recommendations available. Save or tag some papers first, then try again.</p>';
   } else {
     renderRecPanel(bodyEl);
+    bodyEl.querySelector<HTMLElement>('.rec-results')?.classList.add('rec-fade-in');
   }
-  modal.hidden = false;
+}
+
+/** Convenience: open + populate synchronously when data is already loaded. */
+function openRecommendModal(title: string, rows: { p: Paper; v: string; score: number }[]) {
+  openRecommendLoading(title);
+  populateRecommendModal(title, rows);
 }
 
 // --- init --------------------------------------------------------------
@@ -3751,6 +3771,7 @@ function init() {
   reflectTagFilter();
   reflectStatusFilter();
   reflectNotesFilter();
+  reflectSort();
   renderSettings();
   ensureLoaded([...state.selected]).then(() => { render(); });
 }

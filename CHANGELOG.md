@@ -20,11 +20,10 @@ Entries are user-facing; implementation details belong in commit messages.
   read-only preview mode when a note exists; drops straight into edit mode for
   new notes. Includes Edit, Delete, Save, and Cancel actions. Notes synced to
   GitHub Gist across devices.
-- **"Has notes" filter**: a Notes toggle in the controls bar filters the list to
+- **"Noted" filter**: a "Noted" toggle in the controls bar filters the list to
   only papers with notes (`?notes=1`); a removable active-filter chip appears
   in the filter bar.
-- Reading progress stats in the Insights rail now include a "to read" count
-  alongside reading / done.
+- Reading progress stats in the Insights rail show reading / done counts.
 - **"Find similar"** per paper: icon button in the expanded abstract opens a
   global corpus search (all venues loaded on demand) with results grouped by
   venue and sortable by similarity / year / title.
@@ -54,6 +53,18 @@ Entries are user-facing; implementation details belong in commit messages.
 - `CHANGELOG.md` (this file) and a changelog convention in `AGENTS.md`.
 
 ### Changed
+- Sidebar "All" / "None" selection buttons restored to text labels (were icon
+  buttons).
+- Expand/collapse toggle in the sidebar now only collapses venue series; category
+  headers stay in place.
+- "For you" / "Find similar" no longer shows the top progress bar while loading;
+  the modal opens immediately in a loading state and fades in the results.
+- Sign-out confirmation dialog now uses a red (danger) button, consistent with
+  "Clear all data".
+- Card first-row items (venue badge / id / status / note / bookmark) are now
+  vertically centered relative to each other.
+- "Notes" filter label renamed to "Noted" in the controls bar.
+- Removed the "to read" count from the Insights rail (reading / done remain).
 - "Clear local data" button restyled to a hollow danger button (red outline +
   red text/icon, transparent fill) — less visually heavy than the solid red.
 - Removing a tag in Settings now asks for confirmation (the operation removes
@@ -61,6 +72,10 @@ Entries are user-facing; implementation details belong in commit messages.
 - Removing a series from a venue group in Settings now asks for confirmation.
 
 ### Fixed
+- Sort label no longer briefly flashes "Sort: Venue" on reload when a different
+  sort is saved in the URL.
+- Private note dialog no longer feels sluggish to open (removed double
+  backdrop-blur layer).
 - Paper title and author normalization now removes LaTeX/entity artifacts, repairs
   source-specific author parsing, and avoids unsafe metadata matches for generic
   authorless schedule entries.
