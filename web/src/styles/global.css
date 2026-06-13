@@ -309,13 +309,31 @@ html.is-rail-collapsed { --col-right: 0; }
 .foot-meta { margin: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
 .foot-built { color: inherit; cursor: default; }
 .foot-sep { color: var(--line-strong); }
+.foot-gh-wrap { position: relative; display: inline-flex; align-items: center; }
 .foot-gh { display: inline-flex; color: var(--muted); }
 .foot-gh:hover { color: var(--accent); }
+.foot-hash-pop {
+  position: absolute; left: 0; bottom: 100%; z-index: 8;
+  padding-bottom: 5px; /* hover bridge so cursor can move onto the chip */
+  width: max-content;
+  opacity: 0; visibility: hidden; transform: translateY(3px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.15s;
+}
+.foot-gh-wrap:hover .foot-hash-pop, .foot-hash-pop:hover {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s;
+}
 .foot-hash {
   color: var(--muted); font-size: 11px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 .foot-hash:hover { color: var(--accent); }
+.foot-hash-chip {
+  display: inline-block;
+  border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--panel); box-shadow: var(--shadow);
+  padding: 4px 8px; line-height: 1;
+}
 .foot-version {
   color: var(--muted); font-size: 11px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
