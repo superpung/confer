@@ -1,5 +1,9 @@
 import type { Paper, Venue, SavedSearch, VenueGroup, Collection, SettingsBundle, GitHubUser, SyncMeta } from './types';
 import { toBibtex, toCsv, type ExportRow } from './export';
+import { paperKey, eventList, authorAff, instList, authorResolver } from '../core/text';
+import { type Term, FIELD_ALIASES, parseQuery, matchQuery } from '../core/query';
+import { buildTfidfIndex, type TfidfIndex } from '../core/similar';
+import { computeInsights } from '../core/insights';
 
 // --- constants & storage keys ------------------------------------------
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -126,120 +130,11 @@ function shortList(values: string[], max = 1) {
 }
 /** Pick singular/plural noun for a count (word only; caller supplies the number). */
 const plural = (n: number, one: string, many = one + 's') => (n === 1 ? one : many);
-function searchBlob(p: Paper): string {
-  if (p._search === undefined) {
-    p._search = [
-      p.id, p.title, p.abstract, p.eventType, p.authorInstitutions,
-      ...p.authors, ...p.tracks, ...p.sessionTitles, ...p.locations,
-      p.doi ?? '', p.publicationDate ?? '', p.publisher ?? '', p.container ?? '',
-      p.volume ?? '', p.issue ?? '', p.pages ?? '',
-      ...(p.keywords ?? []),
-    ].join(' ').toLowerCase();
-  }
-  return p._search;
-}
-function eventList(p: Paper): string[] {
-  return p.eventType ? p.eventType.split(';').map((s) => s.trim()).filter(Boolean) : [];
-}
-
-// --- author / institution parsing -------------------------------------
-// authorInstitutions is a display string: "Name (Inst); Name (Inst); ...".
-// Institutions can themselves contain parens (e.g. "... (HKUST)"), so we take
-// the text before the first " (" as the name and the rest inside parens as inst.
-function parseAff(p: Paper): { author: string; inst: string }[] {
-  if (p._aff) return p._aff;
-  const out: { author: string; inst: string }[] = [];
-  for (const seg of (p.authorInstitutions || '').split(';')) {
-    const s = seg.trim();
-    if (!s) continue;
-    const i = s.indexOf(' (');
-    if (i >= 0 && s.endsWith(')')) out.push({ author: s.slice(0, i).trim(), inst: s.slice(i + 2, -1).trim() });
-    else out.push({ author: s, inst: '' });
-  }
-  p._aff = out;
-  return out;
-}
-/** Affiliations aligned to p.authors (by position when counts match, else by name). */
-function authorAff(p: Paper): { author: string; inst: string }[] {
-  const parsed = parseAff(p);
-  if (parsed.length === p.authors.length) return parsed;
-  const byName = new Map(parsed.map((x) => [x.author, x.inst]));
-  return p.authors.map((a) => ({ author: a, inst: byName.get(a) ?? '' }));
-}
-function instList(p: Paper): string[] {
-  if (!p._insts) p._insts = [...new Set(parseAff(p).map((x) => x.inst).filter(Boolean))];
-  return p._insts;
-}
-
-// --- author disambiguation (hybrid: id else name+institution) ----------
-const normKey = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-
-/** Build a per-author resolver over a set of rows: prefer an explicit author id
- *  (ORCID/OpenAlex); otherwise reuse an id learned for the same name(+institution)
- *  elsewhere in the set; otherwise fall back to a name|institution key. */
-function authorResolver(rows: { p: Paper; v: string }[]) {
-  const idByNameInst = new Map<string, string>();
-  const idByName = new Map<string, string>();
-  const ambiguous = new Set<string>();
-  for (const { p } of rows) {
-    if (!p.authorIds) continue;
-    const aff = authorAff(p);
-    p.authors.forEach((nm, i) => {
-      const id = p.authorIds![i];
-      if (!id) return;
-      const n = normKey(nm);
-      idByNameInst.set(`${n}|${normKey(aff[i]?.inst ?? '')}`, id);
-      if (idByName.has(n) && idByName.get(n) !== id) ambiguous.add(n);
-      else idByName.set(n, id);
-    });
-  }
-  return (p: Paper, i: number): { key: string; name: string } => {
-    const aff = authorAff(p);
-    const nm = p.authors[i];
-    const n = normKey(nm);
-    const inst = normKey(aff[i]?.inst ?? '');
-    const id = p.authorIds?.[i] || idByNameInst.get(`${n}|${inst}`)
-      || (!ambiguous.has(n) ? idByName.get(n) : undefined) || '';
-    return { key: id || (inst ? `${n}|${inst}` : n), name: nm };
-  };
-}
-
-// --- field-prefixed search ("author:", "title:", "inst:", …) ----------
-type Term = { field: string; value: string; neg: boolean };
-const FIELD_ALIASES: Record<string, string> = {
-  title: 'title', t: 'title',
-  author: 'author', authors: 'author', au: 'author', a: 'author',
-  inst: 'inst', institution: 'inst', institutions: 'inst', aff: 'inst', affiliation: 'inst', org: 'inst',
-  abstract: 'abstract', abs: 'abstract',
-  track: 'track', topic: 'track', tracks: 'track',
-  venue: 'venue', conf: 'venue', conference: 'venue',
-  event: 'event', type: 'event',
-  session: 'session',
-  doi: 'doi',
-  keyword: 'keyword', keywords: 'keyword', kw: 'keyword',
-  container: 'container', journal: 'container', booktitle: 'container',
-  publisher: 'publisher',
-  id: 'id', year: 'year',
-  tag: 'tag', tags: 'tag', label: 'tag',
-};
-/** Tokenize into AND terms; supports field:"quoted phrase", field:bare, "quoted",
- *  bare, and a leading "-" to exclude (e.g. -author:doe, -"tool demo"). */
-function parseQuery(q: string): Term[] {
-  const terms: Term[] = [];
-  const re = /(-?)(?:(\w+):"([^"]*)"|(\w+):(\S+)|"([^"]*)"|(\S+))/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(q))) {
-    const neg = m[1] === '-';
-    let field = 'any';
-    let value = '';
-    if (m[2] !== undefined) { field = FIELD_ALIASES[m[2].toLowerCase()] ?? 'any'; value = m[3]; }
-    else if (m[4] !== undefined) { field = FIELD_ALIASES[m[4].toLowerCase()] ?? 'any'; value = m[5]; }
-    else value = (m[6] ?? m[7]) as string;
-    value = value.toLowerCase();
-    if (value) terms.push({ field, value, neg });
-  }
-  return terms;
-}
+// searchBlob, eventList, parseAff, authorAff, instList, normKey, authorResolver,
+// STOP_WORDS, tfidfTokenize, fieldText → imported from ../core/text
+// Term, FIELD_ALIASES, parseQuery, matchQuery → imported from ../core/query
+// buildTfidfIndex, TfidfIndex → imported from ../core/similar
+// computeInsights → imported from ../core/insights
 // --- field-search smart input helpers -----------------------------------
 /** Module-level ref assigned during init so render() can call it before the search handler is set up. */
 let renderSearchHL: (() => void) | null = null;
@@ -341,39 +236,8 @@ function buildSearchHlHtml(value: string, suggestion: string | null, caretPos: n
   return result;
 }
 
-function fieldText(p: Paper, field: string): string {
-  switch (field) {
-    case 'title': return p.title.toLowerCase();
-    case 'author': return p.authors.join(' | ').toLowerCase();
-    case 'inst': return instList(p).join(' | ').toLowerCase();
-    case 'abstract': return p.abstract.toLowerCase();
-    case 'track': return p.tracks.join(' | ').toLowerCase();
-    case 'event': return p.eventType.toLowerCase();
-    case 'session': return p.sessionTitles.join(' | ').toLowerCase();
-    case 'doi': return (p.doi ?? '').toLowerCase();
-    case 'keyword': return (p.keywords ?? []).join(' | ').toLowerCase();
-    case 'container': return (p.container ?? '').toLowerCase();
-    case 'publisher': return (p.publisher ?? '').toLowerCase();
-    case 'id': return p.id.toLowerCase();
-    default: return searchBlob(p);
-  }
-}
-function matchQuery(row: { p: Paper; v: string }, terms: Term[]): boolean {
-  if (!terms.length) return true;
-  const { p, v } = row;
-  const venue = venueById.get(v);
-  for (const t of terms) {
-    let hay: string;
-    if (t.field === 'any') hay = `${searchBlob(p)} ${(venue?.name ?? '').toLowerCase()}`;
-    else if (t.field === 'venue') hay = `${venue?.name ?? ''} ${venue?.series ?? ''} ${v}`.toLowerCase();
-    else if (t.field === 'year') hay = String(venue?.year ?? '');
-    else if (t.field === 'tag') hay = tagsOf(key(v, p.id)).join(' | ').toLowerCase();
-    else hay = fieldText(p, t.field);
-    const hit = hay.includes(t.value);
-    if (t.neg ? hit : !hit) return false;
-  }
-  return true;
-}
+// fieldText → imported from ../core/text
+// matchQuery(row, terms, ctx) → imported from ../core/query
 
 // --- state -------------------------------------------------------------
 const manifest: Venue[] = JSON.parse($('#venues-data').textContent || '[]');
@@ -405,7 +269,7 @@ const state = {
   shown: PAGE,
 };
 
-const key = (v: string, id: string) => `${v}:${id}`;
+const key = paperKey;
 
 // --- personal data: groups, collections, tags -------------------------
 function saveGroups() { writeJson(K_VGROUPS, state.groups); }
@@ -516,7 +380,7 @@ function rebuildRows() {
     for (const p of state.loaded.get(v.id) ?? []) rows.push({ p, v: v.id });
   }
   state.rows = rows;
-  _tfidfBuilt = false; // invalidate TF-IDF cache whenever the corpus changes
+  _tfidfIndex = null; // invalidate TF-IDF cache whenever the corpus changes
 }
 
 // --- filtering & sorting ----------------------------------------------
@@ -529,7 +393,7 @@ function matches(row: { p: Paper; v: string }): boolean {
   if (state.tagFilter.size && !tagsOf(key(v, p.id)).some((t) => state.tagFilter.has(t))) return false;
   if (state.statusFilter && statusOf(key(v, p.id)) !== state.statusFilter) return false;
   if (state.notesOnly && !noteOf(key(v, p.id))) return false;
-  if (!matchQuery(row, state.terms)) return false;
+  if (!matchQuery(row, state.terms, { venueById: (id) => venueById.get(id), tagsOf: (k) => tagsOf(k) })) return false;
   return true;
 }
 function sortRows(rows: { p: Paper; v: string }[]) {
@@ -786,24 +650,8 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
     els.railBody.innerHTML = `<p class="rail-empty">No papers in view.</p>`;
     return;
   }
-  const instCount = new Map<string, number>();
-  const authorCount = new Map<string, number>();
-  const trackCount = new Map<string, number>();
-  const resolveAuthor = authorResolver(filtered);
-  railAuthorName = new Map<string, string>();
-  for (const { p } of filtered) {
-    for (const inst of instList(p)) instCount.set(inst, (instCount.get(inst) ?? 0) + 1);
-    const seen = new Set<string>();
-    p.authors.forEach((_, i) => {
-      const { key, name } = resolveAuthor(p, i);
-      if (seen.has(key)) return;
-      seen.add(key);
-      authorCount.set(key, (authorCount.get(key) ?? 0) + 1);
-      const cur = railAuthorName.get(key);
-      if (!cur || name.length > cur.length) railAuthorName.set(key, name);
-    });
-    for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
-  }
+  const { instCount, authorCount, trackCount, authorNames } = computeInsights(filtered);
+  railAuthorName = authorNames;
   const readingN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'reading').length;
   const doneN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'done').length;
   const stat = (n: number, label: string, cls = '') =>
@@ -1143,7 +991,7 @@ function render() {
 
   const facetBase = state.rows.filter((r) => {
     if (state.colSet && !state.colSet.has(key(r.v, r.p.id))) return false;
-    if (!matchQuery(r, state.terms)) return false;
+    if (!matchQuery(r, state.terms, { venueById: (id) => venueById.get(id), tagsOf: (k) => tagsOf(k) })) return false;
     return true;
   });
   renderFacets(facetBase);
@@ -4254,115 +4102,25 @@ function wire() {
   });
 }
 
-// --- TF-IDF similarity ------------------------------------------------
-const STOP_WORDS = new Set([
-  'a','an','the','and','or','but','of','in','to','is','are','was','were','be','been',
-  'for','on','at','by','with','as','from','this','that','these','those','it','its',
-  'we','our','their','they','has','have','had','not','no','can','may','will','more',
-  'each','which','when','who','than','other','into','also','such','two','three','use',
-  'used','using','show','shows','paper','approach','method','model','results','based',
-  'proposed','present','new','large','high','low','set','data','can','work','provide',
-]);
+// --- TF-IDF similarity (thin wrappers over core/similar buildTfidfIndex) ------
+// STOP_WORDS, tfidfTokenize → imported from ../core/text
+// buildTfidfIndex, TfidfIndex → imported from ../core/similar
 
-function tfidfTokenize(text: string): string[] {
-  return text.toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !STOP_WORDS.has(t));
-}
+let _tfidfIndex: TfidfIndex | null = null;
 
-let _tfidfBuilt = false;
-let _idf = new Map<string, number>();
-
-function buildTfidf() {
-  if (_tfidfBuilt) return;
-  _tfidfBuilt = true;
-  const docCount = state.rows.length;
-  if (!docCount) return;
-  // Count how many documents each term appears in (df)
-  const df = new Map<string, number>();
-  for (const { p } of state.rows) {
-    const focused = `${p.title} ${p.abstract} ${(p.keywords ?? []).join(' ')} ${p.tracks.join(' ')}`;
-    const terms = new Set(tfidfTokenize(focused));
-    for (const t of terms) df.set(t, (df.get(t) ?? 0) + 1);
-  }
-  // IDF: log(N / df)  (add-1 smoothing to avoid divide-by-zero)
-  _idf = new Map([...df.entries()].map(([t, d]) => [t, Math.log((docCount + 1) / (d + 1))]));
-  // Build per-paper TF-IDF vectors (sparse, L2-normalised) — cache on paper._vec
-  for (const { p } of state.rows) {
-    if ((p as Paper & { _vec?: Map<string, number> })._vec) continue;
-    const focused = `${p.title} ${p.abstract} ${(p.keywords ?? []).join(' ')} ${p.tracks.join(' ')}`;
-    const tokens = tfidfTokenize(focused);
-    if (!tokens.length) { (p as Paper & { _vec?: Map<string, number> })._vec = new Map(); continue; }
-    const tf = new Map<string, number>();
-    for (const t of tokens) tf.set(t, (tf.get(t) ?? 0) + 1);
-    const vec = new Map<string, number>();
-    let norm = 0;
-    for (const [t, c] of tf) {
-      const w = (c / tokens.length) * (_idf.get(t) ?? 0);
-      if (w > 0) { vec.set(t, w); norm += w * w; }
-    }
-    norm = Math.sqrt(norm) || 1;
-    for (const [t, w] of vec) vec.set(t, w / norm);
-    (p as Paper & { _vec?: Map<string, number> })._vec = vec;
-  }
-}
-
-function cosine(a: Map<string, number>, b: Map<string, number>): number {
-  let dot = 0;
-  for (const [t, w] of a) { const bw = b.get(t); if (bw) dot += w * bw; }
-  return dot; // both are L2-normalised, so |a|=|b|=1 → cosine = dot product
-}
-
-function similarTo(paperKey: string, n = 8): { p: Paper; v: string; score: number }[] {
-  buildTfidf();
-  const target = state.rows.find((r) => key(r.v, r.p.id) === paperKey);
-  if (!target) return [];
-  const vec = (target.p as Paper & { _vec?: Map<string, number> })._vec;
-  if (!vec || !vec.size) return [];
-  return state.rows
-    .filter((r) => key(r.v, r.p.id) !== paperKey)
-    .map((r) => {
-      const rv = (r.p as Paper & { _vec?: Map<string, number> })._vec ?? new Map();
-      return { ...r, score: cosine(vec, rv) };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, n)
-    .filter((x) => x.score > 0);
+function similarTo(targetKey: string, n = 8): { p: Paper; v: string; score: number }[] {
+  if (!_tfidfIndex) _tfidfIndex = buildTfidfIndex(state.rows);
+  return _tfidfIndex.similar(targetKey, n);
 }
 
 function recommendFromSaved(n = 12): { p: Paper; v: string; score: number }[] {
-  buildTfidf();
+  if (!_tfidfIndex) _tfidfIndex = buildTfidfIndex(state.rows);
   // Papers the user has collected, tagged, or marked reading/done
   const savedKeys = new Set<string>();
   for (const c of state.collections) c.keys.forEach((k) => savedKeys.add(k));
   for (const [k] of state.tags) savedKeys.add(k);
   for (const [k] of state.status) savedKeys.add(k);
-  if (!savedKeys.size) return [];
-  // Build profile vector: average of saved paper vectors
-  const profile = new Map<string, number>();
-  let savedCount = 0;
-  for (const paperKey of savedKeys) {
-    const row = state.rows.find((r) => key(r.v, r.p.id) === paperKey);
-    if (!row) continue;
-    const vec = (row.p as Paper & { _vec?: Map<string, number> })._vec ?? new Map();
-    for (const [t, w] of vec) profile.set(t, (profile.get(t) ?? 0) + w);
-    savedCount++;
-  }
-  if (!savedCount) return [];
-  // Normalise profile vector
-  for (const [t, w] of profile) profile.set(t, w / savedCount);
-  let pnorm = 0;
-  for (const w of profile.values()) pnorm += w * w;
-  pnorm = Math.sqrt(pnorm) || 1;
-  for (const [t, w] of profile) profile.set(t, w / pnorm);
-  // Score all non-saved papers
-  return state.rows
-    .filter((r) => !savedKeys.has(key(r.v, r.p.id)))
-    .map((r) => {
-      const rv = (r.p as Paper & { _vec?: Map<string, number> })._vec ?? new Map();
-      return { ...r, score: cosine(profile, rv) };
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, n)
-    .filter((x) => x.score > 0);
+  return _tfidfIndex.recommend(savedKeys, n);
 }
 
 function openSimilarModal(title: string, rows: { p: Paper; v: string; score: number }[]) {
@@ -4381,9 +4139,8 @@ function openSimilarModal(title: string, rows: { p: Paper; v: string; score: num
 }
 
 // --- global corpus TF-IDF (separate from the in-view index) -----------
-// Uses p._gvec instead of p._vec; built lazily after ensureAllLoaded().
-let _globalTfidfBuilt = false;
-let _globalIdf = new Map<string, number>();
+// Lazy-built after ensureAllLoaded(); uses a separate index over all loaded rows.
+let _globalTfidfIndex: TfidfIndex | null = null;
 
 function allLoadedRows(): { p: Paper; v: string }[] {
   const rows: { p: Paper; v: string }[] = [];
@@ -4397,93 +4154,22 @@ function allLoadedRows(): { p: Paper; v: string }[] {
 
 async function ensureAllLoaded(): Promise<void> {
   await ensureLoaded(manifest.map((v) => v.id), { silent: true });
-  _globalTfidfBuilt = false; // invalidate when corpus grows
+  _globalTfidfIndex = null; // invalidate when corpus grows
 }
 
-function buildGlobalTfidf() {
-  if (_globalTfidfBuilt) return;
-  _globalTfidfBuilt = true;
-  const allRows = allLoadedRows();
-  const docCount = allRows.length;
-  if (!docCount) return;
-  const df = new Map<string, number>();
-  for (const { p } of allRows) {
-    const focused = `${p.title} ${p.abstract} ${(p.keywords ?? []).join(' ')} ${p.tracks.join(' ')}`;
-    const terms = new Set(tfidfTokenize(focused));
-    for (const t of terms) df.set(t, (df.get(t) ?? 0) + 1);
-  }
-  _globalIdf = new Map([...df.entries()].map(([t, d]) => [t, Math.log((docCount + 1) / (d + 1))]));
-  for (const { p } of allRows) {
-    const pp = p as Paper & { _gvec?: Map<string, number> };
-    if (pp._gvec) continue;
-    const focused = `${p.title} ${p.abstract} ${(p.keywords ?? []).join(' ')} ${p.tracks.join(' ')}`;
-    const tokens = tfidfTokenize(focused);
-    if (!tokens.length) { pp._gvec = new Map(); continue; }
-    const tf = new Map<string, number>();
-    for (const t of tokens) tf.set(t, (tf.get(t) ?? 0) + 1);
-    const vec = new Map<string, number>();
-    let norm = 0;
-    for (const [t, c] of tf) {
-      const w = (c / tokens.length) * (_globalIdf.get(t) ?? 0);
-      if (w > 0) { vec.set(t, w); norm += w * w; }
-    }
-    norm = Math.sqrt(norm) || 1;
-    for (const [t, w] of vec) vec.set(t, w / norm);
-    pp._gvec = vec;
-  }
-}
-
-function similarGlobal(paperKey: string, n = 30): { p: Paper; v: string; score: number }[] {
-  buildGlobalTfidf();
-  const allRows = allLoadedRows();
-  const target = allRows.find((r) => key(r.v, r.p.id) === paperKey);
-  if (!target) return [];
-  const vec = (target.p as Paper & { _gvec?: Map<string, number> })._gvec;
-  if (!vec || !vec.size) return [];
-  return allRows
-    .filter((r) => key(r.v, r.p.id) !== paperKey)
-    .map((r) => ({
-      ...r,
-      score: cosine(vec, (r.p as Paper & { _gvec?: Map<string, number> })._gvec ?? new Map()),
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, n)
-    .filter((x) => x.score > 0);
+function similarGlobal(targetKey: string, n = 30): { p: Paper; v: string; score: number }[] {
+  if (!_globalTfidfIndex) _globalTfidfIndex = buildTfidfIndex(allLoadedRows());
+  return _globalTfidfIndex.similar(targetKey, n);
 }
 
 function recommendGlobal(n = 40): { p: Paper; v: string; score: number }[] {
-  buildGlobalTfidf();
+  if (!_globalTfidfIndex) _globalTfidfIndex = buildTfidfIndex(allLoadedRows());
   const savedKeys = new Set<string>();
-  for (const c of state.collections) c.keys.forEach((k2) => savedKeys.add(k2));
-  for (const [k2] of state.tags) savedKeys.add(k2);
-  for (const [k2] of state.status) savedKeys.add(k2);
-  for (const [k2] of state.notes) savedKeys.add(k2);
-  if (!savedKeys.size) return [];
-  const allRows = allLoadedRows();
-  const profile = new Map<string, number>();
-  let savedCount = 0;
-  for (const paperKey of savedKeys) {
-    const row = allRows.find((r) => key(r.v, r.p.id) === paperKey);
-    if (!row) continue;
-    const vec = (row.p as Paper & { _gvec?: Map<string, number> })._gvec ?? new Map();
-    for (const [t, w] of vec) profile.set(t, (profile.get(t) ?? 0) + w);
-    savedCount++;
-  }
-  if (!savedCount) return [];
-  for (const [t, w] of profile) profile.set(t, w / savedCount);
-  let pnorm = 0;
-  for (const w of profile.values()) pnorm += w * w;
-  pnorm = Math.sqrt(pnorm) || 1;
-  for (const [t, w] of profile) profile.set(t, w / pnorm);
-  return allRows
-    .filter((r) => !savedKeys.has(key(r.v, r.p.id)))
-    .map((r) => ({
-      ...r,
-      score: cosine(profile, (r.p as Paper & { _gvec?: Map<string, number> })._gvec ?? new Map()),
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, n)
-    .filter((x) => x.score > 0);
+  for (const c of state.collections) c.keys.forEach((k) => savedKeys.add(k));
+  for (const [k] of state.tags) savedKeys.add(k);
+  for (const [k] of state.status) savedKeys.add(k);
+  for (const [k] of state.notes) savedKeys.add(k);
+  return _globalTfidfIndex.recommend(savedKeys, n);
 }
 
 // --- global recommend modal (categorised by venue, with filter + sort) ----
