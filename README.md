@@ -65,6 +65,10 @@ without any account.
 - ⚡ **Fast & private.** One pre-rendered page — all filtering happens in the browser,
   with no tracking. Light/dark themes with accent colors, keyboard shortcuts
   (`⌘K` search, `⌘/` shortcuts), and a responsive layout for mobile.
+- 🤖 **Query from AI agents.** An [MCP server](mcp/README.md) exposes the corpus to
+  Claude Desktop, Cursor, and other MCP-compatible clients — search with the same
+  field-aware syntax, find similar papers, view top authors/institutions, and export
+  BibTeX, all from a local stdio process with no external service required.
 
 ## Venues
 
@@ -119,6 +123,39 @@ npm run build      # static build → web/dist/
 The site reads `web/public/data/` at build time and outputs a static `dist/` you can
 host anywhere. The committed JSON is the build input, so a deploy only runs the Astro
 build — no Python at deploy time.
+
+## Use it from AI agents (MCP)
+
+A local stdio MCP server lets Claude Desktop, Cursor, Cline, and other MCP clients
+query the corpus directly.
+
+**Build the server** (Node ≥ 22):
+
+```bash
+cd mcp
+npm install
+npm run build   # → mcp/dist/server.js
+```
+
+**Wire it into Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "confer": {
+      "command": "node",
+      "args": ["/absolute/path/to/confcrawl/mcp/dist/server.js"]
+    }
+  }
+}
+```
+
+Available tools: `list_venues`, `search_papers` (field-aware: `author:`, `title:`,
+`inst:`, `track:`, `venue:`, `year:`, …), `get_paper`, `find_similar`,
+`top_authors`, `top_institutions`, `top_tracks`, `export_bibtex`.
+
+See **[mcp/README.md](mcp/README.md)** for the full tool reference, Cursor config,
+and the optional `CONFER_DATA_DIR` environment variable.
 
 ## Add a venue
 

@@ -1,0 +1,23 @@
+{
+  "name": "confer-mcp",
+  "version": "1.0.0",
+  "description": "MCP stdio server exposing the confer paper corpus to AI agents",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsup src/server.ts --format esm --target node22 --out-dir dist --no-splitting --no-dts",
+    "dev": "node --watch dist/server.js",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

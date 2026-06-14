@@ -73,15 +73,32 @@ web/                   [now] Astro static site (Netlify)
   src/pages/index.astro    [now] the whole single-page app shell (sidebar + content)
   src/layouts/Layout.astro [now] html shell; sets theme/sidebar state before paint
   src/lib/data.ts          [now] read public/data at build (venues, generatedAt)
+  src/core/            [now] framework-agnostic query core (shared with mcp/)
+    text.ts            [now] searchBlob, eventList, parseAff/authorAff/instList, normKey, authorResolver, tfidfTokenize, fieldText
+    query.ts           [now] Term, FIELD_ALIASES, parseQuery, matchQuery(row, terms, QueryContext)
+                            ↳ QueryContext = { venueById, tagsOf? }. app.ts passes tagsOf at BOTH
+                              call sites (matches + facetBase) so tag: queries work in the browser.
+                              The MCP omits tagsOf by design — tag: no-ops (users have no tag store).
+    similar.ts         [now] buildTfidfIndex(rows) → TfidfIndex { similar, recommend }
+    insights.ts        [now] computeInsights(rows) → InsightsData, topN
+    *.test.ts          [now] vitest unit tests (query/similar/insights); run: cd web && npm test
   src/scripts/
-    app.ts             [now] client island: search / filter / sort / favorites / export
-    export.ts          [now] BibTeX + CSV serialization
-    types.ts           [now] Paper / Venue / SavedSearch types
+    app.ts             [now] client island: search / filter / sort / favorites / export (imports from core/)
+    export.ts          [now] BibTeX + CSV serialization (also used by mcp/)
+    types.ts           [now] Paper / Venue / SavedSearch types (shared with mcp/)
   src/styles/global.css    [now] Claude-style CSS + sidebar/card layout
   public/data/
     venues.json        [now] sidebar manifest (written by scraper export)
     <venue_id>.json    [now] unified papers per venue (written by scraper export)
   dist/                [now] Astro build output, gitignored (Netlify publishes it)
+mcp/                   [now] MCP stdio server (TypeScript, Node 22)
+  package.json         [now] name: confer-mcp; deps: @modelcontextprotocol/sdk, zod
+  tsconfig.json        [now]
+  src/
+    corpus.ts          [now] fs loader for web/public/data/ (lazy per-venue, CONFER_DATA_DIR env)
+    server.ts          [now] McpServer + StdioServerTransport; 8 tools (search, similar, stats, bibtex)
+  README.md            [now] setup + Claude Desktop / Cursor config snippet
+  dist/                [now] tsup bundle (gitignored); `npm run build` → dist/server.js
 data/cache/            [now] cached raw HTML, gitignored. Per-venue subdirs.
 netlify.toml           [now] Netlify build config (base=web, publish=dist)
 ```

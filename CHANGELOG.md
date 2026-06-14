@@ -6,6 +6,17 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ---
 
+## [Unreleased]
+
+### Added
+- **MCP server** (`mcp/`): query the confer corpus from AI agents (Claude Desktop,
+  Cursor, Cline, …) via the Model Context Protocol — search papers with the same
+  field-aware query syntax as the web UI, retrieve full paper records, find similar
+  papers by TF-IDF similarity, view top authors / institutions / tracks, and export
+  BibTeX citations. Runs as a local stdio server; no external service required.
+
+---
+
 ## [1.0.0] - 2026-06-12
 
 ### Added

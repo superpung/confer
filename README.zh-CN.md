@@ -51,6 +51,9 @@
   使用无需账号，同步完全可选。
 - ⚡ **快且私密。** 单页预渲染，所有筛选均在浏览器本地完成，无追踪。支持深/浅色主题
   与强调色、键盘快捷键（`⌘K` 搜索、`⌘/` 快捷键列表）以及移动端响应式布局。
+- 🤖 **在 AI 助手中直接提问。** 内置 [MCP 服务器](mcp/README.md)，支持 Claude Desktop、
+  Cursor 等 MCP 客户端通过本地 stdio 进程查询语料库——字段化搜索、相似论文推荐、
+  Top 作者/机构统计、BibTeX 导出，无需任何外部服务。
 
 ## 收录会场
 
@@ -100,6 +103,38 @@ npm run build      # 静态构建 → web/dist/
 
 站点在构建时读取 `web/public/data/`，产出静态的 `dist/`，可托管到任意静态主机。
 已提交的 JSON 即构建输入，所以部署时只跑 Astro 构建——部署阶段不需要 Python。
+
+## 在 AI 助手中使用 (MCP)
+
+本地 stdio MCP 服务器让 Claude Desktop、Cursor、Cline 等 MCP 客户端直接查询语料库。
+
+**构建服务器**（Node ≥ 22）：
+
+```bash
+cd mcp
+npm install
+npm run build   # → mcp/dist/server.js
+```
+
+**接入 Claude Desktop**（`~/Library/Application Support/Claude/claude_desktop_config.json`）：
+
+```json
+{
+  "mcpServers": {
+    "confer": {
+      "command": "node",
+      "args": ["/absolute/path/to/confcrawl/mcp/dist/server.js"]
+    }
+  }
+}
+```
+
+可用工具：`list_venues`（列出会场）、`search_papers`（字段化搜索，支持 `author:`、
+`title:`、`inst:`、`track:`、`venue:`、`year:` 等前缀及 `-` 排除）、`get_paper`（获取
+完整论文记录）、`find_similar`（TF-IDF 相似论文）、`top_authors` / `top_institutions` /
+`top_tracks`（统计排行）、`export_bibtex`（导出参考文献）。
+
+完整工具说明、Cursor 配置及可选环境变量 `CONFER_DATA_DIR` 详见 **[mcp/README.md](mcp/README.md)**。
 
 ## 新增会场
 
