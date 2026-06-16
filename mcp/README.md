@@ -36,9 +36,7 @@ block below — `npx` fetches and runs the server, which streams the corpus from
 
 Requires **Node ≥ 18** on your PATH. Restart the client after editing its config.
 
-> Per-venue files load lazily and are cached under your OS temp dir, so repeated
-> queries are fast. The first `find_similar` (or an unfiltered `top_*`) call
-> loads the whole corpus (~84 MB) once — give it a moment.
+> The first query fetches data and may take a few seconds; later queries are fast.
 
 ## Set it up in your client
 
@@ -121,8 +119,7 @@ Then in ChatGPT: **Settings → Connectors → Advanced → Developer mode → A
 custom connector**, and paste the public `https://….ngrok.app/mcp` URL. See the
 [supergateway](https://github.com/supercorp-ai/supergateway) and
 [ChatGPT connector](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt)
-docs for exact flags. (This keeps a process + tunnel running on your machine; a
-hosted endpoint is on the roadmap.)
+docs for exact flags. (This keeps a process + tunnel running on your machine.)
 
 ## Configuration
 
@@ -130,7 +127,7 @@ hosted endpoint is on the roadmap.)
 |---------|---------|-------------|
 | `CONFER_DATA_URL` | `https://confer.repus.me/data` | Base URL the server fetches `venues.json` and per-venue JSON from. |
 | `CONFER_DATA_DIR` | *(auto)* | Read from a local directory instead of the network. Auto-detected when run from a repo checkout (`web/public/data`); set it to force a path and run fully offline. |
-| `HTTPS_PROXY` / `HTTP_PROXY` | — | Honoured for the remote fetch (Node's global `fetch` ignores these by default; the server routes through them when set). |
+| `HTTPS_PROXY` / `HTTP_PROXY` | — | Used for the remote fetch when set (e.g. behind a corporate proxy). |
 
 ## Run from a local checkout (offline / development)
 

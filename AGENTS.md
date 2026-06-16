@@ -90,6 +90,9 @@ web/                   [now] Astro static site (Netlify)
   public/data/
     venues.json        [now] sidebar manifest (written by scraper export)
     <venue_id>.json    [now] unified papers per venue (written by scraper export)
+    mcp/               [now] MCP precompute artifacts (written by `confer build`)
+      vectors.json     [now] per-paper TF-IDF vectors + slim records (find_similar)
+      stats.json       [now] global top authors / institutions / tracks (top_*)
   dist/                [now] Astro build output, gitignored (Netlify publishes it)
 mcp/                   [now] MCP stdio server (TypeScript, Node 22)
   package.json         [now] name: confer-mcp (publishable; bin → npx confer-mcp);
@@ -100,9 +103,14 @@ mcp/                   [now] MCP stdio server (TypeScript, Node 22)
                             remote fetch from CONFER_DATA_URL (default confer.repus.me/data,
                             disk-cached, HTTPS_PROXY-aware). Manifest loads first so
                             venueById is sync; per-venue files load lazily + async.
-    server.ts          [now] McpServer + StdioServerTransport; 8 tools (search, similar, stats, bibtex)
-  README.md            [now] npx quick-start + offline/dev setup + env vars
-  dist/                [now] tsup bundle (gitignored); `npm run build` → dist/server.js (shebang)
+                            loadVectors()/loadStats() read the precomputed artifacts.
+    server.ts          [now] McpServer + StdioServerTransport; 8 tools (search, similar, stats, bibtex).
+                            find_similar + unfiltered top_* use the precompute (with a
+                            live-over-corpus fallback when artifacts are absent).
+    precompute.ts      [now] build-time: reuses web/src/core to write public/data/mcp/*;
+                            run by `confer build` (Node subprocess) and `npm run precompute`
+  README.md            [now] npx quick-start + per-client setup + precompute + remote-not-planned
+  dist/                [now] tsup bundle (gitignored); `npm run build` → server.js + precompute.js
 data/cache/            [now] cached raw HTML, gitignored. Per-venue subdirs.
 netlify.toml           [now] Netlify build config (base=web, publish=dist)
 ```
@@ -192,14 +200,52 @@ uv run confer build --venue fse2026       # Researchr detailed timeline venue
 uv run confer build --venue tosem2026     # DBLP journal TOC + default metadata enrichment
 uv run confer build --venue popl2026      # Researchr + default metadata enrichment
 uv run confer build --refresh             # ignore cache, refetch over the network
-uv run confer build --venue dac2026 --limit 5   # debug: only a few detail pages
+uv run confer build --venue dac2026 --limit 5   # debug: only a few detail pages (skips precompute)
+uv run confer build --no-precompute       # skip regenerating web/public/data/mcp/*
 uv run --extra dev pytest                    # offline parser tests (tests/fixtures/)
 
 # Astro site (run inside web/)
 npm install
 npm run dev                       # local dev server
 npm run build                     # static build → web/dist/ (what Netlify publishes)
+npm test                          # vitest unit tests for web/src/core
+
+# MCP server (run inside mcp/) — needed once so `confer build` can precompute
+npm install
+npm run build                     # → dist/server.js (+ dist/precompute.js)
+npm run precompute                # regenerate web/public/data/mcp/* (also run by confer build)
 ```
+
+> `confer build` regenerates the MCP precompute artifacts (`web/public/data/mcp/
+> vectors.json` + `stats.json`) as its final step by invoking `mcp/dist/precompute.js`
+> — so build `mcp/` once first. The artifacts are committed and served like the rest
+> of the data.
+
+### Precompute (why it exists)
+
+`find_similar` and the unfiltered `top_*` tools would otherwise need the whole corpus
+(~84 MB) plus a TF-IDF build in every server process. `mcp/src/precompute.ts` reuses
+`web/src/core` (`buildTfidfModel`, `computeInsights`) to emit two static artifacts at
+build time:
+
+- `vectors.json` — per-paper TF-IDF vectors (+ slim records). `find_similar` loads it
+  once and scores a single query against it — exact cosine (same math as the site), no
+  corpus download. ~47 MB raw, ~15 MB gzipped over the wire.
+- `stats.json` — global top authors / institutions / tracks for the unfiltered `top_*`.
+
+The server falls back to live computation over the corpus when the artifacts are absent
+(e.g. an older deploy). Venue/query-scoped `top_*` and `search_papers` never use them.
+
+### Remote / hosted `/mcp` endpoint — intentionally not built
+
+ChatGPT's web connectors need a public HTTPS MCP URL; everything else runs `npx
+confer-mcp` (stdio, zero-install). A first-party hosted endpoint is **deliberately out
+of scope** because: (1) the audience is narrow — only ChatGPT web needs a URL, and the
+stdio→HTTP bridge in `mcp/README.md` covers it; (2) it would turn a free, stateless
+static deploy into an operated service needing uptime, rate-limiting, and abuse/cost
+control, since corpus-wide queries are comparatively expensive; (3) low marginal value —
+the precompute already makes the heavy tools cheap. If that changes, the same `core/` +
+precompute could back a thin stateless Streamable-HTTP function later.
 
 ## Conventions & guardrails
 

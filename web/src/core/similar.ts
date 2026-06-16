@@ -12,18 +12,33 @@ export interface TfidfIndex {
   recommend(profileKeys: Iterable<string>, n?: number): { key: string; p: Paper; v: string; score: number }[];
 }
 
-/** Build a TF-IDF index over a set of rows.  O(N·V) time/space (N papers, V vocab).
- *  Call once per corpus snapshot; discard and rebuild when the corpus changes. */
-export function buildTfidfIndex(rows: { p: Paper; v: string }[]): TfidfIndex {
+/** Per-paper L2-normalised TF-IDF vectors plus the row lookup, exposed so callers
+ *  (e.g. the build-time precompute) can run their own efficient neighbour search
+ *  without re-deriving the vector math. `buildTfidfIndex` is built on top of this. */
+export interface TfidfModel {
+  /** Paper keys (venue:id) aligned to the input row order. */
+  keys: string[];
+  /** key → its L2-normalised sparse TF-IDF vector (term → weight). */
+  vecs: Map<string, Map<string, number>>;
+  /** key → its row. */
+  rowByKey: Map<string, { p: Paper; v: string }>;
+}
+
+/** Build the TF-IDF vector model over a set of rows.  O(N·V) time/space.
+ *  The focused document text is title + abstract + keywords + tracks. */
+export function buildTfidfModel(rows: { p: Paper; v: string }[]): TfidfModel {
   const docCount = rows.length;
+  const keys: string[] = [];
   const rowByKey = new Map<string, { p: Paper; v: string }>();
   const df = new Map<string, number>();
+  const focusedOf = (p: Paper) =>
+    `${p.title} ${p.abstract} ${(p.keywords ?? []).join(' ')} ${p.tracks.join(' ')}`;
 
   for (const row of rows) {
     const k = paperKey(row.v, row.p.id);
+    keys.push(k);
     rowByKey.set(k, row);
-    const focused = `${row.p.title} ${row.p.abstract} ${(row.p.keywords ?? []).join(' ')} ${row.p.tracks.join(' ')}`;
-    for (const t of new Set(tfidfTokenize(focused))) {
+    for (const t of new Set(tfidfTokenize(focusedOf(row.p)))) {
       df.set(t, (df.get(t) ?? 0) + 1);
     }
   }
@@ -35,8 +50,7 @@ export function buildTfidfIndex(rows: { p: Paper; v: string }[]): TfidfIndex {
   const vecs = new Map<string, Map<string, number>>();
   for (const row of rows) {
     const k = paperKey(row.v, row.p.id);
-    const focused = `${row.p.title} ${row.p.abstract} ${(row.p.keywords ?? []).join(' ')} ${row.p.tracks.join(' ')}`;
-    const tokens = tfidfTokenize(focused);
+    const tokens = tfidfTokenize(focusedOf(row.p));
     if (!tokens.length) { vecs.set(k, new Map()); continue; }
     const tf = new Map<string, number>();
     for (const t of tokens) tf.set(t, (tf.get(t) ?? 0) + 1);
@@ -50,6 +64,14 @@ export function buildTfidfIndex(rows: { p: Paper; v: string }[]): TfidfIndex {
     for (const [t, w] of vec) vec.set(t, w / norm);
     vecs.set(k, vec);
   }
+
+  return { keys, vecs, rowByKey };
+}
+
+/** Build a TF-IDF index over a set of rows.  Call once per corpus snapshot;
+ *  discard and rebuild when the corpus changes. */
+export function buildTfidfIndex(rows: { p: Paper; v: string }[]): TfidfIndex {
+  const { vecs, rowByKey } = buildTfidfModel(rows);
 
   /** Dot product of two L2-normalised sparse vectors = cosine similarity. */
   function cosine(a: Map<string, number>, b: Map<string, number>): number {

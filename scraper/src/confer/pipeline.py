@@ -1,6 +1,9 @@
 """Orchestrate: for each venue, run its adapter and emit site data."""
 
 import json
+import os
+import shutil
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -10,7 +13,7 @@ from .enrichers import enrich_papers
 from .export import write_manifest, write_venue
 from .fetcher import Fetcher
 from .models import Paper
-from .paths import cache_root, site_data_dir
+from .paths import cache_root, find_repo_root, site_data_dir
 from .scrapers import get_scraper
 from .util import meaningful_abstract
 
@@ -54,6 +57,7 @@ def build(
     delay: float = 0.0,
     timeout: int = 30,
     update_manifest: bool = True,
+    precompute: bool = True,
 ) -> dict[str, Any]:
     out = out_dir or site_data_dir()
     summaries: list[dict[str, Any]] = []
@@ -79,7 +83,36 @@ def build(
         write_manifest(out, manifest)
         print(f"manifest → {out / 'venues.json'} ({len(manifest)} venues)", file=sys.stderr)
 
+    # Regenerate the MCP precompute artifacts (similar/stats) from the full
+    # corpus in `out`. Skipped for debug builds (--limit) since their partial
+    # data would corrupt the committed artifacts.
+    if precompute and limit is None:
+        _run_precompute(out)
+
     return {"counts": counts, "out_dir": str(out)}
+
+
+def _run_precompute(out_dir: Path) -> None:
+    """Run the MCP precompute (Node) over the freshly written corpus.
+
+    Reuses web/src/core via mcp/dist/precompute.js. Non-fatal: if Node or the
+    built script is missing, warn and skip — the data is already written and the
+    MCP server falls back to live computation until the artifacts are generated.
+    """
+    node = shutil.which("node")
+    script = find_repo_root() / "mcp" / "dist" / "precompute.js"
+    if not node or not script.exists():
+        print(
+            "[precompute] skipped — run `cd mcp && npm install && npm run build`, "
+            "then rebuild (or `cd mcp && CONFER_DATA_DIR=… npm run precompute`).",
+            file=sys.stderr,
+        )
+        return
+    env = {**os.environ, "CONFER_DATA_DIR": str(out_dir)}
+    try:
+        subprocess.run([node, str(script)], env=env, check=True)
+    except subprocess.CalledProcessError as exc:  # pragma: no cover - build-time
+        print(f"[precompute] failed (exit {exc.returncode}); artifacts may be stale.", file=sys.stderr)
 
 
 def _merge_manifest(out_dir: Path, summaries: list[dict[str, Any]]) -> list[dict[str, Any]]:

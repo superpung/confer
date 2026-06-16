@@ -13,7 +13,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 
-import { loadManifest, venueById, venueRows, rowsFor, allRows } from './corpus.js';
+import { loadManifest, venueById, venueRows, rowsFor, allRows, loadVectors, loadStats } from './corpus.js';
 import { parseQuery, matchQuery } from '../../web/src/core/query.js';
 import { paperKey } from '../../web/src/core/text.js';
 import { buildTfidfIndex } from '../../web/src/core/similar.js';
@@ -202,8 +202,36 @@ server.registerTool(
   },
   async ({ venue, id, n }) => {
     await loadManifest();
-    const index = await getTfidfIndex();
     const targetKey = paperKey(venue, id);
+
+    // Fast path: precomputed vectors → one cosine scan, no corpus download.
+    const vd = await loadVectors();
+    if (vd) {
+      const i = vd.keyToIdx.get(targetKey);
+      if (i === undefined) {
+        return { content: [{ type: 'text' as const, text: JSON.stringify([]) }] };
+      }
+      const q = new Map<number, number>();
+      const qa = vd.vecs[i];
+      for (let x = 0; x < qa.length; x += 2) q.set(qa[x], qa[x + 1]);
+      const scored: { j: number; s: number }[] = [];
+      const V = vd.vecs;
+      for (let j = 0; j < V.length; j++) {
+        if (j === i) continue;
+        const a = V[j];
+        let dot = 0;
+        for (let x = 0; x < a.length; x += 2) { const w = q.get(a[x]); if (w) dot += w * a[x + 1]; }
+        if (dot > 0) scored.push({ j, s: dot });
+      }
+      scored.sort((p, q2) => q2.s - p.s);
+      const results = scored
+        .slice(0, n)
+        .map(({ j, s }) => ({ ...vd.papers[j], score: Math.round(s * 1000) / 1000 }));
+      return { content: [{ type: 'text' as const, text: JSON.stringify(results, null, 2) }] };
+    }
+
+    // Fallback: build the TF-IDF index live over the full corpus.
+    const index = await getTfidfIndex();
     const results = index
       .similar(targetKey, n)
       .map(({ p, v, score }) => ({ ...slim(p, v), score: Math.round(score * 1000) / 1000 }));
@@ -216,6 +244,11 @@ server.registerTool(
 // ---------------------------------------------------------------------------
 // Stats tools: top_authors / top_institutions / top_tracks
 // ---------------------------------------------------------------------------
+
+/** True when a stats request spans the whole corpus (→ use precomputed stats). */
+function isUnfiltered(venues: string[] | undefined, query: string | undefined): boolean {
+  return (!venues || venues.length === 0) && !query;
+}
 
 /** Shared row collection for the stats tools: optional venue + query narrowing. */
 async function statsRows(venues: string[] | undefined, query: string | undefined) {
@@ -237,6 +270,12 @@ server.registerTool(
     }),
   },
   async ({ venues, query, limit }) => {
+    if (isUnfiltered(venues, query)) {
+      const stats = await loadStats();
+      if (stats) {
+        return { content: [{ type: 'text' as const, text: JSON.stringify(stats.topAuthors.slice(0, limit), null, 2) }] };
+      }
+    }
     const rows = await statsRows(venues, query);
     const { authorCount, authorNames } = computeInsights(rows);
     const top = topN(authorCount, limit).map(({ name: key, count }) => ({
@@ -259,6 +298,12 @@ server.registerTool(
     }),
   },
   async ({ venues, query, limit }) => {
+    if (isUnfiltered(venues, query)) {
+      const stats = await loadStats();
+      if (stats) {
+        return { content: [{ type: 'text' as const, text: JSON.stringify(stats.topInstitutions.slice(0, limit), null, 2) }] };
+      }
+    }
     const rows = await statsRows(venues, query);
     const { instCount } = computeInsights(rows);
     return { content: [{ type: 'text' as const, text: JSON.stringify(topN(instCount, limit), null, 2) }] };
@@ -276,6 +321,12 @@ server.registerTool(
     }),
   },
   async ({ venues, query, limit }) => {
+    if (isUnfiltered(venues, query)) {
+      const stats = await loadStats();
+      if (stats) {
+        return { content: [{ type: 'text' as const, text: JSON.stringify(stats.topTracks.slice(0, limit), null, 2) }] };
+      }
+    }
     const rows = await statsRows(venues, query);
     const { trackCount } = computeInsights(rows);
     return { content: [{ type: 'text' as const, text: JSON.stringify(topN(trackCount, limit), null, 2) }] };

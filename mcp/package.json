@@ -30,9 +30,10 @@
     "directory": "mcp"
   },
   "scripts": {
-    "build": "tsup src/server.ts --format esm --target node18 --out-dir dist --no-splitting --no-dts",
+    "build": "tsup src/server.ts src/precompute.ts --format esm --target node18 --out-dir dist --no-splitting --no-dts",
     "dev": "node --watch dist/server.js",
     "start": "node dist/server.js",
+    "precompute": "node dist/precompute.js",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {

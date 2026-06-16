@@ -64,7 +64,7 @@ async function loadJson<T>(filename: string): Promise<T> {
   if (!res.ok) throw new Error(`Failed to fetch ${filename} from ${REMOTE_URL}: HTTP ${res.status}`);
   const text = await res.text();
   try {
-    mkdirSync(CACHE_DIR, { recursive: true });
+    mkdirSync(dirname(cached), { recursive: true });
     writeFileSync(cached, text);
   } catch {
     // Cache is best-effort; ignore write failures (e.g. read-only temp dir).
@@ -131,4 +131,69 @@ export async function rowsFor(ids: string[]): Promise<{ p: Paper; v: string }[]>
 export async function allRows(): Promise<{ p: Paper; v: string }[]> {
   const manifest = await loadManifest();
   return rowsFor(manifest.map((v) => v.id));
+}
+
+// --------------------------------------------------------------------------
+// Precomputed artifacts (web/public/data/mcp/, written by `npm run precompute`)
+// Optional: when absent, callers fall back to live computation over the corpus.
+// --------------------------------------------------------------------------
+
+/** Compact paper record, aligned to the vectors file (matches server slim()). */
+export interface SlimPaper {
+  venue: string;
+  venueName: string;
+  year: number | null;
+  id: string;
+  title: string;
+  authors: string[];
+  tracks: string[];
+  doi: string | null;
+  url: string | null;
+}
+
+/** Precomputed TF-IDF vectors for the whole corpus, ready for cosine scoring. */
+export interface VectorData {
+  /** Slim records, index-aligned to `vecs`. */
+  papers: SlimPaper[];
+  /** termId → term string (interning dictionary; unused at query time). */
+  terms: string[];
+  /** Flat [termId, weight, termId, weight, …] per paper, index-aligned to `papers`. */
+  vecs: number[][];
+  /** "venue:id" → index. */
+  keyToIdx: Map<string, number>;
+}
+
+export interface StatsData {
+  topAuthors: { author: string; key: string; count: number }[];
+  topInstitutions: { name: string; count: number }[];
+  topTracks: { name: string; count: number }[];
+}
+
+// undefined = not yet attempted, null = confirmed absent (use live fallback).
+let _vectors: VectorData | null | undefined;
+let _stats: StatsData | null | undefined;
+
+/** Load precomputed TF-IDF vectors, or null when the artifact is unavailable. */
+export async function loadVectors(): Promise<VectorData | null> {
+  if (_vectors !== undefined) return _vectors;
+  try {
+    const raw = await loadJson<Omit<VectorData, 'keyToIdx'>>('mcp/vectors.json');
+    const keyToIdx = new Map<string, number>();
+    raw.papers.forEach((p, i) => keyToIdx.set(`${p.venue}:${p.id}`, i));
+    _vectors = { ...raw, keyToIdx };
+  } catch {
+    _vectors = null;
+  }
+  return _vectors;
+}
+
+/** Load precomputed global stats, or null when the artifact is unavailable. */
+export async function loadStats(): Promise<StatsData | null> {
+  if (_stats !== undefined) return _stats;
+  try {
+    _stats = await loadJson<StatsData>('mcp/stats.json');
+  } catch {
+    _stats = null;
+  }
+  return _stats;
 }

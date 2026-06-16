@@ -16,6 +16,8 @@ Entries are user-facing; implementation details belong in commit messages.
   BibTeX citations. Zero-install: add `npx -y confer-mcp` to your MCP client and it
   streams the corpus from the public site on demand (no clone, no build); a local
   repo checkout or `CONFER_DATA_DIR` runs fully offline. Honours `HTTPS_PROXY`.
+- MCP `find_similar` and corpus-wide `top_authors`/`top_institutions`/`top_tracks`
+  now respond fast from precomputed data instead of loading the whole corpus.
 
 ---
 

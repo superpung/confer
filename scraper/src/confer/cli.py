@@ -24,6 +24,11 @@ def build_parser() -> argparse.ArgumentParser:
     build_cmd.add_argument("--all", action="store_true", help="Include disabled venues too.")
     build_cmd.add_argument("--refresh", action="store_true", help="Ignore cached pages and refetch.")
     build_cmd.add_argument("--limit", type=int, help="Debug: cap detail pages per venue.")
+    build_cmd.add_argument(
+        "--no-precompute",
+        action="store_true",
+        help="Skip regenerating MCP precompute artifacts (web/public/data/mcp).",
+    )
     build_cmd.add_argument("--workers", type=int, default=6, help="Parallel detail fetches.")
     build_cmd.add_argument("--delay", type=float, default=0.0, help="Delay before each uncached request.")
     build_cmd.add_argument("--timeout", type=int, default=30, help="HTTP timeout (seconds).")
@@ -61,6 +66,7 @@ def cmd_build(args: argparse.Namespace) -> int:
         workers=args.workers,
         delay=args.delay,
         timeout=args.timeout,
+        precompute=not args.no_precompute,
     )
     total = sum(result["counts"].values())
     print(f"Done: {total} papers across {len(result['counts'])} venue(s).", file=sys.stderr)
