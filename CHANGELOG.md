@@ -13,7 +13,9 @@ Entries are user-facing; implementation details belong in commit messages.
   Cursor, Cline, …) via the Model Context Protocol — search papers with the same
   field-aware query syntax as the web UI, retrieve full paper records, find similar
   papers by TF-IDF similarity, view top authors / institutions / tracks, and export
-  BibTeX citations. Runs as a local stdio server; no external service required.
+  BibTeX citations. Zero-install: add `npx -y confer-mcp` to your MCP client and it
+  streams the corpus from the public site on demand (no clone, no build); a local
+  repo checkout or `CONFER_DATA_DIR` runs fully offline. Honours `HTTPS_PROXY`.
 
 ---
 

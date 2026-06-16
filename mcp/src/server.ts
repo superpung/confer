@@ -1,29 +1,32 @@
+#!/usr/bin/env node
 /**
  * confer MCP stdio server.
  * Exposes the conference/journal paper corpus to AI agents via the
  * Model Context Protocol (https://modelcontextprotocol.io).
  *
- * Usage: node dist/server.js
- * Config: CONFER_DATA_DIR (optional) overrides the default data path.
+ * Usage:  npx confer-mcp        (fetches data from confer.repus.me)
+ *         node dist/server.js   (uses repo data when run from a checkout)
+ * Env:    CONFER_DATA_DIR  override with a local data directory
+ *         CONFER_DATA_URL  override the remote data base URL
  */
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 
-import { loadManifest, venueById, venueRows, allRows } from './corpus.js';
+import { loadManifest, venueById, venueRows, rowsFor, allRows } from './corpus.js';
 import { parseQuery, matchQuery } from '../../web/src/core/query.js';
 import { paperKey } from '../../web/src/core/text.js';
 import { buildTfidfIndex } from '../../web/src/core/similar.js';
 import { computeInsights, topN } from '../../web/src/core/insights.js';
 import { toBibtex, type ExportRow } from '../../web/src/scripts/export.js';
-import type { Paper, Venue } from '../../web/src/scripts/types.js';
+import type { Paper } from '../../web/src/scripts/types.js';
 
 // ---------------------------------------------------------------------------
-// Lazy global TF-IDF index (built on first find_similar / top_* call)
+// Lazy global TF-IDF index (built on first find_similar call)
 // ---------------------------------------------------------------------------
 let _tfidfIndex: ReturnType<typeof buildTfidfIndex> | null = null;
-function getTfidfIndex() {
-  if (!_tfidfIndex) _tfidfIndex = buildTfidfIndex(allRows());
+async function getTfidfIndex() {
+  if (!_tfidfIndex) _tfidfIndex = buildTfidfIndex(await allRows());
   return _tfidfIndex;
 }
 
@@ -31,7 +34,8 @@ function getTfidfIndex() {
 // Result shaping helpers
 // ---------------------------------------------------------------------------
 
-/** Compact paper record for list results (omit heavy fields). */
+/** Compact paper record for list results (omit heavy fields).
+ *  Assumes loadManifest() has run so venueById is populated. */
 function slim(p: Paper, v: string) {
   const venue = venueById(v);
   return {
@@ -46,6 +50,9 @@ function slim(p: Paper, v: string) {
     url: p.urls[0] ?? null,
   };
 }
+
+/** Query context for matchQuery — venue lookup only (no user tags in MCP). */
+const queryCtx = { venueById: (id: string) => venueById(id) };
 
 // ---------------------------------------------------------------------------
 // Server setup
@@ -69,7 +76,7 @@ server.registerTool(
     }),
   },
   async ({ category, series }) => {
-    let venues = loadManifest();
+    let venues = await loadManifest();
     if (category) {
       const q = category.toLowerCase();
       venues = venues.filter((v) => v.category?.toLowerCase().includes(q));
@@ -101,7 +108,7 @@ server.registerTool(
   {
     description:
       'Search papers using field-aware query syntax (author:, title:, inst:, track:, ' +
-      'venue:, year:, keyword:, abstract:, tag:, doi:; "-" prefix excludes). ' +
+      'venue:, year:, keyword:, abstract:, doi:; "-" prefix excludes). ' +
       'Returns a compact result list.',
     inputSchema: z.object({
       query: z.string().describe(
@@ -113,18 +120,13 @@ server.registerTool(
     }),
   },
   async ({ query, venues, limit }) => {
+    const manifest = await loadManifest();
     const terms = parseQuery(query);
-    const ctx = { venueById: (id: string) => venueById(id) };
-
-    // Determine row source: specific venues or all
-    const sources = venues && venues.length > 0 ? venues : loadManifest().map((v) => v.id);
-    const rows: { p: Paper; v: string }[] = [];
-    for (const vid of sources) {
-      for (const row of venueRows(vid)) rows.push(row);
-    }
+    const sources = venues && venues.length > 0 ? venues : manifest.map((v) => v.id);
+    const rows = await rowsFor(sources);
 
     const hits = rows
-      .filter((row) => matchQuery(row, terms, ctx))
+      .filter((row) => matchQuery(row, terms, queryCtx))
       .slice(0, limit)
       .map(({ p, v }) => slim(p, v));
 
@@ -152,7 +154,8 @@ server.registerTool(
     }),
   },
   async ({ venue, id }) => {
-    const papers = venueRows(venue);
+    await loadManifest();
+    const papers = await venueRows(venue);
     const row = papers.find((r) => r.p.id === id);
     if (!row) {
       return {
@@ -198,8 +201,10 @@ server.registerTool(
     }),
   },
   async ({ venue, id, n }) => {
+    await loadManifest();
+    const index = await getTfidfIndex();
     const targetKey = paperKey(venue, id);
-    const results = getTfidfIndex()
+    const results = index
       .similar(targetKey, n)
       .map(({ p, v, score }) => ({ ...slim(p, v), score: Math.round(score * 1000) / 1000 }));
     return {
@@ -209,8 +214,18 @@ server.registerTool(
 );
 
 // ---------------------------------------------------------------------------
-// Tool: top_authors
+// Stats tools: top_authors / top_institutions / top_tracks
 // ---------------------------------------------------------------------------
+
+/** Shared row collection for the stats tools: optional venue + query narrowing. */
+async function statsRows(venues: string[] | undefined, query: string | undefined) {
+  const manifest = await loadManifest();
+  const terms = query ? parseQuery(query) : [];
+  const sources = venues && venues.length > 0 ? venues : manifest.map((v) => v.id);
+  const all = await rowsFor(sources);
+  return terms.length ? all.filter((row) => matchQuery(row, terms, queryCtx)) : all;
+}
+
 server.registerTool(
   'top_authors',
   {
@@ -222,15 +237,7 @@ server.registerTool(
     }),
   },
   async ({ venues, query, limit }) => {
-    const terms = query ? parseQuery(query) : [];
-    const ctx = { venueById: (id: string) => venueById(id) };
-    const sources = venues && venues.length > 0 ? venues : loadManifest().map((v) => v.id);
-    const rows: { p: Paper; v: string }[] = [];
-    for (const vid of sources) {
-      for (const row of venueRows(vid)) {
-        if (!terms.length || matchQuery(row, terms, ctx)) rows.push(row);
-      }
-    }
+    const rows = await statsRows(venues, query);
     const { authorCount, authorNames } = computeInsights(rows);
     const top = topN(authorCount, limit).map(({ name: key, count }) => ({
       author: authorNames.get(key) ?? key,
@@ -241,9 +248,6 @@ server.registerTool(
   },
 );
 
-// ---------------------------------------------------------------------------
-// Tool: top_institutions
-// ---------------------------------------------------------------------------
 server.registerTool(
   'top_institutions',
   {
@@ -255,24 +259,12 @@ server.registerTool(
     }),
   },
   async ({ venues, query, limit }) => {
-    const terms = query ? parseQuery(query) : [];
-    const ctx = { venueById: (id: string) => venueById(id) };
-    const sources = venues && venues.length > 0 ? venues : loadManifest().map((v) => v.id);
-    const rows: { p: Paper; v: string }[] = [];
-    for (const vid of sources) {
-      for (const row of venueRows(vid)) {
-        if (!terms.length || matchQuery(row, terms, ctx)) rows.push(row);
-      }
-    }
+    const rows = await statsRows(venues, query);
     const { instCount } = computeInsights(rows);
-    const top = topN(instCount, limit);
-    return { content: [{ type: 'text' as const, text: JSON.stringify(top, null, 2) }] };
+    return { content: [{ type: 'text' as const, text: JSON.stringify(topN(instCount, limit), null, 2) }] };
   },
 );
 
-// ---------------------------------------------------------------------------
-// Tool: top_tracks
-// ---------------------------------------------------------------------------
 server.registerTool(
   'top_tracks',
   {
@@ -284,18 +276,9 @@ server.registerTool(
     }),
   },
   async ({ venues, query, limit }) => {
-    const terms = query ? parseQuery(query) : [];
-    const ctx = { venueById: (id: string) => venueById(id) };
-    const sources = venues && venues.length > 0 ? venues : loadManifest().map((v) => v.id);
-    const rows: { p: Paper; v: string }[] = [];
-    for (const vid of sources) {
-      for (const row of venueRows(vid)) {
-        if (!terms.length || matchQuery(row, terms, ctx)) rows.push(row);
-      }
-    }
+    const rows = await statsRows(venues, query);
     const { trackCount } = computeInsights(rows);
-    const top = topN(trackCount, limit);
-    return { content: [{ type: 'text' as const, text: JSON.stringify(top, null, 2) }] };
+    return { content: [{ type: 'text' as const, text: JSON.stringify(topN(trackCount, limit), null, 2) }] };
   },
 );
 
@@ -320,10 +303,11 @@ server.registerTool(
     }),
   },
   async ({ refs }) => {
+    await loadManifest();
     const exportRows: ExportRow[] = [];
     const missing: string[] = [];
     for (const { venue, id } of refs) {
-      const papers = venueRows(venue);
+      const papers = await venueRows(venue);
       const row = papers.find((r) => r.p.id === id);
       const vobj = venueById(venue);
       if (!row || !vobj) {

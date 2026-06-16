@@ -15,40 +15,53 @@ A [Model Context Protocol](https://modelcontextprotocol.io) stdio server that ex
 | `top_tracks` | Most common tracks/topics. |
 | `export_bibtex` | BibTeX export for a list of `{venue, id}` references. |
 
-## Build
+## Quick start (no clone, no build)
 
-```bash
-cd mcp
-npm install
-npm run build
-# → dist/server.js
-```
-
-## Configuration
-
-| Env var | Default | Description |
-|---------|---------|-------------|
-| `CONFER_DATA_DIR` | `../web/public/data` | Absolute or relative path to the directory containing `venues.json` and per-venue JSON files. |
-
-## Claude Desktop
-
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+Add this to your MCP client config — npm fetches and runs the server, which
+streams the corpus from `https://confer.repus.me/data` on demand (no local data
+needed):
 
 ```json
 {
   "mcpServers": {
     "confer": {
-      "command": "node",
-      "args": ["/absolute/path/to/confcrawl/mcp/dist/server.js"],
-      "env": {
-        "CONFER_DATA_DIR": "/absolute/path/to/confcrawl/web/public/data"
-      }
+      "command": "npx",
+      "args": ["-y", "confer-mcp"]
     }
   }
 }
 ```
 
-## Cursor / VS Code (Cline)
+Config file locations:
+
+- **Claude Desktop** — `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) / `%APPDATA%\Claude\claude_desktop_config.json` (Windows)
+- **Cursor** — `~/.cursor/mcp.json` (or Settings → MCP)
+- **Cline / others** — the client's `mcpServers` block
+
+Requires Node ≥ 18 on your PATH. Restart the client after editing the config.
+
+> Per-venue files load lazily and are cached under your OS temp dir, so repeated
+> queries are fast. The first `find_similar` (or an unfiltered `top_*`) call
+> loads the whole corpus (~84 MB) once — give it a moment.
+
+## Configuration
+
+| Env var | Default | Description |
+|---------|---------|-------------|
+| `CONFER_DATA_URL` | `https://confer.repus.me/data` | Base URL the server fetches `venues.json` and per-venue JSON from. |
+| `CONFER_DATA_DIR` | *(auto)* | Read from a local directory instead of the network. Auto-detected when run from a repo checkout (`web/public/data`); set it to force a path and run fully offline. |
+| `HTTPS_PROXY` / `HTTP_PROXY` | — | Honoured for the remote fetch (Node's global `fetch` ignores these by default; the server routes through them when set). |
+
+## Run from a local checkout (offline / development)
+
+```bash
+cd mcp
+npm install
+npm run build      # → dist/server.js
+```
+
+Then point your client at the built file (it auto-uses the repo's
+`web/public/data`, so it works offline):
 
 ```json
 {

@@ -92,13 +92,17 @@ web/                   [now] Astro static site (Netlify)
     <venue_id>.json    [now] unified papers per venue (written by scraper export)
   dist/                [now] Astro build output, gitignored (Netlify publishes it)
 mcp/                   [now] MCP stdio server (TypeScript, Node 22)
-  package.json         [now] name: confer-mcp; deps: @modelcontextprotocol/sdk, zod
-  tsconfig.json        [now]
+  package.json         [now] name: confer-mcp (publishable; bin → npx confer-mcp);
+                            deps: @modelcontextprotocol/sdk, zod, undici
+  tsconfig.json        [now] typecheck only (bundler resolution); tsup does the build
   src/
-    corpus.ts          [now] fs loader for web/public/data/ (lazy per-venue, CONFER_DATA_DIR env)
+    corpus.ts          [now] data loader: local dir (CONFER_DATA_DIR / repo checkout) OR
+                            remote fetch from CONFER_DATA_URL (default confer.repus.me/data,
+                            disk-cached, HTTPS_PROXY-aware). Manifest loads first so
+                            venueById is sync; per-venue files load lazily + async.
     server.ts          [now] McpServer + StdioServerTransport; 8 tools (search, similar, stats, bibtex)
-  README.md            [now] setup + Claude Desktop / Cursor config snippet
-  dist/                [now] tsup bundle (gitignored); `npm run build` → dist/server.js
+  README.md            [now] npx quick-start + offline/dev setup + env vars
+  dist/                [now] tsup bundle (gitignored); `npm run build` → dist/server.js (shebang)
 data/cache/            [now] cached raw HTML, gitignored. Per-venue subdirs.
 netlify.toml           [now] Netlify build config (base=web, publish=dist)
 ```

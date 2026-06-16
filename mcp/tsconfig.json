@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "lib": ["ES2022"],
+    "types": ["node"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "dist",
-    "rootDir": ".",
+    "noEmit": true,
     "paths": {}
   },
-  "include": ["src/**/*.ts", "../web/src/core/**/*.ts", "../web/src/scripts/types.ts", "../web/src/scripts/export.ts"]
+  "include": ["src/**/*.ts", "../web/src/core/**/*.ts", "../web/src/scripts/types.ts", "../web/src/scripts/export.ts"],
+  "exclude": ["node_modules", "dist", "src/**/*.test.ts", "../web/src/core/**/*.test.ts"]
 }

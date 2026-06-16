@@ -126,36 +126,31 @@ build — no Python at deploy time.
 
 ## Use it from AI agents (MCP)
 
-A local stdio MCP server lets Claude Desktop, Cursor, Cline, and other MCP clients
-query the corpus directly.
-
-**Build the server** (Node ≥ 22):
-
-```bash
-cd mcp
-npm install
-npm run build   # → mcp/dist/server.js
-```
-
-**Wire it into Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+A stdio MCP server lets Claude Desktop, Cursor, Cline, and other MCP clients query
+the corpus directly. The simplest setup needs **no clone and no build** — just add
+this to your client's MCP config (requires Node ≥ 18 on your PATH):
 
 ```json
 {
   "mcpServers": {
     "confer": {
-      "command": "node",
-      "args": ["/absolute/path/to/confcrawl/mcp/dist/server.js"]
+      "command": "npx",
+      "args": ["-y", "confer-mcp"]
     }
   }
 }
 ```
 
+`npx` fetches and runs the server, which streams the corpus from
+`https://confer.repus.me/data` on demand (per-venue files are cached under your OS
+temp dir). Restart the client after editing the config.
+
 Available tools: `list_venues`, `search_papers` (field-aware: `author:`, `title:`,
 `inst:`, `track:`, `venue:`, `year:`, …), `get_paper`, `find_similar`,
 `top_authors`, `top_institutions`, `top_tracks`, `export_bibtex`.
 
-See **[mcp/README.md](mcp/README.md)** for the full tool reference, Cursor config,
-and the optional `CONFER_DATA_DIR` environment variable.
+Prefer to run it offline from this repo, or want the full tool reference and env
+vars (`CONFER_DATA_URL`, `CONFER_DATA_DIR`)? See **[mcp/README.md](mcp/README.md)**.
 
 ## Add a venue
 

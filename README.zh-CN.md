@@ -106,35 +106,31 @@ npm run build      # 静态构建 → web/dist/
 
 ## 在 AI 助手中使用 (MCP)
 
-本地 stdio MCP 服务器让 Claude Desktop、Cursor、Cline 等 MCP 客户端直接查询语料库。
-
-**构建服务器**（Node ≥ 22）：
-
-```bash
-cd mcp
-npm install
-npm run build   # → mcp/dist/server.js
-```
-
-**接入 Claude Desktop**（`~/Library/Application Support/Claude/claude_desktop_config.json`）：
+stdio MCP 服务器让 Claude Desktop、Cursor、Cline 等 MCP 客户端直接查询语料库。
+最简单的方式**无需克隆、无需构建**——只要在客户端的 MCP 配置里加上下面这段
+（需要 PATH 中有 Node ≥ 18）：
 
 ```json
 {
   "mcpServers": {
     "confer": {
-      "command": "node",
-      "args": ["/absolute/path/to/confcrawl/mcp/dist/server.js"]
+      "command": "npx",
+      "args": ["-y", "confer-mcp"]
     }
   }
 }
 ```
 
-可用工具：`list_venues`（列出会场）、`search_papers`（字段化搜索，支持 `author:`、
+`npx` 会自动拉取并运行服务器,数据按需从 `https://confer.repus.me/data` 流式获取
+（按会场缓存到系统临时目录）。改完配置后重启客户端即可。
+
+可用工具：`list_venues`（列出会场）、`search_papers`（字段化搜索,支持 `author:`、
 `title:`、`inst:`、`track:`、`venue:`、`year:` 等前缀及 `-` 排除）、`get_paper`（获取
 完整论文记录）、`find_similar`（TF-IDF 相似论文）、`top_authors` / `top_institutions` /
 `top_tracks`（统计排行）、`export_bibtex`（导出参考文献）。
 
-完整工具说明、Cursor 配置及可选环境变量 `CONFER_DATA_DIR` 详见 **[mcp/README.md](mcp/README.md)**。
+想离线运行、或查看完整工具说明与环境变量（`CONFER_DATA_URL`、`CONFER_DATA_DIR`）,
+详见 **[mcp/README.md](mcp/README.md)**。
 
 ## 新增会场
 
