@@ -247,6 +247,35 @@ control, since corpus-wide queries are comparatively expensive; (3) low marginal
 the precompute already makes the heavy tools cheap. If that changes, the same `core/` +
 precompute could back a thin stateless Streamable-HTTP function later.
 
+## Releasing
+
+There are **two independently-versioned artifacts** — don't conflate them:
+
+- **confer** (the site/repo) — versioned by `web/package.json`, git tags `vX.Y.Z`,
+  and GitHub Releases. The site footer reads `web/package.json` version and links to
+  `/releases/tag/v<version>`.
+- **confer-mcp** (the npm package in `mcp/`) — versioned by `mcp/package.json` and
+  published to npm (`npm publish`, needs the maintainer's 2FA OTP). Bump + publish it
+  only when `mcp/` source changes; it is **not** tied to confer site versions.
+
+### confer site release — one atomic sequence (do all steps, in order)
+
+The version number, the git tag, and the GitHub Release are interdependent: the footer
+badge links to `/releases/tag/v<version>`, so a version bump **without** a matching tag
+and Release yields a dead link. Never do them piecemeal.
+
+1. **CHANGELOG**: rename `## [Unreleased]` → `## [X.Y.Z] - YYYY-MM-DD` and leave a fresh
+   empty `## [Unreleased]` above it. Entries are user-facing (impl details → commits).
+2. **Version**: set `web/package.json` `"version"` to `X.Y.Z` (semver: new feature → minor).
+3. **Commit**: `chore(release): confer vX.Y.Z` (CHANGELOG + web/package.json together).
+4. **Push**: `git push origin main`.
+5. **Tag**: `git tag vX.Y.Z && git push origin vX.Y.Z`.
+6. **GitHub Release**: `gh release create vX.Y.Z --title "vX.Y.Z" --notes "<this version's
+   CHANGELOG section>"`.
+
+After step 6, confirm the footer link resolves (the Release for `v<web/package.json
+version>` must exist). Netlify redeploys from `main` on push and serves the new footer.
+
 ## Conventions & guardrails
 
 - **Determinism:** sort outputs (by id, then session) and serialize JSON with
