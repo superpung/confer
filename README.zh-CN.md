@@ -9,6 +9,9 @@
 一个快速、可搜索的论文聚合站，把顶级会议与期刊的录用论文收拢到一处——
 纵览整个领域、追踪作者与机构，把论文读成洞见。
 
+[![npm version](https://img.shields.io/npm/v/confer-mcp?logo=npm&label=confer-mcp)](https://www.npmjs.com/package/confer-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 [English](README.md) · **中文**
 
 [**打开在线站点 →**](https://confer.repus.me)
@@ -106,9 +109,9 @@ npm run build      # 静态构建 → web/dist/
 
 ## 在 AI 助手中使用 (MCP)
 
-stdio MCP 服务器让 Claude Desktop、Cursor、Cline 等 MCP 客户端直接查询语料库。
-最简单的方式**无需克隆、无需构建**——只要在客户端的 MCP 配置里加上下面这段
-（需要 PATH 中有 Node ≥ 18）：
+stdio MCP 服务器让 Claude Desktop、Claude Code、Cursor、VS Code、Codex 等 MCP
+客户端直接查询语料库。最简单的方式**无需克隆、无需构建**——只要在客户端的 MCP
+配置里加上下面这段（需要 PATH 中有 Node ≥ 18）：
 
 ```json
 {
@@ -129,8 +132,9 @@ stdio MCP 服务器让 Claude Desktop、Cursor、Cline 等 MCP 客户端直接�
 完整论文记录）、`find_similar`（TF-IDF 相似论文）、`top_authors` / `top_institutions` /
 `top_tracks`（统计排行）、`export_bibtex`（导出参考文献）。
 
-想离线运行、或查看完整工具说明与环境变量（`CONFER_DATA_URL`、`CONFER_DATA_DIR`）,
-详见 **[mcp/README.md](mcp/README.md)**。
+各客户端的详细配置（Claude Desktop、Claude Code、Cursor、VS Code、Cline、
+Windsurf、Codex,以及通过远程桥接接入 ChatGPT）、完整工具说明和环境变量
+（`CONFER_DATA_URL`、`CONFER_DATA_DIR`、离线模式）详见 **[mcp/README.md](mcp/README.md)**。
 
 ## 新增会场
 

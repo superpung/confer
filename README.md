@@ -9,6 +9,9 @@
 A fast, searchable home for accepted papers from top conferences and journals —
 browse the field, follow authors and institutions, and turn papers into insight.
 
+[![npm version](https://img.shields.io/npm/v/confer-mcp?logo=npm&label=confer-mcp)](https://www.npmjs.com/package/confer-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **English** · [中文](README.zh-CN.md)
 
 [**Open the live site →**](https://confer.repus.me)
@@ -126,9 +129,10 @@ build — no Python at deploy time.
 
 ## Use it from AI agents (MCP)
 
-A stdio MCP server lets Claude Desktop, Cursor, Cline, and other MCP clients query
-the corpus directly. The simplest setup needs **no clone and no build** — just add
-this to your client's MCP config (requires Node ≥ 18 on your PATH):
+A stdio MCP server lets Claude Desktop, Claude Code, Cursor, VS Code, Codex, and
+other MCP clients query the corpus directly. The simplest setup needs **no clone
+and no build** — just add this to your client's MCP config (requires Node ≥ 18 on
+your PATH):
 
 ```json
 {
@@ -149,8 +153,10 @@ Available tools: `list_venues`, `search_papers` (field-aware: `author:`, `title:
 `inst:`, `track:`, `venue:`, `year:`, …), `get_paper`, `find_similar`,
 `top_authors`, `top_institutions`, `top_tracks`, `export_bibtex`.
 
-Prefer to run it offline from this repo, or want the full tool reference and env
-vars (`CONFER_DATA_URL`, `CONFER_DATA_DIR`)? See **[mcp/README.md](mcp/README.md)**.
+**[mcp/README.md](mcp/README.md)** has per-client setup (Claude Desktop, Claude
+Code, Cursor, VS Code, Cline, Windsurf, Codex, and ChatGPT via a remote bridge),
+the full tool reference, and env vars (`CONFER_DATA_URL`, `CONFER_DATA_DIR`,
+offline mode).
 
 ## Add a venue
 

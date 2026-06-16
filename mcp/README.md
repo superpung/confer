@@ -1,6 +1,8 @@
 # confer MCP Server
 
-A [Model Context Protocol](https://modelcontextprotocol.io) stdio server that exposes the **confer** paper corpus to AI agents (Claude Desktop, Cursor, Cline, etc.).
+[![npm version](https://img.shields.io/npm/v/confer-mcp?logo=npm&label=confer-mcp)](https://www.npmjs.com/package/confer-mcp)
+
+A [Model Context Protocol](https://modelcontextprotocol.io) stdio server that exposes the **confer** paper corpus to AI agents — Claude Desktop, Claude Code, Cursor, VS Code, Windsurf, Codex, and any other MCP-capable client.
 
 ## Tools
 
@@ -17,9 +19,9 @@ A [Model Context Protocol](https://modelcontextprotocol.io) stdio server that ex
 
 ## Quick start (no clone, no build)
 
-Add this to your MCP client config — npm fetches and runs the server, which
-streams the corpus from `https://confer.repus.me/data` on demand (no local data
-needed):
+The server is published on npm as **`confer-mcp`**. Most clients use the same
+block below — `npx` fetches and runs the server, which streams the corpus from
+`https://confer.repus.me/data` on demand (no local data needed):
 
 ```json
 {
@@ -32,17 +34,95 @@ needed):
 }
 ```
 
-Config file locations:
-
-- **Claude Desktop** — `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) / `%APPDATA%\Claude\claude_desktop_config.json` (Windows)
-- **Cursor** — `~/.cursor/mcp.json` (or Settings → MCP)
-- **Cline / others** — the client's `mcpServers` block
-
-Requires Node ≥ 18 on your PATH. Restart the client after editing the config.
+Requires **Node ≥ 18** on your PATH. Restart the client after editing its config.
 
 > Per-venue files load lazily and are cached under your OS temp dir, so repeated
 > queries are fast. The first `find_similar` (or an unfiltered `top_*`) call
 > loads the whole corpus (~84 MB) once — give it a moment.
+
+## Set it up in your client
+
+### Claude Desktop
+
+Edit the config file, add the `mcpServers` block above, and restart Claude Desktop.
+
+- macOS — `~/Library/Application Support/Claude/claude_desktop_config.json`
+- Windows — `%APPDATA%\Claude\claude_desktop_config.json`
+
+### Claude Code (CLI)
+
+One command — no file editing:
+
+```bash
+claude mcp add confer -- npx -y confer-mcp
+# user-wide instead of project-local:
+claude mcp add confer -s user -- npx -y confer-mcp
+```
+
+### Cursor
+
+Add the `mcpServers` block to `~/.cursor/mcp.json` (global) or
+`.cursor/mcp.json` (per-project), or use **Settings → MCP → Add new server**.
+
+### VS Code (GitHub Copilot)
+
+VS Code uses the key `servers` (not `mcpServers`). Add to `.vscode/mcp.json`
+(workspace) or your user `mcp.json`, then enable it from the Copilot chat
+**Tools** picker — or run **MCP: Add Server** from the Command Palette.
+
+```json
+{
+  "servers": {
+    "confer": {
+      "command": "npx",
+      "args": ["-y", "confer-mcp"]
+    }
+  }
+}
+```
+
+### Cline / Windsurf / other VS Code agents
+
+Use the standard `mcpServers` block above — Cline in its
+`cline_mcp_settings.json`, Windsurf in `~/.codeium/windsurf/mcp_config.json`
+(or each tool's "Add MCP server" UI).
+
+### Codex CLI (OpenAI)
+
+Codex uses **TOML** at `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.confer]
+command = "npx"
+args = ["-y", "confer-mcp"]
+```
+
+Or add it from the CLI:
+
+```bash
+codex mcp add confer -- npx -y confer-mcp
+```
+
+### ChatGPT (remote connectors only)
+
+ChatGPT's Developer Mode connectors accept **a public HTTPS MCP URL** — they
+can't launch a local `npx` command. To use confer in ChatGPT you must expose
+this stdio server over HTTP and make it publicly reachable, e.g. bridge it with
+a stdio→HTTP gateway and a tunnel:
+
+```bash
+# 1. bridge the stdio server to a local HTTP/SSE endpoint
+npx -y supergateway --stdio "npx -y confer-mcp"
+# 2. expose that port publicly (separate terminal)
+ngrok http <port-printed-by-supergateway>
+```
+
+Then in ChatGPT: **Settings → Connectors → Advanced → Developer mode → Add
+custom connector**, and paste the public `https://….ngrok.app/mcp` URL. See the
+[supergateway](https://github.com/supercorp-ai/supergateway) and
+[ChatGPT connector](https://developers.openai.com/apps-sdk/deploy/connect-chatgpt)
+docs for exact flags. (This keeps a process + tunnel running on your machine; a
+hosted endpoint is on the roadmap.)
 
 ## Configuration
 
