@@ -60,7 +60,7 @@ const queryCtx = { venueById: (id: string) => venueById(id) };
 
 const server = new McpServer({
   name: 'confer',
-  version: '1.0.0',
+  version: '1.0.1',
 });
 
 // ---------------------------------------------------------------------------
