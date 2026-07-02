@@ -164,12 +164,28 @@ const year = new Date().getFullYear();
           </button>
           <ul class="caret-menu" role="listbox" hidden>
             <li class="caret-option is-on" role="option" data-sort-val="venue">Sort: Venue</li>
-            <li class="caret-option" role="option" data-sort-val="date">Sort: Date</li>
+            <li class="caret-option" role="option" data-sort-val="relevance">Sort: Relevance</li>
+            <li class="caret-option" role="option" data-sort-val="year">Sort: Year ↓</li>
+            <li class="caret-option" role="option" data-sort-val="year-asc">Sort: Year ↑</li>
+            <li class="caret-option" role="option" data-sort-val="date">Sort: Date ↓</li>
+            <li class="caret-option" role="option" data-sort-val="date-asc">Sort: Date ↑</li>
+            <li class="caret-option" role="option" data-sort-val="pubdate">Sort: Pub Date ↓</li>
+            <li class="caret-option" role="option" data-sort-val="pubdate-asc">Sort: Pub Date ↑</li>
+            <li class="caret-option" role="option" data-sort-val="location">Sort: Location</li>
+            <li class="caret-option" role="option" data-sort-val="status">Sort: Read Status</li>
             <li class="caret-option" role="option" data-sort-val="id">Sort: Paper ID</li>
             <li class="caret-option" role="option" data-sort-val="title">Sort: Title</li>
             <li class="caret-option" role="option" data-sort-val="authors">Sort: Authors</li>
+            <li class="caret-option" role="option" data-sort-val="track">Sort: Track</li>
+            <li class="caret-option" role="option" data-sort-val="session">Sort: Session</li>
+            <li class="caret-option" role="option" data-sort-val="random">Sort: Random</li>
+            <li class="caret-option" role="option" data-sort-val="oa">Sort: Open Access</li>
+            <li class="caret-option" role="option" data-sort-val="len">Sort: Abstract ↓</li>
+            <li class="caret-option" role="option" data-sort-val="len-asc">Sort: Abstract ↑</li>
+            <li class="caret-option" role="option" data-sort-val="keywords">Sort: Keywords ↓</li>
           </ul>
         </div>
+        <button class="icon-btn" id="denseToggle" data-dense-toggle title="Compact view (hide snippets)" aria-label="Compact view" aria-pressed="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
         <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></button>
         <button class="icon-btn rail-toggle" data-rail-toggle title="Show insights" aria-label="Show insights"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="9"/><line x1="18" y1="20" x2="18" y2="4"/></svg></button>
         <button class="icon-btn" data-settings title="Settings" aria-label="Settings">
@@ -199,10 +215,19 @@ const year = new Date().getFullYear();
         <button class="chip-btn" id="notesFilterBtn" type="button" aria-pressed="false" hidden>
           <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Noted
         </button>
+        <button class="chip-btn" id="pdfFilterBtn" type="button" aria-pressed="false" hidden>
+          <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/></svg>PDF
+        </button>
+        <button class="chip-btn" id="oaFilterBtn" type="button" aria-pressed="false" hidden>
+          <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Open Access
+        </button>
         <button class="chip-btn" data-open-recommend type="button">
           <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.2 7.3L21.5 12l-7.3 2.2L12 21.5l-2.2-7.3L2.5 12l7.3-2.2z"/></svg>For you
         </button>
         <button class="chip-btn" data-open-saved type="button"><svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Saved</button>
+        <button class="chip-btn" id="quickExportBtn" type="button" hidden>
+          <svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Export
+        </button>
         <div class="result-summary" id="resultSummary">Select a venue to begin.</div>
       </div>
 
@@ -216,8 +241,23 @@ const year = new Date().getFullYear();
       <div class="export-bar" id="exportBar" hidden>
         <span id="selCount">0 selected</span>
         <div class="export-actions">
+          <button class="text-btn" id="selectAllBtn" data-export="selectall" type="button">Select all results</button>
+          <button class="text-btn" id="batchCollectBtn" type="button">Add to collection</button>
+          <button class="text-btn" id="batchStatusBtn" type="button">Set status</button>
+          <button class="text-btn" id="batchTagBtn" type="button">Add tag</button>
+          <button class="text-btn" data-export="titles" type="button">Copy titles</button>
+          <button class="text-btn" data-export="urls" type="button">Copy URLs</button>
+          <button class="text-btn" data-export="dois" type="button">Copy DOIs</button>
+          <button class="text-btn" data-export="citations" type="button">Copy citations</button>
           <button class="text-btn" data-export="bibtex" type="button">Copy BibTeX</button>
+          <button class="text-btn" data-export="table" type="button">Copy as Table</button>
           <button class="text-btn" data-export="csv" type="button">Download CSV</button>
+          <button class="text-btn" data-export="markdown" type="button">Download Markdown</button>
+          <button class="text-btn" data-export="json" type="button">Download JSON</button>
+          <button class="text-btn" data-export="ris" type="button">Download RIS</button>
+          <button class="text-btn" data-export="abstracts" type="button">Copy abstracts</button>
+          <button class="text-btn" data-export="notes" type="button">Copy notes</button>
+          <button class="text-btn" data-export="findsimilar" type="button">Find Similar</button>
           <button class="text-btn" data-export="clear" type="button">Clear</button>
         </div>
       </div>
@@ -249,13 +289,46 @@ const year = new Date().getFullYear();
           <div><dt><code>title:</code></dt><dd>Match the title — <code>title:routing</code></dd></div>
           <div><dt><code>inst:</code></dt><dd>Match institutions — <code>inst:"MIT"</code></dd></div>
           <div><dt><code>track:</code></dt><dd>Match a track / topic</dd></div>
+          <div><dt><code>year:</code></dt><dd>Year filter — <code>year:2025</code> <code>year:2023-2025</code> <code>year:&gt;=2024</code></dd></div>
           <div><dt><code>abstract:</code></dt><dd>Match abstract text</dd></div>
           <div><dt><code>doi:</code></dt><dd>Match DOI metadata</dd></div>
-          <div><dt><code>keyword:</code></dt><dd>Match indexed keywords / concepts</dd></div>
-          <div><dt><code>tag:</code></dt><dd>Match your own tags — <code>tag:to-read</code></dd></div>
+          <div><dt><code>url:</code></dt><dd>Match paper URL — <code>url:arxiv</code> <code>url:dl.acm</code></dd></div>
+          <div><dt><code>location:</code></dt><dd>Match session room or location — <code>location:hall-a</code></dd></div>
+          <div><dt><code>date:</code></dt><dd>Match presentation date — <code>date:2025-05</code> · comparisons: <code>date:&gt;=2025-05-01</code> <code>date:&lt;2025-06</code></dd></div>
+          <div><dt><code>pubdate:</code></dt><dd>Match publication date — <code>pubdate:2025-05</code> · comparisons: <code>pubdate:&gt;=2025</code> (alias: <code>published:</code>)</dd></div>
+          <div><dt><code>pages:</code></dt><dd>Match page range — <code>pages:1-12</code> <code>pages:100</code> (alias: <code>page:</code>)</dd></div>
+          <div><dt><code>keyword:</code></dt><dd>Match indexed keywords / concepts — also supports count filters: <code>keyword:&gt;=5</code> <code>keyword:1-10</code> (aliases: <code>keywords:</code> <code>kw:</code>)</dd></div>
+          <div><dt><code>tag:</code></dt><dd>Match your own tags — <code>tag:to-read</code> — also supports count: <code>tag:&gt;=2</code> (papers with 2+ tags)</dd></div>
+          <div><dt><code>authors:</code></dt><dd>Filter by author count — <code>authors:1</code> <code>authors:&gt;=3</code> <code>authors:2-5</code></dd></div>
+          <div><dt><code>len:</code></dt><dd>Filter by abstract word count — <code>len:&gt;200</code> <code>len:&lt;100</code> <code>len:100-300</code> (aliases: <code>words:</code> <code>wc:</code>)</dd></div>
+          <div><dt><code>has:</code></dt><dd>Filter by presence — <code>has:pdf</code> <code>has:oa</code> <code>has:doi</code> <code>has:keyword</code> <code>has:artifact</code> <code>has:inst</code> <code>has:note</code> <code>has:status</code> <code>has:tag</code> <code>has:collection</code> <code>has:session</code> <code>has:date</code> <code>has:location</code> <code>has:track</code> <code>has:pages</code> <code>has:pubdate</code> <code>has:url</code></dd></div>
+          <div><dt><code>oa:</code></dt><dd>Filter by Open Access type — <code>oa:gold</code> <code>oa:green</code> <code>oa:bronze</code> <code>oa:hybrid</code> <code>oa:any</code></dd></div>
+          <div><dt><code>in:</code></dt><dd>Filter to a named collection — <code>in:"my reading list"</code> (partial match; can negate with <code>-in:</code>; use <code>|</code> for OR: <code>in:col1|col2</code>)</dd></div>
+          <div><dt><code>group:</code></dt><dd>Filter to papers from venues in a named group — <code>group:NLP</code> (partial match; aliases: <code>venue-group:</code>; use <code>|</code> for OR)</dd></div>
+          <div><dt><code>kind:</code></dt><dd>Filter by venue type — <code>kind:journal</code> <code>kind:conference</code> <code>kind:workshop</code> (aliases: <code>vkind:</code> <code>venue-kind:</code>)</dd></div>
+          <div><dt><code>category:</code></dt><dd>Filter by venue category — <code>category:NLP</code> <code>category:security</code> <code>category:"Software Engineering"</code> (partial match; alias: <code>cat:</code>)</dd></div>
+          <div><dt><code>series:</code></dt><dd>Filter by venue series name — <code>series:ICSE</code> <code>series:FSE</code> (partial match; use <code>|</code> for OR)</dd></div>
+          <div><dt><code>recent:</code></dt><dd>Papers from the last N years — <code>recent:1</code> <code>recent:3</code> <code>recent:5</code> (aliases: <code>new:</code> <code>latest:</code>)</dd></div>
+          <div><dt><code>status:</code></dt><dd>Filter by reading status — <code>status:toread</code> <code>status:reading</code> <code>status:done</code></dd></div>
+          <div><dt><code>note:</code></dt><dd>Search your private notes — <code>note:important</code>; filter by note length — <code>note:&gt;50</code> <code>note:&lt;10</code> <code>note:1-50</code></dd></div>
+          <div><dt><code>sameSession:</code></dt><dd>Find papers in the same session as a given paper — <code>sameSession:venue:paperId</code> (alias: <code>same-session:</code>)</dd></div>
+          <div><dt><code>similar:</code></dt><dd>TF-IDF similar papers — <code>similar:venue:id</code> · add <code>sim:30</code> to keep only papers with ≥30% cosine similarity · Shift+click the ⊙ button to fill automatically · add <code>sort:relevance</code> to rank by similarity score · paste a deep-link URL to auto-convert</dd></div>
+          <div><dt><code>sort:</code></dt><dd>Inline sort — <code>sort:relevance</code> (ranks by keyword match; or by cosine similarity when used with <code>similar:</code>) · <code>sort:year</code> (newest first) · <code>sort:year-asc</code> (oldest first) · <code>sort:date</code> (presentation date, newest first) · <code>sort:date-asc</code> · <code>sort:pubdate</code> (publication date, newest first) · <code>sort:pubdate-asc</code> · <code>sort:location</code> (by room, then date) · <code>sort:track</code> (by topic track, then id) · <code>sort:status</code> (to-read → reading → done → unmarked) · <code>sort:oa</code> (gold → green → bronze → hybrid → closed) · <code>sort:title</code> (ignores leading articles: A, An, The) · <code>sort:session</code> · <code>sort:authors</code> · <code>sort:random</code> (shuffle — reshuffle button appears in summary) · <code>sort:len</code> (longest abstract first) · <code>sort:len-asc</code> (shortest abstract first) · <code>sort:keywords</code> (most keywords first)</dd></div>
           <div><dt><code>container:</code></dt><dd>Match journal or proceedings metadata</dd></div>
+          <div><dt><code>field:a|b</code></dt><dd>OR within a field — <code>track:poster|demo</code> <code>author:smith|jones</code></dd></div>
           <div><dt><code>-term</code></dt><dd>Exclude — e.g. <code>-track:demo</code></dd></div>
-          <div><dt>plain text</dt><dd>Matches anything</dd></div>
+          <div><dt>plain text</dt><dd>Matches anything (AND between words)</dd></div>
+        </dl>
+        <h3 class="modal-subhead">Interactions</h3>
+        <dl class="shortcuts">
+          <div><dt>Shift+click venue badge</dt><dd>Open venue profile: OA breakdown, year distribution (click to filter), top tracks, authors, keywords, papers</dd></div>
+          <div><dt>Shift+click author</dt><dd>Open author profile: all papers, top co-authors, top keywords</dd></div>
+          <div><dt>Shift+click institution</dt><dd>Open institution profile: all papers, top authors, top keywords (also works in insights panel)</dd></div>
+          <div><dt>Shift+click author (insights)</dt><dd>Open author profile from the right panel</dd></div>
+          <div><dt>Shift+click keyword</dt><dd>Open co-occurring keywords panel</dd></div>
+          <div><dt>Shift+click ⊙</dt><dd>Put <code>similar:</code> in the search box for composable filtering</dd></div>
+          <div><dt>Shift+click keyword (insights)</dt><dd>Open co-occurring keywords from the right panel</dd></div>
+          <div><dt>Expand a card</dt><dd>Right panel shows related papers automatically</dd></div>
         </dl>
         <h3 class="modal-subhead">Keyboard</h3>
         <dl class="shortcuts">
@@ -263,12 +336,31 @@ const year = new Date().getFullYear();
           <div><dt><kbd>⌘</kbd><kbd>S</kbd></dt><dd>Sync now</dd></div>
           <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>Move between papers</dd></div>
           <div><dt><kbd>o</kbd></dt><dd>Expand / collapse the focused paper</dd></div>
+          <div><dt><kbd>O</kbd></dt><dd>Expand all visible papers (toggle: collapses all if all already open)</dd></div>
+          <div><dt><kbd>x</kbd></dt><dd>Toggle select the focused paper</dd></div>
+          <div><dt><kbd>X</kbd></dt><dd>Deselect all selected papers</dd></div>
+          <div><dt><kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> / <kbd>0</kbd></dt><dd>Set status: to read / reading / done / clear</dd></div>
+          <div><dt><kbd>n</kbd></dt><dd>Add / edit note on the focused paper</dd></div>
+          <div><dt><kbd>p</kbd></dt><dd>Open PDF for the focused paper</dd></div>
+          <div><dt><kbd>v</kbd></dt><dd>Open venue profile for the focused paper (OA, years, tracks, authors)</dd></div>
+          <div><dt><kbd>a</kbd></dt><dd>Open author profile for the first author of the focused paper</dd></div>
+          <div><dt><kbd>l</kbd></dt><dd>Open the focused paper's first URL in a new tab</dd></div>
+          <div><dt><kbd>i</kbd></dt><dd>Find similar papers to the focused paper (opens modal)</dd></div>
+          <div><dt><kbd>u</kbd></dt><dd>Copy deep link to focused paper (opens + scrolls on share)</dd></div>
+          <div><dt><kbd>U</kbd></dt><dd>Copy current search/filter URL to clipboard</dd></div>
+          <div><dt><kbd>C</kbd></dt><dd>Copy BibTeX for all selected papers (or all filtered results if none selected)</dd></div>
+          <div><dt><kbd>A</kbd></dt><dd>Copy abstract of the focused paper to clipboard</dd></div>
           <div><dt><kbd>s</kbd></dt><dd>Save the focused paper to a collection</dd></div>
+          <div><dt><kbd>c</kbd></dt><dd>Copy focused paper's BibTeX</dd></div>
           <div><dt><kbd>f</kbd></dt><dd>Toggle filters</dd></div>
+          <div><dt><kbd>m</kbd></dt><dd>Load more papers (show next page)</dd></div>
+          <div><dt><kbd>e</kbd></dt><dd>Open export menu (when results are shown)</dd></div>
+          <div><dt><kbd>d</kbd></dt><dd>Toggle compact/dense view (hides abstract snippets and chips)</dd></div>
+          <div><dt><kbd>r</kbd></dt><dd>Reset all active filters (keeps search query)</dd></div>
           <div><dt><kbd>t</kbd></dt><dd>Cycle theme (light / dark / auto)</dd></div>
           <div><dt><kbd>[</kbd> / <kbd>]</kbd></dt><dd>Collapse sidebar / insights</dd></div>
           <div><dt><kbd>g</kbd><kbd>g</kbd> / <kbd>G</kbd></dt><dd>Jump to top / bottom</dd></div>
-          <div><dt><kbd>?</kbd> / <kbd>⌘</kbd><kbd>/</kbd></dt><dd>Toggle this panel</dd></div>
+          <div><dt><kbd>?</kbd> / <kbd>h</kbd> / <kbd>⌘</kbd><kbd>/</kbd></dt><dd>Toggle this panel</dd></div>
           <div><dt><kbd>Esc</kbd></dt><dd>Clear search / close</dd></div>
         </dl>
       </div>
@@ -393,6 +485,25 @@ const year = new Date().getFullYear();
           <button type="submit" class="text-btn text-btn--primary" id="promptOk">OK</button>
         </div>
       </form>
+    </div>
+
+    <div class="modal" id="pdfModal" hidden>
+      <div class="modal-card modal-card--pdf" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+        <div class="modal-head pdf-modal-head">
+          <h2 id="pdfModalTitle" class="pdf-modal-title">PDF</h2>
+          <div class="pdf-modal-actions">
+            <a id="pdfModalLink" class="text-btn text-btn--sm" href="#" target="_blank" rel="noreferrer">Open in new tab</a>
+            <button class="icon-btn" data-modal-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+          </div>
+        </div>
+        <div class="pdf-frame-wrap">
+          <iframe id="pdfFrame" class="pdf-frame" title="PDF viewer" allow="fullscreen"></iframe>
+          <div class="pdf-fallback" id="pdfFallback" hidden>
+            <p class="pdf-fallback-msg">This PDF cannot be displayed in the browser (blocked by the server's security policy).</p>
+            <a id="pdfFallbackLink" class="text-btn" href="#" target="_blank" rel="noreferrer">Open PDF in new tab →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
