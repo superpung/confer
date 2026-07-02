@@ -887,9 +887,12 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
   // nothing to reveal render a plain (non-interactive) title.
   const discId = `disc-${k.replace(/[^a-z0-9_-]/gi, '-')}`;
   const titleHl = highlightText(p.title, hlTerms);
+  // Hover-revealed one-click "copy title" affordance, mirroring the .title-caret
+  // idiom. Kept a *sibling* of the toggle (never nested) to avoid button-in-button.
+  const copyTitleBtn = `<button class="title-copy" data-copy-title="${esc(k)}" type="button" title="Copy title" aria-label="Copy title">${ICONS.copy}</button>`;
   const titleHtml = discInner
-    ? `<h2 class="paper-title"><button class="title-toggle" type="button" data-card-toggle aria-expanded="false" aria-controls="${discId}">${titleHl}<span class="title-caret" aria-hidden="true">▾</span></button></h2>`
-    : `<h2 class="paper-title">${titleHl}</h2>`;
+    ? `<h2 class="paper-title"><button class="title-toggle" type="button" data-card-toggle aria-expanded="false" aria-controls="${discId}">${titleHl}<span class="title-caret" aria-hidden="true">▾</span></button>${copyTitleBtn}</h2>`
+    : `<h2 class="paper-title"><span class="title-plain">${titleHl}</span>${copyTitleBtn}</h2>`;
   const disc = discInner
     ? `<div class="paper-disc"><div class="disc-collapse" id="${discId}"><div class="disc-inner">${discInner}</div></div></div>`
     : '';
@@ -5405,6 +5408,13 @@ function wire() {
     } else if (target.closest('[data-copy-key]')) {
       const ck = (target.closest('[data-copy-key]') as HTMLElement).dataset.copyKey!;
       navigator.clipboard.writeText(ck).then(() => toast(`Key copied: ${ck}`)).catch(() => toast('Clipboard blocked'));
+    } else if (target.closest('[data-copy-title]')) {
+      const copyKey = (target.closest('[data-copy-title]') as HTMLElement).dataset.copyTitle!;
+      const [vId, pId] = copyKey.split(':');
+      const pRow = state.loaded.get(vId)?.find((p) => p.id === pId);
+      if (pRow?.title) {
+        navigator.clipboard.writeText(pRow.title).then(() => toast('Title copied!')).catch(() => toast('Clipboard blocked'));
+      }
     } else if (target.closest('[data-copy-abstract]')) {
       const copyKey = (target.closest('[data-copy-abstract]') as HTMLElement).dataset.copyAbstract!;
       const [vId, pId] = copyKey.split(':');
