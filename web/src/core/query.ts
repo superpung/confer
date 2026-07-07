@@ -26,7 +26,6 @@ export const FIELD_ALIASES: Record<string, string> = {
   date: 'date', day: 'date',
   pubdate: 'pubdate', 'publication-date': 'pubdate', published: 'pubdate',
   pages: 'pages', page: 'pages',
-  len: 'len', length: 'len', words: 'len', wc: 'len',
   location: 'location', room: 'location', loc: 'location',
   tag: 'tag', tags: 'tag', label: 'tag',
   has: 'has',
@@ -147,26 +146,6 @@ export function matchQuery(
       if (t.neg ? ok : !ok) return false;
       continue;
     }
-    // Keyword count: keywords:>=5, keywords:1-10
-    if (t.field === 'keyword') {
-      const cmpMK = t.value.match(/^(>=|<=|>|<)(\d+)$/);
-      const rngMK = t.value.match(/^(\d+)-(\d+)$/);
-      const numMK = /^\d+$/.test(t.value);
-      if (cmpMK || rngMK || numMK) {
-        const cnt = p.keywords?.length ?? 0;
-        let ok = false;
-        if (cmpMK) {
-          const n = Number(cmpMK[2]);
-          ok = cmpMK[1] === '>=' ? cnt >= n : cmpMK[1] === '<=' ? cnt <= n : cmpMK[1] === '>' ? cnt > n : cnt < n;
-        } else if (rngMK) {
-          ok = cnt >= Number(rngMK[1]) && cnt <= Number(rngMK[2]);
-        } else {
-          ok = cnt === Number(t.value);
-        }
-        if (t.neg ? ok : !ok) return false;
-        continue;
-      }
-    }
     // Author count: authors:>=3, authors:1, authors:2-5
     if (t.field === 'author') {
       const cmpM2 = t.value.match(/^(>=|<=|>|<)(\d+)$/);
@@ -237,64 +216,6 @@ export function matchQuery(
           const d2 = d.slice(0, ref.length); // compare same prefix length
           return op === '>=' ? d2 >= ref : op === '<=' ? d2 <= ref : op === '>' ? d2 > ref : d2 < ref;
         });
-        if (t.neg ? ok : !ok) return false;
-        continue;
-      }
-    }
-    // Abstract length filter: len:N, len:>N, len:N-M (word count)
-    if (t.field === 'len') {
-      const wc = p.abstract.trim() ? p.abstract.trim().split(/\s+/).length : 0;
-      const cmpM3 = t.value.match(/^(>=|<=|>|<)(\d+)$/);
-      const rngM3 = t.value.match(/^(\d+)-(\d+)$/);
-      let ok = false;
-      if (cmpM3) {
-        const n = Number(cmpM3[2]);
-        ok = cmpM3[1] === '>=' ? wc >= n : cmpM3[1] === '<=' ? wc <= n : cmpM3[1] === '>' ? wc > n : wc < n;
-      } else if (rngM3) {
-        ok = wc >= Number(rngM3[1]) && wc <= Number(rngM3[2]);
-      } else if (/^\d+$/.test(t.value)) {
-        ok = wc === Number(t.value);
-      }
-      if (t.neg ? ok : !ok) return false;
-      continue;
-    }
-    // Note length filter: note:>50, note:>=100
-    if (t.field === 'note') {
-      const cmpMN = t.value.match(/^(>=|<=|>|<)(\d+)$/);
-      const rngMN = t.value.match(/^(\d+)-(\d+)$/);
-      const numMN = /^\d+$/.test(t.value);
-      if (cmpMN || rngMN || numMN) {
-        const noteText = ctx.noteOf?.(paperKey(v, p.id)) ?? '';
-        const nlen = noteText.trim().split(/\s+/).filter(Boolean).length;
-        let ok = false;
-        if (cmpMN) {
-          const n = Number(cmpMN[2]);
-          ok = cmpMN[1] === '>=' ? nlen >= n : cmpMN[1] === '<=' ? nlen <= n : cmpMN[1] === '>' ? nlen > n : nlen < n;
-        } else if (rngMN) {
-          ok = nlen >= Number(rngMN[1]) && nlen <= Number(rngMN[2]);
-        } else {
-          ok = nlen === Number(t.value);
-        }
-        if (t.neg ? ok : !ok) return false;
-        continue;
-      }
-    }
-    // Tag count: tag:>=2, tag:1-5
-    if (t.field === 'tag') {
-      const cmpMT = t.value.match(/^(>=|<=|>|<)(\d+)$/);
-      const rngMT = t.value.match(/^(\d+)-(\d+)$/);
-      const numMT = /^\d+$/.test(t.value);
-      if (cmpMT || rngMT || numMT) {
-        const cnt = (ctx.tagsOf?.(paperKey(v, p.id)) ?? []).length;
-        let ok = false;
-        if (cmpMT) {
-          const n = Number(cmpMT[2]);
-          ok = cmpMT[1] === '>=' ? cnt >= n : cmpMT[1] === '<=' ? cnt <= n : cmpMT[1] === '>' ? cnt > n : cnt < n;
-        } else if (rngMT) {
-          ok = cnt >= Number(rngMT[1]) && cnt <= Number(rngMT[2]);
-        } else {
-          ok = cnt === Number(t.value);
-        }
         if (t.neg ? ok : !ok) return false;
         continue;
       }

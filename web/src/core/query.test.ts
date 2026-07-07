@@ -289,38 +289,16 @@ describe('matchQuery', () => {
     expect(matchQuery(row(), parseQuery('tag:important'), ctx)).toBe(false);
   });
 
-  it('tag: count filter — tag:>=2 matches papers with 2 or more tags', () => {
-    const twoTagCtx = ctxWithTags({ 'icse2025:p1': ['important', 'ml'] });
-    const oneTagCtx = ctxWithTags({ 'icse2025:p1': ['important'] });
-    expect(matchQuery(row(), parseQuery('tag:>=2'), twoTagCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('tag:>=2'), oneTagCtx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('tag:2'), twoTagCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('tag:1-3'), twoTagCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('tag:>2'), twoTagCtx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('-tag:>=2'), oneTagCtx)).toBe(true);
+  it('tag: text match — matches papers carrying the named tag', () => {
+    const taggedCtx = ctxWithTags({ 'icse2025:p1': ['important', 'ml'] });
+    expect(matchQuery(row(), parseQuery('tag:important'), taggedCtx)).toBe(true);
+    expect(matchQuery(row(), parseQuery('tag:fuzzing'), taggedCtx)).toBe(false);
+    expect(matchQuery(row(), parseQuery('-tag:important'), taggedCtx)).toBe(false);
   });
 
-  it('note: word-count filter — note:>5 matches papers with long notes', () => {
-    // 10-word note: "This is a very important paper that must be read"
+  it('note: text match — searches private note content', () => {
     const longNoteCtx = ctxWithNotes({ 'icse2025:p1': 'This is a very important paper that must be read' });
     const shortNoteCtx = ctxWithNotes({ 'icse2025:p1': 'Good paper' });
-    const noNoteCtx = ctxWithNotes({});
-    // Comparison
-    expect(matchQuery(row(), parseQuery('note:>5'), longNoteCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('note:>5'), shortNoteCtx)).toBe(false);
-    // Exact count
-    expect(matchQuery(row(), parseQuery('note:10'), longNoteCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('note:2'), shortNoteCtx)).toBe(true);
-    // Range
-    expect(matchQuery(row(), parseQuery('note:5-15'), longNoteCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('note:5-15'), shortNoteCtx)).toBe(false);
-    // Negation
-    expect(matchQuery(row(), parseQuery('-note:>5'), shortNoteCtx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('-note:>5'), longNoteCtx)).toBe(false);
-    // No note → word count = 0
-    expect(matchQuery(row(), parseQuery('note:>0'), noNoteCtx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('note:0'), noNoteCtx)).toBe(true);
-    // Text match still works
     expect(matchQuery(row(), parseQuery('note:important'), longNoteCtx)).toBe(true);
     expect(matchQuery(row(), parseQuery('note:important'), shortNoteCtx)).toBe(false);
   });
@@ -407,63 +385,11 @@ describe('matchQuery', () => {
     expect(matchQuery(row(), parseQuery('has:collection'), noColCtx)).toBe(false);
   });
 
-  // ----- keyword count filter -------------------------------------------
-  // Fixture has keywords: ['neural network', 'static analysis'] → 2 keywords
-  it('keyword count: exact', () => {
-    expect(matchQuery(row(), parseQuery('keyword:2'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('keyword:3'), ctx)).toBe(false);
-  });
-  it('keyword count: comparison operators', () => {
-    expect(matchQuery(row(), parseQuery('keyword:>=1'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('keyword:>=3'), ctx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('keyword:>1'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('keyword:<=2'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('keyword:<2'), ctx)).toBe(false);
-  });
-  it('keyword count: range', () => {
-    expect(matchQuery(row(), parseQuery('keyword:1-5'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('keyword:3-10'), ctx)).toBe(false);
-  });
-  it('keyword count: text match still works when non-numeric', () => {
+  // ----- keyword text match ---------------------------------------------
+  // Fixture has keywords: ['neural network', 'static analysis']
+  it('keyword: text match', () => {
     expect(matchQuery(row(), parseQuery('keyword:neural'), ctx)).toBe(true);
     expect(matchQuery(row(), parseQuery('keyword:fuzzing'), ctx)).toBe(false);
-  });
-  it('keyword count: negation', () => {
-    expect(matchQuery(row(), parseQuery('-keyword:2'), ctx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('-keyword:>=5'), ctx)).toBe(true);
-  });
-
-  // ----- len: abstract word count filter --------------------------------
-  // Abstract = 'We present a deep learning approach to static analysis.' → 9 words
-  it('len: exact match', () => {
-    expect(matchQuery(row(), parseQuery('len:9'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('len:10'), ctx)).toBe(false);
-  });
-  it('len: comparison operators', () => {
-    expect(matchQuery(row(), parseQuery('len:>5'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('len:>9'), ctx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('len:<10'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('len:<9'), ctx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('len:>=9'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('len:<=9'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('len:>=10'), ctx)).toBe(false);
-  });
-  it('len: range', () => {
-    expect(matchQuery(row(), parseQuery('len:5-15'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('len:1-5'), ctx)).toBe(false);
-  });
-  it('len: negation', () => {
-    expect(matchQuery(row(), parseQuery('-len:9'), ctx)).toBe(false);
-    expect(matchQuery(row(), parseQuery('-len:>100'), ctx)).toBe(true);
-  });
-  it('len: aliases (words:, wc:)', () => {
-    expect(matchQuery(row(), parseQuery('words:>5'), ctx)).toBe(true);
-    expect(matchQuery(row(), parseQuery('wc:9'), ctx)).toBe(true);
-  });
-  it('len: empty abstract counts as 0', () => {
-    const noAbs2 = { p: mkPaper({ abstract: '' }), v: 'icse2025' };
-    expect(matchQuery(noAbs2, parseQuery('len:0'), ctx)).toBe(true);
-    expect(matchQuery(noAbs2, parseQuery('len:>0'), ctx)).toBe(false);
   });
 
   // ----- pipe OR within field values ------------------------------------
