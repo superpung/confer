@@ -22,7 +22,6 @@ const K_NOTES = 'confer.paperNotes';         // Record<paperKey, string> — pri
 const K_STATUS = 'confer.readStatus';        // Record<paperKey, 'toread'|'reading'|'done'> — omit 'unread'
 const K_SORT = 'confer.sort';               // last-used sort — local only, never synced
 const K_ACCENT = 'confer.accent';            // accent color key (e.g. "sage")
-const K_DENSE = 'confer.dense';              // compact/dense view toggle
 const K_GH_TOKEN = 'confer.ghToken';         // GitHub gist-scoped access token
 const K_GH_REFRESH = 'confer.ghRefresh';     // GitHub refresh token (when expiry is enabled)
 const K_GH_EXPIRES = 'confer.ghExpires';     // epoch-ms when the access token expires
@@ -888,7 +887,7 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
     <span class="card-select"><input type="checkbox" data-sel ${sel ? 'checked' : ''} aria-label="Select"></span>
     <div class="card-top">
       <div class="card-head">
-        ${oaInfo ? `<a class="oa-badge oa-badge--${esc(oaInfo.oa_status)}"${oaInfo.oa_url ? ` href="${esc(oaInfo.oa_url)}" target="_blank" rel="noreferrer"` : ''} title="Open Access (${esc(oaInfo.oa_status)})">OA</a>` : ''}
+        ${oaInfo ? `<a class="oa-dot oa-dot--${esc(oaInfo.oa_status)}"${oaInfo.oa_url ? ` href="${esc(oaInfo.oa_url)}" target="_blank" rel="noreferrer"` : ''} title="Open Access (${esc(oaInfo.oa_status)})" aria-label="Open Access (${esc(oaInfo.oa_status)})"></a>` : ''}
         <button class="venue-badge" data-venue-badge title="Filter results to ${esc(venue.name)} (click to toggle; Shift+click for venue profile)">${esc(venue.name)}</button>
         <button class="paper-id" data-copy-key="${esc(k)}" type="button" title="Copy paper key to clipboard">${esc(p.id)}</button>
         ${simPct != null ? `<span class="sim-badge" title="Cosine similarity score">${simPct}%</span>` : ''}
@@ -6027,11 +6026,6 @@ function wire() {
     if (window.matchMedia('(max-width: 1080px)').matches) $('#app').classList.toggle('rail-open');
     else setRailCollapsed(false);
   });
-  document.getElementById('denseToggle')?.addEventListener('click', () => {
-    const on = !els.list.classList.contains('is-dense');
-    try { localStorage.setItem(K_DENSE, on ? '1' : '0'); } catch { /* ignore */ }
-    applyDenseMode(on);
-  });
   $('#railScrim').addEventListener('click', () => $('#app').classList.remove('rail-open'));
   els.railBody.addEventListener('click', (e) => {
     const netBtn = (e.target as HTMLElement).closest<HTMLElement>('[data-open-network]');
@@ -6238,7 +6232,6 @@ function wire() {
         navigator.clipboard.writeText(bib).then(() => toast(`Copied ${bibRows.length} ${plural(bibRows.length, 'BibTeX entry', 'BibTeX entries')}`)).catch(() => toast('Clipboard blocked'));
         break;
       }
-      case 'd': document.getElementById('denseToggle')?.click(); break;
       case 'v': { // open venue profile for focused card
         const vCard = focusedCard();
         const vKey = vCard?.dataset.key ?? '';
@@ -6703,30 +6696,10 @@ function reflectBuilt() {
 }
 
 // Icons for the view toggle: show the CURRENT view so the button reflects state.
-const ICON_VIEW_TABLE = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
-const ICON_VIEW_CARDS = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/></svg>';
-function applyDenseMode(on: boolean) {
-  els.list.classList.toggle('is-dense', on);
-  const btn = document.getElementById('denseToggle');
-  if (btn) {
-    btn.classList.toggle('is-active', on);
-    btn.setAttribute('aria-pressed', String(on));
-    // Reflect the current view in the icon + label (table rows when dense, cards when not).
-    btn.innerHTML = on ? ICON_VIEW_TABLE : ICON_VIEW_CARDS;
-    const label = on ? 'Compact (table) view — click for cards' : 'Card view — click for compact table';
-    btn.setAttribute('title', label);
-    btn.setAttribute('aria-label', label);
-  }
-  // Soft crossfade so the layout change doesn't snap abruptly.
-  els.list.style.opacity = '0';
-  requestAnimationFrame(() => { els.list.style.opacity = ''; });
-}
-
 function init() {
   reflectTheme();
   const savedAccent = localStorage.getItem(K_ACCENT);
   if (savedAccent) applyAccent(savedAccent);
-  applyDenseMode(localStorage.getItem(K_DENSE) === '1');
   reflectBuilt();
   observeTopbarHeight();
   const fromUrl = readUrl();

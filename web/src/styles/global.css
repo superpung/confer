@@ -495,17 +495,16 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 
 /* Button-bar interaction affordances: distinguish the three interaction types. */
 .controls-divider { align-self: stretch; width: 1px; background: var(--line); margin: 2px 2px; }
-/* menu / panel openers carry a caret; it rotates when the panel is open */
-.chip-btn--menu .chip-caret { font-size: 10px; line-height: 1; opacity: 0.6; transition: transform 0.15s ease; }
+/* menu / panel openers carry a chevron icon; it flips when the panel is open */
+.chip-btn .chip-caret, .export-menu-btn .chip-caret {
+  width: 14px; height: 14px; margin-left: 1px; opacity: 0.5;
+  transition: transform 0.15s ease;
+}
 .chip-btn--menu[aria-expanded="true"] .chip-caret { transform: rotate(180deg); }
-/* overlay openers (modal/popover) carry a small “opens a panel” glyph */
-.chip-btn--overlay .chip-ext { font-size: 11px; line-height: 1; opacity: 0.55; }
 /* direct toggles fill in when pressed, so on/off reads at a glance */
 .chip-btn--toggle[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
 /* standalone asc/desc direction toggle next to the sort dropdown */
 .sort-dir-btn .sort-dir-arrow { font-size: 15px; font-weight: 600; line-height: 1; }
-/* grouped Copy / Download menu buttons in the selection bar */
-.export-menu-btn .chip-caret { font-size: 10px; opacity: 0.6; margin-left: 3px; }
 .result-summary { margin-left: auto; color: var(--muted); font-size: 13.5px; }
 .sort-hint-btn { background: none; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 11px; font-weight: 600; padding: 1px 8px; cursor: pointer; margin-left: 6px; vertical-align: middle; white-space: nowrap; }
 .sort-hint-btn:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
@@ -556,7 +555,9 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .is-fade-top    { --fade-top: 10px; }
 .is-fade-bottom { --fade-bottom: 10px; }
 .facet-options {
-  display: flex; flex-direction: column; gap: 3px; min-height: 0; max-height: 220px;
+  /* fixed height so every facet column (track / event type / keyword …) lines up
+     to the same visible height instead of varying with option count */
+  display: flex; flex-direction: column; gap: 3px; min-height: 0; height: 200px;
   overflow-y: auto; overscroll-behavior: contain;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
           mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
@@ -691,6 +692,10 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .disc-inner { min-height: 0; overflow: hidden; }
 .disc-text { margin: 13px 0 0; overflow-wrap: break-word; }
 .disc-actions { margin: 10px 0 0; display: flex; gap: 8px; }
+/* keep all card action buttons the same size as the "find similar" button */
+.disc-actions .icon-btn { width: 30px; height: 30px; font-size: 13px; }
+/* icon buttons must honor the [hidden] attribute (base .icon-btn sets display) */
+.icon-btn[hidden] { display: none; }
 .text-btn--sm { font-size: 12px; padding: 3px 9px; border-radius: 7px; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
@@ -744,6 +749,8 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 }
 .pdf-btn:hover { border-color: var(--line); background: var(--panel-soft); color: var(--accent-dark); }
 .oa-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; background: #6c757d; }
+/* OA status dot at the front of the card's first line */
+.card-head .oa-dot { width: 9px; height: 9px; }
 .oa-dot--gold, .oa-dot--diamond { background: #c8a000; }
 .oa-dot--green { background: #28a745; }
 .oa-dot--hybrid { background: #17a2b8; }
@@ -756,35 +763,6 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .paper-card:hover .copy-btn, .copy-btn:focus { opacity: 1; }
 
 /* Dense / compact view */
-.paper-list { transition: opacity 0.18s ease; }
-/* Compact view = a table-like list of single-line rows (no card chrome).
-   Collapsed rows show just a checkbox, the title, and compact venue/actions;
-   expanding a row restores the full card so the abstract/meta stay usable. */
-.paper-list.is-dense { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel); }
-.paper-list.is-dense .paper-card {
-  border: none; border-radius: 0; box-shadow: none; background: none;
-  border-bottom: 1px solid var(--line);
-  padding: 4px 14px; margin: 0;
-  transition: background 0.15s ease;
-}
-.paper-list.is-dense .paper-card:last-child { border-bottom: none; }
-.paper-list.is-dense .paper-card:not(.is-open) {
-  display: flex; align-items: center; gap: 12px; flex-wrap: nowrap;
-}
-.paper-list.is-dense .paper-card:not(.is-open):hover { background: var(--panel-hover); }
-.paper-list.is-dense .paper-card:not(.is-open) > * { margin: 0; }
-.paper-list.is-dense .paper-card:not(.is-open) .card-select { order: 0; flex: 0 0 auto; }
-.paper-list.is-dense .paper-card:not(.is-open) .paper-title { order: 1; flex: 1 1 auto; min-width: 0; margin: 0; font-size: 14px; }
-.paper-list.is-dense .paper-card:not(.is-open) .paper-title .title-toggle { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block; }
-.paper-list.is-dense .paper-card:not(.is-open) .paper-title .title-caret { display: none; }
-.paper-list.is-dense .paper-card:not(.is-open) .card-top { order: 2; flex: 0 0 auto; margin: 0; }
-.paper-list.is-dense .paper-card:not(.is-open) .card-head { gap: 6px; }
-/* everything below the title line collapses away in a compact row */
-.paper-list.is-dense .paper-card:not(.is-open) .paper-authors,
-.paper-list.is-dense .paper-card:not(.is-open) .paper-snippet,
-.paper-list.is-dense .paper-card:not(.is-open) .paper-disc,
-.paper-list.is-dense .paper-card:not(.is-open) .chips,
-.paper-list.is-dense .paper-card:not(.is-open) .card-corner { display: none; }
 
 .empty-state {
   margin: 18px 28px; border: 1px dashed var(--line-strong); border-radius: var(--radius);
@@ -864,12 +842,10 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .shortcuts dt { display: flex; gap: 4px; }
 .shortcuts dd { margin: 0; color: var(--muted); font-size: 13.5px; }
 
-/* Help modal: wider and scrollable (it holds long reference lists), with a
-   left-aligned label→description layout instead of a stretched space-between. */
-#helpModal .modal-card {
-  width: min(760px, 100%); max-height: 84vh; overflow-y: auto;
-}
-#helpModal .modal-head { position: sticky; top: 0; background: var(--panel); z-index: 1; padding-top: 2px; }
+/* Help modal: wider than the default; scrolling is handled by .modal-card--tall
+   + the inner .settings-body (same proven structure as the Settings panel).
+   Content uses a left-aligned label→description layout, not a stretched row. */
+#helpModal .modal-card { width: min(760px, 100%); }
 #helpModal .shortcuts > div { justify-content: flex-start; align-items: baseline; gap: 16px; }
 #helpModal .shortcuts dt { flex: 0 0 200px; }
 #helpModal .shortcuts dd { text-align: left; flex: 1; }
