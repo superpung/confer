@@ -165,12 +165,9 @@ const year = new Date().getFullYear();
           <ul class="caret-menu" role="listbox" hidden>
             <li class="caret-option is-on" role="option" data-sort-val="venue">Sort: Venue</li>
             <li class="caret-option" role="option" data-sort-val="relevance">Sort: Relevance</li>
-            <li class="caret-option" role="option" data-sort-val="year">Sort: Year ↓</li>
-            <li class="caret-option" role="option" data-sort-val="year-asc">Sort: Year ↑</li>
-            <li class="caret-option" role="option" data-sort-val="date">Sort: Date ↓</li>
-            <li class="caret-option" role="option" data-sort-val="date-asc">Sort: Date ↑</li>
-            <li class="caret-option" role="option" data-sort-val="pubdate">Sort: Pub Date ↓</li>
-            <li class="caret-option" role="option" data-sort-val="pubdate-asc">Sort: Pub Date ↑</li>
+            <li class="caret-option" role="option" data-sort-val="year">Sort: Year</li>
+            <li class="caret-option" role="option" data-sort-val="date">Sort: Date</li>
+            <li class="caret-option" role="option" data-sort-val="pubdate">Sort: Pub Date</li>
             <li class="caret-option" role="option" data-sort-val="location">Sort: Location</li>
             <li class="caret-option" role="option" data-sort-val="status">Sort: Read Status</li>
             <li class="caret-option" role="option" data-sort-val="id">Sort: Paper ID</li>
@@ -180,11 +177,11 @@ const year = new Date().getFullYear();
             <li class="caret-option" role="option" data-sort-val="session">Sort: Session</li>
             <li class="caret-option" role="option" data-sort-val="random">Sort: Random</li>
             <li class="caret-option" role="option" data-sort-val="oa">Sort: Open Access</li>
-            <li class="caret-option" role="option" data-sort-val="len">Sort: Abstract ↓</li>
-            <li class="caret-option" role="option" data-sort-val="len-asc">Sort: Abstract ↑</li>
-            <li class="caret-option" role="option" data-sort-val="keywords">Sort: Keywords ↓</li>
           </ul>
         </div>
+        <button class="icon-btn sort-dir-btn" id="sortDir" type="button" aria-label="Sort direction" title="Sort direction" hidden>
+          <span class="sort-dir-arrow" aria-hidden="true">↓</span>
+        </button>
         <button class="icon-btn" id="denseToggle" data-dense-toggle title="Compact view (hide snippets)" aria-label="Compact view" aria-pressed="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
         <button class="icon-btn" data-help title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></button>
         <button class="icon-btn rail-toggle" data-rail-toggle title="Show insights" aria-label="Show insights"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="9"/><line x1="18" y1="20" x2="18" y2="4"/></svg></button>
@@ -321,7 +318,7 @@ const year = new Date().getFullYear();
           <div><dt><code>note:</code></dt><dd>Search your private notes — <code>note:important</code></dd></div>
           <div><dt><code>sameSession:</code></dt><dd>Find papers in the same session as a given paper — <code>sameSession:venue:paperId</code> (alias: <code>same-session:</code>)</dd></div>
           <div><dt><code>similar:</code></dt><dd>TF-IDF similar papers — <code>similar:venue:id</code> · add <code>sim:30</code> to keep only papers with ≥30% cosine similarity · Shift+click the ⊙ button to fill automatically · add <code>sort:relevance</code> to rank by similarity score · paste a deep-link URL to auto-convert</dd></div>
-          <div><dt><code>sort:</code></dt><dd>Inline sort — <code>sort:relevance</code> (ranks by keyword match; or by cosine similarity when used with <code>similar:</code>) · <code>sort:year</code> (newest first) · <code>sort:year-asc</code> (oldest first) · <code>sort:date</code> (presentation date, newest first) · <code>sort:date-asc</code> · <code>sort:pubdate</code> (publication date, newest first) · <code>sort:pubdate-asc</code> · <code>sort:location</code> (by room, then date) · <code>sort:track</code> (by topic track, then id) · <code>sort:status</code> (to-read → reading → done → unmarked) · <code>sort:oa</code> (gold → green → bronze → hybrid → closed) · <code>sort:title</code> (ignores leading articles: A, An, The) · <code>sort:session</code> · <code>sort:authors</code> · <code>sort:random</code> (shuffle — reshuffle button appears in summary) · <code>sort:len</code> (longest abstract first) · <code>sort:len-asc</code> (shortest abstract first) · <code>sort:keywords</code> (most keywords first)</dd></div>
+          <div><dt><code>sort:</code></dt><dd>Inline sort — <code>relevance</code>, <code>year</code>, <code>date</code>, <code>pubdate</code>, <code>location</code>, <code>track</code>, <code>status</code>, <code>oa</code>, <code>title</code>, <code>session</code>, <code>authors</code>, <code>random</code>. Append <code>-asc</code> for ascending (e.g. <code>sort:year-asc</code>).</dd></div>
           <div><dt><code>container:</code></dt><dd>Match journal or proceedings metadata</dd></div>
           <div><dt><code>field:a|b</code></dt><dd>OR within a field — <code>track:poster|demo</code> <code>author:smith|jones</code></dd></div>
           <div><dt><code>-term</code></dt><dd>Exclude — e.g. <code>-track:demo</code></dd></div>
@@ -330,12 +327,8 @@ const year = new Date().getFullYear();
         <h3 class="modal-subhead">Interactions</h3>
         <dl class="shortcuts">
           <div><dt>Shift+click venue badge</dt><dd>Open venue profile: OA breakdown, year distribution (click to filter), top tracks, authors, keywords, papers</dd></div>
-          <div><dt>Shift+click author</dt><dd>Open author profile: all papers, top co-authors, top keywords</dd></div>
-          <div><dt>Shift+click institution</dt><dd>Open institution profile: all papers, top authors, top keywords (also works in insights panel)</dd></div>
-          <div><dt>Shift+click author (insights)</dt><dd>Open author profile from the right panel</dd></div>
           <div><dt>Shift+click keyword</dt><dd>Open co-occurring keywords panel</dd></div>
           <div><dt>Shift+click ⊙</dt><dd>Put <code>similar:</code> in the search box for composable filtering</dd></div>
-          <div><dt>Shift+click keyword (insights)</dt><dd>Open co-occurring keywords from the right panel</dd></div>
           <div><dt>Expand a card</dt><dd>Right panel shows related papers automatically</dd></div>
         </dl>
         <h3 class="modal-subhead">Keyboard</h3>
@@ -351,7 +344,6 @@ const year = new Date().getFullYear();
           <div><dt><kbd>n</kbd></dt><dd>Add / edit note on the focused paper</dd></div>
           <div><dt><kbd>p</kbd></dt><dd>Open PDF for the focused paper</dd></div>
           <div><dt><kbd>v</kbd></dt><dd>Open venue profile for the focused paper (OA, years, tracks, authors)</dd></div>
-          <div><dt><kbd>a</kbd></dt><dd>Open author profile for the first author of the focused paper</dd></div>
           <div><dt><kbd>l</kbd></dt><dd>Open the focused paper's first URL in a new tab</dd></div>
           <div><dt><kbd>i</kbd></dt><dd>Find similar papers to the focused paper (opens modal)</dd></div>
           <div><dt><kbd>u</kbd></dt><dd>Copy deep link to focused paper (opens + scrolls on share)</dd></div>

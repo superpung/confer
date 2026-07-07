@@ -1115,8 +1115,6 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
   const toreadN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'toread').length;
   const readingN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'reading').length;
   const doneN = filtered.filter((r) => statusOf(key(r.v, r.p.id)) === 'done').length;
-  const pdfN = filtered.filter((r) => !!paperPdf(r.p)).length;
-  const oaN = filtered.filter((r) => !!paperOa(r.p)).length;
   const artifactN = filtered.filter((r) => (r.p.artifactUrls?.length ?? 0) > 0).length;
   const notedN = filtered.filter((r) => !!noteOf(key(r.v, r.p.id))).length;
   const taggedN = filtered.filter((r) => tagsOf(key(r.v, r.p.id)).length > 0).length;
@@ -1130,8 +1128,6 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
     ${stat(filtered.length, plural(filtered.length, 'paper'))}
     ${stat(authorCount.size, plural(authorCount.size, 'author'))}
     ${stat(instCount.size, plural(instCount.size, 'institution'))}
-    ${pdfN > 0 && pdfN < filtered.length ? stat(pdfN, 'with PDF') : ''}
-    ${oaN > 0 && oaN < filtered.length ? stat(oaN, 'Open Access') : ''}
     ${artifactN > 0 ? stat(artifactN, 'with artifact') : ''}
     ${notedN > 0 ? stat(notedN, 'with notes') : ''}
     ${taggedN > 0 ? stat(taggedN, 'tagged') : ''}
@@ -1786,21 +1782,8 @@ function render() {
     })()
     : `<div class="empty-state"><h2>No matching papers</h2><p>${emptyHint}</p></div>`;
 
-  const venuesShown = new Set(filtered.map((r) => r.v)).size;
-  const pdfCount = filtered.filter((r) => !!paperPdf(r.p)).length;
-  const oaCount = filtered.filter((r) => !!paperOa(r.p)).length;
-  const pdfPart = pdfCount > 0 && pdfCount < filtered.length ? ` · ${pdfCount} PDF` : '';
-  const oaPart = oaCount > 0 && oaCount < filtered.length
-    ? ` · ${Math.round((oaCount / filtered.length) * 100)}% OA`
-    : oaCount === filtered.length && filtered.length > 0 ? ' · all OA' : '';
-  // Reading time estimate: ~200 wpm for academic papers
-  const totalWords = filtered.reduce((s, r) => s + (r.p.abstract.trim() ? r.p.abstract.trim().split(/\s+/).length : 0), 0);
-  const readMins = Math.round(totalWords / 200);
-  const readPart = filtered.length >= 5 && readMins > 0
-    ? ` · ~${readMins < 60 ? `${readMins}m` : `${Math.floor(readMins / 60)}h${readMins % 60 > 0 ? `${readMins % 60}m` : ''}`} reading`
-    : '';
   {
-    const summaryText = `${filtered.length.toLocaleString()} of ${state.rows.length.toLocaleString()} papers · ${venuesShown} ${plural(venuesShown, 'venue')}${pdfPart}${oaPart}${readPart}`;
+    const summaryText = `${filtered.length.toLocaleString()} of ${state.rows.length.toLocaleString()} papers`;
     // When similar: is active and sort isn't already relevance, offer a quick-switch button
     const hasSim = properSimTerms().some((t) => !t.neg);
     const wantSortHint = hasSim && state.sort !== 'relevance';
@@ -4194,19 +4177,32 @@ function closeAllCarets() {
   });
 }
 const SORT_LABELS: Record<string, string> = {
-  venue: 'Sort: Venue', year: 'Sort: Year ↓', 'year-asc': 'Sort: Year ↑',
-  date: 'Sort: Date ↓', 'date-asc': 'Sort: Date ↑',
-  pubdate: 'Sort: Pub Date ↓', 'pubdate-asc': 'Sort: Pub Date ↑',
+  venue: 'Sort: Venue', year: 'Sort: Year', date: 'Sort: Date', pubdate: 'Sort: Pub Date',
   location: 'Sort: Location', status: 'Sort: Read Status', track: 'Sort: Track',
   id: 'Sort: Paper ID', title: 'Sort: Title', authors: 'Sort: Authors', session: 'Sort: Session',
   relevance: 'Sort: Relevance', random: 'Sort: Random', oa: 'Sort: Open Access',
 };
+// Sorts that support an ascending/descending direction (via a separate toggle button).
+const DIRECTIONAL_SORTS = new Set(['year', 'date', 'pubdate']);
+const sortBase = (s: string) => (s.endsWith('-asc') ? s.slice(0, -4) : s);
+const sortIsAsc = (s: string) => s.endsWith('-asc');
 function reflectSort() {
+  const base = sortBase(state.sort);
   const label = document.querySelector<HTMLElement>('#sortSelect .caret-select-label');
-  if (label) label.textContent = SORT_LABELS[state.sort] ?? 'Sort: Venue';
+  if (label) label.textContent = SORT_LABELS[base] ?? 'Sort: Venue';
   document.querySelectorAll<HTMLElement>('#sortSelect .caret-option').forEach((opt) => {
-    opt.classList.toggle('is-on', opt.dataset.sortVal === state.sort);
+    opt.classList.toggle('is-on', opt.dataset.sortVal === base);
   });
+  // Direction toggle: visible only for directional sorts; arrow reflects current direction.
+  const dirBtn = document.querySelector<HTMLElement>('#sortDir');
+  if (dirBtn) {
+    const directional = DIRECTIONAL_SORTS.has(base);
+    dirBtn.hidden = !directional;
+    const asc = sortIsAsc(state.sort);
+    const arrow = dirBtn.querySelector('.sort-dir-arrow');
+    if (arrow) arrow.textContent = asc ? '↑' : '↓';
+    dirBtn.setAttribute('title', asc ? 'Ascending (oldest first) — click for descending' : 'Descending (newest first) — click for ascending');
+  }
 }
 
 // --- theme -------------------------------------------------------------
@@ -5006,11 +5002,29 @@ function wire() {
     renderHistDrop();
   });
   // Sort caret-select
+  const applySort = (s: string) => {
+    state.sort = s;
+    try { localStorage.setItem(K_SORT, state.sort); } catch { /* ignore */ }
+    reflectSort(); writeUrl(); render();
+  };
   $('#sortSelect').addEventListener('click', (e) => {
     const opt = (e.target as HTMLElement).closest<HTMLElement>('[data-sort-val]');
     const btn = (e.target as HTMLElement).closest<HTMLElement>('.caret-select-btn');
-    if (opt) { state.sort = opt.dataset.sortVal ?? 'venue'; try { localStorage.setItem(K_SORT, state.sort); } catch { /* ignore */ } closeAllCarets(); reflectSort(); writeUrl(); render(); return; }
+    if (opt) {
+      const base = opt.dataset.sortVal ?? 'venue';
+      // Preserve the current asc/desc direction when switching between directional sorts.
+      const keepAsc = DIRECTIONAL_SORTS.has(base) && sortIsAsc(state.sort);
+      closeAllCarets();
+      applySort(keepAsc ? `${base}-asc` : base);
+      return;
+    }
     if (btn) toggleCaret(btn);
+  });
+  // Sort direction toggle (only meaningful for directional sorts)
+  document.querySelector<HTMLElement>('#sortDir')?.addEventListener('click', () => {
+    const base = sortBase(state.sort);
+    if (!DIRECTIONAL_SORTS.has(base)) return;
+    applySort(sortIsAsc(state.sort) ? base : `${base}-asc`);
   });
   // Collection filter caret-select
   document.addEventListener('click', (e) => {

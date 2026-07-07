@@ -502,6 +502,8 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .chip-btn--overlay .chip-ext { font-size: 11px; line-height: 1; opacity: 0.55; }
 /* direct toggles fill in when pressed, so on/off reads at a glance */
 .chip-btn--toggle[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
+/* standalone asc/desc direction toggle next to the sort dropdown */
+.sort-dir-btn .sort-dir-arrow { font-size: 15px; font-weight: 600; line-height: 1; }
 .result-summary { margin-left: auto; color: var(--muted); font-size: 13.5px; }
 .sort-hint-btn { background: none; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 11px; font-weight: 600; padding: 1px 8px; cursor: pointer; margin-left: 6px; vertical-align: middle; white-space: nowrap; }
 .sort-hint-btn:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
@@ -834,6 +836,16 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .shortcuts > div { display: flex; align-items: center; justify-content: space-between; }
 .shortcuts dt { display: flex; gap: 4px; }
 .shortcuts dd { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+/* Help modal: wider and scrollable (it holds long reference lists), with a
+   left-aligned label→description layout instead of a stretched space-between. */
+#helpModal .modal-card {
+  width: min(760px, 100%); max-height: 84vh; overflow-y: auto;
+}
+#helpModal .modal-head { position: sticky; top: 0; background: var(--panel); z-index: 1; padding-top: 2px; }
+#helpModal .shortcuts > div { justify-content: flex-start; align-items: baseline; gap: 16px; }
+#helpModal .shortcuts dt { flex: 0 0 200px; }
+#helpModal .shortcuts dd { text-align: left; flex: 1; }
 .modal-actions { margin-bottom: 12px; }
 .saved-list { display: flex; flex-direction: column; gap: 8px; }
 .saved-empty { color: var(--muted); font-size: 13.5px; }
