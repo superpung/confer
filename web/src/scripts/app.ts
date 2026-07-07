@@ -1000,14 +1000,11 @@ function renderFacets(base: { p: Paper; v: string }[]) {
     const rows = opts.map(([kw, n]) =>
       `<label class="facet-option" data-kw-label="${esc(kw.toLowerCase())}"><input type="checkbox" data-facet="keyword" value="${esc(kw)}" ${state.keywordFilter.has(kw) ? 'checked' : ''}>
         <span class="facet-label">${esc(kw)}</span><span class="facet-count">${n}</span></label>`).join('');
-    const searchInput = kwCount.size > 10
-      ? `<input class="facet-kw-search" type="search" placeholder="Filter keywords…" aria-label="Filter keywords">`
-      : '';
     return `<div class="facet-group${collapsed ? ' is-collapsed' : ''}" data-facet-group="${title}">
       <button class="facet-title" type="button" data-facet-group-toggle aria-expanded="${!collapsed}">
         <span class="facet-caret">▾</span><span class="facet-title-text">${title}</span><span class="facet-group-count">${opts.length}${kwCount.size > 50 ? '+' : ''}</span>
       </button>
-      <div class="facet-collapse">${searchInput}<div class="facet-options">${rows}</div></div>
+      <div class="facet-collapse"><div class="facet-options">${rows}</div></div>
     </div>`;
   })();
   els.facets.innerHTML =
@@ -1160,31 +1157,6 @@ function renderRail(filtered: { p: Paper; v: string }[]) {
 }
 
 // --- rail: related papers section (updated on card expand) ---
-const RAIL_RELATED_ID = 'railRelated';
-
-function updateRailRelated(cardKey: string) {
-  document.getElementById(RAIL_RECENT_ID)?.remove(); // hide recents while card is open
-  const related = similarTo(cardKey, 5);
-  if (!related.length) { clearRailRelated(); return; }
-  let el = document.getElementById(RAIL_RELATED_ID);
-  if (!el) {
-    el = document.createElement('div');
-    el.id = RAIL_RELATED_ID;
-    els.railBody.appendChild(el);
-  }
-  el.innerHTML = `<div class="rail-section">
-    <h4 class="rail-section-title">Related</h4>
-    <div class="mini-card-list">${related.map((r) => miniCardHtml(r.p, r.v)).join('')}</div>
-  </div>`;
-}
-
-function clearRailRelated() {
-  document.getElementById(RAIL_RELATED_ID)?.remove();
-  document.getElementById(RAIL_RECENT_ID)?.remove();
-}
-
-const RAIL_RECENT_ID = 'railRecent';
-
 // --- topic trend chart ---------------------------------------------------
 const TREND_PALETTE = ['var(--accent)', '#5a7c5a', '#4a6e8a', '#8c3a52', '#a67a36'];
 
@@ -1536,7 +1508,6 @@ function render() {
     } catch { /* ignore */ }
   }
   renderRail(filtered);
-  clearRailRelated(); // rail was rewritten; remove old related section
   const slice = filtered.slice(0, state.shown);
   const emptyHint = (() => {
     if (!state.rows.length) return 'No papers loaded. Select a venue to begin.';
@@ -2022,6 +1993,9 @@ function positionPop(anchor: HTMLElement) {
 }
 function openPop(anchor: HTMLElement, render: () => string, onPick: (t: HTMLElement) => void, onInput?: (value: string) => void) {
   popAnchor = anchor; popRender = render; popOnPick = onPick; popOnInput = onInput ?? null;
+  // Keep the anchor's open-state in sync so its caret (e.g. Tags / Status chips)
+  // rotates on open, consistent with the Filters button.
+  if (anchor.hasAttribute('aria-expanded')) anchor.setAttribute('aria-expanded', 'true');
   paintPop();
   positionPop(anchor);
   // (Re)trigger the entrance animation now that the menu is placed.
@@ -2030,6 +2004,7 @@ function openPop(anchor: HTMLElement, render: () => string, onPick: (t: HTMLElem
   popEl.classList.add('is-in');
 }
 function closePop() {
+  if (popAnchor?.hasAttribute('aria-expanded')) popAnchor.setAttribute('aria-expanded', 'false');
   popEl.hidden = true; popEl.innerHTML = ''; popEl.classList.remove('is-in');
   popAnchor = null; popRender = null; popOnPick = null; popOnInput = null;
 }
@@ -5141,17 +5116,6 @@ function wire() {
     if (e.target === document.getElementById('noteDialog')) settleNoteDlg('close');
   });
 
-  // keyword facet search filter
-  els.facets.addEventListener('input', (e) => {
-    const inp = e.target as HTMLInputElement;
-    if (!inp.classList.contains('facet-kw-search')) return;
-    const q = inp.value.toLowerCase();
-    const labels = inp.closest('.facet-collapse')?.querySelectorAll<HTMLElement>('[data-kw-label]');
-    labels?.forEach((l) => {
-      l.style.display = !q || (l.dataset.kwLabel ?? '').includes(q) ? '' : 'none';
-    });
-  });
-
   // facets toggle + changes
   $('[data-facets-toggle]').addEventListener('click', (e) => {
     const btn = e.currentTarget as HTMLButtonElement;
@@ -5248,10 +5212,8 @@ function wire() {
       if (!open && cardKey) {
         try { history.replaceState(null, '', location.pathname + location.search + `#paper:${cardKey}`); } catch { /* ignore */ }
         saveRecentPaper(cardKey);
-        updateRailRelated(cardKey);
       } else if (open && location.hash.startsWith('#paper:')) {
         try { history.replaceState(null, '', location.pathname + location.search); } catch { /* ignore */ }
-        clearRailRelated();
       }
       return;
     }

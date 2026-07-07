@@ -555,19 +555,11 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .is-fade-top    { --fade-top: 10px; }
 .is-fade-bottom { --fade-bottom: 10px; }
 .facet-options {
-  /* fixed height so every facet column (track / event type / keyword …) lines up
-     to the same visible height instead of varying with option count */
-  display: flex; flex-direction: column; gap: 3px; min-height: 0; height: 200px;
+  display: flex; flex-direction: column; gap: 3px; min-height: 0; max-height: 220px;
   overflow-y: auto; overscroll-behavior: contain;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
           mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top,0px), #000 calc(100% - var(--fade-bottom,0px)), transparent 100%);
 }
-.facet-kw-search {
-  width: 100%; box-sizing: border-box; margin: 4px 0 6px; padding: 4px 8px;
-  border: 1px solid var(--line); border-radius: 7px; background: var(--panel);
-  font-size: 12px; color: var(--text); outline: none;
-}
-.facet-kw-search:focus { border-color: var(--accent); }
 .facet-option { display: flex; align-items: center; gap: 8px; padding: 3px 4px; border-radius: 6px; cursor: pointer; font-size: 13px; }
 .facet-option:hover { background: var(--panel-hover); }
 .facet-option input { width: auto; min-height: 0; accent-color: var(--accent); }
