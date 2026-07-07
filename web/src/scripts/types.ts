@@ -35,6 +35,9 @@ export interface Paper {
   pdfUrls?: string[];
   artifactUrls?: string[];
   keywords?: string[];
+  /** free-form, adapter-specific metadata bag (e.g. OpenAlex `openAccess`,
+   *  source-specific ids). Shape varies per venue adapter. */
+  extra?: Record<string, unknown>;
   /** lazily-cached lowercased search blob */
   _search?: string;
   /** lazily-cached author→institution pairs parsed from authorInstitutions */
@@ -52,6 +55,14 @@ export interface SavedSearch {
   sort: string;
   /** id of the collection the view was scoped to, '' for none */
   collection?: string;
+  keywords?: string[];
+  keywordMode?: 'any' | 'all';
+  yearFilter?: number[];
+  statusFilter?: string;
+  notesOnly?: boolean;
+  pdfOnly?: boolean;
+  oaOnly?: boolean;
+  tagFilter?: string[];
 }
 
 /** A user-named group of venue *series* (e.g. "My SE list" = ICSE, FSE, ASE). */

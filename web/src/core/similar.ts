@@ -10,6 +10,10 @@ export interface TfidfIndex {
   similar(targetKey: string, n?: number): { key: string; p: Paper; v: string; score: number }[];
   /** Top-n recommendations given an iterable of seed paper keys. */
   recommend(profileKeys: Iterable<string>, n?: number): { key: string; p: Paper; v: string; score: number }[];
+  /** Keys of all papers whose cosine similarity to targetKey exceeds minScore (default 0.05). */
+  similarSet(targetKey: string, minScore?: number): Set<string>;
+  /** Map of candidate key → cosine similarity score for all papers above minScore. */
+  similarScoreMap(targetKey: string, minScore?: number): Map<string, number>;
 }
 
 /** Per-paper L2-normalised TF-IDF vectors plus the row lookup, exposed so callers
@@ -90,6 +94,29 @@ export function buildTfidfIndex(rows: { p: Paper; v: string }[]): TfidfIndex {
         .sort((a, b) => b.score - a.score)
         .slice(0, n)
         .filter((x) => x.score > 0);
+    },
+
+    similarSet(targetKey, minScore = 0.05) {
+      const vec = vecs.get(targetKey);
+      if (!vec || !vec.size) return new Set<string>();
+      const out = new Set<string>();
+      for (const [k, rowVec] of vecs) {
+        if (k === targetKey) continue;
+        if (cosine(vec, rowVec) >= minScore) out.add(k);
+      }
+      return out;
+    },
+
+    similarScoreMap(targetKey, minScore = 0.05) {
+      const vec = vecs.get(targetKey);
+      if (!vec || !vec.size) return new Map<string, number>();
+      const out = new Map<string, number>();
+      for (const [k, rowVec] of vecs) {
+        if (k === targetKey) continue;
+        const score = cosine(vec, rowVec);
+        if (score >= minScore) out.set(k, score);
+      }
+      return out;
     },
 
     recommend(profileKeys, n = 10) {

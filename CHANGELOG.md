@@ -8,6 +8,31 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+### Added
+- **`has:` search field** — filter by data presence: `has:pdf`, `has:doi`,
+  `has:keyword`, `has:artifact`, `has:abstract`. Negation supported (`-has:pdf`).
+  Tab autocomplete suggests valid values after `has:`.
+- **`status:` search field** — search by reading status inline:
+  `status:toread`, `status:reading`, `status:done`. Combines with all other fields.
+- **`note:` search field** — search within your private paper notes: `note:text`.
+- **Batch export bar operations**: with papers selected, new "Add to collection",
+  "Set status", and "Add tag" buttons appear in the export bar for bulk edits.
+- **JSON export** — export selected papers (or current filtered results) as
+  structured JSON. Available in the export bar and the quick-export popover.
+- **Richer BibTeX** — entries now include abstract, keywords, pages, volume, issue,
+  publisher, and PDF URL when available.
+- **Reading progress bar** in the Insights rail — shows done/tracked ratio when
+  any papers have a reading status set.
+- **"To read" and artifact counts** in Insights rail stats.
+- **Keyboard shortcuts**: `p` opens the PDF viewer for the focused card; `u` copies
+  the program URL of the focused card to the clipboard.
+- **PDF filter tooltip** now shows how many papers in the current view have PDFs.
+
+### Fixed
+- **Author/institution parsing** (`authorAff`): AAAI-style papers (institution-only
+  list) now correctly display institutions instead of misidentifying institution
+  names as author names.
+
 ---
 
 ## [1.1.0] - 2026-06-16

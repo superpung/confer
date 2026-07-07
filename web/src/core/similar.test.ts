@@ -104,3 +104,76 @@ describe('buildTfidfIndex.recommend', () => {
     expect(idx.recommend(['conf2025:ghost'], 5)).toEqual([]);
   });
 });
+
+// ---------------------------------------------------------------------------
+// similarScoreMap
+// ---------------------------------------------------------------------------
+describe('buildTfidfIndex.similarScoreMap', () => {
+  const idx = buildTfidfIndex(rows);
+
+  it('returns a non-empty map for a known key with similar papers', () => {
+    const m = idx.similarScoreMap(keyA);
+    expect(m.size).toBeGreaterThan(0);
+    // A and B are related — B should appear in the map
+    expect(m.has(keyB)).toBe(true);
+  });
+
+  it('returns positive scores for related papers', () => {
+    const m = idx.similarScoreMap(keyA);
+    for (const score of m.values()) expect(score).toBeGreaterThan(0);
+  });
+
+  it('does not include the target key itself', () => {
+    const m = idx.similarScoreMap(keyA);
+    expect(m.has(keyA)).toBe(false);
+  });
+
+  it('unrelated paper (C) not in map when score < minScore threshold', () => {
+    const m = idx.similarScoreMap(keyA, 0.05);
+    // C shares no meaningful vocabulary with A → score very low (expected 0 or below threshold)
+    const scoreC = m.get(keyC) ?? 0;
+    expect(scoreC).toBeLessThan(0.05);
+  });
+
+  it('returns empty map for unknown key', () => {
+    const m = idx.similarScoreMap('conf2025:ghost');
+    expect(m.size).toBe(0);
+  });
+
+  it('minScore=0 includes all non-target papers with non-zero score', () => {
+    const m = idx.similarScoreMap(keyA, 0);
+    // With minScore=0, B should definitely be in the map
+    expect(m.has(keyB)).toBe(true);
+  });
+
+  it('score for B is consistent with similar()', () => {
+    const m = idx.similarScoreMap(keyA, 0);
+    const simResults = idx.similar(keyA, 10);
+    const simBScore = simResults.find((r) => r.key === keyB)?.score;
+    const mapBScore = m.get(keyB);
+    // Both methods should give the same cosine score
+    expect(mapBScore).toBeCloseTo(simBScore ?? 0, 10);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// similarSet
+// ---------------------------------------------------------------------------
+describe('buildTfidfIndex.similarSet', () => {
+  const idx = buildTfidfIndex(rows);
+
+  it('contains B for target A (related papers)', () => {
+    const s = idx.similarSet(keyA, 0.01);
+    expect(s.has(keyB)).toBe(true);
+  });
+
+  it('does not contain target itself', () => {
+    const s = idx.similarSet(keyA);
+    expect(s.has(keyA)).toBe(false);
+  });
+
+  it('returns empty set for unknown key', () => {
+    const s = idx.similarSet('conf2025:ghost');
+    expect(s.size).toBe(0);
+  });
+});

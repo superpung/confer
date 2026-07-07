@@ -7,16 +7,22 @@ import type { Paper, Venue } from '../scripts/types';
 /** Canonical compound key for a paper across venues. */
 export const paperKey = (venue: string, id: string) => `${venue}:${id}`;
 
+/** Normalize a string for search: lowercase + strip combining diacritics (NFD). */
+export function normalize(s: string): string {
+  // eslint-disable-next-line no-misleading-character-class
+  return s.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
+}
+
 /** Lazily-built lowercased search blob covering all searchable fields. */
 export function searchBlob(p: Paper): string {
   if (p._search === undefined) {
-    p._search = [
+    p._search = normalize([
       p.id, p.title, p.abstract, p.eventType, p.authorInstitutions,
       ...p.authors, ...p.tracks, ...p.sessionTitles, ...p.locations,
       p.doi ?? '', p.publicationDate ?? '', p.publisher ?? '', p.container ?? '',
       p.volume ?? '', p.issue ?? '', p.pages ?? '',
       ...(p.keywords ?? []),
-    ].join(' ').toLowerCase();
+    ].join(' '));
   }
   return p._search;
 }
@@ -27,26 +33,59 @@ export function eventList(p: Paper): string[] {
 }
 
 // authorInstitutions is a display string: "Name (Inst); Name (Inst); ...".
-// Institutions can themselves contain parens (e.g. "... (HKUST)"), so we take
-// the text before the first " (" as the name and the rest inside parens as inst.
+// Author names may themselves contain parens (e.g. "Tse-Hsun (Peter) Chen"),
+// and institutions may also contain parens (e.g. "City Univ of New York (CUNY)").
+// We find the institution by locating the '(' that matches the final ')' via a
+// backwards depth scan, so nicknames in the middle of a name are never mistaken
+// for the institution delimiter.
 export function parseAff(p: Paper): { author: string; inst: string }[] {
   if (p._aff) return p._aff;
   const out: { author: string; inst: string }[] = [];
   for (const seg of (p.authorInstitutions || '').split(';')) {
     const s = seg.trim();
     if (!s) continue;
-    const i = s.indexOf(' (');
-    if (i >= 0 && s.endsWith(')')) out.push({ author: s.slice(0, i).trim(), inst: s.slice(i + 2, -1).trim() });
-    else out.push({ author: s, inst: '' });
+    if (s.endsWith(')')) {
+      // Walk backwards to find the '(' that closes with the final ')'
+      let depth = 0;
+      let splitAt = -1;
+      for (let j = s.length - 1; j >= 0; j--) {
+        if (s[j] === ')') depth++;
+        else if (s[j] === '(') {
+          depth--;
+          if (depth === 0) {
+            if (j > 0 && s[j - 1] === ' ') splitAt = j - 1;
+            break;
+          }
+        }
+      }
+      if (splitAt >= 0) {
+        out.push({ author: s.slice(0, splitAt).trim(), inst: s.slice(splitAt + 2, -1).trim() });
+      } else {
+        out.push({ author: s, inst: '' });
+      }
+    } else {
+      out.push({ author: s, inst: '' });
+    }
   }
   p._aff = out;
   return out;
 }
 
-/** Affiliations aligned to p.authors (by position when counts match, else by name). */
+/** Affiliations aligned to p.authors (by position when counts match, else by name).
+ *  Handles AAAI-style where authorInstitutions lists only institutions (no names):
+ *  detected when all parsed entries have no `inst` and none of the "author" fields
+ *  match any actual author name — in that case the parsed "author" fields are
+ *  institution names, mapped by position. */
 export function authorAff(p: Paper): { author: string; inst: string }[] {
   const parsed = parseAff(p);
-  if (parsed.length === p.authors.length) return parsed;
+  if (parsed.length === p.authors.length) {
+    const authorSet = new Set(p.authors);
+    const matchCount = parsed.filter((x) => authorSet.has(x.author)).length;
+    if (matchCount === 0 && parsed.every((x) => x.inst === '')) {
+      return p.authors.map((a, i) => ({ author: a, inst: parsed[i]?.author ?? '' }));
+    }
+    return parsed;
+  }
   const byName = new Map(parsed.map((x) => [x.author, x.inst]));
   return p.authors.map((a) => ({ author: a, inst: byName.get(a) ?? '' }));
 }
@@ -105,21 +144,26 @@ export function tfidfTokenize(text: string): string[] {
   return text.toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !STOP_WORDS.has(t));
 }
 
-/** Return the lowercased text for a specific search field on a paper. */
+/** Return the normalized text for a specific search field on a paper. */
 export function fieldText(p: Paper, field: string): string {
   switch (field) {
-    case 'title': return p.title.toLowerCase();
-    case 'author': return p.authors.join(' | ').toLowerCase();
-    case 'inst': return instList(p).join(' | ').toLowerCase();
-    case 'abstract': return p.abstract.toLowerCase();
-    case 'track': return p.tracks.join(' | ').toLowerCase();
-    case 'event': return p.eventType.toLowerCase();
-    case 'session': return p.sessionTitles.join(' | ').toLowerCase();
+    case 'title': return normalize(p.title);
+    case 'author': return normalize(p.authors.join(' | '));
+    case 'inst': return normalize(instList(p).join(' | '));
+    case 'abstract': return normalize(p.abstract);
+    case 'track': return normalize(p.tracks.join(' | '));
+    case 'event': return normalize(p.eventType);
+    case 'session': return normalize(p.sessionTitles.join(' | '));
     case 'doi': return (p.doi ?? '').toLowerCase();
-    case 'keyword': return (p.keywords ?? []).join(' | ').toLowerCase();
-    case 'container': return (p.container ?? '').toLowerCase();
-    case 'publisher': return (p.publisher ?? '').toLowerCase();
+    case 'keyword': return normalize((p.keywords ?? []).join(' | '));
+    case 'container': return normalize(p.container ?? '');
+    case 'publisher': return normalize(p.publisher ?? '');
     case 'id': return p.id.toLowerCase();
+    case 'location': return normalize(p.locations.join(' | '));
+    case 'date': return normalize(p.dates.join(' | '));
+    case 'url': return (p.urls.join(' ') + ' ' + (p.pdfUrls ?? []).join(' ')).toLowerCase();
+    case 'pubdate': return (p.publicationDate ?? '').toLowerCase();
+    case 'pages': return (p.pages ?? '').toLowerCase();
     default: return searchBlob(p);
   }
 }
