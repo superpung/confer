@@ -4151,11 +4151,6 @@ function closeModals() {
   if (confirmResolver) settleConfirm(false);
   noteDlgKey = '';
   document.querySelectorAll<HTMLElement>('.modal').forEach((m) => { m.hidden = true; });
-  // Stop PDF loading when the modal closes; reset frame + fallback visibility
-  const frame = document.querySelector<HTMLIFrameElement>('#pdfFrame');
-  if (frame) { frame.src = ''; frame.hidden = false; }
-  const fallback = document.querySelector<HTMLElement>('#pdfFallback');
-  if (fallback) fallback.hidden = true;
   closePop();
   stopNetwork();
 }
@@ -5404,6 +5399,38 @@ function wire() {
     const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-export]');
     if (btn) doExport(btn.dataset.export!);
   });
+  // Grouped Copy / Download menus for the selection bar — keep the bar short.
+  const wireExportMenu = (id: string, items: { val: string; label: string }[]) => {
+    const anchor = document.querySelector<HTMLElement>(id);
+    if (!anchor) return;
+    anchor.addEventListener('click', () => {
+      openPop(anchor, () => {
+        const rows = items.map((it) =>
+          `<div class="pop-row" data-export-pick="${it.val}" role="button">${ICONS.copy}<span class="pop-row-label">${it.label}</span></div>`
+        ).join('');
+        return `<div class="pop-list">${rows}</div>`;
+      }, (t) => {
+        const row = t.closest<HTMLElement>('[data-export-pick]');
+        if (row) { closePop(); doExport(row.dataset.exportPick!); }
+      });
+    });
+  };
+  wireExportMenu('#selCopyBtn', [
+    { val: 'titles', label: 'Copy titles' },
+    { val: 'urls', label: 'Copy URLs' },
+    { val: 'dois', label: 'Copy DOIs' },
+    { val: 'citations', label: 'Copy citations' },
+    { val: 'bibtex', label: 'Copy BibTeX' },
+    { val: 'table', label: 'Copy as Table (Notion/Obsidian)' },
+    { val: 'abstracts', label: 'Copy abstracts' },
+    { val: 'notes', label: 'Copy notes' },
+  ]);
+  wireExportMenu('#selDownloadBtn', [
+    { val: 'csv', label: 'Download CSV' },
+    { val: 'markdown', label: 'Download Markdown' },
+    { val: 'json', label: 'Download JSON' },
+    { val: 'ris', label: 'Download RIS' },
+  ]);
   // Batch status: set reading status for all selected papers at once
   const batchStatusBtn = document.querySelector<HTMLElement>('#batchStatusBtn');
   if (batchStatusBtn) {
@@ -5903,20 +5930,6 @@ function wire() {
         setQuery(`author:"${coauthorChip.dataset.author!}"`);
         return;
       }
-      // --- Author profile: "Show all papers" button ---
-      const authorSearchBtn = t.closest<HTMLElement>('[data-author-search]');
-      if (authorSearchBtn) {
-        closeModals();
-        setQuery(`author:"${authorSearchBtn.dataset.authorSearch!}"`);
-        return;
-      }
-      // --- Institution profile: "Show all papers" button ---
-      const instSearchBtn = t.closest<HTMLElement>('[data-inst-search]');
-      if (instSearchBtn) {
-        closeModals();
-        setQuery(`inst:"${instSearchBtn.dataset.instSearch!}"`);
-        return;
-      }
       // --- Venue profile: "Show all papers" button ---
       const venueSearchBtn = t.closest<HTMLElement>('[data-venue-search]');
       if (venueSearchBtn) {
@@ -5947,30 +5960,6 @@ function wire() {
         closeModals();
         setVenuesExclusive([oaVid]);
         setQuery(oaFilter);
-        state.shown = PAGE; writeUrl(); render();
-        return;
-      }
-      const authorYearBtn = t.closest<HTMLElement>('[data-author-year-filter]');
-      if (authorYearBtn) {
-        const val = authorYearBtn.dataset.authorYearFilter!;
-        const lastColon = val.lastIndexOf(':');
-        const authorName = val.slice(0, lastColon);
-        const yr = Number(val.slice(lastColon + 1));
-        closeModals();
-        setQuery(`author:"${authorName}"`);
-        if (yr) { state.yearFilter.clear(); state.yearFilter.add(yr); }
-        state.shown = PAGE; writeUrl(); render();
-        return;
-      }
-      const instYearBtn = t.closest<HTMLElement>('[data-inst-year-filter]');
-      if (instYearBtn) {
-        const val2 = instYearBtn.dataset.instYearFilter!;
-        const lastColon2 = val2.lastIndexOf(':');
-        const instName = val2.slice(0, lastColon2);
-        const yr2 = Number(val2.slice(lastColon2 + 1));
-        closeModals();
-        setQuery(`inst:"${instName}"`);
-        if (yr2) { state.yearFilter.clear(); state.yearFilter.add(yr2); }
         state.shown = PAGE; writeUrl(); render();
         return;
       }
@@ -6713,10 +6702,24 @@ function reflectBuilt() {
   } catch { /* keep the server-rendered title */ }
 }
 
+// Icons for the view toggle: show the CURRENT view so the button reflects state.
+const ICON_VIEW_TABLE = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+const ICON_VIEW_CARDS = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/></svg>';
 function applyDenseMode(on: boolean) {
   els.list.classList.toggle('is-dense', on);
   const btn = document.getElementById('denseToggle');
-  if (btn) { btn.classList.toggle('is-active', on); btn.setAttribute('aria-pressed', String(on)); }
+  if (btn) {
+    btn.classList.toggle('is-active', on);
+    btn.setAttribute('aria-pressed', String(on));
+    // Reflect the current view in the icon + label (table rows when dense, cards when not).
+    btn.innerHTML = on ? ICON_VIEW_TABLE : ICON_VIEW_CARDS;
+    const label = on ? 'Compact (table) view — click for cards' : 'Card view — click for compact table';
+    btn.setAttribute('title', label);
+    btn.setAttribute('aria-label', label);
+  }
+  // Soft crossfade so the layout change doesn't snap abruptly.
+  els.list.style.opacity = '0';
+  requestAnimationFrame(() => { els.list.style.opacity = ''; });
 }
 
 function init() {

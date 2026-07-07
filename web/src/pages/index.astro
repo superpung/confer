@@ -251,18 +251,8 @@ const year = new Date().getFullYear();
           <button class="text-btn" id="batchCollectBtn" type="button">Add to collection</button>
           <button class="text-btn" id="batchStatusBtn" type="button">Set status</button>
           <button class="text-btn" id="batchTagBtn" type="button">Add tag</button>
-          <button class="text-btn" data-export="titles" type="button">Copy titles</button>
-          <button class="text-btn" data-export="urls" type="button">Copy URLs</button>
-          <button class="text-btn" data-export="dois" type="button">Copy DOIs</button>
-          <button class="text-btn" data-export="citations" type="button">Copy citations</button>
-          <button class="text-btn" data-export="bibtex" type="button">Copy BibTeX</button>
-          <button class="text-btn" data-export="table" type="button">Copy as Table</button>
-          <button class="text-btn" data-export="csv" type="button">Download CSV</button>
-          <button class="text-btn" data-export="markdown" type="button">Download Markdown</button>
-          <button class="text-btn" data-export="json" type="button">Download JSON</button>
-          <button class="text-btn" data-export="ris" type="button">Download RIS</button>
-          <button class="text-btn" data-export="abstracts" type="button">Copy abstracts</button>
-          <button class="text-btn" data-export="notes" type="button">Copy notes</button>
+          <button class="text-btn export-menu-btn" id="selCopyBtn" type="button">Copy<span class="chip-caret" aria-hidden="true">▾</span></button>
+          <button class="text-btn export-menu-btn" id="selDownloadBtn" type="button">Download<span class="chip-caret" aria-hidden="true">▾</span></button>
           <button class="text-btn" data-export="findsimilar" type="button">Find Similar</button>
           <button class="text-btn" data-export="clear" type="button">Clear</button>
         </div>

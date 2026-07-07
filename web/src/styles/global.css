@@ -504,6 +504,8 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .chip-btn--toggle[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
 /* standalone asc/desc direction toggle next to the sort dropdown */
 .sort-dir-btn .sort-dir-arrow { font-size: 15px; font-weight: 600; line-height: 1; }
+/* grouped Copy / Download menu buttons in the selection bar */
+.export-menu-btn .chip-caret { font-size: 10px; opacity: 0.6; margin-left: 3px; }
 .result-summary { margin-left: auto; color: var(--muted); font-size: 13.5px; }
 .sort-hint-btn { background: none; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 11px; font-weight: 600; padding: 1px 8px; cursor: pointer; margin-left: 6px; vertical-align: middle; white-space: nowrap; }
 .sort-hint-btn:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
@@ -754,10 +756,35 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .paper-card:hover .copy-btn, .copy-btn:focus { opacity: 1; }
 
 /* Dense / compact view */
-.paper-list.is-dense .paper-snippet { display: none; }
-.paper-list.is-dense .paper-card:not(.is-open) .chips { display: none; }
-.paper-list.is-dense .paper-card { padding-top: 8px; padding-bottom: 8px; }
-.paper-list.is-dense .paper-authors { margin-top: 2px; }
+.paper-list { transition: opacity 0.18s ease; }
+/* Compact view = a table-like list of single-line rows (no card chrome).
+   Collapsed rows show just a checkbox, the title, and compact venue/actions;
+   expanding a row restores the full card so the abstract/meta stay usable. */
+.paper-list.is-dense { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel); }
+.paper-list.is-dense .paper-card {
+  border: none; border-radius: 0; box-shadow: none; background: none;
+  border-bottom: 1px solid var(--line);
+  padding: 4px 14px; margin: 0;
+  transition: background 0.15s ease;
+}
+.paper-list.is-dense .paper-card:last-child { border-bottom: none; }
+.paper-list.is-dense .paper-card:not(.is-open) {
+  display: flex; align-items: center; gap: 12px; flex-wrap: nowrap;
+}
+.paper-list.is-dense .paper-card:not(.is-open):hover { background: var(--panel-hover); }
+.paper-list.is-dense .paper-card:not(.is-open) > * { margin: 0; }
+.paper-list.is-dense .paper-card:not(.is-open) .card-select { order: 0; flex: 0 0 auto; }
+.paper-list.is-dense .paper-card:not(.is-open) .paper-title { order: 1; flex: 1 1 auto; min-width: 0; margin: 0; font-size: 14px; }
+.paper-list.is-dense .paper-card:not(.is-open) .paper-title .title-toggle { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; display: inline-block; }
+.paper-list.is-dense .paper-card:not(.is-open) .paper-title .title-caret { display: none; }
+.paper-list.is-dense .paper-card:not(.is-open) .card-top { order: 2; flex: 0 0 auto; margin: 0; }
+.paper-list.is-dense .paper-card:not(.is-open) .card-head { gap: 6px; }
+/* everything below the title line collapses away in a compact row */
+.paper-list.is-dense .paper-card:not(.is-open) .paper-authors,
+.paper-list.is-dense .paper-card:not(.is-open) .paper-snippet,
+.paper-list.is-dense .paper-card:not(.is-open) .paper-disc,
+.paper-list.is-dense .paper-card:not(.is-open) .chips,
+.paper-list.is-dense .paper-card:not(.is-open) .card-corner { display: none; }
 
 .empty-state {
   margin: 18px 28px; border: 1px dashed var(--line-strong); border-radius: var(--radius);
