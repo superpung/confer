@@ -109,6 +109,8 @@ const ICONS = {
   history: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v6h6"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/></svg>',
   // copy / clipboard icon
   copy: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
+  // "type" / title icon (a capital T) — used for the copy-title action
+  type: '<svg class="ic ic--sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>',
 };
 
 function readJson<T>(key: string, fallback: T): T {
@@ -208,7 +210,7 @@ function invalidateFieldValueIndex() { fieldValueIndexBuilt = false; }
 const SUGGEST_FIELDS = [
   'author', 'title', 'inst', 'abstract', 'track', 'venue', 'event',
   'session', 'keyword', 'doi', 'url', 'location', 'date', 'pubdate', 'pages',
-  'container', 'publisher', 'year', 'id', 'tag', 'has', 'oa', 'in', 'group', 'status', 'note', 'len', 'samesession', 'kind', 'category', 'recent', 'series',
+  'container', 'publisher', 'year', 'id', 'tag', 'has', 'oa', 'in', 'group', 'status', 'note', 'samesession', 'kind', 'category', 'recent', 'series',
 ];
 const OA_STATUS_VALUES = ['gold', 'green', 'bronze', 'hybrid', 'any'];
 const SUGGEST_FIELD_SET = new Set(SUGGEST_FIELDS);
@@ -230,7 +232,7 @@ const HAS_VALUES = ['pdf', 'oa', 'doi', 'keyword', 'artifact', 'abstract', 'inst
  * Returns null when not a field prefix or token already has a colon.
  */
 const STATUS_VALUES = ['toread', 'reading', 'done'];
-const SORT_VALUES = ['relevance', 'venue', 'year', 'year-asc', 'date', 'date-asc', 'pubdate', 'pubdate-asc', 'title', 'authors', 'track', 'session', 'location', 'status', 'id', 'random', 'oa', 'len', 'len-asc', 'keywords'];
+const SORT_VALUES = ['relevance', 'venue', 'year', 'year-asc', 'date', 'date-asc', 'pubdate', 'pubdate-asc', 'title', 'authors', 'track', 'session', 'location', 'status', 'id', 'random', 'oa'];
 
 function fieldSuggestion(token: string): string | null {
   // Value completion for `has:<prefix>`
@@ -688,18 +690,6 @@ function sortRows(rows: { p: Paper; v: string }[]) {
       if (ra !== rb) return ra - rb;
       return a.p.id.localeCompare(b.p.id, undefined, { numeric: true });
     }
-    if (s === 'len' || s === 'len-asc') {
-      const wa = a.p.abstract.trim() ? a.p.abstract.trim().split(/\s+/).length : 0;
-      const wb = b.p.abstract.trim() ? b.p.abstract.trim().split(/\s+/).length : 0;
-      if (wa !== wb) return s === 'len-asc' ? wa - wb : wb - wa;
-      return a.p.id.localeCompare(b.p.id, undefined, { numeric: true });
-    }
-    if (s === 'keywords') {
-      const ka = a.p.keywords?.length ?? 0;
-      const kb = b.p.keywords?.length ?? 0;
-      if (ka !== kb) return kb - ka;
-      return a.p.id.localeCompare(b.p.id, undefined, { numeric: true });
-    }
     if (s === 'relevance') {
       // When similar: terms are active, sort by cosine similarity (highest first).
       // Fall back to keyword relevance when no similar: terms present.
@@ -824,9 +814,9 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
   const authors = p.authors.length
     ? authorAff(p).map(({ author, inst }) =>
         `<span class="author${inst ? ' has-inst' : ''}">` +
-          `<button class="link-author" data-author="${esc(author)}" title="Search papers by ${esc(author)} · Shift+click to view profile">${highlightText(author, hlAuthorTerms)}</button>` +
+          `<button class="link-author" data-author="${esc(author)}" title="Search papers by ${esc(author)}">${highlightText(author, hlAuthorTerms)}</button>` +
           (inst
-            ? `<span class="author-pop"><button class="author-inst" data-inst="${esc(inst)}" title="Search papers from ${esc(inst)} · Shift+click to view profile">${highlightText(inst, hlInstTerms)}</button></span>`
+            ? `<span class="author-pop"><button class="author-inst" data-inst="${esc(inst)}" title="Search papers from ${esc(inst)}">${highlightText(inst, hlInstTerms)}</button></span>`
             : '') +
         `</span>`).join(', ')
     : 'Not listed';
@@ -881,7 +871,8 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
     ? `<button class="icon-btn" data-copy-abstract="${esc(k)}" type="button" title="Copy abstract" aria-label="Copy abstract">${ICONS.copy}</button>`
     : '';
   const copyCiteBtn = `<button class="icon-btn" data-copy-cite="${esc(k)}" type="button" title="Copy citation" aria-label="Copy citation">${ICONS.link}</button>`;
-  const discInner = noteHtml + (p.abstract ? `<p class="disc-text">${highlightText(p.abstract, hlTerms)}</p>` : '') + kwHtml + metaHtml + (p.abstract || hasMeta || kws.length ? `<div class="disc-actions">${copyAbsBtn}${copyCiteBtn}${similarBtn}</div>` : '');
+  const copyTitleBtn = `<button class="icon-btn" data-copy-title="${esc(k)}" type="button" title="Copy title" aria-label="Copy title">${ICONS.type}</button>`;
+  const discInner = noteHtml + (p.abstract ? `<p class="disc-text">${highlightText(p.abstract, hlTerms)}</p>` : '') + kwHtml + metaHtml + (p.abstract || hasMeta || kws.length ? `<div class="disc-actions">${copyTitleBtn}${copyAbsBtn}${copyCiteBtn}${similarBtn}</div>` : '');
   // The title is the toggle: clicking it expands the disclosure, and the whole
   // card animates height via the grid-template-rows 0fr↔1fr trick. Papers with
   // nothing to reveal render a plain (non-interactive) title.
@@ -897,6 +888,7 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
     <span class="card-select"><input type="checkbox" data-sel ${sel ? 'checked' : ''} aria-label="Select"></span>
     <div class="card-top">
       <div class="card-head">
+        ${oaInfo ? `<a class="oa-badge oa-badge--${esc(oaInfo.oa_status)}"${oaInfo.oa_url ? ` href="${esc(oaInfo.oa_url)}" target="_blank" rel="noreferrer"` : ''} title="Open Access (${esc(oaInfo.oa_status)})">OA</a>` : ''}
         <button class="venue-badge" data-venue-badge title="Filter results to ${esc(venue.name)} (click to toggle; Shift+click for venue profile)">${esc(venue.name)}</button>
         <button class="paper-id" data-copy-key="${esc(k)}" type="button" title="Copy paper key to clipboard">${esc(p.id)}</button>
         ${simPct != null ? `<span class="sim-badge" title="Cosine similarity score">${simPct}%</span>` : ''}
@@ -930,11 +922,10 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
     ${(() => {
       const pdf = paperPdf(p);
       const prog = p.urls[0] ?? '';
-      const oaCorner = oaInfo ? `<span class="oa-dot oa-dot--${esc(oaInfo.oa_status)}" title="Open Access (${esc(oaInfo.oa_status)})"></span>` : '';
-      if (!pdf && !prog && !oaCorner) return '';
-      const pdfBtn = pdf ? `<button class="icon-btn pdf-btn" data-open-pdf="${esc(pdf)}" data-pdf-title="${esc(p.title)}" type="button" title="View PDF" aria-label="View PDF">${ICONS.pdf}</button>` : '';
+      if (!pdf && !prog) return '';
+      const pdfBtn = pdf ? `<a class="icon-btn pdf-btn" data-open-pdf href="${esc(pdf)}" target="_blank" rel="noreferrer" title="Open PDF in a new tab" aria-label="Open PDF">${ICONS.pdf}</a>` : '';
       const progLink = prog ? `<a class="icon-btn program-link" href="${esc(prog)}" target="_blank" rel="noreferrer" title="Open program page" aria-label="Open program page">${ICONS.externalLink}</a>` : '';
-      return `<div class="card-corner">${oaCorner}${pdfBtn}${progLink}</div>`;
+      return `<div class="card-corner">${pdfBtn}${progLink}</div>`;
     })()}
   </article>`;
 }
@@ -1194,43 +1185,10 @@ function updateRailRelated(cardKey: string) {
 
 function clearRailRelated() {
   document.getElementById(RAIL_RELATED_ID)?.remove();
-  showRailRecent();
+  document.getElementById(RAIL_RECENT_ID)?.remove();
 }
 
 const RAIL_RECENT_ID = 'railRecent';
-function showRailRecent() {
-  const recentKeys = (() => {
-    try { return JSON.parse(localStorage.getItem(K_RECENT_PAPERS) ?? '[]') as string[]; }
-    catch { return [] as string[]; }
-  })();
-  // Only show rows that are in the current filtered view
-  const inView = new Set(state.rows.map((r) => paperKey(r.v, r.p.id)));
-  const recentRows = recentKeys
-    .filter((k) => inView.has(k))
-    .slice(0, 5)
-    .map((k) => {
-      const [vid, ...rest] = k.split(':');
-      const pid = rest.join(':');
-      const p = state.loaded.get(vid)?.find((pp) => pp.id === pid);
-      return p ? { p, v: vid } : null;
-    })
-    .filter((r): r is { p: Paper; v: string } => r !== null);
-
-  let el = document.getElementById(RAIL_RECENT_ID);
-  if (!recentRows.length) {
-    el?.remove();
-    return;
-  }
-  if (!el) {
-    el = document.createElement('div');
-    el.id = RAIL_RECENT_ID;
-    els.railBody.appendChild(el);
-  }
-  el.innerHTML = `<div class="rail-section">
-    <h4 class="rail-section-title">Recently viewed</h4>
-    <div class="mini-card-list">${recentRows.map((r) => miniCardHtml(r.p, r.v)).join('')}</div>
-  </div>`;
-}
 
 // --- topic trend chart ---------------------------------------------------
 const TREND_PALETTE = ['var(--accent)', '#5a7c5a', '#4a6e8a', '#8c3a52', '#a67a36'];
@@ -1520,7 +1478,7 @@ function stopNetwork() {
 function render() {
   const allTerms = parseQuery(state.query);
   // Intercept sort: directives in the query and apply them as state changes
-  const VALID_SORTS = new Set(['venue', 'year', 'year-asc', 'date', 'date-asc', 'pubdate', 'pubdate-asc', 'id', 'title', 'authors', 'track', 'session', 'location', 'status', 'relevance', 'random', 'oa', 'len', 'len-asc', 'keywords']);
+  const VALID_SORTS = new Set(['venue', 'year', 'year-asc', 'date', 'date-asc', 'pubdate', 'pubdate-asc', 'id', 'title', 'authors', 'track', 'session', 'location', 'status', 'relevance', 'random', 'oa']);
   const sortTerm = allTerms.find((t) => t.field === 'sort' && VALID_SORTS.has(t.value));
   if (sortTerm && state.sort !== sortTerm.value) {
     state.sort = sortTerm.value;
@@ -1774,22 +1732,6 @@ function render() {
           const letter = sortT[0]?.toUpperCase() ?? '#';
           const bucket = /[A-Z]/.test(letter) ? letter : '#';
           if (bucket !== lastLetter) { lastLetter = bucket; parts.push(`<div class="session-divider"><span class="session-divider-label">${esc(bucket)}</span></div>`); }
-          parts.push(cardHtml(r.p, r.v, getSimPct ? getSimPct(r) : undefined));
-        }
-        return parts.join('');
-      }
-      if (state.sort === 'len' || state.sort === 'len-asc') {
-        const wc = (r: { p: Paper }) => r.p.abstract.trim() ? r.p.abstract.trim().split(/\s+/).length : 0;
-        const lenBucket = (n: number) => n === 0 ? 'No abstract' : n < 50 ? '<50 words' : n < 100 ? '50–99 words' : n < 200 ? '100–199 words' : n < 500 ? '200–499 words' : '500+ words';
-        const parts: string[] = [];
-        let lastBucket = '';
-        for (const r of slice) {
-          const bucket = lenBucket(wc(r));
-          if (bucket !== lastBucket) {
-            lastBucket = bucket;
-            const filterVal = bucket === 'No abstract' ? '<1' : bucket === '<50 words' ? '<50' : bucket === '50–99 words' ? '50-99' : bucket === '100–199 words' ? '100-199' : bucket === '200–499 words' ? '200-499' : '>=500';
-            parts.push(`<div class="session-divider"><button class="session-divider-label" data-len-filter="${esc(filterVal)}" type="button" title="Filter to len:${esc(filterVal)}">${esc(bucket)}</button></div>`);
-          }
           parts.push(cardHtml(r.p, r.v, getSimPct ? getSimPct(r) : undefined));
         }
         return parts.join('');
@@ -4258,8 +4200,6 @@ const SORT_LABELS: Record<string, string> = {
   location: 'Sort: Location', status: 'Sort: Read Status', track: 'Sort: Track',
   id: 'Sort: Paper ID', title: 'Sort: Title', authors: 'Sort: Authors', session: 'Sort: Session',
   relevance: 'Sort: Relevance', random: 'Sort: Random', oa: 'Sort: Open Access',
-  len: 'Sort: Abstract ↓', 'len-asc': 'Sort: Abstract ↑',
-  keywords: 'Sort: Keywords ↓',
 };
 function reflectSort() {
   const label = document.querySelector<HTMLElement>('#sortSelect .caret-select-label');
@@ -4544,7 +4484,7 @@ function wire() {
     const m = before.match(/(?:^|\s)(-?)(\w+):(\S*)$/);
     if (!m) return null;
     const field = FIELD_ALIASES[m[2].toLowerCase()];
-    if (!['track', 'keyword', 'inst', 'session', 'event', 'container', 'publisher', 'similar', 'status', 'sort', 'has', 'author', 'year', 'venue', 'tag', 'oa', 'in', 'group', 'title', 'doi', 'location', 'date', 'len', 'samesession', 'kind', 'category', 'note', 'recent', 'series'].includes(field)) return null;
+    if (!['track', 'keyword', 'inst', 'session', 'event', 'container', 'publisher', 'similar', 'status', 'sort', 'has', 'author', 'year', 'venue', 'tag', 'oa', 'in', 'group', 'title', 'doi', 'location', 'date', 'samesession', 'kind', 'category', 'note', 'recent', 'series'].includes(field)) return null;
     const tokenStart = caret - m[0].trimStart().length;
     return { field, prefix: m[3].toLowerCase(), tokenStart };
   }
@@ -4708,24 +4648,6 @@ function wire() {
           const n = venuesOfGroup(g).length;
           const badge = n > 0 ? ` <span class="search-hist-badge">${n} ${plural(n, 'venue')}</span>` : '';
           return `<button class="search-hist-item" data-fv-idx="${i}" data-fv="${esc(g.name)}" type="button" tabindex="-1"><span class="search-hist-field">group:</span>${esc(g.name)}${badge}</button>`;
-        }).join('');
-        histDrop.hidden = false; histDropActive = true; return;
-      } else if (fvc.field === 'len') {
-        // Suggest word-count thresholds derived from actual abstract lengths
-        const hints = [`>100`, `>200`, `<100`, `50-200`];
-        const filteredHints = hints.filter((h) => h.includes(fvc.prefix) || fvc.prefix === '');
-        if (!filteredHints.length) { histDrop.hidden = true; histDropActive = false; return; }
-        histDrop.innerHTML = filteredHints.map((h, i) => {
-          const n = state.rows.filter(({ p }) => {
-            const wc = p.abstract.trim() ? p.abstract.trim().split(/\s+/).length : 0;
-            const cM = h.match(/^(>=|<=|>|<)(\d+)$/);
-            const rM = h.match(/^(\d+)-(\d+)$/);
-            if (cM) { const v2 = Number(cM[2]); return cM[1] === '>' ? wc > v2 : cM[1] === '<' ? wc < v2 : cM[1] === '>=' ? wc >= v2 : wc <= v2; }
-            if (rM) return wc >= Number(rM[1]) && wc <= Number(rM[2]);
-            return false;
-          }).length;
-          const badge = ` <span class="search-hist-badge">${n}</span>`;
-          return `<button class="search-hist-item" data-fv-idx="${i}" data-fv="${esc(h)}" type="button" tabindex="-1"><span class="search-hist-field">len:</span>${esc(h)}${badge}</button>`;
         }).join('');
         histDrop.hidden = false; histDropActive = true; return;
       } else if (fvc.field === 'oa') {
@@ -5304,9 +5226,6 @@ function wire() {
       } else if (target.closest('[data-pubdate-filter]')) {
         const pd = (target.closest('[data-pubdate-filter]') as HTMLElement).dataset.pubdateFilter!;
         setQuery(`pubdate:${pd}`);
-      } else if (target.closest('[data-len-filter]')) {
-        const lf = (target.closest('[data-len-filter]') as HTMLElement).dataset.lenFilter!;
-        setQuery(`len:${lf}`);
       }
       return;
     }
@@ -5382,15 +5301,10 @@ function wire() {
       setQuery(`location:"${(target.closest('[data-location-filter]') as HTMLElement).dataset.locationFilter!}"`);
     } else if (target.closest('[data-inst]')) {
       const instName = (target.closest('[data-inst]') as HTMLElement).dataset.inst!;
-      if ((e as MouseEvent).shiftKey) { openInstProfile(instName); return; }
       setQuery(`inst:"${instName}"`);
     } else if (target.closest('[data-author]')) {
       const authorName = (target.closest('[data-author]') as HTMLElement).dataset.author!;
-      if ((e as MouseEvent).shiftKey) {
-        openAuthorProfile(authorName);
-      } else {
-        setQuery(`author:"${authorName}"`);
-      }
+      setQuery(`author:"${authorName}"`);
     } else if (target.closest('[data-kw-mode]')) {
       state.keywordFilterMode = state.keywordFilterMode === 'any' ? 'all' : 'any';
       state.shown = PAGE; writeUrl(); render();
@@ -5405,6 +5319,13 @@ function wire() {
     } else if (target.closest('[data-copy-key]')) {
       const ck = (target.closest('[data-copy-key]') as HTMLElement).dataset.copyKey!;
       navigator.clipboard.writeText(ck).then(() => toast(`Key copied: ${ck}`)).catch(() => toast('Clipboard blocked'));
+    } else if (target.closest('[data-copy-title]')) {
+      const copyKey = (target.closest('[data-copy-title]') as HTMLElement).dataset.copyTitle!;
+      const [vId, pId] = copyKey.split(':');
+      const pRow = state.loaded.get(vId)?.find((p) => p.id === pId);
+      if (pRow?.title) {
+        navigator.clipboard.writeText(pRow.title).then(() => toast('Title copied!')).catch(() => toast('Clipboard blocked'));
+      }
     } else if (target.closest('[data-copy-abstract]')) {
       const copyKey = (target.closest('[data-copy-abstract]') as HTMLElement).dataset.copyAbstract!;
       const [vId, pId] = copyKey.split(':');
@@ -5616,44 +5537,8 @@ function wire() {
   document.querySelectorAll('[data-modal-close]').forEach((b) => b.addEventListener('click', closeModals));
   document.querySelectorAll('.modal').forEach((m) => m.addEventListener('click', (e) => { if (e.target === m) closeModals(); }));
 
-  // PDF viewer modal: open on card PDF button click
-  document.body.addEventListener('click', (e) => {
-    const btn = (e.target as HTMLElement).closest<HTMLElement>('[data-open-pdf]');
-    if (btn) {
-      const url = btn.dataset.openPdf!;
-      const title = btn.dataset.pdfTitle ?? 'PDF';
-      const frame = $<HTMLIFrameElement>('#pdfFrame');
-      const link = $<HTMLAnchorElement>('#pdfModalLink');
-      const fallback = document.querySelector<HTMLElement>('#pdfFallback');
-      const fallbackLink = document.querySelector<HTMLAnchorElement>('#pdfFallbackLink');
-      const titleEl = $('#pdfModalTitle');
-      // Reset frame and hide fallback before loading
-      frame.src = '';
-      frame.hidden = false;
-      if (fallback) fallback.hidden = true;
-      link.href = url;
-      if (fallbackLink) fallbackLink.href = url;
-      titleEl.textContent = title;
-      // Detect X-Frame-Options / CSP block via error event on load
-      const onLoad = () => {
-        try {
-          // If contentDocument is null or access throws, the frame was blocked
-          const doc = frame.contentDocument;
-          if (!doc || doc.location.href === 'about:blank') {
-            frame.hidden = true;
-            if (fallback) fallback.hidden = false;
-          }
-        } catch {
-          frame.hidden = true;
-          if (fallback) fallback.hidden = false;
-        }
-        frame.removeEventListener('load', onLoad);
-      };
-      frame.addEventListener('load', onLoad);
-      frame.src = url;
-      $('#pdfModal').hidden = false;
-    }
-  });
+  // PDF opens directly in a new tab (the card PDF button is a plain <a target="_blank">),
+  // so there is no in-page viewer to wire up — many publishers block iframe embedding.
 
   // [data-open-saved] appears both in the toolbar and inside Settings — closing any
   // open modal first prevents Settings from sitting on top of the Saved dialog.
@@ -5997,11 +5882,11 @@ function wire() {
         setQuery(`author:"${authorBtn.dataset.miniAuthor!}"`);
         return;
       }
-      // --- Author profile: co-author chip → open sub-profile ---
+      // --- Profile author chip → search that author ---
       const coauthorChip = t.closest<HTMLElement>('[data-author][class*="author-profile-chip"]');
       if (coauthorChip && !t.closest('[data-mini-author]')) {
-        const aname = coauthorChip.dataset.author!;
-        openAuthorProfile(aname);
+        closeModals();
+        setQuery(`author:"${coauthorChip.dataset.author!}"`);
         return;
       }
       // --- Author profile: "Show all papers" button ---
@@ -6083,12 +5968,11 @@ function wire() {
         setQuery(`track:"${trackVal}"`);
         return;
       }
-      // --- Institution profile: author chip → open author profile ---
+      // --- Profile author chip → search that author ---
       const instAuthorChip = t.closest<HTMLElement>('[data-author][class*="author-profile-chip"]');
       if (instAuthorChip && !t.closest('[data-mini-author]')) {
-        const aname = instAuthorChip.dataset.author!;
         closeModals();
-        openAuthorProfile(aname);
+        setQuery(`author:"${instAuthorChip.dataset.author!}"`);
         return;
       }
       // --- Keyword co-occurrence: co-kw chip → filter by keyword ---
@@ -6167,12 +6051,10 @@ function wire() {
       if (yr) { state.yearFilter.has(yr) ? state.yearFilter.delete(yr) : state.yearFilter.add(yr); }
       state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (kind === 'author') {
-      if ((e as MouseEvent).shiftKey) { openAuthorProfile(railAuthorName.get(val) ?? val); return; }
       setQuery(`author:"${railAuthorName.get(val) ?? val}"`); // val is a disambiguated key
     } else if (kind === 'oa') {
       setQuery(`oa:${val}`);
     } else if (kind === 'inst') {
-      if ((e as MouseEvent).shiftKey) { openInstProfile(val); return; }
       setQuery(`inst:"${val}"`);
     } else if (kind === 'tag') {
       state.tagFilter.has(val) ? state.tagFilter.delete(val) : state.tagFilter.add(val);
@@ -6308,7 +6190,7 @@ function wire() {
       case 'x': focusedCard()?.querySelector<HTMLInputElement>('[data-sel]')?.click(); break;
       case 'X': if (state.sel.size) { state.sel.clear(); render(); } break; // deselect all
       case 'n': focusedCard()?.querySelector<HTMLButtonElement>('[data-note-edit]')?.click(); break;
-      case 'p': focusedCard()?.querySelector<HTMLButtonElement>('[data-open-pdf]')?.click(); break;
+      case 'p': focusedCard()?.querySelector<HTMLElement>('[data-open-pdf]')?.click(); break;
       case '1': case '2': case '3': case '0': {
         const card = focusedCard();
         if (!card) break;
@@ -6370,17 +6252,6 @@ function wire() {
           const abs = aRow2?.p.abstract?.trim();
           if (abs) navigator.clipboard.writeText(abs).then(() => toast('Abstract copied')).catch(() => toast('Clipboard blocked'));
           else toast('No abstract available');
-        }
-        break;
-      }
-      case 'a': { // open author profile for first author of focused card
-        const aCard = focusedCard();
-        const aKey = aCard?.dataset.key ?? '';
-        if (aKey) {
-          const [avid, ...aidParts] = aKey.split(':');
-          const aid = aidParts.join(':');
-          const row2 = state.rows.find((r) => r.v === avid && r.p.id === aid);
-          if (row2 && row2.p.authors[0]) openAuthorProfile(row2.p.authors[0]);
         }
         break;
       }
@@ -6532,179 +6403,6 @@ function openKeywordCooccurrence(kw: string) {
   const searchBtn = `<button class="text-btn author-profile-search" data-kw-search="${esc(kw)}" type="button">Filter by keyword →</button>`;
 
   bodyEl.innerHTML = coKwHtml + `<div style="text-align:right;margin-bottom:8px">${searchBtn}</div>` + papersHtml;
-  modal.hidden = false;
-  requestAnimationFrame(refreshScrollFades);
-}
-
-function openAuthorProfile(name: string) {
-  const modal = document.querySelector<HTMLElement>('#entityModal');
-  const titleEl = document.querySelector<HTMLElement>('#entityTitle');
-  const bodyEl = document.querySelector<HTMLElement>('#entityBody');
-  if (!modal || !titleEl || !bodyEl) return;
-  titleEl.textContent = name;
-
-  // Collect all papers by this author from currently loaded rows
-  const normName = normalize(name);
-  const authorRows = state.rows.filter((r) =>
-    r.p.authors.some((a) => normalize(a) === normName)
-  );
-  if (!authorRows.length) {
-    bodyEl.innerHTML = '<p class="rail-empty">No papers found for this author in the current selection.</p>';
-    modal.hidden = false;
-    return;
-  }
-
-  // Co-author frequencies
-  const coauthorCount = new Map<string, number>();
-  for (const { p } of authorRows) {
-    for (const a of p.authors) {
-      if (normalize(a) === normName) continue;
-      coauthorCount.set(a, (coauthorCount.get(a) ?? 0) + 1);
-    }
-  }
-  const topCoauthors = [...coauthorCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
-
-  // Keyword frequencies
-  const kwCount = new Map<string, number>();
-  for (const { p } of authorRows) {
-    for (const kw of p.keywords ?? []) kwCount.set(kw, (kwCount.get(kw) ?? 0) + 1);
-  }
-  const topKw = [...kwCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
-
-  // Institution(s)
-  const institutions = new Set<string>();
-  for (const { p } of authorRows) {
-    const affs = authorAff(p);
-    const aff = affs.find((a) => normalize(a.author) === normName);
-    if (aff?.inst) institutions.add(aff.inst);
-  }
-
-  // Year distribution
-  const yearCount = new Map<number, number>();
-  for (const { v } of authorRows) {
-    const yr = venueById.get(v)?.year;
-    if (yr) yearCount.set(yr, (yearCount.get(yr) ?? 0) + 1);
-  }
-  const yearEntries = [...yearCount.entries()].sort((a, b) => a[0] - b[0]);
-
-  const yearHtml = yearEntries.length > 1
-    ? (() => {
-        const maxN = Math.max(...yearEntries.map(([, n]) => n));
-        const bars = yearEntries.map(([yr, n]) => {
-          const pct = Math.round((n / maxN) * 100);
-          return `<button class="author-year-bar" data-author-year-filter="${esc(name)}:${yr}" type="button" title="${yr}: ${n} paper${n !== 1 ? 's' : ''} — click to filter">
-            <div class="author-year-fill" style="height:${pct}%"></div>
-            <div class="author-year-label">${yr}</div>
-          </button>`;
-        }).join('');
-        return `<div class="author-profile-section"><h4 class="author-profile-head">Activity by year</h4><div class="author-year-chart">${bars}</div></div>`;
-      })()
-    : '';
-
-  const coauthorHtml = topCoauthors.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Top co-authors</h4><div class="author-profile-chips">${
-        topCoauthors.map(([a, n]) =>
-          `<button class="chip author-profile-chip" data-author="${esc(a)}" title="Search papers by ${esc(a)} · Shift+click to view profile">${esc(a)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-  const kwHtml = topKw.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Keywords</h4><div class="author-profile-chips">${
-        topKw.map(([kw, n]) =>
-          `<button class="chip chip-kw author-profile-chip" data-kw="${esc(kw)}">${esc(kw)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-  const instHtml = institutions.size
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Affiliation</h4><p class="author-profile-inst">${[...institutions].map((i) => esc(i)).join(' · ')}</p></div>`
-    : '';
-
-  const papersHtml = `<div class="author-profile-section"><h4 class="author-profile-head">${authorRows.length} paper${authorRows.length !== 1 ? 's' : ''}</h4><div class="mini-card-list">${
-    authorRows.map((r) => miniCardHtml(r.p, r.v)).join('')
-  }</div></div>`;
-
-  const searchBtn = `<button class="text-btn author-profile-search" data-author-search="${esc(name)}" type="button">Show all papers →</button>`;
-
-  bodyEl.innerHTML = instHtml + yearHtml + coauthorHtml + kwHtml + `<div style="text-align:right;margin-bottom:8px">${searchBtn}</div>` + papersHtml;
-  modal.hidden = false;
-  requestAnimationFrame(refreshScrollFades);
-}
-
-function openInstProfile(inst: string) {
-  const modal = document.querySelector<HTMLElement>('#entityModal');
-  const titleEl = document.querySelector<HTMLElement>('#entityTitle');
-  const bodyEl = document.querySelector<HTMLElement>('#entityBody');
-  if (!modal || !titleEl || !bodyEl) return;
-  titleEl.textContent = inst;
-
-  const normInst = normalize(inst);
-  const instRows = state.rows.filter((r) => {
-    const affs = authorAff(r.p);
-    return affs.some((a) => normalize(a.inst) === normInst);
-  });
-  if (!instRows.length) {
-    bodyEl.innerHTML = '<p class="rail-empty">No papers found for this institution in the current selection.</p>';
-    modal.hidden = false;
-    return;
-  }
-
-  // Authors from this institution
-  const authorCount = new Map<string, number>();
-  for (const { p } of instRows) {
-    const affs = authorAff(p);
-    for (const a of affs) {
-      if (normalize(a.inst) === normInst) authorCount.set(a.author, (authorCount.get(a.author) ?? 0) + 1);
-    }
-  }
-  const topAuthors = [...authorCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
-
-  // Keyword frequencies
-  const kwCount2 = new Map<string, number>();
-  for (const { p } of instRows) {
-    for (const kw of p.keywords ?? []) kwCount2.set(kw, (kwCount2.get(kw) ?? 0) + 1);
-  }
-  const topKw2 = [...kwCount2.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
-
-  // Year distribution
-  const yearCount2 = new Map<number, number>();
-  for (const { v } of instRows) {
-    const yr = venueById.get(v)?.year;
-    if (yr) yearCount2.set(yr, (yearCount2.get(yr) ?? 0) + 1);
-  }
-  const yearEntries2 = [...yearCount2.entries()].sort((a, b) => a[0] - b[0]);
-  const yearHtml2 = yearEntries2.length > 1
-    ? (() => {
-        const maxN2 = Math.max(...yearEntries2.map(([, n]) => n));
-        const bars2 = yearEntries2.map(([yr, n]) => {
-          const pct2 = Math.round((n / maxN2) * 100);
-          return `<button class="author-year-bar" data-inst-year-filter="${esc(inst)}:${yr}" type="button" title="${yr}: ${n} — click to filter"><div class="author-year-fill" style="height:${pct2}%"></div><div class="author-year-label">${yr}</div></button>`;
-        }).join('');
-        return `<div class="author-profile-section"><h4 class="author-profile-head">Activity by year</h4><div class="author-year-chart">${bars2}</div></div>`;
-      })()
-    : '';
-
-  const authorsHtml = topAuthors.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Authors (${authorCount.size})</h4><div class="author-profile-chips">${
-        topAuthors.map(([a, n]) =>
-          `<button class="chip author-profile-chip" data-author="${esc(a)}" title="Search papers by ${esc(a)} · Shift+click to view profile">${esc(a)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-  const kwHtml2 = topKw2.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Keywords</h4><div class="author-profile-chips">${
-        topKw2.map(([kw, n]) =>
-          `<button class="chip chip-kw author-profile-chip" data-kw="${esc(kw)}">${esc(kw)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-  const papersHtml2 = `<div class="author-profile-section"><h4 class="author-profile-head">${instRows.length} paper${instRows.length !== 1 ? 's' : ''}</h4><div class="mini-card-list">${
-    instRows.slice(0, 30).map((r) => miniCardHtml(r.p, r.v)).join('')
-  }${instRows.length > 30 ? `<p class="rail-empty">… and ${instRows.length - 30} more</p>` : ''}</div></div>`;
-  const searchBtn2 = `<button class="text-btn author-profile-search" data-inst-search="${esc(inst)}" type="button">Show all papers →</button>`;
-
-  bodyEl.innerHTML = yearHtml2 + authorsHtml + kwHtml2 + `<div style="text-align:right;margin-bottom:8px">${searchBtn2}</div>` + papersHtml2;
   modal.hidden = false;
   requestAnimationFrame(refreshScrollFades);
 }

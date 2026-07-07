@@ -492,6 +492,16 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 }
 .chip-btn:hover, .chip-btn[aria-expanded="true"] { background: var(--panel-hover); color: var(--text); border-color: var(--accent); }
 .chip-btn-count { min-width: 17px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 600; padding: 1px 6px; text-align: center; }
+
+/* Button-bar interaction affordances: distinguish the three interaction types. */
+.controls-divider { align-self: stretch; width: 1px; background: var(--line); margin: 2px 2px; }
+/* menu / panel openers carry a caret; it rotates when the panel is open */
+.chip-btn--menu .chip-caret { font-size: 10px; line-height: 1; opacity: 0.6; transition: transform 0.15s ease; }
+.chip-btn--menu[aria-expanded="true"] .chip-caret { transform: rotate(180deg); }
+/* overlay openers (modal/popover) carry a small “opens a panel” glyph */
+.chip-btn--overlay .chip-ext { font-size: 11px; line-height: 1; opacity: 0.55; }
+/* direct toggles fill in when pressed, so on/off reads at a glance */
+.chip-btn--toggle[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
 .result-summary { margin-left: auto; color: var(--muted); font-size: 13.5px; }
 .sort-hint-btn { background: none; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 11px; font-weight: 600; padding: 1px 8px; cursor: pointer; margin-left: 6px; vertical-align: middle; white-space: nowrap; }
 .sort-hint-btn:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
@@ -746,22 +756,6 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 .paper-list.is-dense .paper-card:not(.is-open) .chips { display: none; }
 .paper-list.is-dense .paper-card { padding-top: 8px; padding-bottom: 8px; }
 .paper-list.is-dense .paper-authors { margin-top: 2px; }
-
-/* PDF viewer modal */
-.modal-card--pdf {
-  width: min(92vw, 1100px); height: 90vh;
-  display: flex; flex-direction: column; padding: 16px 20px 0;
-}
-.pdf-modal-head { margin-bottom: 10px; }
-.pdf-modal-title {
-  flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  font-size: 15px; font-weight: 500; font-family: var(--sans);
-}
-.pdf-modal-actions { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
-.pdf-frame-wrap { flex: 1; overflow: hidden; border-radius: 8px 8px 0 0; border: 1px solid var(--line); border-bottom: none; margin: 0 -4px; position: relative; }
-.pdf-frame { width: 100%; height: 100%; border: none; display: block; background: var(--panel-soft); }
-.pdf-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; background: var(--panel); text-align: center; }
-.pdf-fallback-msg { color: var(--muted); font-size: 14px; max-width: 360px; }
 
 .empty-state {
   margin: 18px 28px; border: 1px dashed var(--line-strong); border-radius: var(--radius);
