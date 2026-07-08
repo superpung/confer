@@ -4852,7 +4852,7 @@ function wire() {
       const count = histCounts[entry.q];
       const countBadge = count !== undefined ? ` <span class="search-hist-badge">${count.toLocaleString()}</span>` : '';
       const timeBadge = entry.t ? ` <span class="search-hist-time">${relTime(entry.t)}</span>` : '';
-      return `<button class="search-hist-item" data-hist-idx="${realIdx}" type="button" tabindex="-1" title="${esc(entry.q)}">${esc(display)}${countBadge}${timeBadge}<button class="search-hist-del" data-hist-del="${realIdx}" type="button" title="Remove" tabindex="-1">×</button></button>`;
+      return `<button class="search-hist-item" data-hist-idx="${realIdx}" type="button" tabindex="-1" title="${esc(entry.q)}"><span class="search-hist-q">${esc(display)}</span>${countBadge}${timeBadge}<button class="search-hist-del" data-hist-del="${realIdx}" type="button" title="Remove" tabindex="-1">×</button></button>`;
     }).join('');
     const savedHtml = filteredSaved.length
       ? (filteredHist.length ? `<div class="search-hist-section">Saved</div>` : '') +

@@ -419,6 +419,8 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
   cursor: pointer; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .search-hist-item:hover { background: var(--panel-hover); color: var(--text); }
+/* Let the query text shrink + ellipsis so the count/time/× stay visible */
+.search-hist-q { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .search-hist-del {
   margin-left: auto; flex-shrink: 0; width: 18px; height: 18px;
   border: none; background: none; color: var(--muted); font-size: 14px;
