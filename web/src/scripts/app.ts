@@ -12,7 +12,6 @@ const K_THEME = 'confer.theme';
 const K_SAVED = 'confer.savedSearches';
 const K_SEARCH_HISTORY = 'confer.searchHistory'; // {q,t?}[] (most recent first, max 15; legacy string[] auto-migrated)
 const K_SEARCH_HIST_COUNTS = 'confer.searchHistoryCounts'; // Record<query, resultCount>
-const K_RECENT_PAPERS = 'confer.recentPapers';  // string[] paper keys (most recent first, max 20)
 const K_SIDEBAR = 'confer.sidebarCollapsed';
 const K_RAIL = 'confer.railCollapsed';
 const K_VGROUPS = 'confer.venueGroups';      // VenueGroup[] (series-level groups)
@@ -361,7 +360,7 @@ const state = {
   keywordFilterMode: 'any' as 'any' | 'all', // 'any' = OR, 'all' = AND
   pdfOnly: false,
   oaOnly: false,
-  facetCollapsed: new Set<string>(['Keyword']),
+  facetCollapsed: new Set<string>(),
   sort: 'venue',
   collection: '',                                       // active collection-filter id ('' = all)
   colSet: null as Set<string> | null,                   // memoized keys of the active collection
@@ -863,7 +862,7 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
   const kwVisible = kws.slice(0, 10);
   const kwExtra = kws.length > 10 ? kws.length - 10 : 0;
   const kwHtml = kws.length
-    ? `<div class="disc-keywords">${kwVisible.map((kw) => `<button class="chip chip-kw${state.keywordFilter.has(kw) ? ' is-active' : ''}" data-kw="${esc(kw)}" title="${state.keywordFilter.has(kw) ? 'Remove keyword filter' : 'Filter by keyword · Shift+click for related keywords'}">${esc(kw)}</button>`).join('')}${kwExtra ? `<span class="chip">+${kwExtra} more</span>` : ''}</div>`
+    ? `<div class="disc-keywords">${kwVisible.map((kw) => `<button class="chip chip-kw${state.keywordFilter.has(kw) ? ' is-active' : ''}" data-kw="${esc(kw)}" title="${state.keywordFilter.has(kw) ? 'Remove keyword filter' : 'Filter by keyword'}">${esc(kw)}</button>`).join('')}${kwExtra ? `<span class="chip">+${kwExtra} more</span>` : ''}</div>`
     : '';
   const similarBtn = `<button class="icon-btn similar-btn" data-find-similar="${esc(k)}" type="button" title="Find similar papers · Shift+click to filter with similar:" aria-label="Find similar papers">${ICONS.similar}</button>`;
   const copyAbsBtn = p.abstract
@@ -888,7 +887,7 @@ function cardHtml(p: Paper, v: string, simPct?: number): string {
     <div class="card-top">
       <div class="card-head">
         ${oaInfo ? `<a class="oa-dot oa-dot--${esc(oaInfo.oa_status)}"${oaInfo.oa_url ? ` href="${esc(oaInfo.oa_url)}" target="_blank" rel="noreferrer"` : ''} title="Open Access (${esc(oaInfo.oa_status)})" aria-label="Open Access (${esc(oaInfo.oa_status)})"></a>` : ''}
-        <button class="venue-badge" data-venue-badge title="Filter results to ${esc(venue.name)} (click to toggle; Shift+click for venue profile)">${esc(venue.name)}</button>
+        <button class="venue-badge" data-venue-badge title="Filter results to ${esc(venue.name)} (click to toggle)">${esc(venue.name)}</button>
         <button class="paper-id" data-copy-key="${esc(k)}" type="button" title="Copy paper key to clipboard">${esc(p.id)}</button>
         ${simPct != null ? `<span class="sim-badge" title="Cosine similarity score">${simPct}%</span>` : ''}
       </div>
@@ -1741,7 +1740,7 @@ function render() {
               lastVenue = r.v;
               const vname = venueById.get(r.v)?.name ?? r.v;
               const vActive = state.venuesFacet.has(r.v);
-              parts.push(`<div class="session-divider"><button class="session-divider-label${vActive ? ' is-active' : ''}" data-divider-venue="${esc(r.v)}" type="button" title="${vActive ? 'Remove filter for' : 'Filter to'} ${esc(vname)} · Shift+click for venue profile">${esc(vname)}</button></div>`);
+              parts.push(`<div class="session-divider"><button class="session-divider-label${vActive ? ' is-active' : ''}" data-divider-venue="${esc(r.v)}" type="button" title="${vActive ? 'Remove filter for' : 'Filter to'} ${esc(vname)}">${esc(vname)}</button></div>`);
             }
             parts.push(cardHtml(r.p, r.v, getSimPct ? getSimPct(r) : undefined));
           }
@@ -4359,17 +4358,6 @@ function wire() {
     return days < 30 ? `${days}d` : `${Math.floor(days / 30)}mo`;
   }
 
-  function loadRecentPapers(): string[] {
-    try { return JSON.parse(localStorage.getItem(K_RECENT_PAPERS) ?? '[]') as string[]; }
-    catch { return []; }
-  }
-  function saveRecentPaper(k: string) {
-    const recent = loadRecentPapers().filter((r) => r !== k);
-    recent.unshift(k);
-    try { localStorage.setItem(K_RECENT_PAPERS, JSON.stringify(recent.slice(0, 20))); }
-    catch { /* ignore */ }
-  }
-
   function commitSearchQuery() {
     const q = els.search.value;
     if (q.trim() && q.trim() !== state.query) saveSearchHistory(q.trim());
@@ -4394,9 +4382,10 @@ function wire() {
     }
     renderSearchHL();
     clearTimeout(t);
-    // Adaptive debounce: slower while actively typing a field name (suggestion active),
-    // medium when a completed field: token is present, fast otherwise.
-    const delay = searchSuggestion ? 450 : queryHasFieldToken(els.search.value) ? 350 : 130;
+    // Debounce so the search only fires once the user pauses typing — otherwise
+    // partial words (e.g. "si"→"sim"→"simila") each trigger a search. Slightly
+    // longer while a field name/token is being typed.
+    const delay = searchSuggestion ? 500 : queryHasFieldToken(els.search.value) ? 450 : 350;
     t = window.setTimeout(commitSearchQuery, delay);
   }
 
@@ -4480,12 +4469,11 @@ function wire() {
           if (seen.has(k)) return; seen.add(k);
           candidates.push({ key: k, title: rowByKey2.get(k) ?? k });
         };
-        // Priority: selected → saved (status/tags/collections) → recently viewed → focused card
+        // Priority: selected → saved (status/tags/collections) → focused card
         for (const k of state.sel) addKey2(k);
         for (const [k] of state.status) addKey2(k);
         for (const [k] of state.tags) addKey2(k);
         for (const c of state.collections) for (const k of c.keys) addKey2(k);
-        for (const k of loadRecentPapers()) addKey2(k);
         const focused2 = focusedCard()?.dataset.key;
         if (focused2) addKey2(focused2);
         const matchedSim = candidates.filter(({ key, title }) =>
@@ -5182,7 +5170,6 @@ function wire() {
         state.shown = PAGE; writeUrl(); render();
       } else if (target.closest('[data-divider-venue]')) {
         const vid = (target.closest('[data-divider-venue]') as HTMLElement).dataset.dividerVenue!;
-        if ((e as MouseEvent).shiftKey) { openVenueProfile(vid); return; }
         state.venuesFacet.has(vid) ? state.venuesFacet.delete(vid) : state.venuesFacet.add(vid);
         state.shown = PAGE; writeUrl(); render();
       } else if (target.closest('[data-status-filter]')) {
@@ -5211,7 +5198,6 @@ function wire() {
       const cardKey = card.dataset.key ?? '';
       if (!open && cardKey) {
         try { history.replaceState(null, '', location.pathname + location.search + `#paper:${cardKey}`); } catch { /* ignore */ }
-        saveRecentPaper(cardKey);
       } else if (open && location.hash.startsWith('#paper:')) {
         try { history.replaceState(null, '', location.pathname + location.search); } catch { /* ignore */ }
       }
@@ -5251,7 +5237,6 @@ function wire() {
       setQuery(`tag:"${(target.closest('[data-tag]') as HTMLElement).dataset.tag!}"`);
     } else if (target.closest('[data-venue-badge]')) {
       const v = k.split(':')[0];
-      if ((e as MouseEvent).shiftKey) { openVenueProfile(v); return; }
       state.venuesFacet.has(v) ? state.venuesFacet.delete(v) : state.venuesFacet.add(v);
       state.shown = PAGE; writeUrl(); render();
     } else if (target.closest('[data-find-similar]')) {
@@ -5280,12 +5265,8 @@ function wire() {
       state.shown = PAGE; writeUrl(); render();
     } else if (target.closest('[data-kw]')) {
       const kw = (target.closest('[data-kw]') as HTMLElement).dataset.kw!;
-      if ((e as MouseEvent).shiftKey) {
-        openKeywordCooccurrence(kw);
-      } else {
-        if (state.keywordFilter.has(kw)) state.keywordFilter.delete(kw); else state.keywordFilter.add(kw);
-        state.shown = PAGE; writeUrl(); render();
-      }
+      if (state.keywordFilter.has(kw)) state.keywordFilter.delete(kw); else state.keywordFilter.add(kw);
+      state.shown = PAGE; writeUrl(); render();
     } else if (target.closest('[data-copy-key]')) {
       const ck = (target.closest('[data-copy-key]') as HTMLElement).dataset.copyKey!;
       navigator.clipboard.writeText(ck).then(() => toast(`Key copied: ${ck}`)).catch(() => toast('Clipboard blocked'));
@@ -5837,11 +5818,10 @@ function wire() {
         return;
       }
 
-      // --- Navigation: venue badge → filter (Shift → venue profile) ---
+      // --- Navigation: venue badge → filter ---
       const miniVenue = t.closest<HTMLElement>('[data-mini-venue]');
       if (miniVenue) {
         const vId = miniVenue.dataset.miniVenue!;
-        if ((e as MouseEvent).shiftKey) { openVenueProfile(vId); return; }
         closeModals();
         const ser = venueById.get(vId)?.series ?? vId;
         setQuery(`venue:"${ser}"`);
@@ -5882,77 +5862,6 @@ function wire() {
       if (authorBtn) {
         closeModals();
         setQuery(`author:"${authorBtn.dataset.miniAuthor!}"`);
-        return;
-      }
-      // --- Profile author chip → search that author ---
-      const coauthorChip = t.closest<HTMLElement>('[data-author][class*="author-profile-chip"]');
-      if (coauthorChip && !t.closest('[data-mini-author]')) {
-        closeModals();
-        setQuery(`author:"${coauthorChip.dataset.author!}"`);
-        return;
-      }
-      // --- Venue profile: "Show all papers" button ---
-      const venueSearchBtn = t.closest<HTMLElement>('[data-venue-search]');
-      if (venueSearchBtn) {
-        const vId = venueSearchBtn.dataset.venueSearch!;
-        closeModals();
-        setVenuesExclusive([vId]);
-        setQuery('');
-        return;
-      }
-      // --- Venue profile: year bar → filter by venue + year ---
-      const venueYearBtn = t.closest<HTMLElement>('[data-venue-year-filter]');
-      if (venueYearBtn) {
-        const [vYearVid, ...yrParts] = venueYearBtn.dataset.venueYearFilter!.split(':');
-        const yr = Number(yrParts[0]);
-        closeModals();
-        setVenuesExclusive([vYearVid]);
-        setQuery('');
-        if (yr) { state.yearFilter.clear(); state.yearFilter.add(yr); }
-        state.shown = PAGE; writeUrl(); render();
-        return;
-      }
-      const venueOaBtn = t.closest<HTMLElement>('[data-venue-oa-filter]');
-      if (venueOaBtn) {
-        const val3 = venueOaBtn.dataset.venueOaFilter!;
-        const colonIdx = val3.indexOf(':');
-        const oaVid = val3.slice(0, colonIdx);
-        const oaFilter = val3.slice(colonIdx + 1);
-        closeModals();
-        setVenuesExclusive([oaVid]);
-        setQuery(oaFilter);
-        state.shown = PAGE; writeUrl(); render();
-        return;
-      }
-      // --- Venue profile: track chip → filter by track ---
-      const venueTrackBtn = t.closest<HTMLElement>('[data-venue-track-search]');
-      if (venueTrackBtn) {
-        const trackVal = venueTrackBtn.dataset.venueTrackSearch!;
-        closeModals();
-        setQuery(`track:"${trackVal}"`);
-        return;
-      }
-      // --- Profile author chip → search that author ---
-      const instAuthorChip = t.closest<HTMLElement>('[data-author][class*="author-profile-chip"]');
-      if (instAuthorChip && !t.closest('[data-mini-author]')) {
-        closeModals();
-        setQuery(`author:"${instAuthorChip.dataset.author!}"`);
-        return;
-      }
-      // --- Keyword co-occurrence: co-kw chip → filter by keyword ---
-      const coKwChip = t.closest<HTMLElement>('[data-kw][class*="author-profile-chip"]');
-      if (coKwChip) {
-        const kwVal = coKwChip.dataset.kw!;
-        openKeywordCooccurrence(kwVal);
-        return;
-      }
-      // --- Keyword co-occurrence: "Filter by keyword" button ---
-      const kwSearchBtn = t.closest<HTMLElement>('[data-kw-search]');
-      if (kwSearchBtn) {
-        closeModals();
-        const kwVal = kwSearchBtn.dataset.kwSearch!;
-        state.keywordFilter.add(kwVal);
-        state.shown = PAGE; writeUrl(); render();
         return;
       }
       // --- Panel controls: venue filter / sort ---
@@ -6002,7 +5911,6 @@ function wire() {
       state.tracks.has(val) ? state.tracks.delete(val) : state.tracks.add(val);
       state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (kind === 'keyword') {
-      if ((e as MouseEvent).shiftKey) { openKeywordCooccurrence(val); return; }
       state.keywordFilter.has(val) ? state.keywordFilter.delete(val) : state.keywordFilter.add(val);
       state.shown = PAGE; writeUrl(); render(); window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (kind === 'year') {
@@ -6194,12 +6102,6 @@ function wire() {
         navigator.clipboard.writeText(bib).then(() => toast(`Copied ${bibRows.length} ${plural(bibRows.length, 'BibTeX entry', 'BibTeX entries')}`)).catch(() => toast('Clipboard blocked'));
         break;
       }
-      case 'v': { // open venue profile for focused card
-        const vCard = focusedCard();
-        const vKey = vCard?.dataset.key ?? '';
-        if (vKey) { const [vid] = vKey.split(':'); if (vid) openVenueProfile(vid); }
-        break;
-      }
       case 'A': { // copy abstract of focused card
         const aCard2 = focusedCard();
         const aKey2 = aCard2?.dataset.key ?? '';
@@ -6319,175 +6221,6 @@ function openSimilarModal(title: string, rows: { p: Paper; v: string; score: num
   requestAnimationFrame(refreshScrollFades);
 }
 
-function openKeywordCooccurrence(kw: string) {
-  const modal = document.querySelector<HTMLElement>('#entityModal');
-  const titleEl = document.querySelector<HTMLElement>('#entityTitle');
-  const bodyEl = document.querySelector<HTMLElement>('#entityBody');
-  if (!modal || !titleEl || !bodyEl) return;
-  titleEl.textContent = `Keyword: ${kw}`;
-
-  // Find papers with this keyword in the current visible rows
-  const kwPapers = state.rows.filter((r) => (r.p.keywords ?? []).includes(kw));
-  if (!kwPapers.length) {
-    bodyEl.innerHTML = '<p class="rail-empty">No papers with this keyword in the current selection.</p>';
-    modal.hidden = false;
-    return;
-  }
-
-  // Co-occurring keyword frequencies
-  const coKwCount = new Map<string, number>();
-  for (const { p } of kwPapers) {
-    for (const k2 of p.keywords ?? []) {
-      if (k2 === kw) continue;
-      coKwCount.set(k2, (coKwCount.get(k2) ?? 0) + 1);
-    }
-  }
-  const topCoKw = [...coKwCount.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 20);
-
-  const coKwHtml = topCoKw.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Co-occurring keywords</h4><div class="author-profile-chips">${
-        topCoKw.map(([k2, n]) =>
-          `<button class="chip chip-kw author-profile-chip" data-kw="${esc(k2)}" title="Filter by keyword">${esc(k2)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-
-  const papersHtml = `<div class="author-profile-section"><h4 class="author-profile-head">${kwPapers.length} paper${kwPapers.length !== 1 ? 's' : ''}</h4><div class="mini-card-list">${
-    kwPapers.slice(0, 30).map((r) => miniCardHtml(r.p, r.v)).join('')
-  }${kwPapers.length > 30 ? `<p class="rail-empty">…and ${kwPapers.length - 30} more. Use the keyword filter to see all.</p>` : ''}</div></div>`;
-
-  const searchBtn = `<button class="text-btn author-profile-search" data-kw-search="${esc(kw)}" type="button">Filter by keyword →</button>`;
-
-  bodyEl.innerHTML = coKwHtml + `<div style="text-align:right;margin-bottom:8px">${searchBtn}</div>` + papersHtml;
-  modal.hidden = false;
-  requestAnimationFrame(refreshScrollFades);
-}
-
-function openVenueProfile(venueId: string) {
-  const modal = document.querySelector<HTMLElement>('#entityModal');
-  const titleEl = document.querySelector<HTMLElement>('#entityTitle');
-  const bodyEl = document.querySelector<HTMLElement>('#entityBody');
-  if (!modal || !titleEl || !bodyEl) return;
-
-  const venue = venueById.get(venueId);
-  titleEl.textContent = venue?.name ?? venueId;
-
-  const venueRows = state.rows.filter((r) => r.v === venueId);
-  if (!venueRows.length) {
-    bodyEl.innerHTML = '<p class="rail-empty">No papers loaded for this venue.</p>';
-    modal.hidden = false;
-    return;
-  }
-
-  // OA breakdown
-  const oaCount = new Map<string, number>();
-  let closedCount = 0;
-  for (const { p } of venueRows) {
-    const oa = (p.extra as Record<string, unknown> | undefined)?.openAccess as { is_oa?: boolean; oa_status?: string } | undefined;
-    if (oa?.is_oa && oa.oa_status) oaCount.set(oa.oa_status, (oaCount.get(oa.oa_status) ?? 0) + 1);
-    else closedCount++;
-  }
-  const totalOa = [...oaCount.values()].reduce((a, b) => a + b, 0);
-
-  const oaHtml = (oaCount.size > 0 || closedCount > 0)
-    ? (() => {
-        const oaMax = Math.max(...[...oaCount.values()], closedCount, 1);
-        const entries: [string, number][] = [...oaCount.entries()].sort((a, b) => b[1] - a[1]);
-        if (closedCount > 0) entries.push(['closed', closedCount]);
-        const bars = entries.map(([status, n]) => {
-          const pct = Math.round((n / oaMax) * 100);
-          const isOa = status !== 'closed';
-          const filter = isOa ? `oa:${status}` : '-oa:any';
-          return `<button class="author-year-bar" data-venue-oa-filter="${esc(venueId)}:${esc(filter)}" type="button" title="${esc(status)}: ${n} — click to filter">
-            <div class="author-year-fill" style="height:${pct}%;background:var(--accent)"></div>
-            <div class="author-year-label" style="font-size:9px">${esc(status)}</div>
-          </button>`;
-        }).join('');
-        return `<div class="author-profile-section"><h4 class="author-profile-head">Open Access (${totalOa}/${venueRows.length})</h4><div class="author-year-chart">${bars}</div></div>`;
-      })()
-    : '';
-
-  // Year distribution
-  const yearCount3 = new Map<string, number>();
-  for (const { p } of venueRows) {
-    const yr = venueById.get(venueRows[0].v)?.year;
-    const pYear = (p.extra as Record<string, unknown> | undefined)?.year as number | undefined ?? yr;
-    if (pYear) yearCount3.set(String(pYear), (yearCount3.get(String(pYear)) ?? 0) + 1);
-  }
-  const yearEntries3 = [...yearCount3.entries()].sort((a, b) => b[0].localeCompare(a[0], undefined, { numeric: true }));
-  const yearMax3 = Math.max(...yearEntries3.map(([, c]) => c), 1);
-  const yearHtml3 = yearEntries3.length > 1
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">By year</h4><div class="author-year-chart">${
-        yearEntries3.map(([yr, n]) => {
-          const pct = Math.round((n / yearMax3) * 100);
-          return `<button class="author-year-bar" data-venue-year-filter="${esc(venueId)}:${esc(yr)}" title="${esc(yr)}: ${n} papers — click to filter">
-            <div class="author-year-fill" style="height:${pct}%"></div>
-            <div class="author-year-label">${esc(yr)}</div>
-          </button>`;
-        }).join('')
-      }</div></div>`
-    : '';
-
-  // Top tracks
-  const trackCount = new Map<string, number>();
-  for (const { p } of venueRows) for (const t of new Set(p.tracks)) trackCount.set(t, (trackCount.get(t) ?? 0) + 1);
-  const topTracks = [...trackCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
-  const tracksHtml = topTracks.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Tracks (${trackCount.size})</h4><div class="author-profile-chips">${
-        topTracks.map(([t, n]) =>
-          `<button class="chip author-profile-chip" data-venue-track-search="${esc(t)}" title="Filter by track ${esc(t)}">${esc(t)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-
-  // Top authors
-  const authorCount = new Map<string, number>();
-  for (const { p } of venueRows) for (const a of p.authors) authorCount.set(a, (authorCount.get(a) ?? 0) + 1);
-  const topAuthors = [...authorCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
-  const authorsHtml = topAuthors.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Top authors</h4><div class="author-profile-chips">${
-        topAuthors.map(([a, n]) =>
-          `<button class="chip author-profile-chip" data-author="${esc(a)}" title="Search papers by ${esc(a)} · Shift+click to view profile">${esc(a)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-
-  // Top institutions
-  const instCount = new Map<string, number>();
-  for (const { p } of venueRows) for (const inst of instList(p)) instCount.set(inst, (instCount.get(inst) ?? 0) + 1);
-  const topInsts = [...instCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
-  const instsHtml = topInsts.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Top institutions</h4><div class="author-profile-chips">${
-        topInsts.map(([inst, n]) =>
-          `<button class="chip author-profile-chip" data-inst="${esc(inst)}" title="Search papers from ${esc(inst)} · Shift+click to view profile">${esc(inst)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-
-  // Top keywords
-  const kwCount3 = new Map<string, number>();
-  for (const { p } of venueRows) for (const kw of p.keywords ?? []) kwCount3.set(kw, (kwCount3.get(kw) ?? 0) + 1);
-  const topKw3 = [...kwCount3.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
-  const kwHtml3 = topKw3.length
-    ? `<div class="author-profile-section"><h4 class="author-profile-head">Keywords</h4><div class="author-profile-chips">${
-        topKw3.map(([kw, n]) =>
-          `<button class="chip chip-kw author-profile-chip" data-kw="${esc(kw)}">${esc(kw)}<span class="author-profile-count">${n}</span></button>`
-        ).join('')
-      }</div></div>`
-    : '';
-
-  const papersHtml3 = `<div class="author-profile-section"><h4 class="author-profile-head">${venueRows.length} paper${venueRows.length !== 1 ? 's' : ''}</h4><div class="mini-card-list">${
-    venueRows.slice(0, 30).map((r) => miniCardHtml(r.p, r.v)).join('')
-  }${venueRows.length > 30 ? `<p class="rail-empty">… and ${venueRows.length - 30} more</p>` : ''}</div></div>`;
-  const searchBtn3 = `<button class="text-btn author-profile-search" data-venue-search="${esc(venueId)}" type="button">Show all papers →</button>`;
-
-  bodyEl.innerHTML = oaHtml + yearHtml3 + tracksHtml + authorsHtml + instsHtml + kwHtml3 + `<div style="text-align:right;margin-bottom:8px">${searchBtn3}</div>` + papersHtml3;
-  modal.hidden = false;
-  requestAnimationFrame(refreshScrollFades);
-}
-
 // --- global corpus TF-IDF (separate from the in-view index) -----------
 // Lazy-built after ensureAllLoaded(); uses a separate index over all loaded rows.
 let _globalTfidfIndex: TfidfIndex | null = null;
@@ -6519,11 +6252,6 @@ function recommendGlobal(n = 40): { p: Paper; v: string; score: number }[] {
   for (const [k] of state.tags) savedKeys.add(k);
   for (const [k] of state.status) savedKeys.add(k);
   for (const [k] of state.notes) savedKeys.add(k);
-  // Also seed from recently viewed papers (up to 10 most recent)
-  try {
-    const recent = JSON.parse(localStorage.getItem(K_RECENT_PAPERS) ?? '[]') as string[];
-    recent.slice(0, 10).forEach((k) => savedKeys.add(k));
-  } catch { /* ignore */ }
   return _globalTfidfIndex.recommend(savedKeys, n);
 }
 

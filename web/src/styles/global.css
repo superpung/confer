@@ -1146,20 +1146,6 @@ mark { background: color-mix(in srgb, var(--accent) 20%, transparent); color: in
 }
 /* Compact paper rows inside similar-papers / recommend modal */
 .mini-card-list { display: flex; flex-direction: column; gap: 8px; }
-/* Author profile panel */
-.author-profile-section { margin-bottom: 16px; }
-.author-profile-head { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0 0 7px; }
-.author-profile-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.author-profile-chip { position: relative; }
-.author-profile-count { font-size: 10px; color: var(--muted); margin-left: 4px; }
-.author-profile-inst { font-size: 13px; color: var(--text-soft); margin: 0; }
-.author-profile-search { font-size: 12px; padding: 4px 10px; }
-.author-year-chart { display: flex; align-items: flex-end; gap: 4px; height: 52px; }
-.author-year-bar { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; height: 100%; background: none; border: none; padding: 0; cursor: pointer; font-family: inherit; }
-.author-year-bar:hover .author-year-fill { opacity: 1; }
-.author-year-bar:hover .author-year-label { color: var(--accent); }
-.author-year-fill { width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; opacity: 0.7; min-height: 3px; }
-.author-year-label { font-size: 9px; color: var(--faint); white-space: nowrap; }
 .mini-card { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
 .mini-card:hover { border-color: var(--line-strong); }
 .mini-card--toread   { border-left: 3px solid var(--status-toread); }
