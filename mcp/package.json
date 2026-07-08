@@ -1,6 +1,6 @@
 {
   "name": "confer-mcp",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "MCP stdio server exposing the confer paper corpus (conference & journal papers) to AI agents",
   "type": "module",
   "license": "MIT",

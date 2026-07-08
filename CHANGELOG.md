@@ -8,30 +8,56 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+---
+
+## [1.2.0] - 2026-07-08
+
 ### Added
-- **`has:` search field** — filter by data presence: `has:pdf`, `has:doi`,
-  `has:keyword`, `has:artifact`, `has:abstract`. Negation supported (`-has:pdf`).
-  Tab autocomplete suggests valid values after `has:`.
-- **`status:` search field** — search by reading status inline:
-  `status:toread`, `status:reading`, `status:done`. Combines with all other fields.
-- **`note:` search field** — search within your private paper notes: `note:text`.
-- **Batch export bar operations**: with papers selected, new "Add to collection",
-  "Set status", and "Add tag" buttons appear in the export bar for bulk edits.
-- **JSON export** — export selected papers (or current filtered results) as
-  structured JSON. Available in the export bar and the quick-export popover.
+- **Many new search fields** — the query language now understands:
+  - `has:` — filter by data presence (`has:pdf`, `has:doi`, `has:oa`, `has:keyword`,
+    `has:artifact`, `has:abstract`, `has:note`, `has:tag`, …). Negation supported.
+  - `oa:` — filter by Open Access type (`oa:gold`, `oa:green`, `oa:bronze`,
+    `oa:hybrid`, `oa:any`).
+  - `year:` / `date:` / `pubdate:` — ranges and comparisons
+    (`year:2023-2025`, `year:>=2024`, `date:>=2025-05`).
+  - `kind:`, `category:`, `series:` — filter by venue type / category / series.
+  - `similar:venue:id` — find papers similar to a given paper (TF-IDF cosine);
+    pair with `sort:relevance` to rank by similarity.
+  - `sameSession:venue:id` — papers sharing a session with a given paper.
+  - `in:` (collection), `group:` (venue group), `status:`, `note:`, `url:`,
+    `location:`, `pages:`, `recent:` (last N years).
+- **OR within a field** — `author:smith|jones`, `track:poster|demo`.
+- **Diacritic-insensitive search** — `muller` matches "Müller", `cafe` matches "café".
+- **Relevance ranking & snippets** — `sort:relevance` ranks by keyword/similarity
+  score; matching abstract sentences show as a highlighted snippet under the title.
+- **More sort options** — relevance, year, date, pub date, location, read status,
+  track, session, Open Access, random, plus a separate ascending/descending toggle
+  for year/date/pub date.
+- **New export formats** — Markdown, RIS, JSON, and a Markdown "Table" (pastes into
+  Notion/Obsidian), alongside BibTeX and CSV. Copy titles, URLs, DOIs, citations,
+  abstracts, or notes. Your notes, tags, and reading status are included where the
+  format supports it.
 - **Richer BibTeX** — entries now include abstract, keywords, pages, volume, issue,
-  publisher, and PDF URL when available.
-- **Reading progress bar** in the Insights rail — shows done/tracked ratio when
-  any papers have a reading status set.
-- **"To read" and artifact counts** in Insights rail stats.
-- **Keyboard shortcuts**: `p` opens the PDF viewer for the focused card; `u` copies
-  the program URL of the focused card to the clipboard.
-- **PDF filter tooltip** now shows how many papers in the current view have PDFs.
+  publisher, and PDF URL when available; duplicate cite-keys are auto-suffixed.
+- **Richer CSV** — adds author/keyword counts, Open Access status, abstract, and
+  (when present) similarity score, reading status, and tags columns.
+- **Batch operations** — with papers selected: add to collection, set status, add
+  tag, and one-click copy/download in any format.
+- **Card actions** — copy the title, abstract, or a formatted citation; an Open
+  Access dot and a similarity badge (when a `similar:` search is active).
+- **Reading progress bar** in the Insights rail — done/tracked ratio.
+- **Keyboard shortcuts** — including `u` (copy program URL), `A` (copy abstract),
+  `C` (copy BibTeX for the selection). `p` opens the paper's PDF in a new tab.
+
+### Changed
+- **PDFs open in a new browser tab** instead of an in-page viewer — most publishers
+  block embedding, so the viewer frequently failed. The new-tab link always works.
 
 ### Fixed
 - **Author/institution parsing** (`authorAff`): AAAI-style papers (institution-only
   list) now correctly display institutions instead of misidentifying institution
-  names as author names.
+  names as author names; author names containing parenthesised nicknames are parsed
+  correctly.
 
 ---
 
