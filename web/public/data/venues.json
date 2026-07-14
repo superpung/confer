@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T07:03:28+00:00",
+  "generatedAt": "2026-07-14T07:24:35+00:00",
   "venues": [
     {
       "category": "Artificial Intelligence & Machine Learning",
@@ -117,6 +117,15 @@
       "name": "CHI 2026",
       "series": "CHI",
       "year": 2026
+    },
+    {
+      "category": "Human-Computer Interaction",
+      "count": 1249,
+      "id": "chi2025",
+      "kind": "conference",
+      "name": "CHI 2025",
+      "series": "CHI",
+      "year": 2025
     },
     {
       "category": "Natural Language Processing",

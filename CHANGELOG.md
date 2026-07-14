@@ -9,6 +9,7 @@ Entries are user-facing; implementation details belong in commit messages.
 ## [Unreleased]
 
 ### Added
+- **CHI 2025** — added (SIGCHI program adapter).
 - **CHI 2026** — the flagship HCI conference (1,702 papers), under a new
   **Human-Computer Interaction** category.
 - **SIGCHI program adapter** — reads the official SIGCHI program platform
