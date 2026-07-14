@@ -406,6 +406,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790131",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "https://research.aalto.fi/en/publications/9b3c7e23-b49b-4691-bcc5-b5bed9cdd5d0",
       "https://openalex.org/W7134917117"
     ]
   },
@@ -625,7 +626,8 @@
     ],
     "pages": "1396-1412",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790200"
+      "https://doi.org/10.1145/3779212.3790200",
+      "https://arxiv.org/pdf/2511.22333"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -642,6 +644,8 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790200",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2511.22333",
+      "https://doi.org/10.48550/arxiv.2511.22333",
       "https://openalex.org/W4416944556"
     ]
   },
@@ -914,7 +918,8 @@
     ],
     "pages": "1523-1546",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790208"
+      "https://doi.org/10.1145/3779212.3790208",
+      "https://arxiv.org/pdf/2511.06746"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -931,6 +936,8 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790208",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2511.06746",
+      "https://doi.org/10.48550/arxiv.2511.06746",
       "https://openalex.org/W4416158346"
     ]
   },
@@ -983,7 +990,8 @@
     ],
     "pages": "1589-1604",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790210"
+      "https://doi.org/10.1145/3779212.3790210",
+      "https://arxiv.org/pdf/2503.15843"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -1000,6 +1008,8 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790210",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2503.15843",
+      "https://doi.org/10.48550/arxiv.2503.15843",
       "https://openalex.org/W4415287421"
     ]
   },
@@ -1047,7 +1057,8 @@
     ],
     "pages": "41-58",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790121"
+      "https://doi.org/10.1145/3779212.3790121",
+      "https://arxiv.org/pdf/2407.16300"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -1064,6 +1075,10 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790121",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://hdl.handle.net/20.500.11850/799600",
+      "http://arxiv.org/abs/2407.16300",
+      "https://doi.org/10.48550/arxiv.2407.16300",
+      "https://doi.org/10.3929/ethz-c-000799600",
       "https://openalex.org/W4406073756"
     ]
   },
@@ -1372,7 +1387,8 @@
     ],
     "pages": "618-632",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790154"
+      "https://doi.org/10.1145/3779212.3790154",
+      "https://arxiv.org/pdf/2504.14145"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -1389,6 +1405,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790154",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2504.14145",
       "https://openalex.org/W7134986434"
     ]
   },
@@ -1565,7 +1582,8 @@
     ],
     "pages": "1815-1831",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790223"
+      "https://doi.org/10.1145/3779212.3790223",
+      "https://arxiv.org/pdf/2602.01410"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -1582,6 +1600,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790223",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2602.01410",
       "https://openalex.org/W7127344353"
     ]
   },
@@ -1633,7 +1652,7 @@
       "0000-0003-1152-0055",
       "0000-0002-5266-3805"
     ],
-    "authorInstitutions": "Shaoqiang Lu (Shanghai Jiao Tong University, Shanghai, China and Eastern Institute of Technology, Ningbo, China); Yangbo Wei (Shanghai Jiao Tong University, Shanghai, China and Eastern Institute of Technology, Ningbo, China); Junhong Qian (Southest University, Nanjin, China); Dongge Qin (Southest University, Nanjin, China); Shiji Gao (Southest University, Nanjin, China); Yizhi Ding (Southest University, Nanjin, China); Qifan Wang (Shanghai Jiao Tong University, Shanghai, China and Eastern Institute of Technology, Ningbo, China); Chen Wu (Ningbo Institute of Digital Twinï¼Eastern Institute of Technology , Ningbo, China); Xiao Shi (Southest University, Nanjin, China); Lei He (Eastern Institute of Technology, Ningbo, China)",
+    "authorInstitutions": "Shaoqiang Lu (Shanghai Jiao Tong University, Shanghai, China and Eastern Institute of Technology, Ningbo, China); Yangbo Wei (Shanghai Jiao Tong University, Shanghai, China and Eastern Institute of Technology, Ningbo, China); Junhong Qian (Southest University, Nanjin, China); Dongge Qin (Southest University, Nanjin, China); Shiji Gao (Southest University, Nanjin, China); Yizhi Ding (Southest University, Nanjin, China); Qifan Wang (Shanghai Jiao Tong University, Shanghai, China and Eastern Institute of Technology, Ningbo, China); Chen Wu (Ningbo Institute of Digital Twin，Eastern Institute of Technology , Ningbo, China); Xiao Shi (Southest University, Nanjin, China); Lei He (Eastern Institute of Technology, Ningbo, China)",
     "authors": [
       "Shaoqiang Lu",
       "Yangbo Wei",
@@ -2258,7 +2277,8 @@
     ],
     "pages": "1201-1215",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790188"
+      "https://doi.org/10.1145/3779212.3790188",
+      "https://arxiv.org/pdf/2504.09014"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -2275,6 +2295,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790188",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2504.09014",
       "https://openalex.org/W7125893984"
     ]
   },
@@ -2823,7 +2844,8 @@
     ],
     "pages": "1216-1234",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790189"
+      "https://doi.org/10.1145/3779212.3790189",
+      "https://arxiv.org/pdf/2601.10823"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -2840,6 +2862,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790189",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2601.10823",
       "https://openalex.org/W7127905731"
     ]
   },
@@ -2969,7 +2992,8 @@
     ],
     "pages": "1863-1879",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790226"
+      "https://doi.org/10.1145/3779212.3790226",
+      "https://arxiv.org/pdf/2505.05772"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -2986,6 +3010,9 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790226",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2505.05772",
+      "https://arxiv.org/abs/2505.05772",
+      "https://doi.org/10.48550/arxiv.2505.05772",
       "https://openalex.org/W4417085234"
     ]
   },
@@ -3194,7 +3221,8 @@
     ],
     "pages": "1055-1072",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790180"
+      "https://doi.org/10.1145/3779212.3790180",
+      "https://arxiv.org/pdf/2602.11686"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -3211,6 +3239,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790180",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2602.11686",
       "https://openalex.org/W7128805589"
     ]
   },
@@ -3911,7 +3940,7 @@
     "sessions": [
       "3D"
     ],
-    "title": "TEEMÂ³: Core-Independent and Cooperating Trusted Execution Environments",
+    "title": "TEEM³: Core-Independent and Cooperating Trusted Execution Environments",
     "tracks": [
       "Trusted Execution Environments"
     ],
@@ -4413,7 +4442,8 @@
     ],
     "pages": "798-820",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790165"
+      "https://doi.org/10.1145/3779212.3790165",
+      "https://arxiv.org/pdf/2511.04768"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -4430,6 +4460,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790165",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2511.04768",
       "https://openalex.org/W7125845704"
     ]
   },
@@ -4532,7 +4563,8 @@
     ],
     "pages": "1566-1588",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790209"
+      "https://doi.org/10.1145/3779212.3790209",
+      "https://arxiv.org/pdf/2603.10026"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -4549,6 +4581,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790209",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2603.10026",
       "https://openalex.org/W7134937293"
     ]
   },
@@ -4609,7 +4642,8 @@
     ],
     "pages": "1912-1932",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790229"
+      "https://doi.org/10.1145/3779212.3790229",
+      "https://arxiv.org/pdf/2511.07776"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -4626,6 +4660,8 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790229",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2511.07776",
+      "https://doi.org/10.48550/arxiv.2511.07776",
       "https://openalex.org/W4416189531"
     ]
   },
@@ -4897,7 +4933,8 @@
     ],
     "pages": "175-190",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790128"
+      "https://doi.org/10.1145/3779212.3790128",
+      "https://arxiv.org/pdf/2510.23519"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -4914,6 +4951,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790128",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "https://arxiv.org/abs/2510.23519",
       "https://openalex.org/W7134910623"
     ]
   },
@@ -5208,6 +5246,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790142",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-580183",
       "https://openalex.org/W7134902997"
     ]
   },
@@ -6073,6 +6112,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790166",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://hdl.handle.net/20.500.11850/797878",
       "https://openalex.org/W7134922534"
     ]
   },
@@ -6107,33 +6147,13 @@
       "metadataSources": [
         "crossref"
       ],
-      "openAccess": {
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://doi.org/10.1145/3779212.3790171"
-      },
       "sessionTrack": "Formal Verification"
     },
     "id": "5C-Highly_Automated_Verification_of_Security_Properties_for_Unmodified_System_Softw",
-    "keywords": [
-      "Software verification",
-      "Pointer (user interface)",
-      "Software",
-      "Formal verification",
-      "Software system",
-      "Software security assurance",
-      "Verification",
-      "Static analysis",
-      "Functional verification",
-      "Transition system"
-    ],
     "locations": [
       "Allegheny"
     ],
     "pages": "912-928",
-    "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790171"
-    ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
     "sessionTitles": [
@@ -6201,7 +6221,8 @@
     ],
     "pages": "1136-1150",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790184"
+      "https://doi.org/10.1145/3779212.3790184",
+      "https://arxiv.org/pdf/2508.16125"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -6218,6 +6239,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790184",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2508.16125",
       "https://openalex.org/W7134966749"
     ]
   },
@@ -6369,7 +6391,8 @@
     ],
     "pages": "307-322",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790136"
+      "https://doi.org/10.1145/3779212.3790136",
+      "https://arxiv.org/pdf/2602.12422"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -6386,6 +6409,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790136",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2602.12422",
       "https://openalex.org/W7129099323"
     ]
   },
@@ -6747,7 +6771,8 @@
     ],
     "pages": "493-510",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790147"
+      "https://doi.org/10.1145/3779212.3790147",
+      "https://arxiv.org/pdf/2601.14140"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -6764,6 +6789,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790147",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2601.14140",
       "https://openalex.org/W7125153394"
     ]
   },
@@ -7160,7 +7186,8 @@
     ],
     "pages": "1382-1395",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790199"
+      "https://doi.org/10.1145/3779212.3790199",
+      "https://arxiv.org/pdf/2401.02570"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -7177,6 +7204,8 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790199",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2401.02570",
+      "https://doi.org/10.48550/arxiv.2401.02570",
       "https://openalex.org/W4390689978"
     ]
   },
@@ -7229,7 +7258,8 @@
     ],
     "pages": "1660-1676",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790214"
+      "https://doi.org/10.1145/3779212.3790214",
+      "https://arxiv.org/pdf/2601.18140"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -7246,6 +7276,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790214",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2601.18140",
       "https://openalex.org/W7125831324"
     ]
   },
@@ -7892,30 +7923,13 @@
       "metadataSources": [
         "crossref"
       ],
-      "openAccess": {
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://doi.org/10.1145/3779212.3790203"
-      },
       "sessionTrack": "Disaggregated Memory Systems"
     },
     "id": "6D-PIPM_Partial_and_Incremental_Page_Migration_for_Multi-host_CXL_Disaggregated_Sha",
-    "keywords": [
-      "Data migration",
-      "Page",
-      "Shared memory",
-      "Data access",
-      "Live migration",
-      "Distributed shared memory",
-      "Performance improvement"
-    ],
     "locations": [
       "Ohio & Monogahela"
     ],
     "pages": "1445-1460",
-    "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790203"
-    ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
     "sessionTitles": [
@@ -8384,7 +8398,8 @@
     ],
     "pages": "697-714",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790159"
+      "https://doi.org/10.1145/3779212.3790159",
+      "https://arxiv.org/pdf/2508.17518"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -8401,6 +8416,8 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790159",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2508.17518",
+      "http://hdl.handle.net/20.500.11850/799601",
       "https://openalex.org/W7125546693"
     ]
   },
@@ -8786,15 +8803,6 @@
   },
   {
     "abstract": "Domain-specific accelerators deliver exceptional performance on their target workloads through fabrication-time orchestrated datapaths. However, such specialized architectures often exhibit performance fragility when exposed to new kernels or irregular input patterns. In contrast, programmable architectures like FPGAs, CGRAs, and GPUs rely on compile-time orchestration to support a broader range of applications; but they are typically less efficient under irregular or sparse data. Pushing the boundaries of programmable architectures requires designs that can achieve efficiency and high-performance on par with specialized accelerators while retaining the agility of general-purpose architectures. We introduce Canon, a parallel architecture that bridges the gap between specialized and general purpose architectures. Canon exploits data-level and instruction-level parallelism through its novel design. First, it employs a novel dynamic data-driven orchestration mechanism using programmable Finite State Machines (FSMs). These FSMs are programmed at compile time to encode high-level dataflow per state and translate incoming meta-information (e.g., sparse coordinates) into control instructions at runtime. Second, Canon introduces a time-lapsed SIMD execution in which instructions are issued across a row of processing elements over several cycles, creating a staggered pipelined execution. These innovations amortize control overhead, allowing dynamic instruction changes while constructing a continuously evolving dataflow that maximizes parallelism. Experimental evaluation shows that Canon delivers high performance across diverse data-agnostic and data-driven kernels while achieving efficiency comparable to specialized accelerators, yet retaining the flexibility of a general-purpose architecture.",
-    "authorIds": [
-      "A5126486253",
-      "0009-0004-1339-6048",
-      "0000-0002-6015-1084",
-      "A5126514995",
-      "A5126499102",
-      "A5126483488",
-      "A5126471490"
-    ],
     "authorInstitutions": "Zhenyu Bai (National University of Singapore); Pranav Dangi (National University Of Singapore); Rohan Juneja (National University of Singapore); Zhaoying Li (National University of Singapore); Zhanglu Yan (National university of Singapore); Huiying Lan (Lumai Ltd.); Tulika Mitra (National University of Singapore)",
     "authors": [
       "Zhenyu Bai",
@@ -8805,43 +8813,18 @@
       "Huiying Lan",
       "Tulika Mitra"
     ],
-    "container": "arXiv (Cornell University)",
     "dates": [
       "Day 3: Thursday, March 26, 2026 8:30 – 10:10 AM EDT"
     ],
     "doi": "10.48550/arxiv.2602.17119",
     "eventType": "Paper",
     "extra": {
-      "metadataSources": [
-        "openalex"
-      ],
-      "openAccess": {
-        "is_oa": true,
-        "oa_status": "green",
-        "oa_url": "https://doi.org/10.48550/arxiv.2602.17119"
-      },
       "sessionTrack": "Processor Microarchitecture"
     },
     "id": "7D-A_Data-Driven_Dynamic_Execution_Orchestration_Architecture",
-    "keywords": [
-      "Dataflow",
-      "Orchestration",
-      "Flexibility (engineering)",
-      "Exploit",
-      "Compiler",
-      "Compile time",
-      "Control flow",
-      "SIMD",
-      "State (computer science)"
-    ],
     "locations": [
       "Ohio & Monogahela"
     ],
-    "pdfUrls": [
-      "https://doi.org/10.48550/arxiv.2602.17119"
-    ],
-    "publicationDate": "2026-02-19",
-    "publisher": "Cornell University",
     "sessionTitles": [
       "Session 7D: Processor Microarchitecture"
     ],
@@ -8853,7 +8836,6 @@
       "Processor Microarchitecture"
     ],
     "urls": [
-      "https://doi.org/10.48550/arxiv.2602.17119",
       "https://www.asplos-conference.org/asplos2026/program/index.html"
     ]
   },
@@ -9259,29 +9241,13 @@
       "metadataSources": [
         "crossref"
       ],
-      "openAccess": {
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://doi.org/10.1145/3779212.3790158"
-      },
       "sessionTrack": "Serverless & Cloud Networking"
     },
     "id": "8B-Enabling_fast_networking_in_the_public_cloud",
-    "keywords": [
-      "Cloud computing",
-      "Microkernel",
-      "Set (abstract data type)",
-      "Virtual machine",
-      "Replication (statistics)",
-      "Architecture"
-    ],
     "locations": [
       "West End & Fort Duquesne"
     ],
     "pages": "679-696",
-    "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790158"
-    ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
     "sessionTitles": [
@@ -9418,7 +9384,7 @@
       "0000-0003-1578-5149",
       "0000-0001-9938-0653"
     ],
-    "authorInstitutions": "Bernardo Ribeiro (INESC-ID, Instituto Superior TeÌcnico, University of Lisbon); Mafalda Ferreira (INESC-ID, Instituto Superior TeÌcnico, University of Lisbon); José Fragoso Santos (INESC-ID, Instituto Superior TeÌcnico, University of Lisbon); Rodrigo Bruno (INESC-ID, Instituto Superior TeÌcnico, University of Lisbon); Nuno Santos (INESC-ID, Instituto Superior TeÌcnico, University of Lisbon)",
+    "authorInstitutions": "Bernardo Ribeiro (INESC-ID, Instituto Superior Técnico, University of Lisbon); Mafalda Ferreira (INESC-ID, Instituto Superior Técnico, University of Lisbon); José Fragoso Santos (INESC-ID, Instituto Superior Técnico, University of Lisbon); Rodrigo Bruno (INESC-ID, Instituto Superior Técnico, University of Lisbon); Nuno Santos (INESC-ID, Instituto Superior Técnico, University of Lisbon)",
     "authors": [
       "Bernardo Ribeiro",
       "Mafalda Ferreira",
@@ -9525,7 +9491,8 @@
     "pages": "459-475",
     "pdfUrls": [
       "https://dl.acm.org/doi/pdf/10.1145/3779212.3790145",
-      "https://doi.org/10.1145/3779212.3790145"
+      "https://doi.org/10.1145/3779212.3790145",
+      "https://arxiv.org/pdf/2601.01265"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -9542,6 +9509,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790145",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2601.01265",
       "https://openalex.org/W7125095550"
     ]
   },
@@ -10458,7 +10426,8 @@
     ],
     "pages": "426-441",
     "pdfUrls": [
-      "https://doi.org/10.1145/3779212.3790143"
+      "https://doi.org/10.1145/3779212.3790143",
+      "https://arxiv.org/pdf/2511.23434"
     ],
     "publicationDate": "2026-03-22",
     "publisher": "ACM",
@@ -10475,6 +10444,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790143",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2511.23434",
       "https://openalex.org/W7125184962"
     ]
   },
@@ -10848,6 +10818,7 @@
     "urls": [
       "https://doi.org/10.1145/3779212.3790124",
       "https://www.asplos-conference.org/asplos2026/program/index.html",
+      "http://arxiv.org/abs/2601.17754",
       "https://openalex.org/W7125775521"
     ]
   },

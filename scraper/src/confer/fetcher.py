@@ -16,6 +16,23 @@ DEFAULT_USER_AGENT = "confer/0.1 (+https://github.com/superpung/confer)"
 RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
 
 
+def _decoded_text(response: requests.Response) -> str:
+    """Return the body decoded with the right charset.
+
+    ``requests`` falls back to ISO-8859-1 for ``text/*`` responses whose HTTP
+    header omits a ``charset`` (per RFC 2616), which mojibakes UTF-8 pages that
+    declare their encoding only in an HTML ``<meta>`` tag — e.g. an ``'``
+    (U+2019) served as raw UTF-8 turns into ``â``. When the header carries no
+    charset, prefer the encoding detected from the body instead.
+    """
+    content_type = str(response.headers.get("Content-Type", "")).lower()
+    if "charset=" not in content_type:
+        detected = getattr(response, "apparent_encoding", None)
+        if detected:
+            response.encoding = detected
+    return response.text
+
+
 class Fetcher:
     def __init__(
         self,
@@ -142,7 +159,7 @@ class Fetcher:
                 time.sleep(self._wait(attempt, response))
                 continue
             response.raise_for_status()
-            return response.text
+            return _decoded_text(response)
         if last_exc:
             raise last_exc
         raise RuntimeError(f"request to {url} exhausted retries")

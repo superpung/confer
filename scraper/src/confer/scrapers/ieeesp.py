@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from typing import Any
 
 from bs4 import BeautifulSoup, Tag
@@ -109,7 +110,7 @@ class IeeeSpScraper(Scraper):
             return None
         authors, author_institutions = self.parse_authorlist(authorlist)
 
-        paper_id = safe_slug(title)
+        paper_id = self.slug(title)
         if paper_id in seen:
             suffix = 2
             while f"{paper_id}-{suffix}" in seen:
@@ -135,6 +136,17 @@ class IeeeSpScraper(Scraper):
         if title.endswith(".") and not title.endswith(("?", "!")):
             title = title[:-1]
         return title
+
+    @staticmethod
+    def slug(title: str) -> str:
+        """A clean, stable id from the title (no DOI on the page).
+
+        Lowercase, ASCII-folded, hyphen-separated — matching the readable ids
+        other title-derived venues use, instead of ``safe_slug``'s case- and
+        underscore-preserving form (which yields ids like ``_We_can_t_...``).
+        """
+        ascii_title = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode()
+        return re.sub(r"[^a-z0-9]+", "-", ascii_title.lower()).strip("-") or safe_slug(title)
 
     def parse_authorlist(self, authorlist: Tag) -> tuple[list[str], str]:
         head, tail = self.split_authorlist(authorlist.decode_contents())

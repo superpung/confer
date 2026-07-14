@@ -230,16 +230,20 @@
   },
   {
     "abstract": "This essay explains why an automated vehicle (AV) manufacturer should consider law during the design process for an AV intended as \"fit-for-purpose\" to transport intoxicated persons. It suggests that management, marketing, engineering, and legal functions collaborate to develop product requirements and specifications that shield owner/occupants from criminal liability for DUI manslaughter and negligent homicide, as well as guard against civil liability.",
+    "authorIds": [
+      "0009-0007-6320-5221",
+      "0000-0002-4742-0841"
+    ],
     "authorInstitutions": "Marilyn Wolf (University of Nebraska, US); William Widen (University of Miami, N/)",
     "authors": [
       "Marilyn Wolf",
       "William Widen"
     ],
-    "container": "SSRN Electronic Journal",
+    "container": "2025 Design, Automation & Test in Europe Conference (DATE)",
     "dates": [
       "Tuesday, 1 April 2025 09:30 CEST"
     ],
-    "doi": "10.2139/ssrn.5137559",
+    "doi": "10.23919/date64628.2025.10993103",
     "eventType": "Paper",
     "extra": {
       "metadataSources": [
@@ -250,11 +254,12 @@
     "locations": [
       "Roseraie 1&2"
     ],
+    "pages": "1-7",
     "pdfUrls": [
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/6023.pdf"
     ],
-    "publicationDate": "2025-01-01",
-    "publisher": "Elsevier BV",
+    "publicationDate": "2025-03-31",
+    "publisher": "IEEE",
     "sessionTitles": [
       "ASD04 ASD regular session: Novel Safety Metrics, Adaptive Patterns for Resilience, and Legal Frameworks in Autonomous Systems Design"
     ],
@@ -266,7 +271,7 @@
       "Paper"
     ],
     "urls": [
-      "https://doi.org/10.2139/ssrn.5137559",
+      "https://doi.org/10.23919/date64628.2025.10993103",
       "https://date25.date-conference.com/proceedings-archive/2025/DATA/6023.pdf",
       "https://date25.date-conference.com/programme"
     ]
@@ -654,7 +659,7 @@
   },
   {
     "abstract": "In this paper, we introduce ReBERT, a specialized large language model (LLM) based on BERT, fine-tuned specifically for grouping bits into words within gate-level netlists. By treating the netlist as a form of language, we encode bits and their fan-in cones into sequences that capture structural dependencies. A novel contribution is augmenting BERT's embedding with a tree-based embedding strategy which mirrors the hierarchical nature of circuit designs in hardware. Leveraging the powerful representational learning capabilities of LLMs, we interpret hardware circuits at a higher level of abstraction. We evaluate ReBERT on various hardware designs, demonstrating that it significantly outperforms a state-of-the-art work based on partial structural matching in recovering word-level groupings. Our improvements are on average between 12.2% to 218.2% depending on degree of corrupting the structural patterns.",
-    "authorInstitutions": "Lizi Zhang (University of Wisconsin Madison, US); Azadeh Davoodi (University of Wisconsin-Madison, US); Rasit Topaloglu (Adeia, US)",
+    "authorInstitutions": "Lizi Zhang (University of Wisconsin Madison, US); Azadeh Davoodi (University of Wisconsin - Madison, US); Rasit Topaloglu (Adeia, US)",
     "authors": [
       "Lizi Zhang",
       "Azadeh Davoodi",
@@ -6080,7 +6085,7 @@
     "sessions": [
       "TS06"
     ],
-    "title": "Cim-Based Parallel Fully Ffnn Surface Code High-Level Decoder for Quantum Error Correction",
+    "title": "CIM-Based Parallel Fully Ffnn Surface Code High-Level Decoder for Quantum Error Correction",
     "tracks": [
       "Technical Session"
     ],
@@ -7675,7 +7680,7 @@
     "sessions": [
       "TS10"
     ],
-    "title": "Tail: Exploiting Underlinetemporal Underlineasynchronous Execution for Efficient Spiking Neural Networks with Underlineinter-Underlinelayer Parallelism",
+    "title": "Tail: Exploiting Temporal Asynchronous Execution for Efficient Spiking Neural Networks with Inter-Layer Parallelism",
     "tracks": [
       "Technical Session"
     ],
@@ -13329,7 +13334,7 @@
     "sessions": [
       "TS20"
     ],
-    "title": "Damil-Dcim: A Digital Cim Layout Synthesis Framework with Dataflow-Aware Floorplan and Milp-Based Detailed Placement",
+    "title": "Damil-Dcim: A Digital CIM Layout Synthesis Framework with Dataflow-Aware Floorplan and Milp-Based Detailed Placement",
     "tracks": [
       "Technical Session"
     ],
@@ -15757,7 +15762,7 @@
     "sessions": [
       "TS25"
     ],
-    "title": "Sega-Dcim: Design Space Exploration-Guided Automatic Digital Cim Compiler with Multiple Precision Support",
+    "title": "Sega-Dcim: Design Space Exploration-Guided Automatic Digital CIM Compiler with Multiple Precision Support",
     "tracks": [
       "Technical Session"
     ],

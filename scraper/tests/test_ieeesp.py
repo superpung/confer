@@ -32,6 +32,12 @@ def test_parses_all_papers_across_cycles(tmp_path):
     assert all(paper.author_institutions.strip() for paper in papers.values())
 
 
+def test_id_is_a_clean_slug(tmp_path):
+    paper = parse(tmp_path)["PAC-Private Algorithms"]
+    # Lowercase, hyphen-separated — not safe_slug's "_PAC_Private_..." form.
+    assert paper.id == "pac-private-algorithms"
+
+
 def test_superscript_affiliations_map_per_author(tmp_path):
     paper = parse(tmp_path)["PAC-Private Algorithms"]
     assert paper.authors == ["Mayuri Sridhar", "Hanshen Xiao", "Srinivas Devadas"]
