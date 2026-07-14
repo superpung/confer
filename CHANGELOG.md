@@ -16,6 +16,20 @@ Entries are user-facing; implementation details belong in commit messages.
   (`programs.sigchi.org`) directly, so CHI papers ship with abstracts and
   structured author affiliations from the first-party source. Reusable for other
   SIGCHI venues (UIST, CSCW, …).
+- **IEEE S&P adapter** — reads the official IEEE Symposium on Security and
+  Privacy accepted-papers page (`sp<year>.ieee-security.org`) directly.
+
+### Changed
+- **IEEE S&P 2025** now sources author affiliations from the venue's own
+  accepted-papers page instead of DBLP, so every paper lists its authors'
+  institutions (previously none did).
+
+### Fixed
+- **Garbled non-ASCII text (mojibake)** — pages served as `text/html` without a
+  header charset were decoded as ISO-8859-1, turning e.g. a UTF-8 `'` into
+  `â`. The fetcher now honours the document's own encoding, and affected
+  venues (IEEE S&P, ICSE, DATE, ASPLOS) were rebuilt with clean titles,
+  authors, and institutions.
 
 ---
 

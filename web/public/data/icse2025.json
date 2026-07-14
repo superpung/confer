@@ -4337,7 +4337,7 @@
       "0000-0002-2621-6104",
       "0000-0002-0193-3975"
     ],
-    "authorInstitutions": "Nimmi Weeraddana (University of Waterloo); Mahmoud Alfadel (University of Calgary); Shane McIntosh (University of Waterloo)",
+    "authorInstitutions": "Nimmi Weeraddana (University of Calgary, Canada); Mahmoud Alfadel (University of Calgary); Shane McIntosh (University of Waterloo)",
     "authors": [
       "Nimmi Weeraddana",
       "Mahmoud Alfadel",
@@ -12438,6 +12438,7 @@
     "locations": [
       "215"
     ],
+    "pages": "136-147",
     "pdfUrls": [
       "https://arxiv.org/pdf/2501.05798"
     ],
@@ -12459,7 +12460,9 @@
       "https://conf.researchr.org/details/icse-2025/icse-2025-software-engineering-in-practice/28/ArkAnalyzer-The-Static-Analysis-Framework-for-OpenHarmony",
       "https://conf.researchr.org/program/icse-2025/program-icse-2025/",
       "http://arxiv.org/abs/2501.05798",
-      "https://openalex.org/W4406317578"
+      "https://openalex.org/W4406317578",
+      "https://doi.org/10.1109/icse-seip66354.2025.00018",
+      "https://openalex.org/W4413349456"
     ]
   },
   {
@@ -14225,48 +14228,28 @@
   },
   {
     "abstract": "SYMBOLEO is a specification language used formalize legal contracts, analyze properties, and generate smart contracts for Hyperledger Fabric. However, this ecosystem presents challenges, particularly in securing access to contract elements and enabling interactions with Cyber-Physical Systems (CPS), including IoT devices. This thesis aims to develop and validate a tool for converting extended SYMBOLEO specifications into smart contracts, with a focus on security and privacy. The thesis proposes an architecture to integrate smart contracts, Complex Event Processing (CEP), a message broker, and blockchain (Hyperledger Fabric), facilitating CPS interaction. Additionally, a Role-Based Access Control (RBAC) model is proposed, extending SYMBOLEO with RBAC-inspired concepts, forming SYMBOLEOAC, to regulate access and support dynamic contract execution. Existing code generation tools are also extended to exploit SYMBOLEOAC and this new architecture.",
-    "authorIds": [
-      "0009-0006-9087-3041"
-    ],
     "authorInstitutions": "Sofana Alfuhaid (University of Ottawa)",
     "authors": [
       "Sofana Alfuhaid"
     ],
-    "container": "Lecture Notes in Business Information Processing",
+    "container": "2025 IEEE/ACM 47th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "dates": [
       "Tue 29 Apr 2025 09:11 - 09:17"
     ],
-    "doi": "10.1007/978-3-031-77908-4_14",
+    "doi": "10.1109/icse-companion66252.2025.00024",
     "eventType": "Talk",
     "extra": {
       "metadataSources": [
-        "crossref",
-        "openalex"
-      ],
-      "openAccess": {
-        "is_oa": true,
-        "oa_status": "green",
-        "oa_url": "https://inria.hal.science/hal-05008329"
-      }
+        "crossref"
+      ]
     },
     "id": "60e8ab3e-1e58-4a35-a6a0-5b4825e4308d",
-    "keywords": [
-      "Control (management)",
-      "Business",
-      "Computer science",
-      "Law and economics",
-      "Economics",
-      "Artificial intelligence"
-    ],
     "locations": [
       "212"
     ],
-    "pages": "227-243",
-    "pdfUrls": [
-      "https://inria.hal.science/hal-05008329"
-    ],
-    "publicationDate": "2025-01-01",
-    "publisher": "Springer Nature Switzerland",
+    "pages": "58-62",
+    "publicationDate": "2025-04-27",
+    "publisher": "IEEE",
     "sessionTitles": [
       "Session 1: Security & Miscellaneous (talks and panel)"
     ],
@@ -14278,12 +14261,10 @@
       "Doctoral Symposium"
     ],
     "urls": [
-      "https://doi.org/10.1007/978-3-031-77908-4_14",
+      "https://doi.org/10.1109/icse-companion66252.2025.00024",
       "https://conf.researchr.org/details/icse-2025/icse-2025-doctoral-symposium/32/Towards-Secure-and-Interactive-Smart-Contract-Code-from-Formal-SYMBOLEO-Specification",
       "https://link.springer.com/chapter/10.1007/978-3-031-77908-4_14",
-      "https://conf.researchr.org/program/icse-2025/program-icse-2025/",
-      "https://inria.hal.science/hal-05008329",
-      "https://openalex.org/W4404868204"
+      "https://conf.researchr.org/program/icse-2025/program-icse-2025/"
     ]
   },
   {
@@ -16446,7 +16427,8 @@
       "Source code",
       "Computer security",
       "Operating system",
-      "Programming language"
+      "Programming language",
+      "Parallel computing"
     ],
     "locations": [
       "207"
@@ -16475,7 +16457,8 @@
       "https://doi.org/10.1109/icse55347.2025.00059",
       "http://arxiv.org/abs/2305.06439",
       "https://doi.org/10.48550/arxiv.2305.06439",
-      "https://openalex.org/W4376311899"
+      "https://openalex.org/W4376311899",
+      "https://openalex.org/W4411552578"
     ]
   },
   {
@@ -21929,7 +21912,7 @@
       "0000-0001-9733-8830",
       "0000-0002-0679-4361"
     ],
-    "authorInstitutions": "Sallam Abualhaija (University of Luxembourg); Fatma Başak Aydemir (Utrecht University); Fabiano Dalpiaz (Utrecht University); Davide Dell'Anna (Utrecht University); Alessio Ferrari (CNR-ISTI); Xavier Franch (Universitat Politècnica de Catalunya); Davide Fucci (Blekinge Institute of Technology)",
+    "authorInstitutions": "Sallam Abualhaija (University of Luxembourg); Fatma Başak Aydemir (Utrecht University); Fabiano Dalpiaz (Utrecht University); Davide Dell'Anna (Utrecht University); Alessio Ferrari (Consiglio Nazionale delle Ricerche (CNR) and University College Dublin (UCD)); Xavier Franch (Universitat Politècnica de Catalunya); Davide Fucci (Blekinge Institute of Technology)",
     "authors": [
       "Sallam Abualhaija",
       "Fatma Başak Aydemir",
@@ -25444,14 +25427,20 @@
       "Leakage (economics)",
       "Geology",
       "Economics",
-      "Keynesian economics"
+      "Keynesian economics",
+      "Statistics",
+      "Econometrics",
+      "Environmental science",
+      "Mathematics"
     ],
     "locations": [
       "Canada Hall 1 and 2"
     ],
     "pdfUrls": [
       "https://link.springer.com/content/pdf/10.1007/s10664-024-10518-9.pdf",
-      "https://doi.org/10.5281/zenodo.7834277"
+      "https://doi.org/10.5281/zenodo.7834277",
+      "https://zenodo.org/record/7723252",
+      "https://zenodo.org/record/7982516"
     ],
     "publicationDate": "2024-09-01",
     "publisher": "Springer Science and Business Media LLC",
@@ -25472,7 +25461,13 @@
       "https://espace2.etsmtl.ca/id/eprint/29112/",
       "https://openalex.org/W4400988474",
       "https://doi.org/10.5281/zenodo.7834277",
-      "https://openalex.org/W4366005596"
+      "https://openalex.org/W4366005596",
+      "https://zenodo.org/record/7723252",
+      "https://doi.org/10.5281/zenodo.7723252",
+      "https://openalex.org/W4366005559",
+      "https://zenodo.org/record/7982516",
+      "https://doi.org/10.5281/zenodo.7982516",
+      "https://openalex.org/W4378635124"
     ],
     "volume": "29"
   },

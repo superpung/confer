@@ -60,6 +60,47 @@ def test_persistent_error_raises_and_does_not_cache(tmp_path, monkeypatch):
     assert not (tmp_path / "c.txt").exists()
 
 
+class EncodingResponse:
+    """Mimics requests: `.text` decodes `.content` with the current `.encoding`,
+    which requests defaults to ISO-8859-1 for charset-less text/* responses."""
+
+    def __init__(self, content: bytes, *, header_charset: str | None, apparent: str) -> None:
+        self.status_code = 200
+        self.content = content
+        self.apparent_encoding = apparent
+        self.encoding = header_charset or "ISO-8859-1"
+        charset = f"; charset={header_charset}" if header_charset else ""
+        self.headers = {"Content-Type": f"text/html{charset}"}
+
+    @property
+    def text(self) -> str:
+        return self.content.decode(self.encoding, errors="replace")
+
+    def raise_for_status(self) -> None:
+        pass
+
+
+def test_charsetless_utf8_is_not_mojibaked(tmp_path, monkeypatch):
+    # "can't" with a UTF-8 right single quote (U+2019), served without a header
+    # charset — the classic case that yields "canâ€™t" under ISO-8859-1.
+    body = "We can’t stop".encode("utf-8")
+    fetcher, _ = make_fetcher(
+        tmp_path, [EncodingResponse(body, header_charset=None, apparent="utf-8")], monkeypatch
+    )
+    assert fetcher.get_text("http://x", "u.txt") == "We can’t stop"
+
+
+def test_header_charset_is_respected(tmp_path, monkeypatch):
+    body = "café".encode("utf-8")
+    fetcher, _ = make_fetcher(
+        tmp_path,
+        [EncodingResponse(body, header_charset="utf-8", apparent="ISO-8859-1")],
+        monkeypatch,
+    )
+    # Header says utf-8, so apparent_encoding must not override it.
+    assert fetcher.get_text("http://x", "h.txt") == "café"
+
+
 def test_honors_retry_after_header(tmp_path, monkeypatch):
     waits: list[float] = []
     monkeypatch.setattr("confer.fetcher.time.sleep", lambda s: waits.append(s))

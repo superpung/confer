@@ -7,6 +7,7 @@
 #   sigarch:   program_url
 #   researchr: program_url
 #   dblp:      toc_url
+#   ieeesp:    accepted_url
 #   openreview: venue_id (optional; inferred for ICLR/ICML/NeurIPS)
 #   acl_anthology: event_url (optional; inferred for ACL)
 #   aaai:      archive_url / issue_prefix (optional; inferred for AAAI)
@@ -320,10 +321,10 @@ venues:
     category: Security & Privacy
     kind: conference
     year: 2025
-    scraper: dblp
+    scraper: ieeesp
     enabled: true
     source:
-      toc_url: https://dblp.org/db/conf/sp/sp2025.xml
+      accepted_url: https://sp2025.ieee-security.org/accepted-papers.html
 
   - id: ndss2026
     name: NDSS 2026
