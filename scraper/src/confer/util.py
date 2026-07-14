@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import html
 import re
+import unicodedata
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
@@ -117,3 +118,16 @@ def cache_name_for_url(url: str, suffix: str = ".html") -> str:
 
 def safe_slug(value: str, fallback: str = "none") -> str:
     return re.sub(r"[^A-Za-z0-9_.-]+", "_", value or fallback)
+
+
+def title_slug(title: str, fallback: str = "none") -> str:
+    """A clean, stable, human-readable id derived from a paper title.
+
+    Lowercase, ASCII-folded, hyphen-separated — the readable form venue-native
+    adapters use when the page carries no DOI (see ``ieeesp``, ``sosp``). Falls
+    back to :func:`safe_slug` when folding leaves nothing (e.g. a CJK-only
+    title).
+    """
+    ascii_title = unicodedata.normalize("NFKD", title or "").encode("ascii", "ignore").decode()
+    slug = re.sub(r"[^a-z0-9]+", "-", ascii_title.lower()).strip("-")
+    return slug or safe_slug(title, fallback)
