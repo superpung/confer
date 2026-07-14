@@ -402,6 +402,17 @@ venues:
     source:
       short_name: CHI
 
+  - id: chi2025
+    name: CHI 2025
+    series: CHI
+    category: Human-Computer Interaction
+    kind: conference
+    year: 2025
+    scraper: sigchi
+    enabled: true
+    source:
+      short_name: CHI
+
   - id: tosem2026
     name: TOSEM 2026
     series: TOSEM
