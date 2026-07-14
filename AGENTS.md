@@ -179,6 +179,8 @@ DBLP. A first-party source is usually richer (abstracts, author affiliations,
 DOIs) and more authoritative than a bibliographic fallback, so the up-front cost
 of a new adapter pays off in data quality and fewer enrichment gaps. Reach for an
 existing adapter only when the venue has no usable first-party source of its own.
+Known venues still missing author institutions or abstracts — with root cause and
+fix direction — are tracked in [`docs/metadata-gaps.md`](docs/metadata-gaps.md).
 
 ### How to add a venue
 1. Add an entry to `config/venues.yaml` (see the seed file for fields).
