@@ -8,6 +8,14 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+### Added
+- **CHI 2026** — the flagship HCI conference (1,702 papers), under a new
+  **Human-Computer Interaction** category.
+- **SIGCHI program adapter** — reads the official SIGCHI program platform
+  (`programs.sigchi.org`) directly, so CHI papers ship with abstracts and
+  structured author affiliations from the first-party source. Reusable for other
+  SIGCHI venues (UIST, CSCW, …).
+
 ---
 
 ## [1.2.0] - 2026-07-08

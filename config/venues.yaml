@@ -11,6 +11,7 @@
 #   acl_anthology: event_url (optional; inferred for ACL)
 #   aaai:      archive_url / issue_prefix (optional; inferred for AAAI)
 #   ndss:      accepted_url (optional; inferred for NDSS)
+#   sigchi:    short_name / conference_id (optional; resolved from series + year)
 #
 # Paper tracks, event types, default labels, and metadata enrichers are inferred
 # by the scraper pipeline. Do not encode derived page metadata here.
@@ -389,6 +390,17 @@ venues:
     enabled: true
     source:
       program_url: https://2025.aclweb.org/
+
+  - id: chi2026
+    name: CHI 2026
+    series: CHI
+    category: Human-Computer Interaction
+    kind: conference
+    year: 2026
+    scraper: sigchi
+    enabled: true
+    source:
+      short_name: CHI
 
   - id: tosem2026
     name: TOSEM 2026
