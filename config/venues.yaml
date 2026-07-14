@@ -390,6 +390,17 @@ venues:
     source:
       program_url: https://2025.aclweb.org/
 
+  - id: chi2026
+    name: CHI 2026
+    series: CHI
+    category: Human-Computer Interaction
+    kind: conference
+    year: 2026
+    scraper: dblp
+    enabled: true
+    source:
+      toc_url: https://dblp.org/db/conf/chi/chi2026.xml
+
   - id: tosem2026
     name: TOSEM 2026
     series: TOSEM
