@@ -8,27 +8,31 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+---
+
+## [1.3.0] - 2026-07-14
+
+A venue-expansion release: two new conferences, three first-party adapters that
+carry author affiliations DBLP cannot, and a fetcher fix for garbled text.
+
 ### Added
-- **CHI 2025** — added (SIGCHI program adapter).
-- **CHI 2026** — the flagship HCI conference (1,702 papers), under a new
-  **Human-Computer Interaction** category.
+- **New venues** — **CHI 2025** and **CHI 2026** (the flagship HCI conference,
+  1,702 papers in 2026) under a new **Human-Computer Interaction** category.
 - **SIGCHI program adapter** — reads the official SIGCHI program platform
   (`programs.sigchi.org`) directly, so CHI papers ship with abstracts and
   structured author affiliations from the first-party source. Reusable for other
   SIGCHI venues (UIST, CSCW, …).
 - **IEEE S&P adapter** — reads the official IEEE Symposium on Security and
-  Privacy accepted-papers page (`sp<year>.ieee-security.org`) directly.
+  Privacy accepted-papers page (`sp<year>.ieee-security.org`) directly, for
+  first-party author affiliations.
 - **SOSP adapter** — reads the official SIGOPS accepted-papers page
   (`sigops.org/s/conferences/sosp/<year>`) directly, carrying author
   affiliations the DBLP bibliography cannot provide.
 
 ### Changed
-- **IEEE S&P 2025** now sources author affiliations from the venue's own
-  accepted-papers page instead of DBLP, so every paper lists its authors'
-  institutions (previously none did).
-- **SOSP 2025** now sources author affiliations from the venue's own
-  accepted-papers page instead of DBLP, so every paper lists its authors'
-  institutions (previously none did).
+- **IEEE S&P 2025** and **SOSP 2025** now source author affiliations from each
+  venue's own accepted-papers page instead of DBLP, so every paper lists its
+  authors' institutions (previously none did).
 
 ### Fixed
 - **Garbled non-ASCII text (mojibake)** — pages served as `text/html` without a
