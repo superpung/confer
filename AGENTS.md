@@ -68,6 +68,7 @@ scraper/               [now] Python project, package `confer`
       researchr.py     [now] Researchr program / timeline / accepted-list adapter
       sigarch.py       [now] SIGARCH-style static program adapter
       sigchi.py        [now] SIGCHI program platform (CHI/UIST/CSCW/…) JSON adapter
+      sosp.py          [now] SOSP (SIGOPS) accepted-papers page adapter (affiliations)
       ...              [target] ieee.py, acm_dl.py
   tests/fixtures/      [now] small sample of cached pages for offline parse tests
 web/                   [now] Astro static site (Netlify)

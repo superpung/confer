@@ -25,23 +25,28 @@ Snapshot date: **2026-07-14** (regenerate with the audit script — see bottom).
 
 - **`sp2025` (IEEE S&P)** — was class A (`dblp`, 0% institutions). Now on the
   native `ieeesp` adapter → institutions 100%. (PR that introduced this file.)
+- **`sosp2025` (SOSP)** — was class A (`dblp`, 0% institutions). Now on the
+  native `sosp` adapter → institutions 100%, sourced from the official SIGOPS
+  accepted-papers page. Abstracts backfilled from the prior DBLP-DOI enrichment.
 
 ## Missing author institutions
 
 | venue | scraper | inst% | class | official source / note |
 |---|---|--:|:--:|---|
-| `iclr2026` | openreview | 0 | **B** | OpenReview API already used; author affiliations live on author **profiles** (`/api/…/notes` gives author ids; profiles carry `history`/institution), not on the submission note the adapter currently reads. High value: ~5.4k papers. |
-| `icml2025` | openreview | 0 | **B** | Same as above (~3.3k papers). |
-| `neurips2025` | openreview | 0 | **B** | Same as above (~5.3k papers). |
-| `acl2025` | acl_anthology | 0 | **B/C** | ACL Anthology metadata (bib/XML) does not include affiliations; they exist only in the paper PDFs or the softconf/OpenReview program. No cheap structured source. |
-| `ccs2025` | dblp | 0 | **A** | Official accepted list `https://www.sigsac.org/ccs/CCS2025/accepted-papers/` lists authors **with** affiliations, but the page renders them via JavaScript — the static HTML is empty. Needs the underlying data endpoint/JSON (not yet located). |
-| `sosp2025` | dblp | 0 | **A** | Official `https://sigops.org/s/conferences/sosp/2025/accepted.html` shows affiliations inline, but in a loosely-structured "authors, then institutions" block that is riskier to parse than S&P's superscript scheme. Only 66 papers. |
+| `iclr2026` | openreview | 0 | **B (blocked)** | Author affiliations live on author **profiles** (`/api/…/notes` gives author ids; profiles carry `history`/institution), not on the submission note the adapter reads. **As of 2026-07-14 the entire OpenReview API (`api2.openreview.net`) is behind a bot challenge** — every request (notes *and* profiles) returns `403 ChallengeRequiredError`. Fetching profiles now requires an authenticated session (OpenReview account token); until then this is not reachable without solving/bypassing the challenge. High value: ~5.4k papers. |
+| `icml2025` | openreview | 0 | **B (blocked)** | Same as above (~3.3k papers). |
+| `neurips2025` | openreview | 0 | **B (blocked)** | Same as above (~5.3k papers). |
+| `acl2025` | acl_anthology | 0 | **C** | Confirmed: ACL Anthology metadata (bib/XML) carries **no** affiliations — only author names; they exist solely in the paper PDFs or the softconf/OpenReview program. No cheap structured source. |
+| `ccs2025` | dblp | 0 | **C** (was A) | The SIGSAC site (`www.sigsac.org/ccs/CCS2025/`) is a statically-exported Next.js app; **no accepted-papers route or data endpoint is locatable** (all guessed paths 404, no JSON in the JS chunks). Previously assumed class A, but with no reachable first-party source it is effectively C until the page reappears. |
 | `tse2025`, `tse2026` | dblp | 0 | **C** | IEEE TSE journal; only first-party source is IEEE Xplore (bot-walled). Abstracts already ~94% via enrichment. |
 | `tosem2025`, `tosem2026` | dblp | 0 | **C** | ACM TOSEM journal; only first-party source is ACM DL (Cloudflare). Abstracts ~100% via enrichment. |
 
 **Recommended next step:** the OpenReview trio (`iclr2026`/`icml2025`/`neurips2025`)
-is the biggest win — one adapter enhancement resolves ~14k papers. Then the two
-class-A conferences (`ccs2025`, `sosp2025`).
+is still the biggest win — one adapter enhancement would resolve ~14k papers —
+but it is **currently blocked** by OpenReview's new API-wide bot challenge (see
+the table). It needs an authenticated OpenReview session to proceed; revisit once
+credentials are available or the challenge is lifted. `sosp2025` is **done**
+(native adapter). `ccs2025` has no reachable first-party source right now.
 
 ## Missing abstracts
 

@@ -18,9 +18,15 @@ Entries are user-facing; implementation details belong in commit messages.
   SIGCHI venues (UIST, CSCW, …).
 - **IEEE S&P adapter** — reads the official IEEE Symposium on Security and
   Privacy accepted-papers page (`sp<year>.ieee-security.org`) directly.
+- **SOSP adapter** — reads the official SIGOPS accepted-papers page
+  (`sigops.org/s/conferences/sosp/<year>`) directly, carrying author
+  affiliations the DBLP bibliography cannot provide.
 
 ### Changed
 - **IEEE S&P 2025** now sources author affiliations from the venue's own
+  accepted-papers page instead of DBLP, so every paper lists its authors'
+  institutions (previously none did).
+- **SOSP 2025** now sources author affiliations from the venue's own
   accepted-papers page instead of DBLP, so every paper lists its authors'
   institutions (previously none did).
 

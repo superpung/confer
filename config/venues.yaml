@@ -8,6 +8,7 @@
 #   researchr: program_url
 #   dblp:      toc_url
 #   ieeesp:    accepted_url
+#   sosp:      accepted_url
 #   openreview: venue_id (optional; inferred for ICLR/ICML/NeurIPS)
 #   acl_anthology: event_url (optional; inferred for ACL)
 #   aaai:      archive_url / issue_prefix (optional; inferred for AAAI)
@@ -123,10 +124,10 @@ venues:
     category: Systems & Networking
     kind: conference
     year: 2025
-    scraper: dblp
+    scraper: sosp
     enabled: true
     source:
-      toc_url: https://dblp.org/db/conf/sosp/sosp2025.xml
+      accepted_url: https://sigops.org/s/conferences/sosp/2025/accepted.html
 
   - id: osdi2025
     name: OSDI 2025
