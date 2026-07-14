@@ -66,6 +66,7 @@ scraper/               [now] Python project, package `confer`
       openreview.py    [now] OpenReview notes API adapter
       researchr.py     [now] Researchr program / timeline / accepted-list adapter
       sigarch.py       [now] SIGARCH-style static program adapter
+      sigchi.py        [now] SIGCHI program platform (CHI/UIST/CSCW/…) JSON adapter
       ...              [target] ieee.py, acm_dl.py
   tests/fixtures/      [now] small sample of cached pages for offline parse tests
 web/                   [now] Astro static site (Netlify)
@@ -170,9 +171,18 @@ Adapters are selected by `venue.scraper` via a registry
 (`SCRAPERS = {"linklings": LinklingsScraper, ...}`). **Adding a platform = one new
 file in `scrapers/` + one registry entry.** Do not branch on platform anywhere else.
 
+**Prefer a venue-native adapter.** When a venue publishes its own program on its
+own site in its own format, implement a dedicated adapter for that source — even
+when no existing adapter fits — rather than defaulting to a generic one such as
+DBLP. A first-party source is usually richer (abstracts, author affiliations,
+DOIs) and more authoritative than a bibliographic fallback, so the up-front cost
+of a new adapter pays off in data quality and fewer enrichment gaps. Reach for an
+existing adapter only when the venue has no usable first-party source of its own.
+
 ### How to add a venue
 1. Add an entry to `config/venues.yaml` (see the seed file for fields).
-2. Ensure its `scraper:` matches a registered adapter.
+2. Ensure its `scraper:` matches a registered adapter — writing a new one first
+   if the venue's own format warrants it (see the principle above).
 3. Provide only the adapter's required source locator. Tracks, event types,
    default labels, and normal metadata enrichers are inferred by the adapter and
    pipeline.

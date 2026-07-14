@@ -1,0 +1,55 @@
+{
+  "conference": { "id": 10142, "shortName": "CHI", "year": 2026, "name": "CHI 2026" },
+  "contentTypes": [
+    { "id": 14694, "name": "Paper" },
+    { "id": 14743, "name": "Posters" }
+  ],
+  "rooms": [
+    { "id": 12303, "name": "P1 - Room 111", "setup": "CLASSROOM" }
+  ],
+  "sessions": [
+    { "id": 225008, "name": "Co-Design", "roomId": 12303, "typeId": 14694 }
+  ],
+  "people": [
+    { "id": 216917, "firstName": "Tram", "lastName": "Tran", "middleInitial": "Thi Minh" },
+    { "id": 214250, "firstName": "Jordan", "lastName": "Lee", "middleInitial": "" },
+    { "id": 300001, "firstName": "Solo", "lastName": "Poster", "middleInitial": "" }
+  ],
+  "contents": [
+    {
+      "id": 222560,
+      "typeId": 14694,
+      "title": "A Real CHI Paper",
+      "abstract": "This paper studies co-design methods for autonomous vehicles.",
+      "sessionIds": [225008],
+      "authors": [
+        {
+          "personId": 216917,
+          "affiliations": [
+            { "institution": "The University of Sydney", "dsl": "Design Lab", "city": "Sydney", "country": "Australia" }
+          ]
+        },
+        {
+          "personId": 214250,
+          "affiliations": [
+            { "institution": "Stevens Institute of Technology", "dsl": "", "city": "Hoboken", "country": "United States" },
+            { "institution": "University of Illinois", "dsl": "", "city": "Urbana", "country": "United States" }
+          ]
+        }
+      ],
+      "addons": {
+        "doi": { "name": "doi", "title": "Open in ACM DL", "type": "doiLink", "url": "https://doi.org/10.1145/3772318.3790431" },
+        "Presentation Video": { "title": "Presentation Video", "type": "video", "url": "https://www.youtube.com/watch?v=abc123" }
+      }
+    },
+    {
+      "id": 999999,
+      "typeId": 14743,
+      "title": "A Poster That Must Be Skipped.",
+      "abstract": "Posters are excluded by default.",
+      "sessionIds": [],
+      "authors": [ { "personId": 300001, "affiliations": [] } ],
+      "addons": {}
+    }
+  ]
+}

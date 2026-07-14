@@ -11,6 +11,7 @@
 #   acl_anthology: event_url (optional; inferred for ACL)
 #   aaai:      archive_url / issue_prefix (optional; inferred for AAAI)
 #   ndss:      accepted_url (optional; inferred for NDSS)
+#   sigchi:    short_name / conference_id (optional; resolved from series + year)
 #
 # Paper tracks, event types, default labels, and metadata enrichers are inferred
 # by the scraper pipeline. Do not encode derived page metadata here.
@@ -396,10 +397,10 @@ venues:
     category: Human-Computer Interaction
     kind: conference
     year: 2026
-    scraper: dblp
+    scraper: sigchi
     enabled: true
     source:
-      toc_url: https://dblp.org/db/conf/chi/chi2026.xml
+      short_name: CHI
 
   - id: tosem2026
     name: TOSEM 2026

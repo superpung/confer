@@ -18,6 +18,7 @@ from .ndss import NdssScraper
 from .openreview import OpenReviewScraper
 from .researchr import ResearchrScraper
 from .sigarch import SigarchScraper
+from .sigchi import SigchiScraper
 
 
 SCRAPERS: dict[str, type[Scraper]] = {
@@ -30,6 +31,7 @@ SCRAPERS: dict[str, type[Scraper]] = {
     OpenReviewScraper.name: OpenReviewScraper,
     ResearchrScraper.name: ResearchrScraper,
     SigarchScraper.name: SigarchScraper,
+    SigchiScraper.name: SigchiScraper,
 }
 
 
