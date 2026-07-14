@@ -13,6 +13,7 @@ from .acl_anthology import AclAnthologyScraper
 from .base import Scraper
 from .dateconf import DateConfScraper
 from .dblp import DblpScraper
+from .ieeesp import IeeeSpScraper
 from .linklings import LinklingsScraper
 from .ndss import NdssScraper
 from .openreview import OpenReviewScraper
@@ -26,6 +27,7 @@ SCRAPERS: dict[str, type[Scraper]] = {
     AclAnthologyScraper.name: AclAnthologyScraper,
     DateConfScraper.name: DateConfScraper,
     DblpScraper.name: DblpScraper,
+    IeeeSpScraper.name: IeeeSpScraper,
     LinklingsScraper.name: LinklingsScraper,
     NdssScraper.name: NdssScraper,
     OpenReviewScraper.name: OpenReviewScraper,

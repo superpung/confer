@@ -61,6 +61,7 @@ scraper/               [now] Python project, package `confer`
       base.py          [now] Scraper ABC
       dateconf.py      [now] DATE official programme adapter
       dblp.py          [now] DBLP bibliography TOC adapter
+      ieeesp.py        [now] IEEE S&P accepted-papers page adapter (affiliations)
       linklings.py     [now] DAC (Linklings program) adapter
       ndss.py          [now] NDSS accepted-paper / detail-page adapter
       openreview.py    [now] OpenReview notes API adapter
