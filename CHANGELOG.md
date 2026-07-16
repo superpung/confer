@@ -10,6 +10,14 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ---
 
+## [1.3.1] - 2026-07-16
+
+### Changed
+- The GitHub-login + Gist-sync engine now lives in the shared **@repus/gist-sync**
+  package instead of being inlined. No change to how sync behaves.
+
+---
+
 ## [1.3.0] - 2026-07-14
 
 A venue-expansion release: two new conferences, three first-party adapters that
