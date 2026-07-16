@@ -4,6 +4,7 @@ import { paperKey, eventList, authorAff, instList, authorResolver, normalize } f
 import { type Term, FIELD_ALIASES, parseQuery, matchQuery, countOcc, relevanceScore, abstractSnippet } from '../core/query';
 import { buildTfidfIndex, type TfidfIndex } from '../core/similar';
 import { computeInsights } from '../core/insights';
+import { createGistSync, type Bundle, type Schema } from '@superpung/gist-sync';
 
 // --- constants & storage keys ------------------------------------------
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -21,13 +22,9 @@ const K_NOTES = 'confer.paperNotes';         // Record<paperKey, string> — pri
 const K_STATUS = 'confer.readStatus';        // Record<paperKey, 'toread'|'reading'|'done'> — omit 'unread'
 const K_SORT = 'confer.sort';               // last-used sort — local only, never synced
 const K_ACCENT = 'confer.accent';            // accent color key (e.g. "sage")
-const K_GH_TOKEN = 'confer.ghToken';         // GitHub gist-scoped access token
-const K_GH_REFRESH = 'confer.ghRefresh';     // GitHub refresh token (when expiry is enabled)
-const K_GH_EXPIRES = 'confer.ghExpires';     // epoch-ms when the access token expires
-const K_GIST_ID = 'confer.gistId';           // id of the user's confer config gist
-const K_GH_USER = 'confer.ghUser';           // cached GitHubUser JSON
-const K_SYNC_META = 'confer.syncMeta';       // SyncMeta JSON (conflict detection)
-const K_SYNC_ETAG = 'confer.syncEtag';       // ETag of the last fetched gist (conditional GET)
+const K_GH_TOKEN = 'confer.ghToken';         // read by the settings UI; written by the sync engine
+const K_GH_USER = 'confer.ghUser';           // cached GitHubUser JSON; written by the sync engine
+const K_SYNC_META = 'confer.syncMeta';       // SyncMeta JSON; watched cross-tab
 // Keys bundled by the settings export/import and Gist sync.
 const CONFIG_KEYS = [K_VGROUPS, K_COLLECTIONS, K_TAGS, K_SAVED, K_NOTES, K_STATUS];
 // OAuth broker endpoint (Netlify Function — stateless, stores nothing).
@@ -36,6 +33,50 @@ const OAUTH_BROKER = '/.netlify/functions/github-oauth';
 // Fill this in after registering the OAuth App at github.com/settings/developers.
 const GH_CLIENT_ID = import.meta.env.PUBLIC_GH_CLIENT_ID ?? '';
 const REPO_URL = 'https://github.com/superpung/confer';
+
+// --- GitHub Gist sync: powered by @superpung/gist-sync --------------------
+// The auth + gist + 3-way-merge engine lives in the shared package; this app
+// supplies only domain glue (serialize/apply + a merge schema) and renders the
+// sync UI. Storage keys, token lifecycle and conflict detection are its concern.
+let syncConflictPending = false;                 // true → paused; ".gh-conflict" pill shown
+
+/** How each syncable field of the SettingsBundle merges across devices.
+ *  Field order fixes the content fingerprint, so keep it stable. */
+const SYNC_SCHEMA: Schema = {
+  venueGroups:   { kind: 'idKeyed', key: 'id',   label: 'Venue group' },
+  collections:   { kind: 'idKeyed', key: 'id',   label: 'Collection' },
+  paperTags:     { kind: 'listMap' },
+  savedSearches: { kind: 'idKeyed', key: 'name', label: 'Saved search' },
+  paperNotes:    { kind: 'scalarMap', label: 'Note' },
+  readStatus:    { kind: 'scalarMap', label: 'Status' },
+};
+
+const gistSync = createGistSync({
+  config: {
+    clientId: GH_CLIENT_ID,
+    brokerPath: OAUTH_BROKER,
+    gistFilename: 'confer-config.json',
+    appMarker: 'confer',
+  },
+  schema: SYNC_SCHEMA,
+  ports: {
+    serialize: () => serializeSettings() as Bundle,
+    apply: (b, opts) => applySettingsBundle(b as Partial<SettingsBundle>, opts),
+    onToast: (m) => toast(m),
+    onUser: () => renderSettings(),
+    onStatus: (s) => {
+      if (s === 'syncing' || s === 'pending' || s === 'synced') setSyncBtnState(s);
+      else renderSettings();                       // 'signed-out' | 'conflict'
+    },
+    onConflict: (c) => {
+      if (!c) { syncConflictPending = false; renderSettings(); return; }
+      const body = document.querySelector<HTMLElement>('#conflictBody');
+      if (body) body.innerHTML = diffBundles(c.local as SettingsBundle, c.remote as SettingsBundle);
+      if (c.auto) { syncConflictPending = true; renderSettings(); }
+      else { $('#conflictModal').hidden = false; }
+    },
+  },
+});
 const PAGE = 200;
 
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -2239,7 +2280,7 @@ function openGroupPop(anchor: HTMLElement, series: string) {
 
 // Account menu: avatar button opens a dropdown with View Gist + Sign out.
 function openAccountMenu(anchor: HTMLElement) {
-  const gistId = localStorage.getItem(K_GIST_ID);
+  const gistId = gistSync.gistId();
   const render = () => {
     const gistRow = gistId
       ? `<div class="pop-row" data-account-gist role="button">${ICONS.extLink}<span class="pop-row-label">View Gist</span></div>`
@@ -2481,22 +2522,6 @@ function reflectOaFilter() {
 
 // --- toast -------------------------------------------------------------
 let toastTimer = 0;
-// Pending conflict resolution state (set when the conflict modal opens)
-let conflictLocal: SettingsBundle | null = null;
-let conflictRemote: SettingsBundle | null = null;
-let conflictToken = '';
-let conflictGistId = '';
-// Auto-sync state
-const SYNC_QUIET_MS = 5000;               // ms of inactivity before auto-pushing
-const SYNC_MAX_WAIT_MS = 30_000;          // maximum ms to defer a push under continuous edits
-// Exponential backoff delays for retrying failed auto-pushes (30s → 1m → 2m → 5m cap)
-const SYNC_RETRY_BACKOFF_MS = [30_000, 60_000, 120_000, 300_000] as const;
-let autoSyncTimer: number | null = null;  // debounce handle for push
-let syncPendingSince = 0;                 // epoch ms when the current pending batch started (0 = idle)
-let syncConflictPending = false;          // true → paused, "Sync conflict — review" shown
-let lastAutoPullAt = 0;                   // throttle focus-pulls (epoch ms)
-let syncRetryTimer: number | null = null; // retry handle after a failed auto-push
-let syncRetryAttempt = 0;                 // how many consecutive auto-push failures
 function toast(msg: string) {
   const el = $('#toast');
   el.textContent = msg;
@@ -2803,7 +2828,7 @@ function renderSettings() {
     ${statTile(state.saved.length, 'saved searches')}
   </div>`;
 
-  const hasGist = Boolean(localStorage.getItem(K_GIST_ID));
+  const hasGist = Boolean(gistSync.gistId());
 
   body.innerHTML = `
     ${renderSyncSection()}
@@ -2992,103 +3017,20 @@ async function handleShareHash() {
 
 // --- GitHub Gist sync -------------------------------------------------
 /** Start the GitHub OAuth Web Flow (redirects; returns on callback with ?code=). */
-function startGitHubLogin() {
-  if (!GH_CLIENT_ID) { toast('GitHub client ID not configured'); return; }
-  const state = crypto.randomUUID();
-  sessionStorage.setItem('gh_oauth_state', state);
-  const url = new URL('https://github.com/login/oauth/authorize');
-  url.searchParams.set('client_id', GH_CLIENT_ID);
-  url.searchParams.set('state', state);
-  url.searchParams.set('scope', 'gist');
-  location.href = url.toString();
-}
+function startGitHubLogin() { gistSync.login(); }
 
-/** Exchange the ?code= in the URL for a token via the broker; store it. */
+/** On startup: exchange a ?code= for a token, then reveal the sync UI. */
 async function handleOAuthCallback() {
-  const params = new URLSearchParams(location.search);
-  const code = params.get('code');
-  const returnedState = params.get('state');
-  if (!code) return;
-  // Remove ?code= and ?state= from the URL immediately
-  const clean = location.pathname + location.hash;
-  history.replaceState(null, '', clean);
-  const expected = sessionStorage.getItem('gh_oauth_state');
-  sessionStorage.removeItem('gh_oauth_state');
-  if (returnedState && expected && returnedState !== expected) { toast('Login failed: state mismatch'); return; }
-  try {
-    const res = await fetch(OAUTH_BROKER, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code }),
-    });
-    const data = await res.json() as { access_token?: string; refresh_token?: string; expires_in?: number; error?: string };
-    if (!data.access_token) { toast('Login failed: ' + (data.error ?? 'unknown')); return; }
-    try { localStorage.setItem(K_GH_TOKEN, data.access_token); } catch { /* ignore */ }
-    if (data.refresh_token) { try { localStorage.setItem(K_GH_REFRESH, data.refresh_token); } catch { /* ignore */ } }
-    if (data.expires_in) { try { localStorage.setItem(K_GH_EXPIRES, String(Date.now() + data.expires_in * 1000)); } catch { /* ignore */ } }
-    toast('Logged in with GitHub ✓');
-    void fetchGitHubUser(data.access_token); // async — re-renders when identity arrives
-    void autoSync(); // pull remote state right after login
-    renderSettings();
-    $('#settingsModal').hidden = false; // open settings so user sees the sync section
-  } catch { toast('Login failed — network error'); }
+  const hadCode = new URLSearchParams(location.search).has('code');
+  await gistSync.handleOAuthCallback();
+  if (hadCode) { renderSettings(); $('#settingsModal').hidden = false; }
 }
 
-/** Find or create the user's confer config gist. Uses ghFetch for 401 handling. */
-async function ensureGist(token: string, opts?: { silent?: boolean }): Promise<string> {
-  const cached = localStorage.getItem(K_GIST_ID);
-  if (cached) return cached;
-  const listRes = await ghFetch('https://api.github.com/gists?per_page=100', token, undefined, opts);
-  if (!listRes.ok) throw new Error('Failed to list gists');
-  const gists = await listRes.json() as { id: string; files: Record<string, unknown> }[];
-  const existing = gists.find((g) => 'confer-config.json' in g.files);
-  if (existing) { try { localStorage.setItem(K_GIST_ID, existing.id); } catch { /* ignore */ } return existing.id; }
-  const createRes = await ghFetch('https://api.github.com/gists', token, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      description: 'confer personal config (auto-managed)',
-      public: false,
-      files: { 'confer-config.json': { content: JSON.stringify({ app: 'confer', version: 1 }, null, 2) } },
-    }),
-  }, opts);
-  if (!createRes.ok) throw new Error('Failed to create gist');
-  const gist = await createRes.json() as { id: string };
-  try { localStorage.setItem(K_GIST_ID, gist.id); } catch { /* ignore */ }
-  return gist.id;
-}
-
-/** Low-level: write a bundle to the Gist with a fresh updatedAt, then persist SyncMeta.
- *  The bundle itself is saved as `base` for future 3-way merges. */
-async function pushBundle(token: string, gistId: string, bundle: SettingsBundle): Promise<void> {
-  const now = new Date().toISOString();
-  const withTs: SettingsBundle = { ...bundle, updatedAt: now };
-  const res = await ghFetch(`https://api.github.com/gists/${gistId}`, token, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ files: { 'confer-config.json': { content: JSON.stringify(withTs, null, 2) } } }),
-  });
-  if (!res.ok) throw new Error('Push failed');
-  writeJson(K_SYNC_META, { remoteUpdatedAt: now, localFingerprint: bundleFingerprint(bundle), lastSyncedAt: now, base: bundle } satisfies SyncMeta);
-}
-
-/** Low-level: apply a remote bundle as the new local state and record the sync point.
- *  The remote bundle is saved as `base` for future 3-way merges. */
-function applyRemoteBundle(remote: SettingsBundle): void {
-  applySettingsBundle(remote);
-  const now = new Date().toISOString();
-  const fp = bundleFingerprint(serializeSettings());
-  writeJson(K_SYNC_META, { remoteUpdatedAt: remote.updatedAt ?? '', localFingerprint: fp, lastSyncedAt: now, base: remote } satisfies SyncMeta);
-}
-
-/** Sign out: confirm, then clear token, identity, gist id, and sync meta. */
+/** Sign out: confirm first, then let the engine clear all credentials. */
 function signOutGitHub() {
   askConfirm({ title: 'Sign out', message: 'Sign out of GitHub? Your local config stays in this browser.', ok: 'Sign out', danger: true }).then((ok) => {
     if (!ok) return;
-    try { [K_GH_TOKEN, K_GH_REFRESH, K_GH_EXPIRES, K_GH_USER, K_GIST_ID, K_SYNC_META, K_SYNC_ETAG].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
-    conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
-    syncConflictPending = false;
-    if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
-    clearSyncRetry();
+    gistSync.logout();
     toast('Signed out');
     renderSettings();
   });
@@ -3285,11 +3227,9 @@ function summarizeRevision(prev: SettingsBundle, cur: SettingsBundle): RevDiff {
 
 /** Fetch the revision list (newest first) for the user's config Gist. */
 async function fetchGistHistory(): Promise<HistoryEntry[]> {
-  const token = await getValidToken();
-  if (!token) throw new Error('Not signed in');
-  const gistId = localStorage.getItem(K_GIST_ID);
+  const gistId = gistSync.gistId();
   if (!gistId) throw new Error('No gist found');
-  const res = await ghFetch(`https://api.github.com/gists/${gistId}`, token);
+  const res = await gistSync.api(`https://api.github.com/gists/${gistId}`);
   if (!res.ok) throw new Error('Request failed');
   const data = await res.json() as { history?: HistoryEntry[] };
   return data.history ?? [];
@@ -3298,11 +3238,9 @@ async function fetchGistHistory(): Promise<HistoryEntry[]> {
 /** Fetch a specific revision bundle, caching by SHA. */
 async function loadRevision(version: string): Promise<SettingsBundle> {
   if (revisionCache.has(version)) return revisionCache.get(version)!;
-  const token = await getValidToken();
-  if (!token) throw new Error('Not signed in');
-  const gistId = localStorage.getItem(K_GIST_ID);
+  const gistId = gistSync.gistId();
   if (!gistId) throw new Error('No gist found');
-  const res = await ghFetch(`https://api.github.com/gists/${gistId}/${version}`, token);
+  const res = await gistSync.api(`https://api.github.com/gists/${gistId}/${version}`);
   if (!res.ok) throw new Error('Failed to load revision');
   const data = await res.json() as { files?: { 'confer-config.json'?: { content?: string } } };
   const content = data.files?.['confer-config.json']?.content ?? '{}';
@@ -3387,103 +3325,6 @@ async function openHistory() {
   }
 }
 
-// --- GitHub API helpers -----------------------------------------------
-
-/** Exchange a stored refresh token for a fresh access token via the broker.
- *  Returns the new access token on success, or null if refresh is impossible
- *  (no refresh token, broker error, or the refresh token itself has expired).
- *  Persists the rotated token set in localStorage on success. */
-async function refreshAccessToken(): Promise<string | null> {
-  const refreshToken = localStorage.getItem(K_GH_REFRESH);
-  if (!refreshToken) return null;
-  try {
-    const res = await fetch(OAUTH_BROKER, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ grant_type: 'refresh_token', refresh_token: refreshToken }),
-    });
-    const data = await res.json() as { access_token?: string; refresh_token?: string; expires_in?: number; error?: string };
-    if (!data.access_token) return null;
-    try { localStorage.setItem(K_GH_TOKEN, data.access_token); } catch { /* ignore */ }
-    if (data.refresh_token) { try { localStorage.setItem(K_GH_REFRESH, data.refresh_token); } catch { /* ignore */ } }
-    if (data.expires_in) { try { localStorage.setItem(K_GH_EXPIRES, String(Date.now() + data.expires_in * 1000)); } catch { /* ignore */ } }
-    return data.access_token;
-  } catch {
-    return null;
-  }
-}
-
-/** Return the stored access token, proactively refreshing it when it is within
- *  5 minutes of expiry (or already expired) and a refresh token is available.
- *  Returns null if the user is not logged in. */
-async function getValidToken(): Promise<string | null> {
-  const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) return null;
-  const expiresStr = localStorage.getItem(K_GH_EXPIRES);
-  if (expiresStr) {
-    const expiresAt = Number(expiresStr);
-    if (Date.now() >= expiresAt - 5 * 60 * 1000) {
-      // Proactive refresh before the token dies
-      const fresh = await refreshAccessToken();
-      if (fresh) return fresh;
-      // Refresh failed — fall through and let the caller use the (expired) token;
-      // ghFetch's 401 handler will attempt one more refresh on the actual 401.
-    }
-  }
-  return token;
-}
-
-/** fetch() wrapper that surfaces 401s cleanly. On a 401 it first attempts a
- *  token refresh via the broker; if that succeeds it retries the request once.
- *  Only if the refresh also fails does it wipe credentials and sign the user out.
- *  Pass `{ silent: true }` for background calls so sign-out happens quietly. */
-async function ghFetch(url: string, token: string, init?: RequestInit, opts?: { silent?: boolean }): Promise<Response> {
-  const res = await fetch(url, {
-    ...init,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github+json',
-      ...((init?.headers ?? {}) as Record<string, string>),
-    },
-  });
-  if (res.status === 401) {
-    // Attempt one silent token refresh before giving up
-    const freshToken = await refreshAccessToken();
-    if (freshToken) {
-      // Retry the original request with the refreshed token
-      const retry = await fetch(url, {
-        ...init,
-        headers: {
-          Authorization: `Bearer ${freshToken}`,
-          Accept: 'application/vnd.github+json',
-          ...((init?.headers ?? {}) as Record<string, string>),
-        },
-      });
-      if (retry.status !== 401) return retry;
-      // Refresh token was also rejected — fall through to sign-out
-    }
-    try { [K_GH_TOKEN, K_GH_REFRESH, K_GH_EXPIRES, K_GH_USER, K_GIST_ID, K_SYNC_META, K_SYNC_ETAG].forEach((k) => localStorage.removeItem(k)); } catch { /* ignore */ }
-    if (!opts?.silent) toast('GitHub session expired — please log in again');
-    renderSettings();
-    throw new Error('gh_401');
-  }
-  return res;
-}
-
-/** Fetch GitHub identity for the authed user; cache and re-render. */
-async function fetchGitHubUser(token: string): Promise<void> {
-  try {
-    const res = await ghFetch('https://api.github.com/user', token);
-    if (!res.ok) return;
-    const d = await res.json() as { login: string; avatar_url: string; name?: string | null; email?: string | null };
-    const user: GitHubUser = { login: d.login, avatarUrl: d.avatar_url };
-    if (d.name) user.name = d.name;
-    if (d.email) user.email = d.email;
-    writeJson(K_GH_USER, user);
-    renderSettings();
-  } catch { /* non-fatal */ }
-}
-
 /** Full localized timestamp with timezone, used in hover tooltips. */
 function fullTimestamp(iso: string): string {
   try { return new Date(iso).toLocaleString(undefined, { timeZoneName: 'short' }); } catch { return iso; }
@@ -3498,146 +3339,6 @@ function relativeTime(iso: string): string {
     if (ms < 86_400_000) return `${Math.floor(ms / 3_600_000)} h ago`;
     return `${Math.floor(ms / 86_400_000)} d ago`;
   } catch { return ''; }
-}
-
-/** Stable content fingerprint for conflict detection (excludes timestamps). */
-function bundleFingerprint(b: Partial<SettingsBundle>): string {
-  return JSON.stringify({
-    venueGroups: b.venueGroups ?? [],
-    collections: b.collections ?? [],
-    paperTags: b.paperTags ?? {},
-    savedSearches: b.savedSearches ?? [],
-    paperNotes: b.paperNotes ?? {},
-    readStatus: b.readStatus ?? {},
-  });
-}
-
-/** 3-way merge of local and remote relative to a shared base.
- *  Returns the merged bundle and a list of human-readable conflict descriptions
- *  (non-empty when the same item was mutated incompatibly on both sides).
- *  Only items whose content changed on exactly one side are auto-resolved; items
- *  changed on both sides (or that can't be matched by id/name) are flagged. */
-function mergeThreeWay(
-  base: SettingsBundle,
-  local: SettingsBundle,
-  remote: SettingsBundle,
-): { merged: SettingsBundle; conflicts: string[] } {
-  const conflicts: string[] = [];
-
-  // Generic merge for id-keyed arrays (VenueGroup, Collection)
-  function mergeById<T extends { id: string }>(
-    b: T[], l: T[], r: T[],
-    label: string,
-  ): T[] {
-    const allIds = new Set([...b.map((x) => x.id), ...l.map((x) => x.id), ...r.map((x) => x.id)]);
-    const result: T[] = [];
-    for (const id of allIds) {
-      const bItem = b.find((x) => x.id === id);
-      const lItem = l.find((x) => x.id === id);
-      const rItem = r.find((x) => x.id === id);
-      const bSer = JSON.stringify(bItem);
-      const lSer = JSON.stringify(lItem);
-      const rSer = JSON.stringify(rItem);
-      const lChanged = lSer !== bSer;
-      const rChanged = rSer !== bSer;
-      if (!lChanged && !rChanged) { if (lItem) result.push(lItem); continue; }
-      if (lChanged && !rChanged) { if (lItem) result.push(lItem); continue; } // local added/modified/deleted
-      if (!lChanged && rChanged) { if (rItem) result.push(rItem); continue; } // remote added/modified/deleted
-      // Both changed
-      if (lSer === rSer) { if (lItem) result.push(lItem); continue; } // identical result — fine
-      // True conflict: both modified the same item differently
-      const name = (lItem as unknown as { name?: string })?.name ?? (rItem as unknown as { name?: string })?.name ?? id;
-      conflicts.push(`${label} "${name}"`);
-      result.push(lItem ?? rItem!); // keep local on conflict
-    }
-    return result;
-  }
-
-  // Merge name-keyed saved searches
-  function mergeSavedSearches(b: SavedSearch[], l: SavedSearch[], r: SavedSearch[]): SavedSearch[] {
-    const allNames = new Set([...b.map((x) => x.name), ...l.map((x) => x.name), ...r.map((x) => x.name)]);
-    const result: SavedSearch[] = [];
-    for (const name of allNames) {
-      const bItem = b.find((x) => x.name === name);
-      const lItem = l.find((x) => x.name === name);
-      const rItem = r.find((x) => x.name === name);
-      const bSer = JSON.stringify(bItem);
-      const lSer = JSON.stringify(lItem);
-      const rSer = JSON.stringify(rItem);
-      const lChanged = lSer !== bSer;
-      const rChanged = rSer !== bSer;
-      if (!lChanged && !rChanged) { if (lItem) result.push(lItem); continue; }
-      if (lChanged && !rChanged) { if (lItem) result.push(lItem); continue; }
-      if (!lChanged && rChanged) { if (rItem) result.push(rItem); continue; }
-      if (lSer === rSer) { if (lItem) result.push(lItem); continue; }
-      conflicts.push(`Saved search "${name}"`);
-      result.push(lItem ?? rItem!);
-    }
-    return result;
-  }
-
-  // Merge per-paper scalar maps (notes: Record<paperKey, string>, status: same)
-  function mergeScalarMap(
-    b: Record<string, string>,
-    l: Record<string, string>,
-    r: Record<string, string>,
-    label: string,
-  ): Record<string, string> {
-    const allKeys = new Set([...Object.keys(b), ...Object.keys(l), ...Object.keys(r)]);
-    const result: Record<string, string> = {};
-    for (const k of allKeys) {
-      const bVal = b[k] ?? '';
-      const lVal = l[k] ?? '';
-      const rVal = r[k] ?? '';
-      const lChanged = lVal !== bVal;
-      const rChanged = rVal !== bVal;
-      if (!lChanged && !rChanged) { if (lVal) result[k] = lVal; continue; }
-      if (lChanged && !rChanged) { if (lVal) result[k] = lVal; continue; }
-      if (!lChanged && rChanged) { if (rVal) result[k] = rVal; continue; }
-      if (lVal === rVal) { if (lVal) result[k] = lVal; continue; }
-      // Both sides changed to different values — flag conflict, keep local
-      const paperId = k.split(':').slice(1).join(':');
-      conflicts.push(`${label} for paper "${paperId}"`);
-      if (lVal) result[k] = lVal;
-    }
-    return result;
-  }
-
-  // Merge per-paper tags (Record<paperKey, string[]>)
-  function mergePaperTags(
-    b: Record<string, string[]>,
-    l: Record<string, string[]>,
-    r: Record<string, string[]>,
-  ): Record<string, string[]> {
-    const allKeys = new Set([...Object.keys(b), ...Object.keys(l), ...Object.keys(r)]);
-    const result: Record<string, string[]> = {};
-    for (const key of allKeys) {
-      const bVal = JSON.stringify(b[key] ?? null);
-      const lVal = JSON.stringify(l[key] ?? null);
-      const rVal = JSON.stringify(r[key] ?? null);
-      const lChanged = lVal !== bVal;
-      const rChanged = rVal !== bVal;
-      if (!lChanged && !rChanged) { if (l[key]?.length) result[key] = l[key]; continue; }
-      if (lChanged && !rChanged) { if (l[key]?.length) result[key] = l[key]; continue; }
-      if (!lChanged && rChanged) { if (r[key]?.length) result[key] = r[key]; continue; }
-      if (lVal === rVal) { if (l[key]?.length) result[key] = l[key]; continue; }
-      // Both sides changed the tags for this paper — union them (low-friction resolution)
-      result[key] = [...new Set([...(l[key] ?? []), ...(r[key] ?? [])])];
-    }
-    return result;
-  }
-
-  const merged: SettingsBundle = {
-    app: 'confer', version: 2,
-    venueGroups:   mergeById(base.venueGroups ?? [], local.venueGroups ?? [], remote.venueGroups ?? [], 'Venue group'),
-    collections:   mergeById(base.collections  ?? [], local.collections  ?? [], remote.collections  ?? [], 'Collection'),
-    savedSearches: mergeSavedSearches(base.savedSearches ?? [], local.savedSearches ?? [], remote.savedSearches ?? []),
-    paperTags:     mergePaperTags(base.paperTags ?? {}, local.paperTags ?? {}, remote.paperTags ?? {}),
-    paperNotes:    mergeScalarMap(base.paperNotes ?? {}, local.paperNotes ?? {}, remote.paperNotes ?? {}, 'Note'),
-    readStatus:    mergeScalarMap(base.readStatus ?? {}, local.readStatus ?? {}, remote.readStatus ?? {}, 'Status'),
-  };
-
-  return { merged, conflicts };
 }
 
 /** Build HTML showing what's different between two bundles (for the conflict modal). */
@@ -3701,12 +3402,8 @@ function diffBundles(local: SettingsBundle, remote: SettingsBundle): string {
   </div>`;
 }
 
-/** True when local config has diverged from the last-synced snapshot. */
-function localPending(): boolean {
-  const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
-  if (!meta) return true; // never synced
-  return bundleFingerprint(serializeSettings()) !== meta.localFingerprint;
-}
+/** True when local content diverges from the last-synced snapshot. */
+function localPending(): boolean { return gistSync.isPending(); }
 
 /** Update the sync pill button when the Settings modal is open.
  *  'syncing' = icon spins, label "Syncing…"
@@ -3732,276 +3429,24 @@ function setSyncBtnState(s: 'syncing' | 'pending' | 'synced') {
   }
 }
 
-/** Schedule an exponential-backoff retry after a failed auto-push.
- *  No-ops if a retry is already pending. */
-function scheduleSyncRetry() {
-  if (syncRetryTimer !== null) return;
-  const delay = SYNC_RETRY_BACKOFF_MS[Math.min(syncRetryAttempt, SYNC_RETRY_BACKOFF_MS.length - 1)];
-  syncRetryAttempt++;
-  syncRetryTimer = window.setTimeout(() => {
-    syncRetryTimer = null;
-    if (!localStorage.getItem(K_GH_TOKEN)) return;
-    if (syncConflictPending) return;
-    if (!localPending()) return;
-    void autoSync();
-  }, delay);
-}
+/** Notify the sync engine of a local mutation (debounced push). Called by
+ *  writeJson for CONFIG_KEYS. */
+function markLocalChange() { gistSync.markLocalChange(); }
 
-/** Cancel any pending retry and reset the attempt counter. */
-function clearSyncRetry() {
-  if (syncRetryTimer !== null) { clearTimeout(syncRetryTimer); syncRetryTimer = null; }
-  syncRetryAttempt = 0;
-}
+/** One-click sync: auto-detect direction, or surface a conflict. */
+async function syncNow() { await gistSync.syncNow(); }
 
-/** Debounced push trigger: called by writeJson (for CONFIG_KEYS).
- *  Coalesces rapid local edits into a single push:
- *  - waits SYNC_QUIET_MS of inactivity before firing (cancels the timer on each new edit),
- *  - but forces a push after SYNC_MAX_WAIT_MS of continuous editing regardless.
- *  Dirty-checks via localPending() before scheduling anything so that net-zero
- *  edits (e.g. add then delete a tag within the debounce window) never trigger
- *  a network push. */
-function markLocalChange() {
-  if (!localStorage.getItem(K_GH_TOKEN)) return;  // not logged in
-  if (syncConflictPending) return;                 // paused until conflict is resolved
-  if (!localPending()) {
-    // Net state matches the last sync snapshot — nothing real changed.
-    // Cancel any queued push and reset the button.
-    if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
-    syncPendingSince = 0;
-    setSyncBtnState('synced');
-    return;
-  }
-  setSyncBtnState('pending');                      // show queued-upload icon immediately
-  const now = Date.now();
-  if (syncPendingSince === 0) syncPendingSince = now;
-  if (autoSyncTimer !== null) clearTimeout(autoSyncTimer);
-  if (now - syncPendingSince >= SYNC_MAX_WAIT_MS) {
-    // Forced flush: too long since first pending change — push immediately
-    syncPendingSince = 0;
-    void autoSync();
-    return;
-  }
-  autoSyncTimer = window.setTimeout(() => {
-    autoSyncTimer = null; syncPendingSince = 0;
-    // Re-check: state may have reverted since the timer was set (e.g. user
-    // deleted the tag they just added). Only push if still dirty.
-    if (localPending()) void autoSync(); else setSyncBtnState('synced');
-  }, SYNC_QUIET_MS);
-}
+/** Silent background sync triggered by focus/visibility or local mutations. */
+async function autoSync() { await gistSync.autoSync(); }
 
-let syncInFlight = false; // re-entrancy guard: prevents overlapping pushes
+/** Close the conflict modal. Unresolved conflicts stay stashed so the
+ *  ".gh-conflict" pill can reopen the diff. */
+function closeConflictModal() { $('#conflictModal').hidden = true; }
 
-/** Shared sync core. `auto:false` = manual (toasts + opens conflict modal);
- *  `auto:true` = silent (no toasts; 401 clears creds quietly; conflict marks pending state).
- *
- *  Rate-saving: sends If-None-Match on the gist GET so an unchanged remote returns 304,
- *  which GitHub does not bill against the rate limit. */
-async function runSync({ auto }: { auto: boolean }): Promise<void> {
-  if (syncInFlight) { if (!auto) toast('Syncing…'); return; }
-  syncInFlight = true;
-  setSyncBtnState('syncing');
-  // Use getValidToken to proactively refresh if the access token is near expiry
-  const token = await getValidToken();
-  if (!token) {
-    if (!auto) toast('Not logged in');
-    setSyncBtnState(localPending() ? 'pending' : 'synced');
-    syncInFlight = false; return;
-  }
-  if (!auto) toast('Syncing…');
-
-  /** Shared success epilogue: settle the button to the appropriate steady state. */
-  const onSyncDone = (msg?: string) => {
-    clearSyncRetry(); // success — cancel any pending retry
-    if (!auto && msg) toast(msg);
-    renderSettings();
-    setSyncBtnState(localPending() ? 'pending' : 'synced');
-  };
-
-  try {
-    const gistId = await ensureGist(token, { silent: auto });
-
-    // Conditional GET: send ETag so GitHub can return 304 (not counted against rate limit)
-    const storedEtag = localStorage.getItem(K_SYNC_ETAG);
-    const gistRes = await ghFetch(
-      `https://api.github.com/gists/${gistId}`, token,
-      storedEtag ? { headers: { 'If-None-Match': storedEtag } } : undefined,
-      { silent: auto },
-    );
-
-    // 304: remote is unchanged since our last fetch — check if we need to push
-    if (gistRes.status === 304) {
-      const local = serializeSettings();
-      const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
-      const localChanged = meta ? bundleFingerprint(local) !== meta.localFingerprint : true;
-      if (!localChanged) {
-        // Truly up to date — just bump the "last synced" display
-        if (meta) writeJson(K_SYNC_META, { ...meta, lastSyncedAt: new Date().toISOString() } satisfies SyncMeta);
-        if (auto) lastAutoPullAt = Date.now();
-        onSyncDone(!auto ? 'Already up to date' : undefined);
-        return;
-      }
-      // Local changed but remote same — push
-      await pushBundle(token, gistId, local);
-      onSyncDone(!auto ? 'Synced ✓' : undefined);
-      return;
-    }
-
-    if (!gistRes.ok) throw new Error('Fetch gist failed');
-
-    // Save the fresh ETag for the next conditional GET
-    const freshEtag = gistRes.headers.get('ETag');
-    if (freshEtag) { try { localStorage.setItem(K_SYNC_ETAG, freshEtag); } catch { /* ignore */ } }
-
-    const gist = await gistRes.json() as { files: { 'confer-config.json'?: { content?: string } } };
-    const content = gist.files['confer-config.json']?.content;
-    const local = serializeSettings();
-    const meta = readJson<SyncMeta | null>(K_SYNC_META, null);
-
-    // Parse remote; updatedAt presence marks a real push (vs empty placeholder gist)
-    let remote: SettingsBundle | null = null;
-    try { if (content) remote = JSON.parse(content) as SettingsBundle; } catch { /* corrupt gist */ }
-    const hasRealRemote = !!(remote?.updatedAt);
-
-    if (!hasRealRemote) {
-      // Empty or placeholder gist — first push from this device
-      await pushBundle(token, gistId, local);
-      onSyncDone(!auto ? 'Synced ✓' : undefined);
-      return;
-    }
-    if (!meta) {
-      // This device has never synced before but remote exists — pull down
-      applyRemoteBundle(remote!);
-      onSyncDone(!auto ? 'Synced ✓ — pulled cloud config' : undefined);
-      return;
-    }
-
-    const localChanged = bundleFingerprint(local) !== meta.localFingerprint;
-    const remoteChanged = (remote!.updatedAt ?? '') !== meta.remoteUpdatedAt;
-
-    if (!localChanged && !remoteChanged) {
-      // Bump lastSyncedAt to reflect the confirmed-in-sync check time
-      writeJson(K_SYNC_META, { ...meta, lastSyncedAt: new Date().toISOString() } satisfies SyncMeta);
-      if (auto) lastAutoPullAt = Date.now();
-      onSyncDone(!auto ? 'Already up to date' : undefined);
-      return;
-    }
-    if (localChanged && !remoteChanged) {
-      await pushBundle(token, gistId, local);
-      onSyncDone(!auto ? 'Synced ✓' : undefined);
-      return;
-    }
-    if (!localChanged) {
-      applyRemoteBundle(remote!);
-      onSyncDone(!auto ? 'Synced ✓' : undefined);
-      return;
-    }
-
-    // Both sides changed — try to resolve automatically before showing a modal
-    //
-    // 1. Content-equality short-circuit: if the two sides happen to carry the
-    //    same effective content (e.g. a keepalive flush succeeded on another tab),
-    //    reconcile silently without a modal.
-    if (bundleFingerprint(local) === bundleFingerprint(remote!)) {
-      const now = new Date().toISOString();
-      writeJson(K_SYNC_META, { ...meta, localFingerprint: bundleFingerprint(local), lastSyncedAt: now, base: local } satisfies SyncMeta);
-      if (auto) lastAutoPullAt = Date.now();
-      onSyncDone(!auto ? 'Already up to date' : undefined);
-      return;
-    }
-
-    // 2. 3-way merge: if we have a shared base, attempt an automatic merge.
-    //    When every item-level change is unambiguous, apply and push silently.
-    //    Only fall through to the stash/modal path for genuine per-item conflicts.
-    if (meta.base) {
-      const { merged, conflicts: mergeConflicts } = mergeThreeWay(meta.base, local, remote!);
-      if (!mergeConflicts.length) {
-        applySettingsBundle(merged);
-        await pushBundle(token, gistId, serializeSettings());
-        if (auto) lastAutoPullAt = Date.now();
-        onSyncDone(!auto ? 'Synced ✓ — merged changes' : undefined);
-        return;
-      }
-      // Partial conflicts: update the stashed bundles to the attempted merge result
-      // so the conflict modal shows only the genuinely unresolvable items.
-    }
-
-    // True conflict — both sides changed and could not be automatically merged
-    setSyncBtnState(localPending() ? 'pending' : 'synced');
-    if (auto) {
-      // Don't pop modal; stash and show passive indicator
-      stashConflict(local, remote!, token, gistId);
-      syncConflictPending = true;
-      renderSettings();
-    } else {
-      renderConflict(local, remote!, token, gistId);
-    }
-  } catch (e: unknown) {
-    setSyncBtnState(localPending() ? 'pending' : 'synced');
-    if ((e as Error).message !== 'gh_401') {
-      if (!auto) toast('Sync failed');
-      // Silent failure: schedule a retry if there is still something to push
-      if (auto && localPending()) scheduleSyncRetry();
-    }
-    console.error(e);
-  } finally {
-    syncInFlight = false;
-  }
-}
-
-/** One-click sync: auto-detect direction, or open conflict modal on true conflict. */
-async function syncNow() {
-  return runSync({ auto: false });
-}
-
-/** Silent background sync triggered by local mutations or tab focus. */
-async function autoSync() {
-  return runSync({ auto: true });
-}
-
-/** Stash conflict state and pre-render the diff body (does not open the modal). */
-function stashConflict(local: SettingsBundle, remote: SettingsBundle, token: string, gistId: string) {
-  conflictLocal = local; conflictRemote = remote; conflictToken = token; conflictGistId = gistId;
-  const body = document.querySelector<HTMLElement>('#conflictBody');
-  if (body) body.innerHTML = diffBundles(local, remote);
-}
-
-/** Open the conflict resolution modal with a diff of local vs remote. */
-function renderConflict(local: SettingsBundle, remote: SettingsBundle, token: string, gistId: string) {
-  stashConflict(local, remote, token, gistId);
-  $('#conflictModal').hidden = false;
-}
-
-/** Close the conflict modal and clear pending state. */
-function closeConflictModal() {
-  $('#conflictModal').hidden = true;
-  // Keep conflict state if the user dismissed without resolving (so the ".gh-conflict"
-  // indicator can re-open the modal). Only clear after a resolution or sign-out.
-  if (!syncConflictPending) {
-    conflictLocal = null; conflictRemote = null; conflictToken = ''; conflictGistId = '';
-  }
-}
-
-/** Execute the chosen conflict resolution and update sync meta. */
+/** Execute the chosen conflict resolution via the engine. */
 async function resolveSyncConflict(choice: 'local' | 'cloud' | 'merge') {
-  const local = conflictLocal, remote = conflictRemote;
-  const token = conflictToken, gistId = conflictGistId;
-  closeConflictModal();
-  if (!local || !remote || !token || !gistId) return;
-  try {
-    if (choice === 'local') {
-      await pushBundle(token, gistId, local);
-      toast('Synced ✓ — kept your local changes');
-    } else if (choice === 'cloud') {
-      applyRemoteBundle(remote);
-      toast('Synced ✓ — applied cloud changes');
-    } else {
-      applySettingsBundle(remote, { merge: true });
-      await pushBundle(token, gistId, serializeSettings());
-      toast('Synced ✓ — merged both sides');
-    }
-    syncConflictPending = false; // resume auto-sync after resolution
-    renderSettings();
-  } catch { toast('Sync failed after resolution'); }
+  $('#conflictModal').hidden = true;
+  await gistSync.resolveConflict(choice);
 }
 
 /** Snapshot all personal data into a portable bundle. */
@@ -4215,27 +3660,8 @@ function applyAccent(name: string) {
  *  the page unloads. The meta is intentionally NOT updated here — the device stays
  *  "pending" so a dropped keepalive is recovered/reconciled on next startup pull.
  *  (Feature 4's content-equality check makes a successful flush a clean no-op.) */
-function flushPendingSync() {
-  const token = localStorage.getItem(K_GH_TOKEN);
-  if (!token) return;
-  if (syncConflictPending) return;
-  if (!localPending()) return;
-  const gistId = localStorage.getItem(K_GIST_ID);
-  if (!gistId) return; // no cached gist id — rely on startup pull for recovery
-  if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
-  const now = new Date().toISOString();
-  const payload = JSON.stringify({ ...serializeSettings(), updatedAt: now });
-  void fetch(`https://api.github.com/gists/${gistId}`, {
-    method: 'PATCH',
-    keepalive: true,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github+json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ files: { 'confer-config.json': { content: payload } } }),
-  });
-}
+/** Best-effort keepalive push on pagehide / tab-hide. */
+function flushPendingSync() { gistSync.flushPendingSync(); }
 
 // --- events ------------------------------------------------------------
 function wire() {
@@ -5633,11 +5059,7 @@ function wire() {
           try {
             const bundle = await loadRevision(version);
             applySettingsBundle(bundle);
-            const token = await getValidToken();
-            if (!token) throw new Error('Not signed in');
-            const gistId = localStorage.getItem(K_GIST_ID);
-            if (!gistId) throw new Error('No gist');
-            await pushBundle(token, gistId, bundle);
+            await gistSync.push(bundle as Bundle);
             revisionCache.clear();
             toast('Version restored ✓');
             renderSettings();
@@ -5933,17 +5355,18 @@ function wire() {
 
   // auto-sync on tab focus: pull remote changes when switching back to this tab;
   // best-effort flush on tab hide (changes inside the debounce window).
+  let lastVisibilityPull = 0;
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {
       flushPendingSync(); // non-blocking keepalive
       return;
     }
     // visible — pull remote
-    if (!localStorage.getItem(K_GH_TOKEN)) return;
+    if (!gistSync.isLoggedIn()) return;
     if (syncConflictPending) return;
     const now = Date.now();
-    if (now - lastAutoPullAt < 30_000) return; // throttle: at most once per 30 s
-    lastAutoPullAt = now;
+    if (now - lastVisibilityPull < 30_000) return; // throttle: at most once per 30 s
+    lastVisibilityPull = now;
     void autoSync();
   });
 
@@ -5968,20 +5391,12 @@ function wire() {
     }
     // Another tab completed a sync — re-evaluate our pending state (may cancel a queued push)
     if (e.key === K_SYNC_META) {
-      if (!localPending()) {
-        if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
-        syncPendingSince = 0;
-        clearSyncRetry();
-        setSyncBtnState('synced');
-      } else {
-        setSyncBtnState('pending');
-      }
+      gistSync.refresh();
       return;
     }
     // Another tab signed out
     if (e.key === K_GH_TOKEN && !e.newValue) {
-      if (autoSyncTimer !== null) { clearTimeout(autoSyncTimer); autoSyncTimer = null; }
-      clearSyncRetry();
+      gistSync.refresh();
       renderSettings();
     }
   });
@@ -6401,12 +5816,10 @@ function init() {
   renderSaved();
   wire();
   handleShareHash();
-  handleOAuthCallback();
+  void handleOAuthCallback();
   // If already logged in: fetch identity if not cached, then pull latest remote state
-  const _initToken = localStorage.getItem(K_GH_TOKEN);
-  if (_initToken) {
-    if (!localStorage.getItem(K_GH_USER)) void fetchGitHubUser(_initToken);
-    lastAutoPullAt = Date.now(); // mark startup pull so focus handler doesn't fire immediately
+  if (gistSync.isLoggedIn()) {
+    void gistSync.ensureIdentity();
     void autoSync(); // pull on startup; no-op if already up to date
   }
   reflectSidebar();
