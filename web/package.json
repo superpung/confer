@@ -10,7 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@superpung/gist-sync": "^0.1.0",
+    "@repus/gist-sync": "^0.1.3",
     "astro": "^5.18.2"
   },
   "devDependencies": {

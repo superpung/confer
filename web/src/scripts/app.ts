@@ -4,7 +4,7 @@ import { paperKey, eventList, authorAff, instList, authorResolver, normalize } f
 import { type Term, FIELD_ALIASES, parseQuery, matchQuery, countOcc, relevanceScore, abstractSnippet } from '../core/query';
 import { buildTfidfIndex, type TfidfIndex } from '../core/similar';
 import { computeInsights } from '../core/insights';
-import { createGistSync, type Bundle, type Schema } from '@superpung/gist-sync';
+import { createGistSync, type Bundle, type Schema } from '@repus/gist-sync';
 
 // --- constants & storage keys ------------------------------------------
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, '/');
