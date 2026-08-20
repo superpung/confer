@@ -2,7 +2,8 @@
 
 Source-specific options:
 
-    program_url:         the Researchr program or track page (required)
+    program_url:         the Researchr program or track page (required unless program_urls)
+    program_urls:        several Researchr program/track pages merged into one venue
     context:             optional Researchr context id override
     fetch_details:       fetch event detail modals for abstracts (default true)
 """
@@ -139,6 +140,7 @@ class ResearchrOccurrence:
     date: str
     location: str
     urls: list[str] = field(default_factory=list)
+    source_url: str = ""
 
 
 @dataclass
@@ -156,6 +158,7 @@ class ResearchrEvent:
     dates: list[str]
     locations: list[str]
     urls: list[str]
+    source_url: str = ""
 
 
 @dataclass
@@ -177,30 +180,60 @@ class ResearchrScraper(Scraper):
 
     def __init__(self, venue: VenueConfig, fetcher: Fetcher, **kwargs: Any) -> None:
         super().__init__(venue, fetcher, **kwargs)
-        program_url = venue.source.get("program_url") or venue.source.get("url")
-        if not program_url:
-            raise ValueError(f"Venue {venue.id!r}: researchr requires source.program_url")
-        self.program_url = str(program_url)
+        self.program_urls = self._program_urls(venue)
+        self.program_url = self.program_urls[0]
         self.context = str(venue.source.get("context") or self._infer_context(self.program_url))
         self.fetch_details = bool(venue.source.get("fetch_details", True))
         self.track_prefix = str(venue.source.get("track_prefix") or venue.series or "")
 
     def scrape(self) -> list[Paper]:
-        html = self.fetcher.get_text(self.program_url, "program.html")
-        occurrences, modal_config = self.parse_program(html)
-        paper_tracks = self.infer_paper_tracks(html, occurrences)
-        kept = [occ for occ in occurrences if self.keep_occurrence(occ, paper_tracks)]
+        kept: list[ResearchrOccurrence] = []
+        modal_config: ResearchrModalConfig | None = None
+        total_rows = 0
+        for index, program_url in enumerate(self.program_urls):
+            html = self.fetcher.get_text(program_url, self.program_cache_name(index))
+            occurrences, page_modal_config = self.parse_program(html)
+            for occurrence in occurrences:
+                occurrence.source_url = program_url
+            total_rows += len(occurrences)
+            # Paper-track inference is per page: a track page is already scoped by
+            # its URL, while a full program page needs its own navigation.
+            paper_tracks = self.infer_paper_tracks(html, occurrences)
+            kept.extend(occ for occ in occurrences if self.keep_occurrence(occ, paper_tracks))
+            modal_config = modal_config or page_modal_config
         events = self.merge_occurrences(kept)
         selected = events[: self.limit] if self.limit else events
         print(
             f"[{self.venue.id}] {len(selected)} Researchr events selected "
-            f"from {len(occurrences)} program rows.",
+            f"from {total_rows} program rows.",
             file=sys.stderr,
         )
 
         details = self.crawl_details(selected, modal_config) if self.fetch_details else {}
         papers = [self.to_paper(event, details.get(event.event_id)) for event in selected]
         return [paper for paper in papers if self.keep_paper(paper)]
+
+    @staticmethod
+    def _program_urls(venue: VenueConfig) -> list[str]:
+        raw = venue.source.get("program_urls")
+        urls = list(raw) if isinstance(raw, (list, tuple)) else []
+        single = venue.source.get("program_url") or venue.source.get("url")
+        if single:
+            urls.append(single)
+        urls = unique_preserve_order([str(url).strip() for url in urls if str(url).strip()])
+        if not urls:
+            raise ValueError(
+                f"Venue {venue.id!r}: researchr requires source.program_url or source.program_urls"
+            )
+        return urls
+
+    def program_cache_name(self, index: int) -> str:
+        """Cache file for a program page; single-page venues keep ``program.html``."""
+        if len(self.program_urls) == 1:
+            return "program.html"
+        parts = [part for part in urlparse(self.program_urls[index]).path.split("/") if part]
+        slug = safe_slug(parts[-1], fallback=str(index)) if parts else str(index)
+        return f"program-{slug}.html"
 
     def _abs(self, href: str) -> str:
         return urljoin(self.program_url, href) if href else ""
@@ -661,6 +694,7 @@ class ResearchrScraper(Scraper):
                     dates=unique_preserve_order([occurrence.date]),
                     locations=unique_preserve_order([occurrence.location]),
                     urls=list(occurrence.urls),
+                    source_url=occurrence.source_url,
                 )
                 continue
 
@@ -807,7 +841,9 @@ class ResearchrScraper(Scraper):
 
     def to_paper(self, event: ResearchrEvent, detail: ResearchrDetail | None = None) -> Paper:
         detail = detail or ResearchrDetail()
-        urls = unique_preserve_order([detail.url] + event.urls + detail.urls + [self.program_url])
+        urls = unique_preserve_order(
+            [detail.url] + event.urls + detail.urls + [event.source_url or self.program_url]
+        )
         tracks = unique_preserve_order(event.tracks + detail.tracks)
         authors = event.authors or detail.authors
         session_titles = unique_preserve_order(event.session_titles + [detail.session_title])

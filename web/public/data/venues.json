@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T11:57:43+00:00",
+  "generatedAt": "2026-08-20T08:41:56+00:00",
   "venues": [
     {
       "category": "Artificial Intelligence & Machine Learning",
@@ -225,6 +225,15 @@
       "name": "USENIX Security 2025",
       "series": "USENIX Security",
       "year": 2025
+    },
+    {
+      "category": "Software Engineering",
+      "count": 467,
+      "id": "ase2026",
+      "kind": "conference",
+      "name": "ASE 2026",
+      "series": "ASE",
+      "year": 2026
     },
     {
       "category": "Software Engineering",

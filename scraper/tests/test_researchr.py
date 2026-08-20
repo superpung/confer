@@ -254,3 +254,53 @@ def test_placeholder_abstracts_and_nonpaper_titles(tmp_path):
             event_type="Paper",
         )
     )
+
+
+def test_program_urls_merge_multiple_track_pages(tmp_path):
+    venue = VenueConfig(
+        id="ase2026",
+        name="ASE 2026",
+        series="ASE",
+        scraper="researchr",
+        source={
+            "program_urls": [
+                "https://conf.researchr.org/track/ase-2026/ase-2026-research-track",
+                "https://conf.researchr.org/track/ase-2026/ase-2026-nier",
+            ],
+            "fetch_details": False,
+        },
+    )
+    scraper = ResearchrScraper(venue, Fetcher(tmp_path, refresh=False))
+    assert scraper.context == "ase-2026"
+    assert scraper.program_cache_name(0) == "program-ase-2026-research-track.html"
+    assert scraper.program_cache_name(1) == "program-ase-2026-nier.html"
+
+    base = (FIXTURES / "researchr_overview_program.html").read_text(encoding="utf-8")
+    pages = {
+        scraper.program_urls[0]: base.replace("overview-event", "research-event")
+        .replace("Accepted OOPSLA Paper", "Accepted Research Paper")
+        .replace(">OOPSLA<", ">Research Papers<"),
+        scraper.program_urls[1]: base.replace("overview-event", "nier-event")
+        .replace("Accepted OOPSLA Paper", "Accepted NIER Paper")
+        .replace(">OOPSLA<", ">New Ideas and Emerging Results<"),
+    }
+    scraper.fetcher.get_text = lambda url, name: pages[url]  # type: ignore[method-assign]
+
+    papers = scraper.scrape()
+
+    assert [paper.id for paper in papers] == ["nier-event", "research-event"]
+    assert [paper.tracks for paper in papers] == [
+        ["New Ideas and Emerging Results"],
+        ["Research Papers"],
+    ]
+    # Each paper links back to the track page it was found on.
+    assert papers[0].urls == [scraper.program_urls[1]]
+    assert papers[1].urls == [scraper.program_urls[0]]
+
+
+def test_single_program_url_keeps_the_legacy_cache_name(tmp_path):
+    scraper = make_scraper(tmp_path)
+    assert scraper.program_urls == [
+        "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
+    ]
+    assert scraper.program_cache_name(0) == "program.html"
