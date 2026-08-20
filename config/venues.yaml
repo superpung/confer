@@ -5,7 +5,7 @@
 #   linklings: base_url
 #   dateconf:  program_url
 #   sigarch:   program_url
-#   researchr: program_url
+#   researchr: program_url (or program_urls: several pages merged into one venue)
 #   dblp:      toc_url
 #   ieeesp:    accepted_url
 #   sosp:      accepted_url
@@ -238,6 +238,22 @@ venues:
     enabled: true
     source:
       program_url: https://conf.researchr.org/program/fse-2023/program-fse-2023/Detailed-Timeline
+
+  - id: ase2026
+    name: ASE 2026
+    series: ASE
+    category: Software Engineering
+    kind: conference
+    year: 2026
+    scraper: researchr
+    enabled: true
+    source:
+      program_urls:
+        - https://conf.researchr.org/track/ase-2026/ase-2026-research-track
+        - https://conf.researchr.org/track/ase-2026/ase-2026-journal-first
+        - https://conf.researchr.org/track/ase-2026/ase-2026-nier
+        - https://conf.researchr.org/track/ase-2026/ase-2026-industry-showcase
+        - https://conf.researchr.org/track/ase-2026/ase-2026-tools-and-data-sets
 
   - id: ase2025
     name: ASE 2025
