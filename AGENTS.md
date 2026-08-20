@@ -359,8 +359,10 @@ version>` must exist). Netlify redeploys from `main` on push and serves the new 
 5. **Researchr venues** — `researchr` adapter parses Researchr program tables,
    detailed timelines, and accepted-paper track pages; infers paper-bearing tracks
    and event types from the linked page; fetches cached detail modals for abstracts
-   and official detail URLs; and publishes ICSE 2023/2024/2025/2026,
-   FSE 2023/2024/2025/2026, ASE 2023/2024/2025, ISSTA 2023/2024/2025,
+   and official detail URLs; can merge several track pages into one venue via
+   `source.program_urls` (used by ASE 2026, whose full program page is not public
+   yet); and publishes ICSE 2023/2024/2025/2026,
+   FSE 2023/2024/2025/2026, ASE 2023/2024/2025/2026, ISSTA 2023/2024/2025,
    OOPSLA 2025/2026, HPCA 2026, POPL 2025/2026, and PLDI 2025/2026.
 6. **DATE 2025/2026** — `dateconf` adapter parses the DATE official detailed programme,
    keeps downloadable paper rows, normalizes session metadata / author affiliations /

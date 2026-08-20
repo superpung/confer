@@ -5,7 +5,7 @@
       "0009-0001-6704-5903",
       "0000-0001-8619-1271"
     ],
-    "authorInstitutions": "Markus Böck; Jürgen Cito",
+    "authorInstitutions": "Markus Böck (TU Wien); Jürgen Cito (TU Wien)",
     "authors": [
       "Markus Böck",
       "Jürgen Cito"
@@ -50,7 +50,7 @@
       "0009-0002-3695-6891",
       "0000-0002-6756-9168"
     ],
-    "authorInstitutions": "Jonathan Chan; Madi Gudin; Annabel Levy; Stephanie Weirich",
+    "authorInstitutions": "Jonathan Chan (University of Pennsylvania); Madi Gudin (Amherst College); Annabel Levy (University of Maryland, Baltimore County); Stephanie Weirich (University of Pennsylvania)",
     "authors": [
       "Jonathan Chan",
       "Madi Gudin",
@@ -97,7 +97,7 @@
       "0009-0003-6074-1847",
       "0000-0003-4250-5392"
     ],
-    "authorInstitutions": "Yunjeong Lee; Gokul Rajiv; Ilya Sergey",
+    "authorInstitutions": "Yunjeong Lee (National University of Singapore); Gokul Rajiv (National University of Singapore, Singapore); Ilya Sergey (National University of Singapore)",
     "authors": [
       "Yunjeong Lee",
       "Gokul Rajiv",
@@ -144,7 +144,7 @@
       "0000-0001-6623-5089",
       "0000-0002-0596-877X"
     ],
-    "authorInstitutions": "Qiyuan Xu; Renxi Wang; Peixin Wang; Haonan Li; Conrad Watt",
+    "authorInstitutions": "Qiyuan Xu (Nangyang Technology University); Renxi Wang (MBZUAI); Peixin Wang (East China Normal University); Haonan Li (MBZUAI); Conrad Watt (Nanyang Technological University)",
     "authors": [
       "Qiyuan Xu",
       "Renxi Wang",
@@ -194,7 +194,7 @@
       "0009-0009-4781-8583",
       "0009-0000-2669-5654"
     ],
-    "authorInstitutions": "Santiago Arranz Olmos; Gilles Barthe; Lionel Blatter; Youcef Bouzid; Sören van der Wall; Zhiyuan Zhang",
+    "authorInstitutions": "Santiago Arranz Olmos (Max Planck Institute for Security and Privacy); Gilles Barthe (MPI-SP; IMDEA Software Institute); Lionel Blatter (Max Planck Institute for Security and Privacy); Youcef Bouzid (ENS Paris-Saclay); Sören van der Wall (TU Braunschweig); Zhiyuan Zhang (MPI-SP)",
     "authors": [
       "Santiago Arranz Olmos",
       "Gilles Barthe",
@@ -246,7 +246,7 @@
       "0000-0003-1164-0049",
       "0000-0002-4645-2526"
     ],
-    "authorInstitutions": "Zeyu Lu; Peng Zhang; Yuge Nie; Yibiao Yang; Yutian Tang; Chun Yong Chong; Yuming Zhou",
+    "authorInstitutions": "Zeyu Lu (State Key Laboratory for Novel Software Technology, Nanjing University); Peng Zhang (State Key Laboratory for Novel Software Technology, Nanjing University); Yuge Nie (State Key Laboratory for Novel Software Technology, Nanjing University); Yibiao Yang (Nanjing University); Yutian Tang (University of Glasgow, United Kingdom); Chun Yong Chong (School of Information Technology, Monash University Malaysia); Yuming Zhou (Nanjing University)",
     "authors": [
       "Zeyu Lu",
       "Peng Zhang",
@@ -294,7 +294,7 @@
       "0009-0000-7131-0936",
       "0000-0001-5185-2324"
     ],
-    "authorInstitutions": "Tobias Gürtler; Benjamin Lucien Kaminski",
+    "authorInstitutions": "Tobias Gürtler (Saarland University, Saarland Informatics Campus); Benjamin Lucien Kaminski (Saarland University; University College London)",
     "authors": [
       "Tobias Gürtler",
       "Benjamin Lucien Kaminski"
@@ -340,7 +340,7 @@
       "0000-0003-1320-0098",
       "0000-0002-2237-851X"
     ],
-    "authorInstitutions": "Egor Namakonov; Justus Fasse; Bart Jacobs; Lars Birkedal; Amin Timany",
+    "authorInstitutions": "Egor Namakonov; Justus Fasse (Université Grenoble-Alpes; KU Leuven); Bart Jacobs (DistriNet, Dept. CS, KU Leuven); Lars Birkedal (Aarhus University); Amin Timany (Aarhus University)",
     "authors": [
       "Egor Namakonov",
       "Justus Fasse",
@@ -387,7 +387,7 @@
       "0000-0002-4269-5408",
       "0000-0002-6848-3163"
     ],
-    "authorInstitutions": "Andrea Gilot; Tobias Wrigstad; Eva Darulova",
+    "authorInstitutions": "Andrea Gilot (Uppsala University); Tobias Wrigstad (Uppsala University); Eva Darulova (Uppsala University)",
     "authors": [
       "Andrea Gilot",
       "Tobias Wrigstad",
@@ -434,7 +434,7 @@
       "0000-0001-6839-8586",
       "0000-0001-6700-2498"
     ],
-    "authorInstitutions": "Vipin Patel; Srinjoy Sarkar; Swarnendu Biswas; Mainak Chaudhuri",
+    "authorInstitutions": "Vipin Patel (Indian Institute of Technology Kanpur); Srinjoy Sarkar (Indian Institute of Technology Kanpur); Swarnendu Biswas (IIT Kanpur); Mainak Chaudhuri (Indian Institute of Technology Kanpur)",
     "authors": [
       "Vipin Patel",
       "Srinjoy Sarkar",
@@ -480,7 +480,7 @@
       "0000-0001-5256-2054",
       "0000-0002-0375-1657"
     ],
-    "authorInstitutions": "Elisa Frohlich; Angelica Moreira; Fernando Magno Quintão Pereira",
+    "authorInstitutions": "Elisa Frohlich (Universidade Federal de Minas Gerais); Angelica Moreira (Microsoft Research); Fernando Magno Quintão Pereira (Federal University of Minas Gerais)",
     "authors": [
       "Elisa Frohlich",
       "Angelica Moreira",
@@ -530,7 +530,7 @@
       "0000-0002-1931-7775",
       "0000-0002-6512-8326"
     ],
-    "authorInstitutions": "Chenyan Liu; Yun Lin; Jiaxin Chang; Jiawei Liu; Binhang Qi; Bo Jiang; Zhiyong Huang; Jin Song Dong",
+    "authorInstitutions": "Chenyan Liu (Shanghai Jiao Tong University; National University of Singapore); Yun Lin (Shanghai Jiao Tong University); Jiaxin Chang (Shanghai Jiao Tong University); Jiawei Liu (Shanghai Jiao Tong University); Binhang Qi (National University of Singapore); Bo Jiang (Bytedance Network Technology); Zhiyong Huang (National University of Singapore); Jin Song Dong (National University of Singapore)",
     "authors": [
       "Chenyan Liu",
       "Yun Lin",
@@ -581,7 +581,7 @@
       "0000-0002-3194-9759",
       "0000-0001-7238-5710"
     ],
-    "authorInstitutions": "Aditi Kabra; Jonathan Laurent; Stefan Mitsch; André Platzer",
+    "authorInstitutions": "Aditi Kabra (Carnegie Mellon University); Jonathan Laurent (Karlsruhe Institute of Technology); Stefan Mitsch (DePaul University); André Platzer (KIT)",
     "authors": [
       "Aditi Kabra",
       "Jonathan Laurent",
@@ -627,7 +627,7 @@
       "0000-0001-5877-2677",
       "0009-0003-4684-3943"
     ],
-    "authorInstitutions": "Chenyu Zhou; Jingbo Wang; Chao Wang",
+    "authorInstitutions": "Chenyu Zhou (University of Southern California); Jingbo Wang (Purdue University); Chao Wang (University of Southern California)",
     "authors": [
       "Chenyu Zhou",
       "Jingbo Wang",
@@ -672,7 +672,7 @@
       "0009-0003-2463-7292",
       "0000-0001-8239-3124"
     ],
-    "authorInstitutions": "Hengchen Yuan; Jiefang Lin; August Shi",
+    "authorInstitutions": "Hengchen Yuan (The University of Texas at Austin); Jiefang Lin (The University of Texas at Austin); August Shi (The University of Texas at Austin)",
     "authors": [
       "Hengchen Yuan",
       "Jiefang Lin",
@@ -717,7 +717,7 @@
       "0000-0003-0732-5476",
       "0000-0002-0295-7944"
     ],
-    "authorInstitutions": "Alessio Ferrarini; Niki Vazou; Wouter Swierstra",
+    "authorInstitutions": "Alessio Ferrarini (IMDEA Software Institute and Universidad Politécnica de Madrid); Niki Vazou (IMDEA Software Institute); Wouter Swierstra (Utrecht University, Netherlands)",
     "authors": [
       "Alessio Ferrarini",
       "Niki Vazou",
@@ -761,7 +761,7 @@
       "0000-0003-2642-543X",
       "0000-0001-7347-3050"
     ],
-    "authorInstitutions": "Aymeric Fromherz; Jonathan Protzenko",
+    "authorInstitutions": "Aymeric Fromherz (Inria); Jonathan Protzenko (Microsoft Azure Research)",
     "authors": [
       "Aymeric Fromherz",
       "Jonathan Protzenko"
@@ -804,7 +804,7 @@
       "0009-0009-2517-9370",
       "0000-0002-4266-875X"
     ],
-    "authorInstitutions": "Zhijie Xu; Fei He",
+    "authorInstitutions": "Zhijie Xu (Tsinghua University); Fei He (Tsinghua University)",
     "authors": [
       "Zhijie Xu",
       "Fei He"
@@ -852,7 +852,7 @@
       "0009-0007-5379-2100",
       "0000-0003-0955-503X"
     ],
-    "authorInstitutions": "Zongrui Peng; Jingzhou Fu; Zhiyong Wu; Jie Liang; Xiangdong Huang; Dalong Shi; Yu Jiang",
+    "authorInstitutions": "Zongrui Peng (Tsinghua University); Jingzhou Fu (School of Software, Tsinghua University); Zhiyong Wu (Tsinghua University, China); Jie Liang (Beihang University); Xiangdong Huang (Tsinghua University); Dalong Shi (AVIC International Digital Network Technology Co., Ltd.); Yu Jiang (Tsinghua University)",
     "authors": [
       "Zongrui Peng",
       "Jingzhou Fu",
@@ -904,7 +904,7 @@
       "0000-0002-0837-5443",
       "0000-0001-6676-9400"
     ],
-    "authorInstitutions": "Mike He; Ankush Desai; Aishwarya Jagarapu; Doug Terry; Sharad Malik; Aarti Gupta",
+    "authorInstitutions": "Mike He (Princeton University); Ankush Desai (Snowflake); Aishwarya Jagarapu (Amazon Web Services); Doug Terry (LinkedIn); Sharad Malik (Princeton University); Aarti Gupta (Princeton University)",
     "authors": [
       "Mike He",
       "Ankush Desai",
@@ -955,7 +955,7 @@
       "0009-0004-4219-3725",
       "0000-0001-6877-780X"
     ],
-    "authorInstitutions": "Zhen Li; Shenghan Liu; Qiuping Yi; Pengbo Du; Hongliang Liang",
+    "authorInstitutions": "Zhen Li (Beijing University of Posts and Telecommunications); Shenghan Liu (Beijing University of Posts and Telecommunications); Qiuping Yi (Beijing University of Posts and Telecommunications); Pengbo Du (Beijing University of Posts and Telecommunications); Hongliang Liang (Beijing University of Posts ad Telecommunications)",
     "authors": [
       "Zhen Li",
       "Shenghan Liu",
@@ -1001,7 +1001,7 @@
       "0000-0002-3101-1189",
       "0000-0002-2702-5983"
     ],
-    "authorInstitutions": "J. Ryan Stinnett; Stephen Kell",
+    "authorInstitutions": "J. Ryan Stinnett (King's College London); Stephen Kell (King's College London)",
     "authors": [
       "J. Ryan Stinnett",
       "Stephen Kell"
@@ -1049,7 +1049,7 @@
       "0009-0007-5379-2100",
       "0000-0003-0955-503X"
     ],
-    "authorInstitutions": "Zhen Yan; Yuanliang Chen; Fuchen Ma; Zehong Yu; Dalong Shi; Yu Jiang",
+    "authorInstitutions": "Zhen Yan (Tsinghua University); Yuanliang Chen (Tsinghua University); Fuchen Ma (Tsinghua University); Zehong Yu (KLISS, BNRist, School of Software, Tsinghua University); Dalong Shi (AVIC International Digital Network Technology Co., Ltd.); Yu Jiang (Tsinghua University)",
     "authors": [
       "Zhen Yan",
       "Yuanliang Chen",
@@ -1092,7 +1092,7 @@
   },
   {
     "abstract": "Floating-point round-off errors are ubiquitous in numerically intensive programs arising in fields such as scientific computing and optimization. As floating-point errors potentially lead to unexpected and catastrophic program failures, one must derive guaranteed round-off thresholds to ensure the correctness of these programs. However, deterministic round-off thresholds tend to be too conservative to be usable in practice, since they often involve large round-off errors that occur with small probability. Probabilistic thresholds relax deterministic ones by specifying that the probability of the round-off error exceeding a threshold is below a given confidence. In this work, we propose a novel approach to probabilistic round-off analysis, by applying concentration inequalities over the Taylor expansion from FPTaylor (TOPLAS 2018). A major obstacle in applying concentration inequalities is that the Taylor expansion involves absolute values that make the calculation of the expected values of the first order partial differential terms difficult. Our first step to overcome this obstacle is a sound over-approximation that removes the absolute values in polynomial expressions. Then, we show how to handle fractional expressions by a transformation into polynomial case. Finally, we show how to improve our approach with range partitioning. Our approach is scalable since the key computational part is the calculation of expected values of polynomial expressions with independent variables, for which the linear and independence properties of expectation boost the computation. Experimental results show that our approach is orders of magnitude more time efficient, while producing thresholds with comparable precision against the state of the art.",
-    "authorInstitutions": "Yichen Tao; Hongfei Fu; Jiawei Chen; Jean-Baptiste Jeannin",
+    "authorInstitutions": "Yichen Tao (University of Michigan); Hongfei Fu (Shanghai Jiao Tong University); Jiawei Chen (University of Michigan at Ann Arbor); Jean-Baptiste Jeannin (University of Michigan at Ann Arbor)",
     "authors": [
       "Yichen Tao",
       "Hongfei Fu",
@@ -1130,7 +1130,7 @@
       "0000-0002-0686-0883",
       "0000-0001-5015-6095"
     ],
-    "authorInstitutions": "Yunkun Wang; Yue Zhang; Guochang Li; Chen Zhi; Binhua Li; Fei Huang; Yongbin Li; Shuiguang Deng",
+    "authorInstitutions": "Yunkun Wang (Zhejiang University); Yue Zhang (Tongyi Lab, Alibaba, China); Guochang Li (zhejiang university); Chen Zhi (Zhejiang University); Binhua Li (Tongyi Lab, Alibaba, China); Fei Huang (Tongyi Lab, Alibaba, China); Yongbin Li (Tongyi Lab, Alibaba, China); Shuiguang Deng (Zhejiang University; Alibaba-Zhejiang University Joint Institute of Frontier Technologies)",
     "authors": [
       "Yunkun Wang",
       "Yue Zhang",
@@ -1180,7 +1180,7 @@
       "0000-0002-2733-7098",
       "0000-0001-8967-6987"
     ],
-    "authorInstitutions": "Zafer Esen; Philipp Ruemmer; Tjark Weber",
+    "authorInstitutions": "Zafer Esen (Uppsala University); Philipp Ruemmer (University of Regensburg and Uppsala University); Tjark Weber (Uppsala University)",
     "authors": [
       "Zafer Esen",
       "Philipp Ruemmer",
@@ -1230,7 +1230,7 @@
       "0000-0001-6082-4501",
       "0000-0003-0637-8744"
     ],
-    "authorInstitutions": "Ke Ma; Yunlai Luo; Zhenbang Chen; Weijiang Hong; Yufeng Zhang; Ji Wang",
+    "authorInstitutions": "Ke Ma (College of Computer, National University of Defense Technology, Changsha, China); Yunlai Luo (National University of Defense Technology); Zhenbang Chen (College of Computer, National University of Defense Technology); Weijiang Hong (National University of Defense Technology, Changsha, China); Yufeng Zhang (Hunan University); Ji Wang (National University of Defense Technology)",
     "authors": [
       "Ke Ma",
       "Yunlai Luo",
@@ -1279,7 +1279,7 @@
       "0009-0001-6566-8592",
       "0000-0002-0740-9701"
     ],
-    "authorInstitutions": "Meetesh Kalpesh Mehta; Anirudh Garg; Aneeket Yadav; Manas Thakur",
+    "authorInstitutions": "Meetesh Kalpesh Mehta (IIT Bombay); Anirudh Garg (IIT Bombay); Aneeket Yadav (IIT Delhi); Manas Thakur (IIT Bombay)",
     "authors": [
       "Meetesh Kalpesh Mehta",
       "Anirudh Garg",
@@ -1327,7 +1327,7 @@
       "0000-0002-2220-7294",
       "0009-0000-2669-5654"
     ],
-    "authorInstitutions": "Santiago Arranz Olmos; Gilles Barthe; Lionel Blatter; Xingyu Xie; Zhiyuan Zhang",
+    "authorInstitutions": "Santiago Arranz Olmos (Max Planck Institute for Security and Privacy); Gilles Barthe (MPI-SP; IMDEA Software Institute); Lionel Blatter (Max Planck Institute for Security and Privacy); Xingyu Xie (MPI-SP); Zhiyuan Zhang (MPI-SP)",
     "authors": [
       "Santiago Arranz Olmos",
       "Gilles Barthe",
@@ -1379,7 +1379,7 @@
       "0009-0004-5318-0970",
       "0009-0009-6288-4212"
     ],
-    "authorInstitutions": "Wenbu Feng; Xiaohong Li; Ruitao Feng; Yao Zhang; Yuekang Li; Zhiping Zhou; Yunqian Wang; Yuqing Li",
+    "authorInstitutions": "Wenbu Feng (Tianjin University); Xiaohong Li (Tianjin University); Ruitao Feng (Southern Cross University); Yao Zhang (Tianjin University); Yuekang Li (UNSW); Zhiping Zhou (Tianjin University); Yunqian Wang (Tianjin University); Yuqing Li (Tianjin University)",
     "authors": [
       "Wenbu Feng",
       "Xiaohong Li",
@@ -1430,7 +1430,7 @@
       "0000-0002-8672-0265",
       "0000-0001-6563-7537"
     ],
-    "authorInstitutions": "Timon Böhler; Tobias Reinhard; David Richter; Mira Mezini",
+    "authorInstitutions": "Timon Böhler (Technical University of Darmstadt); Tobias Reinhard (TU Darmstadt); David Richter (Technical University of Darmstadt); Mira Mezini (TU Darmstadt; hessian.AI; National Research Center for Applied Cybersecurity ATHENE)",
     "authors": [
       "Timon Böhler",
       "Tobias Reinhard",
@@ -1479,7 +1479,7 @@
       "0000-0003-0380-3506",
       "0000-0001-8758-8668"
     ],
-    "authorInstitutions": "Haotian Han; Zihang Zhong; Qingan Li; Jingling Xue; YUAN Mengting",
+    "authorInstitutions": "Haotian Han (School of Computer Science, Wuhan University); Zihang Zhong (School of Computer Science, Wuhan University); Qingan Li (Wuhan University); Jingling Xue (UNSW); YUAN Mengting (School of Computer Science, Wuhan University, Wuhan, China)",
     "authors": [
       "Haotian Han",
       "Zihang Zhong",
@@ -1526,7 +1526,7 @@
       "0009-0004-3869-4404",
       "0000-0001-8326-0788"
     ],
-    "authorInstitutions": "Ethan Chu; Jan Hoffmann; Yiyang Guo",
+    "authorInstitutions": "Ethan Chu (Carnegie Mellon University); Jan Hoffmann (Carnegie Mellon University); Yiyang Guo (Carnegie Mellon University)",
     "authors": [
       "Ethan Chu",
       "Jan Hoffmann",
@@ -1572,7 +1572,7 @@
       "0009-0006-2066-7939",
       "0000-0002-0866-0308"
     ],
-    "authorInstitutions": "Gengyang Xu; Dongwei Xiao; Yiteng Peng; Shuai Wang",
+    "authorInstitutions": "Gengyang Xu (Department of Computer Science and Engineering, The Hong Kong University of Science and Technology); Dongwei Xiao (Hong Kong University of Science and Technology); Yiteng Peng (Hong Kong University of Science and Technology); Shuai Wang (Hong Kong University of Science and Technology)",
     "authors": [
       "Gengyang Xu",
       "Dongwei Xiao",
@@ -1618,7 +1618,7 @@
       "0000-0002-3176-8552",
       "0000-0001-8495-671X"
     ],
-    "authorInstitutions": "Jan Grünke; Thomas Haas; Roland Meyer",
+    "authorInstitutions": "Jan Grünke (TU Braunschweig); Thomas Haas (TU Braunschweig); Roland Meyer (TU Braunschweig)",
     "authors": [
       "Jan Grünke",
       "Thomas Haas",
@@ -1665,7 +1665,7 @@
       "0000-0001-6827-345X",
       "0000-0001-6384-062X"
     ],
-    "authorInstitutions": "Charitha Saumya; Muhammad Hassan; Rohan Gangaraju; Milind Kulkarni; Kirshanthan Sundararajah",
+    "authorInstitutions": "Charitha Saumya (Intel); Muhammad Hassan (Virginia Tech); Rohan Gangaraju (Purdue University); Milind Kulkarni (Purdue University); Kirshanthan Sundararajah (Virginia Tech)",
     "authors": [
       "Charitha Saumya",
       "Muhammad Hassan",
@@ -1715,7 +1715,7 @@
       "0000-0002-8268-9037",
       "0000-0002-9324-8894"
     ],
-    "authorInstitutions": "David Spielmann; George Zakhour; Dominik Arnold; Matteo Biagiola; Roland Meier; Guido Salvaneschi",
+    "authorInstitutions": "David Spielmann (University of St. Gallen); George Zakhour (University of St. Gallen); Dominik Arnold (University of Zurich); Matteo Biagiola (University of St. Gallen and Università della Svizzera italiana); Roland Meier (armasuisse); Guido Salvaneschi (University of St. Gallen)",
     "authors": [
       "David Spielmann",
       "George Zakhour",
@@ -1767,7 +1767,7 @@
       "0000-0002-1778-3721",
       "0000-0002-4648-3795"
     ],
-    "authorInstitutions": "Yuxuan He; Ruilin Jiang; He Zhang; Qingkai Shi; Huaxun Huang; Rongxin Wu",
+    "authorInstitutions": "Yuxuan He (School of Informatics, Xiamen University); Ruilin Jiang (School of Informatics, Xiamen University); He Zhang (School of Informatics, Xiamen University); Qingkai Shi (Nanjing University); Huaxun Huang (School of Informatics, Xiamen University); Rongxin Wu (Xiamen University)",
     "authors": [
       "Yuxuan He",
       "Ruilin Jiang",
@@ -1816,7 +1816,7 @@
       "0000-0001-8239-3124",
       "0000-0002-5894-7649"
     ],
-    "authorInstitutions": "Zijian Yi; Cheng Ding; August Shi; Milos Gligoric",
+    "authorInstitutions": "Zijian Yi (The University of Texas at Austin); Cheng Ding (The University of Texas at Austin); August Shi (The University of Texas at Austin); Milos Gligoric (The University of Texas at Austin)",
     "authors": [
       "Zijian Yi",
       "Cheng Ding",
@@ -1862,7 +1862,7 @@
       "0009-0006-7496-0452",
       "0000-0001-6723-8062"
     ],
-    "authorInstitutions": "Bodhisatwa Chatterjee; Neeraj Jadhav; Santosh Pande",
+    "authorInstitutions": "Bodhisatwa Chatterjee (Georgia Institute of Technology); Neeraj Jadhav (Georgia Institute of Technology); Santosh Pande (Georgia Institute of Technology)",
     "authors": [
       "Bodhisatwa Chatterjee",
       "Neeraj Jadhav",
@@ -1909,7 +1909,7 @@
       "0009-0000-5048-7193",
       "0000-0002-9592-7022"
     ],
-    "authorInstitutions": "Ruixiang Qian; Chunrong Fang; Zengxu Chen; Youxin Fu; Zhenyu Chen",
+    "authorInstitutions": "Ruixiang Qian (Nanjing University); Chunrong Fang (Nanjing University); Zengxu Chen (Nanjing University); Youxin Fu (Nanjing University); Zhenyu Chen (Nanjing University)",
     "authors": [
       "Ruixiang Qian",
       "Chunrong Fang",
@@ -1955,7 +1955,7 @@
       "0000-0001-5143-5475",
       "0000-0003-4361-6772"
     ],
-    "authorInstitutions": "Simon Fowler; Raymond Hu",
+    "authorInstitutions": "Simon Fowler (University of Glasgow); Raymond Hu (Queen Mary University of London)",
     "authors": [
       "Simon Fowler",
       "Raymond Hu"
@@ -2000,7 +2000,7 @@
       "0000-0002-3832-3134",
       "0000-0002-2068-3238"
     ],
-    "authorInstitutions": "Siyuan He; Songlin Jia; Yuyan Bao; Tiark Rompf",
+    "authorInstitutions": "Siyuan He (Purdue University); Songlin Jia (Purdue University); Yuyan Bao (Augusta University); Tiark Rompf (Purdue University)",
     "authors": [
       "Siyuan He",
       "Songlin Jia",
@@ -2055,7 +2055,7 @@
       "0000-0002-3801-6847",
       "0000-0003-4703-7348"
     ],
-    "authorInstitutions": "Zhongyi Wang; Tengjie Lin; Mingshuai Chen; Haokun Li; Mingqi Yang; Xiao Yi; Shengchao Qin; Yixing Luo; Xiaofeng Li; Bin Gu; Liqiang Lu; Jianwei Yin",
+    "authorInstitutions": "Zhongyi Wang (Zhejiang University); Tengjie Lin (Zhejiang University); Mingshuai Chen (Zhejiang University); Haokun Li (Peking University); Mingqi Yang (Zhejiang University); Xiao Yi (The Chinese University of Hong Kong); Shengchao Qin (Xidian University); Yixing Luo (Beijing Institute of Control Engineering); Xiaofeng Li (Beijing Institute of Control Engineering); Bin Gu (Beijing Institute of Control Engineering); Liqiang Lu (Zhejiang University); Jianwei Yin (Zhejiang University)",
     "authors": [
       "Zhongyi Wang",
       "Tengjie Lin",
@@ -2110,7 +2110,7 @@
       "0000-0001-9631-1169",
       "0000-0001-7839-1636"
     ],
-    "authorInstitutions": "Cynthia Richey; Joseph W. Cutler; Harrison Goldstein; Benjamin C. Pierce",
+    "authorInstitutions": "Cynthia Richey (University of Pennsylvania); Joseph W. Cutler (University of Pennsylvania); Harrison Goldstein (SUNY Buffalo); Benjamin C. Pierce (University of Pennsylvania)",
     "authors": [
       "Cynthia Richey",
       "Joseph W. Cutler",
@@ -2157,7 +2157,7 @@
       "0000-0002-5961-1493",
       "0009-0002-1650-6340"
     ],
-    "authorInstitutions": "Ka Wing Li; Maite Kramarz; Ningning Xie; Jeremy Yallop",
+    "authorInstitutions": "Ka Wing Li (University of Cambridge); Maite Kramarz (University of Toronto); Ningning Xie (University of Toronto); Jeremy Yallop (University of Cambridge)",
     "authors": [
       "Ka Wing Li",
       "Maite Kramarz",
@@ -2207,7 +2207,7 @@
       "0000-0001-6212-0356",
       "0000-0002-0668-8526"
     ],
-    "authorInstitutions": "Shuyang Liu; Yang Chen; Rahul Krishna; Saurabh Sinha; Jatin Ganhotra; Reyhaneh Jabbarvand",
+    "authorInstitutions": "Shuyang Liu; Yang Chen (University of Illinois at Urbana-Champaign); Rahul Krishna (IBM Research); Saurabh Sinha (IBM Research); Jatin Ganhotra (IBM Research); Reyhaneh Jabbarvand (University of Illinois at Urbana-Champaign)",
     "authors": [
       "Shuyang Liu",
       "Yang Chen",
@@ -2256,7 +2256,7 @@
       "0000-0002-1954-0774",
       "0000-0002-4189-3189"
     ],
-    "authorInstitutions": "Nicholas V. Lewchenko; Kunha Kim; Bor-Yuh Evan Chang; Gowtham Kaki",
+    "authorInstitutions": "Nicholas V. Lewchenko (University of Colorado Boulder); Kunha Kim (University of Colorado Boulder); Bor-Yuh Evan Chang (University of Colorado Boulder & Amazon); Gowtham Kaki (University of Colorado at Boulder)",
     "authors": [
       "Nicholas V. Lewchenko",
       "Kunha Kim",
@@ -2306,7 +2306,7 @@
       "0009-0005-8337-9136",
       "0009-0007-4680-4820"
     ],
-    "authorInstitutions": "Yanqi Li; Hongliang Liang; Rui Yao; Yang Zhang; Dong Liu; Lei Wang; Qiuping Yi",
+    "authorInstitutions": "Yanqi Li (Beijing University of Posts and Telecommunications); Hongliang Liang (Beijing University of Posts ad Telecommunications); Rui Yao (Beijing Institute of Computer Technology and Application); Yang Zhang (Beijing Institute of Computer Technology and Application); Dong Liu (Beijing University of Posts and Telecommunications); Lei Wang (Beijing University of Posts and Telecommunications); Qiuping Yi (Beijing University of Posts and Telecommunications)",
     "authors": [
       "Yanqi Li",
       "Hongliang Liang",
@@ -2356,7 +2356,7 @@
       "0009-0004-2447-3862",
       "0009-0008-9454-8515"
     ],
-    "authorInstitutions": "Sirui Liu; Wei Dong; Yijie Zheng; Haonan Guo",
+    "authorInstitutions": "Sirui Liu (National University of Defense Technology); Wei Dong (National University of Defense Technology); Yijie Zheng (National University of Defense Technology); Haonan Guo (National University of Defense Technology)",
     "authors": [
       "Sirui Liu",
       "Wei Dong",
@@ -2403,7 +2403,7 @@
       "0000-0001-5058-2174",
       "0000-0003-1548-0177"
     ],
-    "authorInstitutions": "Alexandra Mirrlees-Black; Haoyu Wu; Gregor Richards; Fabian Muehlboeck",
+    "authorInstitutions": "Alexandra Mirrlees-Black (Australian National University); Haoyu Wu (Australian National University); Gregor Richards (University of Waterloo); Fabian Muehlboeck (Australian National University)",
     "authors": [
       "Alexandra Mirrlees-Black",
       "Haoyu Wu",
@@ -2453,7 +2453,7 @@
       "0000-0003-3126-7771",
       "0000-0002-3723-9555"
     ],
-    "authorInstitutions": "William Brandon; Benjamin Driscoll; Frank Dai; Jonathan Ragan-Kelley; Mae Milano; Alex Aiken",
+    "authorInstitutions": "William Brandon (MIT); Benjamin Driscoll (Stanford University); Frank Dai; Jonathan Ragan-Kelley (MIT CSAIL); Mae Milano (Princeton University); Alex Aiken (Stanford University)",
     "authors": [
       "William Brandon",
       "Benjamin Driscoll",
@@ -2506,7 +2506,7 @@
       "0000-0002-4323-497X",
       "0000-0001-5777-7759"
     ],
-    "authorInstitutions": "Kunpeng Zhang; Dongwei Xiao; Daoyuan Wu; Shuai Wang; Jiali Zhao; Yuanyi Lin; Tongtong Xu; Shaohua Wang",
+    "authorInstitutions": "Kunpeng Zhang (The Hong Kong University of Science and Technology); Dongwei Xiao (Hong Kong University of Science and Technology); Daoyuan Wu (Lingnan University); Shuai Wang (Hong Kong University of Science and Technology); Jiali Zhao (Huawei); Yuanyi Lin (Huawei Technologies); Tongtong Xu (Huawei); Shaohua Wang (Central University of Finance and Economics)",
     "authors": [
       "Kunpeng Zhang",
       "Dongwei Xiao",
@@ -2557,7 +2557,7 @@
       "0000-0002-5462-5116",
       "0000-0002-8338-4008"
     ],
-    "authorInstitutions": "Nazanin Yousefian; Kasra Jamshidi; Keval Vora; Anders Miltner",
+    "authorInstitutions": "Nazanin Yousefian (Simon Fraser University); Kasra Jamshidi (Simon Fraser University); Keval Vora (Simon Fraser University); Anders Miltner (Simon Fraser University)",
     "authors": [
       "Nazanin Yousefian",
       "Kasra Jamshidi",
@@ -2602,7 +2602,7 @@
       "0000-0001-8719-1070",
       "0000-0001-6417-1034"
     ],
-    "authorInstitutions": "Anshunkang Zhou; Charles Zhang",
+    "authorInstitutions": "Anshunkang Zhou (Hong Kong University of Science and Technology); Charles Zhang (Hong Kong University of Science and Technology)",
     "authors": [
       "Anshunkang Zhou",
       "Charles Zhang"
@@ -2647,7 +2647,7 @@
       "0000-0002-4162-0404",
       "0000-0002-4476-0541"
     ],
-    "authorInstitutions": "Chenghang Shi; Haofeng Li; Jie Lu; Lian Li",
+    "authorInstitutions": "Chenghang Shi (SKLP, Institute of Computing Technology, CAS); Haofeng Li (SKLP, Institute of Computing Technology, CAS); Jie Lu (SKLP, Institute of Computing Technology, CAS, China); Lian Li (Institute of Computing Technology at Chinese Academy of Sciences; University of Chinese Academy of Sciences)",
     "authors": [
       "Chenghang Shi",
       "Haofeng Li",
@@ -2693,7 +2693,7 @@
       "0009-0000-7005-1928",
       "0000-0002-1900-7654"
     ],
-    "authorInstitutions": "Minsu Kim; Sunbeom So; Hakjoo Oh",
+    "authorInstitutions": "Minsu Kim (Korea University); Sunbeom So (Korea University); Hakjoo Oh (Korea University)",
     "authors": [
       "Minsu Kim",
       "Sunbeom So",
@@ -2737,7 +2737,7 @@
       "0000-0002-9943-6423",
       "0000-0002-2267-903X"
     ],
-    "authorInstitutions": "Haoran Xu; Fredrik Kjolstad",
+    "authorInstitutions": "Haoran Xu (Stanford University); Fredrik Kjolstad (Stanford University)",
     "authors": [
       "Haoran Xu",
       "Fredrik Kjolstad"
@@ -2781,7 +2781,7 @@
       "0000-0003-1521-7379",
       "0009-0001-5496-7335"
     ],
-    "authorInstitutions": "Sebastian Erdweg; Runqing Xu; Mo Bitar",
+    "authorInstitutions": "Sebastian Erdweg (KIT); Runqing Xu (KIT); Mo Bitar (KIT)",
     "authors": [
       "Sebastian Erdweg",
       "Runqing Xu",
@@ -2827,7 +2827,7 @@
       "0000-0002-5894-7649",
       "0000-0001-5631-4816"
     ],
-    "authorInstitutions": "Kevin Guan; Pengyue Jiang; Milos Gligoric; Owolabi Legunsen",
+    "authorInstitutions": "Kevin Guan (Cornell University); Pengyue Jiang (Cornell University); Milos Gligoric (The University of Texas at Austin); Owolabi Legunsen (Cornell University)",
     "authors": [
       "Kevin Guan",
       "Pengyue Jiang",
@@ -2873,7 +2873,7 @@
       "0009-0007-6181-6205",
       "0000-0002-1515-7145"
     ],
-    "authorInstitutions": "Haoran Lin; Zhenyu Yan; Xin Zhang",
+    "authorInstitutions": "Haoran Lin (Peking University); Zhenyu Yan (Peking University); Xin Zhang (Peking University)",
     "authors": [
       "Haoran Lin",
       "Zhenyu Yan",
@@ -2918,7 +2918,7 @@
       "0000-0002-7343-8279",
       "0009-0009-7424-7819"
     ],
-    "authorInstitutions": "Shan Jiang; Chenguang Zhu; Sarfraz Khurshid",
+    "authorInstitutions": "Shan Jiang (UT Austin); Chenguang Zhu (Meta AI); Sarfraz Khurshid (University of Texas at Austin)",
     "authors": [
       "Shan Jiang",
       "Chenguang Zhu",
@@ -2962,7 +2962,7 @@
       "0009-0007-9357-0158",
       "0000-0003-3160-6972"
     ],
-    "authorInstitutions": "Yong Qi Foo; Michael D. Adams",
+    "authorInstitutions": "Yong Qi Foo (National University of Singapore); Michael D. Adams (National University of Singapore)",
     "authors": [
       "Yong Qi Foo",
       "Michael D. Adams"
@@ -3007,7 +3007,7 @@
       "0000-0001-6971-6996",
       "0000-0002-3154-7530"
     ],
-    "authorInstitutions": "Mohamed Tarek Ibn Ziad; Christos Kozyrakis",
+    "authorInstitutions": "Mohamed Tarek Ibn Ziad (NVIDIA); Christos Kozyrakis (Stanford University, USA)",
     "authors": [
       "Mohamed Tarek Ibn Ziad",
       "Christos Kozyrakis"
@@ -3059,7 +3059,7 @@
       "0009-0009-4926-4932",
       "0000-0001-7300-9215"
     ],
-    "authorInstitutions": "Zong Cao; Yuqiang Sun; Zhengzi Xu; Kaixuan Li; Yeqi Fu; Yiran Zhang; Ziqiao Kong; Yang Liu",
+    "authorInstitutions": "Zong Cao (Imperial Global Singapore); Yuqiang Sun (Nanyang Technological University); Zhengzi Xu (Imperial Global Singapore); Kaixuan Li (Nanyang Technological University); Yeqi Fu (National University of Singapore); Yiran Zhang (Nanyang Technological University); Ziqiao Kong (Nanyang Technological University); Yang Liu (Nanyang Technological University)",
     "authors": [
       "Zong Cao",
       "Yuqiang Sun",
@@ -3113,7 +3113,7 @@
       "0000-0002-3925-8557",
       "0000-0002-3185-9278"
     ],
-    "authorInstitutions": "Shihao Xia; Mengting He; Shuai Shao; Tingting Yu; Yiying Zhang; Nobuko Yoshida; Linhai Song",
+    "authorInstitutions": "Shihao Xia (The Pennsylvania State University); Mengting He (The Pennsylvania State University); Shuai Shao (University of Connecticut); Tingting Yu (University of Connecticut); Yiying Zhang (University of California San Diego); Nobuko Yoshida (University of Oxford); Linhai Song (Pennsylvania State University)",
     "authors": [
       "Shihao Xia",
       "Mengting He",
@@ -3170,7 +3170,7 @@
       "0000-0001-8992-651X",
       "0000-0002-8417-2234"
     ],
-    "authorInstitutions": "Jie Ma; Ningyu He; Jinwen Xi; Mingzhe Xing; Liangxin Liu; luojiushenzi; Xiaopeng Fu; Chiachih Wu; Haoyu Wang; Ying Gao; Yinliang Yue",
+    "authorInstitutions": "Jie Ma (Beihang University; Zhongguancun Laboratory); Ningyu He (Hong Kong Polytechnic University); Jinwen Xi (Zhongguancun Laboratory); Mingzhe Xing (Zhongguancun Laboratory); Liangxin Liu (Beihang University); luojiushenzi (Zhongguancun Laboratory); Xiaopeng Fu (Zhongguancun Laboratory); Chiachih Wu (Amber Group); Haoyu Wang (Huazhong University of Science and Technology); Ying Gao (School of Cyber Science and Technology, Beihang University; Zhongguancun Laboratory); Yinliang Yue (Zhongguancun Laboratory)",
     "authors": [
       "Jie Ma",
       "Ningyu He",
@@ -3222,7 +3222,7 @@
       "0000-0003-1590-2392",
       "0000-0003-4052-3458"
     ],
-    "authorInstitutions": "Mickaël Laurent; Jan Vitek",
+    "authorInstitutions": "Mickaël Laurent (Charles University); Jan Vitek (Northeastern University)",
     "authors": [
       "Mickaël Laurent",
       "Jan Vitek"
@@ -3266,7 +3266,7 @@
       "0000-0001-7400-132X",
       "0000-0003-0380-3506"
     ],
-    "authorInstitutions": "Wei Li; Wenyao Chen; Jingling Xue",
+    "authorInstitutions": "Wei Li (UNSW Sydney); Wenyao Chen (UNSW Sydney); Jingling Xue (UNSW)",
     "authors": [
       "Wei Li",
       "Wenyao Chen",
@@ -3312,7 +3312,7 @@
       "0000-0002-2418-7987",
       "0000-0002-9034-205X"
     ],
-    "authorInstitutions": "Zhichao Guan; Tailai Yu; Di Wang; Zhenjiang Hu",
+    "authorInstitutions": "Zhichao Guan (Peking University); Tailai Yu (Peking University); Di Wang (Peking University); Zhenjiang Hu (Peking University)",
     "authors": [
       "Zhichao Guan",
       "Tailai Yu",
@@ -3360,7 +3360,7 @@
       "0000-0002-4763-7354",
       "0000-0002-7066-2144"
     ],
-    "authorInstitutions": "Jianhao Xu; Kunbo Zhang; Mathias Payer; Kangjie Lu; Bing Mao",
+    "authorInstitutions": "Jianhao Xu (Southeast University); Kunbo Zhang (Nanjing University); Mathias Payer (EPFL); Kangjie Lu (University of Minnesota); Bing Mao (Nanjing University)",
     "authors": [
       "Jianhao Xu",
       "Kunbo Zhang",
@@ -3408,7 +3408,7 @@
       "0000-0003-4482-205X",
       "0000-0002-2350-301X"
     ],
-    "authorInstitutions": "Laura Bocchi; Raymond Hu; Adriana Laura Voinea; Simon Thompson",
+    "authorInstitutions": "Laura Bocchi (University of Kent); Raymond Hu (Queen Mary University of London); Adriana Laura Voinea (University of Glasgow, UK); Simon Thompson (University of Kent (UK))",
     "authors": [
       "Laura Bocchi",
       "Raymond Hu",
@@ -3458,7 +3458,7 @@
       "0000-0002-0866-0308",
       "0000-0001-6655-0468"
     ],
-    "authorInstitutions": "Yuchong Xie; Kaikai Zhang; Yu Liu; Rundong Yang; Ping Chen; Shuai Wang; Dongdong She",
+    "authorInstitutions": "Yuchong Xie (Hong Kong University of Science and Technology); Kaikai Zhang (Hong Kong University of Science and Technology); Yu Liu (Fudan University); Rundong Yang (Fudan University); Ping Chen (Fudan University); Shuai Wang (Hong Kong University of Science and Technology); Dongdong She (HKUST (The Hong Kong University of Science and Technology))",
     "authors": [
       "Yuchong Xie",
       "Kaikai Zhang",
@@ -3507,7 +3507,7 @@
       "0009-0006-8916-3093",
       "0000-0003-1320-0098"
     ],
-    "authorInstitutions": "Jonas Kastberg Hinrichsen; Iwan Quémerais; Lars Birkedal",
+    "authorInstitutions": "Jonas Kastberg Hinrichsen (Aalborg University); Iwan Quémerais (ENS-Lyon); Lars Birkedal (Aarhus University)",
     "authors": [
       "Jonas Kastberg Hinrichsen",
       "Iwan Quémerais",
