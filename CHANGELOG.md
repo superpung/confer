@@ -12,6 +12,8 @@ Entries are user-facing; implementation details belong in commit messages.
 - **New venue** — **ASE 2026** (41st IEEE/ACM International Conference on
   Automated Software Engineering, Oct 12–16 2026), covering the accepted
   research, journal-first, NIER, industry-showcase, and tools & datasets papers.
+- **New venue** — **ASPLOS 2025** (Rotterdam, co-located with EuroSys 2025),
+  read from the official program page with sessions and author affiliations.
 
 ### Fixed
 - Papers taken from a Researchr **accepted-paper track page** now show author

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T13:42:20+00:00",
+  "generatedAt": "2026-08-20T13:48:17+00:00",
   "venues": [
     {
       "category": "Artificial Intelligence & Machine Learning",
@@ -45,6 +45,15 @@
       "name": "ASPLOS 2026",
       "series": "ASPLOS",
       "year": 2026
+    },
+    {
+      "category": "Computer Architecture",
+      "count": 184,
+      "id": "asplos2025",
+      "kind": "conference",
+      "name": "ASPLOS 2025",
+      "series": "ASPLOS",
+      "year": 2025
     },
     {
       "category": "Computer Architecture",

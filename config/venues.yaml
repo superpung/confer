@@ -74,6 +74,17 @@ venues:
     source:
       program_url: https://www.asplos-conference.org/asplos2026/program/index.html
 
+  - id: asplos2025
+    name: ASPLOS 2025
+    series: ASPLOS
+    category: Computer Architecture
+    kind: conference
+    year: 2025
+    scraper: sigarch
+    enabled: true
+    source:
+      program_url: https://www.asplos-conference.org/asplos2025/program.html
+
   - id: hpca2026
     name: HPCA 2026
     series: HPCA
