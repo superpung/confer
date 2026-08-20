@@ -16,7 +16,8 @@ Entries are user-facing; implementation details belong in commit messages.
 ### Fixed
 - Papers taken from a Researchr **accepted-paper track page** now show author
   affiliations — those listings print bare names, so the affiliations are read
-  from each paper's detail page instead.
+  from each paper's detail page instead. Affects **ASE 2026** and **OOPSLA 2026**,
+  both of which went from no affiliations to complete ones.
 
 ---
 
