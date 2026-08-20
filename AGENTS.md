@@ -369,7 +369,7 @@ version>` must exist). Netlify redeploys from `main` on push and serves the new 
    PDF links, and publishes DATE 2025 and DATE 2026 alongside DAC 2025/2026.
 7. **Computer architecture venues** — `sigarch` adapter parses SIGARCH-style static
    program pages with session metadata and author affiliations, including malformed
-   nested institution strings seen in live pages; publishes ASPLOS 2026, ISCA 2026,
+   nested institution strings seen in live pages; publishes ASPLOS 2025/2026, ISCA 2026,
    and MICRO 2025. HPCA 2026 is published through the Researchr adapter.
 8. **Publication metadata enrichment** — `enrichers.py` merges Crossref/OpenAlex data
    after the primary scrape by default, filling DOI, abstracts, publication date,
