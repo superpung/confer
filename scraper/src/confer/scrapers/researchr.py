@@ -857,7 +857,9 @@ class ResearchrScraper(Scraper):
             title=detail.title or event.title,
             abstract=detail.abstract,
             authors=list(authors),
-            author_institutions=event.author_institutions or detail.author_institutions,
+            author_institutions=self.pick_author_institutions(
+                event.author_institutions, detail.author_institutions
+            ),
             tracks=tracks,
             event_type="; ".join(event_types),
             session_titles=session_titles,
@@ -866,6 +868,19 @@ class ResearchrScraper(Scraper):
             locations=locations,
             urls=urls,
         )
+
+    @staticmethod
+    def pick_author_institutions(program_value: str, detail_value: str) -> str:
+        """Prefer the event modal's affiliations when the program row carries none.
+
+        Full program pages annotate every author with a ``.prog-aff`` span, but
+        accepted-paper track pages often list bare names — which leaves the
+        program string looking populated while holding no institution at all.
+        The modal always carries them, so fall back to it in that case.
+        """
+        if program_value and "(" not in program_value and "(" in detail_value:
+            return detail_value
+        return program_value or detail_value
 
     def keep_paper(self, paper: Paper) -> bool:
         if not paper.title:

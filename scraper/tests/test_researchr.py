@@ -304,3 +304,59 @@ def test_single_program_url_keeps_the_legacy_cache_name(tmp_path):
         "https://conf.researchr.org/program/icse-2026/program-icse-2026/"
     ]
     assert scraper.program_cache_name(0) == "program.html"
+
+
+def test_track_page_paper_takes_affiliations_from_the_modal(tmp_path):
+    scraper = make_scraper(
+        tmp_path,
+        series="ASE",
+        source={"program_url": "https://conf.researchr.org/track/ase-2026/ase-2026-nier"},
+    )
+    # Track pages list bare author names — no `.prog-aff` spans.
+    html = """
+    <div id="event-overview">
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <a data-event-modal="event-9" href="#">A Track Page Paper</a>
+            <div class="prog-track">NIER</div>
+            <div class="performers">
+              <a class="navigate" href="https://conf.researchr.org/profile/ase-2026/ada">Ada Lovelace</a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    """
+    occurrences, _ = scraper.parse_program(html)
+    event = scraper.merge_occurrences(occurrences)[0]
+    assert event.author_institutions == "Ada Lovelace"
+
+    modal_html = """
+    <div class="modal">
+      <div class="bg-primary event-title"><h4>A Track Page Paper</h4></div>
+      <div class="bg-info event-description">
+        <p>An abstract.</p>
+        <div class="row">
+          <a href="https://conf.researchr.org/profile/ase-2026/ada">
+            <div class="media"><div class="media-body">
+              <h5 class="media-heading">Ada Lovelace</h5>
+              <h5 class="media-heading"><span class="text-black">Analytical Engine Lab</span></h5>
+            </div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    """
+    detail = scraper.parse_modal_response(
+        json.dumps([{"action": "append", "id": "event-modals", "value": modal_html}])
+    )
+    paper = scraper.to_paper(event, detail)
+
+    assert paper.author_institutions == "Ada Lovelace (Analytical Engine Lab)"
+    # A program row that already carries affiliations still wins.
+    assert (
+        scraper.pick_author_institutions("Ada Lovelace (Program Page)", "Ada Lovelace (Modal)")
+        == "Ada Lovelace (Program Page)"
+    )
