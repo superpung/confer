@@ -8,8 +8,17 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+### Added
+- **New venue** — **ASE 2026** (41st IEEE/ACM International Conference on
+  Automated Software Engineering, Oct 12–16 2026), covering the accepted
+  research, journal-first, NIER, industry-showcase, and tools & datasets papers.
+
 ### Fixed
-- **Author affiliations now show for 3,000+ papers that had none.** USENIX
+- Papers taken from a Researchr **accepted-paper track page** now show author
+  affiliations — those listings print bare names, so the affiliations are read
+  from each paper's detail page instead. Affects **ASE 2026** and **OOPSLA 2026**,
+  both of which went from no affiliations to complete ones.
+- **Author affiliations now show for 3,000+ more papers that had none.** USENIX
   venues (**OSDI 2025**, **NSDI 2026**, **USENIX Security 2025**) print one
   institution per author *group*, which the site could not tie to an author;
   they are now split per author. **AAAI 2026** listed institutions without the

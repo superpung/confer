@@ -74,6 +74,7 @@ what no reachable source can currently answer.
 | `micro2025` | sigarch | 24 | — | The official MICRO program page (`microarch.org`) lists titles/authors without abstracts; abstracts would have to come from enrichment, but recent DOIs may not be registered yet. Institutions already 100%. |
 | `isca2026` | sigarch | 25 | — | Same pattern via `iscaconf.org`. Institutions already 100%. |
 | `asplos2026` | sigarch | 67 | — | Partial enrichment coverage. |
+| `ase2026` | researchr | 37 | — | The tracks publish accepted papers ahead of the October 2026 conference: most carry no abstract on the program page and no DOI is registered yet, so enrichment cannot fill them. Institutions already 100%; expect this to lift on a re-run after the proceedings are indexed. (measured 2026-08-20) |
 | `ase2023` | researchr | 64 | — | Partial enrichment coverage (older event). |
 | `popl2026` | researchr | 78 | — | Partial enrichment coverage. |
 

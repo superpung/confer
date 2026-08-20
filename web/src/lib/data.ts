@@ -30,20 +30,29 @@ export interface CategoryGroup {
 }
 
 /** Read config/venues.yaml (one level up from web/) and extract the URL for each
- *  venue id.  Prefers program_url, then base_url, then toc_url.  Returns an empty
- *  map on any parse error so the site degrades gracefully. */
+ *  venue id.  Prefers program_url, then the first of program_urls (venues whose
+ *  program is split across several track pages), then base_url, then toc_url.
+ *  Returns an empty map on any parse error so the site degrades gracefully. */
 function loadVenueUrls(): Map<string, string> {
   const urls = new Map<string, string>();
   try {
     const ymlFile = path.resolve('../config/venues.yaml');
     if (!fs.existsSync(ymlFile)) return urls;
     const doc = yaml.load(fs.readFileSync(ymlFile, 'utf-8')) as {
-      venues?: { id?: string; source?: { program_url?: string; base_url?: string; toc_url?: string } }[]
+      venues?: {
+        id?: string;
+        source?: {
+          program_url?: string;
+          program_urls?: string[];
+          base_url?: string;
+          toc_url?: string;
+        };
+      }[]
     };
     for (const v of doc.venues ?? []) {
       if (!v.id) continue;
       const src = v.source;
-      const url = src?.program_url ?? src?.base_url ?? src?.toc_url;
+      const url = src?.program_url ?? src?.program_urls?.[0] ?? src?.base_url ?? src?.toc_url;
       if (url) urls.set(v.id, url);
     }
   } catch { /* degrade gracefully */ }
