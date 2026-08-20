@@ -57,3 +57,17 @@ def test_parse_aaai_issue_and_detail(tmp_path):
     assert papers[0].abstract == "A precise abstract."
     assert papers[0].publication_date == "2026-03-17"
     assert papers[0].author_institutions == "Example University"
+
+
+def test_author_institutions_pair_with_authors():
+    from confer.scrapers.aaai import format_author_institutions
+
+    assert format_author_institutions(
+        ["Ada Lovelace", "Grace Hopper"],
+        ["Analytical Engine Lab", "Harvard University"],
+    ) == "Ada Lovelace (Analytical Engine Lab); Grace Hopper (Harvard University)"
+
+    # Counts disagree (OJS omitted one) — keep the plain institution list.
+    assert format_author_institutions(
+        ["Ada Lovelace", "Grace Hopper"], ["Analytical Engine Lab"]
+    ) == "Analytical Engine Lab"

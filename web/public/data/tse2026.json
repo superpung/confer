@@ -8,7 +8,7 @@
       "0009-0002-2478-7250",
       "0000-0002-3267-6801"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Waseem Akram (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Yanjie Jiang (School of Computer Software, Tianjin University, Tianjin, China); Haris Ali Khan (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Furqan Jalil (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Hui Liu (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China)",
     "authors": [
       "Waseem Akram",
       "Yanjie Jiang",
@@ -69,7 +69,7 @@
       "0000-0001-9895-4600",
       "0000-0001-7654-5574"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yifan An (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), Beihang University, Beijing, China); Yunlong Ma (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), Beihang University, Beijing, China); Xiang Gao (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), Beihang University, Beijing, China); Hailong Sun (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), Beihang University, Beijing, China)",
     "authors": [
       "Yifan An",
       "Yunlong Ma",
@@ -133,7 +133,7 @@
       "0000-0002-7043-6227",
       "0000-0002-2465-7141"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Alejandrina M. Aranda (Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid, Boadilla del Monte, Spain); Oscar Dieste (Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid, Boadilla del Monte, Spain); José Ignacio Panach (Escola Tècnica Superior d’Enginyeria, Departament d’Informàtica, Universitat de València, Avinguda de la Universitat, València, Spain); Natalia Juristo (Escuela Técnica Superior de Ingenieros Informáticos, Universidad Politécnica de Madrid, Boadilla del Monte, Spain)",
     "authors": [
       "Alejandrina M. Aranda",
       "Oscar Dieste",
@@ -175,7 +175,8 @@
     "locations": [],
     "pages": "1332-1351",
     "pdfUrls": [
-      "https://doi.org/10.1109/tse.2026.3662599"
+      "https://doi.org/10.1109/tse.2026.3662599",
+      "https://arxiv.org/pdf/2412.13691"
     ],
     "publicationDate": "2026-04-01",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
@@ -192,6 +193,8 @@
       "https://dblp.org/db/journals/tse/tse52.html#ArandaDPJ26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3662599",
+      "http://arxiv.org/abs/2412.13691",
+      "https://doi.org/10.48550/arxiv.2412.13691",
       "https://openalex.org/W4405626389"
     ],
     "volume": "52"
@@ -202,7 +205,7 @@
       "0009-0008-7645-9607",
       "0000-0002-7107-5590"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Soyeon Baek (Department of Computer Science and Engineering, Chungnam National University, Daejeon, Korea); Sungho Lee (Department of Computer Science and Engineering, Chungnam National University, Daejeon, Korea)",
     "authors": [
       "Soyeon Baek",
       "Sungho Lee"
@@ -269,7 +272,7 @@
       "0000-0002-9466-3766",
       "A5124329792"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Sebastian Baltes (Heidelberg University, Heidelberg, Germany); Timo Speith (Heidelberg University, Heidelberg, Germany); Brenda Chiteri (Heidelberg University, Heidelberg, Germany); Seyedmoein Mohsenimofidi (Heidelberg University, Heidelberg, Germany); Shalini Chakraborty (University of Bayreuth, Bayreuth, Germany); Daniel Buschek (University of Bayreuth, Bayreuth, Germany)",
     "authors": [
       "Sebastian Baltes",
       "Timo Speith",
@@ -337,7 +340,7 @@
       "0009-0006-7962-6090",
       "0000-0002-9410-9562"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Fraol Batole (Department of Computer Science, Tulane University, New Orleans, LA, USA); Ruchira Manke (Department of Computer Science, Tulane University, New Orleans, LA, USA); Robert Dyer (University of Nebraska–Lincoln, Lincoln, NE, USA); Tien N. Nguyen (Computer Science Department, The University of Texas at Dallas, Dallas, TX, USA); Hridesh Rajan (Department of Computer Science, Tulane University, New Orleans, LA, USA)",
     "authors": [
       "Fraol Batole",
       "Ruchira Manke",
@@ -408,7 +411,7 @@
       "0000-0002-6301-3517",
       "0000-0001-5303-8481"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Nunzio Marco Bisceglia (University of Bergamo, Bergamo, Italy); Aurora Francesca Zanenga (University of Bergamo, Bergamo, Italy); Mehrnoosh Askarpour (General Motors Canada, McMaster University, Hamilton, Canada); Sahar Kokaly (General Motors Canada, McMaster University, Hamilton, Canada); S. Ramesh (General Motors, Warren, MI, USA); Marsha Chechik (University of Toronto, Toronto, Canada); Claudio Menghi (University of Bergamo, Bergamo, Italy)",
     "authors": [
       "Nunzio Marco Bisceglia",
       "Aurora Francesca Zanenga",
@@ -480,7 +483,7 @@
       "0009-0000-8775-2093",
       "0000-0003-3505-3383"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Sofia Bobadilla (KTH Royal Institute of Technology, Stockholm, Sweden); Monica Jin (KTH Royal Institute of Technology, Stockholm, Sweden); Martin Monperrus (KTH Royal Institute of Technology, Stockholm, Sweden)",
     "authors": [
       "Sofia Bobadilla",
       "Monica Jin",
@@ -548,7 +551,7 @@
       "0000-0002-4367-7201",
       "0000-0001-9916-4790"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Jianming Chang (Southeast University, Nanjing, China); Xin Zhou (Singapore Management University, Singapore); Lulu Wang (Southeast University, Nanjing, China); David Lo (Singapore Management University, Singapore); Bixin Li (Southeast University, Nanjing, China)",
     "authors": [
       "Jianming Chang",
       "Xin Zhou",
@@ -621,7 +624,7 @@
       "0000-0001-7872-7718",
       "0000-0002-0192-9992"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Chong Chen (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Lingfeng Bao (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); David Lo (School of Computing and Information Systems, Singapore Management University, Singapore); Yanlin Wang (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Zhenyu Shan (Intelligent Transportation and Information Security Laboratory, Hangzhou Normal University, Hangzhou, China); Ting Chen (School of Computer Science and Engineering (School of Cyber Security), University of Electronic Science and Technology of China, Chengdu, China); Guangqiang Yin (School of Computer Science and Engineering (School of Cyber Security), University of Electronic Science and Technology of China, Chengdu, China); Jianxing Yu (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Zibin Zheng (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Jiachi Chen (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China)",
     "authors": [
       "Chong Chen",
       "Lingfeng Bao",
@@ -694,7 +697,7 @@
       "0000-0001-7761-7269",
       "0000-0001-7872-7718"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yuxuan Chen (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Mingwei Liu (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Guangsheng Ou (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Anji Li (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Dekun Dai (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Yanlin Wang (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Zibin Zheng (School of Software Engineering, Sun Yat-sen University, Zhuhai, China)",
     "authors": [
       "Yuxuan Chen",
       "Mingwei Liu",
@@ -756,6 +759,9 @@
       "https://dblp.org/db/journals/tse/tse52.html#ChenLOLDWZ26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3657353",
+      "http://arxiv.org/abs/2410.22240",
+      "https://arxiv.org/abs/2410.22240",
+      "https://doi.org/10.48550/arxiv.2410.22240",
       "https://openalex.org/W4404341746"
     ],
     "volume": "52"
@@ -768,7 +774,7 @@
       "0009-0000-5208-4750",
       "0000-0001-8295-303X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yizhou Chen (School of Computer Science, Peking University, Beijing, China); Zeyu Sun (National Key Laboratory of Space Integrated Information System, Institute of Software, Chinese Academy of Sciences, Beijing, China); Guoqing Wang (School of Computer Science, Peking University, Beijing, China); Dan Hao (School of Electronic and Computer Engineering, Peking University, Shenzhen, China)",
     "authors": [
       "Yizhou Chen",
       "Zeyu Sun",
@@ -840,7 +846,7 @@
       "0000-0001-6168-8003",
       "0000-0003-2745-7521"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yiran Cheng (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China); Ting Zhang (School of Computing and Information Systems, Singapore Management University, Singapore); Lwin Khin Shar (Singapore Management University, Singapore); Shouguo Yang (Zhongguancun Laboratory, Beijing, China); Chaopeng Dong (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China); David Lo (Singapore Management University, Singapore); Shichao Lv (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China); Zhiqiang Shi (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China); Limin Sun (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China)",
     "authors": [
       "Yiran Cheng",
       "Ting Zhang",
@@ -905,6 +911,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#ChengZSYDLLSS26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3599581",
+      "https://ink.library.smu.edu.sg/sis_research/10481",
       "https://openalex.org/W4413344267"
     ],
     "volume": "52"
@@ -918,7 +925,7 @@
       "0009-0009-8261-8173",
       "0000-0003-3210-5504"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ryan Dancy (David R. Cheriton School of Computer Science, University of Waterloo, Waterloo, ON, Canada); Nancy A. Day (David R. Cheriton School of Computer Science, University of Waterloo, Waterloo, ON, Canada); Owen Zila (David R. Cheriton School of Computer Science, University of Waterloo, Waterloo, ON, Canada); Khadija Tariq (David R. Cheriton School of Computer Science, University of Waterloo, Waterloo, ON, Canada); Joseph Poremba (Department of Computer Science, University of British Columbia, Vancouver, BC, Canada)",
     "authors": [
       "Ryan Dancy",
       "Nancy A. Day",
@@ -974,6 +981,8 @@
       "https://dblp.org/db/journals/tse/tse52.html#DancyDZTP26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3631361",
+      "http://arxiv.org/abs/2411.15978",
+      "https://doi.org/10.48550/arxiv.2411.15978",
       "https://openalex.org/W4404986931"
     ],
     "volume": "52"
@@ -988,7 +997,7 @@
       "0009-0008-9082-1756",
       "0009-0003-9015-4686"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Wei Ding (School of Computer & Hubei Provincial Key Laboratory of Artificial Intelligence and Smart Learning, Central China Normal University, Wuhan, China); Ran Mo (School of Computer & Hubei Provincial Key Laboratory of Artificial Intelligence and Smart Learning, Central China Normal University, Wuhan, China); Chaochao Wu (School of Computer & Hubei Provincial Key Laboratory of Artificial Intelligence and Smart Learning, Central China Normal University, Wuhan, China); Haopeng Song (School of Computer & Hubei Provincial Key Laboratory of Artificial Intelligence and Smart Learning, Central China Normal University, Wuhan, China); Hang Fu (School of Computer & Hubei Provincial Key Laboratory of Artificial Intelligence and Smart Learning, Central China Normal University, Wuhan, China); Xinya Mu (School of Computer & Hubei Provincial Key Laboratory of Artificial Intelligence and Smart Learning, Central China Normal University, Wuhan, China)",
     "authors": [
       "Wei Ding",
       "Ran Mo",
@@ -1059,7 +1068,7 @@
       "0000-0003-3057-7225",
       "0000-0001-6467-837X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yanru Ding (School of Computer Science and Technology/School of Artificial Intelligence, Mine Digitization Engineering Research Center of the Ministry of Education, China University of Mining and Technology, Xuzhou, China); Yanmei Zhang (School of Computer Science and Technology/School of Artificial Intelligence, Mine Digitization Engineering Research Center of the Ministry of Education, China University of Mining and Technology, Xuzhou, China); Guan Yuan (School of Computer Science and Technology/School of Artificial Intelligence, Mine Digitization Engineering Research Center of the Ministry of Education, China University of Mining and Technology, Xuzhou, China); Shujuan Jiang (School of Computer Science and Technology/School of Artificial Intelligence, Mine Digitization Engineering Research Center of the Ministry of Education, China University of Mining and Technology, Xuzhou, China); Wei Dai (School of Information and Control Engineering, Artificial Intelligence Research Institute, China University of Mining and Technology, Xuzhou, China); Luciano Baresi (Dipartimento di Elettronica, Informazione e Bioingegneria, Politecnico di Milano, Milano, Italy)",
     "authors": [
       "Yanru Ding",
       "Yanmei Zhang",
@@ -1113,6 +1122,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#DingZYJDB26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3680517",
+      "https://hdl.handle.net/11311/1316165",
       "https://openalex.org/W7148940625"
     ],
     "volume": "52"
@@ -1126,7 +1136,7 @@
       "0000-0002-1515-3558",
       "0000-0001-8534-5048"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shihan Dou (Fudan University, Shanghai, China); Yutao Hu (National Engineering Research Center for Big Data Technology and System, Services Computing Technology and System Lab, Hubei Engineering Research Center on Big Data Security, School of Cyber Science and Engineering, Huazhong University of Science and Technology, Wuhan, China); Siyue Feng (National Engineering Research Center for Big Data Technology and System, Services Computing Technology and System Lab, Hubei Engineering Research Center on Big Data Security, School of Cyber Science and Engineering, Huazhong University of Science and Technology, Wuhan, China); Yueming Wu (National Engineering Research Center for Big Data Technology and System, Services Computing Technology and System Lab, Hubei Engineering Research Center on Big Data Security, School of Cyber Science and Engineering, Huazhong University of Science and Technology, Wuhan, China); Deqing Zou (National Engineering Research Center for Big Data Technology and System, Services Computing Technology and System Lab, Hubei Engineering Research Center on Big Data Security, School of Cyber Science and Engineering, Huazhong University of Science and Technology, Wuhan, China)",
     "authors": [
       "Shihan Dou",
       "Yutao Hu",
@@ -1192,7 +1202,7 @@
       "0009-0005-0887-1083",
       "0000-0003-2730-5077"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Zihan Fang (Department of Computer Science, Vanderbilt University, Nashville, TN, USA); Robert Wallace (Department of Computer Science and Engineering, University of Notre Dame, Notre Dame, IN, USA); Zachary Karas (Department of Computer Science, Vanderbilt University, Nashville, TN, USA); Toby Jia-Jun Li (Department of Computer Science and Engineering, University of Notre Dame, Notre Dame, IN, USA); Collin McMillan (Department of Computer Science and Engineering, University of Notre Dame, Notre Dame, IN, USA); Yu Huang (Department of Computer Science, Vanderbilt University, Nashville, TN, USA)",
     "authors": [
       "Zihan Fang",
       "Robert Wallace",
@@ -1266,7 +1276,7 @@
       "0000-0002-5335-0261",
       "0000-0001-7749-5513"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Pouya Fathollahzadeh (Department of Electrical and Computer Engineering, Queen’s University, Kingston, ON, Canada); Mariam El Mezouar (Department of Mathematics and Computer Science, Royal Military College of Canada, Kingston, ON, Canada); Hao Li (Software Analysis and Intelligence Lab (SAIL), School of Computing, Queen’s University, Kingston, ON, Canada); Ying Zou (Department of Electrical and Computer Engineering, Queen’s University, Kingston, ON, Canada); Ahmed E. Hassan (Software Analysis and Intelligence Lab (SAIL), School of Computing, Queen’s University, Kingston, ON, Canada)",
     "authors": [
       "Pouya Fathollahzadeh",
       "Mariam El Mezouar",
@@ -1333,7 +1343,7 @@
       "0009-0000-2956-2021",
       "0000-0002-8561-2481"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yu Gao (Key Laboratory of System Software at Chinese Academy of Sciences, State Key Laboratory of Computer Science, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China); Dong Wang (Key Laboratory of System Software at Chinese Academy of Sciences, State Key Laboratory of Computer Science, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China); Wensheng Dou (Key Laboratory of System Software at Chinese Academy of Sciences, State Key Laboratory of Computer Science, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China); Wenhan Feng (Key Laboratory of System Software at Chinese Academy of Sciences, State Key Laboratory of Computer Science, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China); Yu Liang (Key Laboratory of System Software at Chinese Academy of Sciences, State Key Laboratory of Computer Science, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China); Jun Wei (Key Laboratory of System Software at Chinese Academy of Sciences, State Key Laboratory of Computer Science, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China)",
     "authors": [
       "Yu Gao",
       "Dong Wang",
@@ -1406,7 +1416,7 @@
       "0000-0002-9592-7022",
       "0000-0001-7743-1296"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xinyu Gao (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Zhijie Wang (Department of Computer Science and Software Engineering, Concordia University, Montreal, QC, Canada); Yang Feng (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Chaolan Wang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Zhehua Zhou (University of Macau, Macau, SAR, China); Yuheng Huang (The University of Tokyo, Tokyo, Japan); Lei Ma (The University of Tokyo, Tokyo, Japan); Zhenyu Chen (Shenzhen Institute, Nanjing University, Nanjing, China); Baowen Xu (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China)",
     "authors": [
       "Xinyu Gao",
       "Zhijie Wang",
@@ -1477,7 +1487,7 @@
       "0000-0003-2739-1403",
       "0009-0006-2463-4720"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shanquan Gao (School of Artificial Intelligence (School of Software), Yanshan University, Qinhuangdao, China); Yihui Wang (School of Artificial Intelligence (School of Software), Yanshan University, Qinhuangdao, China); Zhenwei Ou (School of Artificial Intelligence (School of Software), Yanshan University, Qinhuangdao, China)",
     "authors": [
       "Shanquan Gao",
       "Yihui Wang",
@@ -1544,7 +1554,7 @@
       "0009-0006-2463-4720",
       "0009-0008-8111-1031"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shanquan Gao (School of Information Science and Engineering, Yanshan University, Qinhuangdao, China); Yihui Wang (School of Information Science and Engineering, Yanshan University, Qinhuangdao, China); Liyuan Tan (School of Information Science and Engineering, Yanshan University, Qinhuangdao, China); Zhenwei Ou (School of Information Science and Engineering, Yanshan University, Qinhuangdao, China); Xun Li (School of Computer Science, Northeast Electric Power University, Jilin, China)",
     "authors": [
       "Shanquan Gao",
       "Yihui Wang",
@@ -1614,7 +1624,7 @@
       "0000-0003-0532-5296",
       "0000-0002-5592-1355"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ariel Godio (Instituto Tecnológico de Buenos Aires, Ciudad Autónoma de Buenos, Aires, Argentina); Simón Gutiérrez Brida (Universidad Nacional de Rio Cuarto, Río Cuarto, Argentina); Germán Regis (Universidad Nacional de Rio Cuarto, Río Cuarto, Argentina); Hamid Bagheri (University of Nebraska-Lincoln, Lincoln, NE, USA); ThanhVu Nguyen (George Mason University, Fairfax, VA, USA); Nazareno Aguirre (Universidad Nacional de Rio Cuarto, Río Cuarto, Argentina); Marcelo F. Frias (University of Texas, El Paso, TX, USA)",
     "authors": [
       "Ariel Godio",
       "Simón Gutiérrez Brida",
@@ -1686,7 +1696,7 @@
       "0000-0002-3462-997X",
       "0000-0001-7872-7718"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Jing Gong (School of Software Engineering, Sun Yat-sen University, Guangzhou, China); Yanghui Wu (School of Software Engineering, Sun Yat-sen University, Guangzhou, China); Linxi Liang (School of Software Engineering, Sun Yat-sen University, Guangzhou, China); Yanlin Wang (School of Software Engineering, Sun Yat-sen University, Guangzhou, China); Jiachi Chen (School of Software Engineering, Sun Yat-sen University, Guangzhou, China); Mingwei Liu (School of Software Engineering, Sun Yat-sen University, Guangzhou, China); Zibin Zheng (School of Software Engineering, Sun Yat-sen University, Guangzhou, China)",
     "authors": [
       "Jing Gong",
       "Yanghui Wu",
@@ -1761,7 +1771,7 @@
       "0000-0002-8621-2420",
       "0000-0002-9592-7022"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "An Guo (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Zhiwei Su (School of Computer Science and Cyber Engineering, Guangzhou University, Guangzhou, China); Xinyu Gao (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Chunrong Fang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Senrong Wang (School of Computer Science and Cyber Engineering, Guangzhou University, Guangzhou, China); Haoxiang Tian (Nanyang Technological University, Singapore); Wu Wen (School of Computer Science and Cyber Engineering, Guangzhou University, Guangzhou, China); Lei Ma (University of Tokyo, Tokyo, Japan); Zhenyu Chen (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China)",
     "authors": [
       "An Guo",
       "Zhiwei Su",
@@ -1832,7 +1842,7 @@
       "0000-0003-3021-3771",
       "0000-0001-6595-6650"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Jiaxuan Han (School of Cyber Science and Engineering, Sichuan University, Chengdu, China); Cheng Huang (School of Cyber Science and Engineering, Sichuan University, Chengdu, China); Jiayong Liu (School of Cyber Science and Engineering, Sichuan University, Chengdu, China); Tianwei Zhang (College of Computing and Data Science, Nanyang Technological University, Singapore)",
     "authors": [
       "Jiaxuan Han",
       "Cheng Huang",
@@ -1904,7 +1914,7 @@
       "0000-0001-9412-9961",
       "0000-0002-4367-7201"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ruidong Han (School of Computing and Information Systems, Singapore Management University, Singapore); Zhou Yang (School of Computing Science, University of Alberta, Edmonton, Canada); Chengyan Ma (School of Computing and Information Systems, Singapore Management University, Singapore); Ye Liu (School of Computing and Information Systems, Singapore Management University, Singapore); Yuqing Niu (School of Computing and Information Systems, Singapore Management University, Singapore); Siqi Ma (School of Computing and Information Technology, University of Wollongong, Wollongong, Australia); Debin Gao (School of Computing and Information Systems, Singapore Management University, Singapore); David Lo (School of Computing and Information Systems, Singapore Management University, Singapore)",
     "authors": [
       "Ruidong Han",
       "Zhou Yang",
@@ -1961,6 +1971,8 @@
       "https://dblp.org/db/journals/tse/tse52.html#HanYMLNMGL26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3655766",
+      "http://arxiv.org/abs/2502.13379",
+      "https://doi.org/10.48550/arxiv.2502.13379",
       "https://openalex.org/W4407764161"
     ],
     "volume": "52"
@@ -1976,7 +1988,7 @@
       "0000-0002-3063-9425",
       "0000-0002-4367-7201"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Li Huang (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Meng Yan (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Tao Yin (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Weifeng Sun (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Zhongxin Liu (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Hongyu Zhang (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); David Lo (School of Computing and Information Systems, Singapore Management University, Singapore)",
     "authors": [
       "Li Huang",
       "Meng Yan",
@@ -2045,7 +2057,7 @@
       "0000-0002-8584-0716",
       "0000-0003-2958-8066"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yuan Jiang (School of Computer Science and Technology, Harbin Institute of Technology, Harbin, China); Shan Huang (School of Computer Science and Technology, Harbin Institute of Technology, Harbin, China); Christoph Treude (School of Computing and Information Systems, Singapore Management University, Singapore); Xiaohong Su (School of Computer Science and Technology, Harbin Institute of Technology, Harbin, China); Tiantian Wang (School of Computer Science and Technology, Harbin Institute of Technology, Harbin, China)",
     "authors": [
       "Yuan Jiang",
       "Shan Huang",
@@ -2104,6 +2116,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#JiangHTSW26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3638998",
+      "https://ink.library.smu.edu.sg/sis_research/10815",
       "https://openalex.org/W4416922353"
     ],
     "volume": "52"
@@ -2116,7 +2129,7 @@
       "0009-0000-6686-6008",
       "0000-0001-5093-5523"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Roham Koohestani (Electrical Engineering, Mathematics, and Computer Science (EEMCS), Delft University of Technology, Delft, XE, The Netherlands); Philippe de Bekker (Electrical Engineering, Mathematics, and Computer Science (EEMCS), Delft University of Technology, Delft, XE, The Netherlands); Begüm Koç (Electrical Engineering, Mathematics, and Computer Science (EEMCS), Delft University of Technology, Delft, XE, The Netherlands); Maliheh Izadi (Electrical Engineering, Mathematics, and Computer Science (EEMCS), Delft University of Technology, Delft, XE, The Netherlands)",
     "authors": [
       "Roham Koohestani",
       "Philippe de Bekker",
@@ -2184,7 +2197,7 @@
       "0000-0003-2459-9356",
       "0000-0002-4214-3638"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Emna Ksontini (University of North Carolina Wilmington (UNCW), Wilmington, NC, USA); Thiago do Nascimento Ferreira (College of Innovation & Technology, University of Michigan-Flint, Flint, MI, USA); Rania Khalsi (College of Computing, Grand Valley State University (GVSU), Allendale, MI, USA); Wael Kessentini (College of Computing and Digital Media, DePaul University, Chicago, IL, USA)",
     "authors": [
       "Emna Ksontini",
       "Thiago do Nascimento Ferreira",
@@ -2253,7 +2266,7 @@
       "0000-0002-5624-2987",
       "0009-0005-8589-8490"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Suwan Li (State Key Laboratory of Novel Software Technology, Nanjing University, Nanjing, China); Lei Bu (State Key Laboratory of Novel Software Technology, Nanjing University, Nanjing, China); Shangqing Liu (State Key Laboratory of Novel Software Technology, Nanjing University, Nanjing, China); Guangdong Bai (Department of Computer Science, City University of Hong Kong, Hong Kong, Hong Kong); Fuman Xie (School of Information Technology and Electrical Engineering, The University of Queensland, Brisbane, Australia); Kai Chen (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China); Chang Yue (Institute of Information Engineering, Chinese Academy of Sciences, Beijing, China)",
     "authors": [
       "Suwan Li",
       "Lei Bu",
@@ -2315,6 +2328,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#LiBLBXCY26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3656691",
+      "https://hdl.handle.net/2031/4703538b-9fca-4aa0-bf6f-2d646a6699b5",
       "https://openalex.org/W7125797182"
     ],
     "volume": "52"
@@ -2329,7 +2343,7 @@
       "0000-0001-6829-2263",
       "0000-0003-3103-4767"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xiaochao Li (School of Cyber Science and Engineering, Nanjing University of Science and Technology, Nanjing, China); Aniruddha Bhattacharjya (BCBRBAB Intercontinental Trading Solutions Private Limited, New Delhi, India); Qianmu Li (School of Cyber Science and Engineering, Nanjing University of Science and Technology, Nanjing, China); MengChu Zhou (School of Information and Electronic Engineering, Zhejiang Gongshang University, Hangzhou, China); Remigiusz Wisniewski (Institute of Control and Computation Engineering, University of Zielona Góra, Zielona Góra, Poland); Grzegorz Bazydlo (Institute of Control and Computation Engineering, University of Zielona Góra, Zielona Góra, Poland)",
     "authors": [
       "Xiaochao Li",
       "Aniruddha Bhattacharjya",
@@ -2394,7 +2408,7 @@
       "0000-0002-4546-2407",
       "0000-0002-8938-1203"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yuechen Li (School of Automation Science and Electrical Engineering, Beihang University, Beijing, China); Kai-Yuan Cai (School of Automation Science and Electrical Engineering, Beihang University, Beijing, China); Beibei Yin (School of Automation Science and Electrical Engineering, Beihang University, Beijing, China)",
     "authors": [
       "Yuechen Li",
       "Kai-Yuan Cai",
@@ -2460,7 +2474,7 @@
       "0000-0002-4645-2526",
       "0000-0001-7743-1296"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Qingyang Li (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Yibiao Yang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Maolin Sun (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Jiangchang Wu (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Qingkai Shi (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Yuming Zhou (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Baowen Xu (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China)",
     "authors": [
       "Qingyang Li",
       "Yibiao Yang",
@@ -2533,7 +2547,7 @@
       "0000-0001-6404-9143",
       "0000-0002-3267-6801"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yike Li (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Yuxia Zhang (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Qunhong Zeng (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Lin Shi (School of Software, Beihang University, Beijing, China); Xin Tan (School of Computer Science, Beihang University, Beijing, China); Tao Wang (School of Computer Science, National University of Defense Technology, Hunan, China); Yanjie Jiang (School of Computer Science, Peking University, Beijing, China); Hui Liu (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China)",
     "authors": [
       "Yike Li",
       "Yuxia Zhang",
@@ -2602,7 +2616,7 @@
       "0000-0001-7407-8255",
       "0000-0002-1823-0459"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Wentao Liang (Institute of Software, Chinese Academy of Sciences, Beijing, China); Xiang Ling (Institute of Software, Chinese Academy of Sciences, Beijing, China); Chen Zhao (Institute of Software, Chinese Academy of Sciences, Beijing, China); Jingzheng Wu (Institute of Software, Chinese Academy of Sciences, Beijing, China); Tianyue Luo (Institute of Software, Chinese Academy of Sciences, Beijing, China); Yanjun Wu (Institute of Software, Chinese Academy of Sciences, Beijing, China)",
     "authors": [
       "Wentao Liang",
       "Xiang Ling",
@@ -2673,7 +2687,7 @@
       "0000-0001-8368-4898",
       "0000-0002-9592-7022"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yuchen Ling (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Shengcheng Yu (School of Computation, Information and Technology, Technical University of Munich, Munich, Germany); Shuguang Chen (China United Network Communication Limited Software Research Institute, Nanjing, China); Liuming Wang (China United Network Communication Limited Software Research Institute, Nanjing, China); Chunrong Fang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Wenbin Guo (China United Network Communication Limited Software Research Institute, Nanjing, China); Jia Liu (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Zhenyu Chen (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China)",
     "authors": [
       "Yuchen Ling",
       "Shengcheng Yu",
@@ -2744,7 +2758,7 @@
       "0000-0002-3545-1392",
       "0000-0001-7113-7635"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xiaoxia Liu (Zhejiang University, Zhejiang, China); Peng Di (Ant Group, Zhejiang, China); Cong Li (Zhejiang University, Zhejiang, China); Jun Sun (Singapore Management University, Singapore); Jingyi Wang (Zhejiang University, Zhejiang, China)",
     "authors": [
       "Xiaoxia Liu",
       "Peng Di",
@@ -2803,6 +2817,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#LiuDLSW26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3619112",
+      "https://ink.library.smu.edu.sg/sis_research/11019",
       "https://openalex.org/W4414988663"
     ],
     "volume": "52"
@@ -2817,7 +2832,7 @@
       "0000-0002-3905-8133",
       "0000-0002-9745-4767"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shuo Liu (Department of Computer Science, City University of Hong Kong, Hong Kong, China); Jacky Keung (Department of Computer Science, City University of Hong Kong, Hong Kong, China); Zhi Jin (Key Laboratory of High Confidence Software Technologies (PKU), MOE, Peking University, Beijing, China); Zhen Yang (School of Computer Science and Technology, Shandong University, Qingdao, China); Fang Liu (School of Computer Science and Engineering, Beihang University, Beijing, China); Hao Zhang (School of Computer Science and Technology, Shandong University, Qingdao, China)",
     "authors": [
       "Shuo Liu",
       "Jacky Keung",
@@ -2889,7 +2904,7 @@
       "0000-0002-4864-9592",
       "0009-0002-3304-1389"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Fang Liu (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), School of Computer Science and Engineering, Beihang University, Beijing, China); Yang Liu (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), School of Computer Science and Engineering, Beihang University, Beijing, China); Lin Shi (School of Software, Beihang University, Beijing, China); Zhen Yang (School of Computer Science and Technology, Shandong University, Qingdao, China); Li Zhang (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), School of Computer Science and Engineering, Beihang University, Beijing, China); Xiaoli Lian (State Key Laboratory of Complex & Critical Software Environment (SKLCCSE), School of Computer Science and Engineering, Beihang University, Beijing, China); Zhongqi Li (Huawei Cloud Computing Technologies Company Ltd., Shenzhen, China); Yuchi Ma (Huawei Cloud Computing Technologies Company Ltd., Shenzhen, China)",
     "authors": [
       "Fang Liu",
       "Yang Liu",
@@ -2959,7 +2974,7 @@
       "0000-0001-9412-9961",
       "0000-0002-4367-7201"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ye Liu (Singapore Management University, Singapore); Yuqing Niu (Singapore Management University, Singapore); Chengyan Ma (Singapore Management University, Singapore); Ruidong Han (Singapore Management University, Singapore); Wei Ma (Singapore Management University, Singapore); Yi Li (Nanyang Technological University, Singapore); Debin Gao (Singapore Management University, Singapore); David Lo (Singapore Management University, Singapore)",
     "authors": [
       "Ye Liu",
       "Yuqing Niu",
@@ -3017,6 +3032,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#LiuNMHMLGL26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3668858",
+      "https://hdl.handle.net/10356/211858",
       "https://openalex.org/W7133243066"
     ],
     "volume": "52"
@@ -3029,7 +3045,7 @@
       "0000-0001-9145-964X",
       "0000-0002-7127-1137"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yu Liu (National University of Singapore, Singapore); Yahui Song (National University of Singapore, Singapore); Martin Mirchev (National University of Singapore, Singapore); Abhik Roychoudhury (National University of Singapore, Singapore)",
     "authors": [
       "Yu Liu",
       "Yahui Song",
@@ -3105,7 +3121,7 @@
       "0000-0003-3707-6546",
       "0000-0001-7113-7635"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Zihan Liu (Zhejiang University, Hangzhou, China); Ruinan Zeng (Zhejiang University, Hangzhou, China); Dongxia Wang (Zhejiang University, Hangzhou, China); Gengyun Peng (Zhejiang University, Hangzhou, China); Xiaoxia Liu (Zhejiang University, Hangzhou, China); Qiang Liu (Zhejiang University, Hangzhou, China); Peiyu Liu (Zhejiang University, Hangzhou, China); Wenhai Wang (UWin Tech, Hangzhou, China); Jingyi Wang (Zhejiang University, Hangzhou, China)",
     "authors": [
       "Zihan Liu",
       "Ruinan Zeng",
@@ -3184,7 +3200,7 @@
       "0000-0002-5583-4155",
       "0000-0001-7300-9215"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Han Liu (College of Cryptology and Cyber Science, Nankai University, Tianjin, China); Jian Zhang (School of Software, Beihang University, Beijing, China); Cen Zhang (Nanyang Technological University, Singapore); Xiaohan Zhang (School of Computer Science, Shanghai Jiao Tong University, Shanghai, China); Kaixuan Li (Nanyang Technological University, Singapore); Sen Chen (College of Cryptology and Cyber Science, Nankai University, Tianjin, China); Shang-Wei Lin (Singapore Institute of Technology, Singapore); Yixiang Chen (Shanghai Key Laboratory of Trustworthy Computing, East China Normal University, Shanghai, China); Xinghua Li (Xidian University, Xi’an, China); Yang Liu (Nanyang Technological University, Singapore)",
     "authors": [
       "Han Liu",
       "Jian Zhang",
@@ -3243,6 +3259,9 @@
       "https://dblp.org/db/journals/tse/tse52.html#LiuZZZLCLCLL26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3678424",
+      "http://arxiv.org/abs/2403.16032",
+      "https://arxiv.org/abs/2403.16032",
+      "https://doi.org/10.48550/arxiv.2403.16032",
       "https://openalex.org/W4393212942"
     ],
     "volume": "52"
@@ -3257,7 +3276,7 @@
       "0000-0002-5877-0230",
       "0000-0002-1404-4560"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Tarek Mahmud (Department of Electrical Engineering and Computer Science, Texas A&M University - Kingsville, Kingsville, TX, USA); Bin Duan (School of Electrical Engineering and Computer Science, The University of Queensland, Brisbane, QLD, Australia); Meiru Che (School of Engineering and Technology, Central Queensland University, Brisbane, QLD, Australia); Awatif Yasmin (Department of Computer Science, Texas State University, San Marcos, TX, USA); Anne H. H. Ngu (Department of Computer Science, Texas State University, San Marcos, TX, USA); Guowei Yang (School of Electrical Engineering and Computer Science, The University of Queensland, Brisbane, QLD, Australia)",
     "authors": [
       "Tarek Mahmud",
       "Bin Duan",
@@ -3327,7 +3346,7 @@
       "0009-0008-7651-8582",
       "0000-0002-9592-7022"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yanzhou Mu (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Rong Wang (School of Information Science and Technology, Nantong University, Nantong, China); Juan Zhai (University of Massachusetts Amherst, Amherst, MA, USA); Chunrong Fang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Xiang Chen (School of Artificial Intelligence and Computer Science, Nantong University, Nantong, China); Peiran Yang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Zhixiang Cao (School of Electronic Science and Engineering, Xi’an Jiaotong University, Xi’an, China); Ruixiang Qian (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Shaoyu Yang (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China); Zhenyu Chen (State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China)",
     "authors": [
       "Yanzhou Mu",
       "Rong Wang",
@@ -3401,7 +3420,7 @@
       "0000-0003-4783-876X",
       "0000-0001-7872-7718"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Kaiwen Ning (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Jiachi Chen (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Jingwen Zhang (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Wei Li (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Zexu Wang (School of Software Engineering, Sun Yat-sen University, Zhuhai, China); Yuming Feng (Department of New Networks, Peng Cheng Laboratory, Shenzhen, China); Weizhe Zhang (School of Computer Science and Technology, Harbin Institute of Technology, Shenzhen, China); Zibin Zheng (School of Software Engineering, Sun Yat-sen University, Zhuhai, China)",
     "authors": [
       "Kaiwen Ning",
       "Jiachi Chen",
@@ -3470,7 +3489,7 @@
       "A5116038856",
       "0000-0003-3406-5235"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Vikram Nitin (Department of Computer Science, Columbia University, New York, NY, USA); Rahul Krishna (IBM T.J. Watson Research Center, Yorktown Heights, NY, USA); Luiz Lemos do Valle (Department of Computer Science, Columbia University, New York, NY, USA); Baishakhi Ray (Department of Computer Science, Columbia University, New York, NY, USA)",
     "authors": [
       "Vikram Nitin",
       "Rahul Krishna",
@@ -3540,7 +3559,7 @@
       "0009-0008-1802-3290",
       "0000-0001-5775-5824"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shiwen Ou (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Yuwei Li (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Lu Yu (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Chengkun Wei (College of Computer Science and Technology, Zhejiang University, Hangzhou, China); Tingke Wen (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Qiangpu Chen (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Yu Chen (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Haizhi Tang (College of Electronic Engineering, National University of Defense Technology, Hefei, China); Zulie Pan (College of Electronic Engineering, National University of Defense Technology, Hefei, China)",
     "authors": [
       "Shiwen Ou",
       "Yuwei Li",
@@ -3601,6 +3620,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#OuLYWWCCTP26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3619966",
+      "http://arxiv.org/abs/2510.15690",
       "https://openalex.org/W4415048639"
     ],
     "volume": "52"
@@ -3613,7 +3633,7 @@
       "0000-0002-3319-5006",
       "0000-0001-5095-3000"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Mahsa Panahandeh (Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB, Canada); Naser Ezzati-Jivan (Department of Computer Science, Brock University, St. Catharines, ON, Canada); Abdelwahab Hamou-Lhadj (Department of Electrical and Computer Engineering, Concordia University, Montreal, QC, Canada); James Miller (Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB, Canada)",
     "authors": [
       "Mahsa Panahandeh",
       "Naser Ezzati-Jivan",
@@ -3681,7 +3701,7 @@
       "0000-0003-0720-1107",
       "0000-0002-5373-8522"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ivens Da Silva Portugal (School of Computer Science, University of Waterloo, Waterloo, ON, Canada); Paulo Alencar (School of Computer Science, University of Waterloo, Waterloo, ON, Canada); Donald D. Cowan (School of Computer Science, University of Waterloo, Waterloo, ON, Canada)",
     "authors": [
       "Ivens Da Silva Portugal",
       "Paulo Alencar",
@@ -3748,7 +3768,7 @@
       "0000-0001-7922-4936",
       "0000-0001-6467-837X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Giovanni Quattrocchi (Dipartimento di Informatica “Giovanni Degli Antoni,”, Università degli Studi di Milano, Milano, Italy); Liliana Pasquale (University College Dublin, Dublin, Ireland); Paola Spoletini (Kennesaw State University, Kennesaw, GA, USA); Luciano Baresi (Dipartimento di Elettronica, Informazione e Bioingegneria, Politecnico di Milano, Milan, Italy)",
     "authors": [
       "Giovanni Quattrocchi",
       "Liliana Pasquale",
@@ -3806,6 +3826,7 @@
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3670612",
       "http://arxiv.org/abs/2507.15157",
+      "https://hdl.handle.net/11311/1316166",
       "https://openalex.org/W4417487419"
     ],
     "volume": "52"
@@ -3819,7 +3840,7 @@
       "0000-0003-1846-0921",
       "0000-0003-4111-4189"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yijie Ruan (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Zhipeng Gao (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Jiachi Chen (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Lingfeng Bao (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Xiaohu Yang (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China)",
     "authors": [
       "Yijie Ruan",
       "Zhipeng Gao",
@@ -3886,7 +3907,7 @@
       "0000-0002-4015-4640",
       "0000-0003-3505-3383"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Aman Sharma (KTH Royal Institute of Technology, Stockholm, Sweden); Benoit Baudry (Université de Montréal, Montréal, Canada); Martin Monperrus (KTH Royal Institute of Technology, Stockholm, Sweden)",
     "authors": [
       "Aman Sharma",
       "Benoit Baudry",
@@ -3961,7 +3982,7 @@
       "0000-0002-1045-4861",
       "0000-0003-2573-963X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ziyue Shi (Tianjin University, Tianjin, China); Junjie Wang (Tianjin University, Tianjin, China); Yuejun Guo (Luxembourg Institute of Science and Technology, Belval, Luxembourg); Xiaofei Xie (Singapore Management University, Singapore); Qiang Hu (Tianjin University, Tianjin, China); Maxime Cordy (University of Luxembourg, Belval, Luxembourg); Sen Chen (Nankai University, Tianjin, China); Mike Papadakis (University of Luxembourg, Belval, Luxembourg); Yves Le Traon (University of Luxembourg, Belval, Luxembourg); Yongqiang Lyu (Tianjin University, China)",
     "authors": [
       "Ziyue Shi",
       "Junjie Wang",
@@ -4031,7 +4052,7 @@
       "0000-0002-8406-8672",
       "0000-0002-3267-6801"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Minyu Shu (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Meng Fan (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Yuxia Zhang (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Tao Wang (School of Computer Science, National University of Defense Technology, Hunan, China); Hui Liu (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China)",
     "authors": [
       "Minyu Shu",
       "Meng Fan",
@@ -4093,7 +4114,7 @@
       "0009-0009-5352-5453",
       "0000-0002-3250-4866"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Dipender Singh (Department of Computer Science and Engineering, Indian Institute of Technology Roorkee, Roorkee, India); Sandeep Kumar (Department of Computer Science and Engineering, Indian Institute of Technology Roorkee, Roorkee, India)",
     "authors": [
       "Dipender Singh",
       "Sandeep Kumar"
@@ -4158,7 +4179,7 @@
       "0009-0008-8002-8068",
       "0000-0001-9477-4100"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shiwen Song (Singapore Management University, Singapore); Xiaofei Xie (Singapore Management University, Singapore); Ruitao Feng (Faculty of Science and Engineering, Southern Cross University, Coffs Harbour, NSW, Australia); Qi Guo (Tianjin University, Tianjin, China); Sen Chen (College of Cryptology and Cyber Science, Nankai University, Tianjin, China)",
     "authors": [
       "Shiwen Song",
       "Xiaofei Xie",
@@ -4217,6 +4238,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#SongXFGC26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3626788",
+      "https://ink.library.smu.edu.sg/sis_research/11031",
       "https://openalex.org/W4416010859"
     ],
     "volume": "52"
@@ -4229,7 +4251,7 @@
       "0000-0002-1834-6240",
       "0000-0002-5532-1181"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Juliana Gonçalves de Souza (Department of Informatics, University of Zurich, Zurich, Switzerland); Remy Egloff (Department of Informatics, University of Zurich, Zurich, Switzerland); Thomas Fritz (Department of Informatics, University of Zurich, Zurich, Switzerland); André N. Meyer (Department of Informatics, University of Zurich, Zurich, Switzerland)",
     "authors": [
       "Juliana Gonçalves de Souza",
       "Remy Egloff",
@@ -4295,7 +4317,7 @@
       "0000-0002-7013-1191",
       "0000-0002-4854-685X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Cristina Stratan (University of Luxembourg, Esch-sur-Alzette, Luxembourg); Claudio Mandrioli (University of Luxembourg, Esch-sur-Alzette, Luxembourg); Domenico Bianculli (University of Luxembourg, Esch-sur-Alzette, Luxembourg)",
     "authors": [
       "Cristina Stratan",
       "Claudio Mandrioli",
@@ -4337,7 +4359,8 @@
     "locations": [],
     "pages": "1495-1514",
     "pdfUrls": [
-      "https://doi.org/10.1109/tse.2026.3667445"
+      "https://doi.org/10.1109/tse.2026.3667445",
+      "https://orbilu.uni.lu/bitstream/10993/67964/1/main.pdf"
     ],
     "publicationDate": "2026-04-01",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
@@ -4354,6 +4377,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#StratanMB26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3667445",
+      "https://orbilu.uni.lu/handle/10993/67964",
       "https://openalex.org/W7131257660"
     ],
     "volume": "52"
@@ -4367,7 +4391,7 @@
       "0000-0003-2838-4301",
       "0000-0002-3295-8972"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Baicai Sun (Shandong Key Laboratory of Deep Sea Equipment Intelligent Networking, College of Information Science and Technology, Qingdao University of Science and Technology, Qingdao, China); Lina Gong (Shanghai Institute for Advanced Study, Zhejiang University, Shanghai, China); Yinan Guo (School of Mechanical and Electrical Engineering, China University of Mining and Technology (Beijing), Beijing, China); Dunwei Gong (College of Information Science and Technology, Qingdao University of Science and Technology, Qingdao, China); Gaige Wang (School of Computer Science and Technology, Ocean University of China, Qingdao, China)",
     "authors": [
       "Baicai Sun",
       "Lina Gong",
@@ -4436,7 +4460,7 @@
       "0009-0007-9715-627X",
       "0000-0002-4367-7201"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Weifeng Sun (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Naiqi Huang (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Meng Yan (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Li Huang (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Zhongxin Liu (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Xiao Liu (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); David Lo (School of Computing and Information Systems, Singapore Management University, Singapore)",
     "authors": [
       "Weifeng Sun",
       "Naiqi Huang",
@@ -4496,6 +4520,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#SunHYHLLL26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3663143",
+      "https://ink.library.smu.edu.sg/sis_research/11038",
       "https://openalex.org/W7129106369"
     ],
     "volume": "52"
@@ -4506,7 +4531,7 @@
       "0009-0003-0873-5968",
       "0000-0002-9052-0864"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Simin Sun (Department of Computer Science and Engineering, Chalmers University of Technology and University of Gothenburg, Gothenburg, Sweden); Miroslaw Staron (Department of Computer Science and Engineering, Chalmers University of Technology and University of Gothenburg, Gothenburg, Sweden)",
     "authors": [
       "Simin Sun",
       "Miroslaw Staron"
@@ -4573,7 +4598,7 @@
       "0009-0007-8262-0105",
       "0000-0003-0204-9812"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Hamed Taherkhani (Lassonde School of Engineering, York University, Toronto, ON, Canada); Jiho Shin (Lassonde School of Engineering, York University, Toronto, ON, Canada); Muhammad Ammar Tahir (University of Washington, Seattle, WA, USA); Md Rakib Hossain Misu (University of California, Irvine, CA, USA); Vineet Sunil Gattani (Arizona State University, Tempe, AZ, USA); Hadi Hemmati (Lassonde School of Engineering, York University, Toronto, ON, Canada)",
     "authors": [
       "Hamed Taherkhani",
       "Jiho Shin",
@@ -4645,7 +4670,7 @@
       "0000-0001-6324-3964",
       "0000-0002-2258-5893"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xin Tan (School of Computer Science and Engineering, Beihang University, State Key Laboratory of Complex & Critical Software Environment (CCSE), Beijing, China); Bo Hou (School of Computer Science and Engineering, Beihang University, State Key Laboratory of Complex & Critical Software Environment (CCSE), Beijing, China); Xianjun Ni (School of Computer Science and Engineering, Beihang University, State Key Laboratory of Complex & Critical Software Environment (CCSE), Beijing, China); Yuxia Zhang (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Jing Jiang (School of Computer Science and Engineering, Beihang University, State Key Laboratory of Complex & Critical Software Environment (CCSE), Beijing, China); Minghui Zhou (School of Computer Science, Peking University, Beijing, China); Li Zhang (School of Computer Science and Engineering, Beihang University, State Key Laboratory of Complex & Critical Software Environment (CCSE), Beijing, China)",
     "authors": [
       "Xin Tan",
       "Bo Hou",
@@ -4717,7 +4742,7 @@
       "0000-0001-7300-9215",
       "0000-0002-9671-7836"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Wenbing Tang (College of Information Engineering, Northwest A&F University, Yangling, China); Mingfei Cheng (School of Computing and Information Systems, Singapore Management University, Singapore); Renzhi Wang (Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB, Canada); Yuan Zhou (School of Computer Science and Technology, Zhejiang Sci-Tech University, Hangzhou, China); Chengwei Liu (College of Computing and Data Science, Nanyang Technological University, Singapore); Yang Liu (College of Computing and Data Science, Nanyang Technological University, Singapore); Zuohua Ding (Institute of Intelligent Software and Systems, Hangzhou Campus, Zhejiang Normal University, Hangzhou, China)",
     "authors": [
       "Wenbing Tang",
       "Mingfei Cheng",
@@ -4774,6 +4799,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#TangCWZLLD26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3663874",
+      "https://hdl.handle.net/10356/211906",
       "https://openalex.org/W7128676699"
     ],
     "volume": "52"
@@ -4786,7 +4812,7 @@
       "0000-0002-9192-9100",
       "0000-0002-7710-5092"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Anh-Duy Tran (DistriNet, KU Leuven, Leuven, Belgium); Stef Verreydt (DistriNet, KU Leuven, Leuven, Belgium); Koen Yskout (DistriNet, KU Leuven, Leuven, Belgium); Wouter Joosen (DistriNet, KU Leuven, Leuven, Belgium)",
     "authors": [
       "Anh-Duy Tran",
       "Stef Verreydt",
@@ -4839,6 +4865,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#TranVYJ26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3662996",
+      "https://lirias.kuleuven.be/handle/20.500.12942/781479",
       "https://openalex.org/W7128613575"
     ],
     "volume": "52"
@@ -4852,7 +4879,7 @@
       "0000-0002-4128-8966",
       "0000-0001-8370-3956"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Guangzhan Wang (School of Computer Science, Shanghai Jiao Tong University, Shanghai, China); Diwei Chen (School of Computer Science, Shanghai Jiao Tong University, Shanghai, China); Xiaodong Gu (School of Computer Science, Shanghai Jiao Tong University, Shanghai, China); Yuting Chen (School of Computer Science, Shanghai Jiao Tong University, Shanghai, China); Beijun Shen (School of Computer Science, Shanghai Jiao Tong University, Shanghai, China)",
     "authors": [
       "Guangzhan Wang",
       "Diwei Chen",
@@ -4919,7 +4946,7 @@
       "0000-0003-4550-1047",
       "0000-0002-5757-9135"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Puwei Wang (School of Information and with the Key Laboratory of Data Engineering and Knowledge Engineering of the Ministry of Education, Renmin University of China, Beijing, China); Ruiheng Liu (School of Information and with the Key Laboratory of Data Engineering and Knowledge Engineering of the Ministry of Education, Renmin University of China, Beijing, China); Keman Huang (School of Information and with the Key Laboratory of Data Engineering and Knowledge Engineering of the Ministry of Education, Renmin University of China, Beijing, China); Xiaoyong Du (School of Information and with the Key Laboratory of Data Engineering and Knowledge Engineering of the Ministry of Education, Renmin University of China, Beijing, China)",
     "authors": [
       "Puwei Wang",
       "Ruiheng Liu",
@@ -4987,7 +5014,7 @@
       "0000-0002-5265-0051",
       "0009-0004-2050-7674"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Jinping Wang (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Yan Lei (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Huan Xie (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Chunyan Liu (School of Big Data & Software Engineering, Chongqing University, Chongqing, China)",
     "authors": [
       "Jinping Wang",
       "Yan Lei",
@@ -5052,7 +5079,7 @@
       "0000-0002-1697-3451",
       "0000-0001-8295-303X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Guoqing Wang (Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education, School of Computer Science, Peking University, Beijing, China); Zeyu Sun (National Key Laboratory of Space Integrated Information System, Institute of Software, Chinese Academy of Sciences, University of Chinese Academy of Sciences, Beijing, China); Yizhou Chen (Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education, School of Computer Science, Peking University, Beijing, China); Yifan Zhao (Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education, School of Computer Science, Peking University, Beijing, China); Haiyang Shen (Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education, School of Computer Science, Peking University, Beijing, China); Qingyuan Liang (Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education, School of Computer Science, Peking University, Beijing, China); Dan Hao (Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education, School of Computer Science, Peking University, Beijing, China)",
     "authors": [
       "Guoqing Wang",
       "Zeyu Sun",
@@ -5126,7 +5153,7 @@
       "0000-0002-3063-9425",
       "0000-0001-7872-7718"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yanli Wang (Sun Yat-sen University, Guangzhou, China); Yanlin Wang (Sun Yat-sen University, Guangzhou, China); Suiquan Wang (Sun Yat-sen University, Guangzhou, China); Daya Guo (Sun Yat-sen University, Guangzhou, China); Jiachi Chen (Sun Yat-sen University, Guangzhou, China); John C. Grundy (Monash University, Melbourne, VIC, Australia); Xilin Liu (Huawei Cloud Computing Technologies Company, Ltd., Shenzhen, China); Yuchi Ma (Huawei Cloud Computing Technologies Company, Ltd., Shenzhen, China); Mingzhi Mao (Sun Yat-sen University, Guangzhou, China); Hongyu Zhang (Chongqing University, Chongqing, China); Zibin Zheng (Sun Yat-sen University, Guangzhou, China)",
     "authors": [
       "Yanli Wang",
       "Yanlin Wang",
@@ -5200,7 +5227,7 @@
       "0000-0002-1393-1010",
       "0000-0003-0145-615X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Guancheng Wang (Research Ireland Lero Centre for Software, University of Limerick, Limerick, Ireland); Qinghua Xu (Research Ireland Lero Centre for Software, University of Limerick, Limerick, Ireland); Lionel C. Briand (University of Ottawa, Ottawa, ON, Canada); Kui Liu (Software Engineering Application Technology Lab Huawei, Hangzhou, China)",
     "authors": [
       "Guancheng Wang",
       "Qinghua Xu",
@@ -5256,6 +5283,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#WangXBL26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2026.3682975",
+      "https://arxiv.org/abs/2506.02954",
       "https://openalex.org/W7153155872"
     ],
     "volume": "52"
@@ -5270,7 +5298,7 @@
       "0000-0002-4367-7201",
       "0000-0001-8513-6836"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xin-Cheng Wen (Harbin Institute of Technology, Shenzhen, China); Xinchen Wang (Harbin Institute of Technology, Shenzhen, China); Yujia Chen (Harbin Institute of Technology, Shenzhen, China); Ruida Hu (Harbin Institute of Technology, Shenzhen, China); David Lo (Singapore Management University, Singapore); Cuiyun Gao (Harbin Institute of Technology, Shenzhen, China)",
     "authors": [
       "Xin-Cheng Wen",
       "Xinchen Wang",
@@ -5340,7 +5368,7 @@
       "0000-0002-9575-1012",
       "0000-0003-3578-0994"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Huayao Wu (State Key Laboratory for Novel Software Technology, School of Computer Science, Nanjing University, Nanjing, China); Peng Wang (State Key Laboratory for Novel Software Technology, School of Computer Science, Nanjing University, Nanjing, China); Shengyou Hu (State Key Laboratory for Novel Software Technology, School of Computer Science, Nanjing University, Nanjing, China); Xintao Niu (State Key Laboratory for Novel Software Technology, School of Computer Science, Nanjing University, Nanjing, China); Changhai Nie (State Key Laboratory for Novel Software Technology, School of Computer Science, Nanjing University, Nanjing, China); Tsong Yueh Chen (Department of Computing Technologies, Swinburne University of Technology, Melbourne, VIC, Australia)",
     "authors": [
       "Huayao Wu",
       "Peng Wang",
@@ -5410,7 +5438,7 @@
       "0000-0002-1236-8318",
       "0000-0002-3245-1901"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yiwen Wu (National University of Defense Technology, Changsha, China); Yang Zhang (National University of Defense Technology, Changsha, China); Tao Wang (National University of Defense Technology, Changsha, China); Bo Ding (National University of Defense Technology, Changsha, China); Huaimin Wang (National University of Defense Technology, Changsha, China)",
     "authors": [
       "Yiwen Wu",
       "Yang Zhang",
@@ -5480,7 +5508,7 @@
       "0000-0002-9538-9121",
       "0000-0002-4367-7201"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Huan Xie (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Zhengxiong Deng (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Yan Lei (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Maojin Li (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); Meng Yan (School of Big Data & Software Engineering, Chongqing University, Chongqing, China); David Lo (School of Computing and Information Systems, Singapore Management University, Singapore)",
     "authors": [
       "Huan Xie",
       "Zhengxiong Deng",
@@ -5547,7 +5575,7 @@
       "0000-0002-1220-8728",
       "0000-0001-7410-9146"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xiaoyuan Xie (School of Computer Science, Wuhan University, Wuhan, China); Yan Song (School of Computer Science, Wuhan University, Wuhan, China); Songqiang Chen (Department of Computer Science and Engineering, The Hong Kong University of Science and Technology, Hong Kong, China); Jinfu Chen (School of Computer Science, Wuhan University, Wuhan, China)",
     "authors": [
       "Xiaoyuan Xie",
       "Yan Song",
@@ -5613,7 +5641,7 @@
       "0000-0003-3125-4399",
       "0000-0003-1087-226X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Bo Yang (School of Information Science and Technology, Beijing Forestry University, Beijing, China); Jiayi Dang (School of Information Science and Technology, Beijing Forestry University, Beijing, China); Huai Liu (Department of Computing Technologies, Swinburne University of Technology, Hawthorn, VIC, Australia); Zhi Jin (School of Computer Science, Wuhan University, Wuhan, China)",
     "authors": [
       "Bo Yang",
       "Jiayi Dang",
@@ -5678,7 +5706,7 @@
       "0000-0003-2828-7165",
       "0000-0002-2968-3496"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Jiahao Yuan (School of Computer Science, Wuhan University, Wuhan, China); Weinuo Leng (School of Computer Science, Wuhan University, Wuhan, China); Xuan Wei (School of Computer Science, Wuhan University, Wuhan, China); Qi Xin (School of Computer Science, Wuhan University, Wuhan, China); Xiaoyuan Xie (School of Computer Science, Wuhan University, Wuhan, China); Jifeng Xuan (School of Computer Science, Wuhan University, Wuhan, China)",
     "authors": [
       "Jiahao Yuan",
       "Weinuo Leng",
@@ -5745,7 +5773,7 @@
       "0009-0005-1786-9831",
       "0000-0001-6339-0219"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Junfeng Zhang (Laboratory for Big Data and Decision, National University of Defense Technology, Changsha, China); Jinzhi Liao (Laboratory for Big Data and Decision, National University of Defense Technology, Changsha, China); Jiuyang Tang (Laboratory for Big Data and Decision, National University of Defense Technology, Changsha, China); Xiang Zhao (Laboratory for Big Data and Decision, National University of Defense Technology, Changsha, China)",
     "authors": [
       "Junfeng Zhang",
       "Jinzhi Liao",
@@ -5810,7 +5838,7 @@
       "0000-0002-1323-8769",
       "0000-0002-5056-757X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yue Zhang (Department of Computer Science and Software Engineering, Auburn University, Auburn, AL, USA); Uchswas Paul (Department of Computer Science, NC State University, Raleigh, NC, USA); Marcelo d'Amorim (Department of Computer Science, NC State University, Raleigh, NC, USA); Akond Rahman (Department of Computer Science and Software Engineering, Auburn University, Auburn, AL, USA)",
     "authors": [
       "Yue Zhang",
       "Uchswas Paul",
@@ -5880,7 +5908,7 @@
       "0000-0001-8969-2792",
       "0000-0002-0230-5524"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Ying Zhang (Department of Computer Science, Wake Forest University, Winston-Salem, NC, USA); Wenjia Song (Department of Computer Science, Virginia Tech, Blacksburg, VA, USA); Zhengjie Ji (Department of Computer Science, Virginia Tech, Blacksburg, VA, USA); Danfeng Yao (Department of Computer Science, Virginia Tech, Blacksburg, VA, USA); Na Meng (Department of Computer Science, Virginia Tech, Blacksburg, VA, USA)",
     "authors": [
       "Ying Zhang",
       "Wenjia Song",
@@ -5954,7 +5982,7 @@
       "0000-0002-0044-466X",
       "0000-0001-7300-9215"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Jian Zhang (School of Software, Beihang University, Beijing, China); Chong Wang (Nanyang Technological University, Singapore, Singapore); Anran Li (Yale University, New Haven, CT, USA); Weisong Sun (Nanyang Technological University, Singapore, Singapore); Cen Zhang (Nanyang Technological University, Singapore, Singapore); Wei Ma (Singapore Management University, Singapore, Singapore); Yang Liu (Nanyang Technological University, Singapore, Singapore)",
     "authors": [
       "Jian Zhang",
       "Chong Wang",
@@ -6012,6 +6040,7 @@
       "https://dblp.org/db/journals/tse/tse52.html#ZhangWLSZML26",
       "https://dblp.org/db/journals/tse/tse52.xml",
       "https://doi.org/10.1109/tse.2025.3649250",
+      "https://hdl.handle.net/10356/212328",
       "https://openalex.org/W7117565328"
     ],
     "volume": "52"
@@ -6028,7 +6057,7 @@
       "0000-0003-2449-1724",
       "0000-0001-7103-592X"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Chen Zhang (School of Computer Science and Artificial Intelligence, Ministry of Education Engineering Research Center for Transportation Information and Safety, Hubei Province Key Laboratory of Transportation Internet of Things Technology, Wuhan University of Technology, Wuhan, China); Jianwen Xiang (School of Computer Science and Artificial Intelligence, Ministry of Education Engineering Research Center for Transportation Information and Safety, Hubei Province Key Laboratory of Transportation Internet of Things Technology, Wuhan University of Technology, Wuhan, China); Rui Hao (School of Computer Science and Artificial Intelligence, Ministry of Education Engineering Research Center for Transportation Information and Safety, Hubei Province Key Laboratory of Transportation Internet of Things Technology, Wuhan University of Technology, Wuhan, China); Kai Jia (Nanyang Normal University, Henan, China); Jing Tian (School of Computer Science and Artificial Intelligence, Ministry of Education Engineering Research Center for Transportation Information and Safety, Hubei Province Key Laboratory of Transportation Internet of Things Technology, Wuhan University of Technology, Wuhan, China); Roberto Natella (University of Naples Federico II, Campania, Italy); Roberto Pietrantuono (University of Naples Federico II, Campania, Italy); Domenico Cotroneo (University of Naples Federico II, Campania, Italy)",
     "authors": [
       "Chen Zhang",
       "Jianwen Xiang",
@@ -6104,7 +6133,7 @@
       "0000-0002-7759-800X",
       "0000-0002-1949-2768"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Chenbo Zhang (Shanghai Key Lab of Intelligent Information Processing, and the School of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China); Wenying Xu (Shanghai Key Lab of Intelligent Information Processing, and the School of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China); Jinbu Liu (Alibaba Group, Hangzhou, China); Lu Zhang (Shanghai Key Lab of Intelligent Information Processing, and the School of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China); Guiyang Liu (Alibaba Group, Hangzhou, China); Jihong Guan (School of Computer Science and Technology, Tongji University, Shanghai, China); Qi Zhou (Alibaba Group, Hangzhou, China); Shuigeng Zhou (Shanghai Key Lab of Intelligent Information Processing, and the School of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China)",
     "authors": [
       "Chenbo Zhang",
       "Wenying Xu",
@@ -6176,7 +6205,7 @@
       "0000-0001-8147-8126",
       "0000-0001-7922-9067"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Shuai Zhang (College of Computer Science and Technology and the Key Laboratory for Safety-Critical Software Development and Verification, Nanjing University of Aeronautics and Astronautics, Nanjing, China); Guanping Xiao (College of Computer Science and Technology and the Key Laboratory for Safety-Critical Software Development and Verification, Nanjing University of Aeronautics and Astronautics, Nanjing, China); Jun Wang (College of Computer Science and Technology and the Key Laboratory for Safety-Critical Software Development and Verification, Nanjing University of Aeronautics and Astronautics, Nanjing, China); Huashan Lei (College of Computer Science and Technology and the Key Laboratory for Safety-Critical Software Development and Verification, Nanjing University of Aeronautics and Astronautics, Nanjing, China); Gangqiang He (College of Computer Science and Technology and the Key Laboratory for Safety-Critical Software Development and Verification, Nanjing University of Aeronautics and Astronautics, Nanjing, China); Yepang Liu (Department of Computer Science and Engineering, Southern University of Science and Technology, Shenzhen, China); Zheng Zheng (School of Automation Science and Electrical Engineering, Beihang University, Beijing, China)",
     "authors": [
       "Shuai Zhang",
       "Guanping Xiao",
@@ -6244,7 +6273,7 @@
       "0000-0002-7422-8476",
       "0000-0001-6373-3162"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Mengxi Zhang (School of Computer Science, China University of Geosciences, Wuhan, China); Yulu Zhao (School of Computer Science, China University of Geosciences, Wuhan, China); Jincheng Shuang (School of Geography and Information Engineering, China University of Geosciences, Wuhan, China); Ran Liu (School of Computer Science, China University of Geosciences, Wuhan, China); Zhanlong Chen (School of Computer Science, China University of Geosciences, Wuhan, China)",
     "authors": [
       "Mengxi Zhang",
       "Yulu Zhao",
@@ -6311,7 +6340,7 @@
       "0000-0001-7300-9215",
       "0000-0002-7600-0934"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Wenting Zhao (School of Software Engineering, Xi’an Jiaotong University, Xi’an, Shaanxi, China); Wuxia Jin (School of Software Engineering, Xi’an Jiaotong University, Xi’an, Shaanxi, China); Yiran Zhang (College of Computing and Data Science, Nanyang Technological University, Singapore); Ming Fan (School of Software Engineering, Xi’an Jiaotong University, Xi’an, Shaanxi, China); Haijun Wang (School of Software Engineering, Xi’an Jiaotong University, Xi’an, Shaanxi, China); Li Li (School of Software Engineering, Beihang University, Beijing, China); Yang Liu (College of Computing and Data Science, Nanyang Technological University, Singapore); Ting Liu (School of Software Engineering, Xi’an Jiaotong University, Xi’an, Shaanxi, China)",
     "authors": [
       "Wenting Zhao",
       "Wuxia Jin",
@@ -6384,7 +6413,7 @@
       "0009-0004-3978-2123",
       "0000-0001-6625-0350"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Sirong Zhao (School of Computer Science and Technology, Changsha University of Science and Technology, Changsha, China); Jialing Yang (Key Laboratory for Embedded and Network Computing of Hunan Province, College of Computer Science and Electronic Engineering, Hunan University, Changsha, China); Jiao Xie (School of Computer Science and Technology, Changsha University of Science and Technology, Changsha, China); Kaiwei Fan (China Automotive Engineering Research Institute Company Ltd, Electronic Communication and Software Evaluation Research Center, Chongqing, China); Jianmei Lei (School of Computer Science and Technology, Changsha University of Science and Technology, Changsha, China); Guoqi Xie (School of Computer Science and Technology, Changsha University of Science and Technology, Changsha, China)",
     "authors": [
       "Sirong Zhao",
       "Jialing Yang",
@@ -6454,7 +6483,7 @@
       "0000-0002-0378-0300",
       "0000-0002-2165-2636"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Chunying Zhou (School of Computer Science, Wuhan University, Wuhan, China); Xiaoyuan Xie (School of Computer Science, Wuhan University, Wuhan, China); Gong Chen (School of Computer Science, Wuhan University, Wuhan, China); Peng He (School of Cyber Science and Technology, Hubei University, Wuhan, China); Bing Li (School of Computer Science, Wuhan University, Wuhan, China)",
     "authors": [
       "Chunying Zhou",
       "Xiaoyuan Xie",
@@ -6524,7 +6553,7 @@
       "0009-0005-1340-7242",
       "0000-0002-3063-9425"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Yueheng Zhu (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Chao Liu (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Xuan He (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Xiaoxue Ren (Hangzhou High-Tech Zone (Binjiang) Institute of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Zhongxin Liu (State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou, China); Ruwei Pan (School of Big Data and Software Engineering, Chongqing University, Chongqing, China); Hongyu Zhang (School of Big Data and Software Engineering, Chongqing University, Chongqing, China)",
     "authors": [
       "Yueheng Zhu",
       "Chao Liu",
@@ -6595,7 +6624,7 @@
       "0009-0005-1680-5756",
       "0000-0002-3862-6557"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Xiaoyan Zhu (School of Computer Science and Technology, Xi’an Jiaotong University, Xi’an, China); Tianxiang Xu (School of Computer Science and Technology, Xi’an Jiaotong University, Xi’an, China); Xin Lai (School of Computer Science and Technology, Xi’an Jiaotong University, Xi’an, China); Xin Lian (School of Computer Science and Technology, Xi’an Jiaotong University, Xi’an, China); Hangyu Cheng (School of Computer Science and Technology, Xi’an Jiaotong University, Xi’an, China); Jiayin Wang (School of Computer Science and Technology, Xi’an Jiaotong University, Xi’an, China)",
     "authors": [
       "Xiaoyan Zhu",
       "Tianxiang Xu",
@@ -6666,7 +6695,7 @@
       "0000-0003-4928-7076",
       "0000-0003-3728-9541"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Terry Yue Zhuo (Monash University, Melbourne, VIC, Australia); Junda He (Singapore Management University, Singapore); Jiamou Sun (CSIRO’s Data61, Eveleigh, NSW, Australia); Zhenchang Xing (CSIRO’s Data61, Eveleigh, NSW, Australia); David Lo (Singapore Management University, Singapore); John C. Grundy (Monash University, Melbourne, VIC, Australia); Xiaoning Du (Monash University, Melbourne, VIC, Australia)",
     "authors": [
       "Terry Yue Zhuo",
       "Junda He",
@@ -6738,7 +6767,7 @@
       "0000-0002-9840-872X",
       "0000-0001-8674-4948"
     ],
-    "authorInstitutions": "",
+    "authorInstitutions": "Peiyu Zou (School of Computer Science and Artificial Intelligence, Liaoning Normal University, Dalian, China); Xiaochen Li (School of Software, Dalian University of Technology, Dalian, China); Xu Zhao (School of Computer Science and Technology, Beijing Institute of Technology, Beijing, China); Shikai Guo (School of Information Science and Technology, Dalian Maritime University, Dalian, China); Zhide Zhou (School of Software, Dalian University of Technology, Dalian, China); Yue Ma (School of Software, Dalian University of Technology, Dalian, China); He Jiang (School of Software, Dalian University of Technology, Dalian, China)",
     "authors": [
       "Peiyu Zou",
       "Xiaochen Li",

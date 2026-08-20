@@ -417,3 +417,59 @@ def test_openalex_bad_query_does_not_disable_network():
     assert enricher.openalex_json("https://api.openalex.org/works?search=bad") is None
     assert not enricher.network_disabled
     assert enricher.failures == 0
+
+
+def test_merge_metadata_fills_institutions_for_known_authors():
+    # DBLP-style paper: author names, no affiliations anywhere in the source.
+    paper = Paper(id="x", title="T", authors=["Jane Doe", "John Roe"])
+    merge_metadata(paper, {"authorships": [
+        {"name": "Jane Doe", "id": "", "institution": "Example University; Second Affiliation"},
+        {"name": "John Roe", "id": "", "institution": "Example Labs"},
+    ]}, "crossref")
+
+    # The ';' inside an institution is neutralised so the site can still split
+    # the display string on ';'.
+    assert paper.author_institutions == (
+        "Jane Doe (Example University, Second Affiliation); John Roe (Example Labs)"
+    )
+
+
+def test_merge_metadata_matches_institutions_by_name_when_counts_differ():
+    paper = Paper(id="x", title="T", authors=["Jane Doe", "John Roe"])
+    merge_metadata(paper, {"authorships": [
+        {"name": "John Roe", "id": "", "institution": "Example Labs"},
+        {"name": "Jane Doe", "id": "", "institution": "Example University"},
+        {"name": "Extra Person", "id": "", "institution": "Elsewhere"},
+    ]}, "crossref")
+
+    assert paper.author_institutions == "Jane Doe (Example University); John Roe (Example Labs)"
+
+
+def test_merge_metadata_keeps_scraped_institutions():
+    paper = Paper(
+        id="x",
+        title="T",
+        authors=["Jane Doe"],
+        author_institutions="Jane Doe (First-Party University)",
+    )
+    merge_metadata(paper, {"authorships": [
+        {"name": "Jane Doe", "id": "", "institution": "Bibliographic University"},
+    ]}, "crossref")
+
+    assert paper.author_institutions == "Jane Doe (First-Party University)"
+
+
+def test_crossref_to_metadata_carries_affiliations():
+    metadata = crossref_to_metadata({
+        "title": ["T"],
+        "DOI": "10.1145/1",
+        "author": [
+            {"given": "Jane", "family": "Doe", "affiliation": [{"name": "Example University, Boston, MA, USA"}]},
+            {"given": "John", "family": "Roe", "affiliation": []},
+        ],
+    })
+
+    assert metadata["authorships"] == [
+        {"name": "Jane Doe", "id": "", "institution": "Example University, Boston, MA, USA"},
+        {"name": "John Roe", "id": "", "institution": ""},
+    ]
