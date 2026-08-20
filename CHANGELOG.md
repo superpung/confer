@@ -8,6 +8,10 @@ Entries are user-facing; implementation details belong in commit messages.
 
 ## [Unreleased]
 
+### Added
+- **New venue** — **ASPLOS 2025** (Rotterdam, co-located with EuroSys 2025),
+  read from the official program page with sessions and author affiliations.
+
 ---
 
 ## [1.3.1] - 2026-07-16

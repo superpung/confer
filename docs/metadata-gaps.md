@@ -54,6 +54,7 @@ credentials are available or the challenge is lifted. `sosp2025` is **done**
 |---|---|--:|:--:|---|
 | `micro2025` | sigarch | 24 | — | The official MICRO program page (`microarch.org`) lists titles/authors without abstracts; abstracts would have to come from enrichment, but recent DOIs may not be registered yet. Institutions already 100%. |
 | `isca2026` | sigarch | 25 | — | Same pattern via `iscaconf.org`. Institutions already 100%. |
+| `asplos2025` | sigarch | 0 | — | Same pattern via `asplos-conference.org`; on top of that OpenAlex rate-limited (HTTP 429) every DOI lookup during the build, so enrichment filled nothing. Institutions already 100% and 87% have a DOI from Crossref — a re-run once the OpenAlex quota frees up should lift abstracts. (measured 2026-08-20) |
 | `asplos2026` | sigarch | 67 | — | Partial enrichment coverage. |
 | `ase2023` | researchr | 64 | — | Partial enrichment coverage (older event). |
 | `popl2026` | researchr | 78 | — | Partial enrichment coverage. |
