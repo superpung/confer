@@ -20,6 +20,12 @@ Entries are user-facing; implementation details belong in commit messages.
   affiliations — those listings print bare names, so the affiliations are read
   from each paper's detail page instead. Affects **ASE 2026** and **OOPSLA 2026**,
   both of which went from no affiliations to complete ones.
+- **Author affiliations now show for 3,000+ more papers that had none.** USENIX
+  venues (**OSDI 2025**, **NSDI 2026**, **USENIX Security 2025**) print one
+  institution per author *group*, which the site could not tie to an author;
+  they are now split per author. **AAAI 2026** listed institutions without the
+  matching author names. And **CCS 2025**, **TOSEM 2025/2026**, **TSE 2025/2026**
+  — whose sources carry author names only — now take affiliations from Crossref.
 
 ---
 

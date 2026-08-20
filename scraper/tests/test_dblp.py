@@ -3,7 +3,7 @@ from pathlib import Path
 from confer.config import VenueConfig
 from confer.fetcher import Fetcher
 from confer.models import Paper
-from confer.scrapers.dblp import DblpScraper
+from confer.scrapers.dblp import DblpScraper, format_usenix_people
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -181,7 +181,7 @@ def test_usenix_detail_metadata_enriches_paper():
     DblpScraper.apply_usenix_detail(paper, metadata)
 
     assert paper.abstract == "Congestion control algorithms need fair and robust behavior."
-    assert paper.author_institutions == "Anup Agarwal, Carnegie Mellon University"
+    assert paper.author_institutions == "Anup Agarwal (Carnegie Mellon University)"
     assert paper.publisher == "USENIX Association"
     assert paper.pages == "2755-2778"
     assert paper.pdf_urls == [
@@ -189,3 +189,44 @@ def test_usenix_detail_metadata_enriches_paper():
         "https://www.usenix.org/system/files/conference/nsdi26/nsdi26spring_agarwal-anup_prepub.pdf",
     ]
     assert paper.extra["officialSources"] == ["usenix"]
+
+
+def test_usenix_people_are_split_per_author():
+    people = (
+        "Jiawei Tyler Gu, Zhen Tang, and William X. Zheng, University of Illinois "
+        "Urbana-Champaign; Yue Zhang and Akond Rahman, Auburn University; "
+        "Chen Wang, IBM Research"
+    )
+    authors = [
+        "Jiawei Tyler Gu",
+        "Zhen Tang",
+        "William X. Zheng",
+        "Yue Zhang",
+        "Akond Rahman",
+        "Chen Wang",
+    ]
+
+    assert format_usenix_people(people, authors) == "; ".join(
+        [
+            "Jiawei Tyler Gu (University of Illinois Urbana-Champaign)",
+            "Zhen Tang (University of Illinois Urbana-Champaign)",
+            "William X. Zheng (University of Illinois Urbana-Champaign)",
+            "Yue Zhang (Auburn University)",
+            "Akond Rahman (Auburn University)",
+            "Chen Wang (IBM Research)",
+        ]
+    )
+
+
+def test_usenix_people_match_across_diacritics_and_bail_out_when_unknown():
+    # The byline spells a name with diacritics the citation_author tag drops.
+    assert format_usenix_people(
+        "I\u015f\u0131l Dillig and Venkat Arun, The University of Texas at Austin",
+        ["Is\u0131l Dillig", "Venkat Arun"],
+    ) == "Is\u0131l Dillig (The University of Texas at Austin); Venkat Arun (The University of Texas at Austin)"
+
+    # An unlisted author means the grouping cannot be trusted -- keep the byline.
+    assert format_usenix_people(
+        "Yuanbo Wen and Jun Bi, Institute of Computing Technology",
+        ["Jun Bi"],
+    ) == ""

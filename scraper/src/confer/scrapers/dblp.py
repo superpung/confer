@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from typing import Any
 from urllib.parse import urljoin
 
@@ -215,7 +216,9 @@ class DblpScraper(Scraper):
             paper.title = strip_markup(str(metadata["title"]))
         if not paper.authors and metadata.get("authors"):
             paper.authors = list(metadata["authors"])
-        paper.author_institutions = paper.author_institutions or str(metadata.get("author_institutions", ""))
+        people = str(metadata.get("author_institutions", ""))
+        formatted = format_usenix_people(people, paper.authors or list(metadata.get("authors", [])))
+        paper.author_institutions = paper.author_institutions or formatted or people
         paper.abstract = meaningful_abstract(paper.abstract) or str(metadata.get("abstract", ""))
         paper.publication_date = paper.publication_date or str(metadata.get("publication_date", ""))
         paper.publisher = paper.publisher or str(metadata.get("publisher", ""))
@@ -251,6 +254,43 @@ class DblpScraper(Scraper):
             if month_number:
                 return f"{year}-{month_number}-01"
         return year
+
+
+def normalized_name(value: str) -> str:
+    """Case/diacritic-insensitive key for matching a byline name to an author."""
+    folded = unicodedata.normalize("NFKD", value or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", " ", folded.lower()).strip()
+
+
+def format_usenix_people(people: str, authors: list[str]) -> str:
+    """Rewrite a USENIX byline into the site's ``Name (Institution)`` shape.
+
+    USENIX groups authors by institution -- ``"A, B, and C, Inst; D, Inst2"`` --
+    which carries the affiliations but not per author, so the site cannot align
+    them. The page's ``citation_author`` tags are the authoritative name list, so
+    consume names from the left of each group and treat the rest as the
+    institution. Returns "" when a group has no recognizable author, leaving the
+    caller to keep the byline as-is rather than guess.
+    """
+    known = {normalized_name(author): author for author in authors if author}
+    if not known or not people:
+        return ""
+    pairs: list[tuple[str, str]] = []
+    for group in people.split(";"):
+        tokens = [token.strip() for token in group.split(",") if token.strip()]
+        names: list[str] = []
+        index = 0
+        while index < len(tokens):
+            candidates = [part.strip() for part in re.split(r"\band\b", tokens[index]) if part.strip()]
+            if not candidates or not all(normalized_name(part) in known for part in candidates):
+                break
+            names.extend(known[normalized_name(part)] for part in candidates)
+            index += 1
+        if not names:
+            return ""
+        institution = re.sub(r"^and\s+", "", ", ".join(tokens[index:]).strip()).strip(" ,")
+        pairs.extend((name, institution) for name in names)
+    return "; ".join(f"{name} ({institution})" if institution else name for name, institution in pairs)
 
 
 def meta_content(soup: BeautifulSoup, name: str) -> str:

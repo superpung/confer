@@ -363,6 +363,14 @@ def merge_metadata(paper: Paper, metadata: dict[str, Any], source: str) -> None:
         if institutions and not paper.author_institutions:
             paper.author_institutions = "; ".join(institutions)
 
+    # Author affiliations, when the venue's own source carries none (DBLP TOCs and
+    # journal listings have author names only, but Crossref/OpenAlex know where
+    # each author works).
+    if authorships and paper.authors and not paper.author_institutions:
+        institutions = align_authorships(paper.authors, authorships, "institution")
+        if any(institutions):
+            paper.author_institutions = format_author_institutions(paper.authors, institutions)
+
     # Stable per-author ids (ORCID / OpenAlex id) for disambiguation, aligned to
     # paper.authors. Merge per-slot so crossref + openalex can each contribute.
     if authorships and paper.authors:
@@ -601,7 +609,18 @@ def crossref_authorships(item: dict[str, Any]) -> list[dict[str, str]]:
     out: list[dict[str, str]] = []
     for a in item.get("author", []) or []:
         name = " ".join(part for part in [a.get("given", ""), a.get("family", "")] if part).strip()
-        out.append({"name": name, "id": clean_orcid(str(a.get("ORCID") or "")), "institution": ""})
+        affiliations = [
+            strip_markup(str(affiliation.get("name", "")))
+            for affiliation in a.get("affiliation", []) or []
+            if affiliation.get("name")
+        ]
+        out.append(
+            {
+                "name": name,
+                "id": clean_orcid(str(a.get("ORCID") or "")),
+                "institution": ", ".join(part for part in affiliations if part),
+            }
+        )
     return out
 
 
@@ -650,23 +669,41 @@ def merge_openalex_metadata(items: list[dict[str, Any]]) -> dict[str, Any]:
     return metadata
 
 
-def align_author_ids(authors: list[str], authorships: list[dict[str, str]]) -> list[str]:
-    """Best-effort align authorship ids to the paper's author list (by position
-    when counts match, else by normalized name)."""
-    ids = [""] * len(authors)
+def align_authorships(
+    authors: list[str], authorships: list[dict[str, str]], field: str
+) -> list[str]:
+    """Best-effort align one authorship field to the paper's author list (by
+    position when counts match, else by normalized name)."""
+    values = [""] * len(authors)
     if not authors or not authorships:
-        return ids
+        return values
     if len(authors) == len(authorships):
         for i, a in enumerate(authorships):
-            ids[i] = a.get("id", "")
-        return ids
+            values[i] = a.get(field, "")
+        return values
     norm = lambda s: re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
     by_name: dict[str, str] = {}
     for a in authorships:
-        by_name.setdefault(norm(a.get("name", "")), a.get("id", ""))
+        by_name.setdefault(norm(a.get("name", "")), a.get(field, ""))
     for i, name in enumerate(authors):
-        ids[i] = by_name.get(norm(name), "")
-    return ids
+        values[i] = by_name.get(norm(name), "")
+    return values
+
+
+def align_author_ids(authors: list[str], authorships: list[dict[str, str]]) -> list[str]:
+    return align_authorships(authors, authorships, "id")
+
+
+def format_author_institutions(authors: list[str], institutions: list[str]) -> str:
+    """The site's ``Name (Institution); Name (Institution)`` display string.
+
+    Institutions may not contain ``;`` -- that is the separator the site splits
+    on before it looks for the parenthesised institution."""
+    parts = []
+    for name, institution in zip(authors, institutions):
+        cleaned = re.sub(r"\s+", " ", (institution or "").replace(";", ",")).strip(" ,")
+        parts.append(f"{name} ({cleaned})" if cleaned else name)
+    return "; ".join(parts)
 
 
 def inverted_abstract(index: dict[str, list[int]]) -> str:

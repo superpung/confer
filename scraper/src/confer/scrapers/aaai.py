@@ -127,6 +127,21 @@ class AaaiScraper(Scraper):
                 print(f"[{self.venue.id}] aaai details parsed {index}/{len(papers)} papers...", file=sys.stderr)
 
 
+def format_author_institutions(authors: list[str], institutions: list[str]) -> str:
+    """Pair AAAI's positional institution tags with their authors.
+
+    OJS emits one ``citation_author_institution`` per ``citation_author``, in
+    order, so the two lists zip into the site's ``Name (Institution)`` shape.
+    Falls back to the bare institution list when the counts disagree.
+    """
+    if not authors or len(authors) != len(institutions):
+        return "; ".join(institution for institution in institutions if institution)
+    return "; ".join(
+        f"{author} ({institution.replace(';', ',').strip()})" if institution.strip() else author
+        for author, institution in zip(authors, institutions)
+    )
+
+
 def parse_aaai_detail(html: str) -> dict[str, Any]:
     soup = BeautifulSoup(html, "html.parser")
     first_page = meta_content(soup, "citation_firstpage")
@@ -134,11 +149,12 @@ def parse_aaai_detail(html: str) -> dict[str, Any]:
     pages = "-".join(part for part in (first_page, last_page) if part)
     if first_page and last_page and first_page == last_page:
         pages = first_page
+    authors = meta_contents(soup, "citation_author")
     institutions = meta_contents(soup, "citation_author_institution")
     return {
         "title": meta_content(soup, "citation_title"),
-        "authors": meta_contents(soup, "citation_author"),
-        "author_institutions": "; ".join(institutions),
+        "authors": authors,
+        "author_institutions": format_author_institutions(authors, institutions),
         "abstract": clean_aaai_abstract(clean_text(soup.select_one("section.item.abstract"))),
         "publication_date": meta_content(soup, "citation_date").replace("/", "-"),
         "doi": clean_doi(meta_content(soup, "citation_doi")),

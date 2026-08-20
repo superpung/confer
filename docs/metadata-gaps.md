@@ -7,7 +7,7 @@ root cause and the fix direction. Driven by the principle in `AGENTS.md`:
 own site but we currently source it from a generic adapter.
 
 Coverage is measured as the share of a venue's papers with a non-empty field.
-Snapshot date: **2026-07-14** (regenerate with the audit script — see bottom).
+Snapshot date: **2026-08-20** (regenerate with the audit script — see bottom).
 
 ## Legend — root-cause classes
 
@@ -17,6 +17,10 @@ Snapshot date: **2026-07-14** (regenerate with the audit script — see bottom).
 - **B — First-party source already used, field not extracted.** We already read
   the venue's own API/site, but the adapter doesn't pull the field even though
   the source exposes it. Fix = enhance the existing adapter.
+- **D — Present but in a shape the site cannot read.** The scrape carries the
+  affiliations, but not as the `Name (Institution); …` display string the site
+  parses, so they are invisible in facets and author cards. Fix = normalize in
+  the adapter. (`osdi2025`/`nsdi2026`/`usenixsecurity2025`/`aaai2026` were this.)
 - **C — No clean first-party source.** The only authoritative source is
   paywalled / bot-walled (IEEE Xplore, ACM DL) or simply omits the field. Fix =
   none cheap; depends on enrichment (Crossref/OpenAlex) or is out of reach.
@@ -28,25 +32,40 @@ Snapshot date: **2026-07-14** (regenerate with the audit script — see bottom).
 - **`sosp2025` (SOSP)** — was class A (`dblp`, 0% institutions). Now on the
   native `sosp` adapter → institutions 100%, sourced from the official SIGOPS
   accepted-papers page. Abstracts backfilled from the prior DBLP-DOI enrichment.
+- **`osdi2025`, `nsdi2026`, `usenixsecurity2025` (USENIX)** — were class D. The
+  USENIX presentation page groups authors by institution (`"A, B, and C, Inst;
+  D, Inst2"`), which the adapter stored verbatim, so the site read it as one
+  unparsable blob. The adapter now consumes names from each group using the
+  page's own `citation_author` list and emits `Name (Institution)` →
+  institutions 94% / 93% / 93%. The remainder are pages whose byline spells a
+  name the meta tags do not list; those keep the raw byline rather than guess.
+- **`aaai2026` (AAAI)** — was class D. OJS emits one
+  `citation_author_institution` per `citation_author`, in order; the adapter
+  stored only the institution list, which the site could not tie to an author
+  in facets. Zipped into `Name (Institution)` → institutions 100%.
+- **`ccs2025`, `tosem2025`, `tosem2026`, `tse2025`, `tse2026`** — were class C
+  (0% institutions, no reachable first-party source). Crossref carries per-author
+  `affiliation` for both ACM and IEEE records; the enricher discarded it and only
+  ever filled institutions for papers with no authors at all. It now fills them
+  whenever the venue's own source has none → institutions 100% for all five.
 
 ## Missing author institutions
 
 | venue | scraper | inst% | class | official source / note |
 |---|---|--:|:--:|---|
-| `iclr2026` | openreview | 0 | **B (blocked)** | Author affiliations live on author **profiles** (`/api/…/notes` gives author ids; profiles carry `history`/institution), not on the submission note the adapter reads. **As of 2026-07-14 the entire OpenReview API (`api2.openreview.net`) is behind a bot challenge** — every request (notes *and* profiles) returns `403 ChallengeRequiredError`. Fetching profiles now requires an authenticated session (OpenReview account token); until then this is not reachable without solving/bypassing the challenge. High value: ~5.4k papers. |
+| `iclr2026` | openreview | 0 | **B (blocked)** | Author affiliations live on author **profiles** (`/api/…/notes` gives author ids; profiles carry `history`/institution), not on the submission note the adapter reads. **As of 2026-07-14 the entire OpenReview API (`api2.openreview.net`) is behind a bot challenge** (re-checked 2026-08-20: still `403`) — every request (notes *and* profiles) returns `403 ChallengeRequiredError`. Fetching profiles now requires an authenticated session (OpenReview account token); until then this is not reachable without solving/bypassing the challenge. High value: ~5.4k papers. |
 | `icml2025` | openreview | 0 | **B (blocked)** | Same as above (~3.3k papers). |
 | `neurips2025` | openreview | 0 | **B (blocked)** | Same as above (~5.3k papers). |
 | `acl2025` | acl_anthology | 0 | **C** | Confirmed: ACL Anthology metadata (bib/XML) carries **no** affiliations — only author names; they exist solely in the paper PDFs or the softconf/OpenReview program. No cheap structured source. |
-| `ccs2025` | dblp | 0 | **C** (was A) | The SIGSAC site (`www.sigsac.org/ccs/CCS2025/`) is a statically-exported Next.js app; **no accepted-papers route or data endpoint is locatable** (all guessed paths 404, no JSON in the JS chunks). Previously assumed class A, but with no reachable first-party source it is effectively C until the page reappears. |
-| `tse2025`, `tse2026` | dblp | 0 | **C** | IEEE TSE journal; only first-party source is IEEE Xplore (bot-walled). Abstracts already ~94% via enrichment. |
-| `tosem2025`, `tosem2026` | dblp | 0 | **C** | ACM TOSEM journal; only first-party source is ACM DL (Cloudflare). Abstracts ~100% via enrichment. |
 
 **Recommended next step:** the OpenReview trio (`iclr2026`/`icml2025`/`neurips2025`)
 is still the biggest win — one adapter enhancement would resolve ~14k papers —
 but it is **currently blocked** by OpenReview's new API-wide bot challenge (see
 the table). It needs an authenticated OpenReview session to proceed; revisit once
 credentials are available or the challenge is lifted. `sosp2025` is **done**
-(native adapter). `ccs2025` has no reachable first-party source right now.
+(native adapter), as are the USENIX trio, `aaai2026`, and the Crossref-backfilled
+`ccs2025` / `tosem*` / `tse*` (see **Done**). What is left in this table is only
+what no reachable source can currently answer.
 
 ## Missing abstracts
 
@@ -62,8 +81,14 @@ credentials are available or the challenge is lifted. `sosp2025` is **done**
 
 These are **not** wrong-adapter cases — the venue program pages simply omit
 abstracts; coverage depends on Crossref/OpenAlex having a registered record.
-They improve on their own as DOIs get indexed; a re-run once OpenAlex quota is
-available typically lifts them.
+
+**Crossref cannot close this gap:** spot-checking the missing ones (`micro2025`,
+`asplos2026`, `ase2023`, `sosp2025`) shows ACM and IEEE deposit author
+affiliations but **no abstract** for conference papers, so OpenAlex is the only
+source — and on 2026-08-20 OpenAlex was rate-limiting this host hard (2 of 8
+sequential requests succeeded; the enricher disables itself after the first
+failure). A re-run from a host OpenAlex is not throttling is what lifts these,
+not an adapter change.
 
 ## Regenerating this snapshot
 
